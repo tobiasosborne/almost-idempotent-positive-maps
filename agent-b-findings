@@ -1,0 +1,815 @@
+# Agent B Findings
+
+Last updated: 2026-06-02.
+
+## Latest Update: Stochastic And Stoquastic Cases
+
+I added `agent-B/notes/stochastic-stoquastic-special-cases.md` and
+`agent-B/notes/response-to-agent-a-v0.20.md`.
+
+The note records the clean commutative conjecture:
+
+```text
+Q row-stochastic, ||Q^2-Q||_{infty->infty}<=eta
+  => dist(Q, stochastic idempotents)<=C sqrt(eta),
+```
+
+and the equivalent signed-idempotent version:
+
+```text
+P1=1, P^2=P, neg(row)<=delta
+  => dist(P, stochastic idempotents)<=C sqrt(delta).
+```
+
+It also isolates two special cases. In the exact positive doubly stochastic
+case, idempotents are block-average projections, so the global exposed-hull
+lemma holds with zero error. The signed near-positive doubly stochastic case
+is a natural easier conjecture but is not yet proved. In the symmetric case,
+`H=I-Q` is stoquastic and `H^2-H=Q^2-Q`, so projection stability can be framed
+as stability of almost-idempotent stoquastic Hamiltonian-like matrices.
+
+Evidence so far: Hume's `3 x 3` family proves the square-root exponent is
+sharp; rank-one, line-segment, simplex, well-exposed, and
+cluster-representative cases are proved; small-dimensional classical searches
+found no worse behavior; non-simplex probes found no credible counterexample;
+and null-ideal/Jordan-bridge numerics found no low-dimensional counterexample,
+with a classical `R^3` family satisfying `||P(h^2)||/eta -> 32/27`. There is
+not yet a dedicated doubly-stochastic or stoquastic signed-idempotent
+numerical search.
+
+## Previous Update: Global Exposed-Hull Target
+
+The classical projection-stability gap should now be stated as a simultaneous
+global exposed-hull lemma, not as a vertex-by-vertex deletion lemma. Let
+`W_{rho,kappa}` be the set of row vertices whose exposedness modulus satisfies
+`e_v(rho)>=kappa`. If, for `rho=O(sqrt(delta))` and
+`kappa>=c sqrt(delta)`, every row is `O(sqrt(delta))`-close to
+`conv W_{rho,kappa}`, then a maximal separated subset of `W` satisfies the
+cluster-representative hypotheses. The existing cluster theorem then gives a
+stochastic idempotent within `O(sqrt(delta))` and hence exact commutative
+positive/JB factorization.
+
+The correction is that pointwise redundancy can accumulate: a statement like
+"each non-well-exposed vertex is `O(sqrt(delta))`-close to the convex hull of
+the other vertices" does not by itself give a dimension-free reconstruction
+procedure. Hubble's sidecar report
+`agent-B/notes/subagent-skeleton-reduction-v0.1.md` makes this precise using
+dense regular polygons as a convex-geometric obstruction to the local
+implication. The LP-dual target should now be global:
+`dist(v, conv W_{rho,kappa})>C sqrt(delta) => e_v(rho)>=kappa`.
+I also patched `agent-B/notes/exposed-redundant-dichotomy-target.md` to mark
+the older pointwise dichotomy as superseded unless accompanied by a
+non-accumulating certificate.
+
+I patched `agent-B/theory/classical-cluster-factorization-theorem.md` with the
+matching corollary: the global exposed-hull hypothesis implies the
+cluster-representative hypothesis by taking a maximal `4rho`-separated subset
+of `W_{rho,kappa}`. Thus
+`global exposed-hull => stochastic idempotent within O(sqrt(eta)) => exact
+commutative positive/JB factorization` is now written as a theorem-level
+route.
+I also synced `agent-B/notes/theorem-stack-v0.3.md` to this formulation.
+
+## Current Position
+
+I think the correct generalisation cannot be a literal replacement of C*-algebras by concrete J*-subalgebras inside `B(H)` using the inherited Jordan product. For a raw positive idempotent projection, Effros-Stormer says the range carries a Jordan product of Choi-Effros type, not necessarily the ambient Jordan product. Thus the exact positive-map analog of Kitaev's Choi-Effros product should be
+
+`x bullet y = P(x o y)`, where `x o y = (xy+yx)/2`,
+
+with complexification/*-structure as needed. For an almost-idempotent UP map `Phi`, the natural idempotent linear approximation remains
+
+`tilde Phi = theta(2 Phi - 1)`,
+
+but `tilde Phi` need not be positive. We can still define the approximate product
+
+`x bullet y = tilde Phi(x o y)` on `Im tilde Phi`,
+
+but proving approximate Jordan/JB axioms is the main technical risk.
+
+## Key Obstacles
+
+- Kitaev's proof uses complete positivity in essential ways: Kadison-Schwarz, Choi/Stinespring associativity estimates, matrix amplifications, and final UCP rounding. Positive maps only give Jordan-Schwarz, and `id_Mn tensor Phi` is not positive in general.
+- The cb norm should probably be replaced by the ordinary operator norm/order-unit norm for a baseline PTP theorem. A decomposable norm or reversible/universal-envelope formulation may be the right stronger variant.
+- Exact fixed-point J*-algebra results in arXiv:2604.08380 require a faithful invariant state. Raw positive projections are better handled through Effros-Stormer projected Jordan products.
+
+## Candidate Theorem Shape
+
+Baseline finite-dimensional theorem to investigate:
+
+Let `Phi:B(H)->B(H)` be unital positive, *-preserving, and `||Phi^2-Phi|| <= eta`. For `eta` small, set `P=theta(2Phi-1)` and `A=Im P`. With product `a bullet b=P(a o b)` on self-adjoint elements and complexification, Agent B's current bridge gives `A` as an `O(sqrt(eta))` approximate finite-dimensional JB/J*-algebra. Consequently, if Layer 1 produces sufficiently concrete/order-positive comparison data, `A` should be `O(sqrt(eta))` order-isomorphic/Jordan-isomorphic to a genuine finite-dimensional J*-algebra `J`, with UP factor maps `Delta:J->B(H)`, `Upsilon:B(H)->J` satisfying `||Delta Upsilon-Phi||=O(sqrt(eta))` and approximate Jordan multiplicativity.
+
+The `O(eta)` theorem remains the Kitaev-strength target and appears to require an extra decomposable/CP-style two-hole mechanism.
+
+## New Partial Lemma
+
+I OCR'd Effros-Stormer 1979. The exact theorem confirms: for a unital positive projection `P` on a unital JC-algebra, `P(A)` is a JC-algebra under `r*s=P(r o s)`.
+
+I can prove the following first approximate identity. If `Phi` is UP and `||Phi^2-Phi||<=eta`, and `Pi=theta(2Phi-I)`, then
+
+`||Pi(Pi(a)oPi(b))-Pi(a o Pi(b))|| <= C sqrt(eta)||a||||b||`.
+
+The proof quantifies Effros-Stormer Lemma 1.1 using states `rho o Phi`, Jordan-Schwarz, and the fact that an almost-contractive idempotent on a Hilbert seminorm has almost orthogonal range and kernel.
+
+This first insertion estimate alone does **not** prove the approximate Jordan identity. The missing piece was the approximate analog of Effros-Stormer Lemma 1.2(4):
+
+`P(x o y)=P(Px o Py)` for `x,y` in the Jordan algebra generated by the range.
+
+Details: `agent-B/notes/approximate-effros-stormer.md`.
+
+## Bridge Upgrade: Candidate Null-Ideal Proof
+
+I now have a candidate proof of the missing null-ideal estimates at square-root scale; see `agent-B/notes/layer2-null-ideal-sqrt.md`. A more theorem-like proof draft is at `agent-B/theory/theorem-B-algebraic-bridge.md`.
+On 2026-06-02 I tightened that draft by expanding the almost-orthogonality
+polynomial estimate, the state-supremum-to-operator-norm conversions, and the
+one-hole context estimates. I also expanded the final Jordan-identity
+bookkeeping: the left-side kernel hole is controlled directly by `(FI)`, and
+the right-side errors split into one `(5.2)` term, one `(FI)` term after
+decomposing `a^2=P(a^2)+h_{a,a}`, and two `(HH)` terms. The claimed theorem and
+exponent are unchanged.
+
+Boyle sidecar audited the bridge proof and found no fatal local gap, but
+correctly flagged that the spectral-idempotent estimate had been imported too
+tersely. I patched `agent-B/theory/theorem-B-algebraic-bridge.md` to prove it
+directly: for `S=2Phi-I`, `S^2-I=4(Phi^2-Phi)` is small, so
+`sgn(S)=S(S^2)^(-1/2)` is defined by a binomial series, `P=(I+sgn(S))/2` is
+idempotent, `P(1)=1`, `||P-Phi||=O(eta)`, and `||P||<=1+O(eta)`.
+I also incorporated Boyle's proof-polish items into Lemmas 2-5: square
+Lipschitz, crude hole norms, replacement costs, and `O(eta)` absorptions are
+now written explicitly.
+
+Latest proof hardening: I added Lemma 0 to
+`agent-B/theory/theorem-B-algebraic-bridge.md`. It verifies that
+`A=Im P`, with inherited cone `A cap B(H)_+`, is an exact Archimedean
+order-unit space and that its order-unit norm is precisely the ambient
+operator norm. Thus the bridge theorem's order/norm structure is exact; only
+the product axioms are approximate. No exponent or theorem statement changed.
+I also added a short "Standard Order Estimates" block spelling out the only
+order facts used later: Jordan-Schwarz for unital positive maps on
+self-adjoint elements, Cauchy-Schwarz for positive functionals, positive-cone
+norm monotonicity, and the state-supremum formula for self-adjoint operator
+norms. I then added the standard self-adjoint order-perturbation rule
+`||x-y||<=epsilon => x>=y-epsilon 1` and used it explicitly in Lemma 3 to
+justify `Phi(r)^2 >= r^2-C delta||r||^2 1` and the replacement of `Phi(r^2)`
+by `P(r^2)`. This makes the absence of hidden CP/cb input in Lemmas 1-5
+explicit.
+I also expanded Lemma 4's polarization step: the identity
+`lambda q_{r,s}=q_{lambda r,s}=1/4(q_{lambda r+s}-q_{lambda r-s})` is now
+identified as polarization of the symmetric bilinear map
+`(r,s)->P(r o s)-r o s`, with `q_x` on the right denoting the square hole.
+The zero cases and optimizing choice `lambda=||s||/||r||` are now explicit.
+
+For `r,s in A=Im P`, define the range-product hole
+
+`h_{r,s}=r o s-P(r o s)`.
+
+The key new observation is that square holes
+
+`q_r=P(r^2)-r^2`
+
+are almost positive kernel elements:
+
+`q_r >= -C eta ||r||^2 1`, `P(q_r)=0`, and `||Phi(q_r)||<=C eta ||r||^2`.
+
+After shifting `q_r` by `C eta ||r||^2 1`, positivity gives
+
+`||P(q_r^2)|| <= C eta ||r||^4`.
+
+Polarization and Cauchy-Schwarz for the positive functionals `rho o Phi` then give
+
+`||P(h_{r,s} o h_{u,v})|| <= C eta ||r||||s||||u||||v||`
+
+and
+
+`||P(h_{r,s} o z)|| <= C sqrt(eta)||r||||s||||z||`.
+
+These estimates control the previously missing terms in the Jordan-identity expansion and give
+
+`||((a*a)*b)*a - (a*a)*(b*a)|| <= C sqrt(eta)||a||^3||b||`.
+
+This is Agent B's current proposed unconditional Layer 2 bridge. It should be peer-reviewed by Agent A before consensus.
+
+Sidecar evidence: Parfit found no low-dimensional counterexample. In a clean
+classical `R^3` stochastic family,
+
+`||P(h_{r,s}^2)||/eta -> 32/27`,
+
+so the null-square estimate is genuinely linear in `eta` in that normalization
+and `O(eta^2)` is false. See
+`agent-B/experiments/null-ideal-probe/REPORT.md`.
+
+## Counterexample Boundary
+
+A subagent found an explicit classical stochastic family on `R^4` where `Phi` is positive, unital, and almost idempotent, but `Pi=theta(2Phi-I)` has negative entries. Thus we must not claim `Pi` is positive. In the same examples, `Pi` is close to a positive idempotent and the projected product appears to have small Jordan defect, so this is a boundary warning rather than a disproof of the baseline theorem.
+
+## Response To Agent A v0.2
+
+I agree with Agent A's two-layer architecture and the order-unit epsilon-JB definition, but I propose three corrections:
+
+1. Positive projection ranges are special JC/JW, but **not automatically reversible**. Effros-Stormer includes projections onto spin factors; VLW records that spin factors `V_4` and `V_n, n>=6` are irreversible.
+2. Decomposable factor maps are available only under a reversible/universally reversible hypothesis. In VLW, a faithful CE is decomposable iff the J*-range is reversible. So arbitrary positive-map factorization should promise UP maps, with a decomposable corollary only for reversible targets such as dichotomy minimal sufficient algebras.
+3. The insertion estimate Agent A calls `(star)` would prove the bridge, but I can currently prove it only with `O(sqrt(eta))`, not `O(eta)`. Thus the honest current theorem has exponent `1/2` unless the sharper CP-free insertion estimate is found.
+
+Detailed response: `agent-B/notes/response-to-agent-a-v0.2.md`.
+
+## Partial Bridge At Square-Root Scale
+
+I wrote and then corrected a bridge note: `agent-B/notes/layer2-bridge-sqrt.md`.
+
+What is proven:
+
+`||P(Px o b)-P(x o b)|| <= C sqrt(eta)||x||||b||` for `b in A=Im P`.
+
+This follows from Jordan-Schwarz and the fact that `P` is an almost contraction in the seminorms `rho(Phi(x^2))`, so `Im P` and `Ker P` are almost orthogonal.
+
+What is **not** proven:
+
+This estimate alone does not imply the approximate Jordan identity. The Jordan identity also needs control of terms like `P((a o a) o (I-P)(b o a))`, where `a o a` is not in `Im P`. Thus the real missing piece remains a contextual version of Effros-Stormer Lemma 1.2(4) on monomials generated by the range.
+
+Update: `agent-B/notes/layer2-null-ideal-sqrt.md` is my candidate proof of
+that missing piece at `O(sqrt(eta))`.
+
+## Formulation Draft
+
+I drafted a corrected theorem stack in `agent-B/notes/theorem-stack-v0.3.md`.
+Prefer v0.3 over `theorem-stack-v0.2.md`; the older
+`agent-B/notes/theorem-formulation-v0.1.md` remains as history.
+
+The key structure is:
+
+- Layer 1: abstract dimension-free stability of finite-dimensional epsilon-JB order-unit algebras.
+- Layer 2A: algebraic bridge from almost-idempotent UP maps to an
+  `O(sqrt(eta))` epsilon-JB algebra via the candidate null-ideal estimate.
+- Layer 2B: conditional factorization through a finite-dimensional special
+  JB/JC algebra by UP maps, pending positivity-rounding.
+- Decomposable strengthening: possible `O(eta)` theorem under controlled
+  CP+coCP decomposition, still unwritten.
+
+Additional warning: exact UP factor maps cannot be obtained from a generic
+dimension-free `O(epsilon)` positivity-rounding lemma; such a lemma is false
+for spin-factor targets. Approximate positivity of the maps induced by a
+near-isomorphism is not enough by itself. A safer route may be to prove
+concrete stability to an actual nearby JC-subalgebra of `B(H)_sa`, then use the
+canonical positive trace-preserving conditional expectation onto that
+subalgebra, or prove near-positive projection stability.
+
+I wrote explicit requirements for the Layer 1 output at
+`agent-B/notes/layer1-output-requirements.md`: a norm/Jordan near-isomorphism
+is not enough for the north-star factorization theorem. Layer 1 must produce
+positive comparison maps, a nearby concrete JC-subalgebra with a controllable
+conditional expectation, or be paired with near-positive projection stability.
+
+Update 2026-06-02: I reviewed Agent A's local Layer 1 drafts
+`agent-A/theory/00-overview.md` and `agent-A/theory/01-error-reduction.md`.
+The overview still contains stale claims (`reversible`, `decomposable`, and
+`O(eta)` for arbitrary UP maps). The error-reduction note correctly identifies
+the key missing Lemma ER-norm, but it is still a gap: `H^2=0` gives qualitative
+splitting, not a dimension-free bounded homotopy, and the cochain norm/block
+direct-sum/approximate-module estimates must be made explicit. I recorded the
+review at `agent-B/notes/layer1-agent-a-review-v0.1.md`.
+
+## Alternative Bridge Strategy
+
+A classical sidecar found no dimension-free obstruction in stochastic matrices and suggested a different route:
+
+Prove that a unital idempotent linear map `P` on `B(H)_sa` that is `O(eta)`-positive (as `theta(2Phi-I)` is) is close, dimension-freely, to a unital positive idempotent `E`. Then exact Effros-Stormer applies to `E`, bypassing the contextual insertion estimate.
+
+I recorded this as `agent-B/notes/alternative-bridge-near-positive-projection.md`. This is a conjectural route, not yet a proof.
+
+Update: the spin-factor obstruction to generic positivity rounding does not
+currently refute this projection-stability route. Pasteur checked the natural
+spin-factor idempotent constructions; the retraction condition `T i=id`
+saturates the spin faces and raises the near-positivity defect to the same
+scale as the distance to the existing positive projection. See
+`agent-B/notes/subagent-near-positive-projection-stability.md`.
+
+I distilled the route into `agent-B/notes/near-positive-projection-stability-program.md`.
+The key classical subproblem is: a unital idempotent on `l_infty^n` whose rows
+are signed probability measures with negative mass at most `delta` should be
+dimension-free close to a stochastic idempotent. Hume showed the best possible
+power is at most `1/2`: a `3 x 3` family has `delta=s^2` but distance
+`2s+O(s^2)` from every stochastic idempotent. Thus this route, if true, matches
+the baseline `O(sqrt(eta))` exponent but cannot produce `O(eta)` in general.
+See `agent-B/notes/subagent-classical-projection-stability.md`.
+
+Update 2026-06-02: two sidecar checks reduced this classical theorem to
+dimension-free `sqrt` stability of almost-idempotent stochastic matrices:
+
+```text
+Q row-stochastic, ||Q^2-Q||_{infty->infty} <= eps
+  => dist(Q, stochastic idempotents) <= C sqrt(eps).
+```
+
+The forward reduction repairs each signed row of `P` by truncating and
+renormalizing, giving `||P-Q||<=2delta` and
+`||Q^2-Q||<=6delta+4delta^2`; the converse uses spectral functional calculus
+on `theta(2Q-I)`. No proof or citation for the dimension-free Markov theorem
+was found. The Cesaro limit is not enough, since slow two-state chains are
+close to the identity idempotent, not to their ergodic rank-one projection.
+Thus exact UP factorization remains conditional on this projection-stability
+theorem or on a concrete positive Layer 1 output. See
+`agent-B/notes/subagent-classical-sqrt-stability-proof.md` and
+`agent-B/notes/response-to-agent-a-v0.7.md`.
+
+Update: I reformulated the same classical target as dimension-free stability
+of affine retractions of the simplex. The missing lemma is:
+
+```text
+dist(P, stochastic idempotent affine retractions)
+ <= C sqrt( sup_{x in Delta_n} dist(Px,Delta_n) )
+```
+
+for exact affine retractions `P`. This is recorded at
+`agent-B/notes/markov-affine-retraction-formulation.md`.
+
+New special case: I proved the sharp square-root theorem for rank-one signed
+idempotents `P=I-u v^T`. After normalizing the positive and negative masses of
+`v`, the near-positivity inequalities force at most one positive and one
+negative active coordinate above `sqrt(delta)`; rounding gives a stochastic
+idempotent within `C sqrt(delta)`. This includes Hume's sharp example. See
+`agent-B/notes/rank-one-classical-stability.md`.
+
+New structural lemma: for an almost-idempotent stochastic matrix `Q`, exposed
+faces of the row polytope are almost closed at square-root scale. Precisely, if
+`eps=||Q^2-Q||`, `phi` is `1`-Lipschitz affine, `m=max_j phi(q_j)`, and
+`phi(q_i)>=m-alpha`, then row `i` sends at most `(alpha+eps)/gamma` mass to
+rows with `phi(q_j)<=m-gamma`. Taking `gamma=sqrt(eps)` gives the sharp leakage
+scale. This is useful but not a full Markov stability proof; the missing step is
+a dimension-free recursive rounding of these almost-closed exposed faces. See
+`agent-B/notes/classical-affine-face-lemmas.md`.
+
+New special case: I proved the sharp square-root theorem for exact signed
+affine retractions whose row polytope is a simplex, with a universal constant
+independent of the number of vertices. For simplex vertices `r^a` and
+barycentric coordinates `lambda_a`, idempotency gives
+`sum_j r^a_j lambda_b(j)=delta_ab`. Hence
+`sum_j r^a_j(1-lambda_a(j))=0`; near-positivity forces the positive mass of
+`r^a` into `{lambda_a>=1-sqrt(delta)}`. Normalizing these disjoint near-vertex
+restrictions gives recurrent distributions, and rounding rows to barycentric
+mixtures of them gives a stochastic idempotent within `C sqrt(delta)`. See
+`agent-B/notes/simplex-classical-stability.md`. The line-segment theorem in
+`agent-B/notes/line-segment-classical-stability.md` is the two-vertex case.
+
+I also isolated the remaining non-simplex obstruction in
+`agent-B/notes/approximate-simplexity-reduction.md`. If the rows admit
+`gamma`-approximate simplex coordinates, meaning selected rows `r^a` and affine
+functions `lambda_a` with `0<=lambda_a<=1`, `sum lambda_a=1`,
+`lambda_a(r^a)=1`, and
+`||p_i-sum_a lambda_a(p_i)r^a||_1<=gamma`, then the same concentration argument
+gives a stochastic idempotent within `C(sqrt(delta)+gamma)`. Thus this route to
+the full classical theorem is reduced to proving `gamma=O(sqrt(delta))`
+approximate simplexity for arbitrary non-simplex row polytopes, or finding a
+counterexample to that lemma.
+
+Fermat sidecar probed the non-simplex case and found no counterexample. The
+useful obstruction it identified is precise: one-face exposed leakage is
+dimension-free, but turning several facet slacks into a global near-vertex set
+can lose either a factor equal to the number of facets or an inverse
+angle/altitude. Macroscopic affine dependencies such as parallelogram
+relations also cannot be rounded by giving every vertex a disjoint recurrent
+class. The missing lemma should therefore be phrased as an angle-free
+approximate-simplexity/cancellation statement: any macroscopic non-simplex
+affine dependence must either cost more than `O(delta)` negative mass or be
+mergeable at `O(sqrt(delta))` scale. See
+`agent-B/notes/subagent-non-simplex-classical-probe-v0.1.md`.
+
+New correction from Popper, now generalized: bounded-coordinate non-simplex
+dependencies are strongly constrained. See
+`agent-B/notes/parallelogram-classical-stability.md`.
+
+The bounded binary-coordinate cancellation lemma says: if selected rows `r_a`
+have distinct binary code words witnessed by affine functions
+`s_1,...,s_m:K->[0,1]`, then each `r_a` is `O(m sqrt(delta))`-close to a
+probability measure supported on its own disjoint code cell. Consequently, for
+all coefficients `c_a`,
+
+```text
+||sum_a c_a r_a||_1 >= (1-C m sqrt(delta)) sum_a |c_a|.
+```
+
+Thus exact affine dependencies with bounded coordinate witnesses are
+impossible when `m sqrt(delta)` is small. In particular, an exact
+parallelogram row polytope, whose vertices satisfy
+`r_{00}+r_{11}=r_{10}+r_{01}`, cannot occur for sufficiently small `delta`.
+The same argument rules out fixed-complexity non-simplex product-of-simplexes
+vertex geometries whenever their factor coordinates are affine maps
+`K->[0,1]`: the product coordinates supply bounded binary witnesses, while
+two nontrivial factors supply a rectangle affine relation.
+The unresolved issue is dimension-free treatment of arbitrary non-simplex
+dependencies when no bounded coordinate witnesses are available or many
+facets/factors make the `m`-dependence unacceptable.
+
+Latest refinement: the approximate-simplexity reduction is robust to small
+signed coordinate errors. In
+`agent-B/notes/robust-approximate-simplexity-reduction.md`, I prove that it is
+enough for the affine coordinate vectors to have coefficient negative mass
+`O(delta)` and reconstruction error `O(sqrt(delta))`; exact pointwise
+nonnegativity is not needed.
+
+Wegener sidecar then sharpened the remaining non-simplex target; see
+`agent-B/notes/subagent-exposed-redundant-classical-v0.1.md`. Well-exposed
+separated vertices satisfy an intrinsic circuit-cancellation estimate:
+
+```text
+||sum_a c_a v_a||_1 >= (1-C sqrt(delta)) sum_a |c_a|.
+```
+
+I extracted the proof as a theorem-level note:
+`agent-B/notes/exposed-circuit-cancellation.md`. In its quantitative form, if
+the exposing gap is `kappa`, the error term is
+`C(delta/kappa+delta)`, so the square-root bound follows at
+`kappa >= c sqrt(delta)`.
+
+Thus well-exposed affine dependencies are impossible at small defect. The
+missing geometric lemma is now an exposed-or-redundant dichotomy: every vertex
+at scale `sqrt(delta)` should either be well exposed with a
+`sqrt(delta)`-sized gap, or be `O(sqrt(delta))`-mergeable into the convex hull
+of other/nearby rows.
+I formalized this target at
+`agent-B/notes/exposed-redundant-dichotomy-target.md`, including the
+exposedness modulus
+`e_v(rho)=sup_h min_{||x-v||_1>=rho} h(x)` and the LP-dual obstruction.
+
+New proved subcase:
+`agent-B/notes/well-exposed-classical-stability.md` shows that if all
+row-polytope vertices are pairwise separated and well exposed at the
+square-root scale, then exposed-circuit cancellation forces affine
+independence of the vertices. The row polytope is therefore a simplex, and
+`agent-B/notes/simplex-classical-stability.md` gives a stochastic idempotent
+within `O(sqrt(delta))`. Thus the remaining non-simplex obstruction must come
+from close/mergeable vertices or non-well-exposed vertices.
+
+New merge-compatible theorem:
+`agent-B/notes/cluster-representative-classical-stability.md` proves that
+global affine simplex coordinates are not needed if rows are reconstructible
+from well-exposed representatives. If representative rows have disjoint
+`rho`-clusters and every outside row is `gamma`-close to a convex combination
+of representatives, then there is a stochastic idempotent within
+`C(rho+gamma+delta/kappa+delta)`. Hence `rho,gamma=O(sqrt(delta))` and
+`kappa>=c sqrt(delta)` give the desired square-root stability without
+accumulating constants over merged vertices.
+
+New exact commutative factorization theorem:
+`agent-B/theory/classical-cluster-factorization-theorem.md` packages this into
+a positive-map theorem. For a row-stochastic `Q` with
+`||Q^2-Q||<=eta`, if `P=theta(2Q-I)` satisfies the cluster-representative
+geometry, then there is a stochastic idempotent `E` with
+`||E-Q||=O(sqrt(eta))`. The maps `Delta=inclusion` and `Upsilon=E` factor
+through `J=E(ell_infty^n)` with product `x*y=E(x.y)`, giving exact unital
+positive factor maps in the commutative special JB setting.
+
+## Alternative Contractive-Projection Route
+
+Since `P=theta(2Phi-I)` also satisfies `||P||<=1+O(eta)`, exact contractive-projection theory is relevant. Kaup/Friedman-Russo/Blecher-Neal give range structures for exact contractive or completely contractive projections, but the binary product `P(x o y)` requires hypotheses stronger than mere near-contractivity in the sources I checked.
+
+I recorded this as `agent-B/notes/alternative-bridge-near-contractive-projection.md`. It may be a clean proof route if we can prove a quantitative near-contractive projection theorem, but it is not currently a citation-level result.
+
+## Response To Agent A v0.4
+
+I agree with Agent A's v0.4 correction that `alpha=1` is not automatic for arbitrary UP maps and that decomposable maps are the natural class where an `O(eta)` two-hole/dilation proof may survive.
+
+At the time of my v0.4 response I did **not** think the full general `alpha=1/2` bridge was complete. What was solid then was only the first insertion estimate, i.e. approximate Effros-Stormer Lemma 1.1. The full Jordan identity also needed an approximate version of Effros-Stormer's null-ideal mechanism for holes
+
+`h_{r,s}=r o s - P(r o s)`.
+
+We need estimates like `P(h_{r,s}^2)=small` or bilinear `P(h_{r,s} o h_{u,v})=small`. Without this, terms such as `P(h_{a,a} o h_{b,a})` are uncontrolled.
+
+Detailed response: `agent-B/notes/response-to-agent-a-v0.4.md`.
+
+Update: `agent-B/notes/layer2-null-ideal-sqrt.md` is my proposed completion of this missing null-ideal step at `O(sqrt(eta))`.
+
+## Decomposable Norm Correction
+
+A sidecar check found that the standard Haagerup/Wittstock decomposable norm is **not** `1` for every unital positive decomposable map. The transpose on `M_n` is unital, positive, trace-preserving, and decomposable, but its standard decomposable norm is `n`.
+
+The decomposable `alpha=1` theorem should therefore be phrased using an explicit CP+coCP decomposition
+
+`Phi = Phi_0 + Psi_0 o tau`
+
+with bounded CP pieces. For a unital map this component control is automatic from any such decomposition because `Phi_0(1)+Psi_0(1)=1`, hence `||Phi_0||_cb, ||Psi_0||_cb <= 1`. See `agent-B/notes/subagent-decomposable-norm.md`.
+
+I recorded the remaining proof route and obstacles in
+`agent-B/notes/decomposable-alpha1-route.md`. The key issue is that the CP and
+coCP summands are not individually unital or almost idempotent; the proof needs
+a single doubled/universal-envelope two-hole calculation controlled by
+`||Phi^2-Phi||`.
+
+Update 2026-06-02: the naive doubled/lifted route is not automatically
+controlled.
+If `Phi=Cj` is the decomposable factorization through a doubled/opposite
+algebra, then `F=jC` satisfies `F^2-F=j((Phi-I)C)`, and
+`||Phi^2-Phi||` does not control this on all of `C(D)`. There is even a
+commutative stochastic example in the exact doubled form with `Cj` exactly
+idempotent but `||jCjC-jC||=1`. See
+`agent-B/notes/decomposable-doubling-obstruction.md`. Thus any `O(eta)`
+decomposable proof needs an additional dilation-compatible hypothesis or a
+direct CP/coCP two-hole identity.
+
+There is a clean conditional positive result: if a dilation-compatible model
+can be chosen so that `F=jC` is genuinely UCP and
+`||F^2-F||_cb<=eta`, then Kitaev's UCP theorem applied to `F` restricts along
+the Jordan embedding and gives the desired `O(eta)` algebraic bridge for
+`Phi=Cj`. This is recorded at
+`agent-B/notes/decomposable-dilation-compatible-theorem.md`. The point is that
+the UCP lifted-map hypothesis is extra; it is not automatic for a general
+CP+coCP decomposition.
+
+Sartre sidecar independently stressed this: a bad CP+coCP decomposition of the
+exact depolarizing projection on `M_2` has `eta=0` but nonzero off-diagonal
+universal-envelope defect `||Phi F-F||>=eps/2`. So a proof cannot use an
+arbitrary supplied decomposition without either selecting a compatible one or
+showing intrinsic cancellation. See
+`agent-B/notes/subagent-decomposable-alpha1-stress.md`.
+
+## Factorization Rounding Obstruction
+
+The algebraic bridge does not yet give exact UP factor maps. After Layer 1, the
+obvious maps are `Delta_0=inclusion o v` and `Upsilon_0=v^{-1} o P`. They
+factorize `P` algebraically, but `P` is only approximately positive.
+
+McClintock found that a generic dimension-free `O(epsilon)` repair theorem is
+false for finite-dimensional JB targets. The counterexample uses spin factors
+`J=R oplus R^m` and maps from `ell_infty^{2m}` that are `epsilon`-positive but
+at distance at least `sqrt(epsilon)` from every positive unital map. Composing
+with a diagonal conditional expectation gives the same obstruction for domain
+`B(C^{2m})_sa`.
+
+Therefore, to keep the bridge exponent in an exact UP factorization theorem, we
+need one of:
+
+- a concrete Layer 1 output plus a comparison argument with a canonical
+  positive conditional expectation;
+- near-positive projection stability, giving a positive idempotent close to
+  `P`;
+- positivity built into the Layer 1 output from the start;
+- extra hypotheses excluding the spin-factor negative-variation obstruction.
+
+If we use only black-box approximate-positive repair, a square-root loss is
+unavoidable in this level of generality. I recorded the issue in
+`agent-B/notes/factorization-positivity-rounding.md` and
+`agent-B/notes/subagent-positivity-rounding.md`.
+
+Update: I formalized the near-positive-projection route as
+`agent-B/theory/theorem-C-conditional-factorization.md`. Assuming the
+projection-stability theorem
+
+```text
+delta-positive unital idempotent P with ||P||<=1+delta
+  => dist(P, positive unital idempotents) <= C sqrt(delta),
+```
+
+an almost-idempotent UP map `Phi` has exact UP factor maps through
+`J=E(B(H)_sa)`, where `E` is the nearby positive idempotent. The maps are
+`Delta` equal to inclusion and `Upsilon=E`; they satisfy
+`Upsilon Delta=id_J`,
+`||Delta Upsilon-Phi||<=C sqrt(eta)`, and
+`Upsilon(Delta(x)oDelta(y))=x*y` exactly for the Effros-Stormer product on
+`J`. Thus the remaining unproved ingredient on this route is precisely
+projection stability, not the factorization step.
+
+Latest theorem-C hardening: I patched
+`agent-B/theory/theorem-C-conditional-factorization.md` to spell out the
+real-to-complex invocation of Effros-Stormer. A unital positive idempotent
+`E:B(H)_sa->B(H)_sa` extends complex-linearly by
+`E_C(a+ib)=E(a)+iE(b)` to a unital positive projection on `B(H)`, since
+positivity is tested on positive self-adjoint inputs. Effros-Stormer applies
+to `E_C`, and restricting back to the self-adjoint range gives the real
+special JB product `x*y=E(x o y)` and inherited order-unit cone
+`J cap B(H)_+`.
+I also made the positivity of the factor maps explicit: `Delta` is the
+inclusion and sends `J_+=J cap B(H)_+` into `B(H)_+`; `Upsilon=E` sends
+`B(H)_+` into `J_+` because `E` is positive and idempotent.
+The theorem-C proof now verifies that this inherited cone is exactly the JB
+positive cone for the Effros-Stormer product. If `x=y*y=E(y o y)`, then `x` is
+ambient-positive. Conversely, if `z in J cap B(H)_+`, then with
+`m=||z||`, the ambient inequality `0<=z<=m1` gives `||m1-z||<=m` in the
+inherited norm; the unital JB norm criterion implies `z` is JB-positive.
+Thus theorem-C genuinely gives positive maps through the special JB cone.
+
+## Layer 1 Quantitative Stability Obligations
+
+I sharpened the Layer 1 review in
+`agent-B/notes/layer1-quantitative-obligations-v0.2.md`. The key point is that
+Kitaev's error-reduction lemma uses more than qualitative `H^2=0`: it uses a
+diagonal represented as a probability average of norm-one elements, hence with
+projective tensor norm `1`. The Jordan analogue must provide the same kind of
+dimension-free bounded homotopy in the order-unit norm.
+
+Concretely, Agent A's route needs:
+
+- an explicit Jordan cochain homotopy/right inverse to `d^1`;
+- a universal norm bound for matrix factors, spin factors, direct sums, and the
+  Albert factor;
+- a bounded projection/homotopy controlling approximate cocycles, not just exact
+  cocycles;
+- explicit approximate-module error estimates because the codomain is only an
+  epsilon-JB algebra;
+- positive/concrete output if the result is to imply exact UP factorization.
+
+Haar averaging over `Aut(B)` has norm `1` as an averaging projection, but that
+alone is not a right inverse to the Jordan coboundary. The inverse on the
+non-invariant cochain components is where dimension/rank dependence could
+enter.
+
+Latest literature check:
+`agent-B/notes/known-jstar-stability-literature-check.md` records that the
+local Baak--Moslehian J*-homomorphism stability paper does not prove our
+Layer 1 theorem. It stabilizes maps between already exact J*-algebras under
+global Hyers/Rassias scaling hypotheses; it does not perturb an epsilon-JB
+product on an order-unit space to an exact JB algebra. Chu--Russo/Penico
+gives qualitative cohomological triviality, but not the needed
+dimension-free order-unit-norm homotopy.
+
+## Compaction-Safe Working State
+
+For continuity after context compaction, read these files before doing new
+work:
+
+1. `agent-B/notes/compaction-checkpoint.md`;
+2. this root file, `agent-b-findings`;
+3. root `agent-a-findings`.
+
+Then read the specific proof file you intend to edit. Do not rely on chat
+history alone. Agent B's current canonical files are:
+
+- `agent-B/notes/theorem-stack-v0.3.md`;
+- `agent-B/theory/theorem-B-algebraic-bridge.md`;
+- `agent-B/theory/theorem-C-conditional-factorization.md`;
+- `agent-B/theory/classical-cluster-factorization-theorem.md`;
+- `agent-B/notes/layer1-quantitative-obligations-v0.2.md`;
+- `agent-B/notes/known-jstar-stability-literature-check.md`;
+- `agent-B/notes/approximate-simplexity-reduction.md`;
+- `agent-B/notes/robust-approximate-simplexity-reduction.md`;
+- `agent-B/notes/subagent-exposed-redundant-classical-v0.1.md`;
+- `agent-B/notes/exposed-circuit-cancellation.md`;
+- `agent-B/notes/well-exposed-classical-stability.md`;
+- `agent-B/notes/cluster-representative-classical-stability.md`;
+- `agent-B/notes/exposed-redundant-dichotomy-target.md`.
+
+After any substantial mathematical conclusion, update
+`agent-B/notes/compaction-checkpoint.md` and then this file before continuing.
+The checkpoint now has a front-loaded "Current Resume Snapshot" so a resumed
+Agent B can recover the active status without reconstructing it from the
+historical item list.
+
+The durable current status is:
+
+- two-layer/order-unit formulation: broadly accepted;
+- arbitrary UP theorem target: special JB/JC algebra with UP factor maps, no
+  reversibility or decomposability promised;
+- Layer 2 bridge: proved internally at `O(sqrt(eta))`; Agent A v0.5 reports
+  line-by-line verification of `agent-B/theory/theorem-B-algebraic-bridge.md`,
+  and Agent B's report-review pass found no local algebraic error in the
+  Section 6 transcription;
+- Layer 1 literature status: checked local J*-homomorphism stability and
+  Jordan cohomology sources; they do not provide the missing dimension-free
+  epsilon-JB product stability theorem;
+- exact UP factor maps: cannot rely on generic `O(epsilon)`
+  positivity-rounding; need concrete positivity or near-positive projection
+  stability;
+- near-positive projection stability: possible only at square-root scale in
+  general; linear stability is classically false; the classical square-root
+  theorem is equivalent to a still-open dimension-free stability theorem for
+  almost-idempotent stochastic matrices;
+- classical special cases/constraints now proved: rank-one and
+  line-segment/simplex row polytopes are stable; bounded binary-coordinate
+  dependencies, including exact parallelogram row polytopes, are impossible
+  at small defect;
+- latest classical reduction: signed approximate simplex coordinates with
+  `O(delta)` coefficient negative mass suffice, and the remaining non-simplex
+  gap is the exposed-or-redundant vertex dichotomy; the exposed-circuit
+  cancellation half is proved; the fully well-exposed separated vertex branch
+  and the cluster-representative merge branch are proved stability cases; and
+  the remaining half is formalized by an exposedness modulus and LP-dual
+  target;
+- exact commutative factorization: proved under the cluster-representative
+  geometry hypothesis on the spectral idempotent;
+- decomposable `alpha=1` theorem: plausible but still conjectural pending a
+  controlled CP/coCP two-hole proof;
+- current workflow status: no active subagents or long-running shell sessions;
+  no pending theorem-stack grammar fix; latest theorem-C cone-compatibility
+  hardening is reflected in both `agent-B/theory/theorem-C-conditional-factorization.md`
+  and `agent-B/notes/theorem-stack-v0.3.md`.
+
+## Requests / Questions For Agent A
+
+See also the concise updates `agent-B/notes/response-to-agent-a-v0.5.md`,
+`agent-B/notes/response-to-agent-a-v0.6.md`,
+`agent-B/notes/response-to-agent-a-v0.7.md`, and
+`agent-B/notes/response-to-agent-a-v0.8.md`,
+`agent-B/notes/response-to-agent-a-v0.9.md`, and
+`agent-B/notes/response-to-agent-a-v0.10.md`,
+`agent-B/notes/response-to-agent-a-v0.11.md`,
+`agent-B/notes/response-to-agent-a-v0.12.md`,
+`agent-B/notes/response-to-agent-a-v0.13.md`,
+`agent-B/notes/response-to-agent-a-v0.14.md`, and
+`agent-B/notes/response-to-agent-a-v0.15.md`. The newest synthesis is
+`agent-B/notes/response-to-agent-a-v0.16.md`.
+
+1. Please use `agent-B/notes/theorem-stack-v0.3.md` as Agent B's current
+   theorem-stack proposal.
+2. Bridge review checkpoint: Agent A v0.5 has completed line-by-line review of
+   `agent-B/theory/theorem-B-algebraic-bridge.md`; future review should focus on
+   regressions introduced by edits, not on the old proof-candidate status.
+3. Please review `agent-B/notes/layer1-agent-a-review-v0.1.md` and update the
+   Layer 1/overview theorem statements accordingly.
+4. Please treat exact UP factorization as conditional until Layer 1 outputs
+   positive/concrete comparison data or near-positive projection stability is
+   proved.
+5. Please account for
+   `agent-B/notes/known-jstar-stability-literature-check.md`: the local
+   J*-homomorphism stability source does not prove the needed
+   dimension-free epsilon-JB product stability theorem.
+6. For the decomposable theorem, use an explicit CP+coCP component bound rather
+   than the standard decomposable norm; see
+   `agent-B/notes/subagent-decomposable-norm.md` and
+   `agent-B/notes/decomposable-alpha1-route.md`.
+7. Please also account for the positivity-rounding counterexample in
+   `agent-B/notes/subagent-positivity-rounding.md`; this is now the main
+   post-bridge obstacle to exact UP factor maps with the same exponent.
+8. Please adjust the Layer 1 stability target in light of
+   `agent-B/notes/layer1-output-requirements.md`; algebraic stability alone is
+   not enough for UP factorization.
+9. Please assess the near-positive projection stability program in
+   `agent-B/notes/near-positive-projection-stability-program.md`, especially
+   the exact commutative theorem in
+   `agent-B/theory/classical-cluster-factorization-theorem.md`,
+   the cluster-representative special case in
+   `agent-B/notes/cluster-representative-classical-stability.md`, the
+   well-exposed special case in
+   `agent-B/notes/well-exposed-classical-stability.md` and the remaining
+   exposed-or-redundant formulation in
+   `agent-B/notes/exposed-redundant-dichotomy-target.md`.
+
+## Files
+
+- Detailed checkpoint: `agent-B/notes/compaction-checkpoint.md`
+- Local sources: `agent-B/references/`
+
+## Agent B Report Review Pass v0.1
+
+Date: 2026-06-02.
+
+I completed the adversarial review pass on `report/` requested by the user and
+integrated corrections directly into the report. Coordination/review files:
+
+- `agent-B/notes/subagent-report-math-audit-v0.1.md`;
+- `agent-B/notes/subagent-report-provenance-audit-v0.1.md`;
+- `agent-B/notes/subagent-report-exposition-build-audit-v0.1.md`;
+- synthesis: `agent-B/notes/report-review-v0.1.md`.
+
+Consensus/status update: Agent A v0.5 says the Layer-2 bridge proof
+`agent-B/theory/theorem-B-algebraic-bridge.md` was verified line by line. The
+math audit found no local algebraic error in the report's Section 6
+transcription. I have therefore promoted Agent B's durable status for the
+arbitrary-UP algebraic bridge to proved internally at the `O(sqrt(eta))` scale.
+Layer 1 dimension-free order-unit stability and near-positive projection
+stability remain open.
+
+Corrections now visible in `report/`:
+
+- finite-dimensional cb-norm remark fixed: the issue is failure of positivity
+  under matrix amplification, not lack of boundedness;
+- JvNW classification now includes the one-dimensional simple algebra `R`;
+- spectral-idempotent section now correctly works on the real self-adjoint
+  space and uses a small universal threshold `eta0`;
+- epsilon-JB `delta`-isomorphism is now explicitly algebraic/normed, not
+  automatically order-preserving;
+- Section 7 now says the global averaging route is a candidate mechanism, not a
+  dimension-free order-unit-norm resolution;
+- open Layer-1 targets are now `openproblem` environments rather than theorem
+  or proposition environments;
+- decomposable `O(eta)` is explicitly open unless compatible dilation/component
+  control is supplied;
+- provenance was corrected to actual ES OCR page files, HOS state-functional
+  lines, stable internal hashes, and extraction/PDF flags for Whitehead and
+  compactness;
+- all substantive review corrections are flagged in the report with visible
+  "Agent B review correction" or "Agent B review provenance flag" text.
+
+Build result: `cd report && make` succeeds and `report/main.pdf` is current.
+No duplicate PDF-destination warnings remain. Residual LaTeX issues are minor
+typesetting only: one 3.7pt overfull line in the spectral-idempotent proof and
+one harmless underfull line in the status table.
+
+Remaining report-level obligations:
+
+1. Byte-match Chu--Russo Whitehead statements against extracted primary text
+   from the local PDF or another local primary source.
+2. Register a primary local source for the Faraut--Koranyi compactness claim, or
+   keep it explicitly extraction-level.
+3. Continue the mathematical programme on the two open engines: Layer 1
+   order-unit stability and near-positive projection stability/global
+   exposed-hull.
+
+## Public GitHub Publication Note
+
+Date: 2026-06-02.
+
+Per the user's publication request, I initialized this workspace as a Git
+repository on branch `main`, added the standard AGPL-3.0 license text, and
+created a root `.gitignore` excluding copied third-party/reference material:
+`agent-A/refs/`, `agent-B/references/`, and
+`agent-A/notes/ingestion-results-2026-06-01.json`. Generated LaTeX caches,
+Python caches, and non-report PDFs are also ignored. The intended public commit
+keeps the original project notes, experiments, report sources, and
+`report/main.pdf`, while leaving local copyrighted reference corpora untracked.

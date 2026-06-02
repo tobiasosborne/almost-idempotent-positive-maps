@@ -1,0 +1,99 @@
+%% Section author: see report task. Provenance comments inline (% PROV: ...).
+\section{Approximate Jordan algebras}\label{sec:epsjb}
+
+We now introduce the central object of this work: a finite-dimensional real
+order-unit space carrying a commutative bilinear product that satisfies the
+JB-algebra axioms of \Cref{sec:jordan} only up to a controlled error~$\eps$.
+The structural choice, motivated by the spectral construction of
+\Cref{sec:spectral} (where such an object arises from an almost-idempotent
+positive map), is that the \emph{order and norm are exact} and only the
+\emph{product} is approximate. This is the project's working definition.
+
+% PROV: ORIGINAL agent-a-findings:81-86 -- order-unit eps-JB definition (axioms JB1-JB4); agent-B/theory/theorem-B-algebraic-bridge.md:36-50,86 proves exactly this axiom list. Contrast structure from Kitaev2024 (kitaev approximate_algebras.tex:407-456).
+\begin{definition}[$\eps$-JB algebra, order-unit form]\label{def:eps-jb}
+\status{(consensus)}\;
+Let $\eps\ge 0$. An \emph{$\eps$-JB algebra} (order-unit form) is a
+finite-dimensional real order-unit space $(A,\Id,\le)$ with order-unit norm
+$\norm{\,\cdot\,}$, together with a commutative bilinear product
+$\jp\colon A\times A\to A$ for which commutativity, $a\jp b=b\jp a$, and the
+unit law, $\Id\jp a=a$, hold \emph{exactly}, and such that for all $a,b\in A$:
+\begin{align}
+\label{eq:jb1}
+\tag{JB1}
+\norm{a\jp b} &\le (1+\eps)\,\norm{a}\,\norm{b},\\[2pt]
+\label{eq:jb2}
+\tag{JB2}
+\norm{a\jp a} &\ge (1-\eps)\,\norm{a}^2,\\[2pt]
+\label{eq:jb3}
+\tag{JB3}
+a\jp a &\ge -\eps\,\norm{a}^2\,\Id,\\[2pt]
+\label{eq:jb4}
+\tag{JB4}
+\norm{\bigl((a\jp a)\jp b\bigr)\jp a-(a\jp a)\jp(b\jp a)}
+&\le \eps\,\norm{a}^3\,\norm{b}.
+\end{align}
+We call \eqref{eq:jb1} \emph{approximate submultiplicativity},
+\eqref{eq:jb2} the \emph{lower square norm bound},
+\eqref{eq:jb3} \emph{approximate positivity of squares},
+and \eqref{eq:jb4} the \emph{approximate Jordan identity}.
+The status \status{(consensus)} records that this is the definition agreed
+between the authors; that it is actually \emph{realised}, with
+$\eps\le C\sqrt{\eta}$, by the spectral construction of \Cref{sec:spectral} is
+the separate \status{(proved)} content of \Cref{thm:bridge}.
+\end{definition}
+
+% PROV: ORIGINAL agent-a-findings:79,84-85 -- degeneration to genuine JB; explicit contrast with Kitaev's fully-approximate norm. Kitaev2024 kitaev approximate_algebras.tex:407-438 (ax_prodnorm, ax_C*, ax_eps_unit) for the contrast statement.
+\begin{remark}\label{rem:eps-jb-degeneration}
+\status{(proved from definitions)}
+At $\eps=0$ each axiom degenerates to a genuine JB-algebra axiom of
+\Cref{sec:jordan}: \eqref{eq:jb1} becomes submultiplicativity
+$\norm{a\jp b}\le\norm{a}\norm{b}$; \eqref{eq:jb2} forces $\norm{a\jp a}=\norm{a}^2$
+(its upper bound is the $\eps=0$ case of \eqref{eq:jb1}), the defining JB norm
+condition on squares; \eqref{eq:jb3} becomes $a\jp a\ge 0$, the formally-real
+(order) axiom that squares are positive; and \eqref{eq:jb4} becomes the exact
+Jordan identity $(a^2\jp b)\jp a=a^2\jp(b\jp a)$ with $a^2:=a\jp a$.
+Thus an $\eps$-JB algebra is exactly a quantitative relaxation of a JB-algebra
+in the product alone. The order relation $\le$, the unit $\Id$, the order-unit
+norm $\norm{\,\cdot\,}$, and the laws $a\jp b=b\jp a$ and $\Id\jp a=a$ are kept
+\emph{exact}. This is the key structural simplification relative to Kitaev's
+$\eps$-$C^*$ algebras \cite{Kitaev2024}, where the norm itself is only
+approximately multiplicative and the unit may be approximate (e.g.\ his
+$\norm{XY}\le(1+\eps)\norm{X}\norm{Y}$, $\norm{X^\dag X}\ge(1-\eps)\norm{X}^2$,
+$\bigl|\norm{I}-1\bigr|\le\eps$); here only $\jp$ carries the defect, which
+removes the approximate-norm bookkeeping at the cost of nothing in the
+intended application.
+\end{remark}
+
+% PROV: ORIGINAL agent-a-findings:86 -- delta-Jordan-homomorphism / delta-isomorphism; mirrors Kitaev2024 kitaev approximate_algebras.tex:443-456 (delta-homomorphism / delta-isomorphism) in the Jordan (commutative-product) setting.
+\begin{definition}[$\delta$-Jordan-homomorphism, $\delta$-isomorphism]\label{def:eps-jb-iso}
+\status{(consensus)}\;
+Let $A,B$ be $\eps$-JB algebras (\Cref{def:eps-jb}) and $\delta\ge 0$. A
+\emph{$\delta$-Jordan-homomorphism} is a linear map $v\colon A\to B$ that
+almost preserves the unit and the product:
+\begin{align}
+\label{eq:jb-hom-unit}
+\norm{v(\Id)-\Id} &\le \delta,\\[2pt]
+\label{eq:jb-hom-mult}
+\norm{v(a\jp b)-v(a)\jp v(b)} &\le \delta\,\norm{a}\,\norm{b}
+\qquad(a,b\in A).
+\end{align}
+A \emph{$\delta$-isomorphism} is a bijective $\delta$-Jordan-homomorphism that
+is moreover an approximate isometry,
+\begin{equation}
+\label{eq:jb-iso-norm}
+(1-\delta)\,\norm{a}\le\norm{v(a)}\le(1+\delta)\,\norm{a}
+\qquad(a\in A).
+\end{equation}
+This is an algebraic and normed notion of approximate Jordan isomorphism. It
+does not, by itself, say that $v$ or $v^{-1}$ approximately preserves the
+positive cone; that order control is an additional requirement in the
+positive-map factorization problem. The status \status{(consensus)} marks this as
+the authors' adopted definition --- the Jordan (commutative-product)
+transcription of Kitaev's $\delta$-homomorphism and $\delta$-isomorphism
+\cite{Kitaev2024}.
+
+\smallskip\noindent\textbf{Agent B review correction.}
+The earlier draft called this equivalently an approximate order-isomorphism. That
+was not justified by the displayed hypotheses and has been separated from the
+normed algebraic definition.
+\end{definition}

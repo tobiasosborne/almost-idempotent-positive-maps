@@ -1,0 +1,61 @@
+\section{Introduction}\label{sec:intro}
+
+\paragraph{The question.}
+A physical system sometimes hides a smaller logical system inside it: the
+logical observables are encoded in the physical ones, and a recovery operation
+returns the system to the encoded subspace. Mathematically, such a recovery is a
+quantum channel $T$ that is idempotent, $T^2=T$. Kitaev~\cite{Kitaev2024} studied
+the realistic case where the recovery is only \emph{approximately} idempotent,
+and asked what algebraic structure the encoded observables carry. He worked with
+the dual map $\Phi$ of the channel, a unital completely positive map on the
+algebra $B(\HH)$ of operators on a finite-dimensional Hilbert space, and measured
+non-idempotence by $\norm{\Phi^2-\Phi}_{\mathrm{cb}}\le\eta$. His answer: the
+near-fixed points of $\Phi$ form an \emph{approximate $C^*$-algebra}, and every
+finite-dimensional approximate $C^*$-algebra is, with universal (dimension-free)
+constants, close to a genuine $C^*$-algebra.
+
+\paragraph{This report.}
+We ask the same question for maps that are only \emph{positive}, not completely
+positive. This is the natural setting whenever one cares about distinguishability
+of states rather than full quantum operations, and it is the setting of
+van~Luijk and Wilming~\cite{vanLuijkWilming2026}, who show that for positive
+trace-preserving maps the relevant invariant is a \emph{Jordan} algebra. The
+present report does three things, in order of completeness:
+\begin{enumerate}[leftmargin=*]
+  \item It records the consensus \emph{definitions} (positive map, Jordan
+    product, JB-algebra, order-unit space, approximate Jordan algebra). Standard
+    background definitions are matched against local source copies; project
+    definitions such as the $\eps$-JB notion are marked \status{(consensus)} and
+    tied to internal proof files in \texttt{PROVENANCE.md}.
+  \item It proves the \emph{bridge theorem} (\Cref{sec:bridge}): from a unital
+    positive almost-idempotent $\Phi$ one obtains, with no use of dilations or
+    complete positivity, a space that satisfies the Jordan-algebra axioms up to
+    $O(\sqrt\eta)$. This is the positive-map analogue of the first half of
+    Kitaev's construction, and it is complete.
+  \item It states the \emph{structure-theory programme} (\Cref{sec:programme})
+    --- the analogue of the second half of Kitaev's theorem --- and reports
+    precisely what is established and what is still open
+    (\Cref{sec:discussion}).
+\end{enumerate}
+
+\paragraph{Why Jordan, and not associative.}
+The reason positivity forces a Jordan, rather than associative, structure can be
+stated in one line. Kitaev's verification of the $C^*$-norm axiom rests on the
+Schwarz inequality $\Phi(x)^*\Phi(x)\le\Phi(x^*x)$, which holds for $2$-positive
+(in particular completely positive) maps. A merely positive unital map need not
+satisfy it; what it does satisfy is Kadison's inequality
+$\Phi(x)^2\le\Phi(x^2)$ for self-adjoint $x$~\cite{Kadison1952}. The latter
+involves only self-adjoint elements and squares --- exactly the data on which a
+Jordan algebra is built. Replacing the associative product $xy$ by the symmetric
+product $x\jp y=\tfrac12(xy+yx)$ throughout is therefore not a convenience but a
+necessity, and the entire theory reorganises around it.
+
+\paragraph{Conventions and status flags.}
+All Hilbert spaces are finite-dimensional and complex. We write $B(\HH)$ for the
+operators on $\HH$ and $\Bsa$ for the self-adjoint ones. Statements carry a
+status: \status{(proved)} for results with a complete proof in this report;
+\status{(cited)} for results transcribed verbatim from a named source;
+\status{(consensus)} for definitions and conventions adopted by agreement
+between the authors (a definition is never ``proved''); and \status{(open)} for
+targets of the programme not yet established. Constants denoted $C$ are universal and never depend on
+$\dim\HH$ unless explicitly stated.

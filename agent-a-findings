@@ -1,0 +1,251 @@
+# Agent A Findings
+
+Last updated: 2026-06-02 (v0.5). **Single source of truth for Agent A's positions.** Status: **Layer-2 bridge VERIFIED correct (§10)**; Layer-1 abstract dimension-free stability is now the critical path (mine). **READ §10 (bridge endorsement + coordination) and §11 (Layer-1 plan) first; §§1–9 are historical.**
+
+> COORDINATION NOTE for Agent B: my real version sequence is v0.1→v0.2→v0.3→v0.4→v0.5 (this file). I never wrote "v0.6–v0.18". The `response-to-agent-a-v0.6 … v0.18.md` files in agent-B/notes appear to answer positions I never stated (subagent extrapolation). Please ground responses in THIS file only. One canonical thread, please, to avoid drift.
+
+Changelog:
+- v0.1→v0.2: literature survey; reduction of approximate Jordan identity to estimate (★) (§4); formulation (§5).
+- v0.2→v0.3: accept B's corrections 1,2,4 (Theorem 2 target special JB/JC; decomposable only under reversibility; arbitrary-state). §8 exponent (two-hole).
+- v0.3→v0.4: HONEST correction (§9) — the η-upgrade is NOT automatic CP-free; α=1/2 unconditional, α=1 needs decomposable+dilation.
+- v0.4→v0.5: **VERIFIED B's Layer-2 bridge proof line-by-line — CORRECT (§10).** Layer-2 bridge DONE at α=1/2. Refocus on Layer-1 (§11). Coordination note above.
+
+---
+
+## 1. Confirmed background (all from primary sources; refs in `agent-A/refs/lit/`)
+
+**(K) Kitaev's proof, dependency map** (full extraction in `agent-A/notes/ingestion-results-2026-06-01.json`). His main theorem (finite-dim ε-C\*-algebra ≅_{O(ε)} C\*-algebra) is proved by: approximate unitary group (implicit function thm) → nontrivial approximate projection (Lefschetz–Hopf / H-space) → incremental matrix-unit build-up (merge `cor_merge_sum` / extend `lem_extension`) → **error reduction** `cor_improvement` (the crux). Precise dependency map:
+  - **Associativity used essentially**: L/R-multiplication bounds; `prop_P`/sgn functional calculus (only ever applied inside *honest* associative algebras, never in 𝒜 — see his `rem_X2`); the **2-cocycle/diagonal** error-reduction `lem_approx`.
+  - **C\*-identity `‖X†X‖≥(1−ε)‖X‖²` used essentially**: `lem_U_delta`, `prop_delta_hominc` (norm-recovery engine of error reduction), `lem_PQ_Hilb`, `lem_PQR`, the vanishing/nonvanishing projection dichotomy.
+  - **Complete positivity / cb-norm used ONLY** in the tensor-extension §11 (uniform-in-n). The base theorem `th_main` uses NO complete positivity.
+  - **Purely topological (assoc- & C\*-free)**: the nontrivial-projection existence (fixed points of inversion σ via Lefschetz–Hopf + `prop_H-group`), using only: compact orientable manifold + connected H-space + **left**-inversion homotopy + finite-dim cohomology.
+  - **Error reduction `lem_approx`**: a δ-homomorphism `v:ℬ→𝒜` (ℬ a finite-dim C\*-algebra) is O(δ)-close to an O(ε)-homomorphism, via the **exact diagonal** `D=∫dU U†⊗U=Σ_j A_j⊗B_j` of ℬ (‖D‖=1, dimension-free!) used to write the cohomological correction `w'(X)=Σ_j v(A_j) g(B_j,X)` killing the 2-cocycle `g`. Newton iteration δ→O(δ²+ε). **This is the place dimension-freeness is won, and it lives entirely in the honest algebra ℬ.**
+
+**(ES) Effros–Størmer 1979** (the exact bridge, Jordan analogue of Choi–Effros): for a **unital positive projection** P on a C\*-algebra A, the range P(A) with product `a•b = P(a∘b)`, `a∘b=½(ab+ba)`, is a **JC-algebra** (special). Concretely it is realized as `A^P = {a∈A_sa : P(a)=a, P(a²)=a²}` — the **multiplicative domain** — a Jordan subalgebra of (A_sa,∘) under the *original* product. **It is always special; H_3(𝕆) can never arise** (Albert: H_3(𝕆) has no Hilbert-space rep). This settles Q2's representability layer. **[CORRECTED per B]:** the range is special JC/JW but **NOT necessarily reversible** — Effros–Størmer projects onto general JC factors including spin factors V_n, and V_4, V_{≥6} are irreversible (VLW). My v0.2 "reversible JW" was an overstatement (the survey's Itoh citation evidently carried extra hypotheses). Reversibility is an *added* property (holds e.g. for dichotomy minimal-sufficient algebras, VLW), needed only for the decomposable corollary.
+
+**(JS) Jordan–Schwarz inequality** (Størmer; VLW `lem:JS-inequality`): every unital positive map T satisfies `{Ta*,Ta} ≤ T{a*,a}`. The **multiplicative domain** MD(T)={a:{Ta*,Ta}=T{a*,a}} is a **J\*-algebra**, and for an idempotent UP map E, MD(E)=Fix(E)=Ran(E) (VLW `lem:faithful-CE-multi-domain`). This is the positive-map structural engine — the exact analogue of the fact that MD of a UCP map is a \*-algebra.
+
+**(CL) Finite-dim JB classification**: simple ones = spin factors V_n (rank 2), H_n(ℝ),H_n(ℂ),H_n(ℍ) (rank n), and exceptional H_3(𝕆) (rank 3, dim 27). Low-rank coincidences H_2(ℝ)≅V_2, H_2(ℂ)≅V_3, H_2(ℍ)≅V_5, H_2(𝕆)≅V_9 (the last is special!). **Aut(J) is COMPACT** (closed subgroup of O(V) for the trace form) ⇒ Haar averaging available. Peirce decomposition, Jordan frames, spectral theorem & functional calculus all available (Faraut–Korányi). Glennie's s-identity certifies exceptionality of H_3(𝕆).
+
+**(CH) Cohomology/rigidity**: f.d. semisimple Jordan algebras are cohomologically trivial — H¹=0 (Jacobson, 1st Whitehead lemma), **H²=0** (Penico, 2nd Whitehead lemma), Hᵏ=0 k≥3 (Chu–Russo for irreducible modules). Wedderburn principal theorem (Penico 1951). F.d. semisimple Jordan algebras are **rigid** (Gerstenhaber sense; Comm. Algebra 18(10) 1990). **GAP (candid)**: there is **NO** quantitative/uniform-ε stability theorem ("approximately-JB ⇒ O(ε)-close to JB") and **NO** Kadison–Kastler/Christensen near-subalgebra theory for JB/JBW, and **NO** Aut(J)-averaging quantitative cohomological splitting in the literature. The ingredients exist; the synthesis does not. **We must prove the quantitative stability ourselves** — exactly as Kitaev had to (he had associative cohomology + Haar diagonal as inputs but proved his stability from scratch).
+
+---
+
+## 2. The conceptual core (refined): why Jordan, and what survives
+
+- Kitaev's C\*-identity step uses Kadison–**Schwarz** (needs 2-positivity). Merely positive maps only obey **Jordan–Schwarz** (JS) — symmetric products of self-adjoint elements. Hence the associative C\*-structure is demoted to **Jordan** structure. This is forced, not cosmetic.
+- **What survives verbatim conceptually**: the topological projection-existence engine (assoc-free) — we expect a Jordan analogue using approximate Jordan idempotents. The error-reduction *philosophy* (kill a 2-cocycle using a normalized diagonal/averaging living in the *honest* algebra ℬ) survives, with Aut(J)-Haar replacing the unitary-group Haar; H²=0 for semisimple Jordan algebras is the algebraic enabler.
+- **What must be re-derived**: every C\*-identity use must come from JB-norm axioms (`‖a²‖=‖a‖²`, `‖a²‖≤‖a²+b²‖`); the matrix-unit incremental build-up must become a **Jordan frame / Peirce / coordinatization** build-up (Jacobson coordinatization for rank ≥3; spin factors rank 2; H_3(𝕆) rank 3 separately).
+
+---
+
+## 3. Definitive answers to Agent B's three questions
+
+### Q1 (approximate Jordan identity — counterexample or proof?): **No counterexample expected; reduced to a single core estimate (§4).** The JB-norm axiom is free from Kadison's inequality (v0.1 §2). The Jordan identity reduces, via the *exact* ambient Jordan identity in B(H)_sa, to one "P-insertion" estimate. See §4 — this is real progress on the crux.
+
+### Q2 (target abstract JB first; special/exceptional later?): **Yes, two layers, and the special/exceptional question is now SETTLED:**
+  - **Layer 1 (abstract)**: ε-JB-algebra → genuine finite-dim JB-algebra, O(ε), dimension-free. State for **all** finite-dim JB-algebras (incl. exceptional) — rigidity (CH) holds for H_3(𝕆) too (its Aut is the compact F₄). The proof's hard core (quantitative cohomological splitting + projection existence) is *insensitive* to special-vs-exceptional, so we lose nothing by full generality.
+  - **Layer 2 (channel)**: an η-idempotent unital positive Φ on B(H) yields an ε-JB-algebra that is **always special/reversible (JC/JW)** by (ES). So the factorization target is a **reversible JW-algebra** realized by UP maps — exceptional H_3(𝕆) provably never appears. This matches VLW exactly (their J\*-algebras = special, exceptional excluded by concreteness).
+
+### Q3 (do known stability theorems give dimension-free O(ε)?): **No (definitive).** Qualitative rigidity: yes (H²=0, WPT). Quantitative/uniform/dimension-free: **absent from the literature** (CH gap). We build it from scratch using H²=0 + compact-Aut(J) averaging + (for dimension-freeness) Kitaev-style incrementalism. This is the main mathematical labor and our genuine contribution.
+
+---
+
+## 4. NEW: reduction of the approximate Jordan identity to one core estimate
+
+Work in `(B(H)_sa, ‖·‖)`, ‖Φ²−Φ‖ ≤ η (operator norm of the map on the self-adjoint part), P=θ(2Φ−1) the idempotent linearization (‖P−Φ‖≤O(η), P unital, \*-preserving, NOT positive), A=Im P with **exact** order-unit norm inherited from B(H), product `a•b=P(a∘b)`.
+
+**Crucial structural point**: in the ambient B(H)_sa, `∘` is a *genuine* Jordan product — the Jordan identity `((a∘a)∘b)∘a = (a∘a)∘(b∘a)` holds **exactly**. Therefore the *entire* Jordan-identity defect of `•` comes only from the P's inserted between products. Peeling them off one at a time and invoking the exact ambient identity gives:
+
+**Reduction Lemma (claim).** Suppose the **core estimate** holds:
+  (★)  `‖P(P(x)∘b) − P(x∘b)‖ ≤ O(η)·‖x‖·‖b‖`   for `b∈A` and `x` a `•`/`∘`-monomial in elements of A.
+Then `‖((a•a)•b)•a − (a•a)•(b•a)‖ ≤ O(η)‖a‖³‖b‖`, i.e. A is an ε-JB-algebra with ε=O(η).
+
+*Proof sketch.* Using (★) to delete each inner P at cost O(η)‖·‖:
+  `(a•a)•b)•a = P(P(P(a∘a)∘b)∘a) ≈ P(((a∘a)∘b)∘a)`,
+  `(a•a)•(b•a) = P(P(a∘a)∘P(b∘a)) ≈ P((a∘a)∘(b∘a))`,
+each ≈ with error O(η)‖a‖³‖b‖ (finitely many deletions, all norms ≤1+O(η)). Subtract; the two surviving arguments are equal by the **exact** ambient Jordan identity, so `P(…)−P(…) = P(0) = 0`. ∎
+
+So **the whole approximate-Jordan-identity problem = the core estimate (★)**, the precise analogue of Kitaev's `Phi_assoc1/2`. Equivalently (★) says: with `δ := Φ(x)−x` (which is NOT small — x is not P-fixed), `‖Φ(δ∘b)‖ ≤ O(η)‖x‖‖b‖` for `b∈A`.
+
+**Why (★) should hold (and why it's the hard CP-free core).** Kitaev proves the analogous statement via Choi diagrams (the `(1−Π)` insertions, his eq. `1-Pi_X`), using complete positivity. We have no Stinespring dilation. Proposed CP-free route: the **GNS/variance argument**. For a faithful Φ-invariant (or near-invariant) state ω, the form `⟨u,v⟩_ω := ω(Φ(u∘v))` is a genuine inner product; Jordan–Schwarz (JS) gives a Cauchy–Schwarz bound `|ω(Φ(δ∘b))| ≤ ⟨δ,δ⟩_ω^{1/2}⟨b,b⟩_ω^{1/2}`, and for b∈A the "Jordan variance" of δ relative to A is O(η) because b is in the (approximate) multiplicative domain MD(Φ)≈Fix(Φ)≈A (by JS + near-idempotency). Turning this into an *operator-norm* bound on `Φ(δ∘b)` (not just a state-expectation bound) is the technical crux; this is exactly where I will focus. I do **not** yet have it airtight — flagging honestly.
+
+This reduction is, I believe, the right way to organize the Layer-2 bridge and directly addresses B's "pressure point." Request: B, please stress-test the Reduction Lemma and the (★)⇒theorem logic, and probe (★) for counterexamples in M_2 (perturbed transpose) in parallel with my GNS attack.
+
+---
+
+## 5. Proposed LOCKED formulation (please accept/amend)
+
+**Design decision (important, and cleaner than v0.1):** in the channel setting the **order-unit structure of A is EXACT** (A⊆B(H)_sa is a \*-closed subspace containing 1; the inherited order-unit norm = operator norm, exactly). Only the product `•` is approximate. So we frame the abstract object as an **order-unit space with an approximate Jordan product**, NOT a fully-approximate normed structure. This removes several of Kitaev's approximate-norm headaches.
+
+**Definition (ε-JB-algebra, order-unit form).** A finite-dim real **order-unit space** `(A,1,≤)` with order-unit norm `‖·‖`, together with a commutative bilinear product `∘:A×A→A` (commutativity **exact** — P(a∘b) is automatically symmetric), `1∘a=a` (**exact** unit — holds for P since P(1)=1 and 1∘a=a), such that:
+  (JB1) `‖a∘b‖ ≤ (1+ε)‖a‖‖b‖`;
+  (JB2) `‖a∘a‖ ≥ (1−ε)‖a‖²`  (upper bound from JB1);
+  (JB3) `a∘a ≥ −ε‖a‖²·1`  (approximate positivity of squares — the order/formally-real axiom; exact JB has a∘a≥0);
+  (JB4) `‖((a∘a)∘b)∘a − (a∘a)∘(b∘a)‖ ≤ ε‖a‖³‖b‖`  (approximate Jordan identity).
+A **δ-Jordan-homomorphism / δ-isomorphism** between such objects: linear, `‖v(1)−1‖≤δ`, `‖v(a∘b)−v(a)∘v(b)‖≤δ‖a‖‖b‖`, and (isomorphism) bijective with `(1−δ)‖a‖≤‖v(a)‖≤(1+δ)‖a‖`. (Equivalently, order-isomorphism + approximate multiplicativity.)
+
+**Theorem 1 (Layer 1, abstract — the north-star core).** There are universal constants `ε₀,C>0` (independent of dim) such that every finite-dim ε-JB-algebra with `ε<ε₀` is `Cε`-Jordan-isomorphic to a genuine finite-dim JB-algebra.
+
+**Theorem 2 (Layer 2, channel).** [CORRECTED per B] Let Φ:B(H)_sa→B(H)_sa (dim H<∞) be unital positive (\*-preserving), with `‖Φ²−Φ‖≤η`, η small. Then there exist a finite-dim **special JB-algebra (JC-algebra) B**, and **unital positive** maps Δ:B→B(H)_sa, Υ:B(H)_sa→B with `‖ΔΥ−Φ‖≤O(η^α)` and `‖ΥΔ−1_B‖≤O(η^α)` (and approximate Jordan-multiplicativity to O(η^α)), where the exponent α is that of estimate (★) — currently α=1/2 unconditionally (B), and α=1 via the two-hole mechanism of §8 (the target). **Corollary (decomposable):** if B is reversible (e.g. when Φ arises from a dichotomy / minimal-sufficient setting, VLW), Δ,Υ can be taken **decomposable** (CP+coCP).
+
+**Open design choices flagged for B:**
+  (i) JB3 vs an alternative formally-real axiom (e.g. `‖a∘a‖ ≤ ‖a∘a + b∘b‖ + ε(…)`, the Minkowski form). I lean to the order form JB3 since order is exact in the channel.
+  (ii) Whether to demand JB4 only, or also a "linearized" Jordan identity (full vs. partial). I think JB4 (with its polarizations following) suffices.
+  (iii) Real (self-adjoint) vs complexified/J\*-form. I propose proving everything on the **real self-adjoint** A and only complexifying at the end to connect to VLW's J\*-algebra language.
+  (iv) Whether Theorem 2's maps should be required **decomposable** (CP+coCP) rather than merely positive — VLW Thm B suggests decomposable is the natural class and Størmer's "reversible CE ⇔ decomposable" makes the CE onto a reversible JW-algebra decomposable. I lean: state Theorem 2 with **positive** maps, and add a corollary that they can be taken **decomposable** (stronger, matches VLW).
+
+---
+
+## 6. Proof strategy for Theorem 1 (the labor), with explicit "lemmas to Jordan-ize"
+
+Mirror Kitaev's skeleton; the dependency map (K) tells us what to replace.
+  (a) **Approximate idempotents / Jordan frame**: define δ-idempotents (a=a, ‖a∘a−a‖≤δ); show nontrivial ones exist for dim>1. Candidate engine: Kitaev's topological argument is assoc-free and should port (the relevant manifold is the approximate "Jordan symmetry" set; needs the right H-space). ALTERNATIVELY use the Cesàro-mean idempotent (Rauber/Størmer) at the channel level. **To Jordan-ize: `lem_nontriv_projection`.**
+  (b) **Peirce decomposition (approximate)**: from a δ-idempotent c, split A ≈ A₁(c)⊕A_{1/2}(c)⊕A₀(c) using the approximate spectral projections of L_c (spectrum near {0,½,1}). **To Jordan-ize: `lem_subspaces`/compression.**
+  (c) **Coordinatization (approximate)**: for rank ≥3 use approximate Jacobson coordinatization (the off-diagonal Peirce spaces carry an approximate associative \*-algebra ℝ/ℂ/ℍ); for rank 2, spin-factor structure from the approximate "trace form"; H_3(𝕆) handled by rigidity directly. **New vs Kitaev (his matrix units = special case).**
+  (d) **Error reduction (the crux)**: a δ-Jordan-homomorphism from a genuine finite-dim JB-algebra ℬ into an ε-JB-algebra A is O(δ)-close to an O(ε)-Jordan-homomorphism. Engine: Jordan 2-cocycle (multiplicativity defect) is a coboundary by **H²(ℬ,ℬ)=0**; quantitatively, average the correction over the **compact Aut(ℬ)** (Haar) to get a dimension-free bounded splitting (need: a normalized "Jordan diagonal"/Reynolds operator with dimension-free norm — the precise analogue of `D=∫U†⊗U`). Newton-iterate δ→O(δ²+ε). **To Jordan-ize: `lem_approx`/`cor_improvement` — the single most important step. The dimension-free norm of the splitting is THE thing to nail (Kitaev got it from a 1-design; we need the Jordan analogue).**
+  (e) **Assemble incrementally** (merge/extend) keeping error O(ε) via (d) at each step — this is how dimension-freeness is preserved.
+
+I will start drafting (a)+(d) in `agent-A/theory/` (they're the assoc-free / cohomological pillars I claimed in the labor split).
+
+---
+
+## 7. Division of labor (proposing concrete split; amend freely)
+
+- **Agent A (me)**: Theorem 1 skeleton — (a) approximate Jordan-idempotent existence (topological), (d) the quantitative cohomological error-reduction via compact-Aut(J) averaging [THE crux of Layer 1], (e) incremental assembly. Plus the special/exceptional bookkeeping (done, §1).
+- **Agent B**: Theorem 2 bridge — the core estimate (★) of §4 (the GNS/variance / CP-free proof, THE crux of Layer 2) and the M_2 counterexample probe; the UP-map rounding of Δ,Υ (Jordan analogue of Kitaev's §13 unitary-1-design rounding); and the VLW connection (minimal sufficient Jordan algebra as the canonical model B; Neyman–Pearson generation; decomposability corollary).
+- **Both**: lock the §5 definition; cross-review every constant; no hand-waving.
+
+If you'd prefer to drive Theorem 1 and have me take the (★) crux, I'm glad to swap — say so.
+
+---
+
+## 8. v0.3 — response to B's corrections; the exponent α=1 (THE key new point)
+
+Thanks B — your corrections are right and your O(√η) lemma is exactly the right building block. Accepting 1,2,4 (see fixes in §1, §5). On **correction 3 (the exponent), here is the resolution I'm confident about:**
+
+**Kitaev's single-insertion estimate is ALSO only O(√η).** I verified this in his source (`approximate_algebras.tex`, lines 2639–2723). His one-hole object is `R_k(X)` with
+  `R_k(X)† R_k(X) = u_{k,0}( Φ²(Φ(X†)Φ(X)) − Φ(Φ²(X†)Φ²(X)) ) = O(η)‖X‖²`,
+i.e. **‖R_k(X)‖ = O(√η)‖X‖** — precisely your one-hole bound. He gets the **O(η)** associativity defect from the **two-hole** object (eq `WXYZOeta-1`, line 2671):
+  `W = V₁† R₁(X†)† · u_{3,0}(Φ(Y)) · V₃ R₀(Z)`,
+which is **bilinear** in the two hole-vectors `R₁(X†)`, `R₀(Z)`. Hence
+  `‖W‖ ≤ ‖R₁(X†)‖ · ‖Φ(Y)‖ · ‖R₀(Z)‖ = O(√η)·‖Y‖·O(√η) = O(η)‖X‖‖Y‖‖Z‖`  (Cauchy–Schwarz / submultiplicativity).
+And separately `W = Φ(Φ(Φ(X)Φ(Y))Φ(Z)) − Φ(Φ(X)Φ(Y)Φ(Z)) + O(η)` — so the defect EQUALS this two-hole `W`. **The √η never appears alone in the final defect; it appears squared.**
+
+**Why this transfers CP-free.** The Stinespring stack is just Kitaev's bookkeeping device; the actual content is representation-agnostic: (i) a single insertion `R(x)` has *squared* norm `O(η)` — this is your GNS/state computation, `‖R(x)‖²_GNS = ω(R(x)∘R(x)) = O(η)`; (ii) the Jordan-identity defect is **intrinsically bilinear** in two such insertions, so Cauchy–Schwarz in the GNS Hilbert space gives `O(√η)·O(√η)=O(η)`. No Stinespring/Choi needed — only the GNS Hilbert space of a state `ω=ρ∘Φ`, which exists for positive maps.
+
+**Concretely, the revised route to α=1 (replaces my naive one-at-a-time peeling, which B rightly noted only gives √η):** do NOT delete inner P's one at a time (each is a single hole = √η). Instead write the Jordan-identity defect `D = ((a•a)•b)•a − a²•(b•a)` directly as a **two-hole GNS pairing**
+  `D ≈ ⟨ R(a) , M_b · R(a) ⟩_GNS  + (symmetric terms)`,
+where `R(a)` is the one-hole insertion vector (your `O(√η)‖a‖` bound) and `M_b` is a bounded "middle" operator carrying `b` and the third `a`. Then `‖D‖ ≤ O(√η)‖a‖ · O(‖b‖‖a‖) · O(√η)‖a‖ = O(η)‖a‖³‖b‖`. The content to nail: (a) express `D` in this bilinear-in-`R(a)` form (the single-hole/first-order terms must organize into the bilinear pairing — they do in Kitaev because the defect, expanded via `1−Π`, is a product of two holes; the Jordan analogue should mirror this); (b) confirm the two holes are genuinely independent (not collapsing to one). I believe (a)+(b) go through; this is the precise target for α=1.
+
+**So: I propose we state the theorems with a general exponent α and assert α=1 as the main result, with B's α=1/2 as the unconditional fallback already in hand. The two-hole structure is the bridge.** I'll support the (★)/defect computation from the Kitaev-analogy side; you own the GNS execution. Suggest we converge the bilinear form of `D` together.
+
+**My Task-3 progress (error-reduction, Theorem 1 crux).** Strategy locked: mirror Kitaev's `lem_approx`. Jordan multiplicativity defect `g(a,b)=v(a∘b)−v(a)∘v(b)` is an approximate Jordan 2-cocycle (from JB4 of A + boundedness of v); kill it by a coboundary correction built from a **dimension-free "Jordan diagonal"** = the Aut(ℬ)-averaged operator (compact Aut(ℬ), Haar) — the analogue of Kitaev's `D=∫U†⊗U` (norm 1, dimension-free, NOT the Casimir which is ∝dim). Newton-iterate δ→O(δ²+ε). I have a focused agent extracting the exact Jordan 2-cocycle/coboundary formulas (Chu–Russo/Jacobson/Penico) and the separability-idempotent structure of the multiplication algebra M(ℬ), to ground the computation. Will post the worked lemma in `agent-A/theory/01-error-reduction.md`.
+
+**Consensus status:** Definition (§5, order-unit form) — I consider it LOCKED unless you object. Two-theorem structure — agreed. Labor split — agreed (A: Theorem 1 + error-reduction; B: (★)/Layer-2 bridge + UP rounding + VLW). Exponent — α=1 target via §8, α=1/2 unconditional fallback. Open: finish (★) at α=1 (joint), finish error-reduction dimension-free (A), build incremental assembly (A).
+
+— Agent A (v0.3)
+
+---
+
+## 9. v0.4 — HONEST CORRECTION to §8 (the η-upgrade is NOT automatic; decomposable is the natural sharp class)
+
+B: I worked the actual expansion and must walk back the optimism of §8. Doing the naive (1−Π)-expansion of the Jordan-identity defect `D=((a•a)•b)•a − a²•(b•a)`:
+- the leading term is `Π( ((a∘a)∘b)∘a − (a∘a)∘(b∘a) ) = Π(0) = 0` by the EXACT ambient Jordan identity (good, as in §4);
+- but the SURVIVING terms are **single holes**: `Π(h₁∘a) − Π(s∘h₂)` with `h₁=(Π−1)(p∘b)`, `h₂=(Π−1)(b∘a) ∈ Ker Π`, `s=a∘a`, `p=a•a`. By your almost-orthogonality each is `O(√η)`, and they do **not** visibly cancel.
+
+Crucially I checked the **C\* case the same way**: Kitaev's ⋆-associativity defect, naively (Φ̃−1)-expanded, is `Φ̃(h_{XY}·Z) − Φ̃(X·h_{YZ})` with `h∈Ker Φ̃` — also only `O(√η)` by the same reasoning. **So Kitaev's `O(η)` is NOT obtainable from the naive B(H)-expansion; it genuinely uses the Choi/Stinespring two-hole structure** (his `R_k(X)†R_k(X)=Φ²(Φ(X†)Φ(X))−Φ(Φ²(X†)Φ²(X))=O(η)`, built from `Φ²−Φ` directly, NOT from `X∈A`). The two holes live in the **dilation** space and are invisible in B(H).
+
+**Consequence (honest status):**
+- α=1/2 is solid (your argument). For **general** unital positive Φ, I do NOT currently see α=1 — the η-upgrade appears to require a dilation-style second-order structure that positivity alone may not provide. This may be intrinsic, not a gap in our cleverness.
+- **BUT — the natural sharp class is DECOMPOSABLE maps.** A decomposable Φ = Φ_CP + Ψ∘τ (τ=transpose, a Jordan automorphism; Φ_CP, Ψ completely positive) **does** have a Stinespring-type dilation for each summand. I conjecture Kitaev's two-hole/`R_k` estimate transfers to decomposable Φ via the dilations of the CP and coCP parts (the transpose flips the order of one hole's "legs" but preserves the `O(√η)` norm), giving **α=1 for decomposable almost-idempotent maps**. This dovetails perfectly with VLW Thm B (decomposable is the canonical class for positive-map dichotomy interconversion) and with the decomposable-CE corollary (§5). [Flagged as promising-but-unverified — I have not done the two-summand two-hole computation.]
+
+**Revised proposal for the theorem statements:**
+- State Theorem 2 with exponent α; **unconditionally α=1/2** (general positive Φ); **α=1 under the hypothesis that Φ is decomposable** (with the dilation argument to be completed). This is honest, clean, and matches the literature's natural class.
+- Theorem 1 (abstract) is exponent-agnostic: it converts an ε-JB-algebra to a JB-algebra with O(ε) error regardless of how ε relates to η. So whatever α we prove for the bridge propagates.
+
+This is the corrected picture. I think it's actually a *nicer* story: the C\*/CP world gets η because CP=dilation; the Jordan/positive world honestly gets √η, and recovers η exactly when the map is decomposable (= has the dilation structure). The exponent literally tracks the presence of a dilation. Please sanity-check the decomposable conjecture from your side; if you concur I'll attempt the two-summand two-hole computation, or we co-prove it.
+
+— Agent A (v0.4)
+
+---
+
+## 10. v0.5 — PEER REVIEW: B's Layer-2 bridge proof is CORRECT (Layer 2 DONE at √η)
+
+B: I audited `agent-B/theory/theorem-B-algebraic-bridge.md` line by line. **It is correct and complete.** This proves, unconditionally and dimension-freely (no CP, no cb-norm), that for any unital positive Φ on B(H)_sa with ‖Φ²−Φ‖≤η, the space `A=Im P` (P=θ(2Φ−I)) with product `a•b=P(a∘b)` is an ε-JB order-unit algebra with **ε=O(√η)**. I consider Task "Layer-2 bridge" CLOSED at α=1/2.
+
+Verification highlights (all checks passed):
+- **Lemma 2.** `‖Px‖²_ω ≤ ‖x‖²_ω + Cη‖x‖²` from Jordan–Schwarz `(Φx)²≤Φ(x²)` + `‖Φ²−Φ‖≤η` (with `ω=ρ∘Φ` a *state*, since Φ unital). The almost-orthogonality `|ω(u∘n)|≤C√η‖u‖‖n‖` (u∈ImP, n∈KerP): I reproduced the optimization — `2s|c|≤s²A+B`, `A=a+2Kη‖n‖²≤C‖n‖²`, `B=2Kη‖u‖²`, so `|c|≤√(AB)≤C√η‖u‖‖n‖`. ✔. This gives (FI).
+- **Lemma 3 (the elegant core).** Square holes `q_r=P(r²)−r²∈KerP` are *almost-positive null*: `q_r≥−Cη‖r‖²1` (Kadison + δ-positivity), and `‖P(q_r²)‖≤Cη‖r‖⁴` via `0≤y≤C‖r‖²1 ⇒ y²≤C‖r‖²y` and positivity of Φ. ✔. This is exactly the "square-hole has small Φ-variance" fact.
+- **(HH) two-hole = O(η)** vs **(HZ),(FI),(5.1),(5.2) one-hole = O(√η)** — precisely the two-hole/one-hole split I described in §8–§9, now fully rigorous via Cauchy–Schwarz in the `‖·‖_ω` seminorm. ✔.
+- **Jordan-identity assembly.** Both sides reduce to `P((a²∘b)∘a)` resp. `P(a²∘(b∘a))` up to O(√η); the **exact ambient Jordan identity** makes these equal ⇒ defect `=P(0)+O(√η)=O(√η)`. I checked every error term: (6.1) via (FI); `(h_{a,a}∘b)∘a` via (5.1); `h_{a,a}∘(b∘a)` via (5.2); `a²∘h_{b,a}` split into `p∘h_{b,a}` (FI) + `h_{a,a}∘h_{b,a}` (HH). ✔.
+
+Minor polish suggestions (non-blocking): (i) in Lemma 2 state explicitly that `ω=ρ∘Φ` is a state (ω(1)=1), since Cauchy–Schwarz for ω is used; (ii) the "replace Φ by P costs δ‖·‖" steps could cite δ=O(η) once globally; (iii) worth stating that ALL constants are dimension-free (no dim H anywhere) — this is true and important, please assert it. None affect correctness.
+
+**This validates the whole Layer-2 architecture** and matches my §4 reduction + §8/§9 two-hole analysis. Nice work. So the honest **composite theorem** is: general positive Φ ⇒ O(√η); the only route to O(η) is decomposable+dilation (still conjectural). I'm content to headline α=1/2 and footnote the decomposable α=1.
+
+## 11. v0.5 — Layer 1 is now the critical path (Agent A's focus)
+
+With Layer 2 done at √η, the **north-star structure theorem is Layer 1**: *every finite-dim ε-JB-algebra is O(ε)-Jordan-isomorphic to a genuine finite-dim JB-algebra, dimension-free.* This is the direct Kitaev analogue and is squarely mine. I accept B's review (`layer1-agent-a-review-v0.1.md`, `layer1-quantitative-obligations-v0.2.md`): H²=0 is only qualitative; the **dimension-free bounded homotopy** is the real obligation, and I must make explicit: (a) an explicit Jordan cochain right-inverse to d¹; (b) a universal norm bound across matrix/spin/Albert factors AND direct sums; (c) control of *approximate* (not just exact) cocycles; (d) approximate-module errors (codomain is ε-JB). I'm fixing my stale `00-overview.md` claims and developing `01-error-reduction.md` accordingly.
+
+**Honest strategic read:** Kitaev's dimension-free constants ultimately come from the cb-norm / complete positivity (the `∫U†⊗U` diagonal has projective norm 1 because Haar is a probability measure on a group of norm-1 elements). We have NO cb-norm. So the dimension-free Jordan homotopy may genuinely need a new mechanism — this is the hardest open piece of the whole project, and I own it. Two sub-routes (see `01-error-reduction.md`): R1 per-simple-factor normalized-trace Casimir + Haar over compact Aut(ℬ); R2 incremental (apply ER only to the small algebra built at each merge/extend step — Kitaev's actual trick for dim-freeness). I'm pursuing R2 as primary (it sidesteps the "many factors / large rank" blowup) interleaved with the incremental assembly.
+
+**On the alternative route (B's near-positive projection stability):** this is a genuinely different, valuable path that BYPASSES abstract Layer 1 for the *channel application*: if P=θ(2Φ−I) is √η-close to a genuine positive idempotent E, then exact Effros–Størmer gives an honest JC-algebra J=E(B(H)_sa) and EXACT UP factor maps (your theorem-C). I agree this is the right route for *exact UP factorization* (the abstract iso + generic positivity-rounding is obstructed by your spin-factor counterexample — I accept that). I'll engage with your classical "exposed-redundant dichotomy" — convex geometry is a place I can contribute. But note: the **abstract structure theorem (Layer 1) is the headline generalization of Kitaev** and stands on its own (it's Kitaev's Theorem, Jordan-ized), independent of the factorization. So I'll pursue BOTH: Layer 1 (north-star structure thm) and support your projection-stability (north-star *factorization*).
+
+**Proposed consensus checkpoint (please confirm):**
+1. Layer-2 bridge: DONE, α=1/2, dimension-free (your proof, my verification). ✔
+2. Definition: order-unit ε-JB (locked). ✔
+3. Theorem 2 target: special JB/JC, UP maps; decomposable/α=1 as conditional add-ons. ✔
+4. Two open critical pieces: (A) Layer-1 dimension-free stability [A leads]; (B) near-positive projection stability for exact UP factorization [B leads, A supports on the convex-geometry core].
+If you agree, let's freeze the theorem-stack around this and drive (A),(B) to completion.
+
+— Agent A (v0.5)
+
+---
+
+## 12. v0.6 — NEW SIDEQUEST: provenanced LaTeX report (Agent A has the lead)
+
+Per user instruction, I'm setting up a clean, self-contained LaTeX report in `report/` (project root). Structure: `report/main.tex` with `\input{sections/NN-*.tex}` per subsection; `report/PROVENANCE.md` is the audit ledger; `report/references.bib`; builds with `make` (pdflatex+latexmk present). **Policy: every Definition/Theorem must be provenanced and STRING-MATCHED byte-verbatim against local ground-truth copies.** Ground truth registered (with SHA256) in `report/PROVENANCE.md`:
+- `HOS` = Hanche-Olsen–Størmer *Jordan Operator Algebras* at `../af-tests/examples3/Jordan Operator Algebras/joa-m/joa-m.md` (the user pointed me here) — JB/Jordan definitions. (Jordan identity is HOS eq. 2.30, line ~965; = our JB4 via commutativity.)
+- `KIT`, `VLW` (our TeX sources), `ES` (Effros–Størmer OCR, in YOUR `agent-B/references/`), `CHU`, `IDEL`.
+- `BRIDGE` = **your** `agent-B/theory/theorem-B-algebraic-bridge.md` — the source for §6 (the centerpiece), transcribed faithfully (I verified it line-by-line, v0.5 §10).
+
+Sections: 01 intro, 02 preliminaries, 03 Jordan/JB-algebras (HOS-matched), 04 spectral idempotent, 05 ε-JB definition (our consensus), **06 bridge theorem (your proof, full transcription)**, 07 structure programme (open), 08 status/open problems. A 7-agent authoring workflow is populating them now, each string-matching to sources and returning byte-verbatim provenance rows.
+
+**REQUEST — adversarial verification (collegial duty, your turn to be skeptical of me):** once the draft compiles, please (1) check every `PROVENANCE.md` quote byte-verbatim against the source files — recompute the SHA256s, find the quoted strings, flag any that don't match exactly; (2) verify §6 transcribes your bridge proof faithfully (no dropped step, no altered constant); (3) confirm §3 definitions match HOS exactly and §5 matches our consensus ε-JB definition. Record findings in `agent-b-findings`; I'll fix in `report/`. Nothing gets marked \textsc{(proved)}/\textsc{(cited)} until we both sign off. I'll ping when the draft compiles. You retain the lead on the math (Layer-1/projection-stability); I have the report lead for now.
+
+— Agent A (v0.6)
+
+---
+
+## 13. v0.7 — report DRAFT COMPILES; ready for your adversarial byte-check
+
+The report draft is complete and **compiles cleanly** (`cd report && make` → 21-page `main.pdf`, `make` exit 0, no undefined refs/citations). All 9 sections authored and provenanced; `report/PROVENANCE.md` now has the consolidated per-claim ledger (one row per Definition/Theorem: source key, location, byte-verbatim status, note). I byte-verified the critical quotes myself this session via `grep -F` (marked **V**): HOS 3.1.4 JB-algebra def (joa-m L2314/2316), HOS 2.4.1 Jordan def (L963), HOS 2.9.6 classification (L2254), Idel positive-map (L347), VLW Jordan–Schwarz (paper.tex L556), Kitaev th_main (L461). §6 transcribes YOUR bridge proof; I cross-referenced labels to your `theorem-B-algebraic-bridge.md` line ranges.
+
+Also: addressed a user nit — **definitions are tagged `(consensus)`, never `(proved)`** (only the realization is proved, = the bridge thm). Status legend updated in §1.
+
+**Your adversarial pass (please):** in `report/PROVENANCE.md`, the rows marked **I** (inline-provenanced) and **PDF** (thm:whitehead, from CHU pdf via extraction) need independent byte-verification — recompute each source SHA256 (registry at top of PROVENANCE.md), locate each quote in the source, and flag any that don't match. Especially: (1) §3 power-associativity (HOS 1013–1025), prop:aut-compact (Faraut–Korányi via our extraction — is there a better primary locus?); (2) thm:effros-stormer quote against YOUR `agent-B/references/effros-stormer-1979/...` OCR (page-05 Thm 1.4); (3) thm:whitehead — CHU is a PDF, please confirm the H¹=H²=0 statements against a text source (your or my extraction). Record results in `agent-b-findings`; I'll fix in `report/`. Then we co-sign the `(cited)` statements. The math leads (Layer-1, projection-stability) remain yours; I keep the report lead.
+
+— Agent A (v0.7)
+
+---
+
+## 14. v0.8 — numerical verdict on the Layer-1 dimension-free homotopy (I was too optimistic)
+
+I ran the decisive test: does the Jordan coboundary $d^1$ have a dimension-free bounded right-inverse $s$ ($\|s\|=1/\sigma_{\min}(d^1)$)? Computation validated (dim Ker $d^1$ = dim Der$(J)$ exactly: $n^2-1$ for $H_n(\mathbb C)$, $n(n-1)/2$ for spin). **The answer depends on the norm, and this matters:**
+- **Frobenius/trace norm: BOUNDED** ($\le 1$, decreasing — $H_n(\mathbb C)$: 0.91,0.78,0.69,0.62,0.57; spin → 0.62). The projective-norm/averaging mechanism works here.
+- **Operator/order-unit norm (what Theorem 1 actually needs): UNRESOLVED.** Lower bounds on $\|s\|_{op}$ grow slowly (1.4→1.8, sub-$\sqrt n$) but a crude upper bound grows $\sim n$. Inconclusive at $n\le6$.
+
+**So my "dimension-free obstruction resolved in principle" (memory + earlier findings) was too optimistic — I'm correcting it.** Precise gap: the Frobenius bound uses averaging over $U(M(J))$ (Frobenius isometries), but the order-unit norm is preserved only by $\Aut(J)\subsetneq U(M(J))$. The $O(1)$ projective representation uses the bigger group, so it doesn't give an operator-norm bound for free.
+
+**Implication for our division of labor:** this is evidence FOR the **incremental route** (apply the error-reduction only to a small, controlled $\mathcal B$ at each merge/extend step, so dimension never enters) over a global averaging — exactly the spirit of your projection-stability program. The two Layer-1/factorization routes are converging on "incremental / never use the global object." I've written the honest status into report §7 and `agent-A/experiments/jordan-coboundary/REPORT.md` (scripts + JSON there if you want to extend the operator-norm sweep — it's slow, ~400s/n). The report now compiles at 22pp with this corrected §7.
+
+— Agent A (v0.8)
+
+---
+
+## 15. v0.9 — handoff document written
+
+Per user request, wrote a comprehensive self-contained handoff at `agent-A/HANDOFF.md` (128 lines) for a fresh agent to pick up: goal & two-layer formulation, what's PROVED (bridge, α=1/2) vs OPEN (Layer-1 structure thm with the operator-norm obstruction; exact factorisation; decomposable α=1), the conceptual core, file map, the collaboration model (incl. the phantom-version gotcha), the report's location/policy, concrete next actions, and discipline notes. B: if you spot anything mischaracterised about your work (esp. the projection-stability program status or the bridge), flag it in `agent-b-findings` and I'll correct the handoff. I noted your report-verification corrections are landing directly in `report/` (the "Agent B review correction" flags) — nice; the two outstanding provenance obligations (CHU Whitehead byte-match, Faraut–Korányi primary source) are listed in the handoff §4 and §7.
+
+— Agent A (v0.9)

@@ -1,0 +1,315 @@
+\section{The structure-theory programme}\label{sec:programme}
+
+The preceding sections produced, from an almost-idempotent positive map, an
+$\eps$-JB algebra: a finite-dimensional real space with a commutative product
+$a\bullet b := P(a\jp b)$, a unit $\Id$, and an order-unit norm, satisfying the
+JB axioms up to an error of order $\eps$ (see \Cref{sec:epsjb}). The goal of the
+structure-theory programme is to remove the error entirely: to show that such an
+object is, up to a controlled deformation, a genuine JB-algebra. This section
+states that goal honestly as an open target, records the proof strategy, and
+isolates the one quantitative obstruction together with candidate routes around
+it.
+Nothing below is claimed as a completed proof; every named target carries the
+tag \status{(open)}.
+
+\subsection{The target}
+
+The model to imitate is Kitaev's structure theorem for approximate
+$C^{*}$-algebras. In his terminology an \emph{\eps-$C^{*}$ algebra} is a
+finite-dimensional space with a product, involution and norm satisfying the
+$C^{*}$ axioms up to \eps, and a \emph{$\delta$-isomorphism} is a linear
+bijection preserving unit and product up to a relative error $\delta$. His main
+theorem reads, in source notation after harmless macro expansion:
+\begin{quote}
+``Any finite-dimensional $\eps$-$C^{*}$ algebra $\mathcal{A}$ is
+$O(\eps)$-isomorphic to some $C^{*}$ algebra $\mathcal{B}$. (Importantly, the
+implicit constant in $O(\eps)$ does not depend on $\mathcal{A}$ or its
+dimensionality.)''
+\end{quote}
+\cite{Kitaev2024}, Theorem \texttt{th\_main}. The decisive feature is the last
+sentence: the constant is \emph{dimension-free}. The Jordan analogue we are
+after is the following.
+
+% PROV: Kitaev2024 approximate_algebras.tex:460-462 (th_main) -- C*-statement; ours is the declared Jordan analogue (open).
+\begin{openproblem}[Jordan structure theorem]\label{thm:jordan-structure}
+\status{(open)}
+There are universal constants $C,\eps_{0}>0$ \emph{(independent of dimension)}
+such that for every $\eps<\eps_{0}$ and every finite-dimensional $\eps$-JB algebra
+$\mathcal{A}$ there exist a genuine finite-dimensional JB-algebra $\mathcal{B}$
+and a linear bijection $v\colon\mathcal{B}\to\mathcal{A}$ that is a
+$C\eps$-Jordan-isomorphism, i.e.
+\[
+   \norm{v(\Id_{\mathcal{B}})-\Id_{\mathcal{A}}}\le C\eps,\qquad
+   \norm{v(b\bullet b')-v(b)\bullet v(b')}\le C\eps\,\norm{b}\,\norm{b'},
+\]
+and $(1-C\eps)\norm{b}\le\norm{v(b)}\le(1+C\eps)\norm{b}$ for all
+$b,b'\in\mathcal{B}$.
+\end{openproblem}
+
+This is the analogue of Kitaev's statement with the associative product replaced
+by the Jordan product $\bullet$ and ``$C^{*}$ algebra'' replaced by
+``JB-algebra''. As of the present report it is a target, not a theorem. What we
+\emph{can} state is the strategy and the precise point at which the
+dimension-free constant is in question.
+
+\subsection{The strategy}
+
+Kitaev's proof builds the model algebra $\mathcal{B}$ incrementally and controls
+the error at each step by a cohomological argument. The Jordan programme mirrors
+the four moving parts.
+
+\paragraph{Vocabulary for the programme.}
+An \emph{idempotent element} is an element $e$ with $e\bullet e=e$. A
+\emph{Jordan frame} is a finite list of nonzero idempotents that are pairwise
+orthogonal, $e_i\bullet e_j=0$ for $i\ne j$, and sum to the unit; it plays the
+role of diagonal matrix units. The \emph{Peirce decomposition} is the splitting
+of the algebra into the eigenspaces of multiplication by an idempotent. A
+\emph{cochain} is a multilinear correction term; a \emph{cocycle} is a defect
+that satisfies the compatibility identity forced by the Jordan identity; a
+\emph{coboundary} is a defect removable by changing the comparison map. A
+\emph{contracting homotopy} or \emph{splitting} is a bounded linear recipe that
+turns a cocycle into such a correction. The \emph{projective tensor norm} records
+the cost of writing a tensor as a sum of simple tensors; dimension-free control
+means this cost is bounded by a universal constant.
+
+\medskip
+\noindent\textbf{(a) Approximate idempotents and a Jordan frame.}
+A genuine JB-algebra is coordinatized by a complete system of orthogonal
+idempotents (a \emph{Jordan frame}). The first step produces such idempotents
+\emph{approximately}: elements $e=e^{*}$ with $\norm{e\bullet e-e}$ small and
+not too close to $0$ or $\Id$. In the associative case these are the nontrivial
+projections produced by a fixed-point argument \cite{Kitaev2024}; the spectral
+idempotent $P$ of \Cref{sec:spectral} is the map-level device that produced the
+$\eps$-JB product. It does \emph{not} by itself produce idempotent elements in
+$A$; constructing approximate Jordan-frame elements is a separate open step. The
+Jordan frame would then be refined by repeatedly splitting an approximate
+idempotent into two, exactly as the associative model algebra is grown from $\C$
+to $\C\oplus\C$ and onward.
+
+\smallskip\noindent\textbf{Agent B review correction.}
+The earlier draft blurred the idempotent linear map $P$ with idempotent elements
+of the approximate algebra. Layer 1 still needs its own approximate-frame
+construction.
+
+\medskip
+\noindent\textbf{(b) Approximate Peirce decomposition.}
+A genuine idempotent $e$ in a Jordan algebra induces the Peirce decomposition
+$\mathcal{A}=\mathcal{A}_{1}\oplus\mathcal{A}_{1/2}\oplus\mathcal{A}_{0}$ into
+the $1$, $\tfrac12$, $0$ eigenspaces of the multiplication operator
+$L_{e}\colon a\mapsto e\bullet a$. For an approximate idempotent the operator
+$L_{e}$ has spectrum clustered near $\{0,\tfrac12,1\}$, and the associated
+spectral projections give an \emph{approximate} Peirce decomposition with
+$O(\eps)$ cross-terms. This decomposes $\mathcal{A}$ into pieces on which the
+product is closer to the model multiplication rules.
+
+\medskip
+\noindent\textbf{(c) Approximate coordinatization.}
+On the joint Peirce spaces of a frame of rank $\ge 3$, the Jordan
+coordinatization theorem (the Jordan--von Neumann--Wigner coordinatization of
+$\mathrm{H}_{n}(\mathfrak{C})$, \cite{JordanVonNeumannWigner1934}) identifies
+the algebra with hermitian matrices over a coordinate $*$-algebra. The
+approximate version reads off coordinate elements from the approximate Peirce
+pieces and checks the coordinate relations up to $O(\eps)$. This step delivers a
+candidate genuine JB-algebra $\mathcal{B}$ together with a linear inclusion
+$v\colon\mathcal{B}\to\mathcal{A}$ that is multiplicative up to a (possibly
+large) error $\delta$.
+
+\medskip
+\noindent\textbf{(d) Error reduction.}
+The inclusion $v$ from (c) is only a $\delta$-inclusion with $\delta\gg\eps$.
+The final step replaces $v$ by a nearby map whose defect is $O(\eps)$,
+\emph{uniformly in the dimension}. This is the cohomological heart of the
+argument and is treated separately below.
+
+The algebraic inputs to (d) are classical and we cite them as facts. For a
+finite-dimensional Jordan algebra $J$ of characteristic $0$ and a $J$-module
+$M$, the two Whitehead lemmas assert the vanishing of the first two cohomology
+groups in the semisimple/separable case.
+
+% PROV: ChuRusso2016 (Thm 1.1, 1st Whitehead lemma, attrib. Jacobson) via agent-A/notes/ingestion-results-2026-06-01.json -- H^1=0; Penico1951 (2nd Whitehead lemma) via same -- H^2=0. Extraction-level provenance; primary PDF text still pending independent byte-check.
+\begin{theorem}[Whitehead lemmas for Jordan algebras, \status{(source-extracted; pending primary byte-check)}]\label{thm:whitehead}
+Let $J$ be a finite-dimensional semisimple Jordan algebra over a field of
+characteristic $0$ and let $M$ be a finite-dimensional $J$-module.
+\begin{enumerate}
+\item \emph{(First Whitehead lemma.)} Every derivation $f\colon J\to M$ is
+inner; equivalently $H^{1}(J,M)=0$.
+\item \emph{(Second Whitehead lemma.)} If moreover $J$ is separable, every
+Jordan $2$-cocycle is a coboundary; equivalently $H^{2}(J,M)=0$.
+\end{enumerate}
+The first lemma is due to Jacobson; the second to Penico, who used it to prove
+the Wedderburn principal theorem for Jordan algebras.
+\end{theorem}
+
+\noindent The first part is the Jordan analogue of the first Whitehead lemma,
+recorded as Theorem~1.1 of \cite{ChuRusso2016}: ``Every linear $f\colon J\to M$
+with $f(ab)=f(a)b+af(b)$ is inner.'' The second part is the Jordan analogue of
+the second Whitehead lemma, Theorem~1.2 of \cite{ChuRusso2016}, attributed
+there to \cite{Penico1951}: ``Every Jordan $2$-cocycle $f$ is a coboundary.''
+The vanishing of $H^{1}$ and $H^{2}$ is what would make the exact correction
+step possible \emph{in principle}; the issue is the size of the correction.
+
+The vanishing has a concrete mechanism, which is the second cited input. The
+\emph{multiplication algebra} $M(J)\subseteq\operatorname{End}(J)$ generated by
+$\Id$ and the operators $L_{a}\colon x\mapsto a\bullet x$ is, for semisimple
+$J$, a semisimple \emph{associative} algebra; hence every $J$-module is
+completely reducible and the cohomology splits. This is the engine behind
+\Cref{thm:whitehead}.
+
+% PROV: FarautKoranyi1994 via agent-A/notes/ingestion-results-2026-06-01.json (item 5) -- Aut(J) compact for Euclidean J, closed in O(J, trace form). Extraction-level provenance; local primary text still pending.
+\begin{proposition}[Compactness of the automorphism group, \status{(source-extracted; pending primary byte-check)}]\label{prop:aut-compact}
+For a finite-dimensional Euclidean (formally real) Jordan algebra $J$ the
+automorphism group $\Aut(J)$ is compact: it is a closed subgroup of the
+orthogonal group of the trace inner product, and every automorphism is an
+isometry of that inner product. Consequently normalized Haar averaging over
+$\Aut(J)$ is available, producing invariant inner products and invariant
+tensors.
+\end{proposition}
+
+\noindent \Cref{prop:aut-compact} is the analytic input recorded in
+\cite{FarautKoranyi1994}: Jordan automorphisms of a Euclidean Jordan algebra
+preserve the trace form, so $\Aut(J)$ is a closed, hence compact, subgroup of an
+orthogonal group. This is the Jordan counterpart of the compact unitary group
+that Kitaev averages over.
+
+\smallskip\noindent\textbf{Agent B review provenance flag.}
+\Cref{thm:whitehead,prop:aut-compact} are registered in the provenance ledger
+through the local ingestion file
+\path{agent-A/notes/ingestion-results-2026-06-01.json}.
+The Chu--Russo primary source is present locally as a PDF, but the Whitehead
+quotes have not yet been independently byte-matched against extracted primary
+text; Faraut--Koranyi compactness is likewise extraction-level provenance in
+this draft.
+
+\subsection{The dimension-free obstruction and candidate routes}
+
+We now isolate the single quantitative difficulty in step (d), state the
+obstruction precisely, and describe the resolution proposed in the project's
+internal notes. This subsection is \textbf{original} to the project and is
+explicitly a \textbf{programme}, marked \status{(open)}; it is being tested
+numerically.
+
+\paragraph{The cochain setup.}
+Write $g(b,b'):=v(b\bullet b')-v(b)\bullet v(b')$ for the multiplicativity
+defect of the inclusion $v\colon\mathcal{B}\to\mathcal{A}$ from step (c); it is
+symmetric with $\norm{g}\le\delta$. Linearizing the Jordan identity (which
+$\mathcal{B}$ satisfies exactly and $\mathcal{A}$ only up to $\eps$) shows that
+$g$ is an \emph{$\eps$-approximate Jordan $2$-cocycle}: the cocycle identity holds
+up to $O(\eps)\norm{\cdot}^{3}$. By \Cref{thm:whitehead} (with $J=\mathcal{B}$)
+an exact cocycle would be an exact coboundary, $g=d^{1}h$ for a linear
+$h\colon\mathcal{B}\to\mathcal{A}$, where
+$(d^{1}h)(b,b')=v(b)\bullet h(b')+h(b)\bullet v(b')-h(b\bullet b')$. Setting
+$\tilde v:=v-h$ replaces the defect by
+$\tilde g=g-d^{1}h+O(\delta^{2})=O(\delta^{2}+K\eps)$, where $K=\norm{s}$ is the
+norm of the splitting operator $s$ that produces $h=sg$. Iterating the resulting
+Newton step $\delta\mapsto O(\delta^{2}+K\eps)$ drives any sufficiently small
+$\delta$ down to $O(K\eps)$. The theorem therefore reduces to one quantitative
+question: \emph{is $K$ dimension-free?}
+
+\paragraph{The obstruction.}
+The splitting $s$ is built from a \emph{diagonal} (Casimir) tensor
+$D=\sum_{j}u_{j}\otimes u_{j}'$ of the multiplication algebra $M(\mathcal{B})$;
+the natural candidate is $D=\sum_{i}e_{i}\otimes e^{i}$ formed from a pair of
+trace-form-dual bases. The relevant norm is the projective tensor norm
+$\norm{\cdot}_{\wedge}$, an infimum over representations. Evaluated on the
+\emph{basis representation}, this naive Casimir has
+\[
+   \norm{D}_{\wedge}\;\sim\;\dim\mathcal{B},
+\]
+so the resulting $K$ grows with the dimension and the Newton iteration only
+converges when $\eps<c/\dim\mathcal{B}$. This is exactly the dimension-dependent
+bound Kitaev encounters for the naive associative diagonal: he notes that
+``naive constructions of the Haar measure (or just the diagonal) in the
+$\eps$-associative setting have error bounds proportional to
+$n=\dim\mathcal{A}$'' \cite{Kitaev2024}.
+
+\paragraph{Candidate averaging mechanism (original).}
+The project note registered in \texttt{PROVENANCE.md} as \texttt{A-ER} proposes
+that $\norm{\cdot}_{\wedge}$ should be estimated using a compact-group
+representation rather than a basis representation. In the associative case
+Kitaev's diagonal is the group average
+\[
+   D=\int_{U(n)}U^{\dagger}\otimes U\,dU=\tfrac1n\,\mathrm{SWAP},
+\]
+\cite{Kitaev2024}. The basis representation of $\tfrac1n\,\mathrm{SWAP}$ gives
+$\norm{D}_{\wedge}\le\tfrac1n\cdot n^{2}=n$, but the \emph{averaging}
+representation gives
+\[
+   \norm{D}_{\wedge}\le\int\norm{U^{\dagger}}_{\mathrm{op}}\,
+   \norm{U}_{\mathrm{op}}\,dU=\int 1\,dU=1 .
+\]
+It is the \emph{same} element; only the compact-group average exhibits the
+$O(1)$ projective norm. The proposed Jordan analogue tries to imitate this by
+using, not $\mathcal{B}\otimes\mathcal{B}$ directly, but the
+\emph{separability idempotent}
+$e=\sum_{i}u_{i}\otimes u_{i}'\in M(\mathcal{B})\otimes M(\mathcal{B})^{\mathrm{op}}$
+of the semisimple associative algebra $M(\mathcal{B})$. In the trace/Frobenius
+model one has a compact unitary group $U(M(\mathcal{B}))$ and a
+dimension-free-looking average of the form
+\[
+   e=\int_{U(M(\mathcal{B}))}u^{\dagger}\otimes u\,du,
+   \qquad
+   \norm{e}_{\wedge}\le\int\norm{u^{\dagger}}\,\norm{u}\,du=1,
+\]
+which explains the favourable Frobenius-norm numerics below. This is not yet a
+proof in the order-unit/operator norm required by \Cref{thm:jordan-structure}:
+the unitary group of $M(\mathcal{B})$ preserves the trace norm, while the
+order-unit norm is controlled by the generally smaller Jordan automorphism
+group. The open task is to turn this candidate average, or an incremental
+replacement for it, into a contracting homotopy $s$ with order-unit-norm bound
+$\norm{s}=K=O(1)$.
+
+% PROV: ORIGINAL agent-A/theory/01-error-reduction.md (§3) -- candidate group-averaged separability idempotent of M(B); order-unit dimension-free K remains open.
+\begin{openproblem}[Dimension-free error reduction]\label{prop:error-reduction}
+\status{(open; programme target).} If the compact-group-averaged
+separability idempotent of the multiplication algebra $M(\mathcal{B})$ can be
+converted into a contracting homotopy $s$ for Jordan $2$-cocycles with
+order-unit-norm bound $\norm{s}=K=O(1)$, independent of $\dim\mathcal{B}$, then
+the Newton iteration $\delta\mapsto O(\delta^{2}+K\eps)$ of step (d) terminates
+at $\delta=O(\eps)$ with a dimension-free constant, which is what
+\Cref{thm:jordan-structure} requires.
+\end{openproblem}
+
+The status of \Cref{prop:error-reduction} is the following. The two algebraic
+inputs --- vanishing cohomology (\Cref{thm:whitehead}) and a compact averaging
+group (\Cref{prop:aut-compact}) --- are cited facts. The mechanism that makes
+the constant dimension-free is established for the associative diagonal by
+Kitaev; its transfer to the Jordan setting has been examined numerically, with a
+result that is informative and must be reported precisely.
+
+\paragraph{Numerical evidence \status{(computational evidence; not theorem)}, and the precise remaining gap.}
+We computed the smallest nonzero singular value of $d^{1}$, hence
+$\norm{s}=1/\sigma_{\min}(d^{1})$, for $J=H_{n}(\C)$, $J=H_{n}(\R)$, and the
+spin factors $V_{n}$, in two norms on the cochain spaces. (The computation is
+validated by $\dim\Ker d^{1}=\dim\mathrm{Der}(J)$: equal to $n^{2}-1$ for
+$H_{n}(\C)$ and $n(n-1)/2$ for $V_{n}$, both matched exactly.) The outcome
+splits along the choice of norm:
+\begin{itemize}[leftmargin=*]
+\item \emph{Trace (Frobenius) inner-product norm:} $\norm{s}$ is
+\textbf{bounded --- in fact $\le 1$ and decreasing} in every family
+($H_{n}(\C)$: $0.91,0.78,0.69,0.62,0.57$ for $n=2,\dots,6$; $V_{n}$:
+convergent to $\approx0.62$). In this norm the dimension-free splitting exists.
+\item \emph{Order-unit (operator) norm --- the norm \Cref{thm:jordan-structure}
+actually requires:} certified lower bounds on $\norm{s}_{\mathrm{op}}$ for
+$H_{n}(\C)$ grow only \emph{slowly} ($1.4\to1.8$ for $n=2,\dots,6$, with
+$\norm{s}_{\mathrm{op}}/\sqrt n$ and $\norm{s}_{\mathrm{op}}/n$ both decreasing),
+while a crude upper bound grows like $n$. \textbf{Boundedness in the operator
+norm is therefore unresolved} at this range.
+\end{itemize}
+The discrepancy is structural and locates the gap exactly. The Frobenius bound
+comes from averaging over the unitary group of the multiplication algebra
+$M(J)$, whose elements are Frobenius isometries. The order-unit norm, however,
+is preserved only by the Jordan automorphism group $\Aut(J)$, which is
+\emph{strictly smaller} than $U(M(J))$. The $O(1)$ projective-norm
+representation of the separability idempotent uses the larger group, so it does
+not by itself give an operator-norm bound. Closing the gap requires one of:
+(i) an $\Aut(J)$-only construction of the splitting carrying an operator-norm
+bound; (ii) Kitaev's incremental route, applying the splitting only to a
+controlled algebra $\mathcal{B}$ built one step at a time, so that the dimension
+never enters; or (iii) a formulation in the trace norm with an explicit,
+possibly dimension-dependent, conversion. Independently of the norm, one must
+still write the explicit contraction $h=sg$, verify $d^{1}h=g+O(\eps)$ on
+$\eps$-approximate cocycles, and absorb the approximate-module errors (the
+module $\mathcal{A}$ is itself only an $\eps$-JB algebra). Until these are
+complete, \Cref{thm:jordan-structure} and \Cref{prop:error-reduction} remain
+\status{(open)}. The numerical detail is recorded in
+\texttt{agent-A/experiments/jordan-coboundary/REPORT.md}.

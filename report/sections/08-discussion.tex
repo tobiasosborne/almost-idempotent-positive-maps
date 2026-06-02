@@ -1,0 +1,180 @@
+%% Section 8 — Status and open problems.
+%% Cross-refs to existing labels: bridge (sec. 6), epsjb (sec. 5),
+%% programme (sec. 7). Citation keys per references.bib.
+\section{Status and open problems}\label{sec:discussion}
+
+This section records what is proved, what is cited, and what is open. We
+separate the two layers of the programme: the \emph{bridge}
+(\Cref{sec:bridge}), which turns an almost-idempotent positive map into an
+approximate Jordan algebra, and the \emph{structure theory}
+(\Cref{sec:programme}), which would turn an approximate Jordan algebra back into a
+genuine one. Throughout, $\Phimap\colon\Bsa\to\Bsa$ is unital and positive
+($\ast$-preserving) with $\norm{\Phimap^2-\Phimap}\le\eta$,
+$P=\theta(2\Phimap-\Id)$ the spectral idempotent close to $\Phimap$,
+$A=\Img P$, and $a\bullet b:=P(a\jp b)$.
+
+\subsection{The exponent: \texorpdfstring{$\sqrt\eta$}{root eta} versus
+\texorpdfstring{$\eta$}{eta}}
+
+The bridge of \Cref{sec:bridge} produces an $\eps$-JB-algebra with
+$\eps=O(\sqrt\eta)$, and this exponent is unconditional. The Kitaev-strength
+exponent $\eps=O(\eta)$ is available in the UCP/cb setting treated by
+Kitaev, and in any positive-map setting that supplies a compatible lifted-UCP
+dilation model. For arbitrary positive maps, and for decomposable maps without
+such compatible data, it remains conjectural. The following remark explains why.
+
+% PROV: Kitaev2024 approximate_algebras.tex L2643-2663 (R_k(X)) and L2671-2673 (WXYZOeta-1) -- single insertion R_k has squared norm O(eta), so norm O(sqrt eta); the associativity defect W is bilinear in two such insertions, giving O(eta). Transfers to CP via the Stinespring dilation; unavailable for general positive maps.
+\begin{remark}[Why CP gives $\eta$ and positivity gives only $\sqrt\eta$;
+\status{(proved for the bridge at $\sqrt\eta$; $\eta$ open)}]
+\label{rem:exponent}
+Both regimes are governed by a single ``hole'' quantity: the failure of a
+single inserted $\Phimap$ (or $P$) to be invisible. For a unital positive
+$\Phimap$ a single insertion is controlled only in the seminorm of the state
+$\omega=\rho\circ\Phimap$, where Jordan--Schwarz gives a defect of squared size
+$O(\eta)$, hence norm $O(\sqrt\eta)$. This is the source of the unconditional
+$\eps=O(\sqrt\eta)$. Kitaev's $O(\eta)$ does \emph{not} arise from a single
+insertion: the associativity defect is an intrinsically \emph{bilinear} pairing
+of \emph{two} holes living in the Stinespring dilation. In his notation the
+one-hole vector $R_k(X)$ satisfies
+$R_k(X)^\dagger R_k(X)
+ =\Phimap^2(\Phimap(X^\dagger)\Phimap(X))
+ -\Phimap(\Phimap^2(X^\dagger)\Phimap^2(X))=O(\eta)\norm{X}^2$,
+so $\norm{R_k(X)}=O(\sqrt\eta)\norm{X}$, while the defect equals a product
+$W=V_1^\dagger R_1(X^\dagger)^\dagger\,u_{3,0}(\Phimap(Y))\,V_3 R_0(Z)$ of two
+such vectors, whence $\norm{W}=O(\sqrt\eta)\cdot O(\sqrt\eta)=O(\eta)$ by
+Cauchy--Schwarz. The two-hole pairing requires complete positivity (it lives in
+the dilation Hilbert space and uses matrix amplifications
+$\mathrm{id}_n\otimes\Phimap$); a general positive map has no such dilation, so
+only the single-insertion $O(\sqrt\eta)$ bound survives. For
+\emph{decomposable} maps
+$\Phimap=\Phimap_0+\Psi_0\circ\tau$ (with $\Phimap_0,\Psi_0$ completely positive
+and $\tau$ the transpose, with explicit component control such as
+$\Phimap_0(\Id)+\Psi_0(\Id)=\Id$) each summand carries a dilation, and we
+\emph{conjecture} the two-hole mechanism is restored if those dilation models
+can be made compatible, giving $\eps=O(\eta)$; this is \status{(open)}.
+
+\smallskip\noindent\textbf{Agent B review correction.}
+The decomposable statement is not a theorem from an arbitrary CP+coCP
+decomposition. A linear $\eta$ bound would still require compatible dilation
+bookkeeping or a direct cancellation argument for the two holes.
+\end{remark}
+
+\subsection{Exact factorization by positive maps}
+
+The bridge yields an \emph{approximate} Jordan algebra and approximate factor
+maps. Producing \emph{exact} unital-positive factor maps requires more: either a
+concrete genuine Jordan algebra sitting near $A$ inside $\Bsa$, or a stability
+statement promoting the idempotent $P$ to a genuine positive idempotent. The
+exact endpoint is classical.
+
+% PROV: EffrosStormer1979 ocr-pages/page-05.txt L9-16 (Theorem 1.4) -- a unital positive projection P on a JC-algebra makes P(A) a JC-algebra under r*s=P(r o s); ocr-pages/page-06.txt L42-44 (Corollary 1.6) -- fixed-point set of a normal unital positive map on a JW-algebra has natural JW structure; ocr-pages/page-02.txt L33-38 records Lemma 1.1 used in the proof.
+\begin{theorem}[Effros--St\o rmer; \status{(cited)}]\label{thm:effros-stormer}
+Let $A$ be a unital JC-algebra and $P\colon A\to A$ a unital positive
+projection. Then $P(A)$, equipped with the given vector-space operations and the
+product $r\bullet s=P(r\jp s)$, is a JC-algebra. Equivalently, the fixed-point
+set of any normal unital positive map of a JW-algebra into itself carries a
+natural JW-algebra structure.
+\end{theorem}
+
+\Cref{thm:effros-stormer} is the exact template our bridge approximates: it is
+the Jordan analogue of the Choi--Effros theorem \cite{ChoiEffros1977} for
+completely positive projections. If the spectral idempotent $P$ were genuinely
+positive,
+\Cref{thm:effros-stormer} would directly furnish a genuine JC-algebra and exact
+factor maps. The obstruction is that $P$ is only $O(\eta)$-positive, and one
+cannot in general round it to a positive map without loss.
+
+% PROV: ORIGINAL agent-B/notes/factorization-positivity-rounding.md §§2-4 and agent-B/notes/subagent-positivity-rounding.md -- a generic O(eps) positivity-rounding is FALSE; an eps-positive map on l_infty can be sqrt(eps)-far from every positive unital map, via spin-factor targets J = R + R^m.
+\begin{remark}[Positivity rounding fails generically; \status{(open)} stability]
+\label{rem:rounding}
+A generic dimension-free $O(\eps)$ positivity-rounding lemma is \textbf{false}.
+There is an $\eps$-positive unital map (with spin-factor target $J\cong\R\oplus\R^m$,
+domain $\ell_\infty^{2m}$ or $B(\C^{2m})_{\mathrm{sa}}$) that is at distance at
+least $\sqrt\eps$ from \emph{every} positive unital map. Consequently an
+approximate Jordan-isomorphism alone does not yield exact unital-positive factor
+maps with the bridge exponent. The viable route is \emph{near-positive
+projection stability}:
+\[
+  \begin{gathered}
+  P\ \text{a }\delta\text{-positive unital idempotent},\quad \norm{P}\le1+\delta\\
+  \Longrightarrow\
+  \mathrm{dist}\bigl(P,\ \text{positive unital idempotents}\bigr)\le C\sqrt\delta,
+  \end{gathered}
+\]
+which, if true, gives a genuine positive idempotent $E$ with
+$\norm{E-P}=O(\sqrt\eta)$; \Cref{thm:effros-stormer} then applies to $E$ and
+yields exact unital-positive factor maps through $J=E(\Bsa)$ with
+$\norm{\Delta\Upsilon-\Phimap}=O(\sqrt\eta)$. This stability statement is
+\status{(open)}: it is known classically only at the square-root scale (linear
+stability is false), and the dimension-free case reduces to an unproved
+stability theorem for almost-idempotent stochastic matrices.
+\end{remark}
+
+\subsection{Relation to van Luijk--Wilming}
+
+The structures here are the approximate counterparts of an exact object from the
+theory of quantum statistical experiments.
+
+% PROV: vanLuijkWilming2026 paper.tex L1517-1524 (Theorem thm:luczak, eq:min-suff-J: J = intersection of Fix(T) over UP maps) and L235-247 (introthm:K-generates: J = Jstaralg(K), generated by Neyman-Pearson tests) -- the minimal sufficient J*-algebra is an intersection of fixed-point sets of UP maps, generated by Neyman-Pearson tests.
+\begin{remark}[van Luijk--Wilming minimal sufficient Jordan algebra;
+\status{(cited)}]\label{rem:vlw}
+For a faithful statistical experiment $(\rho_\theta)$, the
+\emph{minimal sufficient J*-algebra} is the J*-algebra
+\[
+  J_{(\rho_\theta)}=\bigcap\bigl\{\,\mathrm{Fix}(T)\ :\ T\text{ a }
+  (\rho_\theta)\text{-preserving unital positive map on }L(\HH)\,\bigr\},
+\]
+an exact intersection of fixed-point sets of unital positive maps, and it ``is
+generated by the Neyman--Pearson tests'' $[\rho>t\sigma]$
+\cite{vanLuijkWilming2026}. Our near-fixed-point algebra $A=\Img P$ is the
+\emph{approximate} analogue: $P$ replaces an exact conditional expectation onto
+a fixed-point set by an approximate idempotent, and $a\bullet b=P(a\jp b)$
+replaces the exact Effros--St\o rmer product
+$r\bullet s=P(r\jp s)$ of \Cref{thm:effros-stormer}. In their setting the Jordan
+algebra is always special (concretely realised, exceptional $H_3(\mathbb O)$
+excluded); the bridge target inherits this, as recorded in \Cref{sec:programme}.
+\end{remark}
+
+\subsection{Status ledger}
+
+\Cref{tab:status} summarises the standing of each component.
+
+\begin{table}[ht]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}p{0.42\linewidth}p{0.27\linewidth}p{0.21\linewidth}@{}}
+\toprule
+Component & Status & Where \\
+\midrule
+Layer-2 bridge (approx.\ Jordan algebra at $\sqrt\eta$)
+  & proved, dimension-free
+  & \Cref{sec:bridge} \\
+Exponent $\eta$ (Kitaev strength)
+  & UCP/cb: cited; decomposable: open
+  & \Cref{rem:exponent} \\
+Exact unital-positive factorization
+  & open (needs projection stability)
+  & \Cref{rem:rounding} \\
+Layer-1 structure theorem
+  & open (dimension-free homotopy)
+  & \Cref{sec:programme} \\
+Exceptional algebras ($H_3(\mathbb O)$)
+  & channel target special; abstract layer open
+  & \Cref{rem:vlw} \\
+\bottomrule
+\end{tabular}
+\caption{Status of the components of the programme.}
+\label{tab:status}
+\end{table}
+
+The two genuinely open problems are independent. The first is the
+\emph{exponent}: whether decomposability (a dilation for each CP/co-CP summand)
+restores the two-hole mechanism and upgrades $\sqrt\eta$ to $\eta$
+(\Cref{rem:exponent}). The second is \emph{exact factorization}: whether a
+near-positive idempotent is $O(\sqrt\eta)$-close to a genuine positive
+idempotent, after which exact Effros--St\o rmer applies
+(\Cref{rem:rounding}); generic positivity rounding is ruled out by the
+spin-factor counterexample. The Layer-1 abstract structure theorem
+(\Cref{sec:programme}) is open for a third, orthogonal reason: the
+dimension-free bounded homotopy that Kitaev obtains from complete positivity has
+no established Jordan analogue.

@@ -1,0 +1,84 @@
+% =====================================================================
+%  Almost-idempotent positive maps and approximate Jordan algebras
+%  Self-contained report. Main file: structure only; content in sections/.
+%  Build:  make   (or: latexmk -pdf main.tex)
+%
+%  PROVENANCE POLICY (see PROVENANCE.md):
+%   - Every Definition and Theorem carries a `% PROV:` comment naming the
+%     ground-truth source file and the byte-verbatim quote it is matched to.
+%   - PROVENANCE.md is the audit ledger (source path, SHA256, exact quote).
+%   - No claim without a provenance entry. No jargon without a definition.
+% =====================================================================
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{cleveref}
+
+% ---- theorem environments ----
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{openproblem}[theorem]{Open Problem}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\crefname{openproblem}{open problem}{open problems}
+\Crefname{openproblem}{Open Problem}{Open Problems}
+
+% ---- notation macros (kept minimal and explicit) ----
+% Symbol macros are wrapped in \ensuremath so they are mode-agnostic
+% (usable in both text and math without "Missing $" errors).
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\HH}{\ensuremath{\mathcal{H}}}            % Hilbert space
+\newcommand{\Bsa}{\ensuremath{B(\HH)_{\mathrm{sa}}}}  % self-adjoint operators
+\newcommand{\jp}{\ensuremath{\circ}}                  % Jordan product
+\newcommand{\norm}[1]{\ensuremath{\lVert #1 \rVert}}
+\newcommand{\Id}{\ensuremath{\mathbf{1}}}             % unit element / identity operator
+\newcommand{\Tr}{\ensuremath{\operatorname{Tr}}}
+\newcommand{\Img}{\ensuremath{\operatorname{Im}}}
+\newcommand{\Ker}{\ensuremath{\operatorname{Ker}}}
+\newcommand{\Aut}{\ensuremath{\operatorname{Aut}}}
+\newcommand{\sgn}{\ensuremath{\operatorname{sgn}}}
+\newcommand{\Phimap}{\ensuremath{\Phi}}
+\newcommand{\eps}{\ensuremath{\varepsilon}}
+\newcommand{\status}[1]{\textnormal{\textsc{#1}}}
+% Provenance marker (renders nothing; the audit lives in PROVENANCE.md, keyed by label)
+\newcommand{\prov}[1]{}
+
+\title{Almost-idempotent positive maps\\ and approximate Jordan algebras}
+\author{Agent A \and Agent B\\[2pt]\small (collaborative working report)}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\input{sections/00-abstract}
+\end{abstract}
+
+\tableofcontents
+\bigskip
+
+\input{sections/01-introduction}
+\input{sections/02-preliminaries}
+\input{sections/03-jordan-algebras}
+\input{sections/04-spectral-idempotent}
+\input{sections/05-epsilon-jb}
+\input{sections/06-bridge-theorem}
+\input{sections/07-structure-programme}
+\input{sections/08-discussion}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

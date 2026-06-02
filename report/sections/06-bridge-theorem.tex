@@ -1,0 +1,550 @@
+\section{The bridge theorem}\label{sec:bridge}
+
+This section contains the central result of the report: from a unital positive
+almost-idempotent map $\Phimap$ one constructs, with no use of dilations and no
+appeal to complete positivity, a space on which the Jordan-algebra axioms hold
+up to an error $O(\sqrt\eta)$. The construction and every estimate below are
+transcribed from the verified internal proof, with notation harmonised to the
+conventions of this report. The exact (non-perturbative) analogue---that a
+positive projection onto a unital subspace endows its range with a genuine
+Jordan structure---is due to Effros and St{\o}rmer~\cite{EffrosStormer1979};
+the present theorem is the quantitative, almost-idempotent version of that
+statement.
+
+Throughout, $\HH$ is finite-dimensional, $V=\Bsa$ carries the order-unit
+(operator) norm, and the ambient Jordan product is
+\[
+  x\jp y=\tfrac12(xy+yx),\qquad x,y\in V .
+\]
+We write $a\bullet b:=P(a\jp b)$ for the projected Jordan product, where $P$ is
+the spectral idempotent of \Cref{sec:spectral}. \textbf{All constants $C$ below
+are universal: they depend on nothing, and in particular are independent of
+$\dim\HH$ (dimension-free).} We are free to decrease the threshold $\eta_0$
+whenever convenient, in order to absorb an $O(\eta)$ term into an
+$O(\sqrt\eta)$ term.
+
+% PROV: BRIDGE L7-L50 -- main theorem statement, the algebraic bridge to an epsilon-JB order-unit algebra
+\begin{theorem}[Algebraic bridge]\label{thm:bridge}
+\status{(proved)}
+There are universal constants $\eta_0>0$ and $C$ with the following property.
+Let $\HH$ be finite-dimensional, let $V=\Bsa$ with the order-unit/operator norm
+and Jordan product $x\jp y=\tfrac12(xy+yx)$, and let $\Phimap\colon V\to V$ be
+unital and positive with
+\[
+  \norm{\Phimap^2-\Phimap}\le\eta\le\eta_0 .
+\]
+Let $P=\theta(2\Phimap-\Id)$ be the spectral idempotent associated to the
+spectral cluster of $\Phimap$ near $1$ \textup{(}\Cref{sec:spectral}\textup{)},
+and set
+\[
+  A=\Img P,\qquad A_+=A\cap V_+,\qquad a\bullet b=P(a\jp b)\quad(a,b\in A).
+\]
+Then $(A,\bullet,\Id,A_+)$, with the order structure inherited from $V$, is an
+$\eps$-JB order-unit algebra \textup{(}\Cref{sec:epsjb}\textup{)} with
+\[
+  \eps\le C\sqrt{\eta}.
+\]
+In particular, for all $a,b\in A$,
+\begin{align}
+  \Id\bullet a&=a, \label{eq:bridge-unit}\\
+  \norm{a\bullet b}&\le(1+C\eta)\,\norm{a}\,\norm{b}, \label{eq:bridge-prod}\\
+  a\bullet a&\ge-C\eta\,\norm{a}^2\,\Id, \label{eq:bridge-posq}\\
+  \norm{a\bullet a}&\ge(1-C\eta)\,\norm{a}^2, \label{eq:bridge-normq}\\
+  \norm{((a\bullet a)\bullet b)\bullet a-(a\bullet a)\bullet(b\bullet a)}
+    &\le C\sqrt{\eta}\,\norm{a}^3\,\norm{b}. \label{eq:bridge-jordan}
+\end{align}
+\end{theorem}
+
+\paragraph{Spectral estimate.}
+We first record the basic estimates on $P$ established in \Cref{sec:spectral};
+they are used repeatedly below. Write
+\[
+  \delta=\norm{P-\Phimap}.
+\]
+Since $\Phimap$ is unital and positive, it is a contraction for the order-unit
+norm, $\norm{\Phimap}=1$. Setting $S=2\Phimap-\Id$ in the Banach algebra
+$\operatorname{End}(V)$ one has
+\[
+  \norm{S}\le3,\qquad \norm{S^2-\Id}=4\,\norm{\Phimap^2-\Phimap}\le4\eta,
+\]
+and $P=\tfrac12(\Id+\sgn(S))$ with $\sgn(S)=S\,(S^2)^{-1/2}$ defined by the
+convergent binomial series for $\eta_0$ small. This $P$ agrees with
+$\theta(2\Phimap-\Id)$, satisfies $P^2=P$, fixes the unit, $P(\Id)=\Id$, and
+obeys
+\begin{equation}\label{eq:bridge-delta}
+  \delta=\norm{P-\Phimap}\le C\eta,\qquad \norm{P}\le1+C\eta.
+\end{equation}
+Moreover $P$ is $\delta$-positive:
+\begin{equation}\label{eq:bridge-deltapos}
+  x\ge0\ \Longrightarrow\ P(x)\ge-\delta\,\norm{x}\,\Id,
+\end{equation}
+because $\Phimap(x)\ge0$ and $\norm{P(x)-\Phimap(x)}\le\delta\,\norm{x}$.
+
+\subsection*{Lemma 0: exact order-unit structure on \texorpdfstring{$A$}{A}}
+
+% PROV: BRIDGE L121-L152 -- the order-unit part of the epsilon-JB object is exact; order-unit norm equals operator norm
+\begin{lemma}[Exact order unit]\label{lem:bridge-orderunit}
+\status{(proved)}
+The order-unit part of the structure on $A$ is exact. Since $P(\Id)=\Id$, the
+range $A=\Img P$ is a real linear subspace of $V$ containing $\Id$; equip it
+with the inherited cone $A_+=A\cap V_+$. Then $(A,A_+,\Id)$ is an order-unit
+space, and its order-unit norm coincides with the ambient operator norm:
+\[
+  \norm{a}_{\mathrm{ou},A}
+  =\inf\{t>0:-t\,\Id\le a\le t\,\Id\}
+  =\norm{a}_{B(\HH)}\qquad(a\in A).
+\]
+\end{lemma}
+
+\begin{proof}
+For every $a\in A$ one has $-\norm{a}\,\Id\le a\le\norm{a}\,\Id$ in $V$, so
+$\Id$ is an order unit for $A$. The cone is Archimedean because $V_+$ is closed:
+if $a+\eps\,\Id\in A_+$ for every $\eps>0$, then $a\ge0$ in $V$, hence
+$a\in A_+$. The displayed equality of norms is the definition of the order-unit
+norm together with the fact that, for self-adjoint matrices, the smallest $t$
+with $-t\,\Id\le a\le t\,\Id$ equals the operator norm. Thus no approximate
+norm or order structure is introduced; all approximate estimates below concern
+only the product $\bullet$.
+\end{proof}
+
+\subsection*{Standard order estimates}
+
+We use only the following order facts, none of which requires complete
+positivity. Items \ref{it:bridge-js} and \ref{it:bridge-cs} are the
+Kadison/Jordan--Schwarz inequalities recalled in \Cref{sec:prelim}
+\cite{Kadison1952,vanLuijkWilming2026}.
+% PROV: BRIDGE L154-L186 -- list of standard order estimates used (Jordan-Schwarz, Cauchy-Schwarz, monotonicity, norm = sup over states, order perturbation)
+\begin{enumerate}[label=\textup{(O\arabic*)},leftmargin=*]
+  \item\label{it:bridge-js}
+    \emph{Jordan--Schwarz} for unital positive maps on self-adjoint elements:
+    $\Phimap(x)^2\le\Phimap(x^2)$ for $x=x^*$.
+  \item\label{it:bridge-cs}
+    \emph{Cauchy--Schwarz} for every positive functional $\omega$ on
+    $\Bsa$: $\lvert\omega(x\jp y)\rvert^2\le\omega(x^2)\,\omega(y^2)$.
+  \item\label{it:bridge-mono}
+    \emph{Norm monotonicity in the cone:} if $0\le x\le y$ then
+    $\norm{x}\le\norm{y}$.
+  \item\label{it:bridge-sup}
+    \emph{Norm as a supremum over states:} for self-adjoint $x$,
+    $\norm{x}=\sup_\rho\lvert\rho(x)\rvert$, the supremum over states $\rho$ on
+    $B(\HH)$.
+  \item\label{it:bridge-pert}
+    \emph{Order perturbation:} if $x,y$ are self-adjoint and
+    $\norm{x-y}\le\eps$, then $y-\eps\,\Id\le x\le y+\eps\,\Id$.
+\end{enumerate}
+
+\subsection*{Lemma 1: the easy axioms}
+
+% PROV: BRIDGE L188-L218 -- unit and commutativity exact; product bound; square positivity and norm lower bound
+\begin{lemma}[Easy JB axioms]\label{lem:bridge-easy}
+\status{(proved)}
+For all $a,b\in A$ the identities \eqref{eq:bridge-unit}--\eqref{eq:bridge-normq}
+hold; that is,
+\[
+  \Id\bullet a=a,\qquad a\bullet b=b\bullet a,\qquad
+  \norm{a\bullet b}\le(1+C\eta)\norm{a}\norm{b},
+\]
+\[
+  a\bullet a\ge-C\eta\,\norm{a}^2\,\Id,\qquad
+  \norm{a\bullet a}\ge(1-C\eta)\,\norm{a}^2.
+\]
+\end{lemma}
+
+\begin{proof}
+The unit law $\Id\bullet a=P(\Id\jp a)=P(a)=a$ and commutativity
+$a\bullet b=P(a\jp b)=P(b\jp a)=b\bullet a$ are exact, the latter because
+$\jp$ is commutative. The product bound follows from $\norm{P}\le1+C\eta$ in
+\eqref{eq:bridge-delta} and $\norm{a\jp b}\le\norm{a}\,\norm{b}$.
+
+For squares, $a\bullet a=P(a^2)$, and applying \eqref{eq:bridge-deltapos} to
+$a^2\ge0$ gives $a\bullet a\ge-\delta\,\norm{a}^2\,\Id\ge-C\eta\,\norm{a}^2\,\Id$.
+
+For the norm lower bound, since $a=P(a)$ we have
+$\norm{\Phimap(a)-a}=\norm{(\Phimap-P)(a)}\le\delta\,\norm{a}$. Jordan--Schwarz
+\ref{it:bridge-js} gives $\Phimap(a^2)\ge\Phimap(a)^2$, hence by
+monotonicity \ref{it:bridge-mono}
+\[
+  \norm{\Phimap(a^2)}\ge\norm{\Phimap(a)^2}=\norm{\Phimap(a)}^2
+    \ge(1-C\delta)\,\norm{a}^2.
+\]
+Since $\norm{P(a^2)-\Phimap(a^2)}\le\delta\,\norm{a}^2$, we conclude
+\[
+  \norm{a\bullet a}=\norm{P(a^2)}\ge(1-C\eta)\,\norm{a}^2.
+\]
+Thus only the Jordan identity \eqref{eq:bridge-jordan} remains to be proved.
+\end{proof}
+
+\subsection*{Lemma 2: the first insertion estimate}
+
+For every state $\rho$ on $B(\HH)$ set
+\begin{equation}\label{eq:bridge-omega}
+  \omega=\rho\circ\Phimap,\qquad \norm{x}_\omega^2=\omega(x^2).
+\end{equation}
+Since $\Phimap$ is positive, $\omega$ is a positive functional and
+$\norm{\cdot}_\omega$ is a seminorm on $V$.
+
+% PROV: BRIDGE L220-L299 -- first insertion estimate (FI): almost-contraction, almost-orthogonality of Im P and Ker P, and the (FI) bound
+\begin{lemma}[First insertion estimate]\label{lem:bridge-fi}
+\status{(proved)}
+\emph{(i) (Almost-contraction.)} For all $x\in V$,
+\begin{equation}\label{eq:bridge-almostcontr}
+  \norm{Px}_\omega^2\le\norm{x}_\omega^2+C\eta\,\norm{x}^2.
+\end{equation}
+\emph{(ii) (Almost-orthogonality.)} For $u\in\Img P$ and $n\in\Ker P$,
+\begin{equation}\label{eq:bridge-almostorth}
+  \lvert\omega(u\jp n)\rvert\le C\sqrt\eta\,\norm{u}\,\norm{n}.
+\end{equation}
+\emph{(iii) (First insertion (FI).)} For all $x\in V$ and $b\in A$,
+\begin{equation}\label{eq:bridge-FI}
+  \norm{P(Px\jp b)-P(x\jp b)}\le C\sqrt\eta\,\norm{x}\,\norm{b}
+  \qquad\text{\normalfont(FI)}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+\emph{(i)} We chain three inequalities:
+\[
+  \rho\,\Phimap\big((Px)^2\big)
+   \le\rho\,\Phimap\big((\Phimap x)^2\big)+C\eta\,\norm{x}^2
+   \le\rho\,\Phimap^2(x^2)+C\eta\,\norm{x}^2
+   \le\rho\,\Phimap(x^2)+C\eta\,\norm{x}^2.
+\]
+The first inequality uses $\norm{Px-\Phimap x}\le\delta\,\norm{x}$ together with
+the elementary bound $\norm{y^2-z^2}\le2\max(\norm{y},\norm{z})\,\norm{y-z}$ and
+$\norm{P},\norm{\Phimap}\le C$: applying the state $\rho\circ\Phimap$ to the
+self-adjoint difference of the two squares costs at most its operator norm, which
+is $O(\eta)\norm{x}^2$. The middle inequality is Jordan--Schwarz \ref{it:bridge-js}
+for $\Phimap$ applied to $\Phimap x$; the last uses
+$\norm{\Phimap^2-\Phimap}\le\eta$. This is \eqref{eq:bridge-almostcontr}.
+
+\emph{(ii)} Since $P$ is an exact idempotent, \eqref{eq:bridge-almostcontr}
+forces almost-orthogonality of $\Img P$ and $\Ker P$ in every seminorm
+$\norm{\cdot}_\omega$. Put $c=\omega(u\jp n)$ and $a=\norm{n}_\omega^2$. Because
+$P(u+tn)=u$ for every real $t$, \eqref{eq:bridge-almostcontr} applied to
+$x=u+tn$ gives
+\[
+  \norm{u}_\omega^2
+   \le\norm{u+tn}_\omega^2+K\eta\,\norm{u+tn}^2
+   =\norm{u}_\omega^2+2tc+t^2a+K\eta\,\norm{u+tn}^2,
+\]
+where $K$ is the constant of \eqref{eq:bridge-almostcontr}. Choose the sign of
+$t$ opposite to the sign of $c$ and write $s=\lvert t\rvert$; using
+$\norm{u+tn}^2\le2\norm{u}^2+2s^2\norm{n}^2$ we obtain, for all $s>0$,
+\[
+  2s\,\lvert c\rvert\le s^2\big(a+2K\eta\,\norm{n}^2\big)+2K\eta\,\norm{u}^2 .
+\]
+Optimising over $s>0$ yields
+\[
+  \lvert c\rvert\le C\sqrt\eta\,\norm{u}\,\sqrt{a+\eta\,\norm{n}^2}
+   \le C\sqrt\eta\,\norm{u}\,\norm{n},
+\]
+the last step using $a=\norm{n}_\omega^2\le\norm{n}^2$. This is
+\eqref{eq:bridge-almostorth}.
+
+\emph{(iii)} Let $x\in V$, $b\in A$, and set $n=x-Px\in\Ker P$, so
+$\norm{n}\le C\norm{x}$. For every state $\rho$, with $\omega=\rho\circ\Phimap$,
+\[
+  \lvert\rho\,P(n\jp b)\rvert
+   \le\lvert\rho\,\Phimap(n\jp b)\rvert+C\eta\,\norm{n}\,\norm{b}
+   =\lvert\omega(n\jp b)\rvert+C\eta\,\norm{n}\,\norm{b}
+   \le C\sqrt\eta\,\norm{x}\,\norm{b},
+\]
+where the first step replaces $P$ by $\Phimap$ at cost
+$\delta\,\norm{n\jp b}\le C\eta\,\norm{n}\,\norm{b}$ and the last applies
+\eqref{eq:bridge-almostorth} with $u=b\in\Img P$. Since $P(n\jp b)$ is
+self-adjoint and $P(x\jp b)-P(Px\jp b)=P(n\jp b)$, taking the supremum over
+states \ref{it:bridge-sup} gives \eqref{eq:bridge-FI}.
+\end{proof}
+
+\subsection*{Lemma 3: square holes are approximately null}
+
+For $r\in A$ define the \emph{square hole}
+\[
+  q_r=P(r^2)-r^2\in\Ker P,
+\]
+the inclusion holding because $P(q_r)=P^2(r^2)-P(r^2)=0$.
+
+% PROV: BRIDGE L301-L372 -- square holes almost null: (3.1) q_r >= -C eta ||r||^2 1, (3.2) ||P(q_r^2)|| <= C eta ||r||^4, (3.3) seminorm bound
+\begin{lemma}[Square holes are almost null]\label{lem:bridge-squarehole}
+\status{(proved)}
+For every $r\in A$ and every state seminorm $\omega=\rho\circ\Phimap$,
+\begin{align}
+  q_r&\ge-C\eta\,\norm{r}^2\,\Id, \label{eq:bridge-q31}\\
+  \norm{P(q_r^2)}&\le C\eta\,\norm{r}^4, \label{eq:bridge-q32}\\
+  \norm{q_r}_\omega&\le C\sqrt\eta\,\norm{r}^2. \label{eq:bridge-q33}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+Since $\norm{\Phimap(r)-r}\le\delta\,\norm{r}$, Jordan--Schwarz \ref{it:bridge-js}
+and order perturbation \ref{it:bridge-pert} give
+\[
+  \Phimap(r^2)\ge\Phimap(r)^2\ge r^2-C\delta\,\norm{r}^2\,\Id,
+\]
+the second inequality from $\norm{\Phimap(r)^2-r^2}\le C\delta\,\norm{r}^2$.
+Replacing $\Phimap(r^2)$ by $P(r^2)$ costs another $\delta\,\norm{r}^2$ in the
+same order sense, which yields $P(r^2)\ge r^2-C\delta\,\norm{r}^2\,\Id$, i.e.\
+\eqref{eq:bridge-q31} (recall $\delta\le C\eta$).
+
+Choose $\gamma=C\delta\,\norm{r}^2$ so that $y=q_r+\gamma\,\Id\ge0$. Also
+$\norm{q_r}\le C\norm{r}^2$ and hence $\norm{y}\le C\norm{r}^2$. Since
+$P(q_r)=0$,
+\[
+  \norm{\Phimap(q_r)}=\norm{(\Phimap-P)(q_r)}\le C\delta\,\norm{r}^2,
+\]
+so $0\le\Phimap(y)$ with $\norm{\Phimap(y)}\le C\delta\,\norm{r}^2$. Because
+$0\le y\le C\norm{r}^2\,\Id$, functional calculus gives
+$0\le y^2\le C\norm{r}^2\,y$, and positivity of $\Phimap$ together with
+monotonicity \ref{it:bridge-mono} yields
+\[
+  \norm{\Phimap(y^2)}\le C\norm{r}^2\,\norm{\Phimap(y)}\le C\delta\,\norm{r}^4.
+\]
+Finally $q_r^2\le2y^2+2\gamma^2\,\Id$, so
+$\norm{\Phimap(q_r^2)}\le C\delta\,\norm{r}^4$; the term $\gamma^2\,\Id$ is
+$O(\delta^2\norm{r}^4)$ and is absorbed into $O(\delta\norm{r}^4)$ after
+decreasing $\eta_0$. Replacing $\Phimap$ by $P$ costs at most
+$\delta\,\norm{q_r^2}\le C\delta\,\norm{r}^4$, proving \eqref{eq:bridge-q32}.
+Estimate \eqref{eq:bridge-q33} follows since
+$\norm{q_r}_\omega^2=\rho\,\Phimap(q_r^2)\le\norm{\Phimap(q_r^2)}\le C\eta\,\norm{r}^4$.
+\end{proof}
+
+\subsection*{Lemma 4: polarised hole estimates}
+
+For $r,s\in A$ set the \emph{product hole}
+\[
+  q_{r,s}=P(r\jp s)-r\jp s=-h_{r,s},
+\]
+a symmetric bilinear function of $(r,s)$ lying in $\Ker P$.
+
+% PROV: BRIDGE L374-L451 -- polarized hole estimates: (4.1) seminorm bound, crude bound, (HH) two-hole O(eta), (HZ) one-hole O(sqrt eta)
+\begin{lemma}[Polarised hole estimates]\label{lem:bridge-polar}
+\status{(proved)}
+For all $r,s,u,v\in A$, all $z\in V$, and every state seminorm
+$\omega=\rho\circ\Phimap$,
+\begin{align}
+  \norm{q_{r,s}}_\omega&\le C\sqrt\eta\,\norm{r}\,\norm{s}, \label{eq:bridge-41}\\
+  \norm{q_{r,s}}&\le C\norm{r}\,\norm{s}, \label{eq:bridge-crude}\\
+  \norm{P(q_{r,s}\jp q_{u,v})}
+    &\le C\eta\,\norm{r}\,\norm{s}\,\norm{u}\,\norm{v}
+    \qquad\text{\normalfont(HH)}, \label{eq:bridge-HH}\\
+  \norm{P(q_{r,s}\jp z)}
+    &\le C\sqrt\eta\,\norm{r}\,\norm{s}\,\norm{z}
+    \qquad\text{\normalfont(HZ)}. \label{eq:bridge-HZ}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+\emph{Estimate \eqref{eq:bridge-41}.} For $\lambda>0$, polarisation of the
+symmetric bilinear map $(r,s)\mapsto q_{r,s}$ gives
+\[
+  \lambda\,q_{r,s}=q_{\lambda r,s}
+   =\tfrac14\big(q_{\lambda r+s}-q_{\lambda r-s}\big),
+\]
+where $q_x=P(x^2)-x^2$ is the square hole of \Cref{lem:bridge-squarehole}.
+Hence \eqref{eq:bridge-q33} gives
+\[
+  \norm{q_{r,s}}_\omega
+   \le C\sqrt\eta\big(\lambda\,\norm{r}^2+\lambda^{-1}\norm{s}^2\big).
+\]
+If $r=0$ or $s=0$ this is trivial; otherwise put $\lambda=\norm{s}/\norm{r}$ to
+get \eqref{eq:bridge-41}. The crude bound \eqref{eq:bridge-crude} is immediate
+from $\norm{P}\le C$ and $\norm{r\jp s}\le\norm{r}\,\norm{s}$.
+
+\emph{Estimate \eqref{eq:bridge-HH}.} For every state $\rho$, Cauchy--Schwarz
+\ref{it:bridge-cs} for the positive functional $\omega=\rho\circ\Phimap$ gives
+\[
+  \lvert\rho\,\Phimap(q_{r,s}\jp q_{u,v})\rvert
+   \le\norm{q_{r,s}}_\omega\,\norm{q_{u,v}}_\omega
+   \le C\eta\,\norm{r}\,\norm{s}\,\norm{u}\,\norm{v}
+\]
+by \eqref{eq:bridge-41}. Replacing $\Phimap$ by $P$ costs at most
+$\delta\,\norm{q_{r,s}}\,\norm{q_{u,v}}$, which has the same bound after
+increasing $C$ (using \eqref{eq:bridge-crude}). Since $P(q_{r,s}\jp q_{u,v})$ is
+self-adjoint, the state supremum \ref{it:bridge-sup} is its operator norm.
+
+\emph{Estimate \eqref{eq:bridge-HZ}.} For $z\in V$ we have
+$\norm{z}_\omega\le\norm{z}$, because $z^2\le\norm{z}^2\,\Id$ and $\Phimap$ is
+positive unital. Hence, as above, for every state $\rho$,
+\[
+  \lvert\rho\,\Phimap(q_{r,s}\jp z)\rvert
+   \le\norm{q_{r,s}}_\omega\,\norm{z}_\omega
+   \le C\sqrt\eta\,\norm{r}\,\norm{s}\,\norm{z}.
+\]
+Replacing $\Phimap$ by $P$ costs at most $\delta\,\norm{q_{r,s}}\,\norm{z}\le
+C\eta\,\norm{r}\,\norm{s}\,\norm{z}$, which is absorbed into the displayed
+$O(\sqrt\eta)$ bound. Taking the state supremum \ref{it:bridge-sup} gives
+\eqref{eq:bridge-HZ}.
+\end{proof}
+
+\subsection*{Lemma 5: one-hole contexts}
+
+% PROV: BRIDGE L453-L487 -- one-hole contexts (5.1) and (5.2)
+\begin{lemma}[One-hole contexts]\label{lem:bridge-onehole}
+\status{(proved)}
+Let $h=h_{r,s}=r\jp s-P(r\jp s)$ be a range-product hole, $r,s\in A$, and let
+$t,u\in A$. Then
+\begin{align}
+  \norm{P\big((h\jp t)\jp u\big)}
+    &\le C\sqrt\eta\,\norm{r}\,\norm{s}\,\norm{t}\,\norm{u}
+    \qquad\text{\normalfont(5.1)}, \label{eq:bridge-51}\\
+  \norm{P\big(h\jp(t\jp u)\big)}
+    &\le C\sqrt\eta\,\norm{r}\,\norm{s}\,\norm{t}\,\norm{u}
+    \qquad\text{\normalfont(5.2)}. \label{eq:bridge-52}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+\emph{Estimate \eqref{eq:bridge-51}.} Put $y=h\jp t$. Since $h=-q_{r,s}$,
+\eqref{eq:bridge-HZ} (with $z=t$) gives
+$\norm{P(y)}\le C\sqrt\eta\,\norm{r}\,\norm{s}\,\norm{t}$, hence
+\[
+  \norm{P\big(P(y)\jp u\big)}\le\norm{P}\,\norm{P(y)}\,\norm{u}
+   \le C\sqrt\eta\,\norm{r}\,\norm{s}\,\norm{t}\,\norm{u}.
+\]
+For the kernel part $y-P(y)$, apply \eqref{eq:bridge-FI} with $x=y$ and $b=u$,
+using the crude bound $\norm{y}\le C\norm{r}\,\norm{s}\,\norm{t}$:
+\[
+  P\big((y-P(y))\jp u\big)=P(y\jp u)-P\big(P(y)\jp u\big)
+\]
+has the same $O(\sqrt\eta\,\norm{r}\,\norm{s}\,\norm{t}\,\norm{u})$ bound. Adding
+the two parts gives \eqref{eq:bridge-51}.
+
+\emph{Estimate \eqref{eq:bridge-52}.} Write $t\jp u=P(t\jp u)+h_{t,u}$. The first
+term gives $P\big(h\jp P(t\jp u)\big)$, controlled by \eqref{eq:bridge-HZ}
+because $P(t\jp u)\in A$ and $h=-q_{r,s}$; the second gives
+$P(h\jp h_{t,u})=P(q_{r,s}\jp q_{t,u})$, controlled by \eqref{eq:bridge-HH},
+hence $O(\eta\,\norm{r}\,\norm{s}\,\norm{t}\,\norm{u})$ and absorbed into the
+$O(\sqrt\eta)$ target.
+\end{proof}
+
+\subsection*{Assembly: the Jordan identity}
+
+We now prove \eqref{eq:bridge-jordan}, the last remaining axiom. The strategy is
+to push both sides through the exact Jordan identity of the ambient product
+$\jp$ recalled in \Cref{sec:jordan}, paying only $O(\sqrt\eta)$ for each
+hole created in the process.
+
+% PROV: BRIDGE L489-L597 -- Jordan-identity assembly: (L), (R), exact ambient identity, final bound
+\begin{proposition}[Approximate Jordan identity]\label{prop:bridge-jordan}
+\status{(proved)}
+For all $a,b\in A$,
+\[
+  \norm{((a\bullet a)\bullet b)\bullet a-(a\bullet a)\bullet(b\bullet a)}
+   \le C\sqrt\eta\,\norm{a}^3\,\norm{b}.
+\]
+\end{proposition}
+
+\begin{proof}
+Fix $a,b\in A$ and write
+\[
+  p=P(a^2)=a^2-h_{a,a},\qquad q=P(b\jp a)=b\jp a-h_{b,a},
+\]
+so that $p,q\in A$ and, by the crude bounds,
+\[
+  \norm{p}\le C\norm{a}^2,\qquad \norm{q}\le C\norm{a}\,\norm{b}.
+\]
+
+\emph{The left side.} Let $l=h_{p,b}=p\jp b-P(p\jp b)$. Then
+\[
+  ((a\bullet a)\bullet b)\bullet a
+   =P\big(P(p\jp b)\jp a\big)
+   =P\big((p\jp b)\jp a\big)-P(l\jp a).
+\]
+Here $l\in\Ker P$, since $P(l)=P(p\jp b)-P^2(p\jp b)=0$, and
+\[
+  \norm{l}\le\norm{p\jp b}+\norm{P(p\jp b)}\le C\norm{a}^2\norm{b}.
+\]
+As $P(l)=0$, \eqref{eq:bridge-FI} applied with $x=l$ and range element $a$ gives
+\begin{equation}\label{eq:bridge-61}
+  \norm{P(l\jp a)}\le C\sqrt\eta\,\norm{a}^3\,\norm{b}
+  \qquad\text{\normalfont(6.1)}.
+\end{equation}
+Next, using $p=a^2-h_{a,a}$,
+\[
+  P\big((p\jp b)\jp a\big)
+   =P\big((a^2\jp b)\jp a\big)-P\big((h_{a,a}\jp b)\jp a\big),
+\]
+and the last term is $O(\sqrt\eta\,\norm{a}^3\,\norm{b})$ by \eqref{eq:bridge-51}
+with $h=h_{a,a}$, $t=b$, $u=a$. Combining with \eqref{eq:bridge-61},
+\begin{equation}\label{eq:bridge-L}
+  ((a\bullet a)\bullet b)\bullet a
+   =P\big((a^2\jp b)\jp a\big)+O\!\big(\sqrt\eta\,\norm{a}^3\,\norm{b}\big)
+  \qquad\text{\normalfont(L)}.
+\end{equation}
+
+\emph{The right side.} Expanding both holes,
+\[
+  (a\bullet a)\bullet(b\bullet a)=P(p\jp q)
+   =P\big((a^2-h_{a,a})\jp(b\jp a-h_{b,a})\big),
+\]
+which equals
+\[
+  P\big(a^2\jp(b\jp a)\big)
+   -P\big(h_{a,a}\jp(b\jp a)\big)
+   -P\big(a^2\jp h_{b,a}\big)
+   +P\big(h_{a,a}\jp h_{b,a}\big).
+\]
+We bound the three error terms.
+\begin{itemize}[leftmargin=*]
+  \item $\norm{P\big(h_{a,a}\jp(b\jp a)\big)}\le C\sqrt\eta\,\norm{a}^3\,\norm{b}$
+    by \eqref{eq:bridge-52} with $h=h_{a,a}$, $t=b$, $u=a$.
+  \item For the term $P(a^2\jp h_{b,a})$, decompose $a^2=p+h_{a,a}$:
+    \[
+      P(a^2\jp h_{b,a})=P(p\jp h_{b,a})+P(h_{a,a}\jp h_{b,a}).
+    \]
+    Since $h_{b,a}\in\Ker P$ and $p\in A$, \eqref{eq:bridge-FI} applied with
+    $x=h_{b,a}$ and range element $p$ gives $P\big(P(h_{b,a})\jp p\big)=0$,
+    whence
+    \[
+      \norm{P(p\jp h_{b,a})}\le C\sqrt\eta\,\norm{p}\,\norm{h_{b,a}}
+       \le C\sqrt\eta\,\norm{a}^3\,\norm{b}.
+    \]
+  \item Both occurrences of $P(h_{a,a}\jp h_{b,a})=P(q_{a,a}\jp q_{b,a})$ are
+    bounded by \eqref{eq:bridge-HH}:
+    $\norm{P(h_{a,a}\jp h_{b,a})}\le C\eta\,\norm{a}^3\,\norm{b}$, which for
+    $\eta\le\eta_0$ is absorbed into the $O(\sqrt\eta)$ error.
+\end{itemize}
+Therefore
+\begin{equation}\label{eq:bridge-R}
+  (a\bullet a)\bullet(b\bullet a)
+   =P\big(a^2\jp(b\jp a)\big)+O\!\big(\sqrt\eta\,\norm{a}^3\,\norm{b}\big)
+  \qquad\text{\normalfont(R)}.
+\end{equation}
+
+\emph{Cancellation of the leading term.} The ambient product $\jp$ satisfies the
+\emph{exact} Jordan identity (\Cref{sec:jordan}):
+\[
+  (a^2\jp b)\jp a=a^2\jp(b\jp a).
+\]
+Hence the leading terms $P\big((a^2\jp b)\jp a\big)$ in \eqref{eq:bridge-L} and
+$P\big(a^2\jp(b\jp a)\big)$ in \eqref{eq:bridge-R} are identical. Subtracting
+\eqref{eq:bridge-R} from \eqref{eq:bridge-L} leaves only the error terms:
+\[
+  \norm{((a\bullet a)\bullet b)\bullet a-(a\bullet a)\bullet(b\bullet a)}
+   \le C\sqrt\eta\,\norm{a}^3\,\norm{b}. \qedhere
+\]
+\end{proof}
+
+\begin{proof}[Proof of \Cref{thm:bridge}]
+\Cref{lem:bridge-orderunit} establishes that $(A,A_+,\Id)$ is an order-unit
+space with order-unit norm equal to the ambient operator norm, so the order
+structure is exact. \Cref{lem:bridge-easy} gives the unit law, commutativity,
+the product bound \eqref{eq:bridge-prod}, the square positivity
+\eqref{eq:bridge-posq}, and the square-norm lower bound \eqref{eq:bridge-normq}.
+\Cref{prop:bridge-jordan} gives the approximate Jordan identity
+\eqref{eq:bridge-jordan}. Together these are exactly the axioms of an
+$\eps$-JB order-unit algebra (\Cref{sec:epsjb}) with $\eps\le C\sqrt\eta$. All
+constants are universal and dimension-free.
+\end{proof}
+
+% PROV: EffrosStormer1979 ocr-pages/page-05.txt L9-16 (Theorem 1.4) -- a unital positive projection on a unital JC-algebra makes P(A) a JC-algebra under r*s=P(r o s); ocr-pages/page-06.txt L42-44 (Corollary 1.6) -- fixed points of a normal unital positive map on a JW-algebra have a natural JW structure.
+\begin{remark}\label{rem:bridge-exact}
+\status{(cited)}
+The non-perturbative limit $\eta=0$ recovers the exact statement of Effros and
+St{\o}rmer~\cite{EffrosStormer1979}: a positive unital projection $P$ on a
+unital JC-algebra makes its range a JC-algebra under
+$a\bullet b=P(a\jp b)$. \Cref{thm:bridge} is the quantitative,
+almost-idempotent version, in which every hole estimate degrades gracefully as
+$O(\sqrt\eta)$ or $O(\eta)$ and the exact Jordan identity of the ambient algebra
+supplies the leading-order cancellation.
+\end{remark}

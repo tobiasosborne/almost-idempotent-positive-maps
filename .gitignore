@@ -1,0 +1,33 @@
+# Third-party papers, arXiv source bundles, OCR outputs, and copied reference text.
+agent-A/refs/
+agent-A/notes/ingestion-results-2026-06-01.json
+agent-B/references/
+
+# Generated LaTeX build products.
+report/*.aux
+report/*.bbl
+report/*.bcf
+report/*.blg
+report/*.fdb_latexmk
+report/*.fls
+report/*.log
+report/*.out
+report/*.run.xml
+report/*.synctex.gz
+report/*.toc
+
+# Keep the compiled report, but ignore other PDFs by default to avoid
+# accidentally publishing copied literature files.
+*.pdf
+!report/main.pdf
+
+# Python and local tooling caches.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# OS/editor noise.
+.DS_Store
+*.swp
+*.swo

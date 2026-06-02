@@ -1,0 +1,137 @@
+\section{The spectral idempotent}\label{sec:spectral}
+
+Throughout this section $\Phimap\colon\Bsa\to\Bsa$ is a fixed unital positive
+linear map that is \emph{almost idempotent}: there is a parameter
+$\eta\in[0,\tfrac14)$ with
+\begin{equation}\label{eq:eta-hypothesis}
+  \norm{\Phimap^2-\Phimap}\le\eta,
+\end{equation}
+where $\norm{\cdot}$ on the left is the operator norm of a linear map on
+$\Bsa$ (the order-unit norm $\norm{x}=\inf\{t>0:-t\Id\le x\le t\Id\}$ being
+used on $\Bsa$ itself). The goal is to replace $\Phimap$ by an honest
+idempotent $P$ that is close to $\Phimap$ and inherits its order properties up
+to an error of size $\eta$. The construction is Kitaev's; we record the
+elementary bounds we need with explicit dependence on $\eta$.
+
+We work inside the Banach algebra $\mathrm{End}(\Bsa)$ of bounded linear
+operators on $\Bsa$, whose unit we also denote $\Id$. Since $\Phimap$ is
+unital positive it is a contraction for the order-unit norm, so
+$\norm{\Phimap}=1$.
+
+% PROV: Kitaev2024 approximate_algebras.tex:2171-2182 (eq tilde_Phi) -- construction P=theta(2Phi-1)=(1/2)(1+(2Phi-1)(1-4(Phi-Phi^2))^{-1/2}); properties P^2=P, ||P-Phi||<=O(eta), P(1)=1, P(X^dag)=P(X)^dag in the complex setting. This report restricts to B_sa, where the relevant preservation statement is real self-adjointness preservation. Also Prop prop_P (lines 524-533) and abs_sgn (line 515).
+\begin{definition}[Spectral idempotent, \status{(cited)}]\label{def:spectral-idempotent}
+Set $S=2\Phimap-\Id\in\mathrm{End}(\Bsa)$. Define
+\begin{equation}\label{eq:R-binomial}
+  R=(S^2)^{-1/2}
+\end{equation}
+by the binomial series for $(\Id-(\Id-S^2))^{-1/2}$, set
+$\sgn(S)=SR$, and put
+\begin{equation}\label{eq:P-def}
+  P=\theta(2\Phimap-\Id)=\tfrac12\bigl(\Id+\sgn(S)\bigr)
+   =\tfrac12\Bigl(\Id+(2\Phimap-\Id)\bigl(\Id-4(\Phimap-\Phimap^2)\bigr)^{-1/2}\Bigr).
+\end{equation}
+This is the spectral idempotent of $\Phimap$ for the spectral cluster near
+$1$ \cite[Eq.~(tilde\_$\Phimap$), Prop.~P]{Kitaev2024}.
+\end{definition}
+
+The series defining $R$ converges because $S^2-\Id$ is small: from
+\eqref{eq:eta-hypothesis},
+\begin{equation}\label{eq:S2-bound}
+  \norm{S}\le 2\norm{\Phimap}+1\le 3,\qquad
+  \norm{S^2-\Id}=4\norm{\Phimap^2-\Phimap}\le 4\eta<1,
+\end{equation}
+the last inequality holding precisely for $\eta<\tfrac14$. Hence $R$ is a
+well-defined element of $\mathrm{End}(\Bsa)$ and is a function of $S^2$.
+
+% PROV: ORIGINAL agent-B/theory/theorem-B-algebraic-bridge.md:63-119 -- spectral estimate block: S=2Phi-I, R=(S^2)^{-1/2}, sgn(S)=SR, P=(I+sgn(S))/2; P^2=P, P(1)=1, ||R-I||<=Ceta, delta<=Ceta, ||P||<=1+Ceta, delta-positivity. Construction cited Kitaev2024.
+\begin{lemma}[Properties of $P$, \status{(proved)}]\label{lem:P-properties}
+There are universal constants $\eta_0<\tfrac14$ and $C$ such that, whenever
+$0\le\eta\le\eta_0$, the operator $P$ of \Cref{def:spectral-idempotent}
+satisfies:
+\begin{enumerate}[label=\textup{(\roman*)}]
+  \item $P^2=P$ \textup{(idempotent)};
+  \item $P(\Id)=\Id$ \textup{(unital)};
+  \item $P$ is a real-linear operator on $\Bsa$ \textup{(it preserves the
+        self-adjoint part)};
+  \item $\norm{R-\Id}\le C\eta$;
+  \item $\delta:=\norm{P-\Phimap}\le C\eta$;
+  \item $\norm{P}\le 1+C\eta$;
+  \item $P$ is $\delta$-positive: if $a\ge 0$ then
+        $P(a)\ge-\delta\norm{a}\,\Id$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+\emph{(i)} Because $R$ is a function of $S^2$ it commutes with $S^2$, so
+$\sgn(S)^2=S^2R^2=S^2(S^2)^{-1}=\Id$. Therefore
+\[
+  P^2=\tfrac14\bigl(\Id+\sgn(S)\bigr)^2
+     =\tfrac14\bigl(\Id+2\sgn(S)+\sgn(S)^2\bigr)
+     =\tfrac12\bigl(\Id+\sgn(S)\bigr)=P.
+\]
+
+\emph{(ii)} Since $\Phimap(\Id)=\Id$ we have $S(\Id)=\Id$, hence
+$(S^2-\Id)(\Id)=0$. As $R$ is a power series in $S^2-\Id$ with constant term
+$\Id$, this gives $R(\Id)=\Id$, so $\sgn(S)(\Id)=S R(\Id)=\Id$ and
+$P(\Id)=\tfrac12(\Id+\Id)=\Id$.
+
+\emph{(iii)} The construction takes place in $\mathrm{End}(\Bsa)$, and every
+term in the binomial series is a real-linear endomorphism of $\Bsa$. Hence $R$,
+$\sgn(S)=SR$, and $P=\tfrac12(\Id+\sgn(S))$ all map $\Bsa$ to itself.
+
+\emph{(iv)} Writing $u=\Id-S^2$ with $\norm{u}\le 4\eta$ from
+\eqref{eq:S2-bound}, the binomial series gives
+$R=\sum_{n\ge 0}\binom{-1/2}{n}(-u)^n$, so
+\[
+  \norm{R-\Id}
+  \le\sum_{n\ge 1}\Bigl|\tbinom{-1/2}{n}\Bigr|\,\norm{u}^n
+  \le\frac{\norm{u}/2}{1-\norm{u}}
+  \le\frac{2\eta}{1-4\eta}.
+\]
+Choosing $\eta_0\le\tfrac18$ gives $\norm{R-\Id}\le4\eta\le C\eta$. Here the
+coefficients satisfy $|\binom{-1/2}{n}|\le\tfrac12$ for $n\ge1$, so the tail is
+dominated by the geometric series $\tfrac12\sum_{n\ge1}\norm{u}^n$.
+
+\emph{(v)} Since $P-\Phimap=\tfrac12(\sgn(S)-S)=\tfrac12 S(R-\Id)$,
+\[
+  \delta=\norm{P-\Phimap}=\tfrac12\norm{S(R-\Id)}
+   \le\tfrac12\norm{S}\,\norm{R-\Id}\le\tfrac32\, C\eta\le C\eta,
+\]
+using $\norm{S}\le 3$ and \emph{(iv)}.
+
+\emph{(vi)} By the triangle inequality and \emph{(v)},
+$\norm{P}\le\norm{\Phimap}+\delta\le 1+C\eta$.
+
+\emph{(vii)} Let $a\ge 0$. Then $\Phimap(a)\ge 0$ because $\Phimap$ is
+positive, and $\norm{P(a)-\Phimap(a)}\le\delta\norm{a}$ by \emph{(v)}. For
+self-adjoint elements, $\norm{x-y}\le\beta$ forces $x\ge y-\beta\Id$; applied
+with $x=P(a)$, $y=\Phimap(a)\ge0$, and $\beta=\delta\norm{a}$, this yields
+$P(a)\ge\Phimap(a)-\delta\norm{a}\,\Id\ge-\delta\norm{a}\,\Id$. \qedhere
+\end{proof}
+
+\begin{remark}[Kitaev comparison]\label{rem:kitaev-spectral-comparison}
+\status{(cited; proved adaptation)}
+The same operator was introduced by Kitaev for unital completely positive
+maps, using the completely bounded norm $\norm{\cdot}_{\mathrm{cb}}$ in place
+of the operator norm in \eqref{eq:eta-hypothesis}; the algebraic identities
+\emph{(i)}--\emph{(ii)} and the bounds \emph{(iv)}--\emph{(vi)} are
+norm-independent, so they hold verbatim here \cite[Prop.~P]{Kitaev2024}. The
+operator-norm hypothesis used above is what \Cref{lem:P-properties}
+\emph{(vii)} requires, and it is all that the bridge of the following sections
+needs.
+\end{remark}
+
+By \Cref{lem:P-properties}, $P$ is an idempotent, unital real-linear operator
+on $\Bsa$ with $\delta=\norm{P-\Phimap}\le C\eta$. Its range
+$A=\Img P=\Ker(\Id-P)$ is a real subspace of $\Bsa$ containing $\Id$, and the
+\emph{projected Jordan product}
+\begin{equation}\label{eq:projected-product}
+  a\bullet b:=P(a\jp b),\qquad a,b\in A,
+\end{equation}
+will be analysed in \Cref{sec:epsjb}.
+
+\smallskip\noindent\textbf{Agent B review correction.}
+This section works on the real self-adjoint space $\Bsa$. The previous
+``$\dagger$-preserving'' formulation was inherited from the complex
+$B(\HH)$ statement in Kitaev and was stronger than the domain used here; the
+bridge proof only needs preservation of $\Bsa$.

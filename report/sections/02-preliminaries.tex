@@ -1,0 +1,112 @@
+\section{Preliminaries}\label{sec:prelim}
+
+This section fixes the analytic setting. Everything is finite-dimensional; the
+only norm is the operator norm, and the only positivity used is positivity of
+maps (never complete positivity).
+
+% PROV: Idel2013 md:333 -- self-adjoint part and positive semidefinite order for matrices. HancheOlsenStormer1984 joa-m.md:374 -- states on an order-unit space are positive functionals rho with rho(e)=1.
+\begin{definition}[Operators, self-adjoint part, states]\label{def:operators}
+\status{(cited)}
+Let $\HH$ be a finite-dimensional complex Hilbert space and $B(\HH)$ the algebra
+of linear operators on $\HH$, with the operator norm
+$\norm{x}=\sup_{\norm{\xi}\le 1}\norm{x\xi}$. The \emph{self-adjoint part} is
+$\Bsa=\{x\in B(\HH):x=x^*\}$, a real vector space. For $a\in\Bsa$ we write
+$a\ge 0$ if every eigenvalue of $a$ is nonnegative; this induces the partial
+order $a\ge b\iff a-b\ge 0$, with unit $\Id$ the identity operator. A
+\emph{state} is a linear functional $\omega:B(\HH)\to\C$ that is positive
+($\omega(a)\ge 0$ for $a\ge 0$) and unital ($\omega(\Id)=1$).
+\end{definition}
+
+% PROV: Idel2013 md:347-348 -- "positive if for all A>=0, T(A)>=0"; "unital if T(1)=1". The order-unit norm contraction is proved inline from the order interval.
+\begin{definition}[Positive, unital, and positive unital maps]\label{def:positive-map}
+\status{(cited)}
+A linear map $\Phimap:B(\HH)\to B(\HH)$ is \emph{positive} if $\Phimap(a)\ge 0$
+whenever $a\ge 0$; a positive map is automatically self-adjointness-preserving,
+$\Phimap(a^*)=\Phimap(a)^*$, so it restricts to a real-linear map
+$\Phimap:\Bsa\to\Bsa$. It is \emph{unital} if $\Phimap(\Id)=\Id$. A
+\emph{positive unital map} is a contraction on the self-adjoint part: for
+$a\in\Bsa$ one has $-\norm a\,\Id\le a\le\norm a\,\Id$, hence
+$-\norm a\,\Id\le\Phimap(a)\le\norm a\,\Id$ by positivity and unitality, so
+$\norm{\Phimap(a)}\le\norm a$; with $\Phimap(\Id)=\Id$ this gives
+$\norm{\Phimap}=1$ on $\Bsa$.
+\end{definition}
+
+The order structure of $\Bsa$ is what survives when the associative product is
+dropped; it is captured abstractly by the notion of an order-unit space.
+
+% PROV: HancheOlsenStormer1984 joa-m.md:366-372 (1.2.1) -- order unit, Archimedean, order norm
+\begin{definition}[Order-unit space and order-unit norm]\label{def:order-unit}
+\status{(cited)}
+A real vector space $A$ with a proper convex cone $A^{+}$ (giving
+$a\ge b\iff a-b\in A^{+}$) and a distinguished element $e\in A^{+}$ is an
+\emph{order-unit space} if (i) $e$ is an \emph{order unit}: for each $a\in A$
+there is $\lambda>0$ with $-\lambda e\le a\le\lambda e$, and (ii) $A$ is
+\emph{Archimedean}: $na\le e$ for all $n\in\mathbb N$ implies $a\le 0$. The
+\emph{order-unit norm} is
+\[
+  \norm a=\inf\{t>0:\ -t\,e\le a\le t\,e\}.
+\]
+With $e=\Id$ and cone $A^{+}=\{a\in\Bsa:a\ge 0\}$, the self-adjoint part $\Bsa$
+is an order-unit space, and its order-unit norm coincides with the operator norm.
+\end{definition}
+
+\begin{remark}\label{rem:order-unit-justification}
+\status{(proved)}
+That $\Bsa$ is an order-unit space is immediate from
+\Cref{def:order-unit}: for self-adjoint $a$, the spectral bound
+$-\norm a\,\Id\le a\le\norm a\,\Id$ shows $\Id$ is an order unit and that the
+order-unit norm equals the spectral-radius (operator) norm; the Archimedean
+property holds because $\Bsa$ is finite-dimensional. In the channel setting of
+this report the order-unit structure of the relevant subspace is inherited
+\emph{exactly} from $\Bsa$; only the product will be approximate.
+\end{remark}
+
+The single positivity inequality available for merely positive unital maps is
+Kadison's, with its symmetrized strengthening due to St{\o}rmer.
+
+% PROV: Kadison1952 -- Kadison's inequality Phi(a)^2 <= Phi(a^2) for self-adjoint a, unital positive Phi
+% (also stated verbatim in report intro 01-introduction.tex; cited there to Kadison1952)
+\begin{proposition}[Kadison and Jordan--Schwarz inequalities]\label{prop:kadison-js}
+\status{(cited)}
+Let $\Phimap:B(\HH)\to B(\HH)$ be a positive unital map.
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \emph{(Kadison~\cite{Kadison1952})} For every self-adjoint $a\in\Bsa$,
+        \[
+          \Phimap(a)^2\ \le\ \Phimap(a^2).
+        \]
+  \item \emph{(Jordan--Schwarz, St{\o}rmer~\cite{Stormer1965,vanLuijkWilming2026})}
+        For every $a\in B(\HH)$, writing $\jp$ for the Jordan product
+        $x\jp y=\tfrac12(xy+yx)$,
+        \[
+          \Phimap(a^*)\jp\Phimap(a)\ \le\ \Phimap(a^*\jp a).
+        \]
+\end{enumerate}
+Part (i) is the case $a=a^*$ of part (ii). A merely positive unital map need not
+satisfy the Schwarz inequality $\Phimap(a)^*\Phimap(a)\le\Phimap(a^*a)$, which
+requires $2$-positivity.
+\end{proposition}
+
+% PROV: ORIGINAL agent-a-findings:20,191 -- cb-norm/complete positivity used only in tensor extension; no cb-norm here
+\begin{remark}[Operator norm in place of the cb-norm]\label{rem:cb-norm}
+\status{(proved)} \emph{(framing; original to this report)}
+Kitaev~\cite{Kitaev2024} measures non-idempotence in the completely bounded
+norm, $\norm{\Phimap^2-\Phimap}_{\mathrm{cb}}\le\eta$, which presupposes that the
+relevant maps are completely bounded. We instead use the operator norm of the
+map on $\Bsa$, $\norm{\Phimap^2-\Phimap}\le\eta$. The reason is structural:
+mere positivity is not stable under matrix amplification:
+$\mathrm{id}_n\otimes\Phimap$ need not be positive. In finite dimension every
+linear map is bounded (and completely bounded once an operator-space structure
+is fixed), so the obstruction is not existence of a cb-norm; it is that the
+cb/tensor norm is not the order-norm control supplied by positivity alone.
+The cb-norm and complete positivity enter Kitaev's argument only through the
+dilation/tensor machinery (Stinespring, Choi); the operator-norm formulation
+keeps every estimate intrinsic to $\Bsa$ and dilation-free, at the cost of the
+weaker exponent recorded in the bridge theorem (\Cref{sec:bridge}). Throughout,
+the spectral idempotent is denoted $P$ and the projected Jordan product is
+written $a\bullet b:=P(a\jp b)$.
+
+\smallskip\noindent\textbf{Agent B review correction.}
+The earlier draft said that a positive map need not be completely bounded. In
+the finite-dimensional setting of this report that sentence is false; the
+correct issue is failure of positivity under amplification.
+\end{remark}
