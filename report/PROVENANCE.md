@@ -1,6 +1,6 @@
 # PROVENANCE — report audit ledger
 
-**Policy.** Every Definition and Theorem in the report (`sections/*.tex`), and every labelled Lemma/Proposition/Remark that carries a status flag, must have an entry here. An entry records: (1) the report label; (2) the ground-truth source file (path + SHA256, truncated to 16 hex); (3) the source quote or internal proof locus that the report statement is matched to; (4) any harmonisation (notation change) applied. "Provenanced" = the statement is a faithful transcription/derivation of quoted source text, with notation harmonised per the table below, or an internal project statement tied to a hashed proof/consensus file. Results that are *original to this project* (no external source) are marked `ORIGINAL` and point to the internal working file that proves or motivates them.
+**Policy.** Every Definition and Theorem in the report (`sections/*.tex`), and every labelled Lemma/Proposition/Remark that carries a status flag, must have an entry here. An entry records: (1) the report label; (2) the ground-truth source file (path + SHA256, truncated to 16 hex); (3) the source locus or internal proof locus that the report statement is matched to; (4) any harmonisation (notation change) applied. "Provenanced" = the statement is a faithful transcription/derivation of registered source material, with notation harmonised per the table below, or an internal project statement tied to a hashed proof/consensus file. Results that are *original to this project* (no external source) are marked `ORIGINAL` and point to the internal working file that proves or motivates them.
 
 Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 
@@ -35,21 +35,21 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 
 ## Per-claim ledger
 
-Status column: **V** = quote byte-verified against the registered local source (grep -F or direct line inspection, line shown); **I** = inline-provenanced (source+location recorded in the section's `% PROV:` comment), awaiting independent byte-check; **O** = ORIGINAL/internal project result tied to a hashed internal file; **OPEN** = project target/conjectural programme statement, not a proved theorem; **EXTRACT** = supported by a hashed local extraction file but not yet independently byte-matched against primary text; **PDF** = source is a PDF not yet text-verified. Each section file also carries the full `% PROV:` comment above the statement where practical.
+Status column: **V** = statement byte-verified against the registered local source by fixed-string search or direct line inspection; **I** = inline-provenanced (source+location recorded in the section's `% PROV:` comment), awaiting independent byte-check; **O** = ORIGINAL/internal project result tied to a hashed internal file; **OPEN** = project target/conjectural programme statement, not a proved theorem; **EXTRACT** = supported by a hashed local extraction file but not yet independently byte-matched against primary text; **PDF** = source is a PDF not yet text-verified. Each section file also carries the full `% PROV:` comment above the statement where practical.
 
 | Report label | Source | Loc. | Status | Note |
 |---|---|---|---|---|
 | def:operators | IDEL / HOS | IDEL 333; HOS 374 | **V** | IDEL L333 self-adjoint positive semidefinite order; HOS L374 positive functionals with $\rho(e)=1$ form the state space |
-| def:positive-map | IDEL | 347–348 | **V** | IDEL L347 "positive, if for all $A\ge0$, $T(A)\ge0$"; L348 "unital, if T(1)=1"; order-unit norm contraction is proved inline |
+| def:positive-map | IDEL | 347–348 | **V** | IDEL L347--348 define positive and unital maps; order-unit norm contraction is proved inline |
 | def:order-unit | HOS | 366–372 (§1.2.1) | **V** | HOS L366–372 order unit + Archimedean + order-unit norm; specialised to $e=\Id$ on $\Bsa$ |
 | rem:order-unit-justification | HOS / elementary | HOS 366–372; spectral theorem | O | elementary verification that $\Bsa$ with unit $\Id$ satisfies the order-unit definition and that the order-unit norm is the operator norm |
-| prop:kadison-js | Kadison1952 / VLW | VLW 555–560 (lem:JS-inequality) | **V** | VLW L555 "they fulfill the Jordan-Schwarz inequality"; Kadison $\Phi(a)^2\le\Phi(a^2)$ the self-adjoint case |
+| prop:kadison-js | Kadison1952 / VLW | VLW 555–560 (lem:JS-inequality) | **V** | VLW L555--560 record Jordan-Schwarz; Kadison $\Phi(a)^2\le\Phi(a^2)$ is the self-adjoint case |
 | rem:cb-norm | ORIGINAL | agent-a-findings:20,191; Agent B correction in §2 | O | framing: positivity is not stable under amplification; in finite dimension the issue is not lack of cb-boundedness |
-| def:jordan-algebra | HOS | 812 (eq 2.17); 963–967 (2.4.1) | **V** | HOS L963 "is called a *Jordan algebra* if…"; eqs 2.29 (comm.) + 2.30 (Jordan id.) |
+| def:jordan-algebra | HOS | 812 (eq 2.17); 963–967 (2.4.1) | **V** | HOS L963--967 define Jordan algebra by commutativity and the Jordan identity |
 | rem:jordan-identity-form | HOS | 965–967 (eq 2.30) | **V** | (2.30) $a\jp(b\jp a^2)=(a\jp b)\jp a^2$ = JB4 form via commutativity |
 | prop:power-associative | HOS | 1013–1025 (2.4.4–2.4.5) | **V** | HOS L1013 one-generator subalgebra associative; L1015–1017 Lemma 2.4.5 with $a^{m+n}=a^m\jp a^n$ |
-| def:jb-algebra | HOS | 2308–2316 (3.1.3–3.1.4) | **V** | HOS L2314 "A JB algebra is a Jordan Banach algebra A in which the norm satisfies…"; L2316 "(ii) $\lVert a^2\rVert\le\lVert a^2+b^2\rVert$" |
-| thm:jnw-classification | HOS / JvNW1934 | 2254 (2.9.6), 2264, 2270, 2293 | **V** | HOS L2254 includes the $n=1$ case $A=\mathbb R$, the $n\ge3$ matrix/Albert cases, and direct-sum decomposition; L2264 gives spin factors |
+| def:jb-algebra | HOS | 2308–2316 (3.1.3–3.1.4) | **V** | HOS L2308--2316 define Jordan Banach algebra and the two JB norm axioms |
+| thm:jnw-classification | HOS / JvNW1934 | 2254 (2.9.6), 2264, 2270, 2293 | **V** | HOS L2254 gives direct-sum decomposition plus the $n=1$ and $n\ge3$ cases; L2264 gives spin factors |
 | rem:exceptional | HOS | 2254, 1856 (2.8.5), 2306 | **V** | spin factors (2.9.7); $H_3(\mathbb O)$ exceptional (2.8.5), not a JC algebra (L2306) |
 | def:spectral-idempotent | KIT | 2171–2182 (tilde_Phi); 524–533 | **V** | KIT L2171–2182 gives $\widetilde\Phi=\theta(2\Phi-1)$, idempotence, unit, closeness, and dagger preservation in the complex setting; report restricts to $\Bsa$ |
 | lem:P-properties | BRIDGE (cites KIT) | bridge md:63–119 | O | worked bounds ($\lVert R-\Id\rVert\le C\eta$, $\delta$-positivity); construction cited Kitaev2024 |
@@ -65,8 +65,8 @@ Status column: **V** = quote byte-verified against the registered local source (
 | lem:bridge-polar | BRIDGE | bridge md:374–451 | O | polarized holes: (HH) two-hole $O(\eta)$, (HZ) one-hole $O(\sqrt\eta)$ |
 | lem:bridge-onehole | BRIDGE | bridge md:453–487 | O | one-hole contexts (5.1),(5.2) |
 | prop:bridge-jordan | BRIDGE | bridge md:489–597 | O | Jordan-identity assembly (L),(R), exact ambient identity, $O(\sqrt\eta)$ bound |
-| thm:jordan-structure | KIT (model) / ORIGINAL | KIT 460–462; A-FIND §11 | OPEN | open Jordan analogue; KIT L461 is the verified model statement, harmonized in report prose rather than quoted byte-verbatim |
-| thm:whitehead | CHU / A-INGEST | A-INGEST "jordan-stability-cohomology" | EXTRACT / PDF | $H^1{=}H^2{=}0$ (Whitehead lemmas); CHU primary is local PDF, but report quote currently comes through hashed extraction |
+| thm:jordan-structure | KIT (model) / ORIGINAL | KIT 460–462; A-FIND §11 | OPEN | open Jordan analogue; KIT L461 is the verified model statement, harmonized in report prose |
+| thm:whitehead | CHU / A-INGEST | A-INGEST "jordan-stability-cohomology" | EXTRACT / PDF | $H^1{=}H^2{=}0$ (Whitehead lemmas); CHU primary is local PDF, but report statement currently comes through hashed extraction |
 | prop:aut-compact | A-INGEST | "Aut(J) is compact" extraction block | EXTRACT | $\Aut(J)$ compact for Euclidean $J$; Faraut--Koranyi primary text not locally extracted in this repo |
 | prop:error-reduction | ORIGINAL / OPEN | A-ER §3; Agent B correction in §7 | OPEN | candidate group-averaged separability idempotent; order-unit-norm dimension-free homotopy remains open |
 | rem:exponent | ORIGINAL / KIT | A-FIND §9–10; KIT 2643–2673; Agent B correction in §8 | O | $\sqrt\eta$ general; $\eta$ in UCP/cb or compatible dilation settings; decomposable case open |
@@ -75,4 +75,4 @@ Status column: **V** = quote byte-verified against the registered local source (
 | rem:rounding | ORIGINAL | B-ROUND §§2–4 | O | generic $O(\eps)$ positivity-rounding FALSE (spin-factor counterexample) |
 | rem:vlw | VLW | 1517–1524 (thm:luczak); 235–247 | **V** | VLW L1521–1524 minimal PTP-sufficient operator system is the fixed-point intersection; L236–245 Neyman--Pearson tests generate the minimal sufficient J*-algebra |
 
-**Verification log.** The **V**-marked quotes were confirmed against the registered local sources by direct line inspection or fixed-string search. Agent B's 2026-06-02 review corrected the ES registry to point to the OCR page files actually used, added HOS state-functional provenance, removed a misleading VLW contraction source, and downgraded Whitehead/compactness to extraction-level provenance until primary text extraction is independently checked.
+**Verification log.** The **V**-marked statements were confirmed against the registered local sources by direct line inspection or fixed-string search. Agent B's 2026-06-02 review corrected the ES registry to point to the OCR page files actually used, added HOS state-functional provenance, removed a misleading VLW contraction source, and downgraded Whitehead/compactness to extraction-level provenance until primary text extraction is independently checked.

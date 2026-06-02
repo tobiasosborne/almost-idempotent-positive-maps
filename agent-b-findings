@@ -813,3 +813,8 @@ created a root `.gitignore` excluding copied third-party/reference material:
 Python caches, and non-report PDFs are also ignored. The intended public commit
 keeps the original project notes, experiments, report sources, and
 `report/main.pdf`, while leaving local copyrighted reference corpora untracked.
+
+Follow-up sanitation before the public push completion: long verbatim provenance
+snippets in report comments/prose were replaced by source-locus references while
+preserving hashes, line references, and byte-check status. The report was rebuilt
+successfully afterward.
