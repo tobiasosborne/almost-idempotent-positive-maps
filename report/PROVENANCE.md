@@ -18,11 +18,13 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ES-P06` | `agent-B/references/effros-stormer-1979/ocr-pages/page-06.txt` | `687a8024feb5ceac` | Effros & Størmer OCR page 132. Corollaries 1.5--1.6 locus. |
 | `CHU` | `agent-A/refs/lit/chu-russo-1512.03347.pdf` | `8597dc5556996e83` | Chu & Russo, *Cohomology of Jordan triples and Lie algebras* (arXiv:1512.03347). Whitehead lemmas / Jordan cohomology. |
 | `BRIDGE` | `agent-B/theory/theorem-B-algebraic-bridge.md` | `e2f6d7dc1f85ea50` | INTERNAL. Agent B's proof of the Layer-2 bridge theorem; verified line-by-line by Agent A (agent-a-findings v0.5 §10). Source for §6 derivation. |
-| `A-FIND` | `agent-a-findings` | `42674f8c12e0eab1` | INTERNAL. Agent A consensus/status file. |
+| `A-FIND` | `agent-a-findings` | `a4111b11e0707d97` | INTERNAL. Agent A consensus/status file (through v0.11; §16–§17 cover the faithful-invariant-state sidequest). |
 | `A-INGEST` | `agent-A/notes/ingestion-results-2026-06-01.json` | `972bba533931fd3d` | INTERNAL EXTRACTION. Agent A local extraction of Kitaev/VLW and Jordan-background literature. |
 | `A-ER` | `agent-A/theory/01-error-reduction.md` | `facf15f4bee20cc5` | INTERNAL. Agent A error-reduction programme note. |
 | `A-JCOB` | `agent-A/experiments/jordan-coboundary/REPORT.md` | `7c456f26a8787be0` | INTERNAL. Agent A numerical Jordan-coboundary report. |
 | `B-ROUND` | `agent-B/notes/factorization-positivity-rounding.md` | `42c922ebef1d7516` | INTERNAL. Agent B positivity-rounding obstruction note. |
+| `A-FIT` | `agent-A/experiments/faithful-invariant-transfer/REPORT.md` | `d1fedfe04ee973f6` | INTERNAL. Agent A faithful-invariant-state transfer report: exact statement, $O(\eta/\lambda)$ bound, numerics (`hole_scaling.py`, `crossover.py`). Source for §\ref{sec:faithful}. |
+| `B-FIT` | `agent-B/notes/faithful-invariant-ambient-product-sidequest.md` | `1fc34fa7d72f8100` | INTERNAL. Agent B faithful-invariant-state sidequest note: the $T_a$ counterexample and the conditional $O(\eta/\mu)$ bound (B's $\mu$ = $\lambda$). |
 
 ## Notation harmonisation (source → report)
 
@@ -70,6 +72,11 @@ Status column: **V** = statement byte-verified against the registered local sour
 | prop:aut-compact | A-INGEST | "Aut(J) is compact" extraction block | EXTRACT | $\Aut(J)$ compact for Euclidean $J$; Faraut--Koranyi primary text not locally extracted in this repo |
 | prop:error-reduction | ORIGINAL / OPEN | A-ER §3; Agent B correction in §7 | OPEN | candidate group-averaged separability idempotent; order-unit-norm dimension-free homotopy remains open |
 | rem:exponent | ORIGINAL / KIT | A-FIND §9–10; KIT 2643–2673; Agent B correction in §8 | O | $\sqrt\eta$ general; $\eta$ in UCP/cb or compatible dilation settings; decomposable case open |
+| prop:faithful-exact | VLW / A-FIT | VLW 600–610 (`prop:fixpoint`); A-FIT §1 | O | faithful invariant state $\Rightarrow$ fixed-point/range space lies in the multiplicative domain and is closed under ambient $\jp$; report gives the self-adjoint Kadison proof |
+| ex:no-faithful | A-FIT | A-FIT §1 (8/9 witness) | O | exact positive idempotent $P_0$ without faithful invariant state; ambient hole $8/9$; hand- and numerically verified |
+| thm:faithful-approx | A-FIT / BRIDGE | A-FIT §2; reuses lem:bridge-squarehole | O | $\norm{h_{a,b}}\le C(\eta/\lambda)\norm a\norm b$; quantifies prop:faithful-exact via square-hole positivity + faithfulness operator-norm upgrade; independently re-derived by Agent B (B-FIT) |
+| prop:faithful-counterexample | B-FIT / A-FIT | B-FIT ($T_a$ family); A-FIT §3 (independent verification) | O | faithful $\forall a>0$, $\eta_a\to0$, ambient hole $\to2/9$; $\lambda=a/3=\Theta(\eta)$; projector $P_a$ matches Riesz projector to machine precision |
+| rem:faithful-scope | A-FIT / A-FIND | A-FIT §4; A-FIND §16–§17 (overclaim/withdrawal) | O | conditional $\lambda=\Omega(1)\Rightarrow O(\eta)$ defect; narrow, dimension-dependent; A overclaimed (v0.10), withdrew after B's counterexample (v0.11) |
 | thm:effros-stormer | ES-P05 / ES-P06 / ES-P02 | P05 L9–16; P06 L42–44; P02 L33–38 | **V** | positive unital projection $\Rightarrow$ $P(A)$ a JC-algebra under $P(r\jp s)$; fixed-point JW corollary; Lemma 1.1 proof input |
 | rem:bridge-exact | ES-P05 / ES-P06 | P05 L9–16; P06 L42–44 | **V** | exact $\eta=0$ positive-projection endpoint underlying the bridge theorem |
 | rem:rounding | ORIGINAL | B-ROUND §§2–4 | O | generic $O(\eps)$ positivity-rounding FALSE (spin-factor counterexample) |

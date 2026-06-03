@@ -1,6 +1,100 @@
 # Agent B Findings
 
-Last updated: 2026-06-02.
+Last updated: 2026-06-03.
+
+## Latest Update: Report Review Of Faithful-Invariant Section
+
+I reviewed Agent A's new report section
+`report/sections/06b-faithful-invariant.tex` and patched several rigor issues.
+
+Corrections made:
+
+- Replaced the attribution "exact Effros-Stormer theory" with the sharper
+  statement's actual mechanism: faithful fixed-point/multiplicative-domain
+  theory, matching VLW `prop:fixpoint` lines 600--610. Effros-Stormer remains
+  the projected-product theorem, not the source of the ambient-product
+  faithful-state result.
+- Corrected the nonfaithful exact example. For
+  `P0=[[1,0,0],[0,1,0],[1/3,2/3,0]]`, the invariant states are the whole face
+  `(t,1-t,0)`, not only `(1,0,0)`. The conclusion is unchanged: none is
+  faithful because state `3` has zero mass.
+- Expanded the final polarization step in the `O(eta/lambda)` proof. The
+  unscaled identity only gives a quadratic bound; the proof needs the scaled
+  formula
+  `h(a,b)=(4t)^(-1)(h(a+tb,a+tb)-h(a-tb,a-tb))` and optimization in `t` to get
+  the product estimate `||h(a,b)|| <= C eta/lambda ||a|| ||b||`.
+- Restricted the closed-form counterexample to `a in (0,1/2)`, so the spectral
+  idempotent `theta(2T_a-I)` indeed includes both eigenvalues `1` and `1-a`.
+- Removed the speculative suggestion that `lambda=Omega(1)` is the quantitative
+  shadow of the VLW faithful-state hypothesis. VLW faithfulness is qualitative
+  and gives no dimension-free lower bound.
+
+After these fixes I agree with the section's mathematical content: bare
+faithful invariant state does not transfer to ambient product closure; the
+valid quantitative statement is the conditioned bound
+`||a o b-P(a o b)|| <= C eta/lambda ||a||||b||`.
+
+## Latest Update: Faithful Invariant State Sidequest
+
+I added
+`agent-B/notes/faithful-invariant-ambient-product-sidequest.md`.
+
+Verdict: the colleague's exact theorem does **not** transfer to the
+approximate setting in the uniform operator-norm sense needed here. The exact
+proof uses a faithful invariant state qualitatively: a positive
+Jordan-Schwarz defect has expectation zero, hence vanishes. Quantitatively,
+small expectation under a faithful state does not control operator norm unless
+the state has a lower spectral bound.
+
+The note gives an explicit commutative `3 x 3` counterexample. Let
+
+```text
+P0 = [ 1    0    0
+       0    1    0
+       1/3  2/3  0 ],
+J  = all-ones/3,
+T_a=(1-a)P0+aJ.
+```
+
+Then `T_a` is strictly positive row-stochastic, has faithful stationary state
+
+```text
+pi_a=(4/9-a/9, 5/9-2a/9, a/3),
+```
+
+and
+
+```text
+eta_a=||T_a^2-T_a||_{infty->infty}=10a(1-a)/9 -> 0.
+```
+
+Its spectral idempotent onto the two eigenvalues near `1` is
+
+```text
+P_a=((2-a)T_a-T_a^2)/(1-a).
+```
+
+For `r=(1,0,1/3)`, one has `P_a r=r`, but
+
+```text
+||(I-P_a)(r^2)||_infty = 2/9-2a/27 -> 2/9.
+```
+
+Thus the spectral near-fixed-point range is not approximately closed under the
+ambient product, despite exact faithful invariance and `eta_a -> 0`. Embedding
+by `Phi_a(X)=diag(T_a diag X)` gives the same counterexample on `L(C^3)`.
+
+There is a conditional positive statement: if the invariant state has density
+`rho >= mu I`, then the exact proof quantifies to
+
+```text
+||a o b - P(a o b)|| <= C (eta/mu) ||a|| ||b||,     a,b in Ran P.
+```
+
+This is state-conditioned, not dimension-free; in the example `mu=a/3`, so
+`eta/mu=Theta(1)`. Conclusion for the project: the projected product
+`P(x o y)` is still necessary under the baseline hypotheses. Faithful
+invariant state alone does not permit replacing it by the ambient product.
 
 ## Latest Update: Stochastic And Stoquastic Cases
 

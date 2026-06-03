@@ -1,0 +1,205 @@
+\section{Faithful invariant states and the ambient product}\label{sec:faithful}
+
+The bridge of \Cref{sec:bridge} makes $A=\Img P$ an approximate Jordan algebra
+under the \emph{projected} product $a\bullet b=P(a\jp b)$. The exact
+fixed-point theory has a sharper companion: when the positive projection admits
+a \emph{faithful invariant state}, its range is already closed under the
+\emph{ambient} Jordan product $\jp$ of $\Bsa$, so that $\bullet$ and $\jp$
+coincide on the range and no projection is needed. This is the
+multiplicative-domain mechanism used in the faithful fixed-point results of
+van Luijk--Wilming. This section asks whether that sharper, ambient-product
+statement survives to the almost-idempotent setting. The answer is instructive
+and was sharpened in adversarial exchange between the two authors: \textbf{the
+transfer is governed by the quantitative conditioning of the invariant state,
+and the bare hypothesis ``admits a faithful invariant state'' is not
+sufficient.}
+
+Throughout, $\Phimap\colon\Bsa\to\Bsa$ is unital and positive,
+$\norm{\Phimap^2-\Phimap}\le\eta\le\eta_0$, $P=\theta(2\Phimap-\Id)$,
+$A=\Img P$, and for $a,b\in A$ we keep the bridge's holes
+\[
+  q_a=P(a^2)-a^2\in\Ker P,\qquad
+  h_{a,b}=a\jp b-P(a\jp b)=-q_{a,b}\in\Ker P .
+\]
+A state $\omega$ on $B(\HH)$ has a density $\rho_\omega$ with
+$\omega(x)=\Tr(\rho_\omega x)$; it is \emph{faithful} iff $\rho_\omega>0$, and we
+write $\lambda_\omega=\lambda_{\min}(\rho_\omega)>0$ for its least eigenvalue
+(its \emph{conditioning}).
+
+\subsection*{The exact statement}
+
+% PROV: VLW L600-L610 (prop:fixpoint) plus A-FIT §1; standard consequence of Kadison/Jordan-Schwarz + faithfulness. Jordan analogue of: a positive unital idempotent with faithful invariant state is a Jordan conditional expectation onto an ambient Jordan subalgebra.
+\begin{proposition}[Faithful invariance forces the ambient product]
+\label{prop:faithful-exact}
+\status{(proved)}
+Let $P\colon\Bsa\to\Bsa$ be a unital positive idempotent ($P^2=P$) admitting a
+faithful state $\omega$ with $\omega\circ P=\omega$. Then $A=\Img P$ is closed
+under the ambient Jordan product: $P(a\jp b)=a\jp b$ for all $a,b\in A$. Thus
+$\bullet$ and $\jp$ agree on $A$, and $A$ is a unital Jordan subalgebra of
+$(\Bsa,\jp)$.
+\end{proposition}
+
+\begin{proof}
+For $a\in A$ we have $P(a)=a$, so Kadison's inequality (the self-adjoint
+Jordan--Schwarz case, \Cref{sec:prelim}) gives $P(a)^2\le P(a^2)$, i.e.
+$q_a=P(a^2)-a^2\ge0$. Invariance gives
+$\omega(q_a)=\omega(P(a^2))-\omega(a^2)=\omega(a^2)-\omega(a^2)=0$. A faithful
+state is faithful on the positive cone (if $x\ge0$ and $\omega(x)=0$ then
+$\rho_\omega^{1/2}x\rho_\omega^{1/2}\ge0$ has trace $0$, so $x=0$); hence
+$q_a=0$, i.e. $a^2\in A$. Polarising,
+$a\jp b=\tfrac12\big((a+b)^2-a^2-b^2\big)\in A$, so $P(a\jp b)=a\jp b$.
+\end{proof}
+
+The faithfulness hypothesis is essential, not cosmetic: it is precisely what
+collapses the projected product onto the ambient one. Without it, an exact
+positive idempotent need not have a Jordan-subalgebra range, which is why
+Effros--St{\o}rmer must use $\bullet$ (\Cref{thm:effros-stormer}).
+
+% PROV: ORIGINAL A-FIT §1 (8/9 witness), verified in agent-A/experiments/faithful-invariant-transfer/. Classical positive unital idempotent with non-faithful stationary state.
+\begin{example}[Failure without faithfulness]\label{ex:no-faithful}
+\status{(proved)}
+On $\R^3$ with the sup norm let $\Phimap$ act as the row-stochastic idempotent
+$P_0=\begin{psmallmatrix}1&0&0\\0&1&0\\ \tfrac13&\tfrac23&0\end{psmallmatrix}$
+(equivalently $\Phimap(X)=\mathrm{diag}(P_0\,\mathrm{diag}\,X)$ on $L(\C^3)$).
+Then $P_0$ is a genuine unital positive idempotent. Its invariant states are
+$(t,1-t,0)$, $0\le t\le1$, so none is faithful (state $3$ is transient). Its range is
+$\{v:v_3=\tfrac13(v_1+2v_2)\}$, and for $a=(-1,1,\tfrac13)\in\Img P_0$
+(with $\norm{a}_\infty=1$) one computes $a^2=(1,1,\tfrac19)$, $P_0(a^2)=(1,1,1)$,
+hence
+\[
+  q_a=P_0(a^2)-a^2=(0,0,\tfrac89),\qquad \norm{q_a}_\infty=\tfrac89 .
+\]
+The range is not closed under the ambient product; the hole is $\Theta(1)$.
+\end{example}
+
+\subsection*{The approximate transfer}
+
+The proof of \Cref{prop:faithful-exact} quantifies, reusing verbatim the
+square-hole estimate of the bridge (\Cref{lem:bridge-squarehole}). The role of
+faithfulness is to convert ``small expectation'' into ``small operator norm'',
+and this costs a factor $1/\lambda_\omega$.
+
+% PROV: ORIGINAL A-FIT §2; reuses lem:bridge-squarehole (BRIDGE) for q_a >= -C eta and the faithfulness upgrade ||x|| <= omega(x)/lambda for x>=0. Independently re-derived by Agent B (B-FIT), identical bound (B's mu = lambda).
+\begin{theorem}[Approximate ambient closure under a conditioned invariant state]
+\label{thm:faithful-approx}
+\status{(proved)}
+There are universal constants $\eta_0>0$, $C$ such that the following holds. Let
+$\Phimap$ be unital positive with $\norm{\Phimap^2-\Phimap}\le\eta\le\eta_0$,
+$P=\theta(2\Phimap-\Id)$, $A=\Img P$, and suppose $\Phimap$ admits a faithful
+state $\omega$ with $\norm{\omega\circ\Phimap-\omega}\le\eta$ and density
+$\rho_\omega\ge\lambda\,\Id$, $\lambda>0$. Then for all $a,b\in A$,
+\begin{equation}\label{eq:faithful-bound}
+  \norm{a\jp b-P(a\jp b)}=\norm{h_{a,b}}\le C\,\frac{\eta}{\lambda}\,
+    \norm{a}\,\norm{b}.
+\end{equation}
+In particular $\bullet$ and $\jp$ agree on $A$ to within $O(\eta/\lambda)$.
+\end{theorem}
+
+\begin{proof}
+Fix $a\in A$ and split $q_a=q^+-q^-$ into orthogonal positive and negative
+parts. By \eqref{eq:bridge-q31} of \Cref{lem:bridge-squarehole},
+$q_a\ge-C\eta\norm{a}^2\Id$, so $0\le q^-\le C\eta\norm{a}^2\Id$ and hence
+$\norm{q^-}\le C\eta\norm{a}^2$. Since $\norm{P-\Phimap}\le C\eta$ and
+$\norm{\omega\circ\Phimap-\omega}\le\eta$,
+\[
+  \omega(q_a)=\omega(P(a^2))-\omega(a^2)
+   =\omega(a^2)-\omega(a^2)+O(\eta)\norm{a}^2,
+\]
+so $\lvert\omega(q_a)\rvert\le C\eta\norm{a}^2$, whence
+$\omega(q^+)=\omega(q_a)+\omega(q^-)\le C\eta\norm{a}^2$. Faithfulness upgrades
+this to an operator-norm bound: for $x\ge0$,
+$\omega(x)=\Tr(\rho_\omega x)\ge\lambda\Tr(x)\ge\lambda\norm{x}$, so applying
+this to $x=q^+$,
+\[
+  \norm{q^+}\le\frac{\omega(q^+)}{\lambda}\le C\,\frac{\eta}{\lambda}\,\norm{a}^2 .
+\]
+Therefore $\norm{q_a}=\max(\norm{q^+},\norm{q^-})\le C(\eta/\lambda)\norm{a}^2$
+(using $\lambda\le1$). Finally $(a,b)\mapsto h_{a,b}$ is a symmetric bilinear
+map with diagonal $h_{a,a}=-q_a$. For $t>0$,
+\[
+  h_{a,b}
+   =\frac{1}{4t}\big(h_{a+tb,a+tb}-h_{a-tb,a-tb}\big),
+\]
+so the diagonal estimate gives
+\[
+  \norm{h_{a,b}}
+  \le \frac{C\eta}{4t\lambda}
+       \big(\norm{a+tb}^2+\norm{a-tb}^2\big)
+  \le \frac{C\eta}{2t\lambda}
+       \big(\norm{a}^2+t^2\norm{b}^2\big).
+\]
+Choosing $t=\norm{a}/\norm{b}$ when $a,b\ne0$ (the zero cases being trivial)
+gives \eqref{eq:faithful-bound}.
+\end{proof}
+
+\subsection*{Bare existence is not enough}
+
+\Cref{thm:faithful-approx} is meaningful only when $\lambda$ is bounded below
+\emph{relative to} $\eta$: the bound is vacuous once $\lambda\lesssim\eta$. This
+is not an artefact of the proof. The colleague's question, taken literally
+(``$\Phimap$ admits a faithful invariant state'', with no quantitative modulus),
+has a negative answer, witnessed by a single explicit family in which every
+member is faithful yet the holes do not vanish.
+
+% PROV: ORIGINAL B-FIT (Agent B), verified independently by Agent A (A-FIT §3, agent-A/experiments/faithful-invariant-transfer/ re-run: B's closed-form projector matches the Riesz projector to 1e-15, P_a r = r, hole -> 2/9).
+\begin{proposition}[Faithful invariant state alone does not transfer]
+\label{prop:faithful-counterexample}
+\status{(proved)}
+Let $J=\tfrac13\mathbf{J}$ be the $3\times3$ all-ones-over-three matrix and
+$P_0$ as in \Cref{ex:no-faithful}. For $a\in(0,\tfrac12)$ set
+\[
+  T_a=(1-a)P_0+aJ,\qquad
+  \Phimap_a(X)=\mathrm{diag}\big(T_a\,\mathrm{diag}\,X\big)\ \text{on }L(\C^3).
+\]
+Each $T_a$ is strictly positive row-stochastic, hence $\Phimap_a$ is unital
+positive with a \emph{faithful} invariant state
+$\pi_a=\big(\tfrac49-\tfrac a9,\ \tfrac59-\tfrac{2a}9,\ \tfrac a3\big)$, and
+\[
+  \eta_a=\norm{T_a^2-T_a}=\tfrac{10}{9}a(1-a)\xrightarrow[a\to0]{}0 .
+\]
+Writing $P_a$ for the spectral idempotent onto the two eigenvalues $1$ and
+$1-a$ near $1$, one has
+$P_a r=r$ for $r=(1,0,\tfrac13)$ but
+\[
+  \norm{(\,\Id-P_a)(r^2)}_\infty=\tfrac29-\tfrac{2a}{27}\xrightarrow[a\to0]{}\tfrac29 .
+\]
+Thus the range carries an ambient-product hole bounded away from $0$, despite
+exact faithful invariance and $\eta_a\to0$. The conditioning degrades exactly in
+step: $\lambda=\pi_{a,3}=a/3=\Theta(\eta_a)$, so $\eta_a/\lambda\to10/3=\Theta(1)$
+and \eqref{eq:faithful-bound} is correctly vacuous.
+\end{proposition}
+
+\noindent
+The number $2/9$ and the projector identity $P_a=\big((2-a)T_a-T_a^2\big)/(1-a)$
+were verified numerically by both authors (matching the Riesz projector to
+machine precision). \Cref{prop:faithful-counterexample} settles the colleague's
+question: \emph{the projected Effros--St{\o}rmer product $P(x\jp y)$ remains
+necessary; the ambient product cannot replace it under the bare hypothesis.}
+
+\subsection*{What survives, and its scope}
+
+% PROV: ORIGINAL A-FIT §2 (corollary) + §4 caveat; consistency with rem:exponent and rem:vlw noted. Agent A initially overclaimed this as a general route to the eta exponent (A-FIND v0.10) and withdrew it after Agent B's counterexample (A-FIND v0.11); recorded here as a conditional special case only.
+\begin{remark}[Conditional upgrade, and why it is narrow]
+\label{rem:faithful-scope}
+\status{(proved, conditional)}
+If, in addition, the invariant state is \emph{well-conditioned} with a
+dimension-free floor $\lambda=\Omega(1)$, then \eqref{eq:faithful-bound} reads
+$\norm{a\jp b-P(a\jp b)}=O(\eta)\norm{a}\norm{b}$: the projected and ambient
+products agree to $O(\eta)$. Since the ambient $\jp$ satisfies the Jordan
+identity \emph{exactly}, substituting $\jp$ for $\bullet$ (finitely many $O(\eta)$
+replacements with bounded factors) shows the Jordan-identity defect
+\eqref{eq:bridge-jordan} is then $O(\eta)$ rather than $O(\sqrt\eta)$ --- the
+Kitaev-strength exponent of \Cref{rem:exponent}, here obtained from a
+\emph{variance} input (the faithful invariant state) rather than a dilation.
+
+This is a genuine but \emph{narrow} sufficient condition, not a general
+mechanism. The floor obeys $\lambda\le1/\dim\HH$ (with equality for the
+maximally mixed state, giving only $O(\eta\dim\HH)$), and \emph{nothing in the
+hypotheses bounds $\lambda$ away from $0$}: \Cref{prop:faithful-counterexample}
+exhibits a fixed-dimensional family, faithful throughout, with $\lambda\to0$.
+Hence this does not advance the exponent question for general positive maps,
+which remains as in \Cref{rem:exponent}. This quantitative floor should not be
+conflated with the qualitative faithful-state assumption in the
+van Luijk--Wilming fixed-point theory (\Cref{rem:vlw}); their finite-dimensional
+faithfulness hypothesis supplies no dimension-free lower bound on $\lambda$.
+\end{remark}
