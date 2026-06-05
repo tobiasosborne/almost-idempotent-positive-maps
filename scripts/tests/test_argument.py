@@ -84,5 +84,51 @@ with tempfile.TemporaryDirectory() as d:
     check("parse_registry splits defs", lemmas[0]["defs"] == ["def-a", "def-b"])
     check("parse_registry splits deps", lemmas[0]["deps"] == ["lem-y"])
 
+# --- --show: ancestor (transitive deps) / descendant (transitive dependents) closures ---
+g = [L("a", deps=[]), L("b", deps=["a"]), L("c", deps=["b"]), L("d", deps=["a"])]
+check("deps_closure(c) = {a,b}", ag.deps_closure(g, "c") == {"a", "b"})
+check("deps_closure(a) = {} (leaf)", ag.deps_closure(g, "a") == set())
+check("dependents_closure(a) = {b,c,d}", ag.dependents_closure(g, "a") == {"b", "c", "d"})
+check("dependents_closure(c) = {} (top)", ag.dependents_closure(g, "c") == set())
+check("deps_closure(unknown) -> None", ag.deps_closure(g, "zzz") is None)
+check("dependents_closure(unknown) -> None", ag.dependents_closure(g, "zzz") is None)
+# diamond: e depends on b,d ; b,d depend on a  -> ancestors of e = {a,b,d} (a counted once)
+dia = [L("a"), L("b", deps=["a"]), L("d", deps=["a"]), L("e", deps=["b", "d"])]
+check("diamond deps_closure(e) = {a,b,d}", ag.deps_closure(dia, "e") == {"a", "b", "d"})
+check("diamond dependents_closure(a) = {b,d,e}", ag.dependents_closure(dia, "a") == {"b", "d", "e"})
+# closures ignore dangling deps (linker catches those separately)
+dangle = [L("a", deps=["ghost"]), L("b", deps=["a"])]
+check("deps_closure ignores dangling dep", ag.deps_closure(dangle, "b") == {"a"})
+# format_show: names the node + has ancestors/descendants sections; unknown id reports error
+txt = ag.format_show(g, "b")
+check("format_show names the node", "b" in txt)
+check("format_show has ancestors section", "ancestors" in txt.lower())
+check("format_show has descendants section", "descendants" in txt.lower())
+check("format_show(unknown) reports error", "unknown" in ag.format_show(g, "zzz").lower())
+
+# depth-3+ chain + middle node (both directions nonempty & independent)
+ch5 = [L("a"), L("b", deps=["a"]), L("c", deps=["b"]), L("d", deps=["c"]), L("e", deps=["d"])]
+check("deep deps_closure(e) = {a,b,c,d}", ag.deps_closure(ch5, "e") == {"a", "b", "c", "d"})
+check("deep dependents_closure(a) = {b,c,d,e}", ag.dependents_closure(ch5, "a") == {"b", "c", "d", "e"})
+check("middle deps_closure(c) = {a,b}", ag.deps_closure(ch5, "c") == {"a", "b"})
+check("middle dependents_closure(c) = {d,e}", ag.dependents_closure(ch5, "c") == {"d", "e"})
+# self-consistency invariant: x in deps_closure(y)  <=>  y in dependents_closure(x)
+multi = [L("a"), L("b", deps=["a"]), L("c", deps=["a", "b"]), L("d", deps=["b", "c"])]
+mids = [l["id"] for l in multi]
+check("closure self-consistency (x anc-of y iff y desc-of x)",
+      all((x in ag.deps_closure(multi, y)) == (y in ag.dependents_closure(multi, x))
+          for x in mids for y in mids))
+# format_show CONTENT: direct edges must be distinct from the transitive closures
+def _val(txt, label):
+    ln = next((l for l in txt.splitlines() if l.startswith(label)), "")
+    return ln.split(":", 1)[1] if ":" in ln else ""
+fc = ag.format_show(ch5, "c")   # c: direct dep b, direct dependent d; ancestors {a,b}, descendants {d,e}
+dep_v, ddep_v = _val(fc, "deps (direct"), _val(fc, "dependents (direct")
+anc_v, desc_v = _val(fc, "ancestors"), _val(fc, "descendants")
+check("format_show direct deps = b only", "b[" in dep_v and "a[" not in dep_v)
+check("format_show direct dependents = d only (NOT closure e)", "d[" in ddep_v and "e[" not in ddep_v)
+check("format_show ancestors line = {a,b}", all(x in anc_v for x in "ab") and all(x not in anc_v for x in "de"))
+check("format_show descendants line = {d,e}", all(x in desc_v for x in "de") and all(x not in desc_v for x in "ab"))
+
 print(f"\n{passed} passed, {failed} failed")
 raise SystemExit(1 if failed else 0)

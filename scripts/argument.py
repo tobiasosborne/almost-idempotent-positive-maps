@@ -16,7 +16,11 @@ plus injected "workspace facts"; main() builds those facts from `af ... -f json`
 Usage:
   python3 scripts/argument.py --check       # validate (exit 1 on ERROR)
   python3 scripts/argument.py --generate     # (re)write argument/{INDEX,DAG}.md
+  python3 scripts/argument.py --show <id>     # local map of one result: contract, defs,
+                                              #   direct deps/dependents, full ancestor/descendant closures
   python3 scripts/argument.py --sync-beads    # (dry-run stub) mirror registry into beads
+
+The whole-DAG map is argument/DAG.md (Mermaid, generated) + argument/INDEX.md (table, generated).
 """
 import sys
 import json
@@ -175,6 +179,73 @@ def check_orphans(lemmas, ws_dirs):
     return errors
 
 
+# ---------- node map: ancestor/descendant closures (--show) ----------
+
+def _closure(lemmas, root, reverse):
+    """Transitive set reachable from `root` along deps edges (reverse=False) or
+    reverse deps edges (reverse=True). Excludes `root`; ignores dangling deps
+    (check_imports reports those). Returns None if `root` is not a registry id."""
+    by = {l["id"]: l for l in lemmas}
+    if root not in by:
+        return None
+    if reverse:
+        adj = {i: [] for i in by}
+        for l in lemmas:
+            for d in l.get("deps", []):
+                if d in by:
+                    adj[d].append(l["id"])
+    else:
+        adj = {i: [d for d in by[i].get("deps", []) if d in by] for i in by}
+    seen, stack = set(), list(adj[root])
+    while stack:
+        n = stack.pop()
+        if n in seen:
+            continue
+        seen.add(n)
+        stack.extend(adj.get(n, []))
+    seen.discard(root)  # exclude root even if a cycle through it sneaks in (--show runs pre-acyclic-check)
+    return seen
+
+
+def deps_closure(lemmas, root):
+    """All transitive prerequisites of `root` (the ancestors it depends on)."""
+    return _closure(lemmas, root, reverse=False)
+
+
+def dependents_closure(lemmas, root):
+    """All transitive dependents of `root` (the descendants that rely on it)."""
+    return _closure(lemmas, root, reverse=True)
+
+
+def format_show(lemmas, root):
+    """Human-readable local map of one result: its contract, direct defs/deps,
+    direct dependents, and the full ancestor/descendant closures."""
+    by = {l["id"]: l for l in lemmas}
+    if root not in by:
+        return (f"unknown id '{root}' — not a registry result. "
+                f"List them with: python3 scripts/argument.py (or see argument/INDEX.md).")
+    l = by[root]
+
+    def tag(i):
+        x = by.get(i)
+        return f"{i}[{x.get('status','?')}/{x.get('af','none')}]" if x else f"{i}[MISSING]"
+
+    direct_deps = l.get("deps", [])
+    direct_dependents = sorted(i for i in by if root in by[i].get("deps", []))
+    anc = sorted(deps_closure(lemmas, root))
+    desc = sorted(dependents_closure(lemmas, root))
+    return "\n".join([
+        f"# {root}  [{l.get('status','?')}/{l.get('af','none')}]  "
+        f"kind={l.get('kind','?')}  owner={l.get('owner','-')}",
+        f"contract: {l.get('contract','')}",
+        f"defs:        {'; '.join(l.get('defs', [])) or '(none)'}",
+        f"deps (direct prerequisites): {', '.join(tag(d) for d in direct_deps) or '(none)'}",
+        f"dependents (direct):         {', '.join(tag(d) for d in direct_dependents) or '(none)'}",
+        f"ancestors   (all {len(anc)} prerequisites): {', '.join(anc) or '(none)'}",
+        f"descendants (all {len(desc)} dependents):   {', '.join(desc) or '(none)'}",
+    ])
+
+
 # ---------- integration (filesystem + af) ----------
 
 def load_def_ids():
@@ -238,6 +309,16 @@ def generate(lemmas):
 
 
 def main(argv):
+    argv = list(argv)
+    if "--show" in argv:
+        i = argv.index("--show")
+        target = argv[i + 1] if i + 1 < len(argv) else None
+        if not target or target.startswith("--"):   # missing / flag-shaped -> usage, not "unknown id"
+            print("usage: python3 scripts/argument.py --show <id>")
+            return 2
+        lemmas, _ = parse_registry(ARG_DIR)
+        print(format_show(lemmas, target))
+        return 0 if any(l.get("id") == target for l in lemmas) else 1
     args = set(argv) or {"--check", "--generate"}
     lemmas, errors = parse_registry(ARG_DIR)
     def_ids = load_def_ids()

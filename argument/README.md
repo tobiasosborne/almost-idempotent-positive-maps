@@ -64,7 +64,19 @@ Generates `argument/INDEX.md` (id · contract · status · af · owner) and `arg
 and syncs one `bd` issue per lemma with `bd dep` edges = `deps` (so `bd ready` is the proof frontier).
 INDEX/DAG are generated — do not hand-edit.
 
+## Viewing the argument DAG
+
+- **Whole map:** `argument/DAG.md` (a Mermaid `graph LR` of every result + its edges, each node labelled
+  `id — status/af`; renders in GitHub/VS Code) and `argument/INDEX.md` (the same set as a table). Both are
+  **generated** by the linker — never hand-edit.
+- **Live frontier:** `python3 scripts/argument.py` prints `N results, R ready, B blocked` plus the **ready
+  frontier** (results whose deps are all validated and so are next to prove).
+- **One result's neighbourhood:** `python3 scripts/argument.py --show <id>` prints that result's contract,
+  `defs`, direct `deps`/dependents, and the **full ancestor (all prerequisites) and descendant (all
+  dependents) closures** — the local map for "what must I prove first" / "what does changing this affect".
+
 ## Tooling
 - `python3 scripts/argument.py --check` — run all checks (exit ≠ 0 on ERROR). Part of the pre-commit suite.
 - `python3 scripts/argument.py --generate` — (re)write `INDEX.md` + `DAG.md`.
+- `python3 scripts/argument.py --show <id>` — local map (contract, deps/dependents, ancestor/descendant closures).
 - `python3 scripts/argument.py --sync-beads` — mirror the registry into beads.
