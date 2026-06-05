@@ -1,0 +1,241 @@
+\section{Exact factorization by positive maps}\label{sec:factorization}
+
+The bridge of \Cref{sec:bridge} turns an almost-idempotent positive map into an
+\emph{approximate} Jordan algebra. The original goal of Kitaev's theorem,
+however, is sharper: to \emph{factor} the map, up to a small error, through a
+\emph{genuine} algebra by structure-preserving maps. This section records what is
+known about the positive-map analogue of that factorization. The endpoint is
+classical (Effros--St\o rmer); the obstruction is that the spectral idempotent
+$P$ is only approximately positive, and rounding it to a genuinely positive map
+cannot be done generically. The viable route is a stability statement for
+near-positive idempotents, conditional on which we obtain exact unital-positive
+factor maps with the bridge exponent (Theorem~C below).
+
+Throughout, $\Phimap\colon\Bsa\to\Bsa$ is unital positive with
+$\norm{\Phimap^2-\Phimap}\le\eta$, $P=\theta(2\Phimap-\Id)$ is the spectral
+idempotent of \Cref{sec:spectral}, $A=\Img P$, and $a\bullet b=P(a\jp b)$.
+
+\subsection{The exact template}
+
+The factorization we approximate is the exact theorem of Effros and
+St\o rmer: a positive unital projection makes its range a genuine Jordan
+algebra, and \emph{is} the pair of factor maps.
+
+% PROV: EffrosStormer1979 ocr-pages/page-05.txt L9-16 (Theorem 1.4) -- a unital positive projection P on a unital JC-algebra makes P(A) a JC-algebra under r*s=P(r o s); ocr-pages/page-06.txt L42-44 (Corollary 1.6) -- fixed points of a normal unital positive map on a JW-algebra have a natural JW structure; ocr-pages/page-02.txt L33-38 records Lemma 1.1 used in the proof.
+\begin{theorem}[Effros--St\o rmer]\label{thm:effros-stormer}
+\status{(cited)}
+Let $A$ be a unital JC-algebra and $E\colon A\to A$ a unital positive
+projection ($E^2=E$). Then the range $E(A)$, equipped with the vector-space
+operations inherited from $A$ and the product
+\[
+  r\bullet s=E(r\jp s),
+\]
+is a JC-algebra. Equivalently, the fixed-point set of any normal unital positive
+map of a JW-algebra into itself carries a natural JW-algebra structure.
+\end{theorem}
+
+\Cref{thm:effros-stormer} is the Jordan analogue of the Choi--Effros
+theorem~\cite{ChoiEffros1977} for completely positive projections, and the exact
+($\eta=0$) limit of the bridge (\Cref{rem:bridge-exact}). If the spectral
+idempotent $P$ of an almost-idempotent $\Phimap$ were \emph{genuinely} positive,
+\Cref{thm:effros-stormer} would apply to $E=P$ directly and produce a genuine
+JC-algebra $J=P(\Bsa)$ together with exact factor maps. The difficulty is that
+$P=\theta(2\Phimap-\Id)$ is only $O(\eta)$-positive
+(\eqref{eq:bridge-deltapos}), and may genuinely fail to be positive.
+
+% PROV: ORIGINAL agent-B compaction-checkpoint "Counterexample Boundary" -- explicit classical R^4 stochastic family where Phi is positive unital almost-idempotent but theta(2Phi-I) has negative entries.
+\begin{remark}[$P$ can fail to be positive]\label{rem:P-not-positive}
+\status{(proved)}
+The approximate positivity in \eqref{eq:bridge-deltapos} cannot be upgraded to
+exact positivity: there is an explicit classical (commutative) family of
+positive unital almost-idempotent maps $\Phimap$ on $\R^4$ for which
+$P=\theta(2\Phimap-\Id)$ has strictly negative entries. Thus the projected
+product $a\bullet b=P(a\jp b)$ of the bridge is genuinely needed; one cannot
+simply invoke \Cref{thm:effros-stormer} for $P$.
+\end{remark}
+
+\subsection{Why generic positivity rounding fails}
+
+One might hope to repair $P$ to a positive map abstractly: given a map that is
+$\eps$-positive, find a genuinely positive map within $O(\eps)$. \emph{No such
+dimension-free repair exists}, even for the simplest non-commutative Jordan
+targets. The obstruction uses spin factors.
+
+% PROV: HancheOlsenStormer1984 (spin factor 2.9.7) -- spin factor cone; the order-unit cone of the spin factor.
+\begin{definition}[Spin-factor cone]\label{def:spin-cone}
+\status{(cited)}
+For the spin factor $J=\R\Id\oplus\R^{m}$ (\Cref{thm:jnw-classification}), an
+element $(s,v)$ with $s\in\R$, $v\in\R^{m}$ has square
+$(s,v)\jp(s,v)=(s^2+\norm{v}_2^2,\,2sv)$ and spectrum $\{s\pm\norm{v}_2\}$. Hence
+the positive cone and the order-unit norm are
+\[
+  J_+=\{(s,v):s\ge\norm{v}_2\},\qquad
+  \norm{(s,v)}=\lvert s\rvert+\norm{v}_2 .
+\]
+A linear map $T$ into $J$ is \emph{$\eps$-positive} if $T(x)\ge-\eps\norm{x}\Id$
+for $0\le x\le\Id$.
+\end{definition}
+
+% PROV: ORIGINAL agent-B/notes/subagent-positivity-rounding.md and factorization-positivity-rounding.md -- spin-factor target J=R+R^m, domain l_infty^{2m}, eps-positive unital map at distance >= sqrt(eps) from every positive unital map; Rademacher lower bound.
+\begin{proposition}[Failure of dimension-free positivity rounding]
+\label{prop:rounding-fails}
+\status{(proved; obstruction)}
+For every integer $m\ge1$ put $\eps=1/(2m)$ and let $J=\R\Id\oplus\R^{m}$ be the
+spin factor. Define a unital map $T\colon\ell^{\infty}_{2m}\to J$ on the
+coordinate atoms $\delta_{j,\pm}$ \textup{(}$j=1,\dots,m$\textup{)} by
+\[
+  T(\delta_{j,+})=(\eps,\ 2\eps\,e_j),\qquad
+  T(\delta_{j,-})=(\eps,\ -2\eps\,e_j),
+\]
+where $e_1,\dots,e_m$ is the standard basis of $\R^{m}$. Then $T$ is unital and
+$\eps$-positive, yet
+\[
+  \norm{T-S}\ \ge\ \sqrt{\eps}
+  \qquad\text{for \emph{every} positive unital map } S\colon\ell^{\infty}_{2m}\to J.
+\]
+The same lower bound holds with domain $B(\C^{2m})_{\mathrm{sa}}$, by composing
+with the diagonal conditional expectation.
+\end{proposition}
+
+\begin{proof}[Proof idea]
+Unitality of $T$ holds because the $2m$ atom-images sum to $(1,0)=\Id$;
+$\eps$-positivity follows from $2\norm{v}_2\le\sum_j p_j+1$ for a sub-probability
+vector $p$. For the lower bound: a \emph{positive} unital $S$ has atom-images
+$S(\delta_i)=(s_i,w_i)\in J_+$ with $s_i\ge\norm{w_i}_2$ and
+$\sum_i(s_i,w_i)=(1,0)$, whence $\sum_i\norm{w_i}_2\le\sum_i s_i=1$. The
+vector parts of $T$ have $\sum_i\norm{v_i}_2=2$. Averaging over Rademacher signs
+$\sigma_i\in\{\pm1\}$,
+$\mathbb E_\sigma\bigl\Vert\sum_i\sigma_i(v_i-w_i)\bigr\Vert_2^2
+   =\sum_i\norm{v_i-w_i}_2^2\ge\eps$,
+so some sign pattern gives $\Vert\sum_i\sigma_i(v_i-w_i)\Vert_2\ge\sqrt\eps$,
+which is dominated by $\norm{T-S}$ tested against the corresponding element of
+$\ell^{\infty}_{2m}$.
+\end{proof}
+
+\Cref{prop:rounding-fails} shows that an approximate \emph{algebra} isomorphism
+alone cannot deliver exact positive factor maps with the bridge exponent: a
+black-box $O(\eps)$ repair is impossible, and any generic repair must lose at
+least a square root. Note the obstruction needs a \emph{free} map (no retraction
+constraint): the construction does not respect an idempotent relation
+$S\circ\iota=\mathrm{id}$. This is exactly the loophole the next subsection
+exploits. In the fully commutative case (both domain and codomain commutative)
+the obstruction is absent: normalising the positive parts of signed rows yields a
+positive unital map within $2\eps$ (this is the starting point of
+\Cref{sec:classical}).
+
+\subsection{Near-positive projection stability}
+
+The escape from \Cref{prop:rounding-fails} is to ask for stability of
+\emph{idempotents}, not of arbitrary near-positive maps. An idempotent's
+retraction constraint pins it to its own range and rules out the cheap
+sign-spreading used in the counterexample.
+
+% PROV: ORIGINAL agent-B/notes/near-positive-projection-stability-program.md and theorem-stack-v0.3 Theorem 3 hypothesis -- the sharp noncommutative near-positive projection stability target.
+\begin{openproblem}[Near-positive projection stability]\label{op:npps}
+\status{(open; sharp exponent $1/2$)}
+There exist universal constants $\delta_0,K>0$ \emph{(independent of dimension)}
+such that the following holds for every finite-dimensional $\HH$. If
+$R\colon\Bsa\to\Bsa$ is linear with
+\[
+  R^2=R,\qquad R(\Id)=\Id,\qquad \norm{R}\le1+\delta,\qquad
+  R(x)\ge-\delta\,\Id\ \text{ for }0\le x\le\Id,
+\]
+and $0<\delta\le\delta_0$, then there is a unital positive idempotent
+$E\colon\Bsa\to\Bsa$ with
+\[
+  \norm{E-R}\le K\sqrt{\delta}.
+\]
+\end{openproblem}
+
+The square-root exponent is the best possible: linear ($O(\delta)$) stability is
+already false in the commutative case (\Cref{sec:classical}, Hume's example
+\Cref{ex:hume}). \Cref{op:npps} is open in general; its commutative reduction and
+the special cases now proved are the subject of \Cref{sec:classical}.
+
+\subsection{Conditional exact factorization (Theorem~C)}
+
+Granting \Cref{op:npps}, the factorization goes through with the bridge exponent
+and \emph{genuinely positive} factor maps.
+
+% PROV: BRIDGE+EffrosStormer; agent-B/theory/theorem-C-conditional-factorization.md -- conditional exact UP factorization; Delta=inclusion, Upsilon=E; bounds; real-to-complex Effros-Stormer; cone compatibility.
+\begin{theorem}[Conditional exact unital-positive factorization]\label{thm:factorization}
+\status{(proved, conditional on \Cref{op:npps})}
+Assume \Cref{op:npps}. Then there are universal constants $\eta_0,C>0$ such that
+the following holds. Let $\HH$ be finite-dimensional and
+$\Phimap\colon\Bsa\to\Bsa$ unital positive with
+$\norm{\Phimap^2-\Phimap}\le\eta\le\eta_0$. Then there exist a finite-dimensional
+special JB-algebra $J$ (a JC-algebra) and \emph{unital positive} maps
+\[
+  \Delta\colon J\to\Bsa,\qquad \Upsilon\colon\Bsa\to J,
+\]
+such that
+\[
+  \Upsilon\Delta=\mathrm{id}_J,\qquad
+  \norm{\Delta\Upsilon-\Phimap}\le C\sqrt{\eta},\qquad
+  \Upsilon\bigl(\Delta(x)\jp\Delta(y)\bigr)=x\bullet y\ \ (x,y\in J),
+\]
+where $\bullet$ is the Jordan product of $J$. Concretely $\Delta$ is the
+inclusion of $J$ into $\Bsa$ and $\Upsilon=E$ is a unital positive idempotent
+with $J=E(\Bsa)$ and $x\bullet y=E(x\jp y)$.
+\end{theorem}
+
+\begin{proof}
+Form $P=\theta(2\Phimap-\Id)$. By the spectral estimate of \Cref{sec:spectral}
+(see \eqref{eq:bridge-delta}--\eqref{eq:bridge-deltapos}), $P$ is a unital
+idempotent with $\norm{P-\Phimap}\le C\eta$, $\norm{P}\le1+C\eta$, and
+$P(x)\ge-C\eta\,\Id$ for $0\le x\le\Id$. Thus $P$ satisfies the hypotheses of
+\Cref{op:npps} with $\delta=C\eta$ when $\eta>0$. If $\eta=0$, then
+$P=\Phimap$ is already a unital positive idempotent and we set $E=P$. Otherwise
+apply \Cref{op:npps}: there is a unital positive idempotent $E$ with
+$\norm{E-P}\le K\sqrt{C\eta}\le C'\sqrt{\eta}$.
+
+Extend $E$ complex-linearly to $E_\C(a+ib)=E(a)+iE(b)$ on $B(\HH)$; since
+positivity is tested on positive self-adjoint inputs, $E_\C$ is a unital
+positive projection on the JC-algebra $B(\HH)$. By \Cref{thm:effros-stormer},
+$J:=E(\Bsa)$ is a JC-algebra under $x\bullet y=E(x\jp y)$; it is special by
+construction as the Effros--St\o rmer JC range inside $B(\HH)$ with projected
+product $E(x\jp y)$, so the exceptional Albert algebra cannot occur. This does
+not assert closure under the ambient product $\jp$.
+
+Set $\Delta=$ the inclusion $J\hookrightarrow\Bsa$ and $\Upsilon=E$. Both are
+unital and positive: $\Delta$ maps the cone $J_+=J\cap B(\HH)_+$ into $B(\HH)_+$, and
+$E(B(\HH)_+)\subseteq J_+$ because $E$ is positive and idempotent. Then
+$\Upsilon\Delta=E|_J=\mathrm{id}_J$, and
+\[
+  \norm{\Delta\Upsilon-\Phimap}=\norm{E-\Phimap}
+   \le\norm{E-P}+\norm{P-\Phimap}\le C'\sqrt\eta+C\eta\le C\sqrt\eta .
+\]
+The multiplicativity identity $\Upsilon(\Delta x\jp\Delta y)=E(x\jp y)=x\bullet y$
+is the definition of the Effros--St\o rmer product. Finally the JB positive cone
+of $(J,\bullet)$ equals the inherited cone $J\cap B(\HH)_+$: if $x=y\bullet y=E(y\jp y)$
+then $x\ge0$ ambiently by positivity of $E$; conversely $z\in J\cap B(\HH)_+$ with
+$m=\norm{z}$ satisfies $\norm{m\Id-z}\le m$, which by the unital JB
+norm criterion makes $z$ a positive element of $(J,\bullet)$. Hence the factor
+maps are positive for the intrinsic JB order of $J$.
+\end{proof}
+
+\Cref{thm:factorization} isolates the entire remaining difficulty in a single
+unproved input, \Cref{op:npps}: \emph{the implication is proved}; only the
+stability theorem is open. There is no use of abstract positivity rounding (which
+\Cref{prop:rounding-fails} forbids) and no use of the abstract structure theorem
+of \Cref{sec:programme}; the route is independent of Layer~1. The price is the
+exponent: $\sqrt\eta$ rather than $\eta$, which by Hume's example (\Cref{ex:hume})
+is the best this route can give.
+
+The factor maps in \Cref{thm:factorization} are unital positive maps. The
+theorem does \emph{not} assert decomposable factor maps in general. Such a
+strengthening requires additional reversibility or universal-reversibility
+input on the exact JC range, as in the exact theory discussed around
+\Cref{sec:exponent}.
+
+% PROV: TS3; agent-B/notes/layer1-output-requirements.md.
+\begin{remark}[An alternative route through Layer~1]\label{rem:layer1-route}
+\status{(open)}
+If instead the abstract structure theorem (\Cref{sec:programme}) were proved
+with a \emph{positivity-capable} output --- a genuine JC-subalgebra
+$J_0\subseteq\Bsa$ whose points are close to the bridge range $A=\Img P$, and a
+canonical positive conditional expectation $E_{J_0}$ close to $P$ --- then
+comparing $P$ to $E_{J_0}$ would give exact positive factor maps without
+invoking \Cref{op:npps}. This route is not yet formalised; algebraic closeness
+alone is insufficient, precisely because of \Cref{prop:rounding-fails}.
+\end{remark}

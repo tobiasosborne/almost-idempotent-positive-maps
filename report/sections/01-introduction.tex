@@ -20,7 +20,7 @@ positive. This is the natural setting whenever one cares about distinguishabilit
 of states rather than full quantum operations, and it is the setting of
 van~Luijk and Wilming~\cite{vanLuijkWilming2026}, who show that for positive
 trace-preserving maps the relevant invariant is a \emph{Jordan} algebra. The
-present report does three things, in order of completeness:
+present report does the following, in order of completeness:
 \begin{enumerate}[leftmargin=*]
   \item It records the consensus \emph{definitions} (positive map, Jordan
     product, JB-algebra, order-unit space, approximate Jordan algebra). Standard
@@ -31,11 +31,24 @@ present report does three things, in order of completeness:
     positive almost-idempotent $\Phi$ one obtains, with no use of dilations or
     complete positivity, a space that satisfies the Jordan-algebra axioms up to
     $O(\sqrt\eta)$. This is the positive-map analogue of the first half of
-    Kitaev's construction, and it is complete.
-  \item It states the \emph{structure-theory programme} (\Cref{sec:programme})
-    --- the analogue of the second half of Kitaev's theorem --- and reports
-    precisely what is established and what is still open
-    (\Cref{sec:discussion}).
+    Kitaev's construction, and it is complete. A companion result
+    (\Cref{sec:faithful}) treats the ambient product under a faithful invariant
+    state.
+  \item It reduces \emph{exact factorization} by unital positive maps
+    (\Cref{sec:factorization}) to one stability question about near-positive
+    idempotents, proving the factorization conditional on it; in the
+    \emph{commutative} case (\Cref{sec:classical}) this becomes a stability
+    problem for almost-idempotent stochastic matrices, for which the sharp
+    exponent, several proved special cases, and an exact factorization theorem
+    are established.
+  \item It develops the \emph{abstract structure theorem}
+    (\Cref{sec:programme}) --- the analogue of the second half of Kitaev's
+    theorem --- proving a dimension-free splitting of the Jordan cohomology for
+    exact cocycles on every finite-dimensional JB-algebra, and isolating the
+    remaining gaps.
+  \item It analyses the \emph{exponent} $\sqrt\eta$ versus $\eta$
+    (\Cref{sec:exponent}) and the role of decomposability, and summarises the
+    status throughout (\Cref{sec:discussion}).
 \end{enumerate}
 
 \paragraph{Why Jordan, and not associative.}
@@ -53,9 +66,16 @@ necessity, and the entire theory reorganises around it.
 \paragraph{Conventions and status flags.}
 All Hilbert spaces are finite-dimensional and complex. We write $B(\HH)$ for the
 operators on $\HH$ and $\Bsa$ for the self-adjoint ones. Statements carry a
-status: \status{(proved)} for results with a complete proof in this report;
-\status{(cited)} for results transcribed from a named source;
-\status{(consensus)} for definitions and conventions adopted by agreement
-between the authors (a definition is never ``proved''); and \status{(open)} for
-targets of the programme not yet established. Constants denoted $C$ are universal and never depend on
-$\dim\HH$ unless explicitly stated.
+status: \status{(proved)} for results with a complete proof in this report or
+transcribed from a verified source; \status{(cited)} for results imported from
+the literature; \status{(consensus)} for definitions and conventions adopted by
+agreement between the authors; \status{(conditional)} for implications whose
+stated hypothesis is still open; \status{(benchmark)} for exact-cocycle or
+restricted-module results that do not yet prove the full target;
+\status{(obstruction)} for proved no-go statements about a route;
+\status{(source-extracted)} for claims supported by local extraction but still
+awaiting primary byte-check; \status{(numerical)} for evidence that is not used
+as proof; and
+\status{(open)} for targets of the programme not yet established. Constants
+denoted $C$ are universal and never depend on $\dim\HH$ unless explicitly
+stated.

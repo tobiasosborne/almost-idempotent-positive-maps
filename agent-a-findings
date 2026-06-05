@@ -1,6 +1,6 @@
 # Agent A Findings
 
-Last updated: 2026-06-03 (v0.10). **Single source of truth for Agent A's positions.** Status: **Layer-2 bridge VERIFIED correct (§10)**; Layer-1 abstract dimension-free stability is the critical path (mine). **NEW (§16, v0.10): faithful-invariant-state sidequest — exact "range closed under ordinary ∘" theorem transfers approximately at rate `O(η/λ)`; a well-conditioned faithful invariant state upgrades the bridge `√η→η` (new sufficient condition for α=1). READ §16 + `agent-A/experiments/faithful-invariant-transfer/REPORT.md`; then §10–§11; §§1–9 historical.**
+Last updated: 2026-06-05 (v0.13). **Single source of truth for Agent A's positions.** Status: **Layer-2 bridge VERIFIED correct (§10)**; Layer-1 abstract dimension-free stability is the critical path (mine). **NEWEST (§18, v0.12): fresh-agent re-audit — RETRACTED the "dimension-free obstruction resolved in principle" over-claim in `01-error-reduction.md §3` (it is a Frobenius result; operator-norm splitting is OPEN — agrees with B's `audit-consensus-2026-06-04`); two clean reductions of the open Layer-1 problem (summand-count independence is automatic; element-level symmetry⟺idempotent); discharged B's 3 faithful-section provenance requests. READ §18 first, then §16–§17 (faithful sidequest), §10–§11; §§1–9 historical.**
 
 > COORDINATION NOTE for Agent B: my real version sequence is v0.1→v0.2→v0.3→v0.4→v0.5 (this file). I never wrote "v0.6–v0.18". The `response-to-agent-a-v0.6 … v0.18.md` files in agent-B/notes appear to answer positions I never stated (subagent extrapolation). Please ground responses in THIS file only. One canonical thread, please, to avoid drift.
 
@@ -299,3 +299,68 @@ I verified this independently (`agent-A/experiments/faithful-invariant-transfer/
 I'll fix the over-claim in `REPORT.md §0/§4` and the memory note to match this. Good catch, B — this is the adversarial pass doing its job. Remaining genuinely-open sliver we both flagged: the exact worst-case law of `‖h‖` as a function of `λ/η` in the band `η<λ<1` (both our families *saturate* `‖h‖≈c·η/λ` near `λ~η`, suggesting `η/λ` is the true law, not just an upper bound).
 
 — Agent A (v0.11)
+
+---
+
+## 18. v0.12 — fresh-agent re-audit; retraction of a stale over-claim; two clean Layer-1 reductions; B's report requests discharged
+
+A fresh Agent-A instance re-onboarded from `agent-A/HANDOFF.md`, both findings files, the theory notes, the experiments, and the report. I read B's newest note `agent-B/notes/audit-consensus-2026-06-04.md` (dated today, postdating B's findings file). **We are in clean consensus**, and B's note independently states the exact point I correct below. Net actions this session:
+
+**(1) RETRACTION (rigor — important).** My own `agent-A/theory/01-error-reduction.md §3` still claimed the dimension-free obstruction was *"resolved in principle"* via the projective-tensor-norm/group-averaging argument. **This was over-optimistic; I have retracted it.** Precise status now written into §3:
+- The averaging argument (`e=∫_{U(M(ℬ))}u†⊗u du`, projective norm `≤∫‖u†‖‖u‖du=1`) is a **Frobenius-norm** result — the building blocks `u∈U(M(ℬ))` are `τ`-isometries (Frobenius), not order-isometries. It gives `‖s‖_F=O(1)`, dimension-free (confirmed by the canary), and **nothing more**.
+- For the **operator/order-unit norm** the theorem actually controls, the argument FAILS: `‖u‖_{op→op}≠1` (up to `~√dim`). The group that preserves `‖·‖_op` is `Aut(ℬ)` (automorphisms preserve spectra), but `Aut(ℬ)⊊U(M(ℬ))` is too small to right-invert `d¹`. As B puts it today: `Aut(ℬ)`-Haar is a norm-1 *projection* onto invariants, **not a right inverse**; the inverse estimate on the *non-invariant* cochain components is exactly where dimension can enter. **OPEN.**
+
+This aligns the theory note with findings v0.8/v0.11, the HANDOFF, the canary, and B's note. (`00-overview.md` was already corrected in a prior pass — no stale claims remain there.)
+
+**(2) Clean reduction A — summand-count independence is AUTOMATIC.** B's Layer-1 requirements list "universal `K` independent of … the number of direct summands." This part is free: for `ℬ=⊕_k ℬ_k` (simple ideals), cross-ideal Jordan products vanish, so `d¹` is **block-diagonal** across ideals and `H²` splits over them; and the order-unit norm of a direct sum is the **max over ideal blocks**. Hence any block-respecting splitting has `‖S‖_op = max_k ‖S_k‖_op`, with no dependence on the number of summands. **Consequence:** the entire open operator-norm question reduces to *uniformity in `n` within the four infinite simple families* `H_n(ℝ), H_n(ℂ), H_n(ℍ)`, spin `V_n`; the exceptional Albert `H_3(𝕆)` is a single fixed algebra (trivially bounded). So the canary's scope (those families as `n` grows) is exactly the right regime — modulo the `M=ℬ` vs `M=A` and Frobenius-vs-op caveats. (Recorded in `01-error-reduction.md §3`.)
+
+**(3) Clean reduction B — element-level symmetry ⟺ idempotent (for Task 4(a)).** In any ε-JB algebra the unit law `𝟏∘x=x` and `𝟏∘𝟏=𝟏` are EXACT, so the affine bijection `c=(1+s)/2 ⇔ s=2c−1` exactly intertwines approximate idempotents and approximate symmetries:
+   `c∘c−c = ¼(s∘s−𝟏)`,  i.e. `‖c∘c−c‖ = ¼‖s∘s−𝟏‖`,
+and nontriviality transfers (`‖c‖=½‖𝟏+s‖`, `‖c−𝟏‖=½‖s−𝟏‖`). So "nontrivial approximate idempotent exists" and "nontrivial approximate symmetry exists" are equivalent, dimension-free, with no conversion loss. **Caveat (stated honestly):** this is the *element*-level equivalence only. It does NOT close the hard part of HANDOFF route (A), which produces a *map*-level automorphism involution `φ∈Aut(A)` (`φ²≈id`); converting a map-involution to an *element* symmetry/idempotent is a separate step. The existence of either element (gap-free, dimension-free) remains the real open core of Task 4(a) — topological in the noncommutative case, order-combinatorial in the commutative (`ℝ^n`, `Aut` discrete) case.
+
+**(4) Report — discharged B's three faithful-section requests** (`audit-consensus-2026-06-04`, "Report provenance/status corrections"):
+- `prop:faithful-exact`: ledger flag `O→I`, marked **not original** — a consequence of VLW faithful fixed-point/multiplicative-domain theory (`prop:fixpoint`) with a self-contained inline Kadison proof.
+- `ex:no-faithful`: ledger note now records the invariant set is the whole face `(t,1−t,0)` (correcting A-FIT's stale "unique `(1,0,0)`" wording).
+- `thm:faithful-approx`: ledger + a new section sentence split the scope — *exact*-invariance subcase (`ω∘Φ=ω`) vs the report's *approximate*-invariance extension (`‖ω∘Φ−ω‖≤η`), independently re-derived to the identical bound by both authors.
+Report recompiles clean (`make` exit 0, no undefined refs).
+
+**(5) Proposed next deep target (mine), for B's sanity-check.** Of the four open simple families, **spin `V_n` is the most tractable**: `Aut(V_n)=O(n)` acts transitively on the equatorial sphere, so an `O(n)`-equivariant right inverse to `d¹` may be writable in closed form and bounded in operator norm uniformly in `n`. Proving operator-norm uniformity for spin would convert the canary's *trustworthy* spin evidence (flat to `N=41`) into a theorem and nail one of the four families. I'll attempt this. (B continues to drive the factorization route / global exposed-hull lemma per your note; I remain available on the convex-geometry side.)
+
+Questions for B: (i) do you concur the summand-count reduction in (2) is airtight (block-diagonal `d¹` + max-norm)? (ii) Any objection to spinning the Layer-1 attack up family-by-family starting from spin, vs. pushing the incremental route (R2) first? My lean: do spin (clean test of whether op-norm uniformity is even true per-family) in parallel with thinking about R2.
+
+— Agent A (v0.12)
+
+### §18a addendum (same session) — the operator-norm obstruction is *exactly* a factor √(rank); spin is structurally easy
+
+Worked out and written up in `agent-A/theory/02-spin-splitting.md`:
+
+- **The op-vs-Frobenius gap = √(rank), and nothing else.** On a simple Euclidean Jordan algebra of rank `r`: `‖a‖_op ≤ ‖a‖_2 ≤ √r·‖a‖_op`, sharp (ratio `√r` at `a=𝟏`). So the *only* obstruction to converting the (proven, dimension-free) Frobenius splitting `‖s_F‖_HS=1/σ_min=O(1)` into an operator-norm bound is this `√(rank)` factor. rank: spin `V_n` → `2` (constant); `H_n(ℝ/ℂ/ℍ)` → `n` (grows); Albert → `3`.
+- **Spin: the gap is ABSENT.** Rank 2 ⟹ `‖x‖_2 ≤ ‖x‖_op ≤ √2‖x‖_2` for all `n`. Propagating through cochains: `‖s‖_{op→op} ≤ 2√2·‖s‖_{Fop→Fop}` (`Fop`=Euclidean-injective operator norm), dimension-free. So for spin the order-unit splitting bound is dimension-free-equivalent to a purely-Euclidean `O(n)`-equivariant bound (`Aut(V_n)=O(n)`). The canary's *direct op-norm search* for spin (trustworthy to `N=41`, flat) is `2√2`-faithful to this structural quantity — genuine evidence (the separate `σ_min`/HS result does NOT imply `Fop→Fop` boundedness, flagged honestly in the note). Remaining: an `O(n)`-equivariant per-irrep `Fop` bound to make spin a *theorem*. I decomposed `C¹,C²` into `O(n)`-irreps (note §3); multiplicities are `n`-independent, so this is finite bookkeeping.
+- **`H_n` reframed (the real crux).** There rank = `n`, so the conversion is `√n` worst-case. The canary's `H_n` plateau ⟹ the cochains in `im d¹` are *not* worst-case, i.e. **spectrally balanced**. Precise checkable target = **Rank-balance lemma** (note §4): `∃` splitting `s` with `‖(sf)(a)‖_2 ≤ K‖(sf)(a)‖_op`, `K` dimension-free. This is the sharpest form of the whole Layer-1 operator-norm obstruction, and it's exactly what's automatic for spin (`r=2`).
+
+Net: the open Layer-1 operator-norm question is no longer vague — it is the rank-balance property of `im d¹`, trivial for spin/Albert (bounded rank), genuinely open only for the three `H_n` families. B — does this match your read? It also tells us the channel theorem's hard instances are precisely those whose limiting JB algebra has a high-rank `H_n` summand.
+
+— Agent A (v0.12, §18a)
+
+---
+
+## 19. v0.13 — full report expansion to record ALL developments (user-directed)
+
+Per user instruction ("carefully and completely update the tex report; all developments recorded; no jargon; all definitions/derivations; all results clearly marked"), and explicitly noting that **Agent B has done substantially more work than me**, I deployed 7 digestion subagents over B's corpus (bridge; factorization/projection-stability; classical proved cases; classical reductions/open targets; decomposable + Layer-1 + theorem-stack; and the two big 2026-06-05 adjoint-benchmark clusters) plus read B's responses to my v0.12 and `regular-polygon-retraction-obstruction.md`. **Crucially I found B's large 2026-06-05 push (~40 files): the exact-adjoint splitting benchmark, which CLOSES the dimension-free order-unit splitting of the Jordan coboundary for every simple factor (spin `4√2`; direct sums `max+1`; commutative scalar; and all high-rank matrix factors `H_n(ℝ/ℂ/ℍ)` via diagonal gauge + leakage globalization + sector reconstruction).** This far surpasses the old report §7 ("op-norm unresolved at n≤6").
+
+**Report now expanded from ~23pp to 36pp, compiles clean (exit 0, 0 undefined refs), every labelled statement provenanced.** New/rewritten sections:
+- §7 Exact factorization: Effros–Størmer template; positivity-rounding obstruction (spin-factor, proved); near-positive projection stability (open target); **Theorem C** conditional exact UP factorization (proved-conditional, full proof).
+- §8 Commutative case: classical reduction; Hume √-sharpness; leakage + exposed-circuit lemmas; proved special cases (rank-one/line-segment/simplex/well-exposed/cluster); exact commutative factorization; approximate-simplexity reductions; bounded-coordinate impossibility; open global exposed-hull lemma + regular-polygon resolution.
+- §9 Structure theorem (Layer 1): cohomological error-reduction; **B's exact-adjoint benchmark** (spin/direct-sum/commutative/matrix), with the `√rank` framing (prop:rank-gap, mine, confirmed by B) and the honest **audit caveat** (rem:matrix-audit: the matching-reconstruction sector proofs are recent, two sidecars audited earlier formulations and said "plausible but open"); cochain-norm + nuclear caveats; `op:layer1-gap` (arbitrary modules / approximate cocycles / positivity still open).
+- §10 Exponent: decomposable route — norm correction, doubling obstruction, dilation-compatible conditional theorem (proved), Sartre stress.
+- §11 Status ledger covering everything.
+- §6 gained a numerics remark (32/27, qubit triviality). Abstract + intro updated.
+- PROVENANCE.md: 14 new internal source keys (SHA256) + ~35 new per-claim rows; stale `prop:error-reduction`/`rem:rounding` rows replaced.
+
+**Acknowledging B's v0.12 responses (accepted):** (i) summand-count independence is automatic only for adjoint/block-respecting modules — arbitrary modules have mixed Peirce-`1/2` components; recorded as rem:directsum-scope. (ii) My "rank-balance lemma" points the wrong way (order-bounded coboundaries can have `√n` Frobenius primitives) — withdrawn; `02-spin-splitting.md §4` marked SUPERSEDED; report §9 states the corrected caveat. (iii) B agrees with the projective-norm retraction and the element-level symmetry⟺idempotent equivalence.
+
+**Status marking convention in the report:** (consensus) defs; (cited) literature; (proved); (proved, conditional on X); (proved; exact-adjoint benchmark) for B's Layer-1 splitting [benchmark, not full Layer 1]; (obstruction) for no-gos; (open). Bridge §6 unchanged (proved √η).
+
+Request to B: please adversarially check §7–§11 — especially (a) that rem:matrix-audit fairly states the verification status of your matrix exact-adjoint splitting (I marked it "proved by B; independent re-audit pending"); (b) the constants I transcribed (spin `4√2`; real-symmetric `60`, Hermitian `84`, antilinear `124`; diagonal gauge `11`; direct-sum `max+1`; commutative projection `≤3`, next-arrow `≤12`); (c) Theorem C's proof; (d) the classical special-case statements. Flag anything mischaracterised and I'll fix in `report/`.
+
+— Agent A (v0.13)

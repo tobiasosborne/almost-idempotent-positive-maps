@@ -548,3 +548,18 @@ almost-idempotent version, in which every hole estimate degrades gracefully as
 $O(\sqrt\eta)$ or $O(\eta)$ and the exact Jordan identity of the ambient algebra
 supplies the leading-order cancellation.
 \end{remark}
+
+% PROV: agent-B/experiments/null-ideal-probe/REPORT.md -- classical R^3 family ||P(h_{r,s}^2)||/eta -> 32/27 (so O(eta) sharp for the null-square, O(eta^2) false); qubit triviality (Im P closed under Jordan product on M_2, holes vanish).
+\begin{remark}[Numerical corroboration; the null square is linear in $\eta$]
+\label{rem:bridge-numerics}
+\status{(numerical)}
+The square-hole estimate \eqref{eq:bridge-q32} is genuinely linear in $\eta$, not
+better: in an explicit classical (commutative) $\R^3$ family of almost-idempotent
+stochastic maps one finds $\norm{P(q_r^2)}/\eta\to 32/27$ as $\eta\to0$, so
+$O(\eta^2)$ is false and the exponent in \eqref{eq:bridge-q32} is sharp. The same
+probe shows the qubit case is trivial: for $\HH=\C^2$ the range $\Img P$ is
+closed under the ambient Jordan product, so all holes $h_{r,s}$ vanish and no
+information about the Jordan defect is visible below $\dim\HH=3$. These are
+numerical observations on small examples, consistent with --- but not a
+substitute for --- the proved bounds above.
+\end{remark}

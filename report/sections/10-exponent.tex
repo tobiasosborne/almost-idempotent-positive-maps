@@ -1,0 +1,150 @@
+\section{The exponent: \texorpdfstring{$\sqrt\eta$}{root eta} versus
+\texorpdfstring{$\eta$}{eta}}\label{sec:exponent}
+
+The bridge (\Cref{sec:bridge}) gives an $\eps$-JB algebra with
+$\eps=O(\sqrt\eta)$, unconditionally. Kitaev's completely positive theorem
+achieves the stronger $\eps=O(\eta)$. This section explains the gap, shows that
+the natural class on which $O(\eta)$ might be recovered is the
+\emph{decomposable} maps, and records precisely what is proved (a conditional
+$O(\eta)$ theorem under a dilation-compatibility hypothesis) and what is
+conjectural (the general decomposable $O(\eta)$ statement), together with the
+obstructions that make the naive arguments fail.
+
+\subsection{One hole versus two holes}
+
+% PROV: Kitaev2024 approximate_algebras.tex L2643-2663 (R_k(X)) and L2671-2673 (WXYZOeta-1) -- single insertion R_k has squared norm O(eta); the associativity defect W is bilinear in two such insertions, O(eta). Stinespring dilation; CP only.
+\begin{remark}[Why CP gives $\eta$ and positivity gives only $\sqrt\eta$]
+\label{rem:exponent}
+\status{(proved for the bridge at $\sqrt\eta$; $\eta$ open in general)}
+Both regimes are governed by a single ``hole'': the failure of one inserted
+$\Phimap$ (or $P$) to be invisible. For a unital positive $\Phimap$ a single
+insertion is controlled only in the seminorm of the state
+$\omega=\rho\circ\Phimap$, where Jordan--Schwarz gives a defect of \emph{squared}
+size $O(\eta)$, hence norm $O(\sqrt\eta)$ --- this is the source of the
+unconditional bridge exponent. Kitaev's $O(\eta)$ does \emph{not} come from a
+single insertion: the associativity defect is an intrinsically \emph{bilinear}
+pairing of \emph{two} holes living in the Stinespring dilation. In his notation
+the one-hole vector $R_k(X)$ satisfies
+$R_k(X)^{\dagger}R_k(X)=\Phimap^2(\Phimap(X^{\dagger})\Phimap(X))
+-\Phimap(\Phimap^2(X^{\dagger})\Phimap^2(X))=O(\eta)\norm{X}^2$, so
+$\norm{R_k(X)}=O(\sqrt\eta)\norm{X}$, while the defect equals a product
+$W=V_1^{\dagger}R_1(X^{\dagger})^{\dagger}\,u_{3,0}(\Phimap(Y))\,V_3R_0(Z)$ of two
+such vectors, whence $\norm{W}=O(\sqrt\eta)\cdot O(\sqrt\eta)=O(\eta)$ by
+Cauchy--Schwarz. The two-hole pairing requires complete positivity --- it lives
+in the dilation Hilbert space and uses matrix amplifications
+$\mathrm{id}_n\otimes\Phimap$ --- which a general positive map lacks. Only the
+single-insertion $O(\sqrt\eta)$ bound survives unconditionally.
+\end{remark}
+
+A two-hole structure reappears precisely when each summand of $\Phimap$ carries a
+dilation, i.e.\ for decomposable maps.
+
+\subsection{Decomposable maps and the norm correction}
+
+% PROV: vanLuijkWilming2026 paper.tex (decomposable = CP + coCP); Haagerup decomposable norm; agent-B/notes/subagent-decomposable-norm.md.
+\begin{definition}[Decomposable map]\label{def:decomposable}
+\status{(cited)}
+Let $\tau$ denote the transpose (a Jordan automorphism of $\Bsa$). A linear map
+$\Phimap\colon B(\HH)\to B(\HH)$ is \emph{decomposable} if it admits a
+decomposition
+\[
+  \Phimap=\Phimap_0+\Psi_0\circ\tau
+\]
+with $\Phimap_0,\Psi_0$ completely positive (CP); equivalently $\Phimap$ is a
+sum of a CP map and a co-CP map.
+\end{definition}
+
+% PROV: agent-B/notes/subagent-decomposable-norm.md -- standard decomposable norm of transpose on M_n is n, not 1; correct hypothesis is explicit CP+coCP component bound.
+\begin{proposition}[The standard decomposable norm is the wrong hypothesis]
+\label{prop:decomposable-norm}
+\status{(proved)}
+The Haagerup--Wittstock decomposable norm is not $1$ for every unital positive
+decomposable map: the transpose $\tau_n$ on $M_n$ is unital, positive and
+decomposable, but $\norm{\tau_n}_{\mathrm{dec}}=\norm{\tau_n}_{\mathrm{cb}}=n$
+(apply $\mathrm{id}_n\otimes\tau_n$ to the flip). The correct boundedness input
+is instead the \emph{component} bound: for a unital map with a fixed
+decomposition $\Phimap=\Phimap_0+\Psi_0\circ\tau$, unitality gives
+$\Phimap_0(\Id)+\Psi_0(\Id)=\Id$, so $\norm{\Phimap_0}_{\mathrm{cb}},
+\norm{\Psi_0}_{\mathrm{cb}}\le1$. This per-summand budget is the right hypothesis;
+the total budget $2$ is not the same as a single dilation.
+\end{proposition}
+
+\subsection{A conditional \texorpdfstring{$O(\eta)$}{O(eta)} theorem, and why it is conditional}
+
+There is a valid Kitaev-strength theorem under an explicit \emph{dilation-compatibility}
+hypothesis that supplies the missing two-hole structure.
+
+% PROV: agent-B/notes/decomposable-dilation-compatible-theorem.md.
+\begin{theorem}[Dilation-compatible $O(\eta)$ bridge]\label{thm:dilation-compatible}
+\status{(proved, conditional on the lifted-UCP hypothesis)}
+Suppose there are a finite-dimensional $C^{*}$-algebra $D$, a unital
+order-isometric Jordan embedding $j\colon\Bsa\to D_{\mathrm{sa}}$, and a unital
+positive map $C\colon D_{\mathrm{sa}}\to\Bsa$ with $\Phimap=Cj$, such that the
+lift $F=jC$ extends to a unital completely positive map $D\to D$ with
+$\norm{F^2-F}_{\mathrm{cb}}\le\eta$. Then, with $P=\theta(2\Phimap-\Id)$,
+$A=\Img P$, $a\bullet b=P(a\jp b)$, the algebra $A$ is an $O(\eta)$-$\eps$-JB
+order-unit algebra.
+\end{theorem}
+
+\begin{proof}[Proof idea]
+$F$ is UCP and $\eta$-idempotent, so Kitaev's completely positive theorem applies
+to $F$ and makes its near-fixed range an $O(\eta)$ approximate $C^{*}$-algebra;
+the symmetrised product is $O(\eta)$-$\eps$-JB. The intertwining $Fj=j\Phimap$
+(hence $\widetilde F j=jP$ by functional calculus) embeds $A$ isometrically into
+that structure, and the $\eps$-JB estimates restrict along the embedding.
+\end{proof}
+
+The hypothesis $\norm{F^2-F}_{\mathrm{cb}}\le\eta$ is \emph{not} automatic from a
+CP+coCP decomposition. Two obstructions show this.
+
+% PROV: agent-B/notes/decomposable-doubling-obstruction.md -- exact commutative counterexample: Phi=Cj idempotent but jC has idempotence defect 1.
+\begin{proposition}[Doubling obstruction]\label{prop:doubling}
+\status{(proved; obstruction)}
+For $\Phimap=Cj$ one computes $F^2-F=j\bigl((\Phimap-\Id)C\bigr)$, and
+$\norm{\Phimap^2-\Phimap}$ controls $(\Phimap-\Id)$ only on inputs $\Phimap(x)$,
+not on all of $C(D)$. Concretely, with $j\colon\ell^{\infty}_2\to\ell^{\infty}_4$,
+$j(x_1,x_2)=(x_1,x_2,x_1,x_2)$ and
+$C=\bigl(\begin{smallmatrix}\frac12&0&0&\frac12\\0&\frac12&\frac12&0\end{smallmatrix}\bigr)$,
+the map $\Phimap=Cj=\bigl(\begin{smallmatrix}\frac12&\frac12\\\frac12&\frac12\end{smallmatrix}\bigr)$
+is \emph{exactly} idempotent, yet $F=jC$ has
+$\norm{F^2-F}_{\infty\to\infty}=1$. So exact idempotence of $\Phimap$ does not
+imply approximate idempotence of the lift.
+\end{proposition}
+
+% PROV: agent-B/notes/subagent-decomposable-alpha1-stress.md -- depolarizing M_2 projection: eta=0 but a bad CP+coCP decomposition has off-diagonal universal-envelope defect eps/2.
+\begin{proposition}[Bad decompositions of an exact projection]\label{prop:sartre}
+\status{(proved; obstruction)}
+For the depolarizing projection $D(x)=\tfrac12\Tr(x)\Id$ on $M_2$ (so $\eta=0$)
+and the decomposition $\Phimap_0=\eps R$, $\Psi_0=D-\eps R$ with
+$R(x)=\langle0|x|0\rangle\,|0\rangle\langle0|$, both summands are CP and
+$\Phimap=\Phimap_0+\Psi_0\circ\tau=D$, yet the natural lifted map has
+off-diagonal universal-envelope defect $\ge\eps/2$ for every $\eps>0$. Hence no
+estimate controlling the lift can follow from an \emph{arbitrary} supplied
+CP+coCP decomposition.
+\end{proposition}
+
+\noindent (Both obstructions concern the \emph{proof strategy}, not the
+conclusion: for these small examples the actual Jordan defect is zero, since any
+unital idempotent on $M_2$ yields an exact spin-factor product. A genuine failure
+of $O(\eta)$ would need matrix size $\ge3$, where no counterexample is known.)
+
+\subsection{The general decomposable conjecture}
+
+% PROV: agent-B/notes/decomposable-alpha1-route.md, theorem-stack-v0.3 Theorem 5.
+\begin{openproblem}[Decomposable $O(\eta)$]\label{op:decomposable}
+\status{(open; conjectural)}
+If $\Phimap$ is unital positive and almost idempotent with a controlled CP+coCP
+decomposition $\Phimap=\Phimap_0+\Psi_0\circ\tau$
+($\Phimap_0(\Id)+\Psi_0(\Id)=\Id$), then the bridge exponent improves from
+$O(\sqrt\eta)$ to $O(\eta)$.
+\end{openproblem}
+
+By \Cref{prop:decomposable-norm,prop:doubling,prop:sartre}, a proof must either
+select a compatible dilation/lift satisfying the lifted almost-idempotence
+estimate of \Cref{thm:dilation-compatible}, or establish a direct intrinsic
+CP/co-CP \emph{two-hole cancellation} for the Jordan defect using only
+$\norm{\Phimap^2-\Phimap}$ --- expressing the defect as a Cauchy--Schwarz pairing
+of two $O(\sqrt\eta)$ holes, as in \Cref{rem:exponent}. Neither is currently in
+hand. The exponent thus tracks the presence of a dilation: complete positivity
+($=$ a dilation) gives $\eta$; mere positivity gives $\sqrt\eta$; decomposability
+gives $\eta$ exactly when its CP/co-CP dilations can be made compatible.

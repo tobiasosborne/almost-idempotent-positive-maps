@@ -188,6 +188,13 @@ not a dimension-free reconstruction procedure.  Sequentially substituting one
 `O(tau)` convex approximation into another may lose a factor equal to the
 length of the deletion chain.
 
+Follow-up: `agent-B/notes/regular-polygon-retraction-obstruction.md` shows that
+fixed-diameter dense regular polygons are not themselves small-defect examples.
+Exact idempotency forces the affine coordinate lift to carry constant negative
+mass in the dihedrally symmetric optimum.  Thus the paragraph above remains a
+logical warning about non-accumulation, not evidence for an actual regular
+polygon counterexample.
+
 ## Strengthened Redundancy Needed
 
 The redundancy side should therefore be one of the following stronger,

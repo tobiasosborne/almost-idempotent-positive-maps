@@ -122,15 +122,22 @@ map with diagonal $h_{a,a}=-q_a$. For $t>0$,
 \]
 so the diagonal estimate gives
 \[
-  \norm{h_{a,b}}
-  \le \frac{C\eta}{4t\lambda}
-       \big(\norm{a+tb}^2+\norm{a-tb}^2\big)
-  \le \frac{C\eta}{2t\lambda}
-       \big(\norm{a}^2+t^2\norm{b}^2\big).
-\]
-Choosing $t=\norm{a}/\norm{b}$ when $a,b\ne0$ (the zero cases being trivial)
-gives \eqref{eq:faithful-bound}.
+	  \norm{h_{a,b}}
+	  \le \frac{C\eta}{4t\lambda}
+	       \big(\norm{a+tb}^2+\norm{a-tb}^2\big)
+	  \le \frac{C\eta}{2t\lambda}
+	       \big(\norm{a}+t\norm{b}\big)^2.
+	\]
+	Choosing $t=\norm{a}/\norm{b}$ when $a,b\ne0$ (the zero cases being trivial)
+	gives \eqref{eq:faithful-bound}.
 \end{proof}
+
+\noindent
+The hypothesis asks only that $\omega$ be \emph{approximately} invariant
+($\norm{\omega\circ\Phimap-\omega}\le\eta$). The exact-invariance subcase
+$\omega\circ\Phimap=\omega$ (with $\Phimap$ still merely almost idempotent)
+yields the same bound \eqref{eq:faithful-bound} and was obtained independently by
+both authors; \Cref{thm:faithful-approx} is the approximate-invariance extension.
 
 \subsection*{Bare existence is not enough}
 

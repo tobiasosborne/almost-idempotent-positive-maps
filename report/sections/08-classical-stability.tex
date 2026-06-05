@@ -1,0 +1,421 @@
+\section{The commutative case: stability of almost-idempotent stochastic maps}
+\label{sec:classical}
+
+The exact factorization of \Cref{sec:factorization} rests on one open input,
+near-positive projection stability (\Cref{op:npps}). This section develops that
+problem in the \emph{commutative} (classical) setting, where it becomes a
+concrete and appealing question about stochastic matrices, and records the
+substantial partial progress: the sharp exponent, several proved special cases,
+an exact commutative factorization theorem under a checkable geometric
+hypothesis, and the precise remaining obstruction. All constants in this section
+are universal (independent of the matrix size $n$) unless stated otherwise.
+
+\subsection{The classical reduction}
+
+A unital positive map of the commutative algebra $\ell^{\infty}_n=\R^n$ into
+itself is a row-stochastic matrix; the bridge data specialise as follows.
+
+% PROV: standard; agent-B/notes/markov-affine-retraction-formulation.md -- row-stochastic = affine self-map of the simplex; stochastic idempotent = affine retraction.
+\begin{definition}[Stochastic maps and retractions]\label{def:stochastic}
+\status{(consensus)}
+A real $n\times n$ matrix $Q$ is \emph{row-stochastic} if $Q\ge0$ entrywise and
+$Q\Id=\Id$ (rows sum to $1$), where $\Id=(1,\dots,1)$. Equivalently $Q$ is the
+matrix of an affine self-map of the probability simplex $\Delta_n$. Its
+non-idempotence is measured by $\norm{Q^2-Q}_{\infty\to\infty}$, the maximum
+row $\ell^1$-norm of $Q^2-Q$. A \emph{stochastic idempotent} is a row-stochastic
+$E$ with $E^2=E$; these are exactly the affine retractions of $\Delta_n$ onto a
+sub-polytope. A \emph{signed affine retraction} is a matrix $P$ with $P\Id=\Id$
+and $P^2=P$ (rows are signed measures of total mass $1$); its
+\emph{negative mass} is $\operatorname{neg}(p_i)=\sum_j\max(-p_{ij},0)$, and we
+write $\delta=\max_i\operatorname{neg}(p_i)$. The \emph{row polytope} is
+$K=\operatorname{conv}\{p_1,\dots,p_n\}$, the convex hull of the rows.
+\end{definition}
+
+% PROV: agent-B/notes/stochastic-stoquastic-special-cases.md, theorem-stack-v0.3 Theorem 3 commutative reduction -- the canonical conjecture.
+\begin{openproblem}[Classical projection stability]\label{op:classical}
+\status{(open; sharp exponent $1/2$)}
+There are universal constants $\eta_0,C>0$ such that every row-stochastic $Q$
+with $\norm{Q^2-Q}_{\infty\to\infty}\le\eta\le\eta_0$ admits a stochastic
+idempotent $E$ with $\norm{Q-E}_{\infty\to\infty}\le C\sqrt{\eta}$.
+\end{openproblem}
+
+\Cref{op:classical} is the commutative case of \Cref{op:npps}. Within the
+commutative setting, the stochastic formulation and the signed-retraction
+formulation are equivalent up to universal constants:
+
+% PROV: agent-B/notes/subagent-classical-sqrt-stability-proof.md, classical-affine-face-lemmas.md (Lemma 3) -- the equivalence between signed-idempotent and stochastic formulations, with explicit constants.
+\begin{lemma}[Equivalence of the two formulations]\label{lem:classical-equiv}
+\status{(proved)}
+\emph{(i)} If $Q$ is row-stochastic with $\norm{Q^2-Q}_{\infty\to\infty}\le\eta$
+then $P=\theta(2Q-\Id)$ is a signed affine retraction with
+$\norm{P-Q}_{\infty\to\infty}\le C\eta$ and negative mass $\delta\le C\eta$.
+\emph{(ii)} Conversely, if $P$ is a signed affine retraction with negative mass
+$\delta$, then the row-normalised positive parts $q_i=p_i^{+}/\norm{p_i^{+}}_1$
+form a row-stochastic $Q$ with
+\[
+  \norm{P-Q}_{\infty\to\infty}\le2\delta,\qquad
+  \norm{Q^2-Q}_{\infty\to\infty}\le6\delta+4\delta^2 .
+\]
+Hence \Cref{op:classical} for $Q$ and the signed-retraction stability
+``$\operatorname{dist}(P,\text{stochastic idempotents})\le C\sqrt\delta$'' imply
+one another with universal constants.
+\end{lemma}
+
+\noindent The convenience of the signed form is that $P^2=P$ holds
+\emph{exactly}; idempotency can be used as an algebraic identity, with the cost
+of non-positivity quarantined in the small parameter $\delta$. The geometric
+content of $P^2=P$ is that the rows are fixed by $P$ acting on the right, and the
+affine functions on the row polytope interact rigidly with this fixity --- the
+mechanism behind every estimate below.
+
+\subsection{The exponent is sharp}
+
+% PROV: agent-B/notes/rank-one-classical-stability.md, stochastic-stoquastic-special-cases.md (Hume family); experiment agent-B/experiments/classical-projection-stability/explicit_sqrt_family -- explicit 3x3 family, distance 2 sqrt(delta)+O(delta).
+\begin{example}[Hume's sharp family]\label{ex:hume}
+\status{(proved; sharpness)}
+For small $s>0$ set $v_s=(1,-1+s,-s)$, $u_s=(1-s+s^2,-s,0)^{\!\top}$, and
+$P_s=I-u_sv_s^{\!\top}$. Then $P_s\Id=\Id$, $P_s^2=P_s$, the negative mass is
+$\delta=s^2$, and the distance from $P_s$ to \emph{every} stochastic idempotent
+is
+\[
+  2s-2s^2+2s^3=2\sqrt{\delta}+O(\delta).
+\]
+Hence no bound $\operatorname{dist}(P,\,\cdot\,)\le C\delta^{\beta}$ with
+$\beta>\tfrac12$ can hold: the exponent $\tfrac12$ in
+\Cref{op:classical,op:npps} is optimal.
+\end{example}
+
+\subsection{The two core lemmas}
+
+Both lemmas express the rigidity of $P^2=P$ (equivalently $Q^2\approx Q$) against
+affine test functions. We write $\tau=\sqrt{\delta}$ (or $\sqrt\eta$). An affine
+function $h\colon K\to[0,1]$ is called \emph{$1$-Lipschitz} for the row
+$\ell^1$-geometry if $\lvert h(x)-h(y)\rvert\le\norm{x-y}_1$.
+
+% PROV: agent-B/notes/classical-affine-face-lemmas.md (Lemma 1, Corollary 2) -- exposed-face leakage at sqrt scale.
+\begin{lemma}[Affine-face leakage]\label{lem:leakage}
+\status{(proved)}
+Let $Q$ be row-stochastic with $\norm{Q^2-Q}_{\infty\to\infty}\le\eta$, let
+$h\colon\Delta_n\to[0,1]$ be affine, put $m=\max_j h(q_j)$ and
+$d_i=m-h(q_i)\ge0$. Then for every row $i$ and every $\gamma>0$,
+\[
+  q_i\bigl(\{j:h(q_j)\le m-\gamma\}\bigr)\le\frac{d_i+\eta}{\gamma}.
+\]
+In particular a maximiser row ($d_i=0$) sends at most $\sqrt\eta$ of its mass
+below the level $m-\sqrt\eta$: exposed faces are almost closed at the
+square-root scale, and no linear ($O(\eta)$) closure is possible.
+\end{lemma}
+
+\begin{proof}[Proof idea]
+Right-fixity $q_iQ=q_i$ (a row of $Q^2\approx Q$) gives
+$\sum_j q_i(j)\,h(q_j)=h(q_i)+O(\eta)$. Since $0\le h\le1$ and $h(q_j)\le m$, the
+mass on $\{h(q_j)\le m-\gamma\}$ is penalised by at least $\gamma$ per unit,
+forcing it below $(d_i+\eta)/\gamma$. Taking $\gamma=\sqrt\eta$ gives the sharp
+scale.
+\end{proof}
+
+To localise a row at a \emph{vertex} (not merely a face) one needs the vertex to
+be exposed, with a quantitative gap.
+
+% PROV: agent-B/notes/exposed-redundant-dichotomy-target.md (exposedness modulus), exposed-circuit-cancellation.md.
+\begin{definition}[Exposed vertex and exposedness modulus]\label{def:exposed}
+\status{(consensus)}
+A row vertex $v$ of $K$ is \emph{$(\rho,\kappa)$-exposed} if there is an affine
+$h\colon K\to[0,1]$ with $h(v)=0$ and $h(p_i)\ge\kappa$ for every row $p_i$
+with $\norm{p_i-v}_1\ge\rho$. Thus exposedness is measured on the outside
+\emph{row set}, not on every point of $K$. The \emph{exposedness modulus} is
+\[
+  e_v(\rho)=\sup_{h}\ \min_{\substack{i\\ \norm{p_i-v}_1\ge\rho}}h(p_i),
+\]
+the supremum over affine $h\colon K\to[0,1]$ with $h(v)=0$ (with the empty
+minimum interpreted as $1$). The vertex is \emph{well-exposed at the
+square-root scale} if $e_v(\rho)\ge c\sqrt\delta$ for some
+$\rho=O(\sqrt\delta)$.
+\end{definition}
+
+% PROV: agent-B/notes/exposed-circuit-cancellation.md (one-row concentration + multi-vertex cancellation), subagent-exposed-redundant-classical-v0.1.md.
+\begin{lemma}[Exposed-vertex concentration and circuit cancellation]\label{lem:exposed-circuit}
+\status{(proved)}
+Let $P$ be a signed affine retraction with negative mass $\le\delta$.
+\emph{(i) (Concentration.)} If a row vertex $v$ is $(\rho,\kappa)$-exposed, then
+its positive part concentrates near $v$: writing $U_v=\{j:\norm{p_j-v}_1<\rho\}$,
+there is a probability vector $\pi_v$ supported on $U_v$ with
+\[
+  \norm{v-\pi_v}_1\le C\Bigl(\frac{\delta}{\kappa}+\delta\Bigr).
+\]
+\emph{(ii) (Circuit cancellation.)} If $v_1,\dots,v_k$ are pairwise
+$\norm{\cdot}_1$-separated row vertices, each $(\rho,\kappa)$-exposed, then for
+all real coefficients $c_a$,
+\[
+  \Bigl\lVert\sum_{a=1}^{k}c_a v_a\Bigr\rVert_1
+   \ge\Bigl(1-C\bigl(\tfrac{\delta}{\kappa}+\delta\bigr)\Bigr)\sum_{a=1}^{k}\lvert c_a\rvert .
+\]
+For $\kappa\ge c\sqrt\delta$ both right-hand sides are $1-O(\sqrt\delta)$.
+\end{lemma}
+
+\begin{proof}[Proof idea]
+(i) Applying the exposing $h$ to the right-fixity identity $\sum_j v_j h(p_j)=0$
+and splitting $v=v^{+}-v^{-}$ forces $v^{+}(U_v^{c})\le\delta/\kappa$ (mass far
+from $v$ is penalised by $\kappa$); truncating and normalising the positive part
+on $U_v$ gives $\pi_v$. (ii) The $U_a$ are pairwise disjoint by separation, so
+the $\pi_a$ have disjoint supports and $\lVert\sum c_a\pi_a\rVert_1=\sum|c_a|$;
+the triangle inequality with (i) transfers this to the $v_a$.
+\end{proof}
+
+\subsection{Proved special cases}
+
+The following classes of $P$ (equivalently $Q$) satisfy \Cref{op:classical} with
+universal constants in their stated regimes. They are not a single nested chain:
+the rank-one and line-segment results are complementary, line-segments are the
+one-dimensional simplex case, well-exposed separated vertices force a simplex
+but are not equivalent to arbitrary simplex geometry, and the cluster theorem
+packages exposed representative geometries with transient rows.
+
+% PROV: agent-B/notes/rank-one-classical-stability.md.
+\begin{theorem}[Rank-one stability]\label{thm:rank-one}
+\status{(proved)}
+There are universal constants $\delta_0,C>0$ such that, if
+$0\le\delta\le\delta_0$ and $P=I-uv^{\!\top}$ is a signed affine retraction
+(so $\sum_j v_j=0$, $v^{\!\top}u=1$) with negative mass $\le\delta$, there is a
+stochastic idempotent $E$ with
+$\norm{P-E}_{\infty\to\infty}\le C\sqrt\delta$. This class contains Hume's sharp
+family (\Cref{ex:hume}).
+\end{theorem}
+
+\begin{proof}[Proof idea]
+Normalising the positive and negative masses of $v$, the negative-mass bound
+forces at most one positive and one negative coordinate of $u$ to exceed
+$\sqrt\delta$ in size; the corresponding two-state rounding gives a stochastic
+idempotent within $C\sqrt\delta$. The $\sqrt\delta$ arises because controlling a
+product $u_iv_j$ by $\delta$ forces one factor to be $O(\sqrt\delta)$.
+\end{proof}
+
+% PROV: agent-B/notes/line-segment-classical-stability.md, simplex-classical-stability.md.
+\begin{theorem}[Line-segment and simplex stability]\label{thm:simplex}
+\status{(proved)}
+There are universal constants $\delta_0,C>0$ such that the following holds for
+every signed affine retraction $P$ with negative mass $\le\delta\le\delta_0$.
+\emph{(i)} If the row polytope $K$ has affine dimension $\le1$ (a point or
+segment), there is a stochastic idempotent $E$ with
+$\norm{P-E}_{\infty\to\infty}\le C\sqrt\delta$.
+\emph{(ii)} If $K$ is a \emph{simplex} with vertices $r^1,\dots,r^m$ among the
+rows, the same conclusion holds, with a constant $C$ \textbf{independent of the
+number of vertices $m$} and of $n$.
+\end{theorem}
+
+\begin{proof}[Proof idea]
+For a simplex, each row has unique barycentric coordinates $\lambda_a(\cdot)$.
+Right-fixity $r^aP=r^a$ tested against $\lambda_b$ gives
+$\sum_j r^a_j\lambda_b(j)=\delta_{ab}$, hence $\sum_j r^a_j(1-\lambda_a(j))=0$;
+near-positivity then concentrates the positive mass of $r^a$ on its near-vertex
+slice $U_a=\{\lambda_a\ge1-\sqrt\delta\}$, and these slices are pairwise
+disjoint. Normalising the slice restrictions to probability vectors $\pi_a$ and
+rounding every row to the same barycentric mixture of the $\pi_a$ produces a
+stochastic idempotent within $C\sqrt\delta$. No vertex-count factor appears
+because the barycentric decomposition is convex.
+\end{proof}
+
+% PROV: agent-B/notes/well-exposed-classical-stability.md.
+\begin{theorem}[Well-exposed vertices force a simplex]\label{thm:well-exposed}
+\status{(proved)}
+There are universal constants $\delta_0,c,C>0$ such that the following holds.
+Let $P$ be a signed affine retraction with negative mass
+$\le\delta\le\delta_0$. If every vertex of the row polytope $K$ is pairwise
+separated and $(\rho,\kappa)$-exposed with $\rho\le C\sqrt\delta$ and
+$\kappa\ge c\sqrt\delta$, then the vertices are affinely independent --- so
+$K$ is a simplex --- and \Cref{thm:simplex} gives a stochastic idempotent within
+$C\sqrt\delta$.
+\end{theorem}
+
+\begin{proof}[Proof idea]
+A nontrivial affine dependence $\sum_a c_a v_a=0$ (with $\sum c_a=0$,
+$\sum|c_a|>0$) would contradict the circuit-cancellation bound of
+\Cref{lem:exposed-circuit}(ii), which forces $\lVert\sum c_a v_a\rVert_1>0$.
+\end{proof}
+
+% PROV: agent-B/notes/cluster-representative-classical-stability.md.
+\begin{theorem}[Cluster-representative stability]\label{thm:cluster}
+\status{(proved)}
+There are universal constants $\delta_0,C>0$ such that the following holds for
+every signed affine retraction $P$ with negative mass $\le\delta\le\delta_0$.
+Suppose there are representative rows $r^1,\dots,r^m$ with parameters
+$\rho,\kappa,\gamma>0$ such that: the $r^a$ are pairwise $2\rho$-separated; each
+$r^a$ is $(\rho,\kappa)$-exposed (so the clusters
+$U_a=\{j:\norm{p_j-r^a}_1<\rho\}$ are disjoint); and every row outside all
+clusters is within $\gamma$ of $\operatorname{conv}\{r^a\}$. Then there is a
+stochastic idempotent $E$ with
+\[
+  \norm{P-E}_{\infty\to\infty}\le C\Bigl(\rho+\gamma+\tfrac{\delta}{\kappa}+\delta\Bigr).
+\]
+In particular $\rho,\gamma=O(\sqrt\delta)$ and $\kappa\ge c\sqrt\delta$ give the
+$O(\sqrt\delta)$ bound, with $C$ \textbf{independent of $m$, $n$, and the number
+of transient rows}.
+\end{theorem}
+
+\begin{proof}[Proof idea]
+Concentrate each representative to $\pi_a$ on $U_a$ via
+\Cref{lem:exposed-circuit}(i); build $E$ with rows $\pi_a$ on the clusters and
+the prescribed convex combination of the $\pi_a$ off the clusters. Disjoint
+supports give $E^2=E$; the error is the sum of the cluster radius, the
+reconstruction error, and the concentration error, with no accumulation over $m$
+because the reconstruction coefficients form probability vectors.
+\end{proof}
+
+\subsection{Exact commutative factorization}
+
+The cluster-representative theorem packages directly into an exact
+positive-map factorization --- the commutative instance of
+\Cref{thm:factorization}, but now \emph{unconditional} apart from a checkable
+geometric hypothesis on the spectral idempotent.
+
+% PROV: agent-B/theory/classical-cluster-factorization-theorem.md.
+\begin{theorem}[Exact commutative factorization]\label{thm:classical-factorization}
+\status{(proved, under the cluster geometry hypothesis)}
+There are universal constants $\eta_0,C>0$ such that the following holds. Let
+$Q$ be row-stochastic with
+$\eta=\norm{Q^2-Q}_{\infty\to\infty}\le\eta_0$, and suppose the rows of
+$P=\theta(2Q-\Id)$ satisfy the cluster-representative geometry of
+\Cref{thm:cluster} with $\rho,\gamma=O(\sqrt\eta)$,
+$\kappa\ge c\sqrt\eta$. Then there exist a finite-dimensional commutative
+special JB-algebra $J$ and unital positive maps
+$\Delta\colon J\to\ell^{\infty}_n$, $\Upsilon\colon\ell^{\infty}_n\to J$
+with
+\[
+  \Upsilon\Delta=\mathrm{id}_J,\qquad
+  \norm{\Delta\Upsilon-Q}_{\infty\to\infty}\le C\sqrt{\eta},\qquad
+  \Upsilon(\Delta x\cdot\Delta y)=x\bullet y ,
+\]
+where $\cdot$ is pointwise product and $\bullet$ the JB product of $J$.
+\end{theorem}
+
+\begin{proof}[Proof idea]
+\Cref{thm:cluster} gives a stochastic idempotent $E$ with
+$\norm{E-Q}\le C\sqrt\eta$. Set $J=E(\ell^{\infty}_n)$; by
+\Cref{thm:effros-stormer} (commutative case) $J$ is a JB-algebra under
+$x\bullet y=E(xy)$. Take $\Delta=$ inclusion, $\Upsilon=E$. The same hypothesis
+admits a \emph{global exposed-hull} form: if every row of $P$ is within
+$O(\sqrt\eta)$ of $\operatorname{conv}W_{\rho,\kappa}$, where $W_{\rho,\kappa}$ is
+the set of $(\rho,\kappa)$-exposed vertices, the conclusion holds (pass to a
+maximal $4\rho$-separated subset and apply \Cref{thm:cluster}).
+\end{proof}
+
+\subsection{Reductions toward the general case}
+
+Two reductions show how close the general theorem is, and where it is stuck.
+
+% PROV: agent-B/notes/approximate-simplexity-reduction.md, robust-approximate-simplexity-reduction.md.
+\begin{proposition}[Approximate-simplexity reduction]\label{prop:approx-simplex}
+\status{(proved; reduces \Cref{op:classical} to a coordinate hypothesis)}
+Suppose the rows of $P$ admit \emph{$\gamma$-approximate simplex coordinates}:
+representatives $r^a$ and affine $\lambda_a$ with $\sum_a\lambda_a=1$,
+$\lambda_a(r^b)=\delta_{ab}$ and
+$\norm{p_i-\sum_a\lambda_a(p_i)r^a}_1\le\gamma$. If the $\lambda_a$ are
+nonnegative (or, more generally, have coefficient negative mass $O(\delta)$),
+then there is a stochastic idempotent $E$ with
+$\norm{P-E}_{\infty\to\infty}\le C(\sqrt\delta+\gamma)$. Consequently
+\Cref{op:classical} follows from proving that every near-positive signed affine
+retraction has $\gamma=O(\sqrt\delta)$ approximate simplex coordinates with
+$O(\delta)$ coordinate negative mass.
+\end{proposition}
+
+\noindent The robustness ($O(\delta)$ coordinate negative mass suffices, not
+exact nonnegativity) is essential: it converts the target from a positivity
+statement into a metric one. The reduction is sharp in the sense that coordinate
+negative mass $O(\sqrt\delta)$ would only give $O(\delta^{1/4})$, so the
+\emph{$O(\delta)$} coordinate bound is the genuine target.
+
+A second route rules out non-simplex geometry whenever the offending affine
+dependence has bounded affine witnesses.
+
+% PROV: agent-B/notes/parallelogram-classical-stability.md.
+\begin{proposition}[Bounded-coordinate dependencies are impossible]\label{prop:parallelogram}
+\status{(proved)}
+Suppose rows $r_1,\dots,r_k$ have distinct binary codewords realised by affine
+functions $s_1,\dots,s_m\colon K\to[0,1]$ (i.e.\ $s_\ell(r_a)\in\{0,1\}$). Then
+for all coefficients $c_a$,
+\[
+  \Bigl\lVert\sum_a c_a r_a\Bigr\rVert_1\ge(1-Cm\sqrt\delta)\sum_a\lvert c_a\rvert .
+\]
+In particular, for $m\sqrt\delta$ small, the rows are affinely independent: an
+exact parallelogram row polytope ($r_{00}+r_{11}=r_{10}+r_{01}$) and, more
+generally, any bounded-complexity product-of-simplices geometry with affine
+$[0,1]$-coordinates, cannot occur. The constant degrades with the number $m$ of
+coordinate bits, so this does not by itself settle geometries needing
+unboundedly many witnesses.
+\end{proposition}
+
+\subsection{The remaining obstruction}
+
+What is left open is exactly the gap between ``well-exposed/simplex'' (proved)
+and arbitrary row polytopes. The cleanest sufficient statement is:
+
+% PROV: agent-B/notes/simultaneous-skeleton-reduction.md (global exposed-hull), exposed-redundant-dichotomy-target.md.
+\begin{openproblem}[Global exposed-hull lemma]\label{op:exposed-hull}
+\status{(open)}
+There are universal $c,C>0$ such that for every near-positive signed affine
+retraction with negative mass $\le\delta$, taking $\rho=C\sqrt\delta$ and
+$W_{\rho,\kappa}=\{$vertices $v:e_v(\rho)\ge\kappa\}$ with
+$\kappa=c\sqrt\delta$, every row is within $C\sqrt\delta$ of
+$\operatorname{conv}W_{\rho,\kappa}$.
+\end{openproblem}
+
+By \Cref{thm:classical-factorization} (global form), \Cref{op:exposed-hull}
+implies \Cref{op:classical}, hence the exact commutative factorization
+unconditionally. The difficulty is genuinely global: a \emph{pointwise}
+exposed-or-redundant dichotomy (each vertex is either well-exposed or
+$O(\sqrt\delta)$-redundant) is \emph{not} sufficient, because redundancy can be
+circular and sequential deletion can accumulate error.
+
+% PROV: agent-B/notes/simultaneous-skeleton-reduction.md (Warning), subagent-skeleton-reduction-v0.1.md, regular-polygon-retraction-obstruction.md.
+\begin{remark}[The regular-polygon warning, and why it is not a counterexample]
+\label{rem:regular-polygon}
+\status{(proved)}
+A dense regular $m$-gon, as an abstract convex body, makes pointwise deletion
+accumulate: every vertex is $O(\sqrt\delta)$-redundant yet none is well-exposed
+at the $\sqrt\delta$ scale, so $W_{\rho,\kappa}$ can be empty. This shows the
+pointwise dichotomy is insufficient and forces the global formulation of
+\Cref{op:exposed-hull}. However, regular polygons \emph{cannot} arise as the row
+polytope of a near-positive signed affine retraction. Symmetrising any affine
+coordinate system over the dihedral group does not increase its maximum negative
+mass, and every resulting dihedrally-symmetric coordinate system on a
+fixed-diameter regular $m$-gon has vertex negative mass at least
+\[
+  \frac{\sqrt3}{\pi}-\frac13\approx0.218-o_m(1),
+\]
+bounded away from $0$. So the regular polygon is a logical warning about the
+quantifier structure, not a genuine obstruction; a true counterexample to
+\Cref{op:exposed-hull} would need non-regular geometry with its offending
+feature shrunk to the $O(\sqrt\delta)$ scale, at which point it no longer
+violates the desired conclusion.
+\end{remark}
+
+\subsection{Status of the commutative program}
+
+\Cref{tab:classical} summarises. Extensive low-dimensional searches and
+probes (random $3\times3$ families, four-row quadrilaterals, tensor powers of
+Hume's family, direct sums, and non-simplex probes) have found \emph{no}
+counterexample to \Cref{op:classical}; the obstruction is the dimension-free
+reconstruction of an exposed skeleton, not a suspected failure of the conjecture.
+
+\begin{table}[ht]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{0.52\linewidth}p{0.42\linewidth}@{}}
+\toprule
+Statement & Status \\
+\midrule
+Equivalence of signed/stochastic forms (\Cref{lem:classical-equiv}) & proved \\
+$\sqrt{}$ exponent is sharp (Hume, \Cref{ex:hume}) & proved \\
+Affine-face leakage; exposed-circuit cancellation & proved \\
+Rank-one; line-segment; simplex (vertex-count-free) & proved \\
+Well-exposed $\Rightarrow$ simplex; cluster-representative & proved \\
+Exact commutative factorization under cluster geometry (\Cref{thm:classical-factorization}) & proved (conditional on geometry) \\
+Approximate-simplexity / robust reduction (\Cref{prop:approx-simplex}) & proved (reduction) \\
+Bounded-coordinate dependencies impossible (\Cref{prop:parallelogram}) & proved \\
+Global exposed-hull lemma (\Cref{op:exposed-hull}) & open \\
+Full classical projection stability (\Cref{op:classical}) & open \\
+\bottomrule
+\end{tabular}
+\caption{Status of the commutative projection-stability program.}
+\label{tab:classical}
+\end{table}

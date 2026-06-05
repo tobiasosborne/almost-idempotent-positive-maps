@@ -1,0 +1,365 @@
+\section{The abstract structure theorem (Layer~1)}\label{sec:programme}
+
+The bridge (\Cref{sec:bridge}) produces an $\eps$-JB algebra; the factorization
+routes (\Cref{sec:factorization,sec:classical}) bypass the abstract structure
+theory for the channel application. This section concerns the standalone
+\emph{abstract} structure theorem --- Kitaev's main theorem, Jordan-ised --- which
+says that an $\eps$-JB algebra is, up to a controlled deformation, a genuine
+JB-algebra. It is open. We state the target, the cohomological strategy, the one
+quantitative obstruction, and the substantial recent progress: a dimension-free
+\emph{exact-adjoint splitting benchmark} that resolves the obstruction at the
+level of exact cocycles for every simple factor, together with a precise account
+of what still separates the benchmark from the full theorem.
+
+\subsection{The target}
+
+% PROV: Kitaev2024 approximate_algebras.tex:460-462 (th_main) -- C*-statement; ours is the declared Jordan analogue (open).
+\begin{openproblem}[Jordan structure theorem]\label{op:jordan-structure}
+\status{(open)}
+There are universal constants $C,\eps_{0}>0$ \emph{(independent of dimension)}
+such that for every $\eps<\eps_{0}$ and every finite-dimensional $\eps$-JB algebra
+$\mathcal{A}$ there exist a genuine finite-dimensional JB-algebra $\mathcal{B}$
+and a linear bijection $v\colon\mathcal{B}\to\mathcal{A}$ that is a
+$C\eps$-Jordan-isomorphism:
+\[
+   \norm{v(\Id_{\mathcal{B}})-\Id_{\mathcal{A}}}\le C\eps,\qquad
+   \norm{v(b\bullet b')-v(b)\bullet v(b')}\le C\eps\,\norm{b}\,\norm{b'},
+\]
+and $(1-C\eps)\norm{b}\le\norm{v(b)}\le(1+C\eps)\norm{b}$ for all
+$b,b'\in\mathcal{B}$.
+\end{openproblem}
+
+This is Kitaev's statement~\cite[Theorem \texttt{th\_main}]{Kitaev2024} with the
+associative product replaced by the Jordan product and ``$C^{*}$-algebra'' by
+``JB-algebra''. What we can state is the strategy and the precise point where the
+dimension-free constant is in question.
+
+\subsection{Strategy and vocabulary}
+
+Kitaev builds the model algebra $\mathcal{B}$ incrementally and controls the
+error at each step cohomologically. The Jordan programme mirrors four parts.
+An \emph{idempotent element} is $e$ with $e\bullet e=e$; a \emph{Jordan frame} is
+a list of nonzero pairwise-orthogonal idempotents summing to $\Id$ (the analogue
+of diagonal matrix units); the \emph{Peirce decomposition} of an idempotent $e$
+splits $\mathcal A$ into the $1,\tfrac12,0$ eigenspaces of $L_e\colon a\mapsto
+e\bullet a$; a \emph{derivation} is a linear $D$ with
+$D(a\bullet b)=Da\bullet b+a\bullet Db$ (the $D$ form the Lie algebra of
+$\Aut(\mathcal A)$).
+\begin{enumerate}[label=\textbf{(\alph*)},leftmargin=*]
+  \item \textbf{Approximate idempotents / Jordan frame.} Produce elements with
+    $\norm{e\bullet e-e}$ small, not near $0$ or $\Id$. The spectral idempotent
+    $P$ of \Cref{sec:spectral} is a \emph{map-level} device; it does not by
+    itself produce idempotent \emph{elements} of $A$, so this is a separate open
+    step (in the channel application one instead uses the ambient $\Bsa$).
+  \item \textbf{Approximate Peirce decomposition.} For an approximate idempotent
+    $L_e$ has spectrum clustered near $\{0,\tfrac12,1\}$, giving an approximate
+    Peirce splitting with $O(\eps)$ cross-terms.
+  \item \textbf{Approximate coordinatization.} On a frame of rank $\ge3$ the
+    Jordan--von Neumann--Wigner coordinatization~\cite{JordanVonNeumannWigner1934}
+    identifies the algebra with Hermitian matrices over a coordinate $*$-algebra;
+    the approximate version reads off coordinates up to $O(\eps)$, producing a
+    candidate $\mathcal B$ and a linear inclusion $v\colon\mathcal B\to\mathcal A$
+    multiplicative up to a (possibly large) $\delta$.
+  \item \textbf{Error reduction.} Replace $v$ by a nearby map whose defect is
+    $O(\eps)$, \emph{uniformly in dimension}. This is the cohomological heart,
+    treated below.
+\end{enumerate}
+
+\subsection{The cohomological error reduction}
+
+% PROV: ORIGINAL agent-A/theory/01-error-reduction.md; agent-B/notes/next-arrow-to-newton-error-reduction.md -- Newton step, splitting, next-arrow.
+Write $g(b,b')=v(b\bullet b')-v(b)\bullet v(b')$ for the multiplicativity defect
+of the inclusion $v$ from step (c); it is symmetric with $\norm{g}\le\delta$.
+Linearizing the Jordan identity ($\mathcal B$ exact, $\mathcal A$ only $\eps$-JB)
+shows $g$ is an \emph{$\eps$-approximate Jordan $2$-cocycle}. The Jordan
+$2$-coboundary of a linear $h\colon\mathcal B\to\mathcal A$ is
+\[
+  (d^{1}h)(b,b')=v(b)\bullet h(b')+h(b)\bullet v(b')-h(b\bullet b').
+\]
+All cochain norms below are injective order-unit norms:
+\[
+  \norm{\theta}_{\mathrm{inj}}
+   =\sup_{\norm{x_i}\le1}\norm{\theta(x_1,\dots,x_k)} .
+\]
+We write $\operatorname{dist}(\theta,\Img d^1)$ for the distance in this norm.
+For an exact product $\jp$ and a unit-normalized symmetric $2$-cochain
+$\theta(\Id,x)=0$, the linearized Jordan-identity defect is
+\[
+\begin{aligned}
+  (J\theta)(a,b)
+  ={}&\theta(a^2,a\jp b)+a^2\jp\theta(a,b)
+      +(a\jp b)\jp\theta(a,a) \\
+    &-\theta(a^2\jp b,a)-a\jp\theta(a^2,b)
+      -a\jp\bigl(b\jp\theta(a,a)\bigr).
+\end{aligned}
+\]
+This is the first-order part of
+$(a*a)*(b*a)-((a*a)*b)*a$ for $x*y=x\jp y+\theta(x,y)$; the informal symbol
+$d^2\theta$ in older internal notes is not used as a separate cohomological
+differential here. Below the actual first-order operator is always $J\theta$
+(with quadratic error terms handled separately in the Newton step).
+Two ingredients drive a Newton iteration:
+\begin{itemize}[leftmargin=*]
+  \item a \emph{splitting} (right inverse) $s$ of $d^1$ with
+    $\norm{s}\le K$: a recipe $h=sg$ with $d^1h=g$ on exact cocycles;
+  \item a \emph{next-arrow (cocycle-projection) estimate}: every approximate
+    cocycle $\theta$ is within $K'\norm{J\theta}$ of an exact one, so that
+    $g$ may be corrected.
+\end{itemize}
+Setting $\tilde v=v-h$ replaces $\delta$ by
+$O(\delta^2+(K+K')\eps)$; iterating the Newton step
+\[
+  \delta\ \longmapsto\ C(K,K')\,(\eps+\delta^2)
+\]
+drives small $\delta$ to $O(\eps)$. \emph{The theorem reduces to: are $K,K'$
+dimension-free, in the order-unit norm?} (The Newton bookkeeping itself is
+verified, conditional on $K,K'$.)
+
+The two qualitative algebraic inputs are classical.
+
+% PROV: ChuRusso2016 (Thm 1.1/1.2) via agent-A/notes/ingestion-results-2026-06-01.json; Penico1951. Extraction-level provenance; primary PDF byte-check pending.
+\begin{theorem}[Whitehead lemmas for Jordan algebras]\label{thm:whitehead}
+\status{(cited; source-extracted, primary byte-check pending)}
+Let $J$ be a finite-dimensional semisimple Jordan algebra over a field of
+characteristic $0$ and $M$ a finite-dimensional $J$-module. Then every derivation
+$J\to M$ is inner ($H^{1}(J,M)=0$, Jacobson); and if $J$ is separable, every
+Jordan $2$-cocycle is a coboundary ($H^{2}(J,M)=0$, Penico).
+\end{theorem}
+
+% PROV: FarautKoranyi1994 via agent-A/notes/ingestion-results-2026-06-01.json (item 5). Extraction-level provenance.
+\begin{proposition}[Compactness of $\Aut(J)$]\label{prop:aut-compact}
+\status{(cited; source-extracted, primary byte-check pending)}
+For a finite-dimensional Euclidean Jordan algebra $J$, $\Aut(J)$ is a compact
+subgroup of the orthogonal group of the trace inner product; every automorphism
+preserves spectra, hence the order-unit norm. Normalized Haar averaging over
+$\Aut(J)$ is therefore available.
+\end{proposition}
+
+The vanishing $H^{1}=H^{2}=0$ makes the correction step possible \emph{in
+principle}; the issue is its \emph{size}. Crucially, Haar averaging over
+$\Aut(J)$ is a norm-one \emph{projection} onto invariants but is \emph{not} a
+right inverse to $d^1$; the inverse on the non-invariant cochain components is
+exactly where dimension can enter.
+
+\subsection{The rank obstruction}
+
+The single quantitative difficulty can be named precisely.
+
+% PROV: ORIGINAL agent-A/theory/02-spin-splitting.md (rank obstruction), agent-B/notes/cochain-norm-conversion-caveat.md.
+\begin{proposition}[The order-vs-Frobenius gap is exactly $\sqrt{\mathrm{rank}}$]
+\label{prop:rank-gap}
+\status{(proved)}
+On a simple Euclidean Jordan algebra of rank $r$, with order-unit norm
+$\norm{a}_{\mathrm{op}}=\max_i\lvert\lambda_i(a)\rvert$ and Frobenius norm
+$\norm{a}_2=(\sum_i\lambda_i(a)^2)^{1/2}$,
+\[
+  \norm{a}_{\mathrm{op}}\le\norm{a}_2\le\sqrt{r}\,\norm{a}_{\mathrm{op}},
+\]
+and the upper ratio $\sqrt r$ is attained at $a=\Id$. Thus
+$r=2$ for spin factors (dimension-free), $r=n$ for $H_n(\R/\C/\mathbb H)$
+(growing), $r=3$ for the Albert algebra.
+\end{proposition}
+
+The cohomological splitting is known to be dimension-free in the \emph{Frobenius}
+norm: the Casimir idempotent of the multiplication algebra $M(J)$, written as a
+Haar average over the compact unitary group $U(M(J))$ of
+\emph{Frobenius}-isometries, has projective tensor norm $\le1$, giving
+$\norm{s}_{\mathrm{F}}=1/\sigma_{\min}(d^1)=O(1)$ (confirmed numerically:
+$\dim\Ker d^1=\dim\mathrm{Der}(J)$ matched exactly, and $1/\sigma_{\min}$ stays
+$\le1$ and decreasing for $H_n(\R/\C)$ and spin out to large $n$). This is
+\emph{not} enough: $U(M(J))$-isometries are not order-isometries
+(\Cref{prop:aut-compact} gives only $\Aut(J)$ for the order norm), so the
+Frobenius bound need not survive the conversion to the order-unit norm, with a
+worst-case loss of $\sqrt r$. Two caveats forbid cheap fixes:
+
+% PROV: agent-B/notes/cochain-norm-conversion-caveat.md, nuclear-rank-one-route-caveat.md.
+\begin{remark}[Why a Frobenius splitting cannot simply be converted]\label{rem:cochain-caveats}
+\status{(proved; obstruction)}
+On $H_n(\R)$ the linear map $h(x)=x_{11}\Id$ has $\norm{h}_{\mathrm{op}}=1$,
+$\norm{h}_{\mathrm F}=\sqrt n$, and an order-bounded coboundary
+$\norm{d^1h}_{\mathrm{op}}\le3$, yet every primitive of $d^1h$ has Frobenius norm
+$\ge\sqrt n$. So an order-bounded coboundary can force a $\sqrt n$ Frobenius
+primitive: one must not seek Frobenius-bounded primitives, only order-bounded
+ones. Likewise the rank-one decomposition route fails: the identity on the
+trace-zero part of $H_n(\C)$ has nuclear norm $\ge\dim\ge n^2$ while its operator
+norm is $1$, so summing rank-one primitive estimates loses dimension. The
+splitting must be estimated \emph{directly} in the order norm.
+\end{remark}
+
+\subsection{The exact-adjoint splitting benchmark}
+
+The following results (Agent~B, 2026-06-05) resolve the obstruction at the level
+of \emph{exact} cocycles in the \emph{adjoint} module $M=\mathcal B$: a
+dimension-free order-unit-norm splitting of $d^1$ exists for every simple factor
+and, by a summand-count-free direct-sum reduction, for every finite-dimensional
+JB-algebra. This is a major step; it is \emph{not} yet \Cref{op:jordan-structure}
+(see \Cref{ssec:layer1-open}). We mark these
+\status{(proved; exact-adjoint benchmark)}.
+
+% PROV: agent-B/notes/adjoint-spin-splitting-theorem.md, agent-A/theory/02-spin-splitting.md (independent confirmation).
+\begin{proposition}[Spin factors]\label{prop:spin-splitting}
+\status{(proved; exact-adjoint benchmark)}
+For a spin factor $V=\R\Id\oplus H$ there is an $O(H)$-equivariant right inverse
+$S$ of $d^1$ (adjoint module) with
+$\norm{Sf}_{\mathrm F}\le2\norm{f}_{\mathrm{inj}}$;
+by the rank-$2$ norm comparison (\Cref{prop:rank-gap}) the order-unit constant is
+$\norm{S}_{\mathrm{op}\to\mathrm{op}}\le4\sqrt2$, \emph{independent of}
+$\dim H$. The associated next-arrow estimate also holds: a normalized adjoint
+$2$-cochain $\theta$ with $\theta(\Id,z)=0$ obeys
+$\operatorname{dist}(\theta,\Img d^1)\le(2\sqrt2+2)\norm{J\theta}$.
+\end{proposition}
+
+\noindent (Independently obtained by both authors; the rank-$2$ structure makes
+the order and Frobenius norms $\sqrt2$-equivalent, so the spin gap of
+\Cref{prop:rank-gap} is absent.)
+
+% PROV: agent-B/notes/adjoint-direct-sum-reduction.md, spin-direct-sum-adjoint-corollary.md, bounded-rank-adjoint-reduction.md; agent-B/notes/response-to-agent-a-v0.12-layer1-caveat.md (mixed Peirce-1/2 caveat).
+\begin{proposition}[Direct sums]\label{prop:direct-sum}
+\status{(proved; exact-adjoint benchmark)}
+If $\mathcal B=\bigoplus_{r}\mathcal B_r$ (order-unit norm $=\max_r$) and each
+factor has an exact adjoint splitting with constant $K_r$, then $\mathcal B$ has
+one with constant $\max_r K_r+1$, \emph{independent of the number of summands}
+(off-block components are recovered by $P_r f(e_r,\cdot)$, with no sum over $r$).
+\end{proposition}
+
+% PROV: agent-B/notes/response-to-agent-a-v0.12-layer1-caveat.md.
+\begin{remark}[Scope of summand-count independence]\label{rem:directsum-scope}
+\status{(proved)}
+\Cref{prop:direct-sum} is for the adjoint (or block-respecting) module. For an
+\emph{arbitrary} Jordan module the coboundary need not be block-diagonal even
+when cross products vanish in $\mathcal B$: central idempotents can act with
+Peirce eigenvalue $\tfrac12$ on a module component (e.g.\ for $\R e_1\oplus\R e_2$
+the off-diagonal Peirce module of $H_2(\R)$ has both $e_i$ acting by $\tfrac12$).
+Such mixed Peirce-$\tfrac12$ components must be controlled separately; this is
+the module-side qualification on summand-count independence.
+\end{remark}
+
+% PROV: agent-B/notes/commutative-scalar-module-splitting.md, commutative-scalar-cocycle-projection-theorem.md.
+\begin{proposition}[Commutative scalar modules]\label{prop:comm-scalar}
+\status{(proved)}
+Algebraically, every finite-dimensional unital Jordan $\R^m$-module splits into
+one-dimensional modules with action $x\cdot m=\ell(x)m$, where $\ell(x)=x_k$
+(coordinate) or $\ell(x)=\tfrac12(x_p+x_q)$ (half-sum). In the associated
+max-sector norm, the support-unit formula $Sf(x)=f(x,s)$ (with $s=e_k$ resp.\
+$e_p+e_q$) is a norm-one right inverse, and $\Pi=d^1S$ is a projection onto
+$\Img d^1$ with $\norm{\Pi}\le3$. For arbitrary equivalent module norms this
+statement carries the corresponding complementability constant. In the
+max-sector norm the next-arrow estimate
+$\operatorname{dist}(\theta,\Img d^1)\le12\norm{J\theta}$ holds (sharpened to
+$\le2$ for coordinate modules), including the Peirce-$\tfrac12$ half-sum
+modules.
+\end{proposition}
+
+The hard case is the high-rank matrix factors, where the rank gap of
+\Cref{prop:rank-gap} is real.
+
+% PROV: agent-B/notes/matrix-factor-exact-adjoint-splitting-theorem.md, fixed-frame-peirce-matrix-reduction.md, off-sector-leakage-globalization-theorem.md, real-symmetric/pure-skew/complex-antilinear/quaternionic reconstruction theorems, frame-covariance-and-global-matrix-obstacle.md.
+\begin{theorem}[High-rank matrix factors]\label{thm:matrix-splitting}
+\status{(benchmark; Agent B proof, re-audit pending)}
+There is a universal constant $C$ such that for every $n$ and
+$F\in\{\R,\C,\mathbb H\}$: for an exact adjoint coboundary $f=d^1h$ on
+$J=H_n(F)$ there is a derivation $\delta\in\mathrm{Der}(J)$ with
+$\norm{h-\delta}\le C\norm{f}_{\mathrm{inj}}$, i.e.\ $d^1$ has an order-unit
+right inverse of norm $\le C$ \emph{uniformly in $n$}. The construction proceeds
+by: a fixed diagonal-frame Peirce gauge ($\norm{h|_D}\le11\norm{f}$); a coherent
+off-sector leakage globalization (averaged squared diagonal-sign commutator with
+spectral gaps $\{0,\tfrac12,1,\tfrac32\}$); and sector-preserving edge-map
+reconstruction in each Peirce sector --- real-symmetric (constant $60$), complex
+Hermitian ($84$), complex antilinear ($124$), and quaternionic --- via
+random-triple matching-curvature averaging. The fixed-frame splitting is
+frame-covariant (constant $\le11$, projection $\le33$ for every Jordan frame).
+\end{theorem}
+
+% PROV: agent-B/notes/subagent-schur-residual-audit-v0.1.md; subagent-matching-curvature-audit-v0.1.md; pointwise-schur-curvature-caveat.md.
+\begin{remark}[Verification status of \Cref{thm:matrix-splitting}]\label{rem:matrix-audit}
+\status{(audit caveat)}
+The matrix construction is recent and intricate. Two sidecar audits examined
+\emph{earlier} formulations of the sector-reconstruction step (a
+Haagerup/base-vertex route) and found a genuine ordinary-vs-completely-bounded
+gap there; Agent~B's final proof instead uses random-triple matching
+reconstruction, which is designed to avoid that gap, but the audits did not
+re-verify the final argument. A logarithmic Schur-multiplier family is the
+sharpest stress test; its coboundary appears to grow logarithmically as well, so
+it is not a counterexample. We therefore record \Cref{thm:matrix-splitting} as
+an Agent~B proof claim at the exact-adjoint-benchmark level, with independent
+re-audit of the matching-reconstruction steps still outstanding.
+\end{remark}
+
+% PROV: agent-B/notes/finite-dimensional-adjoint-jb-splitting-corollary.md.
+\begin{corollary}[Master adjoint-benchmark corollary]\label{cor:adjoint-benchmark}
+\status{(benchmark; modulo \Cref{rem:matrix-audit})}
+There is a universal constant $C$ such that for every finite-dimensional
+JB-algebra $\mathcal B$ and every exact adjoint coboundary $f=d^1h\in
+C^2(\mathcal B,\mathcal B)$ there is a derivation $\delta$ with
+$\norm{h-\delta}\le C\norm{f}_{\mathrm{inj}}$: the exact-adjoint coboundary
+inversion is dimension-free, uniformly over all $\mathcal B$ and all numbers of
+simple summands.
+\end{corollary}
+
+\subsection{The next-arrow estimate and what remains open}\label{ssec:layer1-open}
+
+The exact-adjoint splitting (\Cref{cor:adjoint-benchmark}) is the right inverse
+for \emph{exact} cocycles. Error reduction additionally needs the
+\emph{next-arrow} estimate $\operatorname{dist}(\theta,\Img d^1)\le K'\norm{J\theta}$
+for \emph{approximate} cocycles, and several further robustness properties.
+Current status of the next-arrow estimate: proved for commutative scalar modules
+(\Cref{prop:comm-scalar}), for the normalized spin sector
+(\Cref{prop:spin-splitting}), and for the diagonal-source ($D\times D$) block of
+matrix factors; \emph{open} for the mixed ($D\times E$) and off-diagonal
+($E\times E$) matrix blocks.
+
+% PROV: agent-B/notes/diagonal-frame-matrix-next-arrow-walsh-target.md.
+\begin{proposition}[Fixed diagonal-frame matrix next-arrow]\label{prop:diag-next-arrow}
+\status{(proved; fixed-frame benchmark)}
+Let $D=\R^n$ act on $M=H_n(F)$, $F\in\{\R,\C,\mathbb H\}$, by the diagonal-frame
+Jordan action $x\cdot m=x\jp m$. For every unit-normalized symmetric
+$2$-cochain $\theta\colon D\times D\to M$,
+\[
+  \operatorname{dist}(\theta,\Img d^1)\le C\norm{J\theta}_{\mathrm{inj}},
+  \qquad
+  \norm{\theta-\Pi_n\theta}_{\mathrm{inj}}\le C'\norm{J\theta}_{\mathrm{inj}},
+\]
+where $\Pi_n=d^1S_n$ is the bounded Rademacher projection onto coboundaries.
+The proof decomposes the off-diagonal entries into endpoint, one-tail, and
+tail-tail Walsh pieces and reconstructs the tail-tail component by a two-density
+sparse-sign identity. This closes the fixed-frame $D\times D$ source block only;
+it is not the full matrix next-arrow theorem.
+\end{proposition}
+
+For the full high-rank matrix next-arrow problem, a fixed frame splits the source
+space as $J=D\oplus E$ (diagonal plus off-diagonal Peirce sectors). The
+$D\times D$ block is \Cref{prop:diag-next-arrow}. The open blocks are
+$D\times E$, expected to require cochain-level leakage control using diagonal
+sign spectral gaps, and $E\times E$, expected to require Peirce
+curvature/matching tests.
+
+% PROV: agent-B/notes/layer1-after-adjoint-benchmark-obligations.md, full-matrix-next-arrow-source-decomposition-target.md, frame-covariance-and-global-matrix-obstacle.md, layer1-output-requirements.md.
+\begin{openproblem}[What separates the benchmark from \Cref{op:jordan-structure}]
+\label{op:layer1-gap}
+\status{(open)}
+To upgrade \Cref{cor:adjoint-benchmark} to the structure theorem one needs, all
+with dimension-free order-unit constants: (i) the pre-cohomological construction
+of approximate idempotent elements, Jordan frames, Peirce splittings, and
+coordinatization maps from an arbitrary $\eps$-JB algebra; (ii) the next-arrow
+estimate for \emph{arbitrary} relevant Jordan modules, not just the adjoint
+module (the mixed Peirce-$\tfrac12$ components of \Cref{rem:directsum-scope} and
+the matrix $D\times E$, $E\times E$ blocks); (iii) tolerance of
+\emph{approximate} module actions, since during the Newton iteration the
+codomain is itself only an $\eps$-JB algebra; (iv) a stable gauge across
+iterations; (v) very possibly an \emph{incremental} assembly (applying error
+reduction only to controlled subalgebras at each merge/extend step), since naive
+frame-averaging of the fixed-frame matrix splitting is ruled out --- the
+averaged diagonal compression acts on the traceless part by a factor $\sim1/n$,
+a rank-sized loss; and (vi) for the \emph{factorization} application, a
+positivity-capable or concrete output (\Cref{rem:layer1-route}), which an
+abstract Jordan isomorphism does not supply.
+\end{openproblem}
+
+In short: the dimension-free order-unit splitting of the Jordan coboundary, long
+the suspected obstruction, is now available at the exact-adjoint benchmark level
+for every finite-dimensional JB-algebra (\Cref{cor:adjoint-benchmark}); the
+structure theorem \Cref{op:jordan-structure} remains open because the
+pre-cohomological construction, approximate-cocycle, arbitrary-module,
+approximate-module, and positivity-output gaps recorded in \Cref{op:layer1-gap}
+are still unresolved. This is genuine and substantial progress over the earlier
+state, in which even the exact splitting was unresolved beyond small dimension.
