@@ -11,10 +11,12 @@ NOTE: this tracks the REORG/ARCHITECTURE build. For the MATH status see agent-A/
 > 1. `git checkout argument-architecture` (this branch; pushed to origin).
 > 2. Read, in order: **this file** → `docs/plans/2026-06-05-argument-architecture-plan.md` (the approved
 >    design) → `definitions/INDEX.md` + `argument/INDEX.md` + `argument/DAG.md` (the current state).
-> 3. **What to do next is in beads:** `bd ready` lists the unblocked tasks (14 seeded, P1 first). The three
->    P1 starts are: **Phase 2b** (seed the rest of the registry, `aipm-w2b`), **Phase 3 af pilot** on
->    `lem-P-properties` (`aipm-0sg`), **Phase 4 CLAUDE.md** (`aipm-ond`). Recommended next = Phase 2b.
->    Claim with `bd update <id> --status in_progress`; close with `bd close <id> --reason "…"`.
+> 3. **What to do next is in beads:** `bd ready` lists the unblocked tasks. Phase 2b shard-seeding
+>    (`aipm-w2b`) is now **DONE** — the registry holds **56 results** (`argument/INDEX.md`). The P1 starts
+>    remaining are: **Phase 3 af pilot** on `lem-P-properties` (`aipm-0sg`, the ready frontier),
+>    **Phase 4 CLAUDE.md** (`aipm-ond`), and **Phase 2b beads-sync** (`aipm-wfp`, replace the dry-run stub).
+>    Recommended next = Phase 3 af pilot. Claim with `bd update <id> --status in_progress`; close with
+>    `bd close <id> --reason "…"`.
 > 4. Sanity-check the build: `sh scripts/check-all.sh` must print `[check-all] OK`. The validation suite
 >    is LIVE in the pre-commit hook — commit normally (do **not** use `core.hooksPath=/dev/null` anymore).
 > 5. Exact recipes for the next two tasks are in the **"Recipes"** section below.
@@ -51,13 +53,26 @@ Plus standing directives: **red-green TDD for all tooling**; **harvest CLAUDE.md
   `argument/{INDEX,DAG}.md`. `scripts/check-all.sh` (defs+linker+tests) wired into
   `.beads/hooks/pre-commit` — **proven to run on commit** (bd hook + suite both green).
 
-Commits: bd init → Phase0 refs → Phase1 (foundation/TDD/core/peripheral) → plan+HANDOFF → Phase2 linker.
+- **Phase 2b (shard-seeding) DONE:** registry grown from 5 → **56 results** (`argument/lemmas/*.md`),
+  harvested from `report/PROVENANCE.md` per-claim ledger + `report/sections/*` + `agent-A|B/theory|notes`.
+  Covers all 6 clusters: bridge sub-lemmas, cited preliminaries (JNW/Effros-Størmer/Whitehead/Aut/VLW/
+  Kadison/power-assoc), faithful-invariant, exact factorization, classical stability (14), Layer-1
+  structure programme (11), exponent (7). Plus **2 new defs** (`def-peirce-decomposition` locked,
+  `def-jordan-frame` draft — HOS lacks the literal term). DAG acyclic, `argument.py --check` =
+  **0 errors, 0 warnings** (56 results, 17 ready, 29 blocked); `check-defs` 0 errors. Authored + adversarially
+  verified (contracts checked against cited sources) via a fan-out workflow. Conditional theorems
+  (thm-factorization, thm-classical-factorization) correctly modeled as `proved` but **blocked** on their
+  open hypotheses (op-npps, op-exposed-hull); obstructions/open-problems carried as first-class nodes.
+  *Still open in Phase 2b:* real beads sync (`aipm-wfp`); `argument.py --sync-beads` is still a dry-run stub.
+
+Commits: bd init → Phase0 refs → Phase1 (foundation/TDD/core/peripheral) → plan+HANDOFF → Phase2 linker
+→ Phase2b registry seeded (56 results).
 
 ## NEXT (in order)
-1. **Phase 2b — seed the rest of the registry (~35-55 shards):** one `argument/lemmas/<id>.md` per
-   remaining result, harvested from `report/PROVENANCE.md` per-claim ledger (every lemma/thm/op with
-   source+locus+status) + `theory/`. Then full **beads sync** (currently a dry-run stub in argument.py;
-   serialize bd calls, persist a lemma↔bd-id map). Re-run `python3 scripts/argument.py --check --generate`.
+1. **Phase 2b beads-sync (`aipm-wfp`) — the only remaining 2b piece:** shard-seeding is DONE (56 results).
+   Replace the dry-run stub in `scripts/argument.py --sync-beads` with a real sync: one `bd` issue per
+   registry lemma, `bd dep add` edges = registry `deps`, persist a lemma↔bd-id map; serialize bd calls.
+   (Goal: `bd ready` mirrors the linker's ready frontier.) Then `python3 scripts/argument.py --check --generate`.
 2. **Phase 3 — af per-lemma pilot** on the bridge's proved leaves (`lem-P-properties` is the current
    ready frontier): `af init proofs/<id>`, transcribe to trivial steps, A=prover/B=verifier, advance the
    shard `af: none→seeded→validated`; add `af replay --verify` per `proofs/*` to check-all.sh.

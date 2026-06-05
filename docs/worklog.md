@@ -40,3 +40,37 @@ Rebuilt the repo as a typed module system for the proof (per the 4 user principl
 - Pre-existing uncommitted `agent-A/lean-formalisation-coverage.md` left untouched (not this work).
 - Registry currently has only the 5 bridge shards; ~35–55 results remain (`aipm-w2b`, harvest from
   `report/PROVENANCE.md`).
+
+## 2026-06-05 (session 2) — Phase 2b: registry seeded (5 → 56 results)
+
+Seeded the rest of the argument registry (`aipm-w2b`, closed). Method: I designed the full acyclic DAG up
+front (a master inventory fixing every id/kind/status/defs/deps so the linker resolves by construction),
+then fan-out via a background **workflow** — a defs track + 6 per-cluster `author → adversarial-verify`
+pipelines (15 agents, ~864k tok). Authoring agents wrote each `argument/lemmas/<id>.md` and refined the
+one-line `contract` against its cited source (report sections + `agent-A|B/theory|notes` + `refs/`);
+verifiers re-checked every contract for faithfulness/overclaim and the frontmatter against the inventory.
+
+**Done**
+- **51 new registry shards** (total 56): B0 bridge sub-lemmas (orderunit/easy/polar/onehole) + C1 cited
+  preliminaries (power-assoc, Kadison–Jordan-Schwarz, JNW classification, Effros–Størmer, Whitehead,
+  Aut(J)-compact, VLW minimal-J*) + C2 faithful-invariant (4) + C3 exact factorization (op-npps,
+  thm-factorization, rounding-fails, P-not-positive) + C4 classical stability (14) + C5 Layer-1 structure
+  programme (11) + C6 exponent (7). Obstructions and open-problems are first-class `kind`s.
+- **2 new defs:** `def-peirce-decomposition` (locked, byte-matched HOS 2.6.2/2.6.4-5 incl. mult. table),
+  `def-jordan-frame` (draft — HOS lacks the literal term; Faraut–Korányi vocabulary, lock criterion noted).
+- Wired the finer bridge lemmas into the existing DAG (thm-bridge ← easy/orderunit; prop-bridge-jordan ←
+  polar/onehole; lem-square-hole ← prop-kadison-js, the Kadison crux).
+- Gates green: `argument.py --check` 0 errors/0 warnings (56 results, 17 ready, 29 blocked);
+  `check-defs` 0 errors; `scripts/check-all.sh` = `[check-all] OK`. INDEX.md + DAG.md regenerated.
+
+**Key modeling decisions**
+- `def:*` ledger rows map to Layer-0 defs (not registry); pure framing `rem:*` excluded; substantive
+  `rem:*`/`ex:*`/counterexample `prop:*` carried as `kind: obstruction`. Cited literature → `status: cited`
+  (taken as axioms, not in the af ready-frontier). Conditional theorems modeled as `proved` with the open
+  hypothesis as a `dep` → they show as **blocked** until the hypothesis is af-validated (semantically right).
+
+**Open threads**
+- Phase 2b **beads-sync** (`aipm-wfp`) still pending: `argument.py --sync-beads` is a dry-run stub.
+- `def-jordan-frame` is draft (term not in HOS); fold into the draft-def lock pass (`aipm-9ho`) or
+  A+B-sign-off as consensus vocabulary.
+- Recommended next: Phase 3 af pilot on `lem-P-properties` (`aipm-0sg`, the ready frontier).
