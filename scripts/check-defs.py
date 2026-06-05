@@ -13,24 +13,22 @@ Usage:
   python3 scripts/check-defs.py --check            # validate (exit 1 on any ERROR)
   python3 scripts/check-defs.py --generate-index   # (re)write definitions/INDEX.md
   python3 scripts/check-defs.py                     # both
+
+Core logic is the pure function check_defs(defs_dir, manifest_path, generate_index) ->
+(errors, warnings, parsed), so it is unit-testable on temp directories (see scripts/tests/).
 """
-import sys, re, pathlib
+import sys
+import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-DEFS = ROOT / "definitions"
-MANIFEST = ROOT / "refs" / "manifest" / "checksums.sha256"
-
 KINDS = {"cited", "consensus", "original"}
 STATUSES = {"draft", "locked"}
 REQUIRED = ["id", "term", "kind", "status"]
 SKIP = {"README.md", "INDEX.md"}
 
-errors, warnings = [], []
-def err(m): errors.append(m)
-def warn(m): warnings.append(m)
 
-
-def parse_frontmatter(path):
+def parse_frontmatter(path, errors):
+    """Parse flat `key: value` YAML frontmatter. Returns (fm_dict | None, body)."""
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---"):
         return None, text
@@ -45,20 +43,22 @@ def parse_frontmatter(path):
         if not line or line.lstrip().startswith("#"):
             continue
         if ":" not in line:
-            err(f"{path.name}: frontmatter line without ':' -> {line!r}")
+            errors.append(f"{path.name}: frontmatter line without ':' -> {line!r}")
             continue
         k, v = line.split(":", 1)
         fm[k.strip()] = v.strip()
     return fm, body
 
 
-def load_manifest():
-    """Return (prefix2path, source_ids, present_paths) from refs/manifest/checksums.sha256."""
+def load_manifest(manifest_path, warnings):
+    """Return (prefix2path, source_ids, present_paths) from a checksums.sha256 file."""
     prefix2path, source_ids, present = {}, set(), set()
-    if not MANIFEST.exists():
-        warn(f"manifest absent: {MANIFEST.relative_to(ROOT)} (cannot verify cited hashes)")
+    manifest_path = pathlib.Path(manifest_path)
+    if not manifest_path.exists():
+        warnings.append(f"manifest absent: {manifest_path} (cannot verify cited hashes)")
         return prefix2path, source_ids, present
-    for line in MANIFEST.read_text().splitlines():
+    refs_root = manifest_path.parent.parent  # .../refs/manifest/x -> .../refs
+    for line in manifest_path.read_text().splitlines():
         line = line.strip()
         if not line:
             continue
@@ -67,70 +67,69 @@ def load_manifest():
         prefix2path[h[:16]] = p
         if "/" in p:
             source_ids.add(p.split("/", 1)[0])
-        if (ROOT / "refs" / p).exists():
+        if (refs_root / p).exists():
             present.add(p)
     return prefix2path, source_ids, present
 
 
-def main():
-    args = set(sys.argv[1:]) or {"--check", "--generate-index"}
-    shards = sorted(p for p in DEFS.glob("*.md") if p.name not in SKIP)
-    prefix2path, source_ids, present = load_manifest()
-
-    parsed = []
+def check_defs(defs_dir, manifest_path, generate_index=False):
+    """Pure checker. Returns (errors, warnings, parsed_frontmatters)."""
+    defs_dir = pathlib.Path(defs_dir)
+    errors, warnings, parsed = [], [], []
+    prefix2path, source_ids, present = load_manifest(manifest_path, warnings)
+    shards = sorted(p for p in defs_dir.glob("*.md") if p.name not in SKIP)
     term_owner, alias_owner = {}, {}
+
     for path in shards:
-        fm, _ = parse_frontmatter(path)
+        fm, _ = parse_frontmatter(path, errors)
         if fm is None:
-            err(f"{path.name}: missing/unterminated frontmatter")
+            errors.append(f"{path.name}: missing/unterminated frontmatter")
             continue
         for field in REQUIRED:
             if not fm.get(field):
-                err(f"{path.name}: missing required field '{field}'")
+                errors.append(f"{path.name}: missing required field '{field}'")
         if fm.get("id") and fm["id"] != path.stem:
-            err(f"{path.name}: id '{fm.get('id')}' != filename stem '{path.stem}'")
+            errors.append(f"{path.name}: id '{fm.get('id')}' != filename stem '{path.stem}'")
         if fm.get("kind") and fm["kind"] not in KINDS:
-            err(f"{path.name}: kind '{fm['kind']}' not in {sorted(KINDS)}")
+            errors.append(f"{path.name}: kind '{fm['kind']}' not in {sorted(KINDS)}")
         if fm.get("status") and fm["status"] not in STATUSES:
-            err(f"{path.name}: status '{fm['status']}' not in {sorted(STATUSES)}")
+            errors.append(f"{path.name}: status '{fm['status']}' not in {sorted(STATUSES)}")
 
-        # dedup / drift: one term + one alias namespace across the whole DB
+        # dedup / drift: one name namespace (term + aliases) across the whole DB
         term = (fm.get("term") or "").strip()
         names = [term] + [a.strip() for a in (fm.get("aliases", "") or "").split(";") if a.strip()]
         for nm in names:
             key = nm.lower()
             if not key:
                 continue
-            if key == term.lower():
-                if key in term_owner:
-                    err(f"DRIFT: term/alias '{nm}' claimed by both {term_owner[key]} and {path.name}")
-                term_owner[key] = path.name
             if key in alias_owner and alias_owner[key] != path.name:
-                err(f"DRIFT: name '{nm}' claimed by both {alias_owner[key]} and {path.name}")
+                errors.append(f"DRIFT: name '{nm}' claimed by both {alias_owner[key]} and {path.name}")
             alias_owner[key] = path.name
+        if term:
+            term_owner.setdefault(term.lower(), path.name)
 
         kind, status = fm.get("kind"), fm.get("status")
         if kind == "cited":
             src, sha = fm.get("source"), (fm.get("sha256") or "").strip()
             if src and source_ids and src not in source_ids:
-                err(f"{path.name}: cited source '{src}' not a refs/ source-id {sorted(source_ids)}")
+                errors.append(f"{path.name}: cited source '{src}' not a refs/ source-id {sorted(source_ids)}")
             if sha and sha != "-":
                 if prefix2path and sha not in prefix2path:
-                    err(f"{path.name}: sha256 prefix '{sha}' not in refs manifest")
+                    errors.append(f"{path.name}: sha256 prefix '{sha}' not in refs manifest")
                 elif sha in prefix2path:
                     p = prefix2path[sha]
                     if src and not p.startswith(src + "/"):
-                        warn(f"{path.name}: sha256 {sha} -> {p}, not under source '{src}'")
+                        warnings.append(f"{path.name}: sha256 {sha} -> {p}, not under source '{src}'")
                     if p not in present:
-                        warn(f"{path.name}: source payload absent locally ({p}); hash unverifiable in this checkout")
+                        warnings.append(f"{path.name}: source payload absent locally ({p}); hash unverifiable")
         elif kind in ("consensus", "original"):
             if not fm.get("consensus"):
-                err(f"{path.name}: {kind} shard must record 'consensus:'")
+                errors.append(f"{path.name}: {kind} shard must record 'consensus:'")
         if status == "draft":
-            warn(f"{path.name}: status=draft (not yet consensus-gated)")
+            warnings.append(f"{path.name}: status=draft (not yet consensus-gated)")
         parsed.append(fm)
 
-    if "--generate-index" in args and not errors:
+    if generate_index and not errors:
         rows = ["| id | term | kind | status | source |", "|---|---|---|---|---|"]
         for fm in sorted(parsed, key=lambda d: d.get("id", "")):
             rows.append("| `{id}` | {term} | {kind} | {status} | {source} |".format(
@@ -139,9 +138,18 @@ def main():
                 source=fm.get("source", "-")))
         idx = ("<!-- GENERATED by scripts/check-defs.py --generate-index. Do not hand-edit. -->\n"
                f"# Definitions index ({len(parsed)} terms)\n\n" + "\n".join(rows) + "\n")
-        (DEFS / "INDEX.md").write_text(idx, encoding="utf-8")
-        print(f"wrote definitions/INDEX.md ({len(parsed)} terms)")
+        (defs_dir / "INDEX.md").write_text(idx, encoding="utf-8")
 
+    return errors, warnings, parsed
+
+
+def main(argv):
+    args = set(argv) or {"--check", "--generate-index"}
+    defs_dir = ROOT / "definitions"
+    manifest = ROOT / "refs" / "manifest" / "checksums.sha256"
+    errors, warnings, parsed = check_defs(defs_dir, manifest, generate_index="--generate-index" in args)
+    if "--generate-index" in args and not errors:
+        print(f"wrote definitions/INDEX.md ({len(parsed)} terms)")
     for w in warnings:
         print(f"WARN  {w}")
     for e in errors:
@@ -151,4 +159,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))
