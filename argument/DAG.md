@@ -6,7 +6,7 @@ graph LR
   cor-adjoint-benchmark["cor-adjoint-benchmark<br/>proved/none"]
   ex-hume["ex-hume<br/>proved/none"]
   ex-no-faithful["ex-no-faithful<br/>proved/none"]
-  lem-P-properties["lem-P-properties<br/>proved/none"]
+  lem-P-properties["lem-P-properties<br/>proved/validated"]
   lem-bridge-easy["lem-bridge-easy<br/>proved/none"]
   lem-bridge-onehole["lem-bridge-onehole<br/>proved/none"]
   lem-bridge-orderunit["lem-bridge-orderunit<br/>proved/none"]

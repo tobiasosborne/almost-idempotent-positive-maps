@@ -1,0 +1,8 @@
+{
+  "id": "9688b93266d26a60",
+  "name": "GT-end-banach",
+  "source": "Kitaev arXiv:2405.02434, refs/kitaev-2405.02434/approximate_algebras.tex:638-642: for a Banach space calA, the bounded linear operators on calA with the operator norm form a (unital) Banach algebra. Instantiated at calA=B(H)_sa (GT-bhsa-complete) -\u003e End(B(H)_sa) is a unital Banach algebra.",
+  "content_hash": "92971fe085d531b91bd450bfd14bc171d85a58cad5231971f58baff1725e3849",
+  "created": "2026-06-05T20:50:02.274475314Z",
+  "notes": ""
+}

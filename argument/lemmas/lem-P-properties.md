@@ -5,7 +5,7 @@ contract: For eta <= eta_0 < 1/4 there are universal constants so that P=theta(2
 defs: def-spectral-idempotent; def-almost-idempotent; def-positive-unital-map
 deps:
 status: proved
-af: none
+af: validated
 provenance: theorem-B-algebraic-bridge.md:63-119; report lem:P-properties (cites Kitaev2024)
 owner: B
 workspace: proofs/lem-P-properties

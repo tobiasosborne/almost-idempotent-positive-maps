@@ -1,0 +1,1 @@
+{"type":"def_added","timestamp":"2026-06-05T20:24:03.445920932Z","definition":{"id":"8d9244621647486d","name":"almost-idempotent","definition":"Phi is eta-almost-idempotent if ||Phi^2 - Phi|| \u003c= eta in the operator norm of the map on B(H)_sa. Canonical: def-almost-idempotent.","created":"2026-06-05T20:24:03.445008017Z"}}

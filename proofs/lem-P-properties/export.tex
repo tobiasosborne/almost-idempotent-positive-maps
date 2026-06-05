@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{For eta <= eta\_0 < 1/4 there are universal constants so t...}
+\step{1} For eta <= eta\_0 < 1/4 there are universal constants so that P=theta(2Phi-1) satisfies P\textasciicircum{}2=P, P(1)=1, P real-linear on B(H)\_sa, ||R-1||<=C eta, delta:=||P-Phi||<=C eta, ||P||<=1+C eta, and delta-positivity (a>=0 => P(a) >= -delta||a|| 1). \steptag{validated} \\[6pt]
+\step{1.1} Setup and spectral bounds. Phi is unital positive on B(H)\_sa. By node 1.1.1, ||Phi||=1 in the order-unit norm; Phi(I)=I by hypothesis (def positive-unital-map). Work in the unital Banach algebra End(B(H)\_sa) (node 1.1.2). Put S:=2Phi-I; then ||S||<=2||Phi||+||I||=3 by the triangle inequality, homogeneity and ||Id||=1 (node 1.1.2). Since S\textasciicircum{}2-I=(2Phi-I)\textasciicircum{}2-I=4Phi\textasciicircum{}2-4Phi=4(Phi\textasciicircum{}2-Phi), by def almost-idempotent ||S\textasciicircum{}2-I||=4||Phi\textasciicircum{}2-Phi||<=4 eta. \steptag{validated} \\[6pt]
+\step{1.1.1} ||Phi||=1 in the order-unit norm. Phi is positive (monotone) and unital (Phi(I)=I, hence Phi(-I)=-I) by hypothesis (def positive-unital-map). By GT-order-unit-norm, for a in B(H)\_sa, ||a||<=1 iff -I<=a<=I. If ||a||<=1 then -I<=a<=I; monotonicity + unitality give -I=Phi(-I)<=Phi(a)<=Phi(I)=I, so ||Phi(a)||<=1 (GT-order-unit-norm). Thus ||Phi||<=1; and ||Phi||>=||Phi(I)||=||I||=1 since Phi(I)=I and ||I||=1 (GT-order-unit-norm). Hence ||Phi||=1. \steptag{validated} \\[4pt]
+\step{1.1.2} End(B(H)\_sa) with ||T||:=sup\{||Ta||:||a||<=1\} is a unital Banach algebra. B(H)\_sa is a normed space with order unit I (GT-order-unit-norm) and is COMPLETE (GT-bhsa-complete: B(H)\_sa is a unital JB algebra, HOS 3.1.2, and a unital JB algebra is a complete order-unit space, HOS 3.3.10), i.e. a Banach space. From the sup-definition: ||Id||=1; ||T+U||<=||T||+||U|| (triangle); ||TUa||<=||T|| ||Ua||<=||T|| ||U|| ||a|| so ||TU||<=||T|| ||U|| (submultiplicativity). Since B(H)\_sa is a Banach space, End(B(H)\_sa) with the operator norm is a unital Banach algebra (GT-end-banach, Kitaev:638-642); hence the function calculus GT-funcalc applies. \steptag{validated} \\[4pt]
+\step{1.2} R well-defined with ||R-I||<=C eta. Work in the Banach algebra End(B(H)\_sa) (node 1.1.2). Put U:=S\textasciicircum{}2-I; by node 1.1, ||U||=||S\textasciicircum{}2-I||<=4 eta, and we FIX eta\_0<1/4 so that 4 eta\_0<1. Apply GT-funcalc with f(x)=x\textasciicircum{}(-1/2) (Taylor coefficients a\_n=C(-1/2,n), center x0=1, radius rho=1): since ||U||<=4 eta\_0<1=rho, R:=(S\textasciicircum{}2)\textasciicircum{}(-1/2)=f(S\textasciicircum{}2)=sum\_\{n>=0\} a\_n U\textasciicircum{}n converges in End(B(H)\_sa) and ||R-I||=||f(S\textasciicircum{}2)-f(I)|| <= sum\_\{n>=1\}|a\_n| ||U||\textasciicircum{}n. Factoring one power of ||U||: sum\_\{n>=1\}|a\_n| ||U||\textasciicircum{}n = ||U|| * sum\_\{n>=1\}|a\_n| ||U||\textasciicircum{}\{n-1\} <= ||U|| * sum\_\{n>=1\}|a\_n|(4 eta\_0)\textasciicircum{}\{n-1\} = C(eta\_0)*||U||, with C(eta\_0):=sum\_\{n>=1\}|a\_n|(4 eta\_0)\textasciicircum{}\{n-1\} < infinity since 4 eta\_0<rho=1 (GT-funcalc). Hence ||R-I||<=C(eta\_0)*||U||<=4 C(eta\_0) eta =: C eta. \steptag{validated} \\[4pt]
+\step{1.3} P\textasciicircum{}2=P. Work in the Banach algebra End(B(H)\_sa) (node 1.1.2). For S=2Phi-I, ||S\textasciicircum{}2-I||<=4 eta<1 (node 1.1). Kitaev states sgn(X)\textasciicircum{}2=I for every X with ||X\textasciicircum{}2-I||<1 (GT-kitaev-spectral, refs/kitaev:514-522, line 518), where sgn(X)=X(X\textasciicircum{}2)\textasciicircum{}(-1/2); applied to X=S, sgn(S)\textasciicircum{}2=I. Moreover Kitaev's Banach-algebra Proposition prop\_P (refs/kitaev:524-532), instantiated at Phi in End(B(H)\_sa) with ||Phi\textasciicircum{}2-Phi||<=eta<1/4 (def almost-idempotent, eta\_0<1/4), states directly that P=theta(2Phi-I)=(1/2)(I+sgn(2Phi-I)) satisfies P\textasciicircum{}2=P. Explicitly, P=(I+sgn(S))/2 gives P\textasciicircum{}2=(I+2 sgn(S)+sgn(S)\textasciicircum{}2)/4=(I+sgn(S))/2=P. Uses nodes 1.1, 1.1.2. \steptag{validated} \\[4pt]
+\step{1.4} P(I)=I. Phi(I)=I by hypothesis (def positive-unital-map). With S=2Phi-I (node 1.1), S(I)=I, so S\textasciicircum{}2(I)=I and U(I)=(S\textasciicircum{}2-I)(I)=0. By GT-funcalc, R=f(S\textasciicircum{}2)=sum\_\{n>=0\} a\_n U\textasciicircum{}n with constant term a\_0=f(x0)=f(1)=1. Since U(I)=0, U\textasciicircum{}n(I)=0 for n>=1, so R(I)=a\_0 I=I; thus sgn(S)(I)=S R(I)=S(I)=I, and P=(I+sgn(S))/2 (node 1.3) gives P(I)=(I+sgn(S))(I)/2=I. Uses nodes 1.1, 1.2, 1.3. \steptag{validated} \\[4pt]
+\step{1.5} delta:=||P-Phi||<=C eta and ||P||<=1+C eta. In End(B(H)\_sa) (node 1.1.2): P=(I+sgn(S))/2=(I+SR)/2 (node 1.3, with sgn(S)=SR and R=(S\textasciicircum{}2)\textasciicircum{}(-1/2) from node 1.2) and Phi=(I+S)/2, so P-Phi=(I+SR)/2-(I+S)/2=S(R-I)/2. By submultiplicativity (node 1.1.2), delta=||P-Phi||<=||S|| ||R-I||/2<=(3/2) C\_2 eta, using ||S||<=3 (node 1.1) and ||R-I||<=C\_2 eta (node 1.2). Define the universal constant C:=(3/2) C\_2; then delta<=C eta. (Kitaev prop\_P, refs/kitaev:530, independently gives the same O(eta) closeness.) Then by the triangle inequality (node 1.1.2), ||P||<=||Phi||+delta<=1+C eta, using ||Phi||=1 (node 1.1.1). Uses nodes 1.1, 1.1.1, 1.1.2, 1.2, 1.3. \steptag{validated} \\[4pt]
+\step{1.6} P is real-linear on B(H)\_sa. Phi is real-linear by hypothesis (def positive-unital-map); hence S=2Phi-I and U=S\textasciicircum{}2-I are real-linear, and each partial sum R\_N:=sum\_\{n<=N\} a\_n U\textasciicircum{}n (a\_n real) is real-linear. R is the operator-norm limit of R\_N (node 1.2), and for any z, R\_N z -> R z pointwise since ||R\_N z - R z|| <= ||R\_N - R|| ||z|| (operator-action bound from the induced-operator-norm sup-definition, node 1.1.2) and ||R\_N - R|| -> 0 (node 1.2). Real-linearity passes to the limit as two separate facts: (i) additivity R(x+y)=lim\_N R\_N(x+y)=lim\_N(R\_N x+R\_N y)=R x+R y (pointwise limits + continuity of addition); (ii) homogeneity R(s x)=lim\_N R\_N(s x)=lim\_N s(R\_N x)=s R x for real s (pointwise limit + continuity of scalar multiplication). Hence R is real-linear, and so are sgn(S)=S R and P=(I+sgn(S))/2. Uses nodes 1.1.2, 1.2. \steptag{validated} \\[4pt]
+\step{1.7} delta-positivity: x>=0 => P(x) >= -delta ||x|| I. For x>=0, Phi(x)>=0 (GT-positive-unital). Let y:=P(x)-Phi(x), self-adjoint with ||y|| <= ||P-Phi|| ||x|| <= delta ||x|| (node 1.5). By GT-order-unit-norm, ||y|| <= delta||x|| gives -delta||x|| I <= y. Hence P(x)=Phi(x)+y >= 0 - delta||x|| I = -delta ||x|| I. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

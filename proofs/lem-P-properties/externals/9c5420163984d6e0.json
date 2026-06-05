@@ -1,0 +1,8 @@
+{
+  "id": "9c5420163984d6e0",
+  "name": "GT-binomial-series",
+  "source": "Real binomial series: sum_{k\u003e=0} C(-1/2,k) t^k = (1-t)^(-1/2), absolutely convergent for |t|\u003c1, with sum_k |C(-1/2,k)| |t|^k = (1-|t|)^(-1/2). PROVENANCE GAP: no standalone analysis source in refs/; currently leans on Kitaev's invocation of the Banach-algebra function calculus (refs/kitaev:354). Flagged for verifier.",
+  "content_hash": "e7659a2f8431ab3955a3bc8df0a1b293c1f54846d89bc28dba922dba0c4c8db0",
+  "created": "2026-06-05T20:24:03.512472128Z",
+  "notes": ""
+}

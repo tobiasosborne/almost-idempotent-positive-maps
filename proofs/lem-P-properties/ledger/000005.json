@@ -1,0 +1,1 @@
+{"type":"def_added","timestamp":"2026-06-05T20:24:03.457887562Z","definition":{"id":"29a5b1af6c8a62fd","name":"positive-unital-map","definition":"Phi: B(H)_sa -\u003e B(H)_sa is real-linear, positive (x\u003e=0 =\u003e Phi(x)\u003e=0), and unital (Phi(I)=I). Canonical: def-positive-unital-map.","created":"2026-06-05T20:24:03.456882567Z"}}

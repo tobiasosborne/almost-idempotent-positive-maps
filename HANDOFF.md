@@ -15,9 +15,10 @@ NOTE: this tracks the REORG/ARCHITECTURE build. For the MATH status see agent-A/
 >    (`aipm-w2b`) is now **DONE** — the registry holds **56 results** (`argument/INDEX.md`). The P1 starts
 >    remaining are: **Phase 3 af pilot** on `lem-P-properties` (`aipm-0sg`, the ready frontier),
 >    **Phase 4 CLAUDE.md** (`aipm-ond`), and **Phase 2b beads-sync** (`aipm-wfp`, replace the dry-run stub).
->    Recommended next = Phase 3 af pilot — **this is the project's first use of `af`, so grab a hint or two
->    from the user before starting that first workspace** (after the first, af is ordinary work). Claim with
->    `bd update <id> --status in_progress`; close with `bd close <id> --reason "…"`.
+>    The **first af proof is DONE** (`lem-P-properties`, `aipm-0sg` closed — 10/10 nodes validated+clean).
+>    af is now established; future af workspaces are ordinary autonomous work. The newly-unblocked af
+>    frontier is `lem-first-insertion`, `lem-bridge-orderunit` (run `python3 scripts/argument.py` to see it).
+>    Claim with `bd update <id> --status in_progress`; close with `bd close <id> --reason "…"`.
 > 4. Sanity-check the build: `sh scripts/check-all.sh` must print `[check-all] OK`. The validation suite
 >    is LIVE in the pre-commit hook — commit normally (do **not** use `core.hooksPath=/dev/null` anymore).
 > 5. Exact recipes for the next two tasks are in the **"Recipes"** section below.
@@ -76,17 +77,34 @@ Plus standing directives: **red-green TDD for all tooling**; **harvest CLAUDE.md
   `aipm-oql`. **First-time `af` note:** the Phase 3 pilot is the first af use — get a hint or two from the
   user before starting that first workspace (light note, not a hard gate).
 
+- **Phase 3 (af pilot) DONE — first machine-checkable proof:** `proofs/lem-P-properties/` is fully
+  **validated** (10/10 nodes validated + clean; root composition verified). Proof method (the established
+  af convention, used here over 4 adversarial rounds): **prover = main loop** (owner `agent-A`); **verifier
+  = a FRESH subagent per node** (owner `v<round>-<node>`), instructed that gaps/errors/counterexamples are
+  high-value successes and to demand strictest rigour; **no "standard facts"** — every leaf cites `refs/`
+  ground truth (HOS/Idel/Kitaev) or derives from cited facts / named prior nodes. The loop caught a real
+  bug (a wrong `‖U‖≤1/2` gate), a real arithmetic slip (`3/2·C=C`), several provenance mis-citations, and a
+  deep multiplicativity gap (resolved by citing Kitaev's general-Banach-algebra `prop_P`, refs/kitaev:524-532,
+  which states `θ(2P−I)²=θ(2P−I)` directly). Shard `lem-P-properties` set `af: validated`; linker confirms
+  contract-match + propagates (unblocked `lem-first-insertion`, `lem-bridge-orderunit`). Export at
+  `proofs/lem-P-properties/export.{tex,md}`. *Note:* af has **no post-hoc dependency-edge command** —
+  dependencies are recorded in-text ("Uses nodes …"). Follow-ups filed: factor the reusable foundational
+  facts (`‖Φ‖=1` contraction, operator Banach algebra) into own registry lemmas/defs; add `af replay --verify`
+  to `check-all.sh`.
+
 Commits: bd init → Phase0 refs → Phase1 (foundation/TDD/core/peripheral) → plan+HANDOFF → Phase2 linker
-→ Phase2b registry seeded (56 results) → Phase4 context docs (CLAUDE/AGENTS/PRD/LEARNINGS).
+→ Phase2b registry seeded (56 results) → Phase4 context docs (CLAUDE/AGENTS/PRD/LEARNINGS) → Phase3 first af
+proof (lem-P-properties validated).
 
 ## NEXT (in order)
 1. **Phase 2b beads-sync (`aipm-wfp`) — the only remaining 2b piece:** shard-seeding is DONE (56 results).
    Replace the dry-run stub in `scripts/argument.py --sync-beads` with a real sync: one `bd` issue per
    registry lemma, `bd dep add` edges = registry `deps`, persist a lemma↔bd-id map; serialize bd calls.
    (Goal: `bd ready` mirrors the linker's ready frontier.) Then `python3 scripts/argument.py --check --generate`.
-2. **Phase 3 — af per-lemma pilot** on the bridge's proved leaves (`lem-P-properties` is the current
-   ready frontier): `af init proofs/<id>`, transcribe to trivial steps, A=prover/B=verifier, advance the
-   shard `af: none→seeded→validated`; add `af replay --verify` per `proofs/*` to check-all.sh.
+2. **Phase 3 — af per-lemma (pilot DONE).** `lem-P-properties` is validated. Continue down the af frontier:
+   `python3 scripts/argument.py` prints the ready set (now `lem-first-insertion`, `lem-bridge-orderunit`,
+   then the rest of the bridge). Per lemma follow Recipe B; advance the shard `af: none→seeded→validated`.
+   af is now established — no need to re-ask the user (the first-time hint is spent).
 3. **Phase 4 — reorg (hygiene docs DONE):** the context docs (CLAUDE/AGENTS/PRD/LEARNINGS) are done; what
    remains is the reorg — consolidate `theory/`+`experiments/`, archive clutter (phantom
    `response-to-agent-a-v*`, superseded stacks, 91KB compaction dump) (`aipm-chn`); add `check-provenance.py`
@@ -107,18 +125,25 @@ Commits: bd init → Phase0 refs → Phase1 (foundation/TDD/core/peripheral) →
 4. Commit (the pre-commit hook re-runs the suite). Map report status→registry: `(proved)`→proved,
    `(cited)`→cited, `(consensus)`→consensus, `OPEN`/`(open)`→open, obstruction→obstruction.
 
-**Recipe B — af pilot on a lemma (Phase 3, `aipm-0sg`).** _First af use on this project: get a hint or two
-from the user before kicking off this first workspace; the steps below are the procedure once you start._
-Drive the **ready frontier** (currently `lem-P-properties` — `python3 scripts/argument.py` prints it):
+**Recipe B — af per-lemma (Phase 3; convention established by the `lem-P-properties` pilot).** Drive the
+**ready frontier** (`python3 scripts/argument.py` prints it):
 1. `af init -c "<contract copied VERBATIM from the shard>" -a agent-A -d proofs/<id>` (root conjecture
-   MUST match the registry `contract` — the linker checks this).
-2. Seed: `af def-add <name> "<text>"` for each `def` (mirror `definitions/`); `af add-external --name <dep-id>
-   --source "<dep contract> | proof: proofs/<dep-id>"` for each `dep`.
-3. Prove to **trivial steps**: prover runs `af claim`/`af refine`; the OTHER agent (verifier ≠ prover per
-   node) runs `af challenge`/`af accept`. `af reap` between agents. Challenge ids are `ch-<hex>`.
-   If the tree balloons past ~12 nodes, STOP — factor a sub-lemma into its own registry shard + workspace.
-4. When root is `validated`+`clean`: set the shard `af: validated`, `python3 scripts/argument.py --check`
-   (verifies af root == contract, propagates status), `af export -f latex -o proofs/<id>/export.tex`, commit.
+   MUST match the registry `contract` — the linker checks this). Set the shard `af: seeded`.
+2. Seed ground truth: `af def-add <name> "<text>"` for each `def` (mirror `definitions/`); and
+   `af add-external --name GT-<x> --source "<refs/ path:locus + the exact fact>"` for **every external fact
+   used** — under the **no-"standard-facts" rule**, every leaf must cite a `refs/` source (HOS/Idel/Kitaev…)
+   or derive from cited facts / named prior nodes.
+3. **Prover = you (main loop, owner `agent-A`)**: `af claim`/`af refine` (build the tree), then
+   `af amend`/`af resolve-challenge` to address challenges. **Verifier = a FRESH subagent per node**
+   (owner `v<round>-<node>`), spawned anew each time — its one job is to verify that node, told that
+   gaps/errors/counterexamples are high-value successes and to demand strictest rigour + ground-truth
+   provenance; it runs `af claim -r verifier` then `af challenge`/`af accept --confirm`. Loop:
+   build → fresh-verifier round → resolve → re-verify (fresh again) until all nodes `validated`. Verify
+   leaves/sub-nodes first, then parents, then the root (coverage). **af has no post-hoc dependency-edge
+   command** → name deps in-text ("Uses nodes …"). If the tree exceeds ~12 nodes, STOP — factor a sub-lemma.
+4. When all nodes (incl. root) are `validated`+`clean`: set the shard `af: validated`,
+   `python3 scripts/argument.py --check` (verifies af root == contract, propagates status),
+   `af export -f latex -o proofs/<id>/export.tex` (+ `-f markdown`), commit.
 
 **Recipe C — run the gate / commit.** `sh scripts/check-all.sh` → `[check-all] OK`. Then `git commit`
 normally (hook runs bd export + check-all). Push at checkpoints: `git push`.

@@ -1,0 +1,8 @@
+{
+  "id": "ff76889b2edfc8ec",
+  "name": "GT-order-unit-norm",
+  "source": "Hanche-Olsen \u0026 Stormer, Jordan Operator Algebras, refs/hos/joa-m.md:368-372 (1.2.1): order norm ||a|| = inf{lambda\u003e0 : -lambda e \u003c= a \u003c= lambda e}; hence for y=y*, ||y||\u003c=c iff -c*I \u003c= y \u003c= c*I. Canonical def-order-unit-space.",
+  "content_hash": "b2fc799d08a9a3227ce09360f964c03810c8cf9d7a73f0ffcb2898fda4c92564",
+  "created": "2026-06-05T20:24:03.49251933Z",
+  "notes": ""
+}

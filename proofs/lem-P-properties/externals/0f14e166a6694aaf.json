@@ -1,0 +1,8 @@
+{
+  "id": "0f14e166a6694aaf",
+  "name": "GT-funcalc",
+  "source": "Kitaev arXiv:2405.02434, refs/kitaev-2405.02434/approximate_algebras.tex:503-532 (Banach-algebra function calculus) and :642 (joint continuity of multiplication). For a unital Banach algebra calB, f(x)=sum a_n (x-x0)^n with radius rho, and X in calB with ||X-x0*1||\u003crho: f(X)=sum a_n (X-x0*1)^n converges; ||f(X)-f(x0*1)|| \u003c= sum_{n\u003e=1}|a_n| ||X-x0*1||^n; the calculus is multiplicative f(X)g(X)=(fg)(X); multiplication is jointly continuous. Instantiated here at calB=End(B(H)_sa) (node 1.1.2), f(x)=x^(-1/2), x0=1, rho=1.",
+  "content_hash": "ced43cd33c78d3491216c9ee83d7a9c72bdf4cde07f39a635e5589135bfda314",
+  "created": "2026-06-05T20:35:51.044187513Z",
+  "notes": ""
+}

@@ -110,3 +110,34 @@ I fixed 9 defects.
   HANDOFF START-HERE + Recipe B, PRD escalation; ~/.claude memory `feedback-first-af-needs-hint`).
 
 **Remaining Phase 4:** reorg/archive (`aipm-chn`) + check-provenance/report-build in check-all (`aipm-oql`).
+
+## 2026-06-05 (session 4) — Phase 3: first af proof (lem-P-properties validated)
+
+Drove the first machine-checkable proof end-to-end in `af` (`aipm-0sg`, closed). `proofs/lem-P-properties/`
+is **fully validated** (10/10 nodes validated + clean, root composition verified). User-set conventions:
+**verifier = a FRESH subagent every node** (gaps/errors are high-value wins; strictest rigour); **prover =
+the main loop**; **no "standard facts"** — every fact provenanced to `refs/` ground truth or derived from
+cited facts / named nodes.
+
+**Process (4 adversarial rounds).** Built an 8→10-node tree (added foundational sub-nodes 1.1.1 `‖Φ‖=1`
+order-unit contraction, 1.1.2 `End(B(H)_sa)` is a unital Banach algebra). Each round: fresh verifier per
+node (via Workflow, 7/7/7/3 + 1 root) → I resolved challenges as prover (`amend`/`resolve-challenge`) →
+re-verify fresh. The adversarial loop caught **real defects**: a wrong `‖U‖≤1/2` gate (bug), a `3/2·C=C`
+arithmetic slip, multiple provenance mis-citations (Idel cited for facts it doesn't contain; `‖Φ‖=1` and
+Φ's positivity/unitality are definitional hypotheses → `def positive-unital-map`), and a deep
+**multiplicativity gap** for `R²=(S²)⁻¹` — resolved by going to ground truth: Kitaev's general-Banach-algebra
+`prop_P` (refs/kitaev:524-532) states `θ(2P−I)²=θ(2P−I)` directly, and `sgn(X)²=I` at :518. Completeness
+pinned to HOS 3.1.2/3.3.10 + Kitaev:638-642.
+
+**Result.** Shard `af: validated`; `argument.py --check` 0 errors, contract-match OK, status propagation
+unblocked `lem-first-insertion`+`lem-bridge-orderunit`. Export `proofs/lem-P-properties/export.{tex,md}`.
+`check-all` OK. The committed canonical record is the append-only `ledger/` + `externals/` + `meta.json`
+(nodes/ caches gitignored).
+
+**Conventions / gotchas learned.** af has **no post-hoc dependency-edge command** (deps named in-text).
+`resolve-challenge` takes `<challenge-id> -r "..."` (no `-o`). `accept` without a prior challenge needs
+`--confirm`. Recipe B in HANDOFF updated with the prover/fresh-verifier convention.
+
+**Follow-ups filed:** factor the reusable foundational facts (`‖Φ‖=1` contraction, operator Banach algebra)
+into their own registry lemmas/defs (+ re-cite node 1.7's Φ(x)≥0 to the def); add `af replay --verify` of
+`proofs/*` to `check-all.sh`.

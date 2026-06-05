@@ -1,0 +1,8 @@
+{
+  "id": "a615e1c73c1dd44e",
+  "name": "GT-positive-unital",
+  "source": "Idel 2013, refs/idel-2013/idel-2013.md (Ch.2, fixed points of unital positive maps): a unital positive map on B(H)_sa is order-unit-norm contractive (||Phi||=1), positive (x\u003e=0=\u003ePhi(x)\u003e=0), unital (Phi(I)=I). Canonical def-positive-unital-map.",
+  "content_hash": "49abba2dced016fc25b992d37f2e1665594a6d2d6d9af1c3cb85550bffa3a45b",
+  "created": "2026-06-05T20:24:03.475915125Z",
+  "notes": ""
+}

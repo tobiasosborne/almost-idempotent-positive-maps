@@ -1,0 +1,8 @@
+{
+  "id": "d15fb3000cbf2ced",
+  "name": "GT-kitaev-spectral",
+  "source": "Kitaev arXiv:2405.02434, refs/kitaev-2405.02434/approximate_algebras.tex:354-357 (and 2171-2182): construction Phi-tilde=theta(2Phi-I) via the function calculus for the Banach algebra; idempotence, unit-preservation, closeness, dagger-preservation. Canonical def-spectral-idempotent. NOTE: Kitaev works in cb-norm; our adaptation re-derives the bounds in the operator/order-unit norm.",
+  "content_hash": "8403c9afaad868e2ba8fe49e02b4d7f526804b27c0aa5b769489b3765719fe5f",
+  "created": "2026-06-05T20:24:03.503468122Z",
+  "notes": ""
+}
