@@ -7,6 +7,18 @@ NOTE: this tracks the REORG/ARCHITECTURE build. For the MATH status see agent-A/
 
 # HANDOFF — argument-architecture build
 
+> ## START HERE (next agent)
+> 1. `git checkout argument-architecture` (this branch; pushed to origin).
+> 2. Read, in order: **this file** → `docs/plans/2026-06-05-argument-architecture-plan.md` (the approved
+>    design) → `definitions/INDEX.md` + `argument/INDEX.md` + `argument/DAG.md` (the current state).
+> 3. **What to do next is in beads:** `bd ready` lists the unblocked tasks (14 seeded, P1 first). The three
+>    P1 starts are: **Phase 2b** (seed the rest of the registry, `aipm-w2b`), **Phase 3 af pilot** on
+>    `lem-P-properties` (`aipm-0sg`), **Phase 4 CLAUDE.md** (`aipm-ond`). Recommended next = Phase 2b.
+>    Claim with `bd update <id> --status in_progress`; close with `bd close <id> --reason "…"`.
+> 4. Sanity-check the build: `sh scripts/check-all.sh` must print `[check-all] OK`. The validation suite
+>    is LIVE in the pre-commit hook — commit normally (do **not** use `core.hooksPath=/dev/null` anymore).
+> 5. Exact recipes for the next two tasks are in the **"Recipes"** section below.
+
 **Branch:** `argument-architecture` (off `main`). **Date:** 2026-06-05.
 **Approved design:** `docs/plans/2026-06-05-argument-architecture-plan.md` (copied from the plan-mode file;
 read it first). The repo is being rebuilt as a **typed module system for the proof**:
@@ -54,6 +66,35 @@ Commits: bd init → Phase0 refs → Phase1 (foundation/TDD/core/peripheral) →
    — **harvest best-bits from `../cft-anyons`, `../Bennett.jl`, `../af-tests`, `../arithmetic-quantum-mechanics`**
    (user directive); add `check-provenance.py` + report `latexmk` to check-all.sh; merge `report/PROVENANCE.md` up.
 4. **Phase 5 — fresh Lean scaffold** (secondary; af-tests reference only).
+
+## Recipes (do exactly this)
+
+**Recipe A — seed a registry shard (Phase 2b, `aipm-w2b`).** For each remaining result row in
+`report/PROVENANCE.md` (per-claim ledger: label · source · locus · status):
+1. `cp argument/lemmas/lem-P-properties.md argument/lemmas/<id>.md` and edit the frontmatter
+   (schema: `argument/README.md`). `id`=`{lem|thm|prop|cor|op}-<slug>` == filename stem; `contract`=
+   the statement as ONE line; `defs`=`;`-list of `def-*` ids; `deps`=`;`-list of registry ids it uses;
+   `status`∈{proved,cited,consensus,open,obstruction,disproved}; `af: none`; `provenance`; `owner`; `workspace`.
+2. Every `def` referenced MUST exist in `definitions/` — if missing, add a def shard first
+   (`definitions/README.md` schema) and `python3 scripts/check-defs.py`.
+3. `python3 scripts/argument.py --check --generate` → must be 0 errors; regenerates INDEX/DAG.
+4. Commit (the pre-commit hook re-runs the suite). Map report status→registry: `(proved)`→proved,
+   `(cited)`→cited, `(consensus)`→consensus, `OPEN`/`(open)`→open, obstruction→obstruction.
+
+**Recipe B — af pilot on a lemma (Phase 3, `aipm-0sg`).** Drive the **ready frontier** (currently
+`lem-P-properties` — `python3 scripts/argument.py` prints it):
+1. `af init -c "<contract copied VERBATIM from the shard>" -a agent-A -d proofs/<id>` (root conjecture
+   MUST match the registry `contract` — the linker checks this).
+2. Seed: `af def-add <name> "<text>"` for each `def` (mirror `definitions/`); `af add-external --name <dep-id>
+   --source "<dep contract> | proof: proofs/<dep-id>"` for each `dep`.
+3. Prove to **trivial steps**: prover runs `af claim`/`af refine`; the OTHER agent (verifier ≠ prover per
+   node) runs `af challenge`/`af accept`. `af reap` between agents. Challenge ids are `ch-<hex>`.
+   If the tree balloons past ~12 nodes, STOP — factor a sub-lemma into its own registry shard + workspace.
+4. When root is `validated`+`clean`: set the shard `af: validated`, `python3 scripts/argument.py --check`
+   (verifies af root == contract, propagates status), `af export -f latex -o proofs/<id>/export.tex`, commit.
+
+**Recipe C — run the gate / commit.** `sh scripts/check-all.sh` → `[check-all] OK`. Then `git commit`
+normally (hook runs bd export + check-all). Push at checkpoints: `git push`.
 
 ## Key facts / gotchas for whoever resumes
 - `af` = Adversarial Proof Framework, source `../vibefeld`, v0.1.3 (PATH binary mislabels as "dev";
