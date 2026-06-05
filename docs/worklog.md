@@ -74,3 +74,39 @@ verifiers re-checked every contract for faithfulness/overclaim and the frontmatt
 - `def-jordan-frame` is draft (term not in HOS); fold into the draft-def lock pass (`aipm-9ho`) or
   A+B-sign-off as consensus vocabulary.
 - Recommended next: Phase 3 af pilot on `lem-P-properties` (`aipm-0sg`, the ready frontier).
+
+## 2026-06-05 (session 3) — Phase 4 context-hygiene docs (CLAUDE/AGENTS/PRD/LEARNINGS)
+
+Authored the project's context docs (`aipm-ond`, closed). Method: a **harvest workflow** (5 agents —
+one per neighbour repo `../cft-anyons` / `../arithmetic-quantum-mechanics` / `../Bennett.jl` / `../af-tests`,
+plus a self-inventory of this repo) returned structured best-practices + the accurate current state; I
+synthesized the docs; a 2-agent **adversarial review** (math-overclaim + process/consistency) found and
+I fixed 9 defects.
+
+**Done**
+- **`CLAUDE.md` (== `AGENTS.md`, byte-identical, bd block preserved):** HOW/process — read-order gate by
+  file name; the Laws (ground-truth-before-claims, one-canonical-def, atomic/validated/accretive,
+  reviewer≠author); numbered Rules (no-overclaim, "runs-without-errors-is-never-a-test", get-feedback-fast,
+  ~200-LOC sharding, no-remote-CI, cross-session→beads, def-never-(proved), non-interactive shell, …);
+  hallucination callouts; verified build/test commands; the 4-layer architecture; af+linker usage; M/D/C/R/I
+  validation gates; commit discipline; stop conditions; file map; land-the-plane.
+- **`PRD.md` (the entry point):** WHAT/scope — mission, in/out scope, the two-layer theorem + ε-JB axioms +
+  a Kitaev analogy table with "what does NOT transfer", honest current state, success criteria, open
+  obstructions (each → registry id + bead), milestones.
+- **`docs/LEARNINGS.md`:** seeded with the retracted claims (faithful "YES" → O(η/λ); Frobenius-"resolved";
+  phantom response-to-agent-a-v*; rank-balance stub) + standing no-overclaim lessons.
+
+**Review fixes worth recording**
+- The math reviewer caught that the docs **understated** Layer-1: the report/registry now carry
+  `cor-adjoint-benchmark` (order-unit splitting **proved** for exact-adjoint cocycles, *modulo* the
+  `obs-matrix-audit` re-audit); only `op-layer1-gap` remains open. PRD/CLAUDE/LEARNINGS corrected (the
+  pre-2026-06-04 "order-unit OPEN" framing was stale). Also fixed the η<1/4-vs-η≤η₀ threshold, the
+  "η is CP-only" category error, the 12-vs-13 section count, and "gate green"→"0 errors, 3 draft warns".
+- The process reviewer ran every command (all pass) and flagged the af stop-condition.
+
+**Key decision (user clarification)**
+- The af escalation was initially written as a hard "ask before ANY af use" gate; the user clarified it
+  should be **light — only the FIRST af workspace needs a hint or two**. Softened everywhere (CLAUDE §6/§9,
+  HANDOFF START-HERE + Recipe B, PRD escalation; ~/.claude memory `feedback-first-af-needs-hint`).
+
+**Remaining Phase 4:** reorg/archive (`aipm-chn`) + check-provenance/report-build in check-all (`aipm-oql`).

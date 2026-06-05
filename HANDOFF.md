@@ -15,8 +15,9 @@ NOTE: this tracks the REORG/ARCHITECTURE build. For the MATH status see agent-A/
 >    (`aipm-w2b`) is now **DONE** — the registry holds **56 results** (`argument/INDEX.md`). The P1 starts
 >    remaining are: **Phase 3 af pilot** on `lem-P-properties` (`aipm-0sg`, the ready frontier),
 >    **Phase 4 CLAUDE.md** (`aipm-ond`), and **Phase 2b beads-sync** (`aipm-wfp`, replace the dry-run stub).
->    Recommended next = Phase 3 af pilot. Claim with `bd update <id> --status in_progress`; close with
->    `bd close <id> --reason "…"`.
+>    Recommended next = Phase 3 af pilot — **this is the project's first use of `af`, so grab a hint or two
+>    from the user before starting that first workspace** (after the first, af is ordinary work). Claim with
+>    `bd update <id> --status in_progress`; close with `bd close <id> --reason "…"`.
 > 4. Sanity-check the build: `sh scripts/check-all.sh` must print `[check-all] OK`. The validation suite
 >    is LIVE in the pre-commit hook — commit normally (do **not** use `core.hooksPath=/dev/null` anymore).
 > 5. Exact recipes for the next two tasks are in the **"Recipes"** section below.
@@ -65,8 +66,18 @@ Plus standing directives: **red-green TDD for all tooling**; **harvest CLAUDE.md
   open hypotheses (op-npps, op-exposed-hull); obstructions/open-problems carried as first-class nodes.
   *Still open in Phase 2b:* real beads sync (`aipm-wfp`); `argument.py --sync-beads` is still a dry-run stub.
 
+- **Phase 4 (context-hygiene docs) DONE:** authored `CLAUDE.md` (==`AGENTS.md`, byte-identical, bd block
+  preserved) + `PRD.md` (the entry point) + `docs/LEARNINGS.md`, harvested from the four neighbour repos
+  (`../cft-anyons` gold-standard, `../arithmetic-quantum-mechanics`, `../Bennett.jl`, `../af-tests`) and
+  grounded in a self-inventory. PRD = WHAT/scope (north star, two-layer theorem, honest proved/open status,
+  open obstructions→bead ids, milestones); CLAUDE = HOW (read-order gate, the Laws, numbered Rules, M/D/C/R/I
+  gates, hallucination callouts, af+linker usage, land-the-plane). Adversarially reviewed (math-overclaim +
+  process/consistency, all commands verified). `aipm-ond` closed. *Remaining Phase 4 (reorg):* `aipm-chn`,
+  `aipm-oql`. **First-time `af` note:** the Phase 3 pilot is the first af use — get a hint or two from the
+  user before starting that first workspace (light note, not a hard gate).
+
 Commits: bd init → Phase0 refs → Phase1 (foundation/TDD/core/peripheral) → plan+HANDOFF → Phase2 linker
-→ Phase2b registry seeded (56 results).
+→ Phase2b registry seeded (56 results) → Phase4 context docs (CLAUDE/AGENTS/PRD/LEARNINGS).
 
 ## NEXT (in order)
 1. **Phase 2b beads-sync (`aipm-wfp`) — the only remaining 2b piece:** shard-seeding is DONE (56 results).
@@ -76,10 +87,10 @@ Commits: bd init → Phase0 refs → Phase1 (foundation/TDD/core/peripheral) →
 2. **Phase 3 — af per-lemma pilot** on the bridge's proved leaves (`lem-P-properties` is the current
    ready frontier): `af init proofs/<id>`, transcribe to trivial steps, A=prover/B=verifier, advance the
    shard `af: none→seeded→validated`; add `af replay --verify` per `proofs/*` to check-all.sh.
-3. **Phase 4 — reorg + hygiene:** consolidate `theory/`+`experiments/`, archive clutter (phantom
-   `response-to-agent-a-v*`, superseded stacks, 91KB compaction dump); author CLAUDE.md==AGENTS.md + PRD
-   — **harvest best-bits from `../cft-anyons`, `../Bennett.jl`, `../af-tests`, `../arithmetic-quantum-mechanics`**
-   (user directive); add `check-provenance.py` + report `latexmk` to check-all.sh; merge `report/PROVENANCE.md` up.
+3. **Phase 4 — reorg (hygiene docs DONE):** the context docs (CLAUDE/AGENTS/PRD/LEARNINGS) are done; what
+   remains is the reorg — consolidate `theory/`+`experiments/`, archive clutter (phantom
+   `response-to-agent-a-v*`, superseded stacks, 91KB compaction dump) (`aipm-chn`); add `check-provenance.py`
+   + report `latexmk` to check-all.sh and merge `report/PROVENANCE.md` up (`aipm-oql`).
 4. **Phase 5 — fresh Lean scaffold** (secondary; af-tests reference only).
 
 ## Recipes (do exactly this)
@@ -96,8 +107,9 @@ Commits: bd init → Phase0 refs → Phase1 (foundation/TDD/core/peripheral) →
 4. Commit (the pre-commit hook re-runs the suite). Map report status→registry: `(proved)`→proved,
    `(cited)`→cited, `(consensus)`→consensus, `OPEN`/`(open)`→open, obstruction→obstruction.
 
-**Recipe B — af pilot on a lemma (Phase 3, `aipm-0sg`).** Drive the **ready frontier** (currently
-`lem-P-properties` — `python3 scripts/argument.py` prints it):
+**Recipe B — af pilot on a lemma (Phase 3, `aipm-0sg`).** _First af use on this project: get a hint or two
+from the user before kicking off this first workspace; the steps below are the procedure once you start._
+Drive the **ready frontier** (currently `lem-P-properties` — `python3 scripts/argument.py` prints it):
 1. `af init -c "<contract copied VERBATIM from the shard>" -a agent-A -d proofs/<id>` (root conjecture
    MUST match the registry `contract` — the linker checks this).
 2. Seed: `af def-add <name> "<text>"` for each `def` (mirror `definitions/`); `af add-external --name <dep-id>
