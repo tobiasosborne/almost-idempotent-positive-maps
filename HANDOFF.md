@@ -11,17 +11,22 @@ NOTE: this tracks the REORG/ARCHITECTURE build. For the MATH status see agent-A/
 > 1. `git checkout argument-architecture` (this branch; pushed to origin).
 > 2. Read, in order: **this file** → `docs/plans/2026-06-05-argument-architecture-plan.md` (the approved
 >    design) → `definitions/INDEX.md` + `argument/INDEX.md` + `argument/DAG.md` (the current state).
-> 3. **What to do next is in beads:** `bd ready` lists the unblocked tasks. Phase 2b shard-seeding
->    (`aipm-w2b`) is now **DONE** — the registry holds **56 results** (`argument/INDEX.md`). The P1 starts
->    remaining are: **Phase 3 af pilot** on `lem-P-properties` (`aipm-0sg`, the ready frontier),
->    **Phase 4 CLAUDE.md** (`aipm-ond`), and **Phase 2b beads-sync** (`aipm-wfp`, replace the dry-run stub).
->    The **first af proof is DONE** (`lem-P-properties`, `aipm-0sg` closed — 10/10 nodes validated+clean).
->    af is now established; future af workspaces are ordinary autonomous work. The newly-unblocked af
->    frontier is `lem-first-insertion`, `lem-bridge-orderunit` (run `python3 scripts/argument.py` to see it).
+> 3. **What to do next is in beads** (`bd ready`). All **three P1 phases are DONE and closed**: Phase 2b
+>    registry seeding (`aipm-w2b`; 56 results), Phase 3 first af proof (`aipm-0sg`; `lem-P-properties`
+>    validated), Phase 4 context docs (`aipm-ond`; CLAUDE/AGENTS/PRD/LEARNINGS). `bd ready` is now all P2.
+>    **Recommended continuation — `aipm-0ze`: af workspaces for the rest of the bridge**
+>    (`lem-first-insertion`, `lem-square-hole-almost-positive`, `prop-bridge-jordan`, `thm-bridge`) via
+>    **Recipe B** — af is established, drive it autonomously (no need to re-ask the user). Other ready tracks:
+>    `aipm-wfp` (Phase 2b real beads-sync — replace the `--sync-beads` dry-run stub), `aipm-chn`/`aipm-oql`
+>    (Phase 4 reorg + `check-provenance`/report-build + `af replay --verify` in check-all, see also `aipm-dqz`),
+>    `aipm-qpa` (factor the reusable foundational facts — `‖Φ‖=1` contraction, operator Banach algebra — out
+>    of the lem-P-properties workspace into their own registry lemmas/defs, via **Recipe A**), `aipm-9ho`
+>    (lock the 2 draft defs). Open-math frontier: `aipm-245`/`aipm-08u`/`aipm-36d` (hard; see agent-A/HANDOFF).
 >    Claim with `bd update <id> --status in_progress`; close with `bd close <id> --reason "…"`.
 > 4. Sanity-check the build: `sh scripts/check-all.sh` must print `[check-all] OK`. The validation suite
 >    is LIVE in the pre-commit hook — commit normally (do **not** use `core.hooksPath=/dev/null` anymore).
-> 5. Exact recipes for the next two tasks are in the **"Recipes"** section below.
+> 5. Live recipes below: **Recipe B** (af per-lemma — the main continuation), **Recipe C** (gate/commit),
+>    **Recipe A** (general "add a registry shard"; use for `aipm-qpa`).
 
 **Branch:** `argument-architecture` (off `main`). **Date:** 2026-06-05.
 **Approved design:** `docs/plans/2026-06-05-argument-architecture-plan.md` (copied from the plan-mode file;
@@ -113,8 +118,9 @@ proof (lem-P-properties validated).
 
 ## Recipes (do exactly this)
 
-**Recipe A — seed a registry shard (Phase 2b, `aipm-w2b`).** For each remaining result row in
-`report/PROVENANCE.md` (per-claim ledger: label · source · locus · status):
+**Recipe A — add a registry shard (general).** Phase 2b bulk seeding (`aipm-w2b`) is done; use this when
+adding a NEW result (e.g. the `aipm-qpa` factored foundational lemmas, or any new sub-lemma split out of an
+af workspace). For a result (from `report/PROVENANCE.md` per-claim ledger: label · source · locus · status):
 1. `cp argument/lemmas/lem-P-properties.md argument/lemmas/<id>.md` and edit the frontmatter
    (schema: `argument/README.md`). `id`=`{lem|thm|prop|cor|op}-<slug>` == filename stem; `contract`=
    the statement as ONE line; `defs`=`;`-list of `def-*` ids; `deps`=`;`-list of registry ids it uses;
@@ -153,11 +159,14 @@ normally (hook runs bd export + check-all). Push at checkpoints: `git push`.
   `af --version` is authoritative). Export is Markdown/LaTeX only — **no af→Lean generator** (manual
   transcription using af node IDs). af workspaces are machine-introspectable via `-f json`.
 - Lean is **secondary**; `af-tests` is **reference only** (not a dependency).
-- bd: never `bd init --force`; fresh clone `bd import` not `bd init`; serialize bd calls. bd auto-committed
-  its init and set `core.hooksPath=.beads/hooks` + wrote a minimal `CLAUDE.md`/`AGENTS.md` (to be
-  superseded in Phase 4; bd's "no MEMORY.md" rule to be reconciled with the ~/.claude memory system).
+- bd: never `bd init --force`; fresh clone `bd import` not `bd init`; serialize bd calls. (The minimal
+  `CLAUDE.md`/`AGENTS.md` bd first wrote are now superseded — Phase 4 authored the full pair, byte-identical,
+  bd integration block preserved. bd's "no in-repo MEMORY.md" rule is reconciled in `CLAUDE.md` §7:
+  in-repo persistent knowledge → `bd remember`; the `~/.claude` harness memory is the agent's own and orthogonal.)
 - Pre-existing uncommitted edit `agent-A/lean-formalisation-coverage.md` is **not** part of this work — left untouched.
-- The validation suite is now LIVE in the pre-commit hook (don't use the `core.hooksPath=/dev/null`
-  override anymore — let `check-all.sh` run). It currently checks defs + linker + tooling tests;
-  provenance/report/af-replay checks are TODO in `scripts/check-all.sh`.
-- Tasks (harness): #1,#2 done; #3 (Phase 2) core done, seeding+beads-sync remain; #4-#6 pending.
+- The validation suite is LIVE in the pre-commit hook (don't use `core.hooksPath=/dev/null` — let
+  `check-all.sh` run). It checks defs + linker + tooling tests; **TODO** (filed): `check-provenance.py` +
+  report `latexmk` (`aipm-oql`) and `af replay --verify` of `proofs/*` (`aipm-dqz`).
+- Definitions DB now has **24 shards** (22 from Phase 1 + `def-peirce-decomposition`, `def-jordan-frame` from 2b;
+  3 draft: `def-decomposable-map`, `def-multiplicative-domain`, `def-jordan-frame` — `aipm-9ho`).
+- **Task tracking is beads only** (`bd ready`/`bd show`/`bd close`) — ignore any stale harness TaskList; there is none.
