@@ -1,33 +1,69 @@
-# Third-party papers, arXiv source bundles, OCR outputs, and copied reference text.
-agent-A/refs/
-agent-A/notes/ingestion-results-2026-06-01.json
-agent-B/references/
+# =====================================================================
+# Reference payload (papers, arXiv source, OCR pages, book scans).
+# Kept LOCAL, never committed (copyright + size). Only the SHA256 manifest
+# is tracked, so provenance is auditable from a clean checkout; the
+# check-provenance gate WARNS (not fails) when a payload is absent locally.
+# =====================================================================
+/refs/*
+!/refs/manifest/
+/refs/manifest/*
+!/refs/manifest/SOURCES.md
+!/refs/manifest/checksums.sha256
 
+# Large ingestion dump (still under agent-A/notes until Phase 4).
+agent-A/notes/ingestion-results-2026-06-01.json
+
+# =====================================================================
+# af proof workspaces (proofs/<lemma-id>/): the ledger is the source of
+# truth; track ledger/ + externals/ + meta.json; ignore the
+# reconstructable per-command caches and claim locks.
+# =====================================================================
+proofs/**/nodes/
+proofs/**/defs/
+proofs/**/lemmas/
+proofs/**/assumptions/
+proofs/**/locks/
+proofs/**/*.lock
+
+# =====================================================================
 # Generated LaTeX build products.
+# =====================================================================
 report/*.aux
 report/*.bbl
 report/*.bcf
 report/*.blg
 report/*.fdb_latexmk
 report/*.fls
-report/*.log
 report/*.out
 report/*.run.xml
 report/*.synctex.gz
 report/*.toc
+report/*.log
 
 # Keep the compiled report, but ignore other PDFs by default to avoid
 # accidentally publishing copied literature files.
 *.pdf
 !report/main.pdf
 
+# =====================================================================
 # Python and local tooling caches.
+# =====================================================================
 __pycache__/
 *.py[cod]
 .pytest_cache/
 .ruff_cache/
+.venv/
+venv/
+
+# Harness scratch (scheduled-task locks etc.).
+.claude/
 
 # OS/editor noise.
 .DS_Store
 *.swp
 *.swo
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+*.db
+.beads-credential-key
