@@ -30,7 +30,7 @@
 | `op-npps` | open-problem | open | none | B | (OPEN, sharp exponent 1/2) Near-positive projection stability: there are dimensi… |
 | `prop-approx-simplex` | proposition | proved | none | B | If the rows of P admit gamma-approximate simplex coordinates (representatives r^… |
 | `prop-aut-compact` | proposition | cited | none | A | For a finite-dimensional Euclidean (formally real) Jordan algebra J, Aut(J) is a… |
-| `prop-bridge-jordan` | proposition | proved | none | B | The projected product on A=Im P satisfies the approximate Jordan identity ||((a•… |
+| `prop-bridge-jordan` | proposition | proved | validated | B | The projected product on A=Im P satisfies the approximate Jordan identity ||((a•… |
 | `prop-comm-scalar` | proposition | proved | none | B | Every finite-dim unital Jordan R^m-module splits into one-dim scalar modules wit… |
 | `prop-decomposable-norm` | proposition | proved | none | B | The Haagerup-Wittstock decomposable norm is not 1 for every unital positive deco… |
 | `prop-diag-next-arrow` | proposition | proved | none | B | For the fixed diagonal-frame action of D=R^n on M=H_n(F) (x·m=x•m), every unit-n… |

@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-06-06T08:16:11.268612132Z","conjecture":"The projected product on A=Im P satisfies the approximate Jordan identity ||((a•a)•b)•a - (a•a)•(b•a)|| \u003c= C sqrt(eta) ||a||^3 ||b||, by exact-ambient-Jordan-identity cancellation of the leading term with O(sqrt(eta)) one-hole error terms.","author":"agent-A"}

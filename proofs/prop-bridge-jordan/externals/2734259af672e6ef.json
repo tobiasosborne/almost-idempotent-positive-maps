@@ -1,0 +1,8 @@
+{
+  "id": "2734259af672e6ef",
+  "name": "GT-jordan-identity",
+  "source": "refs/hos/joa-m.md:825 — HOS eq (2.18), the exact ambient Jordan identity (weak associativity of the special Jordan product): VERBATIM \"$$a \\circ (b \\circ a^2) = (a \\circ b) \\circ a^2. \\tag{2.18}$$\". With commutativity (GT-jordan-product) and renaming this gives the symmetric form (a^2∘b)∘a = a^2∘(b∘a) used in the cancellation step.",
+  "content_hash": "5a2bf950154ba73e8ab6b040ef1d7c25e0d93ec114c0c869662ef2bd87a2b896",
+  "created": "2026-06-06T08:16:41.762505021Z",
+  "notes": ""
+}

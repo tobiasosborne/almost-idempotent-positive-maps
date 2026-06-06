@@ -1,0 +1,8 @@
+{
+  "id": "884101b38743ce1a",
+  "name": "GT-jordan-product",
+  "source": "refs/hos/joa-m.md:812 — HOS eq (2.17), definition of the (special) Jordan product, bilinear and commutative: VERBATIM \"$$a \\circ b = \\frac{1}{2}(ab + ba).$$\". Commutativity a∘b=b∘a is immediate.",
+  "content_hash": "35de67a7063dacbd96e35b6eba2e982e1b045072dae37fce031bb26112007870",
+  "created": "2026-06-06T08:16:41.770931723Z",
+  "notes": ""
+}

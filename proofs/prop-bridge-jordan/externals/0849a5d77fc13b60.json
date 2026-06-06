@@ -1,0 +1,8 @@
+{
+  "id": "0849a5d77fc13b60",
+  "name": "GT-FI",
+  "source": "proofs/lem-first-insertion (VALIDATED prior lemma, registry lem-first-insertion / report lem:bridge-fi) — FIRST INSERTION: for n in Ker P and c in A=Im P, ||P(n∘c)|| \u003c= C sqrt(eta) ||n|| ||c||. (Equivalently ||P(Px∘b)-P(x∘b)|| \u003c= C sqrt(eta)||x||||b||; with x=n+Pn... here used in the Ker-P form: P(n)=0 implies ||P(n∘c)||\u003c=C sqrt(eta)||n||||c||.)",
+  "content_hash": "d47b20bb042af7099c111ff57b53884d75c9342e39d04ca68da926acb9e49a08",
+  "created": "2026-06-06T08:16:57.597977207Z",
+  "notes": ""
+}

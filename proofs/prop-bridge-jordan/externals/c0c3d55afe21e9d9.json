@@ -1,0 +1,8 @@
+{
+  "id": "c0c3d55afe21e9d9",
+  "name": "GT-jb-submult",
+  "source": "refs/hos/joa-m.md:2312 — HOS 3.1.3, Jordan Banach algebra norm axiom (B(H)_sa is a JB algebra, so this holds in the operator norm): VERBATIM \"$$||a \\circ b|| \\leq ||a|| \\, ||b||, \\qquad a, b \\in A.$$\". Used for crude norm bounds ||p||\u003c=C||a||^2 etc.",
+  "content_hash": "4bff2f58b6f39e14cb47e31ceff5e87aa9edf4634b729d4c60dcc9523e2efac1",
+  "created": "2026-06-06T08:16:41.779487174Z",
+  "notes": ""
+}

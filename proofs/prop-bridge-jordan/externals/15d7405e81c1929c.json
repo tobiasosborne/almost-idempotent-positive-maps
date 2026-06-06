@@ -1,0 +1,8 @@
+{
+  "id": "15d7405e81c1929c",
+  "name": "GT-onehole-51",
+  "source": "proofs/lem-bridge-onehole (registry lem-bridge-onehole / report lem:bridge-onehole, eq 5.1) — ONE-HOLE (5.1): for a range-product hole h=h_{r,s}=r∘s-P(r∘s) and t,u in A, ||P((h∘t)∘u)|| \u003c= C sqrt(eta)||r||||s||||t||||u||.",
+  "content_hash": "ad83e1894895f32665e715944aed2e72ca66eb7e7383f71fd9cba34e7c890ef6",
+  "created": "2026-06-06T08:16:57.606712139Z",
+  "notes": ""
+}

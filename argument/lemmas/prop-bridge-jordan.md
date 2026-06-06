@@ -5,7 +5,7 @@ contract: The projected product on A=Im P satisfies the approximate Jordan ident
 defs: def-eps-jb-algebra; def-jordan-product; def-near-fixed-algebra
 deps: lem-first-insertion; lem-square-hole-almost-positive; lem-bridge-polar; lem-bridge-onehole
 status: proved
-af: none
+af: validated
 provenance: theorem-B-algebraic-bridge.md:489-597; report prop:bridge-jordan
 owner: B
 workspace: proofs/prop-bridge-jordan

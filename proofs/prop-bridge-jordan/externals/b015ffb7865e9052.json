@@ -1,0 +1,8 @@
+{
+  "id": "b015ffb7865e9052",
+  "name": "GT-Pprops",
+  "source": "proofs/lem-P-properties (VALIDATED prior lemma, registry lem-P-properties / report lem:P-properties) — available facts: P^2=P (exact idempotent), P(1)=1, P real-linear on B(H)_sa, ||P||\u003c=1+C eta. Hence for any r∘s, P(r∘s-P(r∘s))=0, i.e. h_{r,s} in Ker P.",
+  "content_hash": "44782840b632c313ec5519e1ad057d503c9f310ff8ebb7f03675ce0f9f7aa0b7",
+  "created": "2026-06-06T08:16:57.637245504Z",
+  "notes": ""
+}

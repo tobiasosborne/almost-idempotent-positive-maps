@@ -30,7 +30,7 @@ graph LR
   op-npps["op-npps<br/>open/none"]
   prop-approx-simplex["prop-approx-simplex<br/>proved/none"]
   prop-aut-compact["prop-aut-compact<br/>cited/none"]
-  prop-bridge-jordan["prop-bridge-jordan<br/>proved/none"]
+  prop-bridge-jordan["prop-bridge-jordan<br/>proved/validated"]
   prop-comm-scalar["prop-comm-scalar<br/>proved/none"]
   prop-decomposable-norm["prop-decomposable-norm<br/>proved/none"]
   prop-diag-next-arrow["prop-diag-next-arrow<br/>proved/none"]
