@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-06-06T08:05:34.605575463Z","conjecture":"For a range-product hole h=h_{r,s}=r∘s-P(r∘s) and t,u in A, the one-hole insertion contexts ||P((h∘t)∘u)|| \u003c= C sqrt(eta)||r||||s||||t||||u|| (5.1) and ||P(h∘(t∘u))|| \u003c= C sqrt(eta)||r||||s||||t||||u|| (5.2).","author":"agent-A"}

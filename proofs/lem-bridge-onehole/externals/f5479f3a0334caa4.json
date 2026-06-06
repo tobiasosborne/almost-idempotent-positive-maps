@@ -1,0 +1,8 @@
+{
+  "id": "f5479f3a0334caa4",
+  "name": "GT-HZ",
+  "source": "Prior registry lemma lem-bridge-polar (HZ bound), proofs/lem-bridge-polar root. For the polarised hole q_{r,s}=P(r o s)-r o s and any z in V=B(H)_sa: ||P(q_{r,s} o z)|| \u003c= C sqrt(eta) ||r|| ||s|| ||z||. (One-hole insertion is O(sqrt eta).)",
+  "content_hash": "e3d22f259b5eb775a96a4d4793d9dbd1281ba97ad34b6565ed0d15c0f334a6e5",
+  "created": "2026-06-06T08:05:51.986851279Z",
+  "notes": ""
+}

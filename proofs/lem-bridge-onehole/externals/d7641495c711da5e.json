@@ -1,0 +1,8 @@
+{
+  "id": "d7641495c711da5e",
+  "name": "GT-HH",
+  "source": "Prior registry lemma lem-bridge-polar (HH bound), proofs/lem-bridge-polar root. For polarised holes q_{r,s}=P(r o s)-r o s and q_{u,v}=P(u o v)-u o v: ||P(q_{r,s} o q_{u,v})|| \u003c= C eta ||r|| ||s|| ||u|| ||v||. (Two-hole insertion is O(eta).)",
+  "content_hash": "9847faeb054cf9877d27d1adf6afb3a99d89dd705de912d79be2e7f78d938c9c",
+  "created": "2026-06-06T08:05:51.994677124Z",
+  "notes": ""
+}

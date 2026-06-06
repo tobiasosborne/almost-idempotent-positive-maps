@@ -8,7 +8,7 @@
 | `ex-no-faithful` | obstruction | proved | none | A | The R^3 row-stochastic idempotent P_0 = [[1,0,0],[0,1,0],[1/3,2/3,0]] is an exac… |
 | `lem-P-properties` | lemma | proved | validated | B | For eta <= eta_0 < 1/4 there are universal constants so that P=theta(2Phi-1) sat… |
 | `lem-bridge-easy` | lemma | proved | validated | B | The projected product a•b=P(a∘b) on A satisfies the easy axioms with O(eta): uni… |
-| `lem-bridge-onehole` | lemma | proved | none | B | For a range-product hole h=h_{r,s}=r∘s-P(r∘s) and t,u in A, the one-hole inserti… |
+| `lem-bridge-onehole` | lemma | proved | validated | B | For a range-product hole h=h_{r,s}=r∘s-P(r∘s) and t,u in A, the one-hole inserti… |
 | `lem-bridge-orderunit` | lemma | proved | validated | B | The near-fixed algebra A=Im P, with unit 1 and inherited cone A_+ = A cap B(H)_+… |
 | `lem-bridge-polar` | lemma | proved | validated | B | Polarised holes q_{r,s}=P(r∘s)-r∘s obey, in the state seminorm ||x||_omega^2=ome… |
 | `lem-classical-equiv` | lemma | proved | none | B | The signed-idempotent and stochastic-idempotent formulations of classical stabil… |

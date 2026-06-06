@@ -5,7 +5,7 @@ contract: For a range-product hole h=h_{r,s}=r∘s-P(r∘s) and t,u in A, the on
 defs: def-square-hole; def-near-fixed-algebra
 deps: lem-first-insertion; lem-bridge-polar
 status: proved
-af: none
+af: validated
 provenance: theorem-B-algebraic-bridge.md:453-487; report lem:bridge-onehole
 owner: B
 workspace: proofs/lem-bridge-onehole

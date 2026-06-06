@@ -1,0 +1,8 @@
+{
+  "id": "7afe3fa38fb72838",
+  "name": "GT-bh-cstar",
+  "source": "HOS, refs/hos/joa-m.md:458-466 (1.3.2), VERBATIM: \"$\\mathscr{A}$  is called a Banach algebra if  $\\|xy\\| \\le \\|x\\| \\|y\\|$  for all  $x, y \\in \\mathscr{A}$ .\" and \"If H is a complex Hilbert space then B(H), the bounded linear operators on H, is a  $C^*$  algebra in the usual operator norm\". Hence in B(H): ||xy||\u003c=||x|| ||y|| (associative product), and the operator norm is the order-unit norm on B(H)_sa.",
+  "content_hash": "66eea9b5929824e0a410a4f563f2a3f62cea2d02d0cbd4f85b8e477245f1b5b7",
+  "created": "2026-06-06T08:06:04.394089799Z",
+  "notes": ""
+}

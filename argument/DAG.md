@@ -8,7 +8,7 @@ graph LR
   ex-no-faithful["ex-no-faithful<br/>proved/none"]
   lem-P-properties["lem-P-properties<br/>proved/validated"]
   lem-bridge-easy["lem-bridge-easy<br/>proved/validated"]
-  lem-bridge-onehole["lem-bridge-onehole<br/>proved/none"]
+  lem-bridge-onehole["lem-bridge-onehole<br/>proved/validated"]
   lem-bridge-orderunit["lem-bridge-orderunit<br/>proved/validated"]
   lem-bridge-polar["lem-bridge-polar<br/>proved/validated"]
   lem-classical-equiv["lem-classical-equiv<br/>proved/none"]
