@@ -1,0 +1,8 @@
+{
+  "id": "27606efb4d77deb4",
+  "name": "GT-orderunit-def",
+  "source": "HOS, refs/hos/joa-m.md:368-372 (1.2.1, order unit space and order norm), VERBATIM: \"An element  $e \\in A^+$  is called an order unit for A if for all  $a \\in A$  there is  $\\lambda \u003e 0$  such that  $-\\lambda e \\le a \\le \\lambda e$ . ... In this case A has a norm given by  $||a|| = \\inf\\{\\lambda \u003e 0: -\\lambda e \\le a \\le \\lambda e\\}$ .\" Hence the order norm is a norm (triangle inequality, homogeneity); and for self-adjoint x, ||x||\u003c=c iff -c*1 \u003c= x \u003c= c*1.",
+  "content_hash": "6bd3f67b6d562725b0aede01ac9df41d1fceeff9b8faa2aa1f10baf1ada0677c",
+  "created": "2026-06-06T06:38:55.522563508Z",
+  "notes": ""
+}

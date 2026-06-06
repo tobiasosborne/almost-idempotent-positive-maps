@@ -1,0 +1,8 @@
+{
+  "id": "fb5ba53f1ce78af8",
+  "name": "GT-bhsa-jc",
+  "source": "HOS, refs/hos/joa-m.md:2300 (3.1.2), VERBATIM: \"Let H be a complex Hilbert space and B(H) the algebra of all bounded linear operators on H. Let  $B(H)_{\\rm sa}$  denote the special Jordan algebra of all self-adjoint operators in B(H) equipped with the operator norm. By a JC algebra we shall mean any norm-closed Jordan subalgebra of  $B(H)_{\\rm sa}$ .\" Hence V=B(H)_sa with a o b=(ab+ba)/2 is a (unital) JC algebra, and (GT-jb-axiom-sq, 3.1.4 + each JC is JB) a unital JB algebra.",
+  "content_hash": "6fde6fba7dea094f325726184d76f7f1e998a94aec1ae0e19107e78d3f3897a8",
+  "created": "2026-06-06T06:39:10.249425135Z",
+  "notes": ""
+}

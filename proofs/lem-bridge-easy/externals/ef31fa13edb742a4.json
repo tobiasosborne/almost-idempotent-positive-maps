@@ -1,0 +1,8 @@
+{
+  "id": "ef31fa13edb742a4",
+  "name": "GT-jordan-schwarz",
+  "source": "VLW arXiv:2604.08380, refs/vlw-2604.08380/paper.tex:557-560 (Lemma, Jordan-Schwarz inequality, cites Stormer Lem.7.3), VERBATIM: \"Let $T:L(\\H)\\to L(\\K)$ be a unital, positive map. Then \\jp{Ta^*}{Ta} \\le T\\jp{a^*}a , \\qquad a\\in L(\\H).\" where \\jp{x}{y}=x o y is the Jordan product (paper.tex:42). For self-adjoint a=a^*: (Ta)^2 = Ta o Ta \u003c= T(a o a) = T(a^2). Instantiated at T=Phi (unital positive on B(H)_sa).",
+  "content_hash": "ba42886abb5a94af963837e13e50d2b4d23958bd7bc3b9dc94ee2972633834fe",
+  "created": "2026-06-06T06:38:55.500907445Z",
+  "notes": ""
+}

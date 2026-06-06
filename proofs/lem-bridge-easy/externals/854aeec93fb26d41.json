@@ -1,0 +1,8 @@
+{
+  "id": "854aeec93fb26d41",
+  "name": "GT-sup-states",
+  "source": "HOS, refs/hos/joa-m.md:394-398 (1.2.5 Lemma), VERBATIM: \"Let A be an order unit space and  $a \\in A$ . Then we have: (i)  $a \\ge 0$  if and only if  $\\rho(a) \\ge 0$  for all  $\\rho \\in S(A)$ . (ii)  $||a|| = \\sup_{\\rho \\in S(A)} |\\rho(a)|$ .\" Gives norm-monotonicity in an order unit space: if 0\u003c=x\u003c=y then for every state rho, 0\u003c=rho(x)\u003c=rho(y)\u003c=||y||, so ||x||=sup_rho rho(x)\u003c=||y||.",
+  "content_hash": "41f60c960dd8c03706f41d3d091664cb77b087e100b78b07b5f16b4f34df2987",
+  "created": "2026-06-06T06:38:55.515243541Z",
+  "notes": ""
+}
