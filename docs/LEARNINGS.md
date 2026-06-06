@@ -63,6 +63,23 @@ theorem's "universal dimension-free constants" guarantee fails. A fresh verifier
 (target=statement on node 1.8); fixed to `η₀<1/4` fixed (e.g. 1/8). The *fact* (bridge holds for small η)
 is fine; the *admissible-range boundary* was wrong.
 
+**R7 — A fresh VERIFIER produced a confident, plausible, WRONG counterexample. → refuted before acting.**
+Reviewing the `thm-dilation-compatible` scaffold, the fresh verifier (agent-A) challenged node 1.3.3's
+premise *"Φ=Cj inherits `‖Φ²−Φ‖≤η`"* as a **"critical false premise,"** backing it with a numeric
+counterexample (`‖F²−F‖≈0.229<¼` while `‖Φ²−Φ‖≈0.258>¼`) and recommending the theorem's hypotheses be
+amended. **The counterexample is false.** Independent recheck: **7,008,000** samples over *all* unital 0/1
+order-isometric embeddings `j:ℓ∞_nin→ℓ∞_nout` (dims to 4→6) with random row-stochastic `C` gave **zero**
+violations of `‖Φ²−Φ‖≤‖F²−F‖` (worst ratio exactly 1.0000). **Proof:** `Φ²−Φ=(Φ−I)Cj`, `F²−F=j(Φ−I)C`;
+since `j` is order-isometric (`‖jM‖=‖M‖`, `‖j‖_op=1`), `‖Φ²−Φ‖=‖(Φ−I)Cj‖≤‖(Φ−I)C‖=‖j(Φ−I)C‖=‖F²−F‖`. The
+verifier's `j` must have violated the order-isometric/injective hypothesis (or held an arithmetic slip).
+So the theorem is **sound**, its hypotheses **sufficient**, and **no contract amendment** was warranted —
+the premise is a clean provable inequality, which becomes a *derived* af node (the regression) inside the
+new `lem-intertwine-spectral-idempotent` (`aipm-vp5`). The *same* review was simultaneously **correct** that
+the two η-delivering steps (node 1.2 the C\*→ε-JB symmetrization, node 1.3 the intertwining) were
+asserted-not-derived — those are genuinely factored into sub-lemmas. Net: theorem true; proof was a
+scaffold; one of the verifier's two "critical" findings was itself a false claim caught only by an
+independent recheck.
+
 ## Standing lessons
 
 - **No-overclaim is the prime directive.** `√η` general (not `η`); Layer-1 structure theorem and exact
@@ -79,3 +96,8 @@ is fine; the *admissible-range boundary* was wrong.
   boundary value (`η₀=1/4`) where an import needs strict `<` (`η₀<1/4`) silently voids the
   universal-constant guarantee (`R6`); verifiers must check the *admissibility* of inherited cutoffs, not
   just the leading-order rate.
+- **A verifier can be wrong too — a refutation is itself a claim.** Reviewer≠author cuts *both* ways. Before
+  acting on a verifier's counterexample (especially before weakening a theorem's hypotheses), independently
+  reproduce it. An agent's "critical false premise" (`R7`) was refuted by a 7M-sample sweep + a one-line
+  proof; the premise was in fact a provable inequality. Numerics + an independent derivation are the cheap
+  cross-check; never amend a statement on a single unverified counterexample.
