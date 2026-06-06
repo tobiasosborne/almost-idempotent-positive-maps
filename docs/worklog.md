@@ -141,3 +141,53 @@ unblocked `lem-first-insertion`+`lem-bridge-orderunit`. Export `proofs/lem-P-pro
 **Follow-ups filed:** factor the reusable foundational facts (`‖Φ‖=1` contraction, operator Banach algebra)
 into their own registry lemmas/defs (+ re-cite node 1.7's Φ(x)≥0 to the def); add `af replay --verify` of
 `proofs/*` to `check-all.sh`.
+
+## 2026-06-06 — Theorem B (the algebraic bridge) fully machine-validated via af + a provenance gate
+
+**Headline.** Drove the entire bridge to machine-checked completion: **8/8 lemmas af-validated** (only
+`lem-P-properties` predated this session) — `lem-bridge-orderunit`, `lem-first-insertion`,
+`lem-square-hole-almost-positive`, `lem-bridge-easy`, `lem-bridge-polar`, `lem-bridge-onehole`,
+`prop-bridge-jordan` (crux: the approximate Jordan identity by exact-ambient-cancellation), `thm-bridge`
+(capstone). Commits `7021740..b7110ba`, all pushed. Per lemma: sonnet prep (grounded kit) → opus prover
+build → fresh-opus-verifier adversarial pass (sequential, per node, reviewer≠author) → prover resolve →
+re-verify → `af: validated` → linker `--check --generate` → commit + push.
+
+**Orchestration.** Multi-agent (~40 background workflows/agents): prep/search = sonnet; prover / verifier /
+coding = opus; main loop = conductor — monitored, raised beads, committed in dependency order, never blind.
+
+**Linker fix (50305fc, TDD, reviewer≠author).** `argument.py:133` wrongly required *every* dep
+`af:validated`, blocking ground-truth-leaf (cited) deps (`prop-kadison-js`) → the bridge stalled. Fixed: a
+dep is available iff `af:validated` OR `status==cited` (the design's "internal-lemma dep" intent).
+
+**Governing rules locked (user, 2026-06-06).** (1) *No "standard facts"/"citations" — the ONLY ground
+truth is a byte/string match to a LOCAL `refs/` source.* (2) *"A derivation = lemma = af"* (small ⇒
+in-workspace node; reusable/substantial ⇒ own lemma). The recurring `‖Φ‖=1` was *avoided* (δ-bound +
+triangle), never asserted — so no `lem-positive-unital-contraction` was needed for the bridge.
+
+**The adversarial loop caught three real defects (the project's whole point):**
+- **R5 fabrication (e5b21c8).** `GT-bhsa-jc` seeded with a *fabricated* "verbatim" quote (a true-fact
+  paraphrase) that reached pushed commit `73b240b`; `lem-bridge-polar`'s verifier caught it (its peers
+  had grep-confirmed only a substring). Built `scripts/check-refs.py` (TDD, 17 tests, reviewer-approved) —
+  byte-matches every af-external quote vs `refs/`, wired into `check-all.sh`; full audit = exactly 2
+  fabrications, both corrected (+`GT-jc-is-jb` added for the JC→JB step). The class is now pre-commit-gated.
+- **R6 boundary error.** `thm-bridge` asserted `η₀=1/4`, but `lem-P-properties` needs `η₀<1/4` *strictly*
+  (the binomial for `P` diverges at `4η₀=1`, constants → ∞); verifier caught it, fixed to `η₀<1/4`.
+- `lem-square-hole` node-1.2 asserted `‖Φ‖=1` as a leaf → replaced by the in-scope triangle bound.
+
+**Process directive (user): each discovered failure mode → a red→green test/gate.** `test_check_refs.py`
+(fixture-based matcher red→green + the live `fail_count==0` invariant), `test_argument.py` (grounded-leaf).
+LEARNINGS R5/R6.
+
+**Beads.** Closed `aipm-dkn` (linker), `aipm-0ze` (bridge). Filed `aipm-17f` (registry cited-audit),
+`aipm-6ao` (gate — core shipped), `aipm-iel` (gate hardening: skip-no-quote evasion + retrofit
+`lem-P-properties`' 7 quote-less externals, P1), `aipm-1pd` (af `depend` post-hoc-dep PR).
+
+**af frictions noted.** No post-hoc dependency-edge command (`aipm-1pd`); externals are workspace-level
+(node scope shows "(none found)"); a child-fix also requires resolving the *root's* cascaded dependency
+challenge. The af workspace is not safe under concurrent mutation → per-workspace af ops were serialized.
+
+**Known gaps / next (highest first).** `aipm-iel` (harden check-refs — 8 quote-less externals still
+unverified); `aipm-17f` (audit cited registry results, downgrade ungrounded e.g. whitehead/aut-compact,
+rename cited→grounded); `aipm-qpa` (factor `‖Φ‖=1` / operator-Banach-algebra into own lemmas/defs);
+`aipm-dqz` (`af replay --verify` of `proofs/*` in check-all); `aipm-oql`/`aipm-chn` (Phase-4 reorg);
+open-math frontier `aipm-245`/`aipm-08u`/`aipm-36d` (Layer-1).

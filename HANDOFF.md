@@ -1,172 +1,121 @@
 <!--
-ROLE: crash-safe handoff for the in-progress repo re-architecture (branch argument-architecture).
+ROLE: crash-safe handoff for the argument-architecture build (branch argument-architecture).
 UPDATE POLICY: rewritten (not appended) at each checkpoint; keep <=500 lines; git history holds old versions.
 TRIGGER: end of a work session / before a push / when phase status changes.
-NOTE: this tracks the REORG/ARCHITECTURE build. For the MATH status see agent-A/HANDOFF.md.
+NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status see PRD.md §math + agent-A/HANDOFF.md.
 -->
 
 # HANDOFF — argument-architecture build
 
 > ## START HERE (next agent)
-> 1. `git checkout argument-architecture` (this branch; pushed to origin).
-> 2. Read, in order: **this file** → `docs/plans/2026-06-05-argument-architecture-plan.md` (the approved
->    design) → `definitions/INDEX.md` + `argument/INDEX.md` + `argument/DAG.md` (the current state).
-> 3. **What to do next is in beads** (`bd ready`). All **three P1 phases are DONE and closed**: Phase 2b
->    registry seeding (`aipm-w2b`; 56 results), Phase 3 first af proof (`aipm-0sg`; `lem-P-properties`
->    validated), Phase 4 context docs (`aipm-ond`; CLAUDE/AGENTS/PRD/LEARNINGS). `bd ready` is now all P2.
->    **Recommended continuation — `aipm-0ze`: af workspaces for the rest of the bridge**
->    (`lem-first-insertion`, `lem-square-hole-almost-positive`, `prop-bridge-jordan`, `thm-bridge`) via
->    **Recipe B** — af is established, drive it autonomously (no need to re-ask the user). Other ready tracks:
->    `aipm-wfp` (Phase 2b real beads-sync — replace the `--sync-beads` dry-run stub), `aipm-chn`/`aipm-oql`
->    (Phase 4 reorg + `check-provenance`/report-build + `af replay --verify` in check-all, see also `aipm-dqz`),
->    `aipm-qpa` (factor the reusable foundational facts — `‖Φ‖=1` contraction, operator Banach algebra — out
->    of the lem-P-properties workspace into their own registry lemmas/defs, via **Recipe A**), `aipm-9ho`
->    (lock the 2 draft defs). Open-math frontier: `aipm-245`/`aipm-08u`/`aipm-36d` (hard; see agent-A/HANDOFF).
->    Claim with `bd update <id> --status in_progress`; close with `bd close <id> --reason "…"`.
-> 4. Sanity-check the build: `sh scripts/check-all.sh` must print `[check-all] OK`. The validation suite
->    is LIVE in the pre-commit hook — commit normally (do **not** use `core.hooksPath=/dev/null` anymore).
-> 5. Live recipes below: **Recipe B** (af per-lemma — the main continuation), **Recipe C** (gate/commit),
->    **Recipe A** (general "add a registry shard"; use for `aipm-qpa`).
+> 1. `git checkout argument-architecture` (this branch; pushed to origin, up to date).
+> 2. Read, in order: **`PRD.md`** → **`CLAUDE.md`**(==`AGENTS.md`) → **this file** → `definitions/INDEX.md`
+>    + `argument/INDEX.md` + `argument/DAG.md` (the live state).
+> 3. **THE ALGEBRAIC BRIDGE (Theorem B) IS COMPLETE** — all 8 of its lemmas are machine-validated via `af`
+>    and pushed (commits `7021740..b7110ba`): `lem-P-properties`, `lem-bridge-orderunit`,
+>    `lem-first-insertion`, `lem-square-hole-almost-positive`, `lem-bridge-easy`, `lem-bridge-polar`,
+>    `lem-bridge-onehole`, `prop-bridge-jordan` (crux), `thm-bridge` (capstone). **What to do next is in
+>    beads (`bd ready`).** Highest-value follow-ups, in order: **`aipm-iel`** (P1 — harden `check-refs`:
+>    8 quote-less externals, 7 of them in `lem-P-properties`, are SKIPPED by the gate and NOT byte-verified;
+>    retrofit them to embed verbatim quotes + re-verify, close the skip-no-quote evasion); **`aipm-17f`**
+>    (audit the `cited` registry results vs `refs/` string-matches, honestly downgrade the ungrounded —
+>    `thm-whitehead`/`prop-aut-compact` are PDF-only — and rename `cited`→`grounded`); **`aipm-qpa`** (factor
+>    `‖Φ‖=1`/operator-Banach-algebra into own lemmas/defs); **`aipm-dqz`** (`af replay --verify` in
+>    check-all); **`aipm-oql`/`aipm-chn`** (Phase-4 reorg). Open-math frontier (hard): `aipm-245`/`aipm-08u`/
+>    `aipm-36d` (Layer-1). Claim with `bd update <id> --status in_progress`; close with `bd close <id>`.
+> 4. Sanity-check: `sh scripts/check-all.sh` must print `[check-all] OK`. The gate now includes
+>    **`check-refs`** (byte-matches every af-external verbatim quote vs its `refs/` locus) — it is LIVE in
+>    the pre-commit hook. Commit normally; do **not** use `core.hooksPath=/dev/null`.
+> 5. Live recipes below: **Recipe B** (af per-lemma — proven over 8 bridge lemmas), **Recipe C**
+>    (gate/commit), **Recipe A** (add a registry shard).
 
-**Branch:** `argument-architecture` (off `main`). **Date:** 2026-06-05.
-**Approved design:** `docs/plans/2026-06-05-argument-architecture-plan.md` (copied from the plan-mode file;
-read it first). The repo is being rebuilt as a **typed module system for the proof**:
-definitions = types · lemmas (af workspaces) = modules · statements = contracts · a linker enforces the DAG.
+**Branch:** `argument-architecture` (off `main`). **Date:** 2026-06-06. **Approved design:**
+`docs/plans/2026-06-05-argument-architecture-plan.md`. Mental model: definitions = types · each lemma (af
+workspace) = a module whose *contract* is its one-line statement · a linker enforces the DAG.
 
-## Four governing principles (from the user)
-1. **Definitions DB is PRIORITY 1** — deduplicated, provenanced, consensus-gated, local ground truth. Drift = death.
-2. **Every lemma gets its OWN tiny af workspace**; a huge proof tree is a brittleness *failure signal* → factor into sub-lemmas.
-3. **The whole argument is an enforced DAG** (modules + contracts), checked by a linker.
-4. **~200-LOC sharding everywhere**, greppable, indexed. No monolith.
-Plus standing directives: **red-green TDD for all tooling**; **harvest CLAUDE.md best-bits from
-`../cft-anyons`, `../Bennett.jl`, `../af-tests`, `../arithmetic-quantum-mechanics`** when writing our CLAUDE.md (Phase 4).
+## Two governing rules (user, 2026-06-06) — non-negotiable
+1. **No "standard facts"/"citations".** The ONLY ground truth is a **byte/string match to a LOCAL `refs/`
+   source**. Every leaf of every proof is an af external whose verbatim quote byte-matches `refs/`
+   (enforced by `scripts/check-refs.py`). If a fact is not in `refs/`, STOP — do not paraphrase from memory.
+2. **"A derivation = lemma = af".** Every non-leaf fact is an af-validated claim (a node; if reusable/
+   substantial, its own registry lemma). Small derivations stay in-workspace nodes; don't over-factor.
+Corollary actually used in the bridge: **`‖Φ‖=1` is AVOIDABLE** — bound `‖Φ(a)‖ ≤ (1±δ)‖a‖` via the norm
+triangle inequality + the grounded `δ=‖P−Φ‖` bound (lem-P-properties); never assert `‖Φ‖=1` as a leaf.
 
-## DONE (committed on this branch)
-- **Phase 0:** `bd init` (prefix `aipm`); references deduped into one `refs/<source-id>/` tree (~24M→17M);
-  HOS `joa-m.md` + Idel text brought local (were `../af-tests` abs paths); `refs/manifest/{SOURCES.md,
-  checksums.sha256}` tracked (50 files, `cd refs && sha256sum -c manifest/checksums.sha256`); `.gitignore`
-  rewritten (payload ignored, manifest tracked; proofs/ ledger rules; `.claude/`).
-- **Phase 1 (core):** `definitions/` Layer-0 DB — **16 shards** (analytic setting, Jordan/JB, spectral
-  construction, the central `def-eps-jb-algebra`, bridge/factorization objects). `scripts/check-defs.py`
-  gate (dedup/drift + cited-SHA256 vs manifest + consensus-gate + `INDEX.md` gen); **TDD'd** by
-  `scripts/tests/test_check_defs.py` (8/8). Gate green: 16 shards, 0 errors, 0 warnings.
-- `definitions/README.md` = the shard schema. **Phase 1 COMPLETE: 22 def shards** (+classical
-  stochastic/exposed, Layer-1 jordan-coboundary/injective-cochain-norm, decomposable-map +
-  multiplicative-domain — last two `draft`, byte-check pending). Gate: 22 shards, 0 errors, 2 warns.
-- **Phase 2 (core) DONE:** `argument/` Layer-1 registry — README schema + `scripts/argument.py` linker
-  (acyclic · imports · contract-match-vs-af · status-propagation w/ ready/blocked · brittleness · orphans),
-  built TEST-FIRST (`scripts/tests/test_argument.py`, 19/19). Seeded the bridge's proved 5-node DAG
-  (lem-P-properties → first-insertion/square-hole → prop-bridge-jordan → thm-bridge); generates
-  `argument/{INDEX,DAG}.md`. `scripts/check-all.sh` (defs+linker+tests) wired into
-  `.beads/hooks/pre-commit` — **proven to run on commit** (bd hook + suite both green).
+## DONE (this session — all committed + pushed)
+- **Theorem B fully machine-validated.** 8 af workspaces, each: build (opus) → fresh-opus-verifier
+  adversarial pass per node (reviewer≠author) → resolve → re-verify → `af: validated`. Every leaf
+  byte-grounded in `refs/`; `argument.py --check` 0 errors; contract-match + status-propagation clean.
+- **Linker fix (`50305fc`).** Grounded-leaf (cited) deps no longer block readiness (TDD, reviewer≠author).
+- **`check-refs` provenance gate (`e5b21c8`).** Byte-matches every af-external quote vs `refs/`; wired into
+  `check-all.sh`. It exists because a **fabricated "verbatim" quote** (`GT-bhsa-jc`, a true-fact paraphrase)
+  reached pushed commit `73b240b` and was caught by a fresh verifier (LEARNINGS **R5**). Audit: exactly 2
+  fabrications, both corrected.
+- **LEARNINGS R5** (fabrication) + **R6** (`thm-bridge` asserted `η₀=1/4` where `lem-P-properties` needs
+  `η₀<1/4` strictly — binomial diverges at the boundary; verifier caught it). Each failure mode earned a
+  red→green test (`test_check_refs.py`, `test_argument.py`).
 
-- **Phase 2b (shard-seeding) DONE:** registry grown from 5 → **56 results** (`argument/lemmas/*.md`),
-  harvested from `report/PROVENANCE.md` per-claim ledger + `report/sections/*` + `agent-A|B/theory|notes`.
-  Covers all 6 clusters: bridge sub-lemmas, cited preliminaries (JNW/Effros-Størmer/Whitehead/Aut/VLW/
-  Kadison/power-assoc), faithful-invariant, exact factorization, classical stability (14), Layer-1
-  structure programme (11), exponent (7). Plus **2 new defs** (`def-peirce-decomposition` locked,
-  `def-jordan-frame` draft — HOS lacks the literal term). DAG acyclic, `argument.py --check` =
-  **0 errors, 0 warnings** (56 results, 17 ready, 29 blocked); `check-defs` 0 errors. Authored + adversarially
-  verified (contracts checked against cited sources) via a fan-out workflow. Conditional theorems
-  (thm-factorization, thm-classical-factorization) correctly modeled as `proved` but **blocked** on their
-  open hypotheses (op-npps, op-exposed-hull); obstructions/open-problems carried as first-class nodes.
-  *Still open in Phase 2b:* real beads sync (`aipm-wfp`); `argument.py --sync-beads` is still a dry-run stub.
-
-- **Phase 4 (context-hygiene docs) DONE:** authored `CLAUDE.md` (==`AGENTS.md`, byte-identical, bd block
-  preserved) + `PRD.md` (the entry point) + `docs/LEARNINGS.md`, harvested from the four neighbour repos
-  (`../cft-anyons` gold-standard, `../arithmetic-quantum-mechanics`, `../Bennett.jl`, `../af-tests`) and
-  grounded in a self-inventory. PRD = WHAT/scope (north star, two-layer theorem, honest proved/open status,
-  open obstructions→bead ids, milestones); CLAUDE = HOW (read-order gate, the Laws, numbered Rules, M/D/C/R/I
-  gates, hallucination callouts, af+linker usage, land-the-plane). Adversarially reviewed (math-overclaim +
-  process/consistency, all commands verified). `aipm-ond` closed. *Remaining Phase 4 (reorg):* `aipm-chn`,
-  `aipm-oql`. **First-time `af` note:** the Phase 3 pilot is the first af use — get a hint or two from the
-  user before starting that first workspace (light note, not a hard gate).
-
-- **Phase 3 (af pilot) DONE — first machine-checkable proof:** `proofs/lem-P-properties/` is fully
-  **validated** (10/10 nodes validated + clean; root composition verified). Proof method (the established
-  af convention, used here over 4 adversarial rounds): **prover = main loop** (owner `agent-A`); **verifier
-  = a FRESH subagent per node** (owner `v<round>-<node>`), instructed that gaps/errors/counterexamples are
-  high-value successes and to demand strictest rigour; **no "standard facts"** — every leaf cites `refs/`
-  ground truth (HOS/Idel/Kitaev) or derives from cited facts / named prior nodes. The loop caught a real
-  bug (a wrong `‖U‖≤1/2` gate), a real arithmetic slip (`3/2·C=C`), several provenance mis-citations, and a
-  deep multiplicativity gap (resolved by citing Kitaev's general-Banach-algebra `prop_P`, refs/kitaev:524-532,
-  which states `θ(2P−I)²=θ(2P−I)` directly). Shard `lem-P-properties` set `af: validated`; linker confirms
-  contract-match + propagates (unblocked `lem-first-insertion`, `lem-bridge-orderunit`). Export at
-  `proofs/lem-P-properties/export.{tex,md}`. *Note:* af has **no post-hoc dependency-edge command** —
-  dependencies are recorded in-text ("Uses nodes …"). Follow-ups filed: factor the reusable foundational
-  facts (`‖Φ‖=1` contraction, operator Banach algebra) into own registry lemmas/defs; add `af replay --verify`
-  to `check-all.sh`.
-
-Commits: bd init → Phase0 refs → Phase1 (foundation/TDD/core/peripheral) → plan+HANDOFF → Phase2 linker
-→ Phase2b registry seeded (56 results) → Phase4 context docs (CLAUDE/AGENTS/PRD/LEARNINGS) → Phase3 first af
-proof (lem-P-properties validated).
-
-## NEXT (in order)
-1. **Phase 2b beads-sync (`aipm-wfp`) — the only remaining 2b piece:** shard-seeding is DONE (56 results).
-   Replace the dry-run stub in `scripts/argument.py --sync-beads` with a real sync: one `bd` issue per
-   registry lemma, `bd dep add` edges = registry `deps`, persist a lemma↔bd-id map; serialize bd calls.
-   (Goal: `bd ready` mirrors the linker's ready frontier.) Then `python3 scripts/argument.py --check --generate`.
-2. **Phase 3 — af per-lemma (pilot DONE).** `lem-P-properties` is validated. Continue down the af frontier:
-   `python3 scripts/argument.py` prints the ready set (now `lem-first-insertion`, `lem-bridge-orderunit`,
-   then the rest of the bridge). Per lemma follow Recipe B; advance the shard `af: none→seeded→validated`.
-   af is now established — no need to re-ask the user (the first-time hint is spent).
-3. **Phase 4 — reorg (hygiene docs DONE):** the context docs (CLAUDE/AGENTS/PRD/LEARNINGS) are done; what
-   remains is the reorg — consolidate `theory/`+`experiments/`, archive clutter (phantom
-   `response-to-agent-a-v*`, superseded stacks, 91KB compaction dump) (`aipm-chn`); add `check-provenance.py`
-   + report `latexmk` to check-all.sh and merge `report/PROVENANCE.md` up (`aipm-oql`).
-4. **Phase 5 — fresh Lean scaffold** (secondary; af-tests reference only).
+## NEXT (priority order — see `bd ready`)
+1. **`aipm-iel` (P1).** Harden `check-refs`: 8 externals cite a `refs/` locus but embed NO verbatim quote
+   (→ `skip_noquote`, unchecked); retrofit `lem-P-properties`' 7 quote-less externals to embed real quotes
+   + re-verify the pilot; require quotes (skip_noquote→FAIL); consider whole-quote (not single-run) match.
+2. **`aipm-17f`.** Audit every `cited` registry result vs `refs/`; downgrade the ungrounded; `cited`→`grounded`.
+3. **`aipm-qpa`.** Factor `‖Φ‖=1` contraction + operator-Banach-algebra out of `lem-P-properties` into own
+   registry lemmas/defs; fix the false `GT-positive-unital` Idel provenance.
+4. **`aipm-dqz`** (`af replay --verify` per `proofs/*` in check-all) · **`aipm-oql`** (check-provenance +
+   report `latexmk` in check-all) · **`aipm-chn`** (reorg theory/experiments, archive clutter) ·
+   **`aipm-wfp`** (real beads-sync).
+5. **Open-math frontier** (hard, may need the user): `aipm-245` (Layer-1 coboundary splitting), `aipm-08u`
+   (NPPS/exposed-hull), `aipm-36d` (matrix benchmark re-audit). **`aipm-3ox`** = Phase-5 fresh Lean scaffold.
+6. **`aipm-1pd` (P3).** af PR: post-hoc dependency-edge command (`af depend`), upstream `../vibefeld`
+   (user authorized af PRs).
 
 ## Recipes (do exactly this)
 
-**Recipe A — add a registry shard (general).** Phase 2b bulk seeding (`aipm-w2b`) is done; use this when
-adding a NEW result (e.g. the `aipm-qpa` factored foundational lemmas, or any new sub-lemma split out of an
-af workspace). For a result (from `report/PROVENANCE.md` per-claim ledger: label · source · locus · status):
-1. `cp argument/lemmas/lem-P-properties.md argument/lemmas/<id>.md` and edit the frontmatter
-   (schema: `argument/README.md`). `id`=`{lem|thm|prop|cor|op}-<slug>` == filename stem; `contract`=
-   the statement as ONE line; `defs`=`;`-list of `def-*` ids; `deps`=`;`-list of registry ids it uses;
-   `status`∈{proved,cited,consensus,open,obstruction,disproved}; `af: none`; `provenance`; `owner`; `workspace`.
-2. Every `def` referenced MUST exist in `definitions/` — if missing, add a def shard first
-   (`definitions/README.md` schema) and `python3 scripts/check-defs.py`.
-3. `python3 scripts/argument.py --check --generate` → must be 0 errors; regenerates INDEX/DAG.
-4. Commit (the pre-commit hook re-runs the suite). Map report status→registry: `(proved)`→proved,
-   `(cited)`→cited, `(consensus)`→consensus, `OPEN`/`(open)`→open, obstruction→obstruction.
+**Recipe B — af per-lemma (PROVEN over 8 bridge lemmas).** Drive the ready frontier (`python3
+scripts/argument.py` prints it). Per lemma:
+1. **Prep (sonnet):** read the lemma shard + its prose (`agent-B/theory/theorem-B-algebraic-bridge.md` line
+   range in `provenance`) + the cited def shards; for every external fact, locate the verbatim `refs/`
+   string. Output a "proof kit" (proof outline · externals with loci + verbatim strings · node plan ≤12,
+   depth ≤3 · ungrounded flags).
+2. **Build (opus prover, owner agent-A):** `af init -c "<contract VERBATIM>" -a agent-A -d proofs/<id>`
+   (root must byte-match the registry contract — the linker checks it). Seed defs (`af def-add`) and
+   externals: **COPY the actual `refs/` bytes** (`sed -n '<lines>p' refs/...`) into the `VERBATIM:` quote —
+   NEVER write a quote from memory. Import a validated lemma's result as a black-box external (no refs
+   quote needed). Build the tree (`af refine`, declare cross-edges with `--depends` AT REFINE TIME).
+   **ANTI-FABRICATION self-check:** run `python3 scripts/check-refs.py --check | grep <id>` and confirm
+   every refs-external PASSES before finishing. Do NOT self-validate.
+3. **Verify (opus, a FRESH verifier per node, sequential — af is NOT concurrency-safe within a workspace):**
+   each told gaps/errors are high-value successes; re-grep every cited refs leaf; check imports match their
+   lemma contracts; demand universal/dimension-free constants. `af claim <n> -o v<round>-<n> -r verifier`
+   then `af challenge`/`af accept --confirm`. Verify leaves → parents → root.
+4. **Resolve (prover):** address challenges (`af amend`/`af refine`/`af resolve-challenge`). **Also resolve
+   the ROOT's cascaded dependency challenge** once children validate (easy to miss). Re-verify fresh.
+5. When all nodes validated+clean: set shard `af: validated`, `python3 scripts/argument.py --check
+   --generate`, `af export -f latex/-f markdown`, commit (Recipe C). >12 nodes ⇒ STOP and factor a sub-lemma.
 
-**Recipe B — af per-lemma (Phase 3; convention established by the `lem-P-properties` pilot).** Drive the
-**ready frontier** (`python3 scripts/argument.py` prints it):
-1. `af init -c "<contract copied VERBATIM from the shard>" -a agent-A -d proofs/<id>` (root conjecture
-   MUST match the registry `contract` — the linker checks this). Set the shard `af: seeded`.
-2. Seed ground truth: `af def-add <name> "<text>"` for each `def` (mirror `definitions/`); and
-   `af add-external --name GT-<x> --source "<refs/ path:locus + the exact fact>"` for **every external fact
-   used** — under the **no-"standard-facts" rule**, every leaf must cite a `refs/` source (HOS/Idel/Kitaev…)
-   or derive from cited facts / named prior nodes.
-3. **Prover = you (main loop, owner `agent-A`)**: `af claim`/`af refine` (build the tree), then
-   `af amend`/`af resolve-challenge` to address challenges. **Verifier = a FRESH subagent per node**
-   (owner `v<round>-<node>`), spawned anew each time — its one job is to verify that node, told that
-   gaps/errors/counterexamples are high-value successes and to demand strictest rigour + ground-truth
-   provenance; it runs `af claim -r verifier` then `af challenge`/`af accept --confirm`. Loop:
-   build → fresh-verifier round → resolve → re-verify (fresh again) until all nodes `validated`. Verify
-   leaves/sub-nodes first, then parents, then the root (coverage). **af has no post-hoc dependency-edge
-   command** → name deps in-text ("Uses nodes …"). If the tree exceeds ~12 nodes, STOP — factor a sub-lemma.
-4. When all nodes (incl. root) are `validated`+`clean`: set the shard `af: validated`,
-   `python3 scripts/argument.py --check` (verifies af root == contract, propagates status),
-   `af export -f latex -o proofs/<id>/export.tex` (+ `-f markdown`), commit.
+**Recipe C — gate / commit.** `af export …`; `python3 scripts/argument.py --check --generate`; then commit
+(the pre-commit hook re-runs `check-all` = check-defs + **check-refs** + linker + tests). Guard:
+`grep -q '^af: validated' <shard> && sh scripts/check-all.sh && git add <proofs/id> <shard> argument/INDEX.md
+argument/DAG.md && git commit … && git push`. One atomic validated result per commit, in dependency order.
 
-**Recipe C — run the gate / commit.** `sh scripts/check-all.sh` → `[check-all] OK`. Then `git commit`
-normally (hook runs bd export + check-all). Push at checkpoints: `git push`.
+**Recipe A — add a registry shard.** `cp argument/lemmas/<template>.md argument/lemmas/<id>.md`, edit
+frontmatter (`id`==filename stem; `contract` one line; `defs`/`deps` `;`-lists; `status`; `af: none`;
+`provenance`; `owner`; `workspace`). Every `def` must exist in `definitions/`. `python3 scripts/argument.py
+--check --generate` → 0 errors. Commit.
 
-## Key facts / gotchas for whoever resumes
-- `af` = Adversarial Proof Framework, source `../vibefeld`, v0.1.3 (PATH binary mislabels as "dev";
-  `af --version` is authoritative). Export is Markdown/LaTeX only — **no af→Lean generator** (manual
-  transcription using af node IDs). af workspaces are machine-introspectable via `-f json`.
-- Lean is **secondary**; `af-tests` is **reference only** (not a dependency).
-- bd: never `bd init --force`; fresh clone `bd import` not `bd init`; serialize bd calls. (The minimal
-  `CLAUDE.md`/`AGENTS.md` bd first wrote are now superseded — Phase 4 authored the full pair, byte-identical,
-  bd integration block preserved. bd's "no in-repo MEMORY.md" rule is reconciled in `CLAUDE.md` §7:
-  in-repo persistent knowledge → `bd remember`; the `~/.claude` harness memory is the agent's own and orthogonal.)
-- Pre-existing uncommitted edit `agent-A/lean-formalisation-coverage.md` is **not** part of this work — left untouched.
-- The validation suite is LIVE in the pre-commit hook (don't use `core.hooksPath=/dev/null` — let
-  `check-all.sh` run). It checks defs + linker + tooling tests; **TODO** (filed): `check-provenance.py` +
-  report `latexmk` (`aipm-oql`) and `af replay --verify` of `proofs/*` (`aipm-dqz`).
-- Definitions DB now has **24 shards** (22 from Phase 1 + `def-peirce-decomposition`, `def-jordan-frame` from 2b;
-  3 draft: `def-decomposable-map`, `def-multiplicative-domain`, `def-jordan-frame` — `aipm-9ho`).
-- **Task tracking is beads only** (`bd ready`/`bd show`/`bd close`) — ignore any stale harness TaskList; there is none.
+## Key facts / gotchas
+- **check-refs is law.** Every af-external citing a `refs/` locus must embed a verbatim quote that
+  byte-matches (whitespace/`$`-normalised). Provers copy actual bytes + self-check; the hook blocks
+  fabrications. 8 quote-less externals currently slip through as `skip_noquote` (→ `aipm-iel`).
+- **af frictions.** No post-hoc dependency-edge command (deps via `--depends` at refine time, or re-ground
+  a leaf from an in-scope external; PR = `aipm-1pd`). Externals are workspace-global (node scope shows
+  "(none found)"). Serialize af ops per workspace (not concurrency-safe); different workspaces are
+  independent and parallelize fine. `af resolve-challenge <id> -r "…"` (no `-o`); `af accept` without a
+  prior challenge needs `--confirm`; amending a node requires it `pending` (validated nodes can't be amended
+  — re-ground from in-scope externals instead).
+- **Validated bridge workspaces are the template** for future af proofs (e.g. `aipm-qpa` factoring, the
+  open-math frontier). `proofs/lem-bridge-orderunit` (smallest, exact) and `proofs/prop-bridge-jordan` (crux)
+  are good worked examples.
+- **Task tracking is beads only** (`bd ready`/`bd show`/`bd close`). `agent-A/HANDOFF.md` MATH is current;
+  its FILE MAP is stale (repo is `/home/tobias/...`, refs deduped into `refs/`).

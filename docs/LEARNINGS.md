@@ -54,6 +54,15 @@ against its cited `refs/` locus, wired into `check-all.sh` so the pre-commit hoo
 17 red→green tests (`scripts/tests/test_check_refs.py`). Known gate blind spots (skip-no-quote evasion;
 single-run false-negative) tracked in `aipm-iel`.
 
+**R6 — `η₀=1/4` asserted where `η₀<1/4` is *strictly* required (boundary divergence). → corrected.** The
+`thm-bridge` capstone build (nodes 1.7/1.8) fixed a concrete cutoff `η₀=1/4`. But `lem-P-properties`
+requires `η₀<1/4` **strictly**: `P=θ(2Φ−1)` is built from the binomial series
+`R=(S²)^{−1/2}=(1−4(Φ−Φ²))^{−1/2}`, which converges only for `4η₀<1`. At the boundary `4η₀=1` the constant
+`C(η₀)=Σ|aₙ|(4η₀)^{n−1}` **diverges** (`∼2√(N/π)`, numerically confirmed), so `C₁,C₂,C₃→∞` and the
+theorem's "universal dimension-free constants" guarantee fails. A fresh verifier caught it
+(target=statement on node 1.8); fixed to `η₀<1/4` fixed (e.g. 1/8). The *fact* (bridge holds for small η)
+is fine; the *admissible-range boundary* was wrong.
+
 ## Standing lessons
 
 - **No-overclaim is the prime directive.** `√η` general (not `η`); Layer-1 structure theorem and exact
@@ -66,3 +75,7 @@ single-run false-negative) tracked in `aipm-iel`.
   into a false "verbatim" string (`R5`); verifiers must `grep -F` the *full* quoted text, and
   `scripts/check-refs.py` enforces it mechanically in the pre-commit hook. Every discovered failure mode
   earns a red→green test/gate (`aipm-6ao`, `aipm-iel`).
+- **Respect strict-inequality thresholds inherited from imports.** A downstream node asserting a closed
+  boundary value (`η₀=1/4`) where an import needs strict `<` (`η₀<1/4`) silently voids the
+  universal-constant guarantee (`R6`); verifiers must check the *admissibility* of inherited cutoffs, not
+  just the leading-order rate.
