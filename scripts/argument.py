@@ -127,18 +127,24 @@ def check_imports(lemmas, def_ids):
 
 def check_status(lemmas):
     af_of = {l["id"]: l.get("af", "none") for l in lemmas}
+    status_of = {l["id"]: l.get("status") for l in lemmas}
+    # A dep is AVAILABLE iff its af is validated OR it is a ground-truth leaf (status=cited:
+    # cited background like Kadison's inequality is never af-proven yet is available to build on).
+    # Only status=='cited' counts as a leaf — NOT consensus/open/obstruction/disproved/proved.
+    def available(d):
+        return af_of.get(d, "none") == "validated" or status_of.get(d) == "cited"
     errors, ready, blocked = [], [], []
     for l in lemmas:
         deps = l.get("deps", [])
-        deps_validated = all(af_of.get(d, "none") == "validated" for d in deps)
-        if l.get("af") == "validated" and not deps_validated:
-            bad = [d for d in deps if af_of.get(d, "none") != "validated"]
+        deps_available = all(available(d) for d in deps)
+        if l.get("af") == "validated" and not deps_available:
+            bad = [d for d in deps if not available(d)]
             errors.append(f"{l['id']}: af=validated but dep(s) not validated: {bad}")
-        if l.get("af", "none") != "validated" and not deps_validated:
+        if l.get("af", "none") != "validated" and not deps_available:
             blocked.append(l["id"])
         if (l.get("af", "none") in ("none", "seeded")
                 and l.get("status") in ("proved", "consensus")
-                and deps_validated):
+                and deps_available):
             ready.append(l["id"])
     return errors, ready, blocked
 

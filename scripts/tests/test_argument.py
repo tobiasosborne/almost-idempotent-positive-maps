@@ -51,6 +51,30 @@ check("frontier: b ready (deps validated)", "b" in ready)
 check("frontier: c blocked (dep b not validated)", "c" in blocked)
 check("frontier: c not ready", "c" not in ready)
 
+# --- check_status: a GROUND-TRUTH LEAF (status=cited, af=none) is an AVAILABLE dep ---
+# A is a validated internal lemma; L is a cited leaf (e.g. prop-kadison-js / Kadison's
+# inequality), never af-proven; B rests on both. B must be READY (not blocked) and must NOT
+# trigger the af=validated-but-dep-unvalidated error even when later marked af=validated.
+grounded = [L("A", af="validated", status="proved"),
+            L("L", deps=[], af="none", status="cited"),
+            L("B", deps=["A", "L"], af="none", status="proved")]
+errs, ready, blocked = ag.check_status(grounded)
+check("grounded leaf: B ready (cited dep is available)", "B" in ready)
+check("grounded leaf: B not blocked", "B" not in blocked)
+check("grounded leaf: no spurious error about B", not has(errs, "B"))
+# and B may later be af=validated resting on a merely-cited leaf without an error
+grounded_v = [L("A", af="validated", status="proved"),
+              L("L", deps=[], af="none", status="cited"),
+              L("B", deps=["A", "L"], af="validated", status="proved")]
+errs_v, _, _ = ag.check_status(grounded_v)
+check("grounded leaf: af=validated B over cited leaf -> no error", not has(errs_v, "B"))
+# CONTROL: an OPEN (not cited) dep is NOT a leaf -> dependent stays blocked, not ready
+control = [L("O", deps=[], af="none", status="open"),
+           L("D", deps=["O"], af="none", status="proved")]
+errs_c, ready_c, blocked_c = ag.check_status(control)
+check("control: dep on OPEN result stays blocked", "D" in blocked_c)
+check("control: dep on OPEN result not ready", "D" not in ready_c)
+
 # --- check_contracts: drift between registry and af root ---
 lemmas = [L("a", contract="For r in A,  q_r >= 0.")]   # note: double space after comma
 ws_match = {"a": "For r in A, q_r >= 0."}              # whitespace differs only (single space)
