@@ -45,7 +45,7 @@ graph LR
   prop-rounding-fails["prop-rounding-fails<br/>proved/none"]
   prop-sartre["prop-sartre<br/>proved/none"]
   prop-spin-splitting["prop-spin-splitting<br/>proved/none"]
-  thm-bridge["thm-bridge<br/>proved/none"]
+  thm-bridge["thm-bridge<br/>proved/validated"]
   thm-classical-factorization["thm-classical-factorization<br/>proved/none"]
   thm-cluster["thm-cluster<br/>proved/none"]
   thm-dilation-compatible["thm-dilation-compatible<br/>proved/none"]

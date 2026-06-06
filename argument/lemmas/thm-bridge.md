@@ -5,7 +5,7 @@ contract: For unital positive Phi on B(H)_sa with ||Phi^2-Phi|| <= eta <= eta_0,
 defs: def-eps-jb-algebra; def-near-fixed-algebra; def-spectral-idempotent; def-almost-idempotent
 deps: lem-P-properties; lem-first-insertion; lem-square-hole-almost-positive; prop-bridge-jordan; lem-bridge-easy; lem-bridge-orderunit
 status: proved
-af: none
+af: validated
 provenance: theorem-B-algebraic-bridge.md:7-50; report thm:bridge (A-verified line-by-line v0.5 §10)
 owner: B
 workspace: proofs/thm-bridge

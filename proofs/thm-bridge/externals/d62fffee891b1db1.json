@@ -1,0 +1,8 @@
+{
+  "id": "d62fffee891b1db1",
+  "name": "GT-jordan",
+  "source": "Prior PROVED registry result prop-bridge-jordan (proofs/prop-bridge-jordan/; status proved). The projected product on A=Im P satisfies the approximate Jordan identity (JB4): ||((a•a)•b)•a - (a•a)•(b•a)|| \u003c= C_4 sqrt(eta) ||a||^3 ||b||, by exact-ambient-Jordan-identity cancellation of the leading term with O(sqrt(eta)) one-hole error terms. Constant C_4 universal and dimension-free; no complete positivity used (the sqrt(eta) is intrinsic to the operator-norm/positivity hypothesis, not CP).",
+  "content_hash": "955cd048fd04b2436a874f01d641dd240689086abbfbf86f1fdcb268c67d4b88",
+  "created": "2026-06-06T08:24:28.156929321Z",
+  "notes": ""
+}

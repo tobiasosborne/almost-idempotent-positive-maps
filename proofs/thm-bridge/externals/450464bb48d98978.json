@@ -1,0 +1,8 @@
+{
+  "id": "450464bb48d98978",
+  "name": "GT-easy",
+  "source": "Prior VALIDATED registry lemma lem-bridge-easy (proofs/lem-bridge-easy/, af: validated; status proved). The projected product a•b=P(a o b) on A satisfies the easy axioms: unit law 1•a=a and commutativity a•b=b•a are EXACT; (JB1) ||a•b|| \u003c= (1+C_1 eta)||a|| ||b||; (JB2) ||a•a|| \u003e= (1-C_2 eta)||a||^2; (JB3) a•a \u003e= -C_3 eta ||a||^2 1. Constants C_1,C_2,C_3 universal and dimension-free; proof uses only positivity+unitality of Phi and ||Phi^2-Phi||\u003c=eta (Jordan-Schwarz on Phi), NO complete positivity.",
+  "content_hash": "ba68f7b67519d9aa598f0120e85a3121b3747ad15bb8f6cab3bc164b7b9eef63",
+  "created": "2026-06-06T08:24:28.14946736Z",
+  "notes": ""
+}

@@ -45,7 +45,7 @@
 | `prop-rounding-fails` | obstruction | proved | none | B | Generic O(eps) positivity rounding is false: for each m>=1 (eps=1/(2m)) the spin… |
 | `prop-sartre` | obstruction | proved | none | B | A bad CP+coCP decomposition of the depolarizing M_2 projection D(x)=(1/2)Tr(x)1 … |
 | `prop-spin-splitting` | proposition | proved | none | B | For a spin factor V=R1+H the exact-adjoint Jordan coboundary d^1 has an O(H)-equ… |
-| `thm-bridge` | theorem | proved | none | B | For unital positive Phi on B(H)_sa with ||Phi^2-Phi|| <= eta <= eta_0, the near-… |
+| `thm-bridge` | theorem | proved | validated | B | For unital positive Phi on B(H)_sa with ||Phi^2-Phi|| <= eta <= eta_0, the near-… |
 | `thm-classical-factorization` | theorem | proved | none | B | There are universal eta_0,C>0 such that if Q is row-stochastic with eta=||Q^2-Q|… |
 | `thm-cluster` | theorem | proved | none | B | There are universal delta_0,C>0 such that a signed affine retraction P with neg … |
 | `thm-dilation-compatible` | theorem | proved | none | B | If there is a unital order-isometric Jordan embedding j:B(H)_sa->D_sa and a unit… |

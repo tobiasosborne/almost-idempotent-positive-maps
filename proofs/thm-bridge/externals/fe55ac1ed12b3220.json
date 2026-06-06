@@ -1,0 +1,8 @@
+{
+  "id": "fe55ac1ed12b3220",
+  "name": "GT-orderunit",
+  "source": "Prior VALIDATED registry lemma lem-bridge-orderunit (proofs/lem-bridge-orderunit/, af: validated; status proved). The near-fixed algebra A=Im P, with unit 1 and inherited cone A_+ = A cap B(H)_+, is an order-unit space, and its order-unit norm ||a||_ou = inf{t\u003e0: -t1\u003c=a\u003c=t1} coincides EXACTLY with the operator norm on A. (Exact: no eta error in the order/unit/norm structure.) Dimension-free; no complete positivity used.",
+  "content_hash": "4a5008a3b3414b73ce2bf773880642b01181f37a0722a3a579eebdda607eebab",
+  "created": "2026-06-06T08:24:28.141727587Z",
+  "notes": ""
+}
