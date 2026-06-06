@@ -1,0 +1,1 @@
+{"type":"node_validated","timestamp":"2026-06-06T21:06:43.667238513Z","node_id":"1.3","note":"JB2 sound: X=X^dag (X in B_sa) =\u003e XoX=(1/2)(X*X+X*X)=X*X=X^dag*X; ax_C* (Kitaev :428 byte-matched ||X^dag X||\u003e=(1-eps)||X||^2) gives ||XoX||\u003e=(1-Ceta)||X||^2. eps=O(eta). Universal dim-free."}

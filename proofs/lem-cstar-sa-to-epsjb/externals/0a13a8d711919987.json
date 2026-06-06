@@ -1,0 +1,8 @@
+{
+  "id": "0a13a8d711919987",
+  "name": "GT-jb-submult",
+  "source": "HOS, refs/hos/joa-m.md:2312 --- 3.1.3 Jordan Banach algebra norm axiom, VERBATIM: \"$$||a \\circ b|| \\leq ||a|| \\, ||b||, \\qquad a, b \\in A.$$\". B(H)_sa is a JB algebra (GT-bhsa-jc + GT-jc-is-jb) in the operator norm, so its AMBIENT Jordan product satisfies submultiplicativity in operator norm. Used only for crude norm bounds in JB4 setup; NOT for the eps-C* product (which uses ax_prodnorm instead).",
+  "content_hash": "cadb125c388b0a84aeac25f985baf9e45eb2e480a650db3b8c13603bd8b75c70",
+  "created": "2026-06-06T20:54:48.104578198Z",
+  "notes": ""
+}

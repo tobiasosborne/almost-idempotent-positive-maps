@@ -1,0 +1,8 @@
+{
+  "id": "78c63206e9b5f70a",
+  "name": "GT-jb-normsquare",
+  "source": "HOS, refs/hos/joa-m.md:2314-2315 --- 3.1.4 JB algebra norm condition, VERBATIM: \"A JB algebra is a Jordan Banach algebra A in which the norm satisfies the following two additional conditions for  $a, b \\in A$ :\" \"(i)  $||a^2|| = ||a||^2$\". B(H)_sa is a JB algebra (GT-bhsa-jc + GT-jc-is-jb), so ||a^2||=||a||^2 in operator norm for self-adjoint a, where a^2=aoa is the ambient Jordan square (=ordinary a^2 for self-adjoint a). Used for ||X^2||=||X||^2 norm bookkeeping.",
+  "content_hash": "0ae894888c04f6a26b57616466842aa551aba176ed55e4d08f8f3a2d5b59b62f",
+  "created": "2026-06-06T20:54:48.113149679Z",
+  "notes": ""
+}

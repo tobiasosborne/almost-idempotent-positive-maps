@@ -1,0 +1,8 @@
+{
+  "id": "4cfaf1c42d27ba28",
+  "name": "GT-tildePhi-props",
+  "source": "Kitaev arXiv:2405.02434, refs/kitaev-2405.02434/approximate_algebras.tex:2171-2182 (def tilde_Phi and its properties), VERBATIM: \"\\wt{\\Phi}=\\theta(2\\Phi-1) =\\frac{1}{2}\\Bigl(1+\\sgn(2\\Phi-1)\\Bigr) =\\frac{1}{2}\\Bigl(1+(2\\Phi-1)\\bigl(1-4(\\Phi-\\Phi^2)\\bigr)^{-1/2}\\Bigr).\" and \"The map $\\wt{\\Phi}$ has the properties\" \"\\wt{\\Phi}^2=\\wt{\\Phi},\\qquad \\|\\wt{\\Phi}-\\Phi\\|_\\cb\\le O(\\eta),\\qquad \\wt{\\Phi}(1)=1,\\qquad \\wt{\\Phi}(X^\\dag)=\\wt{\\Phi}(X)^\\dag\\text{ for all }X\\in\\Bo(\\calH)\". Applied to F: Ftilde=theta(2F-1), with Ftilde^2=Ftilde, ||Ftilde-F||_cb\u003c=O(eta), Ftilde(1)=1, Ftilde(X^dag)=Ftilde(X)^dag. The Taylor expansion converges since eta\u003c1/4 (GT-hyp). Note ||.||\u003c=||.||_cb on a single-operator argument, so ||(Ftilde-F)(Z)||\u003c=||Ftilde-F||_cb ||Z||\u003c=O(eta)||Z||.",
+  "content_hash": "e8765a1d24f2fdc29a1881cf6aef6adc2a0a501db831a9222a90e5b0b20bf1fa",
+  "created": "2026-06-06T20:54:30.38232684Z",
+  "notes": ""
+}

@@ -1,0 +1,8 @@
+{
+  "id": "57160e3382a3cc1b",
+  "name": "GT-hyp",
+  "source": "HYPOTHESIS BLOCK of lem-intertwine-spectral-idempotent (the lemma's own GIVENS / antecedents — not a refs claim, legitimately quote-less). GIVEN: (H1) A and B are unital Banach algebras with units denoted I (I_A in A, I_B in B); F is an element of A and Phi an element of B. (H2) ||F^2-F|| \u003c 1/4 (op-norm in A) and ||Phi^2-Phi|| \u003c 1/4 (op-norm in B) — exactly the def-spectral-idempotent threshold, so theta(2F-1) in A and theta(2Phi-1) in B are both well-defined. (H3) j: B -\u003e A is a BOUNDED LINEAR map between the underlying Banach spaces (NOT an element of either algebra), with finite operator norm ||j||_op \u003c infinity. (H4) j is UNITAL: j(I_B)=I_A. (H5) j INTERTWINES F and Phi: F j = j Phi (as bounded linear maps B-\u003eA, i.e. for all y in B, F(j(y))=j(Phi(y)); products F j, j Phi mean composition of the multiplication-operator / element-action with j). NOTE on products: throughout, an algebra element X (e.g. F, Phi, S_F, R_F) is identified with its action by left multiplication; 'X j' is the composite map B-\u003eA (apply j then multiply by X on the A-side), 'j Y' is B-\u003eA (apply Y on the B-side then j). Associativity of composition and bilinearity are those of linear maps between Banach spaces.",
+  "content_hash": "378957a9efb175ff7b93baa1b7fabdc6232cf45478d7b30bb609855ff1a2c5ca",
+  "created": "2026-06-06T20:26:56.282982263Z",
+  "notes": ""
+}

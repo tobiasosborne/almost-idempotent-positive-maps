@@ -1,0 +1,8 @@
+{
+  "id": "447036f879bd4c9a",
+  "name": "GT-hyp",
+  "source": "STATED HYPOTHESES of lem-cstar-sa-to-epsjb (given as the lemma's premises, not derived): (H1) F:B(H)-\u003eB(H) is a unital completely positive (UCP) map; (H2) F is eta-idempotent: ||F^2-F||_cb \u003c= eta with eta\u003c1/4; (H3) Ftilde=theta(2F-1) is the spectral idempotent of F (Kitaev's construction, GT-tildePhi-props applied to F); (H4) B=Im Ftilde=Ker(1-Ftilde) carries the Choi-Effros product X*Y=Ftilde(XY); (H5) for X,Y in B_sa the symmetrized product is XoY=(1/2)(X*Y+Y*X). The role 'Phi' in the cited Kitaev externals is played by THIS map F. C denotes a universal dimension-free constant (independent of H, possibly changing line to line).",
+  "content_hash": "3e895bc62761c3ec42492bc993b3831035ec169cbce104b18de6db49b147ef1c",
+  "created": "2026-06-06T20:54:01.533917707Z",
+  "notes": ""
+}

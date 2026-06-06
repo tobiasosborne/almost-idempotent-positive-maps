@@ -1,0 +1,8 @@
+{
+  "id": "5ef7f6a98f5408a0",
+  "name": "GT-ucp-positive-square",
+  "source": "Kitaev arXiv:2405.02434, refs/kitaev-2405.02434/approximate_algebras.tex:1691-1717 (UCP inequalities), VERBATIM: \"The following inequality holds for any UCP map $\\Phi\\colon\\calA\\to\\calB$ between $C^*$ algebras:\" \"\\Phi(X^\\dag)\\,\\Phi(X)\\le \\Phi(X^\\dag X).\" and \"Another general inequality is $\\|\\Phi(X)\\|\\le\\|X\\|$. It follows from \\eqref{PhiXdX} and the positivity of $\\Phi$, which implies that $\\Phi(X^\\dag X)\\le \\Phi(\\|X\\|^2I_\\calA) =\\|X\\|^2I_\\calB$.\" We use the POSITIVITY of the UCP map F (=Kitaev Phi): F is completely positive hence positive (order-preserving on self-adjoints). For self-adjoint X, X^2=X^dag X \u003e= 0 in B(H), so F(X^2) \u003e= 0; and F(X^2)=F(X^dag X) \u003c= ||X||^2 1. (NOTE: Ftilde itself is NOT guaranteed completely positive --- :363 --- so JB3 must route through F, not Ftilde.)",
+  "content_hash": "8f111fce4d57c4568bfc96c7ad7e57d72a7649690659643c12aa1f4d2091cce1",
+  "created": "2026-06-06T20:54:30.3974631Z",
+  "notes": ""
+}

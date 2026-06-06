@@ -1,0 +1,8 @@
+{
+  "id": "69b259e3fbe06f73",
+  "name": "GT-eps-assoc",
+  "source": "Kitaev arXiv:2405.02434, refs/kitaev-2405.02434/approximate_algebras.tex:2229-2231 (the eps-associativity axiom for eps=O(eta), established in the proof of th_almost_idemp), VERBATIM: \"\\|(X\\star Y)\\star Z-X\\star (Y\\star Z)\\| \\le O(\\eta)\\ts\\|X\\|\\ts\\|Y\\|\\ts\\|Z\\|.\" This is ax_assoc (def-eps-cstar-algebra) for B with eps=O(eta): for all X,Y,Z in B, the associator (X*Y)*Z-X*(Y*Z) has norm \u003c= C eta ||X|| ||Y|| ||Z||, C universal dimension-free. (The line just above, :2228, states this is the eps-associativity axiom for eps=O(eta).)",
+  "content_hash": "6b9c216c386314a51bad830a82b3ce5af82a8c6d8270f6ba156abcac75f47be0",
+  "created": "2026-06-06T20:54:30.373395951Z",
+  "notes": ""
+}

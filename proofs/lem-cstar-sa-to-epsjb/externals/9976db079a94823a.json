@@ -1,0 +1,8 @@
+{
+  "id": "9976db079a94823a",
+  "name": "GT-jordan-product",
+  "source": "HOS, refs/hos/joa-m.md:812 --- eq (2.17), definition of the (special) Jordan product, bilinear and commutative, VERBATIM: \"$$a \\circ b = \\frac{1}{2}(ab + ba).$$\". Commutativity aob=boa is immediate from symmetry of (ab+ba). Here the eps-JB product on B_sa is XoY=(1/2)(X*Y+Y*X), the SAME symmetrization formula applied to the eps-C* product * in place of the associative product; commutativity XoY=YoX is therefore exact. For X self-adjoint XoX=(1/2)(X*X+X*X)=X*X.",
+  "content_hash": "e981f5ccf00bf2c8ba9bd5a9a08236fbfae5b553091de01d5bf1afc50261cdd4",
+  "created": "2026-06-06T20:54:48.091715754Z",
+  "notes": ""
+}

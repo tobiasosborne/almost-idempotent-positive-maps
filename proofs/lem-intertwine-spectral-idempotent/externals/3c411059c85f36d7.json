@@ -1,0 +1,8 @@
+{
+  "id": "3c411059c85f36d7",
+  "name": "GT-sgn-prop-P",
+  "source": "Kitaev arXiv:2405.02434, refs/kitaev-2405.02434/approximate_algebras.tex:517-535 (sgn and Proposition prop_P, the spectral-idempotent construction). VERBATIM: \"|X|=(X^2)^{1/2},\\qquad \\sgn(X)=X(X^2)^{-1/2}\\qquad\\quad\" ... \"Let $P$ be an element of a Banach algebra such that $\\|P^2-P\\|\\le\\delta\u003c1/4$, and let\" ... \"\\wt{P}=\\theta(2P-I),\\qquad\" ... \"\\text{where}\\quad \\theta(X)=\\frac{1}{2}\\bigl(I+\\sgn(X)\\bigr).\" ... \"Then $\\wt{P}^2=\\wt{P}$,\\, $\\wt{P}$ commutes with $P$, and $\\|\\wt{P}-P\\|\\le \\|2P-I\\|\\ts O(\\delta)$.\" This fixes the CONSTRUCTION used here (def-spectral-idempotent): sgn(S)=S (S^2)^{-1/2} = S R, and theta(2X-I)=(1/2)(I+sgn(S)) with S=2X-I. It is purely a NAME for these algebra expressions; we use it ONLY to expand theta and sgn in nodes N1.5/N1.6, NOT for its idempotence content. Applied for X=F (in algebra A) and X=Phi (in algebra B).",
+  "content_hash": "2513ff57bafe7651c812d387520128b4e796f00cb9e93caef272a12d33edde63",
+  "created": "2026-06-06T20:26:32.162736449Z",
+  "notes": ""
+}

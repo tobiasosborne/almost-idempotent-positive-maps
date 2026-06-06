@@ -1,0 +1,8 @@
+{
+  "id": "87e40a46368aa779",
+  "name": "GT-orderunit-def",
+  "source": "HOS, refs/hos/joa-m.md:368-372 (1.2.1, definition of order-unit space and order norm), VERBATIM: \"An element  $e \\in A^+$  is called an order unit for A if for all  $a \\in A$  there is  $\\lambda \u003e 0$  such that  $-\\lambda e \\le a \\le \\lambda e$ . We say A is Archimedean if  $na \\le e$  for all  $n \\in \\mathbb{N}$ —the natural numbers—implies  $a \\le 0$ . In this case A has a norm given by\" \"$$||a|| = \\inf\\{\\lambda \u003e 0: -\\lambda e \\le a \\le \\lambda e\\}.$$\" \"A is said to be an order unit space if A has an order unit and A is Archimedean.\" Fixes the order-norm formula ||a||=inf{t\u003e0:-t e\u003c=a\u003c=t e} (def-order-unit-space). Also gives the order-unit-norm fact: -||x|| 1 \u003c= x \u003c= ||x|| 1 for any x (taking t=||x|| in the inf), hence x \u003e= -||x|| 1.",
+  "content_hash": "f9fc99028b3d66daaecdc14208c1fae4d777c691909f093fef9fb5c4bdcfd633",
+  "created": "2026-06-06T20:55:03.032941414Z",
+  "notes": ""
+}

@@ -1,0 +1,8 @@
+{
+  "id": "d592e9ad108c510d",
+  "name": "GT-opnorm",
+  "source": "Kitaev arXiv:2405.02434, refs/kitaev-2405.02434/approximate_algebras.tex:638-642 (operator norm on linear operators; bounded operators form a Banach algebra). VERBATIM: \"Since $\\calA$ is a Banach space, linear operators on it have a standard norm,\" ... \"\\|w\\|=\\sup_{\\|Z\\|\\le 1}\\|w(Z)\\|,\\qquad w\\colon \\calA\\to\\calA,\" ... \"and bounded linear operators form a Banach algebra.\" This fixes the OPERATOR NORM ||w||=sup_{||Z||\u003c=1}||w(Z)|| of a bounded linear operator (and that bounded operators form a Banach algebra). DERIVED CONSEQUENCE used here (the submultiplicative/composition bound): for bounded linear maps T (acting on the A-side, ||T||_op its operator norm) and j: B-\u003eA bounded linear (||j||_op=sup_{||y||\u003c=1}||j(y)||), the composition T j: B-\u003eA is bounded with ||T j||_op \u003c= ||T||_op ||j||_op. Derivation directly from the norm definition: for ||y||\u003c=1 in B, ||(T j)(y)|| = ||T(j(y))|| \u003c= ||T||_op ||j(y)|| \u003c= ||T||_op (||j||_op ||y||) \u003c= ||T||_op ||j||_op; take sup over ||y||\u003c=1. (The same sup-of-||w(Z)|| definition, now for a map between the two Banach spaces underlying the two algebras; ||y||\u003c=1 plays the role of ||Z||\u003c=1.) Used in the limit-passage node N1.4 to push limits through the bounded j.",
+  "content_hash": "c8889f580a859020c66adea3f0e269507b4c2f9b5c560ce2298e8757466e9918",
+  "created": "2026-06-06T20:26:46.186738084Z",
+  "notes": ""
+}

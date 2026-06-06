@@ -1,0 +1,8 @@
+{
+  "id": "aac6e4659a8a2a48",
+  "name": "GT-kitaev-thalmostidemp",
+  "source": "Kitaev arXiv:2405.02434, refs/kitaev-2405.02434/approximate_algebras.tex:2192-2194 (Theorem th_almost_idemp), VERBATIM: \"The space $\\calA$ with the norm, involution, and unit inherited from $\\Bo(\\calH)$ and the multiplication $(X,Y)\\mapsto X\\star Y$ is an extended $O(\\eta)$-$C^*$ algebra.\" Here $\\calA=\\Img\\wt\\Phi$ and $X\\star Y=\\wt\\Phi(XY)$ (Choi-Effros). We APPLY this to the map F (=Kitaev Phi): F is UCP, eta-idempotent (GT-hyp), so B=Im Ftilde with X*Y=Ftilde(XY) is an extended O(eta)-C*-algebra. In particular it satisfies ALL eps-C* axioms (def-eps-cstar-algebra) with eps=O(eta): ax_prodnorm, ax_assoc, ax_* (exact involution (X*Y)^dag=Y^dag*X^dag, ||X^dag||=||X||), ax_C*, exact unit, with universal dimension-free constants.",
+  "content_hash": "674231a198e55cd91d5d75bdd6ef1fc505b865775afe50322414cd8dbc0e55a4",
+  "created": "2026-06-06T20:54:30.364862234Z",
+  "notes": ""
+}

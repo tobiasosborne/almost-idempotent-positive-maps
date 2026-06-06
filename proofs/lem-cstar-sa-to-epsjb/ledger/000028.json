@@ -1,0 +1,1 @@
+{"type":"node_validated","timestamp":"2026-06-06T21:06:43.61711235Z","node_id":"1.2","note":"JB1 sound: ||XoY||\u003c=(1/2)(||X*Y||+||Y*X||)\u003c=(1+Ceta)||X||||Y|| by triangle ineq + ax_prodnorm (Kitaev eps-C* def :409, byte-matched ||XY||\u003c=(1+eps)||X||||Y||). eps=O(eta) from GT-kitaev-thalmostidemp. Universal dim-free."}

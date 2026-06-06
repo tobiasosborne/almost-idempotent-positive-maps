@@ -1,0 +1,8 @@
+{
+  "id": "c8652e6280c00532",
+  "name": "GT-taylor-calculus",
+  "source": "Kitaev arXiv:2405.02434, refs/kitaev-2405.02434/approximate_algebras.tex:503-512 (Banach-algebra Taylor function calculus). VERBATIM: \"Let $\\calB$ be a Banach algebra and $f$ a function of one complex variable represented by its Taylor series $f(x)=\\sum_{n=0}^{\\infty}a_n(x-x_0)^n$ with the convergence radius $\\ge r$. Then $f(X)$ is well-defined, commutes with $X$, and satisfies a certain bound for all elements $X\\in\\calB$ sufficiently close to $x_0I$:\" ... \"f(X)=a_0I+\\sum_{n=1}^{\\infty}a_n(X-x_0I)^n\\quad\\:\" ... \"\\|f(X)-f(x_0I)\\|\\le \\sum_{n=1}^{\\infty}|a_n|\\ts\\|X-x_0I\\|^n.\" INSTANTIATION: this gives, for f(x)=x^{-1/2} expanded about x0=1 (radius \u003e= 1) and X=S^2 with ||S^2-1*I||\u003c1, that the partial sums g_N(S^2)=a_0 I + sum_{n=1}^{N} a_n (S^2-I)^n CONVERGE (the series f(X) is well-defined = the partial sums converge in the Banach algebra norm, i.e. OPERATOR norm on End(.)) to R=(S^2)^{-1/2}, AND the tail bound ||g_N(X)-f(X)|| \u003c= sum_{n\u003eN}|a_n| ||X-x0 I||^n -\u003e 0 since sum|a_n| ||X-x0 I||^n \u003c infinity (|.|\u003c1). This is the op-norm convergence used in the limit-passage node N1.4. Applied in EACH algebra: A (for S_F^2) and B (for S_Phi^2), each a unital Banach algebra by hypothesis.",
+  "content_hash": "9ec22a7d6020a45d89033334110c6f0ef90c56fd9f47cadb9a3bbbcb710475e7",
+  "created": "2026-06-06T20:26:23.3783501Z",
+  "notes": ""
+}
