@@ -1,0 +1,8 @@
+{
+  "id": "14080d725e25a380",
+  "name": "GT-cauchy-schwarz",
+  "source": "HOS (Hanche-Olsen \u0026 Stormer, Jordan Operator Algebras), refs/hos/joa-m.md:2631-2634 (3.6.2 Lemma), VERBATIM: \"Let A be a JB algebra and  $\\rho$  a state on A. Then if  $a, b \\in A$  we have (i)  $\\rho(a \\circ b)^2 \\le \\rho(a^2)\\rho(b^2)$ , (ii)  $\\rho(a)^2 \\leq \\rho(a^2)$ . In particular, the map  $a \\to \\rho(a^2)^{1/2}$  is a seminorm on A.\"",
+  "content_hash": "b0c4b5ca6b7ddcdfe60ad05e218a8eefab1ba3746c18299f059904f4763398e5",
+  "created": "2026-06-06T05:55:19.611456967Z",
+  "notes": ""
+}

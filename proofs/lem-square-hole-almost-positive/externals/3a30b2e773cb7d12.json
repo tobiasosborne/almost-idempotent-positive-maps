@@ -1,0 +1,8 @@
+{
+  "id": "3a30b2e773cb7d12",
+  "name": "GT-positive-monotone",
+  "source": "Idel 2013, refs/idel-2013/idel-2013.md:347 (Definition 2.1), VERBATIM: \"T is called positive, if for all  $A \\ge 0$ ,  $T(A) \\ge 0$ . In particular, a positive map is Hermitian\". Hence positivity + linearity give monotonicity: A\u003c=B (i.e. B-A\u003e=0) implies Phi(B-A)\u003e=0 i.e. Phi(A)\u003c=Phi(B). Instantiated at Phi unital positive on B(H)_sa.",
+  "content_hash": "2535c0ca49a9b9de8a976867abf08524133bc055eeb4d6e9e9e346db1e520716",
+  "created": "2026-06-06T05:55:19.601195919Z",
+  "notes": ""
+}

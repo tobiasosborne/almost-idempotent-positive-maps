@@ -1,0 +1,8 @@
+{
+  "id": "f9b733bd2c97b9db",
+  "name": "GT-jb-axiom-sq",
+  "source": "HOS, refs/hos/joa-m.md:2314-2316 (3.1.4, JB axioms), VERBATIM: \"A JB algebra is a Jordan Banach algebra A in which the norm satisfies the following two additional conditions for  $a, b \\in A$ : (i)  $||a^2|| = ||a||^2$ , (ii)  $||a^2|| \\le ||a^2 + b^2||$ .\" Applied to V=B(H)_sa: ||r^2||=||r||^2 for r=r^* in V.",
+  "content_hash": "d0261697c1e3a114a9fcd3ec08a4556b0732db2e5f07e197efe312521526d265",
+  "created": "2026-06-06T05:55:19.621535435Z",
+  "notes": ""
+}

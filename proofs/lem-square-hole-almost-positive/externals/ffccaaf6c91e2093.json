@@ -1,0 +1,8 @@
+{
+  "id": "ffccaaf6c91e2093",
+  "name": "GT-jc-is-jb",
+  "source": "HOS, refs/hos/joa-m.md:2320, VERBATIM: \"It is clear from 1.3.2 that each JC algebra is a JB algebra.\" Hence V=B(H)_sa is a unital JB algebra, so the JB spectral theorem (3.2.4) applies to it.",
+  "content_hash": "dc13e4f94f936ced15f56411b5f390f7e45aba29351182870700365c02b6f65e",
+  "created": "2026-06-06T05:55:39.706851935Z",
+  "notes": ""
+}

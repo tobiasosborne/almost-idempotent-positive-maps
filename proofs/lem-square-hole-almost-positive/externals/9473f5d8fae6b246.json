@@ -1,0 +1,8 @@
+{
+  "id": "9473f5d8fae6b246",
+  "name": "GT-Pprops",
+  "source": "Prior VALIDATED registry lemma lem-P-properties (proofs/lem-P-properties/export.md, root node 1). For eta\u003c=eta_0\u003c1/4: P=theta(2Phi-1) satisfies P^2=P, P(1)=1, P real-linear on B(H)_sa, delta:=||P-Phi||\u003c=C eta, ||P||\u003c=1+C eta, and delta-positivity (a\u003e=0 =\u003e P(a) \u003e= -delta||a|| 1). In particular delta\u003c=C eta.",
+  "content_hash": "0604dae1060a95e071b0113b8a76df038168f82e206cf57ff5959a209751f843",
+  "created": "2026-06-06T05:55:19.580869686Z",
+  "notes": ""
+}

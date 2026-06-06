@@ -1,0 +1,8 @@
+{
+  "id": "6b618d2301e08bcb",
+  "name": "GT-jb-orderunit-3310",
+  "source": "HOS, refs/hos/joa-m.md:2552 (3.3.10 Proposition), VERBATIM: \"If A is a unital JB algebra, then A is a complete order unit space with the ordering induced by  $A_+$  and order unit the identity 1. The order norm is the given one, and  $a \\in A$  satisfies  $-1 \\le a \\le 1$  implies  $0 \\le a^2 \\le 1$ .\" Applied to V=B(H)_sa: complete order-unit space, order norm = operator norm.",
+  "content_hash": "a7c827d45d673de43650da627760de88c74bd5947f24e483449c3ee55587dda4",
+  "created": "2026-06-06T05:55:39.677921113Z",
+  "notes": ""
+}

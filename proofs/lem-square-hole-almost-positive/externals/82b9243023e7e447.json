@@ -1,0 +1,8 @@
+{
+  "id": "82b9243023e7e447",
+  "name": "GT-jb-positive-spectrum",
+  "source": "HOS, refs/hos/joa-m.md:2492 (3.3.3), VERBATIM: \"Let A be a JB algebra. An element  $a \\in \\tilde{A}$  is called positive, written  $a \\ge 0$ , if Sp  $a \\subset [0, \\infty)$ . By the spectral theorem (3.2.4)  $a \\ge 0$  if and only if a is a square.\" Positivity is INTRINSIC (defined by the spectrum, computed in C(a)); for c in the subalgebra C(y) of V, c\u003e=0 in V iff Sp c subset [0,infty) iff phi(c)\u003e=0 pointwise on Sp y under the isomorphism of GT-jb-spectral. The order unit space C(Sp y) has cone = pointwise-nonnegative functions (HOS:474 norm/order on C_0(X)).",
+  "content_hash": "c462e88daa896593ecb40d3e9d0385cfc5790c45ec0acd4c59f658b57ee4280f",
+  "created": "2026-06-06T05:55:39.734340051Z",
+  "notes": ""
+}

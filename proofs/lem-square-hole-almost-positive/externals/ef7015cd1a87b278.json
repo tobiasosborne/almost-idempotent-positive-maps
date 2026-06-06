@@ -1,0 +1,8 @@
+{
+  "id": "ef7015cd1a87b278",
+  "name": "GT-bhsa-jc",
+  "source": "HOS, refs/hos/joa-m.md:2300 (3.1.2), VERBATIM: \"If A is a  $C^*$  algebra then  $A_{sa}$  with the Jordan product  $a \\circ b = \\frac{1}{2}(ab+ba)$  is a JB algebra, called a JC algebra.\" Applied to A=B(H): V=B(H)_sa with a o b=(ab+ba)/2 is a (unital) JC algebra.",
+  "content_hash": "6bdd06afa6940e23558e5c63f1ef741e78c71cefcdb424bb3c1a443cb9404fb5",
+  "created": "2026-06-06T05:55:39.697526239Z",
+  "notes": ""
+}

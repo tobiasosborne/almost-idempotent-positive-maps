@@ -15,7 +15,7 @@ graph LR
   lem-exposed-circuit["lem-exposed-circuit<br/>proved/none"]
   lem-first-insertion["lem-first-insertion<br/>proved/validated"]
   lem-leakage["lem-leakage<br/>proved/none"]
-  lem-square-hole-almost-positive["lem-square-hole-almost-positive<br/>proved/none"]
+  lem-square-hole-almost-positive["lem-square-hole-almost-positive<br/>proved/validated"]
   obs-P-not-positive["obs-P-not-positive<br/>proved/none"]
   obs-bridge-numerics["obs-bridge-numerics<br/>proved/none"]
   obs-cochain-caveats["obs-cochain-caveats<br/>proved/none"]

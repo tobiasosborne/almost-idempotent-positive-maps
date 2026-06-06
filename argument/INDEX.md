@@ -15,7 +15,7 @@
 | `lem-exposed-circuit` | lemma | proved | none | B | For a signed affine retraction with neg mass <= delta: (i) a (rho,kappa)-exposed… |
 | `lem-first-insertion` | lemma | proved | validated | B | With omega=rho∘Phi a state and ||x||_omega^2=omega(x^2), P is an almost-contract… |
 | `lem-leakage` | lemma | proved | none | B | Affine-face leakage: for row-stochastic Q with ||Q^2-Q|| <= eta and affine h:Del… |
-| `lem-square-hole-almost-positive` | lemma | proved | none | B | For r in A the square hole q_r = P(r^2)-r^2 in Ker P satisfies q_r >= -C eta ||r… |
+| `lem-square-hole-almost-positive` | lemma | proved | validated | B | For r in A the square hole q_r = P(r^2)-r^2 in Ker P satisfies q_r >= -C eta ||r… |
 | `obs-P-not-positive` | obstruction | proved | none | B | There is an explicit classical (commutative) family on R^4 with Phi positive uni… |
 | `obs-bridge-numerics` | obstruction | proved | none | B | Numerically the classical R^3 absorbing/transient family gives ||P(h_{r,s}^2)||/… |
 | `obs-cochain-caveats` | obstruction | proved | none | B | Two cheap routes to a dimension-free order-unit splitting are blocked: on H_n(R)… |

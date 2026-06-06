@@ -1,0 +1,8 @@
+{
+  "id": "b1633ed984035972",
+  "name": "GT-phi-contraction",
+  "source": "DEPRECATED/UNUSED: ||Phi||=1 is avoidable; node 1.2 now uses the in-scope triangle bound ||Phi(r)||\u003c=(1+delta)||r|| + GT-Pprops delta. Not referenced by any node.",
+  "content_hash": "acff57d57cdeb1e9e08cd80ba9b0df8e48993c6714749f1bb2c16686a45542e8",
+  "created": "2026-06-06T05:58:06.884519507Z",
+  "notes": "Deprecated when resolving ch-7e69ad1273a8057b on node 1.2; replaced GT-phi-contraction usage in STEP C with norm triangle inequality + grounded delta bound (GT-Pprops). No node statement references this external."
+}

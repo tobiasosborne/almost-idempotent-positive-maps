@@ -5,7 +5,7 @@ contract: For r in A the square hole q_r = P(r^2)-r^2 in Ker P satisfies q_r >= 
 defs: def-square-hole; def-spectral-idempotent; def-near-fixed-algebra
 deps: lem-P-properties; prop-kadison-js
 status: proved
-af: none
+af: validated
 provenance: theorem-B-algebraic-bridge.md:301-372; report lem:bridge-squarehole
 owner: B
 workspace: proofs/lem-square-hole-almost-positive
