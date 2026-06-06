@@ -1,8 +1,8 @@
 {
   "id": "ef7015cd1a87b278",
   "name": "GT-bhsa-jc",
-  "source": "HOS, refs/hos/joa-m.md:2300 (3.1.2), VERBATIM: \"If A is a  $C^*$  algebra then  $A_{sa}$  with the Jordan product  $a \\circ b = \\frac{1}{2}(ab+ba)$  is a JB algebra, called a JC algebra.\" Applied to A=B(H): V=B(H)_sa with a o b=(ab+ba)/2 is a (unital) JC algebra.",
-  "content_hash": "6bdd06afa6940e23558e5c63f1ef741e78c71cefcdb424bb3c1a443cb9404fb5",
+  "source": "HOS, refs/hos/joa-m.md:2300 (3.1.2), VERBATIM: \"Let H be a complex Hilbert space and B(H) the algebra of all bounded linear operators on H. Let  $B(H)_{\\rm sa}$  denote the special Jordan algebra of all self-adjoint operators in B(H) equipped with the operator norm. By a JC algebra we shall mean any norm-closed Jordan subalgebra of  $B(H)_{\\rm sa}$ .\" Applied to A=B(H): V=B(H)_sa with a o b=(ab+ba)/2 is a (unital) JC algebra.",
+  "content_hash": "7faa93a662d6d74e3fb7c8b089de8ffa4ff727b394d0ac8f2d0ab39e06de176c",
   "created": "2026-06-06T05:55:39.697526239Z",
   "notes": ""
 }
