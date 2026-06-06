@@ -1,0 +1,8 @@
+{
+  "id": "e2517d4d51fcf1c3",
+  "name": "GT-binomial-series",
+  "source": "Real (-1/2)-binomial series: with a_n = C(-1/2,n) the Taylor coefficients of f(x)=x^{-1/2} about x0=1 (equivalently (1-t)^{-1/2}=sum_{n\u003e=0} C(-1/2,n)(-t)^n), the series is ABSOLUTELY CONVERGENT for |t|\u003c1, i.e. sum_{n\u003e=0} |a_n| t^n \u003c infinity for every 0\u003c=t\u003c1 (with sum_n |a_n| t^n = (1-t)^{-1/2}). This is the standard 'absolute convergence STRICTLY INSIDE the radius of convergence' fact for a power series: a real/complex power series with radius of convergence R converges absolutely for |t|\u003cR, and here R=1. Used in node 1.4 step (i) to conclude the Taylor TAIL sum_{n\u003eN}|a_n| ||X-x0 I||^n -\u003e 0 (tail of a convergent series of nonnegative terms) when t=||X-x0 I||\u003c1. PROVENANCE GAP (flagged, honest): no standalone real-analysis source in refs/ states 'absolute convergence inside the radius of convergence' verbatim; this leans on Kitaev's Banach-algebra Taylor-calculus tail bound (GT-taylor-calculus, refs/kitaev-2405.02434/approximate_algebras.tex:503-512, which writes the tail bound ||f(X)-f(x_0 I)|| \u003c= sum_{n\u003e=1}|a_n| ||X-x_0 I||^n and asserts f(X) well-defined for X near x0 I). This is the SAME flagged standard-analysis gap that the VALIDATED lem-P-properties carries in its own GT-binomial-series external (consistency: both flag the binomial-coefficient absolute-summability inside the unit disk as a documented standard-analysis gap, not a refs byte-match).",
+  "content_hash": "7bc4a0d830e888447f6fbeae9ab807a73f9e4f020f29eb41b5bd73048b864a78",
+  "created": "2026-06-06T21:18:52.852267128Z",
+  "notes": ""
+}

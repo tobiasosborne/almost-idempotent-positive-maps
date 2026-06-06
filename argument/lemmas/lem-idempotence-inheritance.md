@@ -5,7 +5,7 @@ contract: For a unital order-isometric Jordan embedding j (so ||jM||=||M|| and |
 defs: def-positive-unital-map; def-spectral-idempotent
 deps:
 status: proved
-af: none
+af: validated
 provenance: docs/LEARNINGS.md (R7); algebra Phi^2-Phi=(Phi-I)Cj, F^2-F=j(Phi-I)C with j order-isometric; report thm:dilation-compatible
 owner: A
 workspace: proofs/lem-idempotence-inheritance

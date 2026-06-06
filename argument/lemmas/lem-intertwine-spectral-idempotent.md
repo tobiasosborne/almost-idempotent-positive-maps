@@ -5,7 +5,7 @@ contract: For elements F, Phi of unital Banach algebras with ||F^2-F|| < 1/4 and
 defs: def-spectral-idempotent
 deps:
 status: proved
-af: none
+af: validated
 provenance: agent-B/notes/decomposable-dilation-compatible-theorem.md (intertwining step); report thm:dilation-compatible
 owner: B
 workspace: proofs/lem-intertwine-spectral-idempotent
@@ -21,3 +21,10 @@ bounded `j` (operator-norm convergence from Kitaev's Taylor-calculus bound,
 under the `<1/4` threshold in each algebra's own norm (op-norm on `End(B(H)_sa)`, cb-norm on the lift); the
 intertwining identity is stated in op-norm, so the cb→op passage is harmless (`||.||_op <= ||.||_cb`). Used
 by `thm-dilation-compatible` to get `theta(2F-1) j = j P`.
+
+**Note (proof scope, 2026-06-06).** The contract advertises a *unital* intertwiner `j(I)=I`, which the
+consumer (`thm-dilation-compatible`) does provide; but the af proof shows unitality is **not load-bearing**.
+Nodes 1.1–1.6 use only that `I_A, I_B` are multiplicative units acting as the identity operator
+(`I_A·j(b)=j(b)`, `j(I_B·b)=j(b)`) — i.e. `I_A j = j = j I_B` — never `j(I_B)=I_A`. The proof therefore
+establishes the stronger `j(I)=I`-free intertwining; `unital j` is kept in the contract because the consumer
+supplies it, not because the argument needs it.

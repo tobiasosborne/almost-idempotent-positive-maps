@@ -5,7 +5,7 @@ contract: If F is a unital eta-idempotent UCP map on B(H) (||F^2-F||_cb <= eta <
 defs: def-eps-cstar-algebra; def-eps-jb-algebra; def-self-adjoint-part; def-jordan-product
 deps:
 status: proved
-af: none
+af: validated
 provenance: agent-B/notes/decomposable-dilation-compatible-theorem.md:67-82; report sec:exponent (thm:dilation-compatible)
 owner: B
 workspace: proofs/lem-cstar-sa-to-epsjb

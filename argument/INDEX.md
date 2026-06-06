@@ -12,11 +12,11 @@
 | `lem-bridge-orderunit` | lemma | proved | validated | B | The near-fixed algebra A=Im P, with unit 1 and inherited cone A_+ = A cap B(H)_+… |
 | `lem-bridge-polar` | lemma | proved | validated | B | Polarised holes q_{r,s}=P(r∘s)-r∘s obey, in the state seminorm ||x||_omega^2=ome… |
 | `lem-classical-equiv` | lemma | proved | none | B | The signed-idempotent and stochastic-idempotent formulations of classical stabil… |
-| `lem-cstar-sa-to-epsjb` | lemma | proved | none | B | If F is a unital eta-idempotent UCP map on B(H) (||F^2-F||_cb <= eta < 1/4), Fti… |
+| `lem-cstar-sa-to-epsjb` | lemma | proved | validated | B | If F is a unital eta-idempotent UCP map on B(H) (||F^2-F||_cb <= eta < 1/4), Fti… |
 | `lem-exposed-circuit` | lemma | proved | none | B | For a signed affine retraction with neg mass <= delta: (i) a (rho,kappa)-exposed… |
 | `lem-first-insertion` | lemma | proved | validated | B | With omega=rho∘Phi a state and ||x||_omega^2=omega(x^2), P is an almost-contract… |
-| `lem-idempotence-inheritance` | lemma | proved | none | A | For a unital order-isometric Jordan embedding j (so ||jM||=||M|| and ||j||_op=1)… |
-| `lem-intertwine-spectral-idempotent` | lemma | proved | none | B | For elements F, Phi of unital Banach algebras with ||F^2-F|| < 1/4 and ||Phi^2-P… |
+| `lem-idempotence-inheritance` | lemma | proved | validated | A | For a unital order-isometric Jordan embedding j (so ||jM||=||M|| and ||j||_op=1)… |
+| `lem-intertwine-spectral-idempotent` | lemma | proved | validated | B | For elements F, Phi of unital Banach algebras with ||F^2-F|| < 1/4 and ||Phi^2-P… |
 | `lem-leakage` | lemma | proved | none | B | Affine-face leakage: for row-stochastic Q with ||Q^2-Q|| <= eta and affine h:Del… |
 | `lem-square-hole-almost-positive` | lemma | proved | validated | B | For r in A the square hole q_r = P(r^2)-r^2 in Ker P satisfies q_r >= -C eta ||r… |
 | `obs-P-not-positive` | obstruction | proved | none | B | There is an explicit classical (commutative) family on R^4 with Phi positive uni… |
