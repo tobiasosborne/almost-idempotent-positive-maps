@@ -10,7 +10,7 @@ graph LR
   lem-bridge-easy["lem-bridge-easy<br/>proved/validated"]
   lem-bridge-onehole["lem-bridge-onehole<br/>proved/none"]
   lem-bridge-orderunit["lem-bridge-orderunit<br/>proved/validated"]
-  lem-bridge-polar["lem-bridge-polar<br/>proved/none"]
+  lem-bridge-polar["lem-bridge-polar<br/>proved/validated"]
   lem-classical-equiv["lem-classical-equiv<br/>proved/none"]
   lem-exposed-circuit["lem-exposed-circuit<br/>proved/none"]
   lem-first-insertion["lem-first-insertion<br/>proved/validated"]

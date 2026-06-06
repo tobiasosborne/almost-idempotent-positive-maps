@@ -1,0 +1,8 @@
+{
+  "id": "bed4136bbcfc5844",
+  "name": "GT-square-hole",
+  "source": "Prior VALIDATED registry lemma lem-square-hole-almost-positive (proofs/lem-square-hole-almost-positive/export.md, root node 1). For r in A=Im P (def-near-fixed-algebra) the square hole q_r=P(r^2)-r^2 satisfies, for every state seminorm omega=rho∘Phi, the DIAGONAL seminorm bound ||q_r||_omega \u003c= C sqrt(eta) ||r||^2, with C a universal dimension-free constant. (Also q_r in Ker P, ||P(q_r^2)||\u003c=C eta||r||^4; only the seminorm bound is imported here.)",
+  "content_hash": "0063c2bb3c388c80146b1e64beb723186bef284fcd335a697f43e81681451c2c",
+  "created": "2026-06-06T06:39:35.782615549Z",
+  "notes": ""
+}

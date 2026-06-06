@@ -1,0 +1,8 @@
+{
+  "id": "53057880dc7fd32a",
+  "name": "GT-sup-states",
+  "source": "HOS, refs/hos/joa-m.md:394-398 (1.2.5 Lemma), VERBATIM: \"Let A be an order unit space and $a \\in A$. Then we have: (i) $a \\ge 0$ if and only if $\\rho(a) \\ge 0$ for all $\\rho \\in S(A)$. (ii) $||a|| = \\sup_{\\rho \\in S(A)} |\\rho(a)|$.\"",
+  "content_hash": "57172a1ae134f5bf2022a2c961603abe3fbadae9657d5c833637d07894aa7d58",
+  "created": "2026-06-06T06:39:46.471362406Z",
+  "notes": ""
+}

@@ -5,7 +5,7 @@ contract: Polarised holes q_{r,s}=P(r∘s)-r∘s obey, in the state seminorm ||x
 defs: def-square-hole; def-near-fixed-algebra
 deps: lem-first-insertion; lem-square-hole-almost-positive
 status: proved
-af: none
+af: validated
 provenance: theorem-B-algebraic-bridge.md:374-451; report lem:bridge-polar
 owner: B
 workspace: proofs/lem-bridge-polar

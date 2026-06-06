@@ -1,0 +1,8 @@
+{
+  "id": "620e840c74f7feee",
+  "name": "GT-state-bounded",
+  "source": "HOS, refs/hos/joa-m.md:378 (1.2.2 Lemma) + proof, VERBATIM: \"Lemma. Let A be an order unit space with order unit e. If $\\rho \\in A^*$ then $\\rho \\in S(A)$ if and only if $\\|\\rho\\| = \\rho(e) = 1$.\" Proof: \"If $\\rho \\in S(A)$ and $||a|| \\le 1$ then $e \\pm a \\ge 0$, hence $0 \\le \\rho(e \\pm a) = 1 \\pm \\rho(a)$, so that $|\\rho(a)| \\le 1$\". Hence for a state rho and self-adjoint a, |rho(a)|\u003c=||a||.",
+  "content_hash": "69ceb0cc5bb67039db3cc1208054ff5c87dd245f1cc3419d090e7af677a86442",
+  "created": "2026-06-06T06:39:57.012324671Z",
+  "notes": ""
+}
