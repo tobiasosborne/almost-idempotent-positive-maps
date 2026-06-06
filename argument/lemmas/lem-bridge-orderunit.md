@@ -5,7 +5,7 @@ contract: The near-fixed algebra A=Im P, with unit 1 and inherited cone A_+ = A 
 defs: def-near-fixed-algebra; def-order-unit-space; def-spectral-idempotent
 deps: lem-P-properties
 status: proved
-af: none
+af: validated
 provenance: theorem-B-algebraic-bridge.md:121-152; report lem:bridge-orderunit
 owner: B
 workspace: proofs/lem-bridge-orderunit

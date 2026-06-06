@@ -1,0 +1,8 @@
+{
+  "id": "d029fc2075e59d41",
+  "name": "GT-jb-cone-closed-335",
+  "source": "HOS, refs/hos/joa-m.md:2506 (3.3.5 Lemma), VERBATIM: \"Let A be a JB algebra. Then  \\$\\tilde{A}_+\\$  is a closed subset of  \\$\\tilde{A}\\$ .\" NOTE: the statement is about the unitization tilde-A; for A=V=B(H)_sa already unital, V embeds in tilde-V and V_+ = V cap (tilde-V)_+ is therefore norm-closed in V. (Used only as supporting ground truth; the Archimedean property of V is also delivered directly by GT-jb-orderunit-3310 + GT-orderunit-def, since an order-unit space is by definition Archimedean.)",
+  "content_hash": "320a52cc4960434e6c521de5be1c3eea7a00778272c49cbdcedbccb2b0ada6f0",
+  "created": "2026-06-06T04:51:47.873579225Z",
+  "notes": ""
+}

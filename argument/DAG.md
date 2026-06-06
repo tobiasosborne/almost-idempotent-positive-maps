@@ -9,7 +9,7 @@ graph LR
   lem-P-properties["lem-P-properties<br/>proved/validated"]
   lem-bridge-easy["lem-bridge-easy<br/>proved/none"]
   lem-bridge-onehole["lem-bridge-onehole<br/>proved/none"]
-  lem-bridge-orderunit["lem-bridge-orderunit<br/>proved/none"]
+  lem-bridge-orderunit["lem-bridge-orderunit<br/>proved/validated"]
   lem-bridge-polar["lem-bridge-polar<br/>proved/none"]
   lem-classical-equiv["lem-classical-equiv<br/>proved/none"]
   lem-exposed-circuit["lem-exposed-circuit<br/>proved/none"]

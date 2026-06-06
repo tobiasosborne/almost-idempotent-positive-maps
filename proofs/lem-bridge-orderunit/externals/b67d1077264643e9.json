@@ -1,0 +1,8 @@
+{
+  "id": "b67d1077264643e9",
+  "name": "GT-bhsa-jc",
+  "source": "HOS (Hanche-Olsen \u0026 Stormer, Jordan Operator Algebras), refs/hos/joa-m.md:2300 (3.1.2), VERBATIM: \"Let H be a complex Hilbert space and B(H) the algebra of all bounded linear operators on H. Let  \\$B(H)_{\\rm sa}\\$  denote the special Jordan algebra of all self-adjoint operators in B(H) equipped with the operator norm. By a JC algebra we shall mean any norm-closed Jordan subalgebra of  \\$B(H)_{\\rm sa}\\$ .\" Hence B(H)_sa (=V) is a JC algebra, unital with unit 1=I.",
+  "content_hash": "586ddd1773428682b524a1f06a6fad91a70ed7cb6282cc358892eac94a487d2c",
+  "created": "2026-06-06T04:51:23.299482201Z",
+  "notes": ""
+}

@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-06-06T04:51:02.993167508Z","conjecture":"The near-fixed algebra A=Im P, with unit 1 and inherited cone A_+ = A cap B(H)_+, is an order-unit space, and its order-unit norm ||a||_ou = inf{t\u003e0: -t1\u003c=a\u003c=t1} coincides exactly with the operator norm on A.","author":"agent-A"}
