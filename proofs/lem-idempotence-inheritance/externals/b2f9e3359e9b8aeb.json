@@ -1,0 +1,8 @@
+{
+  "id": "b2f9e3359e9b8aeb",
+  "name": "GT-opnorm-submult",
+  "source": "Kitaev (arXiv:2405.02434), refs/kitaev-2405.02434/approximate_algebras.tex:638-642 (Sec. 'Basic properties of eps-Banach algebras'), VERBATIM: \"\\|w\\|=\\sup_{\\|Z\\|\\le 1}\\|w(Z)\\|,\\qquad w\\colon \\calA\\to\\calA,\" ... \"and bounded linear operators form a Banach algebra.\" This fixes (i) the OPERATOR NORM on linear operators w:A-\u003eA as ||w||=sup_{||Z||\u003c=1}||w(Z)||, and (ii) that bounded linear operators form a BANACH ALGEBRA. SUBMULTIPLICATIVITY ||uw||\u003c=||u||*||w|| is then immediate from the operator-norm definition: for ||Z||\u003c=1, ||(uw)(Z)||=||u(w(Z))||\u003c=||u||*||w(Z)||\u003c=||u||*||w||*||Z||\u003c=||u||*||w|| (using ||w(Z)||\u003c=||w||*||Z|| applied twice), so taking sup over ||Z||\u003c=1 gives ||uw||\u003c=||u||*||w||; equivalently this is the defining Banach-algebra norm inequality. Used at the eps=0 (exact-associativity, ordinary B(H)) specialization relevant here.",
+  "content_hash": "cfdd75ba29825d3e75162b7ac99cac32abee8ae215e35bd79adc62adea61d930",
+  "created": "2026-06-06T11:35:22.120715517Z",
+  "notes": ""
+}

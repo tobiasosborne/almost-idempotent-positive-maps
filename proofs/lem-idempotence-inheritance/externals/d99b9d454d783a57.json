@@ -1,0 +1,8 @@
+{
+  "id": "d99b9d454d783a57",
+  "name": "GT-hyp",
+  "source": "HYPOTHESIS BLOCK of lem-idempotence-inheritance (the lemma's own GIVENS, not a refs claim — legitimately quote-less). GIVEN: (H1) j is a unital order-isometric Jordan embedding of B(H)_sa into B(K)_sa, so it is ORDER-ISOMETRIC: ||jM||=||M|| for every linear M (more precisely, for the operators built from j below, j acting on the codomain preserves operator norm) and ||j||_op=1; (H2) j is unital, j(1)=1; (H3) C is a unital positive map (def-positive-unital-map), so ||C||\u003c=1 and C(1)=1; (H4) Phi=Cj and F=jC are the two composites; (H5) eta\u003e=0 is the idempotency-defect bound. These are the contract's antecedents, declared GIVEN. The order-isometry used operationally is: for any linear operator M on the relevant space, ||j M||=||M|| (left-composition with j preserves operator norm), which is exactly the ||jM||=||M|| hypothesis.",
+  "content_hash": "1b1f0dbd7c42e8834b856bccbfb1a6eeb8a1c00400f61ce08d48291077662d18",
+  "created": "2026-06-06T11:35:32.070545981Z",
+  "notes": ""
+}
