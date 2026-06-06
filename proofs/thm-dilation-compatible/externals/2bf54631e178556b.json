@@ -1,0 +1,8 @@
+{
+  "id": "2bf54631e178556b",
+  "name": "GT-hyp",
+  "source": "Theorem hypotheses (given data of thm-dilation-compatible, discharged at the conclusion; not a refs leaf). j:B(H)_sa-\u003eD_sa is a unital order-isometric Jordan embedding: ||j(x)||=||x|| (order-isometric), j(x∘y)=j(x)∘j(y) (Jordan homomorphism), j(I)=I (unital). C:D_sa-\u003eB(H)_sa is unital positive. Phi=Cj. F=jC extends to a UCP map D-\u003eD with ||F^2-F||_cb\u003c=eta, eta\u003c=eta_0\u003c1/4. Construction: P=theta(2Phi-1), A=Im P, a•b=P(a∘b); Ftilde=theta(2F-1), B=Im Ftilde, X*Y=Ftilde(XY), symmetrized X∘⋆Y=(1/2)(X*Y+Y*X). (skip_noquote: hypothesis bundle, no refs locus.)",
+  "content_hash": "e1e8178a76b02fbbf299d6f010fdbea80379d4cd2707afc1d95273261c9434fb",
+  "created": "2026-06-06T21:37:37.801061547Z",
+  "notes": ""
+}
