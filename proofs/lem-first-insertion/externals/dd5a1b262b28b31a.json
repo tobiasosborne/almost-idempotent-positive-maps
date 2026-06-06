@@ -1,0 +1,8 @@
+{
+  "id": "dd5a1b262b28b31a",
+  "name": "GT-positive-monotone",
+  "source": "refs/idel-2013/idel-2013.md:347 — Idel Def 2.1: \"T is called positive, if for all $A \\ge 0$, $T(A) \\ge 0$. In particular, a positive map is Hermitian\". (Positivity = monotone: a\u003c=b =\u003e T(b)-T(a)=T(b-a)\u003e=0.)",
+  "content_hash": "2cd4ba53da53bdf36053ebcc313655c63347e99f5853bb7aa93578d9648100e1",
+  "created": "2026-06-06T05:33:40.412746432Z",
+  "notes": ""
+}

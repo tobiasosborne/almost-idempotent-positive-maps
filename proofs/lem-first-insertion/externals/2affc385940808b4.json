@@ -1,0 +1,8 @@
+{
+  "id": "2affc385940808b4",
+  "name": "GT-jordan-schwarz",
+  "source": "refs/vlw-2604.08380/paper.tex:559 — Jordan-Schwarz (Stormer Lem 7.3): \"Let \\$T:L(\\H)\\to L(\\K)\\$ be a unital, positive map. Then \\jp{Ta^*}{Ta} \\le T\\jp{a^*}a , \\qquad a\\in L(\\H).\" Self-adjoint case T=Phi, a=a^*: Phi(a)^2 \u003c= Phi(a^2).",
+  "content_hash": "1eb67ffc19848632e8ca91696589504a977fa752ae1a93ae260de339be0a2c34",
+  "created": "2026-06-06T05:33:30.8021371Z",
+  "notes": ""
+}

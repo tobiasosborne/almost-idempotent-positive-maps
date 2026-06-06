@@ -1,0 +1,8 @@
+{
+  "id": "c63f06dac920c660",
+  "name": "GT-cauchy-schwarz",
+  "source": "refs/hos/joa-m.md:2632 — HOS 3.6.2(i), state rho on JB algebra A, a,b in A: \"$\\rho(a \\circ b)^2 \\le \\rho(a^2)\\rho(b^2)$\". (3.6.2: \"the map $a \\to \\rho(a^2)^{1/2}$ is a seminorm on A\".)",
+  "content_hash": "51116b9c7f231dfaa854f1912af645bf28b74b71a2aa57e53094eeba95f757b8",
+  "created": "2026-06-06T05:33:30.809929801Z",
+  "notes": ""
+}
