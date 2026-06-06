@@ -11,8 +11,9 @@ NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status s
 > 1. `git checkout argument-architecture` (this branch; pushed to origin, up to date).
 > 2. Read, in order: **`PRD.md`** → **`CLAUDE.md`**(==`AGENTS.md`) → **this file** → `definitions/INDEX.md`
 >    + `argument/INDEX.md` + `argument/DAG.md` (the live state).
-> 3. **THE ALGEBRAIC BRIDGE (Theorem B) IS COMPLETE** — all 8 of its lemmas are machine-validated via `af`
->    and pushed (commits `7021740..b7110ba`): `lem-P-properties`, `lem-bridge-orderunit`,
+> 3. **THE ALGEBRAIC BRIDGE (Theorem B) IS COMPLETE** — all 9 results of its DAG are machine-validated via
+>    `af` (`lem-P-properties` predated this session; the other 8 are commits `7021740..b7110ba`):
+>    `lem-P-properties`, `lem-bridge-orderunit`,
 >    `lem-first-insertion`, `lem-square-hole-almost-positive`, `lem-bridge-easy`, `lem-bridge-polar`,
 >    `lem-bridge-onehole`, `prop-bridge-jordan` (crux), `thm-bridge` (capstone). **What to do next is in
 >    beads (`bd ready`).** Highest-value follow-ups, in order: **`aipm-iel`** (P1 — harden `check-refs`:

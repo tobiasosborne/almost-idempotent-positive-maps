@@ -143,7 +143,9 @@ implementation · a linker enforces the contracts.** Four layers:
   single source of truth; `defs`/`deps` are the imports/DAG edges; `status`/`af`/`owner`. Generated
   `INDEX.md` + `DAG.md`.
 - **Layer 2 — `proofs/<id>/`**: one tiny af workspace per result; root conjecture **==** the registry
-  `contract`. *(Does not exist yet — Phase 3.)*
+  `contract`. **The algebraic bridge (Theorem B) is fully validated here — 9 af workspaces, all `af:
+  validated`** (lem-P-properties → orderunit/first-insertion/square-hole/easy → polar → onehole →
+  prop-bridge-jordan → thm-bridge).
 - **Layer 3 — `scripts/`**: `argument.py` (linker) + `check-defs.py` + `check-all.sh`; `.beads/` mirrors
   the DAG as tasks.
 
@@ -171,8 +173,10 @@ The linker enforces 6 invariants: acyclic deps · imports resolve · **contract-
 ≡ af root) · status propagation (`af: validated` needs all deps validated; computes ready/blocked) ·
 brittleness (`>12`/depth `>3` ⇒ REFACTOR) · orphans (registry ↔ `proofs/` correspondence).
 
-> **First-time af.** The Phase 3 pilot is this project's *first* use of `af` — get a hint or two from the
-> user before starting that first workspace. After the first one, `af` is ordinary autonomous work.
+> **af is established (the pilot is long done).** The entire algebraic bridge — 9 af workspaces — is
+> validated. `af` is now ordinary autonomous work; **no user hint needed** to start a workspace. Follow
+> HANDOFF **Recipe B** (the proven per-lemma prover→fresh-verifier loop) and run the anti-fabrication
+> self-check (`python3 scripts/check-refs.py --check`) on every workspace's refs externals.
 
 ---
 
@@ -200,8 +204,10 @@ pushed commit. End every commit message with:
 
 ## 9. Stop conditions (escalate to the user, don't improvise)
 
-- The **first** af workspace (the Phase 3 pilot, §6) — get a hint or two from the user (just the first; not every af thereafter).
-- A claim's ground truth is **not in `refs/`** (don't paraphrase from memory).
+- A claim's ground truth is **not in `refs/`** (don't paraphrase from memory). A refs external's verbatim
+  quote must **byte-match** its locus — copy the actual bytes; the `check-refs` gate blocks paraphrases
+  (LEARNINGS R5). *(The old "first af workspace" stop-condition is retired — af is established, the whole
+  bridge is validated.)*
 - You'd add something **out of scope** per `PRD.md` (out-of-scope additions are a stop condition).
 - A **contract drift / cycle / orphan** the linker reports that you can't resolve cleanly.
 - A definition would need to **change** (it ripples through everything that references it).
@@ -218,7 +224,7 @@ HANDOFF.md              current build state + START HERE + Recipes (rewritten ea
 docs/                   plans/ (approved design) · worklog.md (append-only) · LEARNINGS.md (retracted claims)
 definitions/            Layer 0 — def-<slug>.md shards + README (schema) + INDEX (generated)
 argument/               Layer 1 — lemmas/<id>.md shards + README + INDEX + DAG (generated)
-proofs/<id>/            Layer 2 — af workspaces (Phase 3; not yet present)
+proofs/<id>/            Layer 2 — af workspaces (the validated bridge: 9; ledger/externals/export per lemma)
 scripts/                Layer 3 — check-all.sh · check-defs.py · argument.py · tests/
 refs/                   ground truth — <source-id>/ (gitignored payload) + manifest/ (tracked)
 report/                 the LaTeX paper (13 section files: 00–11 + 06b) + PROVENANCE.md

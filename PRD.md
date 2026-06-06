@@ -64,8 +64,9 @@ You may not add mathematical content until you have read these (`CLAUDE.md` §0)
   for `η ≤ η₀` with `η₀` a universal constant), let `P = θ(2Φ−1)` (spectral idempotent),
   `A = Im P`, product `a•b = P(a∘b)` with `a∘b = ½(ab+ba)`. Then `A` is an **ε-JB algebra** with
   **`ε = O(√η)`** — **unconditional, dimension-free, CP-free** (no dilation/Stinespring). Registry
-  `thm-bridge`; proof `agent-B/theory/theorem-B-algebraic-bridge.md`, transcribed to
-  `report/sections/06-bridge-theorem.tex`, A-verified line-by-line.
+  `thm-bridge`; prose proof `agent-B/theory/theorem-B-algebraic-bridge.md` (transcribed to
+  `report/sections/06-bridge-theorem.tex`, A-verified) and **now MACHINE-VALIDATED via `af`** — all 9
+  results of the bridge DAG are `af: validated` in `proofs/`, every leaf byte-grounded in `refs/`.
 - **Layer 1 — the STRUCTURE THEOREM — OPEN.** Conjecture: every finite-dimensional ε-JB algebra is
   `C·ε`-Jordan-isomorphic to a genuine finite-dimensional JB-algebra, with **dimension-free `C`**. This is
   Kitaev's hard half, Jordan-ised. Registry `op-jordan-structure` (open). Strategy mirrors Kitaev:
@@ -95,13 +96,15 @@ Stinespring dilation, unavailable for general positive maps — a single inserti
 
 ---
 
-## Current state (2026-06-05)
+## Current state (2026-06-06)
 
 **Built (the typed module system).** Definitions DB (24 shards; gate 0 errors, 3 draft warns); argument registry **56
-results** acyclic (`argument/INDEX.md`/`DAG.md`, linker 0 errors/0 warnings, 17 ready / 29 blocked);
-local pre-commit gate `scripts/check-all.sh` = `OK` (defs gate: 0 errors, 3 draft-shard warns); deduped
-`refs/` + checksummed manifest; the LaTeX report (13 section files: 00–11 + 06b) builds clean. `proofs/`
-(Layer 2 `af`) **not yet started** — Phase 3.
+results** acyclic (`argument/INDEX.md`/`DAG.md`, linker 0 errors/0 warnings, 19 ready / 16 blocked);
+local pre-commit gate `scripts/check-all.sh` = `OK` (defs + **`check-refs` provenance gate** + linker +
+tests); deduped `refs/` + checksummed manifest; the LaTeX report builds clean.
+**Layer 2 `af`: the algebraic bridge (Theorem B) is FULLY VALIDATED — all 9 of its workspaces are
+`af: validated` in `proofs/` (machine-checked; every leaf byte-grounded in `refs/`), committed + pushed.**
+Next: harden `check-refs` (`aipm-iel`), audit `cited` results (`aipm-17f`), then the Layer-1 frontier.
 
 **Canonical artifacts (file → invariant).**
 - `definitions/` — every term defined exactly once; `check-defs.py` is the drift guard.
@@ -146,12 +149,13 @@ Gates (declare per commit, `CLAUDE.md` §7): **M**echanical · **D**efinitional 
 **R**eviewer ≠ author · **I**dempotent.
 
 Milestones (`docs/plans/2026-06-05-...`): **Phase 0** refs/bd ✓ · **1** Definitions DB ✓ · **2** registry +
-linker ✓ · **2b** registry seeded (56 results) ✓ · **3** per-lemma `af`, piloted on `lem-P-properties`
-(next) · **4** reorg + context-hygiene docs (this PRD + CLAUDE/AGENTS) · **5** Lean scaffold (deferred).
+linker ✓ · **2b** registry seeded (56 results) ✓ · **3** per-lemma `af` — **the whole algebraic bridge
+(9 workspaces) is validated** ✓ · **4** context-hygiene docs ✓ (reorg `aipm-chn` pending) · **5** Lean
+scaffold (deferred, `aipm-3ox`).
 
 ## Escalation
 
-Stop and ask the user (see `CLAUDE.md` §9) when: starting the **first** af workspace (the Phase 3 pilot —
-a hint or two from the user, just the first); ground truth is missing from `refs/`; a change would be out
-of scope; the linker reports an unresolvable drift/cycle; a definition must change; or you would turn an
-`(open)` into a theorem.
+Stop and ask the user (see `CLAUDE.md` §9) when: ground truth is missing from `refs/` (never paraphrase —
+a refs external's verbatim quote must byte-match its locus; `check-refs` blocks fabrications, LEARNINGS R5);
+a change would be out of scope; the linker reports an unresolvable drift/cycle; a definition must change;
+or you would turn an `(open)` into a theorem. *(af itself is established — no per-workspace user hint needed.)*
