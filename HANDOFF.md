@@ -1,5 +1,5 @@
 <!--
-ROLE: crash-safe handoff for the argument-architecture build (branch argument-architecture).
+ROLE: crash-safe handoff for the argument-architecture build (now on branch main; the feature branch was retired).
 UPDATE POLICY: rewritten (not appended) at each checkpoint; keep <=500 lines; git history holds old versions.
 TRIGGER: end of a work session / before a push / when phase status changes.
 NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status see PRD.md §math + agent-A/HANDOFF.md.
@@ -8,7 +8,7 @@ NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status s
 # HANDOFF — argument-architecture build
 
 > ## START HERE (next agent)
-> 1. `git checkout argument-architecture` (this branch; pushed to origin, up to date).
+> 1. `git checkout main` (the work lives on `main` now; the `argument-architecture` feature branch was fast-forwarded onto `main` and retired).
 > 2. Read, in order: **`PRD.md`** → **`CLAUDE.md`**(==`AGENTS.md`) → **this file** → `definitions/INDEX.md`
 >    + `argument/INDEX.md` + `argument/DAG.md` (the live state).
 > 3. **THE ALGEBRAIC BRIDGE (Theorem B) IS COMPLETE** — all 9 results of its DAG are machine-validated via
@@ -30,7 +30,7 @@ NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status s
 > 5. Live recipes below: **Recipe B** (af per-lemma — proven over 8 bridge lemmas), **Recipe C**
 >    (gate/commit), **Recipe A** (add a registry shard).
 
-**Branch:** `argument-architecture` (off `main`). **Date:** 2026-06-06. **Approved design:**
+**Branch:** `main` (the `argument-architecture` feature branch was fast-forwarded onto `main` and retired). **Date:** 2026-06-06. **Approved design:**
 `docs/plans/2026-06-05-argument-architecture-plan.md`. Mental model: definitions = types · each lemma (af
 workspace) = a module whose *contract* is its one-line statement · a linker enforces the DAG.
 
