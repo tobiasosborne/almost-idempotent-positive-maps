@@ -5,13 +5,15 @@ Jordan-algebra generalisation of Kitaev's almost-idempotent-channels theorem.
 
 ## Build
 ```
-cd report && make        # -> main.pdf  (needs pdflatex + latexmk)
+cd report && make                         # -> main.pdf  (needs pdflatex + latexmk)
+python3 ../scripts/gen-dag-figure.py      # regenerate figures/dag.pdf when the registry changes (needs graphviz)
 ```
 
 ## Structure
 - `main.tex` — preamble (fixed macros + theorem environments) and `\input` of each section.
 - `sections/NN-*.tex` — one file per section. Notation is fixed by `main.tex`; sections never redefine macros.
-- `references.bib` — bibliography.
+- `references.bib` — bibliography (cited sources link out to arXiv / journal open access where a verified public URL exists).
+- `figures/dag.{dot,pdf}` — the argument dependency graph (`fig:dag`), generated from `argument/lemmas/` by `scripts/gen-dag-figure.py`; node colour = status (green = af-validated). Committed artifact, like `main.pdf`.
 - `PROVENANCE.md` — **audit ledger**. Every Definition/Theorem and every labelled status-carrying Lemma/Proposition/Remark has a row: report label, source key, source location, internal proof or source locus, harmonisation note. Source files are registered with SHA256 at top.
 
 ## Provenance rules (non-negotiable)
