@@ -152,7 +152,8 @@ Subagent roster:
   `agent-B/notes/subagent-op-exposed-hull-step8-capstone-packaging.md`.
   Verdict: candidate DAG is clean; the blocker cut is C9 shadow-exit
   interface, C12 alpha-budget/calibrated-dual, and C13 separated-circuit
-  lower bound.
+  lower bound.  Focused subplans for these three blockers are in
+  `docs/plans/2026-06-07-op-exposed-hull-blocker-subplans.md`.
 
 ### A. LP-dual proof of global exposed hull
 
