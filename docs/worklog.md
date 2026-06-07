@@ -356,3 +356,44 @@ validated children), re-verified clean. Registry: `af none→validated`, deps co
 `lem-P-properties` (genuinely imported, previously undeclared); INDEX/DAG regenerated; report badge + status
 + counts (13→14) updated in lockstep. Next af frontier (`argument.py`): `lem-classical-equiv` (unblocks the
 classical chain), `prop-rank-gap` (the √rank honesty caveat), the §10 obstructions.
+
+## 2026-06-07 (cont.) — Agent B exploration lane + `lem-classical-equiv` (15th af-validated, Workflow-orchestrated)
+
+**Agent B rules of engagement** (commit `5eff235` on `main`; first written as `222ced5`). A second agent (Agent
+B) was admitted for exploratory scoping of how to land the full proof. To protect the validated results from
+generative/optimistic exploration, codified a lane discipline in four surfaces:
+`docs/plans/2026-06-07-agent-b-rules-of-engagement.md` (canonical full version — sandbox-vs-front-door,
+never-touch list, status-honesty/no-overclaim, ground-truth byte-match, shared-repo coordination, "best output =
+a map not a half-proof"), `agent-B/README.md` (condensed front-door), the `CLAUDE.md`==`AGENTS.md` "Two agents,
+two lanes" callout, and the HANDOFF START-HERE step 0. Core principle: explore freely in `agent-B/**` /
+`docs/plans/`; reach canonical layers ONLY by *proposing* via Recipe A→B + a non-self reviewer.
+
+**`lem-classical-equiv` COMPLETE — af: validated** (15th machine-validated result; §08 signed↔stochastic
+equivalence with explicit universal constants). First **end-to-end multi-agent Workflow orchestration** of an af
+result (orchestration in `proofs/lem-classical-equiv/orchestration/`):
+- **Groundability gate** (workflow: parallel scope-per-direction → one grounding probe per foundational fact →
+  synthesize). Verdict **A** (build may proceed, no acquisition). Key finding that de-risked the whole task: the
+  forward direction's hand-waved "standard spectral separation estimate" is NOT a (fragile) holomorphic calculus
+  but Kitaev's **elementary binomial/Taylor Banach-algebra calculus** (`refs/kitaev:503-533`, present) — Kitaev
+  uses it precisely because the holomorphic calculus is "fragile in the approximate setting". Three residual gaps
+  (explicit constant `C`, calculus multiplicativity, the `Mₙ(ℝ)` norm arena) are all derivable as proof nodes.
+- **Build** (single prover): 11-node workspace (root + 1.1–1.10, depth 2). Forward N1–N7 instantiates Kitaev's
+  *general* Banach-algebra Prop_P **directly at `Mₙ(ℝ)`** — deliberately did NOT import the validated
+  `lem-P-properties` (its arena is `B(H)ₛₐ`, an arena/hypothesis mismatch a verifier would rightly challenge);
+  registry `deps` stays empty. Converse N8–N10: the exact ring identity `Q²−Q=PD+DP+D²−D` + disjoint-support ℓ¹.
+  5 externals (4 Kitaev byte-quoted incl. `GT-operator-norm-banach`; `GT-hyp` skip_noquote); `check-refs` 0-failed.
+- **Verify** (workflow: 11 FRESH per-node verifiers, sequential, leaves→root — user rule 3). **All accept, 0
+  challenges**, taint 11 clean. Real adversarial work: numeric cross-checks (op-norm = max-row-ℓ¹ to 1e-16,
+  `S²−I=4(Q²−Q)` swept n=2..120), full refs byte-matching, and independent re-derivation of the linchpin N4
+  multiplicativity via Cauchy product (resolving a flagged tension vs the `lem-P-properties` `GT-funcalc`
+  citation). Confirmed `C=6C₁(η₀)` is **dimension-free in n** (no √rank leak). Honest flag carried through: the
+  `Mₙ(ℝ)` max-row-ℓ¹ closed form is **extraction-level** (not byte-stated in any present ref; derived inline,
+  the `lem-P-properties` 1.1.2 pattern).
+- **Finalize:** `af export`; shard `af none→validated` (deps empty); INDEX/DAG regenerated (linker 0/0);
+  unblocks `thm-rank-one`/`thm-simplex`/`prop-approx-simplex` (now ready). Report upkeep in lockstep: `\afbadge`,
+  the `tab:status` row **split** (only `lem-classical-equiv` gets `\afyes`, not the un-validated Hume example),
+  counts 14→15 (§01, §11), `dag.pdf` regenerated, tracked `main.pdf` rebuilt. `check-all` OK.
+- **Coordination note:** Agent B (since frozen — "done, will not edit again") had switched the shared working
+  tree onto branch `agent-b/op-exposed-hull-orchestration` and its index swept 2 exploration notes into the
+  `222ced5` docs commit. Consolidated canonical work onto `main` (per user): restored only the 4 intended docs
+  files, rewrote HANDOFF; Agent B's exploration stays on its own pushed branch.

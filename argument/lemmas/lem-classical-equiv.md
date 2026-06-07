@@ -5,7 +5,7 @@ contract: The signed-idempotent and stochastic-idempotent formulations of classi
 defs: def-stochastic
 deps:
 status: proved
-af: none
+af: validated
 provenance: subagent-classical-sqrt-stability-proof.md; classical-affine-face-lemmas.md (Lemma 3); report lem:classical-equiv
 owner: B
 workspace: proofs/lem-classical-equiv

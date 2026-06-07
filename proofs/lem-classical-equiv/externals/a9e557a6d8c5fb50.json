@@ -1,0 +1,8 @@
+{
+  "id": "a9e557a6d8c5fb50",
+  "name": "GT-funcalc-taylor-bound",
+  "source": "Kitaev arXiv:2405.02434 @ refs/kitaev-2405.02434/approximate_algebras.tex:503-516. Banach-algebra Taylor functional calculus: for f(x)=sum a_n(x-x0)^n with radius \u003e= r and X with ||X-x0 I||\u003cr, f(X) is well-defined, commutes with X, and ||f(X)-f(x0 I)|| \u003c= sum_{n\u003e=1}|a_n| ||X-x0 I||^n; f(x)=x^alpha well-defined for ||X-x0 I||\u003cx0. Instantiated at B=M_n(R), f(x)=x^{-1/2}, x0=1, r=1, X=S^2 to define R=(S^2)^{-1/2} and bound ||R-I||. CAVEAT: supplies the qualitative form + the sum-bound only; the EXPLICIT universal C is DERIVED in node 1.3, not read off these bytes. VERBATIM: \"Let $\\calB$ be a Banach algebra and $f$ a function of one complex variable represented by its Taylor series $f(x)=\\sum_{n=0}^{\\infty}a_n(x-x_0)^n$ with the convergence radius $\\ge r$. Then $f(X)$ is well-defined, commutes with $X$, and satisfies a certain bound for all elements $X\\in\\calB$ sufficiently close to $x_0I$:\n\\begin{gather}\n\\label{Taylor_simple}\nf(X)=a_0I+\\sum_{n=1}^{\\infty}a_n(X-x_0I)^n\\quad\\:\n\\text{if }\\, \\|X-x_0I\\|\u003cr,\\\\\n\\label{Taylor_simple_bound}\n\\|f(X)-f(x_0I)\\|\\le \\sum_{n=1}^{\\infty}|a_n|\\ts\\|X-x_0I\\|^n.\n\\end{gather}\nFor example, let $\\alpha$ be an arbitrary complex number, $x_0$ a positive number, and let $f(x)=x^{\\alpha}$. Then $f(X)$ is well-defined if $\\|X-x_0I\\|\u003cx_0$.\"",
+  "content_hash": "f69775c091031548d046fd8882a0e6cc12a54ed63582d28e9cac16f1b7721796",
+  "created": "2026-06-07T17:26:33.753037011Z",
+  "notes": ""
+}

@@ -1,0 +1,8 @@
+{
+  "id": "95a6e28f6bfc9f31",
+  "name": "GT-hyp",
+  "source": "LEMMA HYPOTHESES (lem-classical-equiv, registry contract). FORWARD: Q is row-stochastic (def-stochastic: Q\u003e=0 entrywise, Q1=1) with ||Q^2-Q||\u003c=eta, and the small-defect regime eta\u003c=eta_0\u003c1/4 (so the inverse-square-root Taylor series converges, GT-funcalc-taylor-bound/GT-small-eta-threshold). CONVERSE: P is a signed affine retraction (def-stochastic: P1=1, P^2=P exactly, rows signed measures of total mass 1) with negative mass delta=max_i sum_j max(-P_ij,0). These are the lemma's given data, not derived; this external carries no refs quote (skip_noquote).",
+  "content_hash": "f4082f8976534cb51e9aea8f7197b42a4bed2dfb8ef8265a7cf726524f6a1afc",
+  "created": "2026-06-07T17:27:02.880511627Z",
+  "notes": ""
+}

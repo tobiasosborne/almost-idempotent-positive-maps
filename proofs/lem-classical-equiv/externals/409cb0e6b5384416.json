@@ -1,0 +1,8 @@
+{
+  "id": "409cb0e6b5384416",
+  "name": "GT-small-eta-threshold",
+  "source": "Kitaev arXiv:2405.02434 @ refs/kitaev-2405.02434/approximate_algebras.tex:525,532,2176. The eta\u003c1/4 convergence threshold: Prop_P requires ||P^2-P||\u003c=delta\u003c1/4, its proof states X=2P-I satisfies ||X^2-I||\u003c=4delta\u003c1, and the applied tilde-Phi instance is a Taylor expansion in 4(Phi-Phi^2) which converges if eta\u003c1/4. Under the rename P-\u003eQ, delta-\u003eeta, X=2P-I-\u003eS=2Q-I this is exactly ||S^2-I||=4||Q^2-Q||=4eta\u003c1 for eta\u003c1/4. VERBATIM: \"Let $P$ be an element of a Banach algebra such that $\\|P^2-P\\|\\le\\delta\u003c1/4$, and let\n[...]\n\\begin{proof} The statement follow from the preceding discussion applied to $X=2P-I$, which satisfies the inequality $\\|X^2-I\\|\\le 4\\delta\u003c1$.\n[...]\nThe right-hand side involves a Taylor expansion in $4(\\Phi-\\Phi^2)$, which converges if $\\eta\u003c1/4$.\"",
+  "content_hash": "164e2f2c694771eaa5bc2021ade29916ad7e072453451a65c1cafb78928f1b36",
+  "created": "2026-06-07T17:26:53.390507091Z",
+  "notes": ""
+}

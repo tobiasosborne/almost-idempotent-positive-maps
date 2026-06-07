@@ -89,12 +89,13 @@ A green \afyes\ in the final column marks results that are additionally
 result has a tiny formal workspace whose root statement is byte-identical to its
 contract and whose every step is checked by a prover and an independent verifier.
 In the body these carry a green `\textcolor{afgreen}{$\checkmark$\,af-validated}'
-badge linking to the corresponding workspace \texttt{proofs/<id>/}. Fourteen
+badge linking to the corresponding workspace \texttt{proofs/<id>/}. Fifteen
 results are af-validated: the bridge theorem and its nine constituent lemmas
 (\Cref{sec:bridge}, \Cref{sec:spectral}), the dilation-compatible theorem with
-its three sub-lemmas (\Cref{sec:exponent}), and the conditioned faithful-invariant
-bound (\Cref{thm:faithful-approx}). The full machine-checked dependency graph is
-\Cref{fig:dag}.
+its three sub-lemmas (\Cref{sec:exponent}), the conditioned faithful-invariant
+bound (\Cref{thm:faithful-approx}), and the classical signed/stochastic
+equivalence lemma (\Cref{lem:classical-equiv}). The full machine-checked
+dependency graph is \Cref{fig:dag}.
 
 \begin{table}[ht]
 \centering
@@ -118,8 +119,10 @@ Exact UP factorization (Theorem~C)
   & proved, cond.\ (\Cref{op:npps}) & \Cref{thm:factorization} & \\
 Near-positive projection stability
   & open & \Cref{op:npps} & \\
-Classical reduction; Hume sharpness
-  & proved & \Cref{lem:classical-equiv}, \Cref{ex:hume} & \\
+Classical reduction (signed/stochastic equivalence)
+  & proved & \Cref{lem:classical-equiv} & \afyes \\
+Hume sharpness ($\sqrt{}$ exponent)
+  & proved & \Cref{ex:hume} & \\
 Classical special cases (rank-one, line-segment, simplex, well-exposed, cluster)
   & proved & \Cref{thm:rank-one}--\ref{thm:cluster} & \\
 Exact commutative factorization (cluster geometry)

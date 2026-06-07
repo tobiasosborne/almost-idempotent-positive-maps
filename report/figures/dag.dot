@@ -11,7 +11,7 @@ digraph argument {
   "lem-bridge-onehole" [label="lem-bridge-onehole", fillcolor="#b7e4c7"];
   "lem-bridge-orderunit" [label="lem-bridge-orderunit", fillcolor="#b7e4c7"];
   "lem-bridge-polar" [label="lem-bridge-polar", fillcolor="#b7e4c7"];
-  "lem-classical-equiv" [label="lem-classical-equiv", fillcolor="#e9ecef"];
+  "lem-classical-equiv" [label="lem-classical-equiv", fillcolor="#b7e4c7"];
   "lem-cstar-sa-to-epsjb" [label="lem-cstar-sa-to-epsjb", fillcolor="#b7e4c7"];
   "lem-exposed-circuit" [label="lem-exposed-circuit", fillcolor="#e9ecef"];
   "lem-first-insertion" [label="lem-first-insertion", fillcolor="#b7e4c7"];

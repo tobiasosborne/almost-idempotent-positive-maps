@@ -8,11 +8,17 @@ NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status s
 # HANDOFF — argument-architecture build
 
 > ## START HERE (next agent)
+> 0. **Which lane?** If you are **Agent B (exploration / scoping how to land the full proof)**, read
+>    **`docs/plans/2026-06-07-agent-b-rules-of-engagement.md`** (mirrored in `agent-B/README.md`) FIRST — it
+>    defines your sandbox lane (`agent-B/**`, `docs/plans/`, `docs/worklog.md`) and the do-not-touch list
+>    (validated `proofs/<id>/`, generated files, locked defs, `status:`/`af:` upgrades) that protects the
+>    validated results. Explore freely there; reach the canonical layers ONLY by *proposing* via Recipe A→B.
+>    (Agent B's frozen `op-exposed-hull` exploration lives on branch `agent-b/op-exposed-hull-orchestration`.)
 > 1. `git checkout main` (all work lives on `main`; the `argument-architecture` feature branch was retired).
 > 2. Read, in order: **`PRD.md`** → **`CLAUDE.md`**(==`AGENTS.md`) → **this file** → `definitions/INDEX.md`
 >    + `argument/INDEX.md` + `argument/DAG.md` (the live state). `python3 scripts/argument.py` prints the
 >    ready/blocked frontier. (Beads is non-functional in this clone — see gotchas; use the linker, not `bd`.)
-> 3. **14 results are `af: validated`** (`grep -c validated argument/INDEX.md`). Three clusters:
+> 3. **15 results are `af: validated`** (`grep -c validated argument/INDEX.md`). Four clusters:
 >    - **Algebraic bridge `thm-bridge`** (the unconditional **√η** result) + its 9-lemma DAG (`lem-P-properties`,
 >      `lem-bridge-orderunit`, `lem-first-insertion`, `lem-square-hole-almost-positive`, `lem-bridge-easy`,
 >      `lem-bridge-polar`, `lem-bridge-onehole`, `prop-bridge-jordan`, `thm-bridge`).
@@ -20,6 +26,9 @@ NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status s
 >      `lem-idempotence-inheritance`, `lem-intertwine-spectral-idempotent`, `lem-cstar-sa-to-epsjb` (O(η) crux).
 >    - **`thm-faithful-approx`** (the conditioned faithful-invariant **O(η/λ)** bound, §06b) — the corrected
 >      statement of the retracted "faithful invariant ⇒ O(η)" overclaim (honest η/λ, no floor on λ).
+>    - **`lem-classical-equiv`** (the signed↔stochastic equivalence, §08) — built DIRECTLY from Kitaev's general
+>      Banach-algebra binomial calculus at the arena `Mₙ(ℝ)` (NOT importing `lem-P-properties`: B(H)ₛₐ-vs-Mₙ(ℝ)
+>      arena mismatch). Unblocks the classical chain (`thm-rank-one`/`thm-simplex`/`prop-approx-simplex` now ready).
 > 4. **The report is now the human-readable front door** (`report/main.pdf`, 39pp): every validated result
 >    carries a green **`✓ af-validated`** badge linking to its `proofs/<id>/` on GitHub; definitions cite
 >    sources with clickable arXiv/journal links; `tab:status` has an `af` column; §01 has a reading guide; the
@@ -28,11 +37,11 @@ NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status s
 >    check-provenance `--build` + TDD). GREEN here (20/50 refs present). Fresh clone with absent `refs/`:
 >    `python3 scripts/fetch-refs.py` (17/50 authoritative-origin-pinned, hash-verified);
 >    `AIPM_REFS_CACHE=<dir> python3 scripts/fetch-refs.py` restores the bespoke residue.
-> 6. **What to do next:** the af frontier (`python3 scripts/argument.py`). Strongest picks: **`lem-classical-equiv`**
->    (highest leverage — unblocks 4 classical results: `thm-rank-one`/`thm-simplex`/`prop-approx-simplex`/
->    `thm-well-exposed`), **`prop-rank-gap`** (small, 0 deps, formalises the √rank "Frobenius ⇏ order-unit"
->    honesty caveat), or the §10 obstructions (`prop-doubling`/`prop-sartre`/`prop-decomposable-norm`, leaf
->    counterexamples defending the conditional η exponent). Recipes below.
+> 6. **What to do next:** the af frontier (`python3 scripts/argument.py`). With `lem-classical-equiv` now
+>    validated, **`thm-rank-one`/`thm-simplex`/`prop-approx-simplex` are freshly ready** (the classical chain).
+>    Other strong picks: **`prop-rank-gap`** (small, 0 deps, formalises the √rank "Frobenius ⇏ order-unit"
+>    honesty caveat; ground in HOS), or the §10 obstructions (`prop-doubling`/`prop-sartre`/`prop-decomposable-norm`,
+>    leaf counterexamples defending the conditional η exponent). Recipes below.
 
 **Branch:** `main`. **Date:** 2026-06-07. **Approved design:** `docs/plans/2026-06-05-argument-architecture-plan.md`.
 Mental model: definitions = types · each lemma (af workspace) = a module whose *contract* is its one-line
@@ -51,6 +60,20 @@ statement · a linker enforces the DAG.
    reviewer independence). Run them sequentially (af is not concurrency-safe in a workspace).
 
 ## DONE (latest — 2026-06-07, all committed + pushed to `main`)
+- **`lem-classical-equiv` COMPLETE (`af: validated`)** — the 15th validated result; the signed↔stochastic
+  equivalence with explicit universal constants (§08), **orchestrated end-to-end via multi-agent Workflow**:
+  (1) a *groundability gate* (parallel scope→ground→synthesize) returned verdict **A** — the forward direction's
+  hand-waved "spectral separation estimate" is in fact Kitaev's **elementary binomial/Taylor Banach-algebra
+  calculus** (kitaev:503-533, present), used precisely because the holomorphic calculus is "fragile in the
+  approximate setting"; no source acquisition needed. (2) A single prover built an **11-node** workspace (root +
+  1.1–1.10, depth 2): forward N1–N7 instantiating Kitaev's general Prop_P **directly at `Mₙ(ℝ)`** (NOT importing
+  `lem-P-properties` — B(H)ₛₐ-vs-Mₙ(ℝ) arena mismatch; registry `deps` stays empty), converse N8–N10 (exact ring
+  identity `Q²−Q=PD+DP+D²−D` + disjoint-support ℓ¹). 5 externals (4 Kitaev quoted + GT-hyp); `check-refs` 0-failed.
+  (3) **11 fresh per-node verifiers, sequential, leaves→root** (rule 3) — all **accept, 0 challenges**, taint clean;
+  they numerically cross-checked (op-norm = max-row-ℓ¹ to 1e-16; `S²−I=4(Q²−Q)` swept n=2..120) and confirmed the
+  explicit `C=6C₁(η₀)` is **dimension-free** and the multiplicativity step is a sound Cauchy product (not a Kitaev
+  over-citation). Honest flags carried through: the `Mₙ(ℝ)` max-row-ℓ¹ closed form is **extraction-level** (not
+  byte-stated in any ref; derived inline, the `lem-P-properties` 1.1.2 pattern). Orchestration scripts + proof kit: `proofs/lem-classical-equiv/orchestration/`.
 - **`thm-faithful-approx` COMPLETE (`af: validated`)** — the 14th validated result; the O(η/λ) conditioned
   faithful-invariant bound (`||a∘b−P(a∘b)|| ≤ C(η/λ)||a||||b||`, §06b). 10-node af workspace, depth 3, all
   validated+clean. Chain: spectral split + square-hole import (`lem-square-hole-almost-positive`) → expectation
@@ -83,15 +106,15 @@ statement · a linker enforces the DAG.
 
 ## NEXT (priority order)
 1. **af frontier — pick a ready result** (`python3 scripts/argument.py`):
-   - **`lem-classical-equiv`** — highest leverage; the signed↔stochastic equivalence; unblocks the whole
-     classical chain. Ground from `def-stochastic` + Kitaev's operator-norm def (`approximate_algebras.tex:638-642`),
-     or acquire the scouted sources first (matrix norms = MIT OCW 6.241J Ch.4; convexity/stochastic = Boyd &
-     Vandenberghe — open + byte-extractable).
+   - **Classical chain, freshly unblocked by `lem-classical-equiv`:** `thm-rank-one`, `thm-simplex`,
+     `prop-approx-simplex` are now ready (each `defs: def-stochastic`, `deps: lem-classical-equiv`). Highest
+     leverage continuation — formalise via the same orchestration (groundability gate → prover → fresh per-node
+     verifiers). `thm-well-exposed` likely needs additional deps; check `argument.py --show`.
    - **`prop-rank-gap`** — small, 0 deps; the √rank order-vs-Frobenius gap (the load-bearing "Frobenius ⇏
      order-unit" honesty caveat, CLAUDE.md §3). Ground in HOS (present).
    - **§10 obstructions** `prop-doubling`/`prop-sartre`/`prop-decomposable-norm` — explicit finite
      counterexamples (ℓ∞ map; depolarizing M₂; transpose norm = n); tractable but leaf (unblock nothing).
-   - Now also ready (depends only on the freshly-validated `thm-faithful-approx`): `prop-faithful-counterexample`.
+   - Also ready (depends only on the validated `thm-faithful-approx`): `prop-faithful-counterexample`.
 2. **Report upkeep** (do in lockstep when the registry/refs change): after validating a result, add its
    `\afbadge{<id>}` in the report + flip its `tab:status` `af` cell to `\afyes` + bump the "N results af-validated"
    counts (§01, §11); re-run `python3 scripts/gen-dag-figure.py` (regenerates `report/figures/dag.pdf`); rebuild
@@ -167,7 +190,9 @@ non-functional here.)
   challenges via transitive recording, see Recipe B4); `resolve-challenge` takes `-r` only (no owner flag), full
   `ch-…` id; `af amend` edits statement text only and only on pending nodes; `af refine` rejects `--depends` with
   multiple statements; validated nodes can't be amended. Serialize af ops per workspace.
-- **Templates:** `proofs/thm-faithful-approx` (10-node refs-grounded + a resolved dependency challenge),
+- **Templates:** `proofs/lem-classical-equiv` (11-node, Workflow-orchestrated end-to-end, refs-grounded
+  forward+converse, 0 challenges — the cleanest worked example; orchestration in `proofs/lem-classical-equiv/orchestration/`),
+  `proofs/thm-faithful-approx` (10-node refs-grounded + a resolved dependency challenge),
   `proofs/lem-cstar-sa-to-epsjb` (multi-axiom O(η) crux), `proofs/lem-bridge-orderunit` (smallest),
   `proofs/thm-dilation-compatible` (capstone assembly).
 - **Reviewer ≠ author cuts both ways (R7).** Verifiers catch fabrications AND can produce false claims;

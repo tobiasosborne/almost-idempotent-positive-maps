@@ -1,0 +1,8 @@
+{
+  "id": "a6587660e9f14537",
+  "name": "GT-operator-norm-banach",
+  "source": "Kitaev arXiv:2405.02434 @ refs/kitaev-2405.02434/approximate_algebras.tex:638-642. For a Banach space calA, the bounded linear operators on calA with the operator norm ||w||=sup_{||Z||\u003c=1}||w(Z)|| form a (unital) Banach algebra. Instantiated here at calA=R^n with ||.||_inf, giving M_n(R) (=End(R^n)) a unital Banach algebra under the induced operator norm. CAVEAT: the generic sup-definition + 'bounded linear operators form a Banach algebra' ARE byte-stated; the M_n(R) max-row-ell^1 CLOSED FORM ||A||=max_i sum_j|A_ij| is NOT byte-stated in any present ref (exhaustive grep=0 hits) and is DERIVED inline in node 1.1 (EXTRACTION-LEVEL flag, established lem-P-properties node 1.1.2 pattern). VERBATIM: \"Since $\\calA$ is a Banach space, linear operators on it have a standard norm,\n\\begin{equation}\n\\|w\\|=\\sup_{\\|Z\\|\\le 1}\\|w(Z)\\|,\\qquad w\\colon \\calA\\to\\calA,\n\\end{equation}\nand bounded linear operators form a Banach algebra.\"",
+  "content_hash": "ce57d1e5323a3117fc74dd8ebe21b4c5fe7f6d2bb15d0d467a81c0da13dbff4d",
+  "created": "2026-06-07T17:27:20.605552987Z",
+  "notes": ""
+}

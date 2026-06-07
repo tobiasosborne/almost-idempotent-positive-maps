@@ -11,7 +11,7 @@ graph LR
   lem-bridge-onehole["lem-bridge-onehole<br/>proved/validated"]
   lem-bridge-orderunit["lem-bridge-orderunit<br/>proved/validated"]
   lem-bridge-polar["lem-bridge-polar<br/>proved/validated"]
-  lem-classical-equiv["lem-classical-equiv<br/>proved/none"]
+  lem-classical-equiv["lem-classical-equiv<br/>proved/validated"]
   lem-cstar-sa-to-epsjb["lem-cstar-sa-to-epsjb<br/>proved/validated"]
   lem-exposed-circuit["lem-exposed-circuit<br/>proved/none"]
   lem-first-insertion["lem-first-insertion<br/>proved/validated"]
