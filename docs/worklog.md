@@ -404,3 +404,28 @@ C12 alpha-budget/calibrated-dual obstruction.
 Numerics found no small-`delta` C9 failure: repaired direct-sample scoring saw
 bad classes exit immediately in the top threats, and the frozen LP diagnostic
 found only the large-negative-mass regular-polygon calibration warning.
+
+## 2026-06-07 (Agent B) — full classical-path report
+
+Prepared the requested LaTeX report for the whole classical
+`op-exposed-hull` path, not only C9:
+`agent-B/reports/classical-path-session-2026-06-07.{tex,pdf}`.  The report is
+explicitly sandbox-level and does not promote any registry status.  It records
+the session definitions, conjectures, proof-ready local lemmas, small-case and
+model results, C9 subcampaign outcomes, false shortcuts, numerical/literature
+evidence, and the current strategic assessment.
+
+Main conclusion: the classical route is still promising but open.  The primary
+maximal-skeleton/repaired-kernel route has many local pieces ready for Agent A
+review, but the surviving blocker cut is C9 (pi-coupled q/shadow interface),
+C12 (alpha budget or calibrated dual obstruction), and C13 (separated-circuit
+negative-mass lower bound).  The robust-coordinate/interpolation route remains
+a useful parallel certificate-mining path, especially for fixed-combinatorics
+models.
+
+Validation: rebuilt the report PDF with `latexmk`, cleaned auxiliary files,
+ran `git diff --check -- agent-B/reports/classical-path-session-2026-06-07.tex`,
+ran `python3 scripts/argument.py --check`, and ran `sh scripts/check-all.sh`
+successfully.  Existing project warnings remain unchanged.  Attempted to file
+follow-up beads for C9/C12/C13, but `bd create` is blocked in this clone by the
+known missing `issue_prefix` configuration; no bead was created.

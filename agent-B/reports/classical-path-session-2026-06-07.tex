@@ -1,0 +1,913 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  urlcolor=blue!60!black,
+  citecolor=blue!60!black
+}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\negm}{\operatorname{neg}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\status}[1]{\textsf{#1}}
+\newcommand{\todoopen}{\status{open}}
+\newcommand{\ready}{\status{ready}}
+\newcommand{\conditional}{\status{conditional}}
+\newcommand{\false}{\status{false}}
+\newcommand{\evidence}{\status{evidence}}
+\newcommand{\canonical}{\status{canonical}}
+\newcommand{\af}{\status{af}}
+\newcommand{\pathref}[1]{\path{#1}}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{result}{Result}
+\newtheorem{warning}{Warning}
+\newtheorem{openproblem}{Open Problem}
+
+\title{Agent B Classical Path Report\\
+\large Work on \texttt{op-exposed-hull}, 2026-06-07}
+\author{Agent B exploration lane}
+\date{Checkpoint after commit \texttt{fa2c032}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document reports the Agent B exploration work on the classical
+\texttt{op-exposed-hull} route performed on 2026-06-07.  It is a sandbox
+report, not a canonical project paper section and not an upgrade of any
+registry status.  The report records the target, all definitions introduced
+or used by the session, the conjectural proof architecture, the results that
+were proved at exploration level, the false shortcuts found, the numerical
+and literature evidence, and the current assessment of promise.
+
+The main conclusion is that the classical route remains promising but is not
+closed.  The work reduces the route to a sharply localized closed-bad-class
+augmentation problem.  Most local finite-dimensional pieces are
+proof-ready.  The current blocker cut is
+\[
+\begin{aligned}
+  C9  &\quad\text{(q/shadow interface)},\\
+  C12 &\quad\text{(alpha budget or calibrated dual)},\\
+  C13 &\quad\text{(separated-circuit negative-mass lower bound)}.
+\end{aligned}
+\]
+The latest C9 campaign killed two tempting shortcuts: distributional
+q-quasi-closure does not imply rowwise closure, and Step 3 height control
+does not give \(O(\tau)\) leakage for arbitrary shadow witnesses.  The
+surviving C9 target is a coupled averaging law \(\pi=m\) controlling both
+q-flow and the shadow kernel, or else a route to the C12 calibrated-dual
+obstruction.
+\end{abstract}
+
+\tableofcontents
+
+\section{Status Vocabulary And Scope}
+
+The following status labels are used throughout this report.
+\begin{description}[leftmargin=2.8cm,style=nextline]
+\item[\canonical{}] A statement already in the canonical registry/report.
+This report does not change such status.
+\item[\af{} validated] A canonical statement with an adversarial proof
+workspace validated by the existing project machinery.  No new such result
+was produced in this session.
+\item[\ready{}] An Agent B exploration statement with a complete local proof
+outline, small enough to be proposed to Agent A for canonical packaging.  It
+still needs formulation review, byte-grounding of any external facts, and
+the Recipe A/B/af pipeline before becoming canonical.
+\item[\conditional{}] A statement proved modulo a named extra hypothesis.
+\item[\todoopen{}] A plausible target with no complete proof.
+\item[\false{}] A tempting statement refuted by an explicit argument or
+finite counterexample.
+\item[\evidence{}] Numerical or literature evidence only.
+\end{description}
+
+All work reported here stayed in the Agent B lane:
+\pathref{agent-B/**}, \pathref{docs/plans/**}, and
+\pathref{docs/worklog.md}.
+Canonical layers \pathref{definitions/}, \pathref{argument/},
+\pathref{proofs/}, and \pathref{report/} were not used to promote
+any new theorem.  The underlying canonical open problem remains
+\texttt{op-exposed-hull}.
+
+\section{Canonical Starting Point}
+
+The project already has a classical reduction in the registry.  The relevant
+open target is the global exposed-hull lemma for exact signed affine
+retractions.  The canonical definition index contains the definitions
+\texttt{def-stochastic}, \texttt{def-exposed}, and
+\texttt{def-near-positive-projection}; this report uses them by reference
+rather than redefining the canonical shards.
+
+\begin{conjecture}[Global exposed-hull target, registry \texttt{op-exposed-hull}]
+\label{conj:op-exposed-hull}
+There are universal constants \(c,C,C'>0\) such that for every exact signed
+affine retraction \(P\), with rows \(p_i\), satisfying
+\[
+  P\one=\one,\qquad P^2=P,\qquad \negm(p_i)\leq \delta,
+\]
+and with \(\tau=\sqrt{\delta}\), \(\rho=C\tau\), \(\kappa=c\tau\), every row
+satisfies
+\[
+  \dist_1(p_i,\conv W_{\rho,\kappa})\leq C'\tau.
+\]
+Here \(W_{\rho,\kappa}\) is the set of row vertices of
+\(K=\conv\{p_i\}\) whose exposedness modulus at scale \(\rho\) is at least
+\(\kappa\).
+\end{conjecture}
+
+If Conjecture~\ref{conj:op-exposed-hull} is proved, the existing
+cluster-representative classical theorem gives a stochastic idempotent within
+the sharp \(O(\sqrt{\delta})\) scale.  Hume's family shows that the square-root
+scale is the right scale; the session found no evidence that Hume obstructs
+the exposed-hull formulation.
+
+\section{Definitions Used Or Introduced In The Session}
+
+The definitions in this section are session-level working definitions.  They
+are included so that later proof packages have a precise vocabulary.  They
+are not canonical definition shards.
+
+\begin{definition}[Signed affine retraction]
+A matrix \(P\) is a signed affine retraction if its rows \(p_i\in\R^n\) have
+row sum \(1\) and
+\[
+  P\one=\one,\qquad P^2=P.
+\]
+Equivalently, each row is fixed by right multiplication:
+\[
+  p_iP=p_i=\sum_j p_i(j)p_j.
+\]
+\end{definition}
+
+\begin{definition}[Negative mass]
+For a signed probability vector \(x\), set
+\[
+  \negm(x)=\sum_{j:x_j<0}(-x_j).
+\]
+Then \(\|x\|_1=1+2\negm(x)\).  The standing small-defect hypothesis in the
+classical path is \(\negm(p_i)\leq\delta\) for all rows.
+\end{definition}
+
+\begin{definition}[Sharp parameter]
+Throughout the session
+\[
+  \tau=\sqrt{\delta}.
+\]
+The exposedness and separation scales are
+\[
+  \rho=R\tau,\qquad \kappa=k\tau
+\]
+with universal constants chosen in a hierarchy.
+\end{definition}
+
+\begin{definition}[Exposedness modulus]
+For a row vertex \(v=p_a\) and scale \(\rho\), let
+\[
+  S_v(\rho)=\{i:\|p_i-v\|_1\geq\rho\}.
+\]
+The exposedness modulus is
+\[
+  e_v(\rho)=\sup_h\min_{i\in S_v(\rho)}h(p_i),
+\]
+where \(h\) ranges over affine functions on \(\operatorname{aff}K\) with
+\[
+  h(v)=0,\qquad 0\leq h(p_i)\leq 1\quad\text{for all rows }i.
+\]
+The well-exposed row-vertex set is
+\[
+  W_{\rho,\kappa}=\{v:\ v\text{ is a row vertex and }e_v(\rho)\geq\kappa\}.
+\]
+\end{definition}
+
+\begin{definition}[Skeleton and bad rows]
+A skeleton \(R_0\) is a maximal \(4\rho\)-separated subset of
+\(W_{\rho,\kappa}\), and \(C=\conv R_0\).  A bad row, relative to a threshold
+\(D\tau\), is a row satisfying
+\[
+  \dist_1(p_i,C)>D\tau.
+\]
+In the closed-bad-class block the bad set is enlarged by \(\rho\)-clusters
+when vertex language is required.
+\end{definition}
+
+\begin{definition}[Positive-coordinate repair]
+For each row let \(a_i=\negm(p_i)\), write \(p_i=p_i^+-p_i^-\), and define
+\[
+  q_i=\frac{p_i^+}{1+a_i}.
+\]
+Then \(q_i\) is a probability vector.  The matrix \(q=(q_i)\) is the repaired
+positive-coordinate Markov kernel.  For a bad set \(B\), write
+\[
+  T=q|_{B,B},\qquad s_i=q_i(B^c)=1-\sum_{j\in B}T_{ij}.
+\]
+\end{definition}
+
+\begin{definition}[Bad lifetime and fundamental matrix]
+For a substochastic block \(T=q|_{B,B}\), the killed-chain fundamental matrix
+is
+\[
+  N=(I-T)^{-1}=\sum_{m\geq0}T^m
+\]
+when \(\rho(T)<1\).  The quantity
+\[
+  \|N\|_{\infty\to\infty}
+\]
+is the maximal expected number of visits to \(B\) before exit.
+\end{definition}
+
+\begin{definition}[Separator height and high slices]
+Let \(\phi\) be an affine separator with \(l_\infty\)-dual norm at most \(1\).
+Set
+\[
+  M=\max_j\phi(p_j),\qquad h_i=M-\phi(p_i).
+\]
+The high slice of width \(\gamma\) is
+\[
+  H_\gamma=\{i:h_i\leq\gamma\}.
+\]
+The two slices used in C9 are
+\[
+  H_0=B\cap\{h_i\leq A_0\delta\},\qquad
+  H_1=B\cap\{h_i\leq G\tau\}.
+\]
+\end{definition}
+
+\begin{definition}[Shadow witness and shadow kernel]
+If a vertex \(u\) fails \(e_u(\rho)\geq\kappa\), a shadow witness is a
+probability measure \(\sigma_u\) supported on rows at distance at least
+\(\rho\) from \(u\) and with controlled separator-height loss.  A shadow
+kernel \(S\) on a high bad set \(H\) is a substochastic matrix whose row
+\(S_i\) is such a witness, restricted to \(H\).  Its row loss is
+\[
+  1-S\one.
+\]
+\end{definition}
+
+\begin{definition}[Failed-exposedness circuit data]
+For a non-exposed vertex \(v\), Step 5 produces data
+\[
+  \mu\in\Delta(S_v(\rho)),\qquad \alpha_i,\beta_i\geq0,
+\]
+with
+\[
+  \sum_{j\in S_v(\rho)}\mu_j(p_j-v)
+  =
+  \sum_i(\beta_i-\alpha_i)(p_i-v),\qquad
+  \sum_i\beta_i<\kappa.
+\]
+The \(\beta\)-side is controlled.  The \(\alpha\)-side lies on the zero face
+of an optimal exposing functional and is the major aggregation obstruction.
+\end{definition}
+
+\begin{definition}[Aggregation parameters]
+The blocker interaction uses
+\[
+\begin{aligned}
+  \xi    &= \text{q-closure/stationarity error},\\
+  M      &= \text{averaged alpha mass},\\
+  \theta &= \text{separated witness mass},\\
+  E      &= \text{aggregation residual}.
+\end{aligned}
+\]
+The intended closing scale is
+\[
+  \xi=O(\tau),\qquad M\leq C/\tau,\qquad
+  \theta\geq c\tau,\qquad E=O(\delta).
+\]
+\end{definition}
+
+\begin{definition}[Pi-coupled q/shadow closure]
+The corrected C9 interface asks for a probability law \(\pi\) on a high bad
+set \(H\) such that
+\[
+  \pi q(H^c)\leq \xi_q,\qquad
+  \|\pi S-\pi\|_1\leq \xi_S,\qquad
+  \pi(1-S\one)\leq \xi_S.
+\]
+The most promising case is \(\pi=m\), the occupation or quasi-stationary law
+produced by the bad-kernel lifetime alternative.
+\end{definition}
+
+\section{Proof Architecture Developed In The Session}
+
+The best current architecture is not pure convex geometry.  It is
+\[
+\begin{gathered}
+\text{maximal exposed skeleton}\\
+\longrightarrow\ \text{positive-coordinate Markov kernel from }P^2=P\\
+\longrightarrow\ \text{bad-kernel resolvent alternative}\\
+\longrightarrow\ \text{long-lived closed-bad-class alternative}\\
+\longrightarrow\ \text{LP/circuit augmentation contradiction}\\
+\longrightarrow\ \text{\texttt{op-exposed-hull}.}
+\end{gathered}
+\]
+The crucial reason to use the repaired kernel is that every q-step costs only
+order \(\delta\).  Therefore an expected bad lifetime of order \(1/\tau\)
+accumulates only order \(\delta/\tau=O(\tau)\), which is exactly the target
+scale.
+
+\subsection{Primary Route: Maximal Skeleton And Bad Kernel}
+
+Choose \(R_0\) maximal \(4\rho\)-separated in \(W_{\rho,\kappa}\).  If every
+row is \(O(\tau)\)-close to \(C=\conv R_0\), the classical cluster theorem
+finishes.  Otherwise form a bad set \(B\).  The proof splits:
+\begin{enumerate}[label=\arabic*.]
+\item If the bad-to-bad q-block \(T\) has
+\[
+  \|(I-T)^{-1}\|_{\infty\to\infty}\leq C/\tau,
+\]
+then all bad rows reconstruct from \(C\) at \(O(\tau)\) cost.
+\item If not, finite Markov algebra produces a long-lived q-quasi-closed bad
+distribution.  The remaining task is to prove that such a high bad class
+contains a new well-exposed vertex far from \(R_0\), contradicting maximality.
+\end{enumerate}
+
+\subsection{Secondary Route: Robust Coordinates}
+
+The robust-coordinate route constructs affine coordinates on selected
+representatives with row reconstruction \(O(\tau)\) and coordinate negative
+mass \(O(\delta)\).  Pushing canonical row coordinates through a stochastic
+kernel preserves \(O(\delta)\) negative mass, but the representative
+interpolation matrix \(G\) must satisfy
+\[
+  \max_b\sum_a|G_{ba}-\delta_{ba}|=O(\delta).
+\]
+A merely \(O(\tau)\) interpolation error exactifies through \(G^{-1}\) and can
+create \(O(\tau)\) coordinate negativity, losing the target rate.  Numerical
+LP probes nevertheless found \(O(\delta)\) interpolation defect in the tested
+Hume, quadrilateral, and small-defect exact similarity examples.  This route
+is promising but secondary.
+
+\section{Results Proved Or Isolated}
+
+No new canonical theorem was proved.  The results below are exploration-level
+proof packages or refutations.  Each must still go through Agent A review and
+the local provenance rules before becoming a registry result.
+
+\subsection{Ready Local Lemmas}
+
+\begin{longtable}{p{0.20\linewidth}p{0.13\linewidth}p{0.57\linewidth}}
+\toprule
+Label & Status & Statement and proof content\\
+\midrule
+\endhead
+C0 positive-coordinate repair &
+\ready{} &
+For \(q_i=p_i^+/(1+\negm(p_i))\),
+\[
+  \left\|p_i-\sum_jq_i(j)p_j\right\|_1\leq 4\delta.
+\]
+This follows directly from \(p_iP=p_i\), the sign split
+\(p_i=(1+a_i)q_i-a_ir_i\), and \(\|p_j\|_1\leq1+2\delta\).\\
+\addlinespace
+C1 bad-kernel resolvent &
+\ready{} &
+If \(G=B^c\) rows are \(\Gamma\)-close to a convex set \(C\), and
+\(L=\|(I-T)^{-1}\|_{\infty\to\infty}\), then every bad row satisfies
+\[
+  \dist_1(p_i,C)\leq\Gamma+4\delta L.
+\]
+The proof uses convexity of distance and
+\((I-T)^{-1}(1-T\one)=\one\).\\
+\addlinespace
+C2 lifetime to occupation measure &
+\ready{} after review &
+For a finite substochastic \(T\), either
+\[
+  \|(I-T)^{-1}\one\|_\infty\leq L
+\]
+or there is a probability \(\mu\) with
+\[
+  \mu(1-T\one)\leq 1/L,\qquad \|\mu T-\mu\|_1\leq 2/L.
+\]
+The proof is the normalized occupation measure of a long-lived starting row.\\
+\addlinespace
+C3 distance separator &
+\ready{} with source caveat &
+If \(p_i\) is \(H\tau\)-far from a convex hull \(C\), finite
+\(\ell_1/\ell_\infty\) separation gives affine \(\phi\) with
+\(\|\phi\|_*\leq1\) and
+\[
+  \phi(p_i)\geq \sup_C\phi+H\tau.
+\]
+Canonical use needs either an internal finite proof or a byte-verified source.\\
+\addlinespace
+C4 high-slice drift &
+\ready{} &
+If \(\|p_i-\sum_jq_i(j)p_j\|_1\leq\varepsilon\), \(\phi\) is
+\(L_\phi\)-Lipschitz, \(h_i=M-\phi(p_i)\), and
+\(H_\gamma=\{h\leq\gamma\}\), then
+\[
+  q_i(H_\gamma^c)\leq \frac{h_i+L_\phi\varepsilon}{\gamma}.
+\]
+This is a one-line Markov inequality applied to
+\(\sum_jq_i(j)h_j\leq h_i+L_\phi\varepsilon\).\\
+\addlinespace
+C5 high-slice bad closure &
+\conditional{} &
+With bad-set exit \(s_i=q_i(B^c)\),
+\[
+  q_i((B\cap H_\gamma)^c)
+  \leq s_i+\frac{h_i+L_\phi\varepsilon}{\gamma}.
+\]
+Rows in an \(O(\delta)\) top core map into a \(G\tau\) high slice with
+\(O(\tau)\) leakage, provided their bad-set exit is \(O(\tau)\).\\
+\addlinespace
+C6 top-face exposure &
+\ready{} &
+If \(u\) maximizes \(\phi\), and every row outside \(B_1(u,\rho)\) has
+\(\phi(u)-\phi(p_i)\geq\Delta_\phi\), then
+\[
+  e_u(\rho)\geq \Delta_\phi/M_\phi,\qquad
+  M_\phi=\max_i(\phi(u)-\phi(p_i)).
+\]
+For \(\|\phi\|_*\leq1\), \(M_\phi\leq 2+4\delta\).\\
+\addlinespace
+C7 shadow edge &
+\ready{} with global-max hypothesis &
+If \(u\) is a global \(\phi\)-maximizer and \(e_u(\rho)<\kappa\), then there
+is a row \(j\) with \(\|p_j-u\|_1\geq\rho\) and
+\[
+  \phi(p_j)\geq \phi(u)-(2+4\delta)\kappa.
+\]
+If \(u\) is \(H\tau\)-above \(C\), then \(j\) remains
+\((H-(2+4\delta)k)\tau\)-above \(C\).\\
+\addlinespace
+C8 shadow recurrence &
+\conditional{} &
+For a substochastic shadow kernel \(S\) on finite \(H\) with row sums at
+least \(1-\varepsilon_s\), the row-normalized chain has a recurrent class and
+a probability \(\pi\) with
+\[
+  \|\pi S-\pi\|_1\leq\varepsilon_s.
+\]
+If \(H\) is rowwise q-closed, then also \(\pi q(H^c)\leq\varepsilon_q\).\\
+\addlinespace
+C10 failed-exposedness circuit &
+\ready{} &
+If \(e_v(\rho)<\kappa\), finite minimax and LP duality give
+\[
+  \sum_{j\in S_v(\rho)}\mu_j(p_j-v)
+  =
+  \sum_i(\beta_i-\alpha_i)(p_i-v),
+  \qquad \sum_i\beta_i<\kappa,
+\]
+with complementarity support: \(\alpha\) on the zero face and \(\beta\) on
+the top face.  The \(\alpha\)-mass is uncontrolled.\\
+\bottomrule
+\end{longtable}
+
+\subsection{Small-Case And Model Results}
+
+\begin{longtable}{p{0.22\linewidth}p{0.14\linewidth}p{0.54\linewidth}}
+\toprule
+Label & Status & Content\\
+\midrule
+\endhead
+Rank \(\leq2\), \(n=3\), simplex row polytopes &
+\ready{} / exact &
+Segment and simplex barycentric coordinates show all vertices are
+\(\kappa\)-exposed at the required square-root scale for suitable constants,
+and every row lies exactly in their hull.\\
+\addlinespace
+Explicit \(n=4\) quadrilateral family &
+\ready{} / exact &
+For the family \(P_t=I-uv^T\) with \(\delta=t^2\), all four row vertices are
+well exposed at \(\rho=t\).  Gurobi verified the exposedness LP at
+\(t=1/10\) with objective \(0.99\).\\
+\addlinespace
+General \(n=4\), rank \(3\), \(2|2\) circuit &
+\ready{} at coefficient level &
+For a positive circuit
+\[
+  a p_0+b p_1=c p_2+d p_3,\qquad a+b=c+d=1,
+\]
+the value assignments expose \(p_0,p_1,p_2,p_3\) at levels \(b,a,d,c\).
+If one coefficient is \(<k\tau\), the controlled vertex is within
+\(O(k\tau)\) of the opposite edge.\\
+\addlinespace
+Robust-coordinate push-forward &
+\ready{} conditional &
+If a stochastic kernel \(U\) reconstructs rows from representatives, then
+canonical coordinates pushed through \(U\) satisfy
+\[
+  \negm(\lambda(p_i))\leq\negm(p_i)\leq\delta.
+\]
+The remaining need is \(G=I+O(\delta)\) in row-\(\ell_1\) operator norm.\\
+\addlinespace
+Exact representative reconstruction implies \(G=I\) &
+\ready{} &
+If \(p_j=\sum_aU_{ja}r^a\) exactly and the representatives are affinely
+independent, then applying \(r^b=r^bP\) forces
+\[
+  G_{ba}=\sum_jr^b_jU_{ja}=\delta_{ba}.
+\]\\
+\bottomrule
+\end{longtable}
+
+\subsection{C9 Campaign Results}
+
+\begin{longtable}{p{0.18\linewidth}p{0.14\linewidth}p{0.58\linewidth}}
+\toprule
+Label & Status & Content\\
+\midrule
+\endhead
+C9-A high-core pruning &
+\ready{} with hypothesis &
+For \(H_0=B\cap\{h\leq A_0\delta\}\), \(H_1=B\cap\{h\leq G\tau\}\), and a
+probability \(m\) on \(B\),
+\[
+  \begin{aligned}
+    \nu q(H_1^c)&\leq \eta/m(H_0)+((A_0+4)/G)\tau,\\
+    \nu&=m|_{H_0}/m(H_0).
+  \end{aligned}
+\]
+Thus sufficient high-core mass gives distributional q-closure into \(H_1\)
+and rowwise pruning on most of \(\nu\).\\
+\addlinespace
+C9-A fallback refutation &
+\false{} &
+The statement ``small \(m(H_0)\) implies a Lyapunov/resolvent fallback'' is
+false for an arbitrary quasi-stationary bad measure.  A stochastic idempotent
+with two closed states, one at height \(0\) and one at height \(G\tau/2\), can
+have \(m(H_0)=0\), zero exit, and no drift.  The missing datum is return mass
+to the high core.\\
+\addlinespace
+C9-B Step 3 leakage &
+\ready{} and limiting &
+Step 3 gives only
+\[
+  \mu(H_1^c)\leq (2+4\delta)k/G,
+\]
+not \(O(\tau)\), for arbitrary failed-exposedness witnesses.  Therefore
+high-supported shadow witnesses require extra q-compatibility or an LP
+minimum-leakage condition.\\
+\addlinespace
+C9-B q-leakage &
+\ready{} &
+For the repaired kernel,
+\[
+  q_i(H_1^c)\leq (c_0+4)\tau/G
+\]
+when \(h_i\leq c_0\delta\).  This is the correct q-side leakage estimate, but
+arbitrary shadow witnesses need not be q-side witnesses.\\
+\addlinespace
+C9-C Lyapunov package &
+\ready{} &
+For a killed finite kernel, a bounded potential with drift \(c\tau\) gives
+\[
+  \|(I-T)^{-1}\|_{\infty\to\infty}=O(1/\tau).
+\]
+Failure of this resolvent bound yields a quasi-stationary occupation measure
+with \(O(\tau)\) exit and \(O(\tau)\) stationarity defect.\\
+\addlinespace
+C9-D distributional-to-rowwise refutation &
+\false{} &
+The deterministic path
+\[
+  q_i=\delta_{i+1}\ (i<N),\qquad q_N(B^c)=1,\qquad m_i=1/N
+\]
+has \(mq(B^c)=1/N\) and \(\|mT-m\|_1=2/N\), but every nonempty subset has a
+row with full leakage.  Thus distributional q-quasi-closure alone cannot
+produce a rowwise closed core.\\
+\addlinespace
+C9-D pi-coupled replacement &
+\conditional{} / \todoopen{} interface &
+The useful replacement is a common averaging law \(\pi\) satisfying
+\[
+  \pi q(H^c)=O(\tau),\quad \|\pi S-\pi\|_1=O(\tau),\quad
+  \pi(1-S\one)=O(\tau).
+\]
+The preferred route is \(\pi=m\), the bad-kernel occupation law.  Proving
+shadow witnesses approximately stationary for the same \(m\) is open.\\
+\addlinespace
+C9-E repaired scoring &
+\evidence{} &
+In \(4473\) scored direct \(P=AB\), \(BA=I\) reports, no C9 failure was
+found.  Top threats had nonempty bad sets but \(bad\_lifetime=1\), zero
+shadow-leakage proxy, and q-exit in the benign one-step regime.\\
+\addlinespace
+C9-F frozen LP diagnostic &
+\evidence{} &
+The frozen-row model found no small-\(\delta\) C9 failure.  Hume and direct
+small-defect examples stop by exposed augmentation or no bad class.  A regular
+12-gon realizes the frozen failure pattern only at large negative mass
+\(\delta\approx0.205\).\\
+\bottomrule
+\end{longtable}
+
+\section{False Shortcuts And Necessary Caveats}
+
+The session improved the proof state partly by finding statements that must
+not be used.
+
+\begin{warning}[Pure convex geometry is insufficient]
+Dense polygon and cyclic-chain examples show that sequential pointwise
+deletion or local exposed-or-redundant reasoning can cycle.  The proof must
+use \(P^2=P\) and \(\negm(p_i)\leq\delta\).
+\end{warning}
+
+\begin{warning}[One-scale high-slice closure is too strong]
+The drift bound gives
+\[
+  q_i(H_{G\tau}^c)\leq (h_i+4\delta)/(G\tau).
+\]
+Rows with \(h_i=O(\tau)\) therefore give only constant leakage.  The correct
+rowwise statement is two-scale:
+\[
+  O(\delta)\text{ top core}\longrightarrow G\tau\text{ high slice with }
+  O(\tau)\text{ leakage}.
+\]
+\end{warning}
+
+\begin{warning}[Small high-core mass does not force drift]
+As recorded in C9-A, an arbitrary quasi-stationary measure may live forever
+on a lower closed class.  A fallback needs return information or a genuine
+Lyapunov potential, not only \(m(H_0)\) being small.
+\end{warning}
+
+\begin{warning}[Distributional q-closure is not rowwise closure]
+The deterministic path example of C9-D shows that
+\[
+  mq(B^c),\ \|mT-m\|_1=O(\tau)
+\]
+does not imply any nonempty subset with rowwise \(O(\tau)\) exit.
+\end{warning}
+
+\begin{warning}[Shadow leakage is not q-drift]
+Step 3/Step 5 witnesses are LP witnesses for failed exposedness.  Unless they
+are coupled to \(q_i\), their leakage below a high slice does not imply q-exit
+or a q-Lyapunov drift.
+\end{warning}
+
+\begin{warning}[Raw affine-circuit lower bound is false]
+The stochastic idempotent with rows
+\[
+  (1,0,0),\quad (0,1,0),\quad (1/2,1/2,0)
+\]
+has a separated affine circuit and zero negative mass.  Step 7 must restrict
+to reduced row-vertex or Step-5 anchored circuits with explicit witness mass
+and residual.
+\end{warning}
+
+\section{Open Conjectural Interfaces}
+
+\begin{openproblem}[C9: q/shadow interface]
+Prove either a pi-coupled interface
+\[
+  \pi q(H^c)\leq C\tau,\qquad
+  \|\pi S-\pi\|_1\leq C\tau,\qquad
+  \pi(1-S\one)\leq C\tau
+\]
+with \(\pi=m\) from the bad-kernel occupation law, or prove that failure of
+such q-compatible witness selection produces the C12 alpha-budget or
+calibrated-dual obstruction.
+\end{openproblem}
+
+\begin{openproblem}[C12: alpha budget or calibrated dual]
+In a q-quasi-closed high bad class, choose failed-exposedness witnesses either
+with averaged alpha mass \(M=O(1)\), or with a q-compatible calibration whose
+residual is \(O(\tau)\) and whose separated witness mass \(\theta\) is
+quantified.  The known Step 5 LP duality only controls the \(\beta\)-mass; it
+does not control the lower-face \(\alpha\)-mass.
+\end{openproblem}
+
+\begin{openproblem}[C13: separated-circuit negative-mass lower bound]
+For the reduced or Step-5 anchored aggregate circuit output by C12, prove
+\[
+  \max_i\negm(p_i)\geq c\,\theta\rho-C E,
+\]
+or the stronger mass-free version \(c\rho^2-CE\), with explicit dependence on
+separated witness mass \(\theta\) and residual \(E\).  If Step 6 supplies only
+\(\theta=\Omega(\tau)\), the weak \(\theta\rho^2\) bound is not enough.
+\end{openproblem}
+
+\begin{openproblem}[Closed-bad-class augmentation]
+Let \(B\) be a high bad row-vertex class farther than \(D\tau\) from
+\(C=\conv R_0\), enlarged by \(\rho\)-clusters, and suppose \(B\) is
+q-closed in the sense supplied by the long-lifetime alternative.  Prove that
+\(B\) contains a row vertex \(w\) with
+\[
+  \dist_1(w,C)>4\rho,\qquad e_w(\rho)\geq\kappa.
+\]
+This is blocked exactly by C9, C12, and C13.
+\end{openproblem}
+
+\begin{openproblem}[Robust-coordinate interpolation upgrade]
+Given a maximal square-root-exposed skeleton \(R\) and rowwise
+\(\conv R\)-reconstruction at \(O(\tau)\), find a stochastic kernel \(U\) such
+that
+\[
+  \left\|p_i-\sum_aU_{ia}r^a\right\|_1\leq C\tau
+\]
+and the representative interpolation matrix satisfies
+\[
+  \max_b\sum_a\left|\sum_jr^b_jU_{ja}-\delta_{ba}\right|\leq C\delta.
+\]
+\end{openproblem}
+
+\section{Numerical And Computational Work}
+
+All numerics are evidence only.  They were used to identify false alarms,
+constants, and candidate certificate shapes.
+
+\begin{longtable}{p{0.25\linewidth}p{0.65\linewidth}}
+\toprule
+Artifact & Finding\\
+\midrule
+\endhead
+\pathref{exposed_hull_metrics.py} and family analyzers &
+Compute row negative mass, row vertices, exposedness LPs, \(W_{\rho,\kappa}\),
+and distance to \(\conv W\).\\
+\addlinespace
+Hume and Hume products &
+Sharp for the \(\sqrt{\delta}\) exponent but not exposed-hull obstructions.
+At tested square-root scales the relevant vertices remain well exposed and
+rows lie in their hull.\\
+\addlinespace
+Similarity-conjugated stochastic idempotents &
+No serious small-defect threat found.  Missing well-exposed vertices were
+very close to the hull of the remaining well-exposed vertices.\\
+\addlinespace
+Direct exact \(P=AB\), \(BA=I\), \(P\one=\one\) search &
+No counterexample found.  Aggressive constants \(\rho=0.5\tau\),
+\(\kappa=0.5\tau\) can drop anchor vertices, but the same samples become
+harmless for \(\rho\geq\tau\).  Conservative worst finite ratio was about
+\(0.1985\).\\
+\addlinespace
+Small cases and Gurobi LP &
+Rank \(\leq2\), \(n=3\), simplex row polytopes, and an explicit \(n=4\)
+quadrilateral are benign.  Gurobi 13.0.2 solved an exposedness LP with the
+expected objective \(0.99\).\\
+\addlinespace
+Stress families &
+Dense polygons and cyclic chains explain why sequential deletion fails, but
+exact polygon projections have constant negative mass and local small-negative
+stencils have order-one idempotency defect.\\
+\addlinespace
+LP/game frozen diagnostic &
+The full negation is bilinear/nonconvex before freezing \(P\).  Frozen LPs
+separate Hume augmentation from the large-negative-mass regular-polygon
+warning.\\
+\addlinespace
+C9 repaired scorer &
+In direct samples, top C9 threats exit in one step or have high-supported
+shadow witnesses.  No small-defect long-lived bad trap was seen.\\
+\bottomrule
+\end{longtable}
+
+\section{Literature Search}
+
+The literature search found no theorem equivalent to
+Conjecture~\ref{conj:op-exposed-hull}.  The useful sources are indirect and
+must be acquired into local \pathref{refs/} before canonical use.
+
+Highest-priority leads are:
+\begin{itemize}[leftmargin=*]
+\item Blackwell on idempotent Markoff chains.
+\item Schwarz on semigroups of stochastic matrices.
+\item Gonzalez--Hartfiel and Gonzalez--Torres on exact stochastic idempotent
+matrix spaces and cores.
+\item Hoffman and modern Hoffman-constant literature for LP error bounds.
+\item Choquet--Corson--Klee and Straszewicz for exposed-point background.
+\item Agaev--Chebotarev, Seneta, and related Markov projector/perturbation
+work for comparison language around resolvents.
+\end{itemize}
+
+The assessment is negative as a proof source: exact stochastic idempotent
+structure helps identify the endpoint after the skeleton theorem, but the
+dimension-free signed-retraction \(\sqrt{\delta}\) stability estimate appears
+to be new.
+
+\section{Promisingness Assessment}
+
+\subsection{Why The Primary Route Is Promising}
+
+The primary route is promising for four concrete reasons.
+\begin{enumerate}[label=\arabic*.]
+\item The positive-coordinate repair and bad-kernel resolvent half are
+small, deterministic, and proof-ready.
+\item All stress tests and exact searches so far fail to produce a
+small-\(\delta\) counterexample.  The false alarms are explained by bad
+constants, constant negative mass, or loss of exact idempotency.
+\item The closed-bad-class problem has been decomposed into a finite list of
+small contracts.  The blocker cut is now exactly \(\{C9,C12,C13\}\), not an
+amorphous gap.
+\item The latest C9 work did not merely fail; it identified the correct
+replacement interface: use a common law \(\pi=m\) for q-closure and shadow
+aggregation, or turn the incompatibility into C12 data.
+\end{enumerate}
+
+\subsection{Why The Route Is Still Risky}
+
+The route is still genuinely open.  The risks are:
+\begin{enumerate}[label=\arabic*.]
+\item C12 may be hard: failed-exposedness LP duality leaves uncontrolled
+zero-face \(\alpha\)-mass, and q-quasi-closedness does not automatically see
+that mass.
+\item C13 needs a reduced or anchored circuit lower bound.  The raw affine
+circuit statement is false, so the exact normalization matters.
+\item C9 now depends on a coupled witness-selection theorem.  Step 3 alone
+cannot supply the desired leakage.
+\item Generic Hoffman/convex-geometry black boxes have conditioning problems;
+the proof must exploit \(P^2=P\) and row negative mass directly.
+\end{enumerate}
+
+\subsection{Recommended Next Work}
+
+The highest-leverage next tasks are:
+\begin{enumerate}[label=\arabic*.]
+\item Attack C12 directly by minimizing averaged \(\alpha\)-mass in the
+failed-exposedness LPs and extracting the dual obstruction.
+\item Build a fixed-combinatorics LP/nonlinear model for the C13 medium bound
+\[
+  \delta\geq c\,\theta\rho-C E
+\]
+and search for small rational counterexamples before formalization.
+\item Reformulate C9 as a \(\pi=m\) witness-selection problem:
+\[
+  \|mS-m\|_1=O(\tau),\qquad m(1-S\one)=O(\tau),
+\]
+using q-compatible or minimum-leakage witnesses.
+\item Package C0, C1, C2, C4, C5, C6, C7, C8, and C10 for Agent A review as
+isolated candidate contracts.
+\item Continue the robust-coordinate route only as a certificate-mining
+parallel track; its exact interpolation lemma may reduce to the same
+closed-bad-class dichotomy.
+\end{enumerate}
+
+\section{Artifact Ledger}
+
+The main session artifacts used for this report are:
+\begin{itemize}[leftmargin=*]
+\item \pathref{agent-B/notes/op-exposed-hull-mission-control.md}
+\item \pathref{agent-B/notes/op-exposed-hull-session-2026-06-07.md}
+\item \pathref{docs/plans/2026-06-07-op-exposed-hull-attack-plan.md}
+\item \pathref{docs/plans/2026-06-07-op-exposed-hull-hard-block-delegation.md}
+\item \pathref{docs/plans/2026-06-07-op-exposed-hull-blocker-subplans.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-lp-dual.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-skeleton.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-bad-kernel.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-robust-coordinates.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-interpolation-upgrade.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-computational.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-small-cases.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-stress-tests.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-direct-search.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-lp-game.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-n4-circuit.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-step1-high-slice.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-step2-top-face-exposure.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-step3-shadow-edge.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-step4-shadow-recurrence.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-step5-circuit-extraction.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-step6-circuit-aggregation.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-step7-circuit-lower-bound.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-step8-capstone-packaging.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-c9a-high-core-pruning.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-c9b-shadow-leakage.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-c9c-lyapunov-fallback.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-c9d-markov-coupling.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-c9e-computational-scoring.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-c9f-counterexample-lp.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-frameworks.md}
+\item \pathref{agent-B/notes/subagent-op-exposed-hull-literature.md}
+\item \pathref{agent-B/notes/op-exposed-hull-literature-scout-2026-06-07.md}
+\item \pathref{agent-B/experiments/op-exposed-hull/}
+\end{itemize}
+
+\section{Bottom Line}
+
+The classical path is promising, but the rigorous proof has not landed.  The
+session converted a broad search problem into a precise proof program.  The
+primary route should now be judged by C9/C12/C13:
+\[
+\begin{aligned}
+  &\text{pi-coupled q/shadow closure}\\
+  &\quad+\ \text{alpha-budget/calibrated aggregation}\\
+  &\quad+\ \text{anchored separated-circuit lower bound}.
+\end{aligned}
+\]
+If these three statements are true with the stated scales, the remaining
+capstone is short.  If any one fails, the existing LP/game diagnostics are
+well positioned to produce a concrete counterexample candidate or a revised
+interface.  At this checkpoint, no numerical or small-case evidence points to
+a small-defect counterexample; the main difficulty is analytic, not
+experimental.
+
+\end{document}

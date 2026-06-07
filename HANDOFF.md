@@ -43,11 +43,14 @@ NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status s
 Mental model: definitions = types · each lemma (af workspace) = a module whose *contract* is its one-line
 statement · a linker enforces the DAG.
 
-**Agent B checkpoint:** on branch `agent-b/op-exposed-hull-orchestration`, the C9 `op-exposed-hull` exploration
-campaign is recorded in `agent-B/notes/op-exposed-hull-mission-control.md` and
-`docs/plans/2026-06-07-op-exposed-hull-blocker-subplans.md`.  No canonical proof layers were edited.  The
-remaining C9 target is a pi-coupled q/shadow interface using the same occupation law, or a C12 calibrated-dual
-obstruction.
+**Agent B checkpoint:** on branch `agent-b/op-exposed-hull-orchestration`, the 2026-06-07 classical
+`op-exposed-hull` exploration is summarized in
+`agent-B/reports/classical-path-session-2026-06-07.{tex,pdf}`.  This is the full classical path report, not only
+the final C9 campaign.  It records all Agent B sandbox definitions, conjectures, proof-ready local results,
+false shortcuts, numerical/literature evidence, and the remaining blocker cut.  No canonical proof layers were
+edited.  The route remains promising but open; the active cut is C9 (pi-coupled q/shadow interface), C12
+(alpha-budget/calibrated dual), and C13 (separated-circuit negative-mass lower bound), plus Agent A packaging
+for the proof-ready local lemmas C0--C8 and C10.
 
 ## Governing rules (user) — non-negotiable
 1. **No "standard facts"/"citations".** The ONLY ground truth is a **byte/string match to a LOCAL `refs/`
@@ -93,6 +96,11 @@ obstruction.
   any af proof — flagged, not trusted). All 4 af-cited sources (HOS/Kitaev/Idel/VLW) GENUINE.
 
 ## NEXT (priority order)
+0. **Agent B classical path continuation:** read
+   `agent-B/reports/classical-path-session-2026-06-07.pdf` first.  Continue from the report's blocker cut:
+   C12 alpha minimization/calibrated dual, C13 separated-circuit lower bound, and the corrected C9
+   pi-coupled q/shadow interface.  Treat all report statements as exploration-level until Agent A reviews and
+   the Recipe A/B pipeline promotes them.
 1. **af frontier — pick a ready result** (`python3 scripts/argument.py`):
    - **`lem-classical-equiv`** — highest leverage; the signed↔stochastic equivalence; unblocks the whole
      classical chain. Ground from `def-stochastic` + Kitaev's operator-norm def (`approximate_algebras.tex:638-642`),
