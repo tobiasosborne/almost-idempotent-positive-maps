@@ -15,6 +15,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
 \usepackage[margin=1in]{geometry}
 \usepackage{enumitem}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
@@ -54,6 +56,16 @@
 \newcommand{\status}[1]{\textnormal{\textsc{#1}}}
 % Provenance marker (renders nothing; the audit lives in PROVENANCE.md, keyed by label)
 \newcommand{\prov}[1]{}
+
+% ---- af-validation links ------------------------------------------------------
+% A result tagged \afbadge{<id>} is machine-checked in the adversarial proof
+% framework; the badge links to its af workspace proofs/<id>/ on GitHub (the
+% registry id == the proofs/ directory name). \aflink renders custom link text;
+% \afyes is the bare green tick used in the status ledger column.
+\definecolor{afgreen}{rgb}{0,0.45,0}
+\newcommand{\afbadge}[1]{\,{\footnotesize\textsf{\textcolor{afgreen}{$\checkmark$\,\href{https://github.com/tobiasosborne/almost-idempotent-positive-maps/tree/main/proofs/#1}{af-validated}}}}}
+\newcommand{\aflink}[2]{\href{https://github.com/tobiasosborne/almost-idempotent-positive-maps/tree/main/proofs/#1}{\textcolor{afgreen}{#2}}}
+\newcommand{\afyes}{\textcolor{afgreen}{$\checkmark$}}
 
 \title{Almost-idempotent positive maps\\ and approximate Jordan algebras}
 \author{Agent A \and Agent B\\[2pt]\small (collaborative working report)}

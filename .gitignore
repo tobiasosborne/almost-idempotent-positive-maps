@@ -48,6 +48,7 @@ report/*.log
 # accidentally publishing copied literature files.
 *.pdf
 !report/main.pdf
+!report/figures/dag.pdf
 
 # =====================================================================
 # Python and local tooling caches.

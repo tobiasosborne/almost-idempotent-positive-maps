@@ -76,7 +76,7 @@ hypothesis that supplies the missing two-hole structure.
 
 % PROV: agent-B/notes/decomposable-dilation-compatible-theorem.md.
 \begin{theorem}[Dilation-compatible $O(\eta)$ bridge]\label{thm:dilation-compatible}
-\status{(proved, conditional on the lifted-UCP hypothesis)}
+\status{(proved, conditional on the lifted-UCP hypothesis)}\afbadge{thm-dilation-compatible}
 Suppose there are a finite-dimensional Hilbert space $K$, a unital
 order-isometric Jordan embedding $j\colon\Bsa\to B(K)_{\mathrm{sa}}$, and a unital
 positive map $C\colon B(K)_{\mathrm{sa}}\to\Bsa$ with $\Phimap=Cj$, such that the
@@ -91,7 +91,14 @@ $F$ is UCP and $\eta$-idempotent, so Kitaev's completely positive theorem applie
 to $F$ and makes its near-fixed range an $O(\eta)$ approximate $C^{*}$-algebra;
 the symmetrised product is $O(\eta)$-$\eps$-JB. The intertwining $Fj=j\Phimap$
 (hence $\widetilde F j=jP$ by functional calculus) embeds $A$ isometrically into
-that structure, and the $\eps$-JB estimates restrict along the embedding.
+that structure, and the $\eps$-JB estimates restrict along the embedding. Each of
+the three steps is independently machine-validated: idempotence inheritance
+$\norm{\Phimap^2-\Phimap}\le\norm{F^2-F}$
+(\aflink{lem-idempotence-inheritance}{af}), the spectral intertwining
+$\theta(2F-\Id)\,j=j\,\theta(2\Phimap-\Id)$
+(\aflink{lem-intertwine-spectral-idempotent}{af}), and the $C^{*}\!\to$JB
+symmetrisation that supplies the $O(\eta)$ crux
+(\aflink{lem-cstar-sa-to-epsjb}{af}).
 \end{proof}
 
 The hypothesis $\norm{F^2-F}_{\mathrm{cb}}\le\eta$ is \emph{not} automatic from a

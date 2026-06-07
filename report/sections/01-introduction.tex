@@ -79,3 +79,22 @@ as proof; and
 \status{(open)} for targets of the programme not yet established. Constants
 denoted $C$ are universal and never depend on $\dim\HH$ unless explicitly
 stated.
+
+\paragraph{Reading guide (and how to verify it).}
+The fastest way to see what is established and what remains is the status ledger
+(\Cref{tab:status}) together with the dependency graph (\Cref{fig:dag}), both at
+the end of \Cref{sec:discussion}. One complete, unconditional result anchors the
+report --- the bridge theorem (\Cref{thm:bridge}), \Cref{sec:bridge} --- and
+everything else is organised around it: an exact-factorization reduction
+(\Cref{sec:factorization,sec:classical}), the abstract structure programme
+(\Cref{sec:programme}), and the exponent question (\Cref{sec:exponent}). The three
+genuinely open problems are isolated in \Cref{sec:discussion}. Two further
+checkable layers sit under the prose. First, every statement imported from the
+literature carries a citation whose bibliography entry links to the source
+(arXiv, journal open access) where one is publicly available. Second, results
+marked with a green `\textcolor{afgreen}{$\checkmark$\,af-validated}' badge are
+machine-checked: the badge links to a self-contained formal workspace
+\texttt{proofs/<id>/} whose root statement is byte-identical to the result's
+registry contract and whose every step was proved and independently verified.
+Thirteen results --- the bridge and its lemmas, and the dilation-compatible
+theorem --- are af-validated; they are the green nodes of \Cref{fig:dag}.

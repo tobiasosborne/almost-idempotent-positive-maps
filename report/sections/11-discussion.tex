@@ -84,57 +84,84 @@ the exact-adjoint-cocycle level only; \status{(cited)} = from the literature;
 \status{(source-extracted)} = local extraction awaiting primary byte-check;
 \status{(numerical)} = evidence not used as proof.
 
+A green \afyes\ in the final column marks results that are additionally
+\emph{machine-validated} in the adversarial proof framework (af): each such
+result has a tiny formal workspace whose root statement is byte-identical to its
+contract and whose every step is checked by a prover and an independent verifier.
+In the body these carry a green `\textcolor{afgreen}{$\checkmark$\,af-validated}'
+badge linking to the corresponding workspace \texttt{proofs/<id>/}. Thirteen
+results are af-validated: the bridge theorem and its nine constituent lemmas
+(\Cref{sec:bridge}, \Cref{sec:spectral}) and the dilation-compatible theorem with
+its three sub-lemmas (\Cref{sec:exponent}). The full machine-checked dependency
+graph is \Cref{fig:dag}.
+
 \begin{table}[ht]
 \centering
 \renewcommand{\arraystretch}{1.2}
-\begin{tabular}{@{}p{0.50\linewidth}p{0.24\linewidth}p{0.18\linewidth}@{}}
+\begin{tabular}{@{}p{0.45\linewidth}p{0.21\linewidth}p{0.18\linewidth}c@{}}
 \toprule
-Component & Status & Where \\
+Component & Status & Where & af \\
 \midrule
 Bridge: approx.\ Jordan algebra at $\sqrt\eta$, dimension-free, CP-free
-  & proved & \Cref{thm:bridge} \\
+  & proved & \Cref{thm:bridge} & \afyes \\
 Ambient product under a faithful invariant state ($O(\eta/\lambda)$; bare
 existence insufficient)
-  & proved & \Cref{sec:faithful} \\
+  & proved & \Cref{sec:faithful} & \\
 Effros--St\o rmer exact template
-  & cited & \Cref{thm:effros-stormer} \\
+  & cited & \Cref{thm:effros-stormer} & \\
 $P$ need not be positive
-  & proved & \Cref{rem:P-not-positive} \\
+  & proved & \Cref{rem:P-not-positive} & \\
 Generic positivity rounding fails (spin-factor)
-  & obstruction & \Cref{prop:rounding-fails} \\
+  & obstruction & \Cref{prop:rounding-fails} & \\
 Exact UP factorization (Theorem~C)
-  & proved, cond.\ (\Cref{op:npps}) & \Cref{thm:factorization} \\
+  & proved, cond.\ (\Cref{op:npps}) & \Cref{thm:factorization} & \\
 Near-positive projection stability
-  & open & \Cref{op:npps} \\
+  & open & \Cref{op:npps} & \\
 Classical reduction; Hume sharpness
-  & proved & \Cref{lem:classical-equiv}, \Cref{ex:hume} \\
+  & proved & \Cref{lem:classical-equiv}, \Cref{ex:hume} & \\
 Classical special cases (rank-one, line-segment, simplex, well-exposed, cluster)
-  & proved & \Cref{thm:rank-one}--\ref{thm:cluster} \\
+  & proved & \Cref{thm:rank-one}--\ref{thm:cluster} & \\
 Exact commutative factorization (cluster geometry)
-  & proved, cond.\ geom. & \Cref{thm:classical-factorization} \\
+  & proved, cond.\ geom. & \Cref{thm:classical-factorization} & \\
 Classical projection stability (general); global exposed-hull
-  & open & \Cref{op:classical}, \Cref{op:exposed-hull} \\
+  & open & \Cref{op:classical}, \Cref{op:exposed-hull} & \\
 Order-vs-Frobenius gap $=\sqrt{\mathrm{rank}}$
-  & proved & \Cref{prop:rank-gap} \\
+  & proved & \Cref{prop:rank-gap} & \\
 Exact-adjoint splitting: spin, direct sums, commutative scalar
-  & benchmark & \Cref{prop:spin-splitting}--\ref{prop:comm-scalar} \\
+  & benchmark & \Cref{prop:spin-splitting}--\ref{prop:comm-scalar} & \\
 Exact-adjoint splitting: high-rank matrix factors
-  & benchmark (re-audit pending) & \Cref{thm:matrix-splitting} \\
+  & benchmark (re-audit pending) & \Cref{thm:matrix-splitting} & \\
 Master exact-adjoint coboundary inversion
-  & benchmark & \Cref{cor:adjoint-benchmark} \\
+  & benchmark & \Cref{cor:adjoint-benchmark} & \\
 Abstract structure theorem (Layer~1)
-  & open & \Cref{op:jordan-structure}, \Cref{op:layer1-gap} \\
+  & open & \Cref{op:jordan-structure}, \Cref{op:layer1-gap} & \\
 Exponent $\eta$ (dilation-compatible)
-  & proved, cond. & \Cref{thm:dilation-compatible} \\
+  & proved, cond. & \Cref{thm:dilation-compatible} & \afyes \\
 Exponent $\eta$ (general decomposable)
-  & open & \Cref{op:decomposable} \\
+  & open & \Cref{op:decomposable} & \\
 Whitehead lemmas; $\Aut(J)$ compact
-  & cited (extract.) & \Cref{thm:whitehead}, \Cref{prop:aut-compact} \\
+  & cited (extract.) & \Cref{thm:whitehead}, \Cref{prop:aut-compact} & \\
 \bottomrule
 \end{tabular}
-\caption{Status of the components of the programme.}
+\caption{Status of the components of the programme. A green \afyes\ marks a
+component that is machine-validated in the af proof framework
+(\Cref{fig:dag}).}
 \label{tab:status}
 \end{table}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth,height=0.9\textheight,keepaspectratio]{figures/dag}
+\caption{The argument dependency graph, generated from the registry
+\texttt{argument/lemmas/} by \texttt{scripts/gen-dag-figure.py}: one node per
+result, each edge a dependency. Node colour:
+\textcolor{afgreen}{$\blacksquare$~green} = af-validated (machine-checked);
+grey = proved in prose but not yet formalised;
+blue = cited from the literature;
+red = open problem; amber = obstruction / no-go. The PDF is vector graphics:
+zoom in a reader to inspect individual node labels.}
+\label{fig:dag}
+\end{figure}
 
 \subsection{Outlook}
 
