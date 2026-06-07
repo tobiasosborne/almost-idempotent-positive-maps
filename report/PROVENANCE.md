@@ -20,7 +20,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `BRIDGE` | `agent-B/theory/theorem-B-algebraic-bridge.md` | `e2f6d7dc1f85ea50` | INTERNAL. Agent B's proof of the Layer-2 bridge theorem; verified line-by-line by Agent A (agent-a-findings v0.5 §10). Source for §6 derivation. |
 | `A-FIND` | `agent-a-findings` | `22c97155f2622acb` | INTERNAL. Agent A consensus/status file (through v0.13; §16–§18 cover the faithful-invariant-state sidequest and Layer-1 re-audit). |
 | `A-INGEST` | `agent-A/notes/ingestion-results-2026-06-01.json` | `972bba533931fd3d` | INTERNAL EXTRACTION. Agent A local extraction of Kitaev/VLW and Jordan-background literature. |
-| `A-ER` | `agent-A/theory/01-error-reduction.md` | `72f1492a724f21a` | INTERNAL. Agent A error-reduction programme note. |
+| `A-ER` | `agent-A/theory/01-error-reduction.md` | `72f1492a724f21a9` | INTERNAL. Agent A error-reduction programme note. |
 | `A-JCOB` | `agent-A/experiments/jordan-coboundary/REPORT.md` | `7c456f26a8787be0` | INTERNAL. Agent A numerical Jordan-coboundary report. |
 | `B-ROUND` | `agent-B/notes/factorization-positivity-rounding.md` | `42c922ebef1d7516` | INTERNAL. Agent B positivity-rounding obstruction note. |
 | `A-FIT` | `agent-A/experiments/faithful-invariant-transfer/REPORT.md` | `d1fedfe04ee973f6` | INTERNAL. Agent A faithful-invariant-state transfer report: exact statement, $O(\eta/\lambda)$ bound, numerics (`hole_scaling.py`, `crossover.py`). Source for §\ref{sec:faithful}. |

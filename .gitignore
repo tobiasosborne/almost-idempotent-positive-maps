@@ -28,6 +28,9 @@ proofs/**/*.lock
 # =====================================================================
 # Generated LaTeX build products.
 # =====================================================================
+# check-provenance --build compiles into this scratch dir so the gate never
+# mutates the tracked report/main.pdf (latexmk's .fdb cache keeps it fast).
+report/.build/
 report/*.aux
 report/*.bbl
 report/*.bcf

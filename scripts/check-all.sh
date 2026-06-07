@@ -14,11 +14,14 @@ python3 scripts/check-refs.py --check || fail "check-refs"
 echo "[check-all] argument linker (acyclic, imports, contracts, status, brittleness, orphans)"
 python3 scripts/argument.py --check || fail "argument"
 
+echo "[check-all] report sync gate (labels/sources/status/hashes <-> registry; latexmk build)"
+python3 scripts/check-provenance.py --check --build || fail "check-provenance"
+
 echo "[check-all] tooling tests (TDD)"
-for t in scripts/tests/test_check_defs.py scripts/tests/test_check_refs.py scripts/tests/test_argument.py; do
+for t in scripts/tests/test_check_defs.py scripts/tests/test_check_refs.py \
+         scripts/tests/test_argument.py scripts/tests/test_check_provenance.py; do
   out=$(python3 "$t" 2>&1) || { echo "$out"; fail "$t"; }
 done
 
-# TODO (Phase 2b+): scripts/check-provenance.py ; (cd report && latexmk -pdf -halt-on-error main.tex) ;
-#                    af replay --verify in each proofs/* workspace ; lean build (Phase 5).
+# TODO (Phase 2b+): af replay --verify in each proofs/* workspace ; lean build (Phase 5).
 echo "[check-all] OK"

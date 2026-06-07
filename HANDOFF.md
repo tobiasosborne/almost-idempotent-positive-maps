@@ -20,8 +20,10 @@ NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status s
 >      `lem-idempotence-inheritance`, `lem-intertwine-spectral-idempotent`,
 >      `lem-cstar-sa-to-epsjb` (the **O(η) crux** — C\*→JB symmetrisation), `thm-dilation-compatible`.
 >    **13 results are `af: validated` total.** `grep -c validated argument/INDEX.md`.
-> 4. Sanity-check: `sh scripts/check-all.sh` must print `[check-all] OK` (check-defs + **check-refs** + linker
->    + tests; check-refs is LIVE in the pre-commit hook — commit normally, never `core.hooksPath=/dev/null`).
+> 4. Sanity-check: `sh scripts/check-all.sh` must print `[check-all] OK` (check-defs + **check-refs** +
+>    linker + **check-provenance** (report↔registry sync + latexmk build) + tests). NOTE: in a clone WITHOUT
+>    the gitignored `refs/` payloads, `test_check_refs.py` fails (byte-match can't run) and beads is empty
+>    (no dolt remote) — both are environment-provisioning gaps, not code regressions.
 > 5. **What to do next is in beads (`bd ready`).** Top of the queue: the **classical layer** (`aipm-9mw` split
 >    the `lem-leakage` contract → then af `lem-leakage`/`lem-classical-equiv`; `aipm-18d` acquire the scouted
 >    sources); **`aipm-iel`** (P1, harden check-refs skip_noquote); **`aipm-17f`** (`cited`→`grounded` audit);
@@ -64,6 +66,18 @@ workspace) = a module whose *contract* is its one-line statement · a linker enf
   bad **Wedderburn shortcut** I tried (`D≅B(K)` is false for ≥2 summands) — the adversarial loop works.
 - **Classical-layer sources scouted** (`aipm-18d`): MIT OCW 6.241J Ch.4 (matrix norms), Boyd & Vandenberghe
   (convexity/simplex/stochastic) — open + byte-extractable; acquire when the classical lemmas come up.
+- **`check-provenance.py` report-sync gate built + wired into check-all** (was `aipm-oql`; the report build +
+  a sync gate). Errors (block commit): every registry `provenance: report <label>` resolves to a `\label{}`;
+  every PROVENANCE per-claim label resolves; every per-claim Source key is defined; every IN-REPO source
+  sha256[:16] is fresh; **status OVERCLAIM** (a `status:open` result framed proved in `tab:status`) — the #1
+  guarded failure mode; `latexmk` compiles with no undefined refs (built into gitignored `report/.build/`, so
+  the tracked `main.pdf` is never mutated). Warnings: reverse/anchor/coverage/underclaim/parse-integrity/absent
+  payloads. Join key = the shard `provenance:`'s `report <label>` token (+ first-hyphen→colon fallback). 52
+  red→green tests (`test_check_provenance.py`). 3-agent adversarial review (reviewer≠author) hardened it:
+  promoted overclaim WARN→ERROR, hash ALL source rows (caught a silent `B-ROUND` dup), strip `%`-comments in
+  label/status harvesting, anchor check, loud parse-integrity. Fixed a real `A-ER` 15→16-hex sha typo it
+  surfaced. KNOWN LIMITS (documented in the gate docstring): statement/contract TEXT not compared; status sync
+  only covers `tab:status`-listed results; ~⅓ of sources hash-unverifiable (gitignored).
 
 ## NEXT (priority order — see `bd ready`)
 1. **Classical layer** — `aipm-9mw` (split `lem-leakage`'s contract: the leakage bound is groundable; the
@@ -76,8 +90,11 @@ workspace) = a module whose *contract* is its one-line statement · a linker enf
    (→ `skip_noquote`, unchecked); retrofit `lem-P-properties`' quote-less externals; require quotes.
 3. **`aipm-17f`.** Audit every `cited` result vs `refs/`; downgrade the ungrounded (`thm-whitehead`,
    `prop-aut-compact` are PDF-only); rename `cited`→`grounded`.
-4. **`aipm-qpa`** (factor `lem-P-properties`) · **`aipm-9ho`** (byte-verify draft defs) · **`aipm-oql`**
-   (report `latexmk` + check-provenance into check-all) · **`aipm-chn`** (reorg theory/experiments).
+4. **`aipm-qpa`** (factor `lem-P-properties`) · **`aipm-9ho`** (byte-verify draft defs) · ~~`aipm-oql`
+   (report `latexmk` + check-provenance into check-all)~~ **DONE** · **`aipm-chn`** (reorg theory/experiments).
+   Follow-ups the report-sync review surfaced (file as beads when the tracker is restored): a `tab:status`
+   coverage warn for un-listed results; cross-check absent KIT/VLW/ES hashes vs `refs/manifest/checksums.sha256`;
+   relativise the 2 stale `/home/tobias/...` source paths in `report/PROVENANCE.md` to `refs/`.
 5. **Open-math frontier** (hard, may need the user): `aipm-245` (Layer-1 coboundary splitting), `aipm-08u`
    (NPPS/exposed-hull), `aipm-36d` (matrix benchmark re-audit). **`aipm-3ox`** = Phase-5 fresh Lean scaffold.
 6. **Backlog:** `aipm-us3` (general-D dilation via the Stinespring-stack bridge lemma) · `aipm-on1`/`aipm-1pd`

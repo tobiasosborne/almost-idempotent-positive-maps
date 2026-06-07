@@ -117,15 +117,17 @@ gate names files, not "items 1–5", so it can't drift as the list grows.) If yo
 
 ```bash
 sh scripts/check-all.sh                       # THE gate → prints "[check-all] OK"; non-zero fails commit
-                                              #   = check-defs.py --check + argument.py --check + unit tests
+                                              #   = check-defs + check-refs + check-provenance(+latexmk build) + linker + TDD tests
 python3 scripts/check-defs.py --check         # definitions: drift/dedup + cited SHA256 vs manifest + consensus-gate
 python3 scripts/check-defs.py --generate-index# regenerate definitions/INDEX.md  (generated — don't hand-edit)
 python3 scripts/argument.py --check           # the LINKER (acyclic · imports · contract-match · status · brittleness · orphans)
 python3 scripts/argument.py --generate        # regenerate argument/INDEX.md + DAG.md  (generated)
 python3 scripts/argument.py                   # default: check + generate + print the ready frontier
+python3 scripts/check-provenance.py --check --build  # report↔registry sync: labels/sources/status/hashes + latexmk build
 python3 scripts/tests/test_check_defs.py      # TDD unit tests for the gates (run without af present)
 python3 scripts/tests/test_argument.py
-cd report && make                             # latexmk -pdf; report/main.pdf (13 section files: 00–11 + 06b). NOT yet in check-all (aipm-oql)
+python3 scripts/tests/test_check_provenance.py
+cd report && make                             # latexmk -pdf; report/main.pdf (13 section files: 00–11 + 06b). Build now GATED by check-provenance --build in check-all.
 cd refs && sha256sum -c manifest/checksums.sha256   # ground-truth integrity (50 files; payload gitignored)
 af --version                                  # 0.1.3 — authoritative (the binary self-label may say "dev")
 ```

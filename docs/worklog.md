@@ -234,3 +234,38 @@ Ch.4 (matrix norms), Boyd & Vandenberghe (convexity/simplex/stochastic).
 **Beads.** Closed `aipm-ynq`/`aipm-vp5`/`aipm-q8i` (dilation theorem done). Filed `aipm-9mw` (leakage split),
 `aipm-18d` (classical sources), `aipm-us3` (general-D backlog), `aipm-on1` (af friction PRs). **13 results are
 `af: validated` total** (the 9-lemma bridge + 3 dilation sub-lemmas + the dilation capstone). LEARNINGS R7.
+
+---
+
+## 2026-06-07 (side-quest) — `check-provenance.py`: report↔registry sync gate (was `aipm-oql`)
+
+**What.** Built the Phase-2b "CI for the paper" and wired it into `check-all.sh`: a new
+`scripts/check-provenance.py` plus the `latexmk` build, so the human-readable report can no longer silently
+drift from the machine-checked argument. **Join key** = each registry shard's `provenance:` line `report
+<label>` token (the ids are NOT a string transform — `lem-square-hole-almost-positive` ↔ `lem:bridge-squarehole`),
+with a first-hyphen→colon id fallback. 55/59 shards already carried the token; the gate exploits it.
+
+**Checks.** ERRORS (block commit): forward labels (every `report <label>` resolves to a `\label{}`); per-claim
+labels resolve; per-claim Source keys are defined in the source registry; in-repo source `sha256[:16]` fresh;
+**status OVERCLAIM** (a `status:open` result framed proved/benchmark in `tab:status` — the project's #1 guarded
+failure mode); `latexmk` build with no undefined references. WARNINGS: reverse-labels, anchor (a result mapping
+to zero report labels), coverage, status underclaim, parse-integrity (unparseable/duplicate rows), absent
+gitignored payloads, stale absolute source paths. Build compiles into gitignored `report/.build/` via
+`-output-directory`, so the tracked `report/main.pdf` is never mutated (verified by a test).
+
+**Process.** TDD: 52 red→green tests (`scripts/tests/test_check_provenance.py`), incl. live port-and-verify
+(perturb a real shard/table → RED → restore) and a guarded `run_build` isolation test. **Reviewer≠author**: a
+3-agent adversarial review (correctness/false-greens · parsing-robustness · build-integration) found real
+issues, all reproduced; fixes applied: overclaim WARN→ERROR; hash EVERY source row (caught a silent `B-ROUND`
+duplicate-key that had been un-checking `factorization-positivity-rounding.md`); strip `%`-comments before
+harvesting labels/status; split status rows on unescaped `&`; BOM-tolerant frontmatter; broadened claim-source
+separators; latexmk-timeout handling. Fixed a genuine `A-ER` 15→16-hex sha typo the gate surfaced.
+
+**Honest limits (in the gate docstring).** STATEMENT/contract TEXT is not compared (label↔label only) — the
+registry `contract` stays the single source of truth; status drift is seen only for `tab:status`-listed
+results; ~⅓ of sources are hash-unverifiable (gitignored payloads). Follow-ups noted in HANDOFF.
+
+**Environment gaps (pre-existing, not regressions).** This clone lacks the gitignored `refs/` payloads, so
+`test_check_refs.py` fails its byte-match assertions (the check-refs GATE itself passes — 0 fabrications); and
+beads is unprovisioned (empty DB, `issue_prefix` unset, no dolt remote) so `aipm-*` ids can't be reconciled.
+The new gate + its tests + the other three gates all pass.
