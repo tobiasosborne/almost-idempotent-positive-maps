@@ -51,7 +51,7 @@ graph LR
   thm-bridge["thm-bridge<br/>proved/validated"]
   thm-classical-factorization["thm-classical-factorization<br/>proved/none"]
   thm-cluster["thm-cluster<br/>proved/none"]
-  thm-dilation-compatible["thm-dilation-compatible<br/>proved/none"]
+  thm-dilation-compatible["thm-dilation-compatible<br/>proved/validated"]
   thm-effros-stormer["thm-effros-stormer<br/>cited/none"]
   thm-factorization["thm-factorization<br/>proved/none"]
   thm-faithful-approx["thm-faithful-approx<br/>proved/none"]

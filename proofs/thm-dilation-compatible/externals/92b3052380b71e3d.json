@@ -1,0 +1,8 @@
+{
+  "id": "92b3052380b71e3d",
+  "name": "GT-idempotence",
+  "source": "Prior VALIDATED registry lemma lem-idempotence-inheritance (proofs/lem-idempotence-inheritance/, af: validated; status proved). Imported as a black box. VERBATIM contract: \"For a unital order-isometric Jordan embedding j (so ||jM||=||M|| and ||j||_op=1) and a unital positive C, with Phi=Cj and F=jC, the operator-norm idempotency defects satisfy ||Phi^2-Phi|| \u003c= ||F^2-F||; hence ||F^2-F|| \u003c= eta \u003c 1/4 forces ||Phi^2-Phi|| \u003c= eta \u003c 1/4, so P=theta(2Phi-1) is well-defined.\"",
+  "content_hash": "5da71e2568ed9994288f934957c8c8b25447f27915ed405c15fd2b1789769cab",
+  "created": "2026-06-07T06:20:51.456816305Z",
+  "notes": ""
+}

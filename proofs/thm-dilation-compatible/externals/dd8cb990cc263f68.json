@@ -1,8 +1,0 @@
-{
-  "id": "dd8cb990cc263f68",
-  "name": "GT-intertwine",
-  "source": "Prior VALIDATED registry lemma lem-intertwine-spectral-idempotent (proofs/lem-intertwine-spectral-idempotent/, af: validated; status proved). CONTRACT: For elements F, Phi of unital Banach algebras with ||F^2-F|| \u003c 1/4 and ||Phi^2-Phi|| \u003c 1/4, and a bounded unital linear intertwiner j (j(I)=I) with Fj=jPhi, the Kitaev spectral idempotents intertwine: theta(2F-1) j = j theta(2Phi-1). (Imported as a black-box validated lemma; no refs quote needed.)",
-  "content_hash": "74c8df1a90e0a36bc90c8882587f0aea4721bf56a0d12dc8e5e936ca57d98462",
-  "created": "2026-06-06T21:37:37.76703662Z",
-  "notes": ""
-}

@@ -1,0 +1,8 @@
+{
+  "id": "c0220eee72458c1b",
+  "name": "GT-hyp",
+  "source": "GIVEN HYPOTHESES and CONSTRUCTIONS of the theorem (the contract's standing assumptions; not a refs quote, not an import). K a finite-dimensional Hilbert space. j:B(H)_sa-\u003eB(K)_sa a unital order-isometric Jordan embedding: ||j(x)||=||x||, j(x o y)=j(x) o j(y), j(I)=I, AND j an ORDER embedding (z\u003e=0 iff j(z)\u003e=0). C:B(K)_sa-\u003eB(H)_sa unital positive. Phi=Cj. F=jC extends to a UCP map F:B(K)-\u003eB(K) with ||F^2-F||_cb\u003c=eta, where eta\u003c=eta_0\u003c1/4. Constructions: P=theta(2Phi-1); A=Im P; a bullet b=P(a o b); Ftilde=theta(2F-1); B=Im Ftilde; X star Y=Ftilde(XY); X osymm Y=(1/2)(X star Y+Y star X). These are the verbatim standing data of thm-dilation-compatible; their derived properties are discharged by the imported validated lemmas.",
+  "content_hash": "2d8b85faf1c4fd1fb5f2ac11b7795e8f8447d9a050528826b233398387aa6718",
+  "created": "2026-06-07T06:21:01.586475285Z",
+  "notes": ""
+}

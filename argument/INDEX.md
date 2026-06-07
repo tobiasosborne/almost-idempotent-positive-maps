@@ -51,7 +51,7 @@
 | `thm-bridge` | theorem | proved | validated | B | For unital positive Phi on B(H)_sa with ||Phi^2-Phi|| <= eta <= eta_0, the near-… |
 | `thm-classical-factorization` | theorem | proved | none | B | There are universal eta_0,C>0 such that if Q is row-stochastic with eta=||Q^2-Q|… |
 | `thm-cluster` | theorem | proved | none | B | There are universal delta_0,C>0 such that a signed affine retraction P with neg … |
-| `thm-dilation-compatible` | theorem | proved | none | B | If there are a finite-dimensional C*-algebra D, a unital order-isometric Jordan … |
+| `thm-dilation-compatible` | theorem | proved | validated | B | If there are a finite-dimensional Hilbert space K, a unital order-isometric Jord… |
 | `thm-effros-stormer` | theorem | cited | none | A | If A is a unital JC-algebra and E:A->A is a unital positive projection (E^2=E), … |
 | `thm-factorization` | theorem | proved | none | B | Conditional on op-npps, an almost-idempotent unital positive Phi (||Phi^2-Phi||<… |
 | `thm-faithful-approx` | theorem | proved | none | A | For unital positive Phi with ||Phi^2-Phi|| <= eta <= eta_0, P=theta(2Phi-1), A=I… |

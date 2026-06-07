@@ -1,0 +1,8 @@
+{
+  "id": "594f8b870f01c16d",
+  "name": "GT-cstar-sa-to-epsjb",
+  "source": "Prior VALIDATED registry lemma lem-cstar-sa-to-epsjb (proofs/lem-cstar-sa-to-epsjb/, af: validated; status proved). Imported as a black box; instantiate H:=K (the dilation space is the FULL matrix algebra B(K), K finite-dim Hilbert space), so the lemma applies VERBATIM to F on B(K). VERBATIM contract: \"If F is a unital eta-idempotent UCP map on B(H) (||F^2-F||_cb \u003c= eta \u003c 1/4), Ftilde=theta(2F-1), and B=Im Ftilde carries the Choi-Effros product X*Y=Ftilde(XY) (Kitaev's extended O(eta)-C*-algebra), then B_sa with the symmetrized product X∘Y=(1/2)(X*Y+Y*X) is an O(eta)-eps-JB order-unit algebra with universal dimension-free constants.\"",
+  "content_hash": "f6f04475ff415a338f55f96be8352141cdc72efded6b84947c351b3451acebcd",
+  "created": "2026-06-07T06:20:44.103857099Z",
+  "notes": ""
+}

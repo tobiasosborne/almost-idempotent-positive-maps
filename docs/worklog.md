@@ -191,3 +191,46 @@ unverified); `aipm-17f` (audit cited registry results, downgrade ungrounded e.g.
 rename cited→grounded); `aipm-qpa` (factor `‖Φ‖=1` / operator-Banach-algebra into own lemmas/defs);
 `aipm-dqz` (`af replay --verify` of `proofs/*` in check-all); `aipm-oql`/`aipm-chn` (Phase-4 reorg);
 open-math frontier `aipm-245`/`aipm-08u`/`aipm-36d` (Layer-1).
+
+---
+
+## 2026-06-07 — Dilation-compatible theorem (the conditional O(η) result) COMPLETE; branch → `main`
+
+**Built `thm-dilation-compatible` + 3 factored sub-lemmas + 1 def, all `af: validated` (A+B consensus).**
+Restructured the brittle 1-theorem scaffold (per L3) into: `lem-idempotence-inheritance`
+(`‖Φ²−Φ‖≤‖F²−F‖`, constant exactly 1), `lem-intertwine-spectral-idempotent` (`θ(2F−1)j=jθ(2Φ−1)`),
+`lem-cstar-sa-to-epsjb` (**the O(η) crux** — sa-part of Kitaev's extended O(η)-C\*-algebra is O(η)-ε-JB; JB4
+from `ax_assoc=O(η)` via an n=4 pentagon reassociation, K₄≤32, dimension-free; JB3 via concrete UCP), and
+the `thm-dilation-compatible` capstone (7-node assembly importing the 3 + `lem-P-properties`). New def
+`def-eps-cstar-algebra` (byte-matched Kitaev :407-440). Each: scout → prover(agent-B) → fresh-verifier
+(agent-A) → resolve → confirm → flip; every crux independently re-derived.
+
+**Scope decision (user): dilation space restricted to `D=B(K)`** (a full matrix algebra — the natural
+Stinespring dilation target) so `lem-cstar` (UCP on B(H)) applies verbatim. The general finite-dim C\*
+`D=⊕Mₙ` case is **deferred** (`aipm-us3`): a careful proof-read confirmed Kitaev's almost-idempotent
+construction is C\*-generic in everything except the two-hole estimate's Stinespring *stack*, which Kitaev
+instantiates only over full `B(Hₙ)`; widening needs a bridge lemma re-deriving that tower at finite-dim-C\*
+generality. (`⊕B(Lⱼ)` is a *proper* subalgebra of `B(K)` for ≥2 summands — no free `D≅B(K)`.)
+
+**Adversarial wins (the loop cuts both ways).**
+- **R7:** a fresh *verifier* produced a confident, plausible, WRONG "critical false premise" counterexample
+  on `lem-idempotence-inheritance`; refuted by an independent **7,008,000-sample** sweep + a one-line proof
+  (`‖Φ²−Φ‖=‖(Φ−I)Cj‖≤‖(Φ−I)C‖=‖F²−F‖`, `j` order-isometric). New standing lesson: *a refutation is itself a
+  claim — reproduce it before acting.*
+- A **Wedderburn shortcut** the orchestrator tried for the capstone (`D≅B(K)` for general finite-dim C\*) was
+  FALSE (proper-subalgebra dimension count); a fresh verifier caught it; the false claim was removed from the
+  repo and replaced by the honest `D=B(K)` restriction + a flagged deferral.
+- `GT-bhsa-jc` (the R5 fabrication site) independently re-grepped byte-clean in `lem-cstar`.
+
+**Branch consolidated.** `argument-architecture` (30 commits ahead, clean fast-forward) promoted to `main`;
+feature branch deleted local+remote; default stays `main`; HANDOFF + auto-memory updated. Single branch now.
+
+**Classical-layer prep.** Reframed `aipm-9mw`: the elementary finite-dim facts are inline-derivable from
+Kitaev's general operator-norm def (`:638-642`) + `def-stochastic` (the validated-bridge standard) — only
+`lem-leakage`'s contract needs splitting (the "no O(η) closure" sharpness should depend on the existing
+`ex-hume`). Scouted byte-extractable OPEN sources for first-class provenance (`aipm-18d`): MIT OCW 6.241J
+Ch.4 (matrix norms), Boyd & Vandenberghe (convexity/simplex/stochastic).
+
+**Beads.** Closed `aipm-ynq`/`aipm-vp5`/`aipm-q8i` (dilation theorem done). Filed `aipm-9mw` (leakage split),
+`aipm-18d` (classical sources), `aipm-us3` (general-D backlog), `aipm-on1` (af friction PRs). **13 results are
+`af: validated` total** (the 9-lemma bridge + 3 dilation sub-lemmas + the dilation capstone). LEARNINGS R7.
