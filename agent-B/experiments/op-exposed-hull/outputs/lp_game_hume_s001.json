@@ -1,0 +1,130 @@
+{
+  "command": "agent-B/experiments/op-exposed-hull/lp_game_certificate.py --family hume --s 0.01 --rho-mult 1 --kappa-mult 0.25 --skeleton-mode first-vertex --bad-mult 0.25 --exit-mult 1 --stationarity-mult 2 --out-json agent-B/experiments/op-exposed-hull/outputs/lp_game_hume_s001.json",
+  "common_separator": {
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "payload": {
+      "bad_margin_min": 0.0024999999999999467,
+      "bad_margins": [
+        0.0024999999999999467
+      ],
+      "phi": [
+        -1.0,
+        -1.0,
+        1.0
+      ],
+      "s": 0.9975,
+      "skeleton_slack_max": -1.9977
+    },
+    "status": 0,
+    "success": true,
+    "value": 0.0024999999999999467
+  },
+  "constants": {
+    "bad_margin": 0.0025,
+    "bad_mult": 0.25,
+    "delta": 0.0001,
+    "exit_mult": 1.0,
+    "exit_tol": 0.01,
+    "kappa": 0.0025,
+    "kappa_mult": 0.25,
+    "rho": 0.01,
+    "rho_mult": 1.0,
+    "stationarity_mult": 2.0,
+    "stationarity_tol": 0.02,
+    "tau": 0.01
+  },
+  "distances_to_skeleton": [
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 0.020002000000000027
+    },
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 0.0
+    },
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 2.0002
+    }
+  ],
+  "errors": {
+    "idempotence_linf_l1": 2.0816681711721685e-17,
+    "row_sum_linf": 0.0
+  },
+  "failed_exposedness_witnesses": {
+    "2": {
+      "dual_beta_min": 0.990000000000002,
+      "dual_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "dual_payload": {
+        "alpha_mass": 0.0,
+        "alpha_support": {},
+        "beta_mass": 0.990000000000002,
+        "beta_support": {
+          "1": 0.990000000000002
+        },
+        "mu_support": {
+          "0": 1.0
+        },
+        "outside": [
+          0,
+          1
+        ]
+      },
+      "dual_success": true,
+      "primal_exposedness": 0.99,
+      "primal_success": true,
+      "well_exposed_at_threshold": true
+    }
+  },
+  "metadata": {
+    "family": "hume",
+    "s": 0.01
+  },
+  "model_scope": "frozen_P_linear_subproblem",
+  "negative_masses": [
+    0.0,
+    0.0001,
+    0.0
+  ],
+  "quasi_closed_distribution": {
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "payload": {
+      "exit": 0.0,
+      "mu": {
+        "2": 1.0
+      },
+      "row_exits": {
+        "2": 0.0
+      },
+      "stationarity_l1": 0.0
+    },
+    "status": 0,
+    "success": true,
+    "value": 0.0
+  },
+  "script_sha256": "8dffebd38e31f1b7f921a96bbde5f2e3da00f5fe83e24352fca78ddce215846c",
+  "sets": {
+    "W_indices": [
+      1,
+      2
+    ],
+    "bad_indices": [
+      2
+    ],
+    "bad_individually_far": true,
+    "skeleton_indices": [
+      1
+    ],
+    "vertices": [
+      1,
+      2
+    ]
+  },
+  "verdict": "augmentation_vertex_present"
+}

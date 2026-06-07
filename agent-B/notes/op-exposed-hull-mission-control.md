@@ -8,12 +8,13 @@ canonical proof shard.
 After compaction, read this file first, then:
 
 1. `PRD.md`, `CLAUDE.md`, `HANDOFF.md`;
-2. `argument/lemmas/op-exposed-hull.md`;
-3. `agent-B/notes/simultaneous-skeleton-reduction.md`;
-4. `agent-B/notes/exposed-circuit-cancellation.md`;
-5. `agent-B/notes/cluster-representative-classical-stability.md`;
-6. `agent-B/notes/robust-approximate-simplexity-reduction.md`;
-7. latest files in `agent-B/experiments/op-exposed-hull/`.
+2. `docs/plans/2026-06-07-op-exposed-hull-attack-plan.md`;
+3. `argument/lemmas/op-exposed-hull.md`;
+4. `agent-B/notes/simultaneous-skeleton-reduction.md`;
+5. `agent-B/notes/exposed-circuit-cancellation.md`;
+6. `agent-B/notes/cluster-representative-classical-stability.md`;
+7. `agent-B/notes/robust-approximate-simplexity-reduction.md`;
+8. latest files in `agent-B/experiments/op-exposed-hull/`.
 
 Keep all exploration in `agent-B/**` or dated `docs/plans/**`.  Do not edit
 `argument/`, `definitions/`, `proofs/`, or `report/` until a proof is ready for
@@ -66,37 +67,41 @@ Subagent roster:
   `agent-B/notes/subagent-op-exposed-hull-lp-dual.md`.  Verdict:
   inconclusive; exact Farkas dual found; uncontrolled negative dual mass is
   the blocker.
-- B: maximal-skeleton augmentation and no-accumulation certificates.  Active
-  deliverable: `agent-B/notes/subagent-op-exposed-hull-skeleton.md`.
-  Current target: positive-coordinate resolvent bound `||(I-T)^(-1)||<=C/tau`
-  or an augmenting exposed vertex.
+- B: maximal-skeleton augmentation and no-accumulation certificates.
+  Deliverables: `agent-B/notes/subagent-op-exposed-hull-skeleton.md` and
+  `agent-B/notes/subagent-op-exposed-hull-bad-kernel.md`.  Current state:
+  the resolvent half is proof-ready,
+  `dist_1(p_i,conv R) <= Gamma + 4 delta ||(I-T)^(-1)||_{inf->inf}`.
+  The remaining hard target is closed-bad-class/high-face augmentation.
 - C: robust-coordinate route with coefficient negative mass `O(delta)`.
-  Active deliverable:
-  `agent-B/notes/subagent-op-exposed-hull-robust-coordinates.md`.  Current
-  data: `agent-B/experiments/op-exposed-hull/robust_coordinate_probe.*`.
-  Hard target: upgrade a reconstruction kernel from representative Gram
-  matrix `I+O(tau)` to `I+O(delta)` without introducing `O(tau)` negativity.
+  Deliverables: `agent-B/notes/subagent-op-exposed-hull-robust-coordinates.md`
+  and `agent-B/notes/subagent-op-exposed-hull-interpolation-upgrade.md`.
+  Current target: construct one stochastic kernel `U` with row reconstruction
+  `O(tau)` and representative interpolation row-l1 defect `O(delta)`.
 - D: computational falsification and dual-certificate mining by LP/MILP/CAS.
   Current code and outputs: `agent-B/experiments/op-exposed-hull/`, plus
   `subagent-op-exposed-hull-computational.md`,
   `subagent-op-exposed-hull-small-cases.md`, and
   `subagent-op-exposed-hull-stress-tests.md`.  No serious counterexample found;
-  next targets are a joint feasibility model for LP-dual certificate A5 and a
-  direct exact-retraction parameterization `P=A B`, `B A=I`, `P1=1`.
+  `subagent-op-exposed-hull-direct-search.md` adds exact `P=A B`, `B A=I`,
+  `P1=1` searches with no counterexample.  Next target: repaired-coordinate
+  bad-kernel lifetime scoring on direct-search samples.
+- D/n4: `subagent-op-exposed-hull-n4-circuit.md` sharply reduces the remaining
+  `n=4`, rank-3, `2|2` circuit gap: normalized circuit coefficients either
+  give all four vertex exposures, or a small coefficient collapses its vertex
+  to the opposite edge at `O(sqrt(delta))`.
+- D/LP-game: `agent-B/notes/subagent-op-exposed-hull-lp-game.md` starts the
+  frozen joint-certificate miner.  Full unfrozen negation is bilinear/nonconvex;
+  the frozen diagnostic augments Hume and reproduces only the large-negative-mass
+  regular-polygon warning so far.
 - E: deep literature search for near-idempotent stochastic matrices, affine
   retracts of simplices, polytope skeleton selection, and exposed-point
-  stability.  Active deliverable:
-  `agent-B/notes/op-exposed-hull-literature-scout-2026-06-07.md`.  Any source
-  useful for canonical work must be proposed for local `refs/` acquisition and
-  byte verification.
+  stability.  Deliverables:
+  `agent-B/notes/op-exposed-hull-literature-scout-2026-06-07.md` and
+  `agent-B/notes/subagent-op-exposed-hull-literature.md`.  Verdict: no direct
+  theorem found; useful sources are indirect and must be proposed for local
+  `refs/` acquisition and byte verification before canonical use.
 - F: formalization packaging once a proof skeleton survives A-D.
-- H: alternative proof frameworks.  Active deliverable:
-  `agent-B/notes/subagent-op-exposed-hull-frameworks.md`.  Best current stack:
-  maximal exposed skeleton -> positive-coordinate Markov kernel -> resolvent
-  alternative -> closed-bad-class augmentation -> LP/game/circuit contradiction.
-  Central open lemma: a `c tau`-closed bad class under the repaired
-  positive-coordinate kernel contains a new `(rho,kappa)`-well-exposed row
-  vertex far from the current skeleton.
 - H: alternative proof frameworks.  Active deliverable:
   `agent-B/notes/subagent-op-exposed-hull-frameworks.md`.  Verdict:
   strongest architecture is maximal exposed skeleton + positive-coordinate

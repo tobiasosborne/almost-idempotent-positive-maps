@@ -47,6 +47,8 @@ Deferred until capacity frees:
   - random projection smoke tests for `(n,rank)=(4,2),(5,2),(5,3)`.
 - Literature scout:
   `agent-B/notes/op-exposed-hull-literature-scout-2026-06-07.md`.
+- Durable orchestration plan:
+  `docs/plans/2026-06-07-op-exposed-hull-attack-plan.md`.
 
 ## Numerical lessons so far
 
@@ -82,6 +84,12 @@ Small-case subagent output:
   four vertices strongly exposed at `rho=t`;
 - the remaining small symbolic target is arbitrary `n=4`, rank `3`,
   corank-one `2|2` quadrilateral circuits.
+
+Follow-up update: the `n=4` `2|2` circuit gap is now closed at coefficient
+level in `agent-B/notes/subagent-op-exposed-hull-n4-circuit.md`.  For a
+positive circuit `a p_0+b p_1=c p_2+d p_3`, all four vertices are exposed at
+levels `b,a,d,c`; a small coefficient collapses the corresponding vertex to
+the opposite edge at `O(sqrt(delta))`.
 
 Stress-test output:
 
@@ -149,6 +157,15 @@ The known gap is accumulation.  The desired new lemma is that redundancy among
 non-well-exposed vertices is a contraction, acyclic after a height assignment,
 or otherwise one-shot reconstructible because of `P^2=P` and `neg<=delta`.
 
+Follow-up update: the bad-kernel worker sharpened the resolvent half to
+
+```text
+dist_1(p_i,conv R) <= Gamma + 4 delta ||(I-T)^(-1)||_{inf->inf}.
+```
+
+Thus only the long-lived closed-bad-class/high-face augmentation remains as
+the central proof blocker on this route.
+
 ### Route 4: robust-coordinate route
 
 Instead of selecting well-exposed vertices directly, construct affine
@@ -157,14 +174,51 @@ row reconstruction error `O(tau)`.  Then
 `robust-approximate-simplexity-reduction.md` finishes the stochastic idempotent
 construction.  Coefficient negativity `O(tau)` is not enough.
 
+Follow-up update: `agent-B/notes/subagent-op-exposed-hull-interpolation-upgrade.md`
+keeps this route active but narrows it to an LP kernel lemma.  Cluster
+assignment alone gives only `G=I+O(tau)`, and exactifying can introduce
+`O(tau)` negativity.  The optimized kernel target is row reconstruction
+`O(tau)` plus representative interpolation defect `O(delta)`, which held in
+the current Hume, quadrilateral, and small-defect similarity probes.
+
+### Route 5: frozen LP/game diagnostics
+
+`agent-B/notes/subagent-op-exposed-hull-lp-game.md` starts the joint
+certificate miner.  The full negation of the closed-bad-class lemma is
+bilinear/nonconvex unless `P` and the combinatorics are frozen.  The frozen
+diagnostic behaves correctly so far: Hume immediately has an augmenting
+exposed vertex, while the regular-polygon warning is feasible only at
+constant negative mass.
+
+### Route 6: direct exact-retraction search
+
+`agent-B/notes/subagent-op-exposed-hull-direct-search.md` adds exact
+`P=A B`, `B A=I`, `P1=1` generators.  No counterexample was found.  Broad
+grids only create large ratios for aggressive constants (`rho=0.5 tau`,
+`kappa=0.5 tau`), and the same candidates become harmless for `rho>=tau`.
+Conservative grids show benign `O(delta)`-scale distances.  Next numerics
+should score repaired-coordinate bad-kernel lifetime, not raw hull distance.
+
 ## Literature leads
 
-No external theorem found so far closes the problem.  Candidate background:
+No external theorem found so far closes the problem.  Subagent G also found no
+direct theorem; its sandbox report is
+`agent-B/notes/subagent-op-exposed-hull-literature.md`.  Candidate background:
 
 - Gonzalez-Torres 2017 on cores of idempotent stochastic matrices.
+- Gonzalez-Hartfiel 1991 on the stochastic idempotent matrix space.
 - Schwarz 1964 on the semigroup of stochastic matrices.
 - Blackwell 1942 on idempotent Markoff chains.
 - Agaev-Chebotarev 2011 on regularized power limits.
 - Hoffman error-bound literature for LP distance certificates.
+- Choquet-Corson-Klee 1966 / Straszewicz exposed-point background.
 
 All are scout leads only until added to local `refs/`.
+
+## Next follow-up workers
+
+As of the orchestration plan update:
+
+- repaired-coordinate bad-kernel lifetime scoring on direct `A,B` samples;
+- Farkas dual extraction for the interpolation-upgrade LP;
+- no-cycle/high-face lemma for quasi-closed bad classes.

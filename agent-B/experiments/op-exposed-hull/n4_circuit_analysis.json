@@ -1,0 +1,185 @@
+{
+  "status": "Agent B sandbox; coefficient-level proof aid, not canonical.",
+  "command": "python3 agent-B/experiments/op-exposed-hull/n4_circuit_analysis.py",
+  "script_sha256": "7673299b2bf7b18f0ef2871e0c832500b024d80c52cbb0a0360a278df47b0eda",
+  "normalization": "a,b,c,d>0, a+b=c+d=1, a x0+b x1=c x2+d x3",
+  "cases": [
+    {
+      "name": "balanced_all_exposed_delta_1e-4",
+      "coefficients": {
+        "a": "2/5",
+        "b": "3/5",
+        "c": "1/3",
+        "d": "2/3"
+      },
+      "delta": "1/10000",
+      "tau_float": 0.01,
+      "kappa_multiplier": "1/8",
+      "kappa_float": 0.00125,
+      "diameter_bound": "5001/2500",
+      "exposure_values": {
+        "vertex_0": [
+          "0",
+          "1",
+          "3/5",
+          "3/5"
+        ],
+        "vertex_1": [
+          "1",
+          "0",
+          "2/5",
+          "2/5"
+        ],
+        "vertex_2": [
+          "2/3",
+          "2/3",
+          "0",
+          "1"
+        ],
+        "vertex_3": [
+          "1/3",
+          "1/3",
+          "1",
+          "0"
+        ]
+      },
+      "exposure_lower_bounds": {
+        "vertex_0": "3/5",
+        "vertex_1": "2/5",
+        "vertex_2": "2/3",
+        "vertex_3": "1/3"
+      },
+      "exposed_at_kappa": {
+        "vertex_0": true,
+        "vertex_1": true,
+        "vertex_2": true,
+        "vertex_3": true
+      },
+      "collapse_bounds": {
+        "vertex_0_to_conv_23_if_b_small": "15003/5000",
+        "vertex_1_to_conv_23_if_a_small": "1667/1250",
+        "vertex_2_to_conv_01_if_d_small": "5001/1250",
+        "vertex_3_to_conv_01_if_c_small": "5001/5000"
+      },
+      "verdict": "all_four_exposed"
+    },
+    {
+      "name": "small_mate_coefficient_hume_shape_t_1_10",
+      "coefficients": {
+        "a": "99/100",
+        "b": "1/100",
+        "c": "99/100",
+        "d": "1/100"
+      },
+      "delta": "1/100",
+      "tau_float": 0.1,
+      "kappa_multiplier": "1/8",
+      "kappa_float": 0.0125,
+      "diameter_bound": "51/25",
+      "exposure_values": {
+        "vertex_0": [
+          "0",
+          "1",
+          "1/100",
+          "1/100"
+        ],
+        "vertex_1": [
+          "1",
+          "0",
+          "99/100",
+          "99/100"
+        ],
+        "vertex_2": [
+          "1/100",
+          "1/100",
+          "0",
+          "1"
+        ],
+        "vertex_3": [
+          "99/100",
+          "99/100",
+          "1",
+          "0"
+        ]
+      },
+      "exposure_lower_bounds": {
+        "vertex_0": "1/100",
+        "vertex_1": "99/100",
+        "vertex_2": "1/100",
+        "vertex_3": "99/100"
+      },
+      "exposed_at_kappa": {
+        "vertex_0": false,
+        "vertex_1": true,
+        "vertex_2": false,
+        "vertex_3": true
+      },
+      "collapse_bounds": {
+        "vertex_0_to_conv_23_if_b_small": "17/825",
+        "vertex_1_to_conv_23_if_a_small": "5049/25",
+        "vertex_2_to_conv_01_if_d_small": "17/825",
+        "vertex_3_to_conv_01_if_c_small": "5049/25"
+      },
+      "verdict": "collapse_branch"
+    },
+    {
+      "name": "two_small_cross_coefficients_delta_1e-4",
+      "coefficients": {
+        "a": "999/1000",
+        "b": "1/1000",
+        "c": "1/1000",
+        "d": "999/1000"
+      },
+      "delta": "1/10000",
+      "tau_float": 0.01,
+      "kappa_multiplier": "1/8",
+      "kappa_float": 0.00125,
+      "diameter_bound": "5001/2500",
+      "exposure_values": {
+        "vertex_0": [
+          "0",
+          "1",
+          "1/1000",
+          "1/1000"
+        ],
+        "vertex_1": [
+          "1",
+          "0",
+          "999/1000",
+          "999/1000"
+        ],
+        "vertex_2": [
+          "999/1000",
+          "999/1000",
+          "0",
+          "1"
+        ],
+        "vertex_3": [
+          "1/1000",
+          "1/1000",
+          "1",
+          "0"
+        ]
+      },
+      "exposure_lower_bounds": {
+        "vertex_0": "1/1000",
+        "vertex_1": "999/1000",
+        "vertex_2": "999/1000",
+        "vertex_3": "1/1000"
+      },
+      "exposed_at_kappa": {
+        "vertex_0": false,
+        "vertex_1": true,
+        "vertex_2": true,
+        "vertex_3": false
+      },
+      "collapse_bounds": {
+        "vertex_0_to_conv_23_if_b_small": "1667/832500",
+        "vertex_1_to_conv_23_if_a_small": "4995999/2500",
+        "vertex_2_to_conv_01_if_d_small": "4995999/2500",
+        "vertex_3_to_conv_01_if_c_small": "1667/832500"
+      },
+      "verdict": "collapse_branch"
+    }
+  ]
+}

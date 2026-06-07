@@ -356,3 +356,32 @@ validated children), re-verified clean. Registry: `af none→validated`, deps co
 `lem-P-properties` (genuinely imported, previously undeclared); INDEX/DAG regenerated; report badge + status
 + counts (13→14) updated in lockstep. Next af frontier (`argument.py`): `lem-classical-equiv` (unblocks the
 classical chain), `prop-rank-gap` (the √rank honesty caveat), the §10 obstructions.
+
+## 2026-06-07 (Agent B) — op-exposed-hull orchestration follow-up
+
+Agent B stayed in the exploration lane and expanded the classical
+`op-exposed-hull` programme without touching canonical layers.  Added the
+durable plan `docs/plans/2026-06-07-op-exposed-hull-attack-plan.md`, updated
+mission control/session logs, and integrated the second wave of subagent
+outputs.
+
+Main proof state: the strongest route is now the maximal exposed skeleton plus
+repaired positive-coordinate Markov kernel.  The bad-kernel resolvent half is
+proof-ready:
+
+```text
+dist_1(p_i,conv R) <= Gamma + 4 delta ||(I-T)^(-1)||_{inf->inf}.
+```
+
+So the remaining core blocker is sharply isolated as the closed-bad-class /
+high-face no-cycle lemma: a long-lived `q`-quasi-closed bad class far from the
+current skeleton must contain a new `(rho,kappa)`-well-exposed vertex, or else
+yield a real counterexample.
+
+Other findings: the arbitrary `n=4`, rank-3, `2|2` circuit gap is closed at
+coefficient level; the robust-coordinate route is narrowed to one stochastic
+kernel interpolation LP with `O(delta)` representative defect; frozen LP/game
+diagnostics reproduce Hume augmentation and only the large-negative-mass
+regular-polygon warning; direct exact searches using `P=A B`, `B A=I`, `P1=1`
+found no counterexample.  Next Agent B numerics should score repaired-kernel
+bad lifetime on direct `A,B` samples rather than raw exposed-hull distance.
