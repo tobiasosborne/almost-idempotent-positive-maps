@@ -154,6 +154,23 @@ Subagent roster:
   interface, C12 alpha-budget/calibrated-dual, and C13 separated-circuit
   lower bound.  Focused subplans for these three blockers are in
   `docs/plans/2026-06-07-op-exposed-hull-blocker-subplans.md`.
+- C9 campaign launched: six active tracks cover high-core pruning,
+  shadow-witness leakage, Lyapunov fallback, Markov coupling,
+  repaired-coordinate computational scoring, and frozen LP/counterexample
+  modeling.  Deliverables are
+  `agent-B/notes/subagent-op-exposed-hull-c9*.md` plus any sandbox experiment
+  outputs.
+- C9-F frozen LP/counterexample model delivered:
+  `agent-B/notes/subagent-op-exposed-hull-c9f-counterexample-lp.md`, with
+  `agent-B/experiments/op-exposed-hull/c9_frozen_lp.py` and `outputs/c9f_*.json`.
+  Verdict: no small-`delta` C9 failure found; Hume/direct examples stop by
+  exposed augmentation or no bad class.  The regular 12-gon realizes the frozen
+  failure pattern only at large negative mass `delta ~= 0.205`.
+- C9-D Markov coupling delivered:
+  `agent-B/notes/subagent-op-exposed-hull-c9d-markov-coupling.md`.  Verdict:
+  distributional quasi-closure does not imply rowwise closure in pure finite
+  Markov theory; Step 6 should use a `pi`-coupled q/shadow interface, ideally
+  with `pi=m` from the bad-kernel quasi-stationary measure.
 
 ### A. LP-dual proof of global exposed hull
 
