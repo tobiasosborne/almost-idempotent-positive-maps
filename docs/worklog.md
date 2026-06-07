@@ -296,3 +296,32 @@ present; `test_check_refs` 6 failing → 0).
 dependency; the 36 copyrighted/bespoke ones reproduce from a content-addressed cache the user mirrors
 durably — no dependence on any specific live machine. The lock + script are committed (no copyright), so
 the reconstruction recipe travels with the repo. `refs/` payloads stay gitignored.
+
+---
+
+## 2026-06-07 (side-quest cont.) — web recovery of refs + genuineness audit (high-skepticism)
+
+**Web recovery.** Located + fetched the byte-exact source files (no specific machine needed):
+- From authoritative origins, hash-matched ⇒ GENUINE: Kitaev `2405.02434` (e-print+pdf), VLW
+  `2604.08380` (e-print+pdf), Effros–Størmer source PDF (official *Math. Scand.* galley 11830/9846),
+  Baak–Moslehian (arXiv `math/0501158`), Blecher–Read `.tex` (arXiv `1905.05836` gunzipped source).
+  Now **17/50 are fetch-reproducible** via `fetch-refs.py` (added `url` + single-file-gz arXiv handling).
+- Still 20/50 present locally (gate GREEN; all 4 af-cited sources HOS/Kitaev/Idel/VLW present).
+
+**Genuineness audit (user flagged: prior agents may have fetched wrong PDFs / hallucinated).**
+- Fetching from authoritative origins IS a genuineness proof: a hallucinated/wrong file cannot byte-match
+  official arXiv/journal bytes. So the 6 web-recovered sources are certified genuine, not just hash-consistent.
+- HOS: scan title page = the real Hanche-Olsen–Størmer book; the 21 passages the proofs byte-quote
+  (Jordan product 2.17, Jordan identity 2.18, JB axioms 3.1.3/3.1.4 incl. the exact M₂ counterexample,
+  state Cauchy–Schwarz) are correct standard mathematics with correct equation numbering — not a
+  hallucination signature. **User attests `joa-m.md` is their own file originally stored in `../af-tests`**
+  (the copy used here, hash `28740e73`). ⇒ genuine.
+- Idel: verifiably Martin Idel's 2013 TUM/LMU thesis (advisor Wolf); abstract states the project's
+  foundational fact (fixed points of unital positive maps are Jordan algebras). ⇒ genuine.
+- SUSPECT / unverifiable (the candidates for the prior-agent-error worry): `kaup-1984` and
+  `chu-russo-1512.03347` PDFs — recorded bytes match NO current authoritative source (mscand re-encoded;
+  arXiv+Wayback don't carry the recorded chu-russo bytes). Neither is cited by an af proof; chu-russo only
+  backs the already-flagged `thm-whitehead`. Recommend re-deriving from the authoritative source and
+  re-pinning the manifest hash, or dropping them — flagged honestly, not trusted.
+- The ~28 Effros–Størmer OCR page-scans/text + `blecher-neal`/`itoh` text extractions are locally-derived
+  (OCR/pdftotext of source PDFs), not byte-reproducible by fetch; cache-only.

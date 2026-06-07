@@ -39,9 +39,10 @@ files = fr.load_lock()
 check("load_lock reads all 50 refs files", len(files) == 50)
 check("every lock entry has a 64-hex sha256", all(len(f["sha256"]) == 64 for f in files))
 fetchable = [f for f in files if f.get("fetch")]
-check("14 files are marked fetch-reproducible (kitaev + vlw)", len(fetchable) == 14)
-check("every fetch spec names an arXiv id + kind",
-      all(f["fetch"].get("id") and f["fetch"].get("kind", "").startswith("arxiv") for f in fetchable))
+check("17 files are fetch-reproducible (kitaev + vlw + ES + baak-moslehian + blecher-read)", len(fetchable) == 17)
+check("every fetch spec is well-formed (arxiv kind has an id; url kind has a url)",
+      all((f["fetch"]["kind"].startswith("arxiv") and f["fetch"].get("id"))
+          or (f["fetch"]["kind"] == "url" and f["fetch"].get("url")) for f in fetchable))
 
 # --- cache_lookup: a correct blob verifies; a WRONG-content blob is rejected; a miss is None ---
 with tempfile.TemporaryDirectory() as td:

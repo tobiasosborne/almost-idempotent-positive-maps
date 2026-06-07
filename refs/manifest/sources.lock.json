@@ -9,8 +9,11 @@
       "path": "baak-moslehian/baak-moslehian-J-star-stability.pdf",
       "sha256": "027cffddd2735fbe71d889c31539b30095e7447486fd1e79e0d216f6ce9ff449",
       "source_id": "baak-moslehian",
-      "fetch": null,
-      "note": "journal/preprint PDF \u2014 source not pinned/verified"
+      "fetch": {
+        "kind": "arxiv-pdf",
+        "id": "math/0501158",
+        "verified": "fetched from official arXiv + hash-match => genuine"
+      }
     },
     {
       "path": "blecher-neal-1508.01530/blecher-neal-1508.01530.txt",
@@ -30,8 +33,11 @@
       "path": "blecher-read-2019/contractive-projections-real-positive.tex",
       "sha256": "767b69596363d005196c366b37e7499c6428dd1d0820a2ac4c3f32cdf31fdf50",
       "source_id": "blecher-read-2019",
-      "fetch": null,
-      "note": "local .tex extraction (arXiv id/source not pinned/verified)"
+      "fetch": {
+        "kind": "arxiv-eprint-member",
+        "id": "1905.05836",
+        "verified": "fetched from official arXiv source + hash-match => genuine"
+      }
     },
     {
       "path": "chu-russo-1512.03347/chu-russo-1512.03347.pdf",
@@ -212,8 +218,11 @@
       "path": "effros-stormer-1979/positive-projections-jordan-structure.pdf",
       "sha256": "9718c140a2732c18272cf399d671175da46097573e5c44a378184d72e4683e2b",
       "source_id": "effros-stormer-1979",
-      "fetch": null,
-      "note": "OCR page-scans + text of a 1979 Math. Scand. paper \u2014 bespoke, not reproducible by fetch"
+      "fetch": {
+        "kind": "url",
+        "url": "https://www.mscand.dk/article/download/11830/9846",
+        "verified": "fetched from official Math. Scand. (open access) + hash-match => genuine"
+      }
     },
     {
       "path": "effros-stormer-1979/positive-projections-jordan-structure.txt",

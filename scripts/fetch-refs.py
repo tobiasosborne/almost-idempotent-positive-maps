@@ -63,34 +63,49 @@ def _get(url):
         return r.read()
 
 
-def fetch_spec(spec, expected_sha, _eprint={}, _pdf={}):
-    """Return the bytes for a `fetch` spec IFF they hash to expected_sha, else None.
-
-    arXiv e-print tarballs are downloaded once per id and reused (cached in the default-arg dicts);
-    a member is selected by HASH (not by guessed filename), so it is robust to internal renames."""
-    kind, aid = spec["kind"], spec["id"]
+def fetch_spec(spec, expected_sha, _eprint={}, _pdf={}, _url={}):
+    """Return the bytes for a `fetch` spec IFF they hash to expected_sha, else None. Kinds:
+      url                 — a direct, stable URL (e.g. an open-access journal galley)
+      arxiv-pdf           — arxiv.org/pdf/<id>  (works for new-style and math/NNNN ids)
+      arxiv-eprint        — the e-print bundle itself (the recorded *.tar.gz)
+      arxiv-eprint-member — a file INSIDE the e-print, selected BY HASH (robust to renames); the bundle
+                            may be a tar.gz OR a single gzipped file, so we try raw, gunzip, and members.
+    Downloads are memoised per-id/url across calls (default-arg dicts)."""
+    kind = spec["kind"]
     try:
+        if kind == "url":
+            u = spec["url"]
+            if u not in _url:
+                _url[u] = _get(u)
+            return _url[u] if sha256_bytes(_url[u]) == expected_sha else None
+        aid = spec["id"]
         if kind == "arxiv-pdf":
             if aid not in _pdf:
                 _pdf[aid] = _get(ARXIV_PDF.format(id=aid))
-            data = _pdf[aid]
-            return data if sha256_bytes(data) == expected_sha else None
-        # both arxiv-eprint and arxiv-eprint-member need the source tarball
+            return _pdf[aid] if sha256_bytes(_pdf[aid]) == expected_sha else None
         if aid not in _eprint:
             _eprint[aid] = _get(ARXIV_EPRINT.format(id=aid))
-        tar_bytes = _eprint[aid]
+        raw = _eprint[aid]
         if kind == "arxiv-eprint":
-            return tar_bytes if sha256_bytes(tar_bytes) == expected_sha else None
+            return raw if sha256_bytes(raw) == expected_sha else None
         if kind == "arxiv-eprint-member":
-            with tarfile.open(fileobj=io.BytesIO(tar_bytes)) as tf:
-                for m in tf.getmembers():
-                    if not m.isfile():
-                        continue
-                    b = tf.extractfile(m).read()
-                    if sha256_bytes(b) == expected_sha:
-                        return b
+            cands = [raw]
+            try:
+                import gzip
+                cands.append(gzip.decompress(raw))   # arXiv often serves a single gzipped .tex
+            except Exception:   # noqa: BLE001
+                pass
+            for blob in list(cands):
+                try:
+                    with tarfile.open(fileobj=io.BytesIO(blob)) as tf:
+                        cands += [tf.extractfile(m).read() for m in tf.getmembers() if m.isfile()]
+                except Exception:   # noqa: BLE001
+                    pass
+            for b in cands:
+                if sha256_bytes(b) == expected_sha:
+                    return b
             return None
-    except Exception as e:   # noqa: BLE001 — any network/parse failure -> fall through to cache
+    except Exception:   # noqa: BLE001 — any network/parse failure -> fall through to cache
         return None
     return None
 

@@ -26,16 +26,24 @@ python3 scripts/fetch-refs.py              # fetch the arXiv-pinned sources (kit
 AIPM_REFS_CACHE=<dir> python3 scripts/fetch-refs.py   # restore bespoke sources from a CAS you control
 ```
 
-- **Fetch-reproducible (14 files): `kitaev-2405.02434`, `vlw-2604.08380`.** arXiv e-print source
-  tarballs + per-version PDFs are byte-stable, so `fetch-refs.py` reproduces them EXACTLY from the
-  pinned id — verified this session. No local copy required.
-- **Cache-only (36 files): all the rest** — copyrighted book/journal OCR (`hos`, `effros-stormer-1979`,
-  `kaup-1984`, `itoh-1991`), bespoke text extractions (`blecher-neal-*`, `idel-2013`,
-  `blecher-read-2019`), and a version-drifting PDF (`chu-russo-1512.03347`). These cannot be re-fetched
-  byte-identical. Seed a content-addressed cache ONCE from a populated tree
-  (`fetch-refs.py --populate-cache <dir>`), mirror `<dir>` somewhere durable (private repo / cloud /
-  drive), and any clone restores them via `$AIPM_REFS_CACHE`. The cache is just `<sha256>`-named blobs,
-  so it is trivially mirrorable and self-verifying.
+- **Fetch-reproducible (17 files), and thereby GENUINENESS-VERIFIED:** `kitaev-2405.02434` (8),
+  `vlw-2604.08380` (6) from arXiv e-prints/PDFs; `effros-stormer-1979/positive-projections-jordan-structure.pdf`
+  from the official *Mathematica Scandinavica* open-access galley; `baak-moslehian` from arXiv `math/0501158`;
+  `blecher-read-2019/...tex` from the arXiv `1905.05836` source. Each was fetched from its AUTHORITATIVE
+  origin and byte-matched the recorded hash — a prior agent's wrong/hallucinated file could not match the
+  official source, so the hash-match here independently certifies these refs are genuine. `fetch-refs.py`
+  reproduces them on any clone; no local copy required.
+- **Cache-only (33 files):** the user-stored canonical OCR `hos/*` + `idel-2013/*` (verified genuine: the
+  HOS scan's title page is the real Hanche-Olsen–Størmer book and the cited passages are correct standard
+  Jordan-algebra mathematics; Idel is verifiably Martin Idel's 2013 TUM/LMU thesis); the locally-generated
+  Effros–Størmer OCR page-scans/text + `blecher-neal-*`/`itoh-1991` text extractions (derived from source
+  PDFs, not byte-reproducible by fetch); and two source PDFs whose recorded bytes no longer match any
+  authoritative origin — `kaup-1984` (mscand re-encoded since) and `chu-russo-1512.03347` (gone from current
+  arXiv + Wayback). The last two are NOT byte-verified against an authoritative source and are NOT cited by
+  any af proof (chu-russo backs the already-flagged `thm-whitehead`). Seed a content-addressed cache ONCE
+  from a populated tree (`fetch-refs.py --populate-cache <dir>`), mirror `<dir>` durably, and any clone
+  restores them via `$AIPM_REFS_CACHE`. The cache is just `<sha256>`-named blobs — trivially mirrorable and
+  self-verifying.
 
 Definitions/lemmas cite a source by `<source-id>` + locus (e.g. line number); the
 `definitions/` and `argument/` shards record the 16-hex prefix of the file's SHA256.
