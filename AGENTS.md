@@ -17,6 +17,14 @@ below exists to make that hard — ground truth before claims, one canonical def
 DAG, reviewer ≠ author, and honest "(open)" tags. The repo is canonical; conversation, memory, and
 prior-session summaries are **not**.
 
+> **Two agents, two lanes (2026-06-07).** Agent B runs an **exploration lane** (scoping how to land the full
+> proof). Exploration is generative/optimistic; the canonical layers (`definitions/`, `argument/`, `proofs/`,
+> `report/`) are conservative/gated. Keep them separate: explore in the **sandbox** (`agent-B/**`, `docs/plans/`,
+> `docs/worklog.md`); reach the canonical layers ONLY by *proposing* through Recipe A → Recipe B → a reviewer who
+> isn't you (scoping ≠ committing). Never re-refine a validated `proofs/<id>/`, hand-edit a generated file, or
+> upgrade a `status:`/`af:` field. Full lane discipline:
+> **`docs/plans/2026-06-07-agent-b-rules-of-engagement.md`** (mirrored in `agent-B/README.md`).
+
 ---
 
 ## 0. Read-order gate (by file name, not by number)

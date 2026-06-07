@@ -8,6 +8,11 @@ NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status s
 # HANDOFF — argument-architecture build
 
 > ## START HERE (next agent)
+> 0. **Which lane?** If you are **Agent B (exploration / scoping how to land the full proof)**, read
+>    **`docs/plans/2026-06-07-agent-b-rules-of-engagement.md`** (mirrored in `agent-B/README.md`) FIRST — it
+>    defines your sandbox lane (`agent-B/**`, `docs/plans/`, `docs/worklog.md`) and the do-not-touch list
+>    (validated `proofs/<id>/`, generated files, locked defs, `status:`/`af:` upgrades) that protects the 14
+>    validated results. Explore freely there; reach the canonical layers ONLY by *proposing* via Recipe A→B.
 > 1. `git checkout main` (all work lives on `main`; the `argument-architecture` feature branch was retired).
 > 2. Read, in order: **`PRD.md`** → **`CLAUDE.md`**(==`AGENTS.md`) → **this file** → `definitions/INDEX.md`
 >    + `argument/INDEX.md` + `argument/DAG.md` (the live state). `python3 scripts/argument.py` prints the

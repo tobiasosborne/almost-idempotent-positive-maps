@@ -90,6 +90,18 @@ Subagent roster:
   useful for canonical work must be proposed for local `refs/` acquisition and
   byte verification.
 - F: formalization packaging once a proof skeleton survives A-D.
+- H: alternative proof frameworks.  Active deliverable:
+  `agent-B/notes/subagent-op-exposed-hull-frameworks.md`.  Best current stack:
+  maximal exposed skeleton -> positive-coordinate Markov kernel -> resolvent
+  alternative -> closed-bad-class augmentation -> LP/game/circuit contradiction.
+  Central open lemma: a `c tau`-closed bad class under the repaired
+  positive-coordinate kernel contains a new `(rho,kappa)`-well-exposed row
+  vertex far from the current skeleton.
+- H: alternative proof frameworks.  Active deliverable:
+  `agent-B/notes/subagent-op-exposed-hull-frameworks.md`.  Verdict:
+  strongest architecture is maximal exposed skeleton + positive-coordinate
+  Markov resolvent + LP/game closed-class augmentation + oriented-circuit
+  bookkeeping; pure convex geometry alone is not enough.
 
 ### A. LP-dual proof of global exposed hull
 
