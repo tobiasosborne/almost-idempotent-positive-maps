@@ -19,7 +19,10 @@ NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status s
 >      — NEW this session: 3 factored sub-lemmas + the capstone, all `af: validated`:
 >      `lem-idempotence-inheritance`, `lem-intertwine-spectral-idempotent`,
 >      `lem-cstar-sa-to-epsjb` (the **O(η) crux** — C\*→JB symmetrisation), `thm-dilation-compatible`.
->    **13 results are `af: validated` total.** `grep -c validated argument/INDEX.md`.
+>    - **`thm-faithful-approx`** (the conditioned faithful-invariant **O(η/λ)** bound, §06b) — NEW
+>      2026-06-07: 10-node af workspace, fresh single-node verifier per node; the corrected statement of
+>      the retracted "faithful invariant ⇒ O(η)" overclaim (honest η/λ, no floor on λ).
+>    **14 results are `af: validated` total.** `grep -c validated argument/INDEX.md`.
 > 4. Sanity-check: `sh scripts/check-all.sh` must print `[check-all] OK` (check-defs + **check-refs** +
 >    linker + **check-provenance** (report↔registry sync + latexmk build) + tests). Now GREEN here (20/50 refs
 >    present). On a fresh clone with absent `refs/` payloads, REBUILD reproducibly: `python3 scripts/fetch-refs.py`

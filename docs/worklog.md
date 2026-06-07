@@ -325,3 +325,34 @@ the reconstruction recipe travels with the repo. `refs/` payloads stay gitignore
   re-pinning the manifest hash, or dropping them — flagged honestly, not trusted.
 - The ~28 Effros–Størmer OCR page-scans/text + `blecher-neal`/`itoh` text extractions are locally-derived
   (OCR/pdftotext of source PDFs), not byte-reproducible by fetch; cache-only.
+
+## 2026-06-07 (cont.) — report UX upgrade + thm-faithful-approx (14th af-validated)
+
+Two pieces of work after the refs side-quest, both pushed to `main`.
+
+**Report as a status-transparent, provenance-linked front door** (commits `bfedb28`, `d30ef45`,
+`2b21ec7`). First fixed a stale tracked `main.pdf` (gate builds to `report/.build/`, never refreshes the
+committed PDF → it lagged the 2026-06-07 dilation work; regenerated). Then, reusing existing infra (no new
+gates), four upgrades + a DAG figure: (1) clickable bibliography links — `references.bib` now carries
+`note=\href{...}` to arXiv/Math.Scand. for Kitaev/VLW/Effros–Størmer/Chu–Russo (URLs from
+`sources.lock.json`); HOS/Idel have no public URL (honest ceiling). (2) `\afbadge`/`\aflink`/`\afyes` macros
+(`main.tex`) → a green "✓ af-validated" badge on each validated result linking to its GitHub `proofs/<id>/`.
+(3) `tab:status` gained an `af` column (Status kept as col 2 so `check-provenance`'s parser is unaffected) +
+legend. (4) a reading guide in §01. Plus `scripts/gen-dag-figure.py` (reuses `argument.py`'s parser) →
+`report/figures/dag.{dot,pdf}` via GraphViz (colour=status), embedded as `fig:dag`; NOT gate-wired (committed
+artifact like `main.pdf`, re-run by hand). User steer recorded: balance utility vs CI ceremony — don't turn
+report niceties into a software-engineering programme.
+
+**thm-faithful-approx COMPLETE — af: validated** (commits `71f277a`, `4a282f0`). The 14th machine-validated
+result: the conditioned faithful-invariant ambient-product bound `||h_{a,b}|| <= C(η/λ)||a||||b||` (§06b),
+the corrected statement of the retracted "faithful invariant ⇒ O(η)" overclaim (honest η/λ, no smuggled
+floor on λ). 10-node af workspace (depth 3): spectral split + square-hole import (`lem-square-hole`) →
+expectation bound (imports `lem-P-properties` for `||P-Φ||≤Cη`) → faithfulness upgrade
+`ω(x)=Tr(ρx)≥λTr(x)≥λ||x||` (grounded in VLW trace self-duality `paper.tex:453` + Idel density `:333` +
+`Tr≥norm`) → diagonal → polarisation. Recipe B with a **fresh single-node verifier per node** (user rule,
+2026-06-07): one challenge (node 1.4 omitted the direct `1.1` dependency edge) resolved via amend + the
+transitive `1.4→1.3→1.1` recording (af v0.1.3 has no post-hoc edge command; re-refining would archive
+validated children), re-verified clean. Registry: `af none→validated`, deps corrected to add
+`lem-P-properties` (genuinely imported, previously undeclared); INDEX/DAG regenerated; report badge + status
++ counts (13→14) updated in lockstep. Next af frontier (`argument.py`): `lem-classical-equiv` (unblocks the
+classical chain), `prop-rank-gap` (the √rank honesty caveat), the §10 obstructions.
