@@ -54,7 +54,7 @@ digraph argument {
   "thm-dilation-compatible" [label="thm-dilation-compatible", fillcolor="#b7e4c7"];
   "thm-effros-stormer" [label="thm-effros-stormer", fillcolor="#cfe2ff"];
   "thm-factorization" [label="thm-factorization", fillcolor="#e9ecef"];
-  "thm-faithful-approx" [label="thm-faithful-approx", fillcolor="#e9ecef"];
+  "thm-faithful-approx" [label="thm-faithful-approx", fillcolor="#b7e4c7"];
   "thm-jnw-classification" [label="thm-jnw-classification", fillcolor="#cfe2ff"];
   "thm-matrix-splitting" [label="thm-matrix-splitting", fillcolor="#e9ecef"];
   "thm-rank-one" [label="thm-rank-one", fillcolor="#e9ecef"];
@@ -115,6 +115,7 @@ digraph argument {
   "thm-effros-stormer" -> "thm-factorization";
   "thm-bridge" -> "thm-factorization";
   "lem-square-hole-almost-positive" -> "thm-faithful-approx";
+  "lem-P-properties" -> "thm-faithful-approx";
   "prop-direct-sum" -> "thm-matrix-splitting";
   "lem-classical-equiv" -> "thm-rank-one";
   "lem-classical-equiv" -> "thm-simplex";

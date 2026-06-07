@@ -89,11 +89,12 @@ A green \afyes\ in the final column marks results that are additionally
 result has a tiny formal workspace whose root statement is byte-identical to its
 contract and whose every step is checked by a prover and an independent verifier.
 In the body these carry a green `\textcolor{afgreen}{$\checkmark$\,af-validated}'
-badge linking to the corresponding workspace \texttt{proofs/<id>/}. Thirteen
+badge linking to the corresponding workspace \texttt{proofs/<id>/}. Fourteen
 results are af-validated: the bridge theorem and its nine constituent lemmas
-(\Cref{sec:bridge}, \Cref{sec:spectral}) and the dilation-compatible theorem with
-its three sub-lemmas (\Cref{sec:exponent}). The full machine-checked dependency
-graph is \Cref{fig:dag}.
+(\Cref{sec:bridge}, \Cref{sec:spectral}), the dilation-compatible theorem with
+its three sub-lemmas (\Cref{sec:exponent}), and the conditioned faithful-invariant
+bound (\Cref{thm:faithful-approx}). The full machine-checked dependency graph is
+\Cref{fig:dag}.
 
 \begin{table}[ht]
 \centering
@@ -106,7 +107,7 @@ Bridge: approx.\ Jordan algebra at $\sqrt\eta$, dimension-free, CP-free
   & proved & \Cref{thm:bridge} & \afyes \\
 Ambient product under a faithful invariant state ($O(\eta/\lambda)$; bare
 existence insufficient)
-  & proved & \Cref{sec:faithful} & \\
+  & proved & \Cref{thm:faithful-approx} & \afyes \\
 Effros--St\o rmer exact template
   & cited & \Cref{thm:effros-stormer} & \\
 $P$ need not be positive
