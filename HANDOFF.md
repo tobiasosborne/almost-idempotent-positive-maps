@@ -21,12 +21,13 @@ NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status s
 >      `lem-cstar-sa-to-epsjb` (the **O(η) crux** — C\*→JB symmetrisation), `thm-dilation-compatible`.
 >    **13 results are `af: validated` total.** `grep -c validated argument/INDEX.md`.
 > 4. Sanity-check: `sh scripts/check-all.sh` must print `[check-all] OK` (check-defs + **check-refs** +
->    linker + **check-provenance** (report↔registry sync + latexmk build) + tests). If `refs/` payloads are
->    absent in a fresh clone (so `test_check_refs.py`'s byte-match fails), REBUILD them reproducibly:
->    `python3 scripts/fetch-refs.py` fetches the arXiv-pinned sources (kitaev, vlw) hash-verified, and
->    `AIPM_REFS_CACHE=<dir> python3 scripts/fetch-refs.py` restores the bespoke ones from a content-addressed
->    cache (seed it once with `--populate-cache <dir>`). Beads is still empty here (no dolt remote) — an
->    environment-provisioning gap, not a code regression.
+>    linker + **check-provenance** (report↔registry sync + latexmk build) + tests). Now GREEN here (20/50 refs
+>    present). On a fresh clone with absent `refs/` payloads, REBUILD reproducibly: `python3 scripts/fetch-refs.py`
+>    fetches the **17/50 authoritative-origin-pinned** sources (kitaev, vlw, effros-størmer, baak-moslehian,
+>    blecher-read) hash-verified; `AIPM_REFS_CACHE=<dir> python3 scripts/fetch-refs.py` restores the bespoke
+>    residue from a content-addressed cache (seed once with `--populate-cache <dir>`, mirror durably). See the
+>    genuineness audit + SUSPECT list (`kaup`, `chu-russo`) in DONE/gotchas. Beads is still empty here (no dolt
+>    remote, `issue_prefix` unset) — an environment-provisioning gap, not a code regression.
 > 5. **What to do next is in beads (`bd ready`).** Top of the queue: the **classical layer** (`aipm-9mw` split
 >    the `lem-leakage` contract → then af `lem-leakage`/`lem-classical-equiv`; `aipm-18d` acquire the scouted
 >    sources); **`aipm-iel`** (P1, harden check-refs skip_noquote); **`aipm-17f`** (`cited`→`grounded` audit);
@@ -81,6 +82,20 @@ workspace) = a module whose *contract* is its one-line statement · a linker enf
   label/status harvesting, anchor check, loud parse-integrity. Fixed a real `A-ER` 15→16-hex sha typo it
   surfaced. KNOWN LIMITS (documented in the gate docstring): statement/contract TEXT not compared; status sync
   only covers `tab:status`-listed results; ~⅓ of sources hash-unverifiable (gitignored).
+- **Reproducible `refs/` reconstruction + web recovery (`fetch-refs.py` + `sources.lock.json`).** `refs/` is no
+  longer machine-bound: `python3 scripts/fetch-refs.py` rebuilds it on any clone, hash-verifying every byte.
+  **17/50 fetch-reproducible from authoritative origins** (kitaev+vlw arXiv e-prints/pdfs; Effros–Størmer source
+  PDF from official Math. Scand.; Baak–Moslehian arXiv `math/0501158`; Blecher–Read arXiv `1905.05836` source).
+  The bespoke residue restores from a content-addressed cache `$AIPM_REFS_CACHE/<sha256>` (seed once with
+  `--populate-cache <dir>`, mirror durably). **20/50 present locally now → `check-all` GREEN** (was failing on
+  absent refs; all 4 af-cited sources HOS/Kitaev/Idel/VLW present). 16 offline tests in check-all.
+- **Genuineness audit (user: prior agents may have fetched wrong/hallucinated files — high bar).** Fetching from
+  an authoritative origin + hash-match IS a genuineness proof. Verdict: GENUINE = HOS (user-stored canonical in
+  `../af-tests`, hash `28740e73`; scan title = real H-O–Størmer book; the 21 proof-cited passages are correct
+  standard math), Idel (real 2013 TUM thesis), and the 6 web-recovered sources. **SUSPECT** (could NOT verify vs
+  any authoritative origin) = `kaup-1984` + `chu-russo-1512.03347` PDFs — NOT cited by any af proof (chu-russo
+  only backs the already-flagged `thm-whitehead`); flagged, not trusted. The ~28 Effros–Størmer OCR pages /
+  text extractions are locally-derived, not byte-reproducible by fetch.
 
 ## NEXT (priority order — see `bd ready`)
 1. **Classical layer** — `aipm-9mw` (split `lem-leakage`'s contract: the leakage bound is groundable; the
@@ -95,9 +110,13 @@ workspace) = a module whose *contract* is its one-line statement · a linker enf
    `prop-aut-compact` are PDF-only); rename `cited`→`grounded`.
 4. **`aipm-qpa`** (factor `lem-P-properties`) · **`aipm-9ho`** (byte-verify draft defs) · ~~`aipm-oql`
    (report `latexmk` + check-provenance into check-all)~~ **DONE** · **`aipm-chn`** (reorg theory/experiments).
-   Follow-ups the report-sync review surfaced (file as beads when the tracker is restored): a `tab:status`
-   coverage warn for un-listed results; cross-check absent KIT/VLW/ES hashes vs `refs/manifest/checksums.sha256`;
-   relativise the 2 stale `/home/tobias/...` source paths in `report/PROVENANCE.md` to `refs/`.
+   Follow-ups surfaced this session (file as beads when the tracker is restored): **(refs)** seed the durable
+   content-addressed cache so the bespoke residue reproduces anywhere (`fetch-refs.py --populate-cache`); decide
+   on the 2 SUSPECT PDFs — re-derive `kaup-1984` (mscand `12043`) + `chu-russo-1512.03347` (arXiv source) from
+   the authoritative origin and **re-pin** their manifest hashes (a ground-truth change → user sign-off), or drop
+   them; relativise the 2 stale `/home/tobias/...` source paths in `report/PROVENANCE.md` to `refs/` (now that
+   those payloads are present they'd hash-verify). **(report-sync review)** a `tab:status` coverage warn for
+   un-listed results; cross-check absent source hashes vs `refs/manifest/checksums.sha256`.
 5. **Open-math frontier** (hard, may need the user): `aipm-245` (Layer-1 coboundary splitting), `aipm-08u`
    (NPPS/exposed-hull), `aipm-36d` (matrix benchmark re-audit). **`aipm-3ox`** = Phase-5 fresh Lean scaffold.
 6. **Backlog:** `aipm-us3` (general-D dilation via the Stinespring-stack bridge lemma) · `aipm-on1`/`aipm-1pd`
@@ -154,3 +173,14 @@ push. `git pull --rebase --autostash` before `git push`; `bd dolt push` syncs be
   independently reproduce counterexamples. Numerics + a one-line proof are the cheap cross-check.
 - **Task tracking is beads only** (`bd ready`/`bd show`/`bd close`). `agent-A/HANDOFF.md` MATH is current; its
   FILE MAP is stale (repo is `/home/tobias/...`, refs deduped into `refs/`).
+- **`refs/` is reproducible, not machine-bound (this session).** `refs/manifest/sources.lock.json` + `fetch-refs.py`
+  rebuild `refs/` hash-verified; `refs/` payload stays gitignored. 17/50 fetch from authoritative origins; the rest
+  need `$AIPM_REFS_CACHE`. **Trust tiers** (the `(open)`-honesty rule applies to ground truth too): GENUINE =
+  HOS/Idel (user-stored in `../af-tests` + content-verified) and the 6 web-recovered (authoritative origin + hash);
+  **SUSPECT = `kaup-1984`, `chu-russo-1512.03347`** (recorded bytes match no authoritative source — do NOT trust
+  without re-deriving). All 4 af-cited sources (HOS, Kitaev, Idel, VLW) are GENUINE.
+- **Beads is non-functional in this clone** (empty DB, `issue_prefix` config missing → `bd create` errors, no dolt
+  remote → `bd dolt pull/push` fail). So the `aipm-*` ids above can't be reconciled/claimed here and `bd dolt push`
+  must be skipped; this side-quest's commits went directly to `git` on `main`. Restore with `bd init --prefix aipm`
+  + re-add the dolt remote. No active git pre-commit hook here either (`core.hooksPath` unset) — run `check-all` by
+  hand. The side-quest added: `scripts/{check-provenance,fetch-refs}.py` + their tests, `refs/manifest/sources.lock.json`.
