@@ -1,0 +1,305 @@
+{
+  "augmentation_present_in_high_bad": true,
+  "command": "agent-B/experiments/op-exposed-hull/c9_frozen_lp.py --matrix-json agent-B/experiments/op-exposed-hull/outputs/search_direct_ab_free_20260607.json --matrix-index 0 --rho-mult 1 --kappa-mult 0.1 --bad-mult 1 --skeleton-mode first-W --out-json agent-B/experiments/op-exposed-hull/outputs/c9f_direct_free_top0.json",
+  "constants": {
+    "average_drop": 0.029000848097385755,
+    "bad_margin": 0.09666949365795251,
+    "bad_mult": 1.0,
+    "delta": 0.00934499100408492,
+    "exit_tol": 0.09666949365795251,
+    "h1_gap": 0.38667797463181003,
+    "h1_mult": 4.0,
+    "kappa": 0.009666949365795251,
+    "kappa_mult": 0.1,
+    "leak_mult": 1.0,
+    "leak_tol": 0.09666949365795251,
+    "lifetime_mult": 1.0,
+    "rho": 0.09666949365795251,
+    "rho_mult": 1.0,
+    "stationarity_tol": 0.19333898731590501,
+    "tau": 0.09666949365795251
+  },
+  "distances_to_skeleton": [
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 0.0
+    },
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 0.03773799090316861
+    },
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 2.0205941713582183
+    },
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 2.025938835040017
+    },
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 2.0188592329450588
+    },
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 2.0219432793359324
+    }
+  ],
+  "errors": {
+    "idempotence_linf_l1": 3.327416467358013e-16,
+    "row_sum_linf": 2.220446049250313e-16
+  },
+  "exposure": {
+    "2": {
+      "dual_beta_min": 0.16908894638983685,
+      "primal_exposedness": 0.16908894639001099,
+      "well_exposed_at_threshold": true
+    },
+    "3": {
+      "dual_beta_min": 0.9848808389693993,
+      "primal_exposedness": 0.9848808389693994,
+      "well_exposed_at_threshold": true
+    },
+    "4": {
+      "dual_beta_min": 0.015389652996721653,
+      "primal_exposedness": 0.015389652996710022,
+      "well_exposed_at_threshold": true
+    },
+    "5": {
+      "dual_beta_min": 0.9920808913870518,
+      "primal_exposedness": 0.9920808913870519,
+      "well_exposed_at_threshold": true
+    }
+  },
+  "lifetime": {
+    "lifetimes": {
+      "2": 392.7153414170301,
+      "3": 391.8268893790717,
+      "4": 549.9498770164404,
+      "5": 550.9311608087414
+    },
+    "max_lifetime": 550.9311608087414,
+    "message": "finite",
+    "min_lifetime": 391.8268893790717,
+    "no_resolvent_fallback": true,
+    "row_exits": {
+      "2": 0.0034887990978553773,
+      "3": 0.004170490149418615,
+      "4": 0.0008717563573621412,
+      "5": 0.0009309967671258246
+    },
+    "spectral_radius": 0.9979532558338516,
+    "success": true,
+    "threshold": 10.344525063287483
+  },
+  "metadata": {
+    "matrix_index": 0,
+    "metadata": {
+      "BA_error_linf": 2.220446049250313e-16,
+      "amp_grid": 24,
+      "base_delta": 0.00934499100408492,
+      "chosen_amp": 0.0,
+      "delta": 0.00934499100408492,
+      "direction_output_norm": 2.009370474647396,
+      "errors": {
+        "idempotence_linf_l1": 3.327416467358013e-16,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "family": "direct_free_left_inverse",
+      "feature_noise": 0.01,
+      "max_amp": 0.5,
+      "n": 6,
+      "rank": 3,
+      "rank_numeric": 3,
+      "seed": 2026263771,
+      "target_delta": 0.01
+    },
+    "path": "agent-B/experiments/op-exposed-hull/outputs/search_direct_ab_free_20260607.json",
+    "source": "matrix_json",
+    "summary": {
+      "best_constants": {
+        "W": 4,
+        "kappa_mult": 0.25,
+        "max_distance": 0.00039565773605274593,
+        "ratio": 0.004092891367081213,
+        "rho_mult": 0.5,
+        "vertices": 5
+      },
+      "empty_w_count": 0,
+      "finite_report_count": 12,
+      "score": 0.004092891367081213
+    }
+  },
+  "model_scope": "C9 frozen-P linear diagnostic",
+  "negative_masses": [
+    0.00934499100408492,
+    0.0,
+    0.005274334300716682,
+    0.008646014217555321,
+    0.0009572162851888378,
+    0.007162652669549903
+  ],
+  "quasi_closed_distribution": {
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "payload": {
+      "exit": 0.003809810842060721,
+      "mu": {
+        "2": 0.4987108150018073,
+        "3": 0.4950102280532186,
+        "4": 0.006278956944974108,
+        "5": 0.0
+      },
+      "row_exits": {
+        "2": 0.0034887990978553925,
+        "3": 0.0041704901494184,
+        "4": 0.0008717563573621693,
+        "5": 0.0009309967671259021
+      },
+      "stationarity_l1": 0.010081891187526084
+    },
+    "status": 0,
+    "success": true,
+    "value": 0.003809810842060721
+  },
+  "script_sha256": "d1cea7cc57efa8ebfde9bab7c9274de7a6891cdf7e21307d4e1db00ccf64c386",
+  "separator": {
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "payload": {
+      "bad_margin_min": 2.0171845164684252,
+      "global_max_height": 1.001237188150318,
+      "max_margin": 2.0171845164684252,
+      "phi": [
+        -1.0,
+        -1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9975149075721201
+      ],
+      "row_heights": [
+        -1.018687956559841,
+        -0.9809543212896238,
+        1.001237188150318,
+        0.9984965599085844,
+        0.9989268774540985,
+        0.9984965599085843
+      ],
+      "s": -1.0186879565598408,
+      "skeleton_slack_max": -2.220446049250313e-16
+    },
+    "status": 0,
+    "success": true,
+    "value": 2.0171845164684252
+  },
+  "sets": {
+    "H1_indices": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "W_indices": [
+      0,
+      2,
+      3,
+      4,
+      5
+    ],
+    "bad_indices": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "high_bad_indices": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "skeleton_indices": [
+      0
+    ],
+    "vertices": [
+      0,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "shadow_leakage": {
+    "aggregate_forced_leak": "inf",
+    "rows": {
+      "2": {
+        "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+        "payload": {
+          "outside": [
+            0,
+            1,
+            4,
+            5
+          ]
+        },
+        "status": 2,
+        "success": false,
+        "value": null
+      },
+      "3": {
+        "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+        "payload": {
+          "outside": [
+            0,
+            1,
+            4,
+            5
+          ]
+        },
+        "status": 2,
+        "success": false,
+        "value": null
+      },
+      "4": {
+        "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+        "payload": {
+          "outside": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        "status": 2,
+        "success": false,
+        "value": null
+      },
+      "5": {
+        "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+        "payload": {
+          "outside": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        "status": 2,
+        "success": false,
+        "value": null
+      }
+    }
+  },
+  "verdict": "augmentation_vertex_present"
+}

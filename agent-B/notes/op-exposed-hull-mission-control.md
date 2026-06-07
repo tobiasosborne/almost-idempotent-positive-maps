@@ -154,23 +154,45 @@ Subagent roster:
   interface, C12 alpha-budget/calibrated-dual, and C13 separated-circuit
   lower bound.  Focused subplans for these three blockers are in
   `docs/plans/2026-06-07-op-exposed-hull-blocker-subplans.md`.
-- C9 campaign launched: six active tracks cover high-core pruning,
+- C9 campaign checkpointed: six tracks covered high-core pruning,
   shadow-witness leakage, Lyapunov fallback, Markov coupling,
   repaired-coordinate computational scoring, and frozen LP/counterexample
   modeling.  Deliverables are
-  `agent-B/notes/subagent-op-exposed-hull-c9*.md` plus any sandbox experiment
-  outputs.
-- C9-F frozen LP/counterexample model delivered:
-  `agent-B/notes/subagent-op-exposed-hull-c9f-counterexample-lp.md`, with
-  `agent-B/experiments/op-exposed-hull/c9_frozen_lp.py` and `outputs/c9f_*.json`.
-  Verdict: no small-`delta` C9 failure found; Hume/direct examples stop by
-  exposed augmentation or no bad class.  The regular 12-gon realizes the frozen
-  failure pattern only at large negative mass `delta ~= 0.205`.
+  `agent-B/notes/subagent-op-exposed-hull-c9*.md` plus sandbox experiment
+  outputs.  The original C9 dichotomy is not proved; the surviving interface is
+  pi-coupled q/shadow closure with the same occupation law, or a route to C12.
+- C9-A high-core pruning delivered:
+  `agent-B/notes/subagent-op-exposed-hull-c9a-high-core-pruning.md`.  Verdict:
+  an `O(delta)` high core maps into an `O(tau)` high slice with `O(tau)`
+  leakage if the occupation law returns enough mass to the high core; the
+  naive "small high core implies Lyapunov fallback" shortcut is false.
+- C9-B shadow leakage delivered:
+  `agent-B/notes/subagent-op-exposed-hull-c9b-shadow-leakage.md`.  Verdict:
+  Step 3 gives only `O(k/G)` leakage for arbitrary shadow witnesses.  Need
+  q-compatible/minimum-leakage witnesses, or failure becomes a C12 calibrated
+  dual obstruction.
+- C9-C Lyapunov fallback delivered:
+  `agent-B/notes/subagent-op-exposed-hull-c9c-lyapunov-fallback.md`.  Verdict:
+  the finite Markov resolvent lemmas are proof-ready once real q-drift or
+  rowwise exit lower bounds are supplied.
 - C9-D Markov coupling delivered:
   `agent-B/notes/subagent-op-exposed-hull-c9d-markov-coupling.md`.  Verdict:
   distributional quasi-closure does not imply rowwise closure in pure finite
   Markov theory; Step 6 should use a `pi`-coupled q/shadow interface, ideally
   with `pi=m` from the bad-kernel quasi-stationary measure.
+- C9-E computational scoring delivered:
+  `agent-B/notes/subagent-op-exposed-hull-c9e-computational-scoring.md`, with
+  `score_c9_repaired.py` and `outputs/c9_repaired_score_*_20260607.*`.
+  Verdict: no C9 failure found in 4473 scored direct-sample reports; top
+  threats had nonempty bad sets but `bad_lifetime=1` and zero shadow-leakage
+  proxy.
+- C9-F frozen LP/counterexample model checkpointed before worker shutdown:
+  `agent-B/notes/subagent-op-exposed-hull-c9f-counterexample-lp.md`, with
+  `agent-B/experiments/op-exposed-hull/c9_frozen_lp.py` and `outputs/c9f_*.json`.
+  Verdict from the recorded diagnostic: no small-`delta` C9 failure found;
+  Hume/direct examples stop by exposed augmentation or no bad class.  The
+  regular 12-gon realizes the frozen failure pattern only at large negative
+  mass `delta ~= 0.205`.
 
 ### A. LP-dual proof of global exposed hull
 

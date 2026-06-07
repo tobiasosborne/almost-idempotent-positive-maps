@@ -230,3 +230,72 @@ Best next swarm:
 4. C13 analytic reduced-circuit/Radon proof attempt.
 5. C12 lower-face null-circuit leakage proof attempt.
 ```
+
+## Active C9 Campaign
+
+Launched and checkpointed 2026-06-07.  All workers stayed in the Agent B
+sandbox.  The campaign did not prove the original C9 dichotomy; it sharpened
+the remaining interface.
+
+```text
+C9-A high-core pruning
+  -> agent-B/notes/subagent-op-exposed-hull-c9a-high-core-pruning.md
+  Task: from quasi-stationary bad measure and height h=M-phi, prove pruning
+  to rows with q-exit O(tau) and height O(delta), or produce drift.
+  Status: delivered.  A normalized O(delta) high core maps into an O(tau)
+  high slice with O(tau) leakage, provided the occupation law returns enough
+  mass to that core.  The naive fallback "small high core implies drift" is
+  false without a return-mass hypothesis.
+
+C9-B shadow-witness leakage
+  -> agent-B/notes/subagent-op-exposed-hull-c9b-shadow-leakage.md
+  Task: upgrade failed-exposedness high-average witnesses to H1-supported
+  shadow kernels, or show leakage below H1 creates q-drift.
+  Status: delivered.  Step 3 alone gives shadow leakage O(k/G), not O(tau).
+  Arbitrary failed-exposedness witnesses are not tied to repaired q-rows; the
+  corrected split is minimum-leakage/q-compatible witness versus a C12
+  calibrated-dual obstruction.
+
+C9-C Lyapunov fallback
+  -> agent-B/notes/subagent-op-exposed-hull-c9c-lyapunov-fallback.md
+  Task: formalize height/resolvent potentials proving lifetime O(1/tau)
+  whenever C9 concentration fails.
+  Status: delivered.  The finite Markov resolvent lemmas are proof-ready once
+  a genuine q-drift or rowwise exit lower bound is supplied.
+
+C9-D Markov coupling
+  -> agent-B/notes/subagent-op-exposed-hull-c9d-markov-coupling.md
+  Task: bridge distributional quasi-closure to rowwise or pi-coupled closure
+  suitable for Step 6.
+  Status: delivered.  Distributional q-quasi-closure does not imply rowwise
+  closure in pure Markov theory.  Step 6 should instead keep a common
+  q-closed and shadow-stationary averaging law pi, preferably pi=m.
+
+C9-E computational scoring
+  -> agent-B/notes/subagent-op-exposed-hull-c9e-computational-scoring.md
+  Task: score direct A,B samples by q-lifetime, high-slice exit, and shadow
+  leakage; hunt small-delta C9 failures.
+  Status: delivered.  No C9 failure found in 4473 scored direct-sample
+  reports; nonempty bad sets exited immediately in the top threats, and
+  Step-3 shadow leakage proxy was zero.
+
+C9-F frozen LP/counterexample model
+  -> agent-B/notes/subagent-op-exposed-hull-c9f-counterexample-lp.md
+  Task: build a frozen-row/fixed-combinatorics feasibility model for failure
+  of C9 and mine dual certificates or candidate counterexamples.
+  Status: checkpointed before worker shutdown.  The recorded diagnostic found
+  no small-delta C9 failure; regular 12-gon gives only a large-delta
+  calibration warning.
+```
+
+Campaign integration target now:
+
+```text
+Either prove a pi-coupled C9 interface:
+  pi q(H^c) <= O(tau),
+  ||pi S-pi||_1 <= O(tau),
+  pi(1-S1) <= O(tau),
+with pi=m from the bad-kernel occupation law,
+or prove that failure of such q-compatible witness selection produces the
+C12 alpha-budget/calibrated-dual obstruction.
+```

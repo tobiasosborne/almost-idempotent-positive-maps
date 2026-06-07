@@ -1,0 +1,161 @@
+{
+  "augmentation_present_in_high_bad": false,
+  "command": "agent-B/experiments/op-exposed-hull/c9_frozen_lp.py --matrix-json agent-B/experiments/op-exposed-hull/outputs/search_direct_ab_conservative_20260607.json --matrix-index 0 --rho-mult 1 --kappa-mult 0.05 --bad-mult 1 --skeleton-mode W --out-json agent-B/experiments/op-exposed-hull/outputs/c9f_direct_conservative_top0_fullW.json",
+  "constants": {
+    "average_drop": 0.014882605666937634,
+    "bad_margin": 0.09921737111291755,
+    "bad_mult": 1.0,
+    "delta": 0.009844086730558406,
+    "exit_tol": 0.09921737111291755,
+    "h1_gap": 0.3968694844516702,
+    "h1_mult": 4.0,
+    "kappa": 0.004960868555645878,
+    "kappa_mult": 0.05,
+    "leak_mult": 1.0,
+    "leak_tol": 0.09921737111291755,
+    "lifetime_mult": 1.0,
+    "rho": 0.09921737111291755,
+    "rho_mult": 1.0,
+    "stationarity_tol": 0.1984347422258351,
+    "tau": 0.09921737111291755
+  },
+  "distances_to_skeleton": [
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 0.0
+    },
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 0.0
+    },
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 0.0
+    },
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 0.0
+    },
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 0.0
+    }
+  ],
+  "errors": {
+    "idempotence_linf_l1": 0.0,
+    "row_sum_linf": 2.220446049250313e-16
+  },
+  "exposure": {},
+  "lifetime": {
+    "max_lifetime": null,
+    "message": "empty index set",
+    "no_resolvent_fallback": false,
+    "row_exits": {},
+    "spectral_radius": null,
+    "success": false,
+    "threshold": 10.078880228160022
+  },
+  "metadata": {
+    "matrix_index": 0,
+    "metadata": {
+      "BA_error_linf": 0.0,
+      "delta": 0.009844086730558406,
+      "errors": {
+        "idempotence_linf_l1": 0.0,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "family": "direct_anchor_barycentric",
+      "n": 5,
+      "outside_probability": 0.65,
+      "rank": 3,
+      "rank_numeric": 3,
+      "seed": 2026261730,
+      "target_delta": 0.01
+    },
+    "path": "agent-B/experiments/op-exposed-hull/outputs/search_direct_ab_conservative_20260607.json",
+    "source": "matrix_json",
+    "summary": {
+      "best_constants": {
+        "W": 3,
+        "kappa_mult": 0.1,
+        "max_distance": 0.019688173461116995,
+        "ratio": 0.19843474222583696,
+        "rho_mult": 1.0,
+        "vertices": 5
+      },
+      "empty_w_count": 0,
+      "finite_report_count": 12,
+      "score": 0.19843474222583696
+    }
+  },
+  "model_scope": "C9 frozen-P linear diagnostic",
+  "negative_masses": [
+    0.0,
+    0.0,
+    0.0,
+    0.009844086730558406,
+    0.006299983062906332
+  ],
+  "quasi_closed_distribution": {
+    "message": "empty bad set",
+    "payload": {},
+    "status": -1,
+    "success": false,
+    "value": null
+  },
+  "script_sha256": "d1cea7cc57efa8ebfde9bab7c9274de7a6891cdf7e21307d4e1db00ccf64c386",
+  "separator": {
+    "message": "empty bad set or skeleton",
+    "payload": {},
+    "status": -1,
+    "success": false,
+    "value": null
+  },
+  "sets": {
+    "H1_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "W_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "bad_indices": [],
+    "high_bad_indices": [],
+    "skeleton_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "vertices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "shadow_leakage": {
+    "aggregate_forced_leak": 0.0,
+    "rows": {}
+  },
+  "verdict": "no_bad_vertices"
+}

@@ -43,6 +43,12 @@ NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status s
 Mental model: definitions = types · each lemma (af workspace) = a module whose *contract* is its one-line
 statement · a linker enforces the DAG.
 
+**Agent B checkpoint:** on branch `agent-b/op-exposed-hull-orchestration`, the C9 `op-exposed-hull` exploration
+campaign is recorded in `agent-B/notes/op-exposed-hull-mission-control.md` and
+`docs/plans/2026-06-07-op-exposed-hull-blocker-subplans.md`.  No canonical proof layers were edited.  The
+remaining C9 target is a pi-coupled q/shadow interface using the same occupation law, or a C12 calibrated-dual
+obstruction.
+
 ## Governing rules (user) — non-negotiable
 1. **No "standard facts"/"citations".** The ONLY ground truth is a **byte/string match to a LOCAL `refs/`
    source** (enforced by `scripts/check-refs.py`). If a fact is not in `refs/`, **STOP** — do not paraphrase

@@ -1,0 +1,158 @@
+{
+  "augmentation_present_in_high_bad": true,
+  "command": "agent-B/experiments/op-exposed-hull/c9_frozen_lp.py --family hume --s 0.01 --rho-mult 1 --kappa-mult 0.25 --bad-mult 0.25 --skeleton-indices 1 --bad-indices 2 --out-json agent-B/experiments/op-exposed-hull/outputs/c9f_hume_s001.json",
+  "constants": {
+    "average_drop": 0.0075,
+    "bad_margin": 0.0025,
+    "bad_mult": 0.25,
+    "delta": 0.0001,
+    "exit_tol": 0.01,
+    "h1_gap": 0.04,
+    "h1_mult": 4.0,
+    "kappa": 0.0025,
+    "kappa_mult": 0.25,
+    "leak_mult": 1.0,
+    "leak_tol": 0.01,
+    "lifetime_mult": 1.0,
+    "rho": 0.01,
+    "rho_mult": 1.0,
+    "stationarity_tol": 0.02,
+    "tau": 0.01
+  },
+  "distances_to_skeleton": [
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 0.020002000000000027
+    },
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 0.0
+    },
+    {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "status": 0,
+      "success": true,
+      "value": 2.0002
+    }
+  ],
+  "errors": {
+    "idempotence_linf_l1": 2.0816681711721685e-17,
+    "row_sum_linf": 0.0
+  },
+  "exposure": {
+    "2": {
+      "dual_beta_min": 0.990000000000002,
+      "primal_exposedness": 0.99,
+      "well_exposed_at_threshold": true
+    }
+  },
+  "lifetime": {
+    "lifetimes": {
+      "2": "inf"
+    },
+    "max_lifetime": "inf",
+    "message": "singular_or_closed",
+    "min_lifetime": "inf",
+    "no_resolvent_fallback": true,
+    "row_exits": {
+      "2": 0.0
+    },
+    "spectral_radius": 1.0,
+    "success": true,
+    "threshold": 100.0
+  },
+  "metadata": {
+    "family": "hume",
+    "s": 0.01
+  },
+  "model_scope": "C9 frozen-P linear diagnostic",
+  "negative_masses": [
+    0.0,
+    0.0001,
+    0.0
+  ],
+  "quasi_closed_distribution": {
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "payload": {
+      "exit": 0.0,
+      "mu": {
+        "2": 1.0
+      },
+      "row_exits": {
+        "2": 0.0
+      },
+      "stationarity_l1": 0.0
+    },
+    "status": 0,
+    "success": true,
+    "value": 0.0
+  },
+  "script_sha256": "d1cea7cc57efa8ebfde9bab7c9274de7a6891cdf7e21307d4e1db00ccf64c386",
+  "separator": {
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "payload": {
+      "bad_margin_min": 2.0002,
+      "global_max_height": 1.0,
+      "max_margin": 2.0002,
+      "phi": [
+        -1.0,
+        -1.0,
+        1.0
+      ],
+      "row_heights": [
+        -0.9801979999999999,
+        -1.0002,
+        1.0
+      ],
+      "s": -1.0002,
+      "skeleton_slack_max": 0.0
+    },
+    "status": 0,
+    "success": true,
+    "value": 2.0002
+  },
+  "sets": {
+    "H1_indices": [
+      2
+    ],
+    "W_indices": [
+      1,
+      2
+    ],
+    "bad_indices": [
+      2
+    ],
+    "high_bad_indices": [
+      2
+    ],
+    "skeleton_indices": [
+      1
+    ],
+    "vertices": [
+      1,
+      2
+    ]
+  },
+  "shadow_leakage": {
+    "aggregate_forced_leak": "inf",
+    "rows": {
+      "2": {
+        "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)",
+        "payload": {
+          "outside": [
+            0,
+            1
+          ]
+        },
+        "status": 2,
+        "success": false,
+        "value": null
+      }
+    }
+  },
+  "verdict": "augmentation_vertex_present"
+}

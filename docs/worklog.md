@@ -385,3 +385,22 @@ diagnostics reproduce Hume augmentation and only the large-negative-mass
 regular-polygon warning; direct exact searches using `P=A B`, `B A=I`, `P1=1`
 found no counterexample.  Next Agent B numerics should score repaired-kernel
 bad lifetime on direct `A,B` samples rather than raw exposed-hull distance.
+
+## 2026-06-07 (Agent B) — C9 shadow-exit campaign checkpoint
+
+Swarmed C9 from six angles in the exploration sandbox and stopped at a clean
+checkpoint on user request.  No canonical layers were edited.  The campaign
+produced notes `subagent-op-exposed-hull-c9a` through `c9f` plus repaired-kernel
+and frozen-LP diagnostics under `agent-B/experiments/op-exposed-hull/`.
+
+Main mathematical outcome: the naive C9 shortcut is false.  Distributional
+q-quasi-closure does not imply rowwise closure, and Step 3 gives only `O(k/G)`
+shadow leakage for arbitrary failed-exposedness witnesses.  The finite Markov
+Lyapunov/resolvent fallback is proof-ready once genuine q-drift is supplied.
+The remaining viable interface is to keep the repaired q-chain and the shadow
+kernel coupled by the same occupation law `pi=m`, or show failure produces the
+C12 alpha-budget/calibrated-dual obstruction.
+
+Numerics found no small-`delta` C9 failure: repaired direct-sample scoring saw
+bad classes exit immediately in the top threats, and the frozen LP diagnostic
+found only the large-negative-mass regular-polygon calibration warning.
