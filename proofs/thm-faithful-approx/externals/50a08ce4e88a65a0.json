@@ -1,0 +1,8 @@
+{
+  "id": "50a08ce4e88a65a0",
+  "name": "GT-state-bounded",
+  "source": "HOS, refs/hos/joa-m.md:378 (1.2.2 Lemma) + proof, VERBATIM: \"Let A be an order unit space with order unit e. If  $\\rho \\in A^*$  then  $\\rho \\in S(A)$  if and only if  $\\|\\rho\\| = \\rho(e) = 1$ .\" Proof gives |rho(a)|\u003c=||a|| for a state rho (||rho||=1). Applied to rho a state on B(H)_sa (order unit 1): |rho(a)|\u003c=||a||.",
+  "content_hash": "31a080b3ffc63ddc941eba5698d6d1f4042915a616bdac54b2f85adf8deba8ec",
+  "created": "2026-06-07T14:16:49.222293471Z",
+  "notes": ""
+}

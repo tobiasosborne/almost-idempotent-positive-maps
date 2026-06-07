@@ -54,7 +54,7 @@
 | `thm-dilation-compatible` | theorem | proved | validated | B | If there are a finite-dimensional Hilbert space K, a unital order-isometric Jord… |
 | `thm-effros-stormer` | theorem | cited | none | A | If A is a unital JC-algebra and E:A->A is a unital positive projection (E^2=E), … |
 | `thm-factorization` | theorem | proved | none | B | Conditional on op-npps, an almost-idempotent unital positive Phi (||Phi^2-Phi||<… |
-| `thm-faithful-approx` | theorem | proved | none | A | For unital positive Phi with ||Phi^2-Phi|| <= eta <= eta_0, P=theta(2Phi-1), A=I… |
+| `thm-faithful-approx` | theorem | proved | validated | A | For unital positive Phi with ||Phi^2-Phi|| <= eta <= eta_0, P=theta(2Phi-1), A=I… |
 | `thm-jnw-classification` | theorem | cited | none | A | Every finite-dimensional formally real (Euclidean) unital Jordan algebra is a di… |
 | `thm-matrix-splitting` | theorem | proved | none | B | (benchmark; re-audit pending) There is a universal C so that for every n and F i… |
 | `thm-rank-one` | theorem | proved | none | B | There are universal delta_0,C>0 such that every rank-one signed affine retractio… |

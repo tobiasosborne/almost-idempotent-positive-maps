@@ -1,0 +1,8 @@
+{
+  "id": "08032996362e2180",
+  "name": "GT-trace-psd",
+  "source": "van Luijk-Wilming, refs/vlw-2604.08380/paper.tex:453 (eq:self-dual-cone), VERBATIM: \"a \\in J^+ \\qquad \\iff\\qquad  \\tr(ab) \\ge0 \\quad \\forall b\\in J^+.\" (self-duality of the positive cone with J=L(H); apply to a:=rho_omega-lambda1\u003e=0 and b:=x\u003e=0)",
+  "content_hash": "2d390cc3d34536f3c3498ce8b8cad2550e796a39bb82f5e376cd2913eec49b8a",
+  "created": "2026-06-07T14:16:57.691796121Z",
+  "notes": ""
+}

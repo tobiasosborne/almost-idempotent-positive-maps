@@ -1,0 +1,8 @@
+{
+  "id": "8f81fa91483776d9",
+  "name": "GT-squarehole",
+  "source": "Prior VALIDATED registry lemma lem-square-hole-almost-positive (proofs/lem-square-hole-almost-positive/, af: validated; status proved). Imported as a black box; instantiate r:=a. VERBATIM contract: \"For r in A the square hole q_r = P(r^2)-r^2 in Ker P satisfies q_r \u003e= -C eta ||r||^2 1, ||P(q_r^2)|| \u003c= C eta ||r||^4, and ||q_r||_omega \u003c= C sqrt(eta) ||r||^2.\"",
+  "content_hash": "003bb9fa9c4ec10e7c5f328e4addbe0ed6b84af53721ada81b81c77cc315d11b",
+  "created": "2026-06-07T14:17:12.46386129Z",
+  "notes": ""
+}

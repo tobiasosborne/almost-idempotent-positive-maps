@@ -1,0 +1,8 @@
+{
+  "id": "4d2276dddd4b38c3",
+  "name": "GT-hyp",
+  "source": "GIVEN HYPOTHESES and CONSTRUCTIONS of the theorem (the contract's standing assumptions; not a refs quote, not an import). Phi unital positive on B(H)_sa; ||Phi^2-Phi||\u003c=eta\u003c=eta_0; P=theta(2Phi-1); A=Im P (so P(a)=a for a in A); omega a faithful state on B(H) with ||omega∘Phi-omega||\u003c=eta and density rho_omega\u003e=lambda 1, lambda in (0,1]; q_a=P(a^2)-a^2 in Ker P; h_{a,b}=a∘b-P(a∘b)=-q_{a,b}; a,b in A. WLOG lambda\u003c=1.",
+  "content_hash": "9f54942f7d2097b8ecc25aa6516f97a4cf00d4aeddf60c6f5227ab485925362d",
+  "created": "2026-06-07T14:17:12.47952642Z",
+  "notes": ""
+}
