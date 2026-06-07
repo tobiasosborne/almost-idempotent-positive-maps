@@ -364,6 +364,113 @@ O: Farkas dual of the interpolation-upgrade LP.
 P: no-cycle/high-face lemma for quasi-closed bad classes.
 ```
 
+## Hard-block decomposition
+
+The closed-bad-class/high-face blocker is now split into eight smaller
+subtasks.  Steps 1-6 have first-pass artifacts; steps 7-8 are queued until
+thread capacity frees.
+
+The durable prompt roster is
+`docs/plans/2026-06-07-op-exposed-hull-hard-block-delegation.md`.
+
+Durable dispatch packets for all eight workers are in
+`agent-B/notes/op-exposed-hull-hard-block-dispatch-packets.md`.
+
+```text
+1. High-slice extraction:
+   long bad lifetime + separator phi -> high slice still O(tau)-closed under q.
+
+2. Top-face exposure test:
+   separator-maximal top vertex with a rho-gap is (rho,kappa)-well-exposed.
+
+3. Shadow edge:
+   non-exposed top vertex -> rho-separated high bad row/barycenter.
+
+4. Shadow recurrence / potential:
+   repeated shadow edges either give Lyapunov drift or a recurrent high bad
+   component.
+
+5. Failed-exposedness circuit extraction:
+   e_v(rho)<kappa -> normalized signed affine circuit with small beta mass.
+
+6. Circuit aggregation:
+   average/eliminate local circuits over a q-quasi-closed bad class.
+
+7. Separated circuit lower bound:
+   normalized rho-separated circuit in an exact signed retraction forces
+   max_i neg(p_i) >= c rho^2.
+
+8. Closed-bad-class capstone packaging:
+   assemble 1-7 into af-sized candidate contracts and a dependency DAG.
+```
+
+Current deliverables:
+
+```text
+step1-high-slice -> agent-B/notes/subagent-op-exposed-hull-step1-high-slice.md
+step2-top-face -> agent-B/notes/subagent-op-exposed-hull-step2-top-face-exposure.md
+step3-shadow-edge -> agent-B/notes/subagent-op-exposed-hull-step3-shadow-edge.md
+step4-shadow-recurrence -> agent-B/notes/subagent-op-exposed-hull-step4-shadow-recurrence.md
+step5-circuit-extraction -> agent-B/notes/subagent-op-exposed-hull-step5-circuit-extraction.md
+step6-circuit-aggregation -> agent-B/notes/subagent-op-exposed-hull-step6-circuit-aggregation.md
+step7-circuit-lower-bound -> agent-B/notes/subagent-op-exposed-hull-step7-circuit-lower-bound.md
+step8-capstone-packaging -> agent-B/notes/subagent-op-exposed-hull-step8-capstone-packaging.md
+```
+
+Step 1 status: completed in exploration form.  It proves the two-scale
+drift bound
+
+```text
+q_i({phi <= M-gamma}) <= (M-phi(p_i)+L_phi eps)/gamma,
+eps<=4delta.
+```
+
+Thus an `O(delta)` top core maps into a `gamma~tau` high slice with
+`O(tau)` leakage.  It does not prove that every row in a `tau`-thick slice is
+rowwise `O(tau)`-closed; that would only give constant leakage.
+
+Step 2 status, 2026-06-07: delivered.  A separator top row is exposed once the
+outside `phi`-drop exceeds the row oscillation times `kappa`; with
+`||phi||_{l_infty-dual}<=1`, the row oscillation is at most `2+4delta`.
+
+Step 3 status, 2026-06-07: delivered.  Non-exposedness of a separator-global
+top row gives a `rho`-separated row witness with height loss at most
+`(2+4delta)kappa`; badness is preserved after lowering the height threshold by
+that amount.
+
+Step 4 status, 2026-06-07: delivered.  The finite recurrence lemma is clean:
+a substochastic shadow kernel with small row loss has a recurrent probability
+whose stationarity defect is the row-loss budget.  The open interface is
+choosing LP shadow witnesses with high-slice leakage `O(tau)`, or proving a
+q-Lyapunov drift that returns to the bad-kernel resolvent.
+
+Step 5 status, 2026-06-07: delivered.  The failed-exposedness Farkas circuit
+is proof-ready, including complementarity.  The uncontrolled lower-face
+`alpha` mass is now load-bearing.
+
+Step 6 status, 2026-06-07: delivered.  It does not close as a standalone
+lemma.  Both the `mu`-average and q-flow normalizations reduce to an
+alpha-budget/calibrated-dual problem: failed-exposedness controls `beta` mass
+but not the lower-face `alpha` mass.  Next dependencies are Step 5
+complementarity support, LP/game mining for an alpha budget, and Step 7 testing
+whether a separated-circuit lower bound can tolerate witness mass `Omega(tau)`.
+
+Step 7 status, 2026-06-07: delivered as a sanity/refinement note, not a proof.
+The raw lower bound for arbitrary affine circuits is false because stochastic
+idempotents can have nonvertex transient-row circuits with zero negative mass.
+The viable lower bound must be reduced/vertex or Step-5 anchored.  If Step 6
+preserves only `theta=Omega(tau)` separated witness mass, Step 7 needs at
+least a `theta*rho` lower bound; `theta*rho^2` is too weak at fixed constants.
+
+Step 8 status, 2026-06-07: delivered.  The candidate DAG is clean, and the
+blocker cut is now:
+
+```text
+C9  shadow-exit/interface lemma,
+C12 alpha-budget or calibrated-dual aggregation lemma,
+C13 separated-circuit negative-mass lower bound.
+```
+
 Every worker must report:
 
 ```text

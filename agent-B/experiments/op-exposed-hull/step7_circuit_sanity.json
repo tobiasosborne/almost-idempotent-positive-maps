@@ -1,0 +1,93 @@
+{
+  "status": "Agent B sandbox; Step 7 sanity checks, not canonical.",
+  "command": "python3 agent-B/experiments/op-exposed-hull/step7_circuit_sanity.py",
+  "script_sha256": "2f691c0922824bf8141185f1bf91ee824b018c2c37f95dc1d612f2546896d44d",
+  "examples": [
+    {
+      "name": "stochastic_segment_transient_row",
+      "purpose": "Shows the raw affine-circuit lower bound is false unless the support is restricted to bad vertices or a Step-6 one-sided witness circuit.",
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.0
+        ]
+      ],
+      "max_negative_mass": 0.0,
+      "errors": {
+        "row_sum_error": 0.0,
+        "idempotence_error_linf": 0.0
+      },
+      "affine_circuit": "p_2 = 1/2 p_0 + 1/2 p_1",
+      "circuit_residual_l1": 0.0,
+      "pairwise_distances": {
+        "d01": 2.0,
+        "d02": 1.0,
+        "d12": 1.0
+      },
+      "nonvertex_warning": "p_2 is not a row vertex; in the real exposed-hull proof it is already in conv{p_0,p_1}."
+    },
+    {
+      "name": "n4_corank_one_hume_shape_t_0.1",
+      "purpose": "Shows how small circuit coefficients are accompanied by collapse of a vertex pair at the sqrt(delta) scale.",
+      "max_negative_mass": 0.010000000000000002,
+      "tau": 0.1,
+      "coefficients": {
+        "a": 0.99,
+        "b": 0.010000000000000002,
+        "c": 0.99,
+        "d": 0.010000000000000002
+      },
+      "errors": {
+        "row_sum_error": 0.0,
+        "idempotence_error_linf": 6.938893903907228e-18
+      },
+      "circuit_residual_l1": 7.589415207398531e-18,
+      "pairwise_distances": {
+        "d01": 2.0199999999999996,
+        "d02": 0.020202020202020214,
+        "d03": 2.0,
+        "d12": 2.0,
+        "d13": 2.0,
+        "d23": 2.0002020202020203
+      },
+      "minimum_pairwise_distance_over_tau": 0.20202020202020213
+    },
+    {
+      "name": "n4_corank_one_hume_shape_t_0.02",
+      "purpose": "Shows how small circuit coefficients are accompanied by collapse of a vertex pair at the sqrt(delta) scale.",
+      "max_negative_mass": 0.0004,
+      "tau": 0.02,
+      "coefficients": {
+        "a": 0.9996,
+        "b": 0.0004,
+        "c": 0.9996,
+        "d": 0.0004
+      },
+      "errors": {
+        "row_sum_error": 0.0,
+        "idempotence_error_linf": 4.412702842016003e-17
+      },
+      "circuit_residual_l1": 4.415569519146867e-17,
+      "pairwise_distances": {
+        "d01": 2.0008,
+        "d02": 0.0008003201280512647,
+        "d03": 2.0,
+        "d12": 2.0,
+        "d13": 2.0,
+        "d23": 2.000000320128051
+      },
+      "minimum_pairwise_distance_over_tau": 0.04001600640256323
+    }
+  ]
+}

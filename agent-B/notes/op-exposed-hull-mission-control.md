@@ -107,6 +107,52 @@ Subagent roster:
   strongest architecture is maximal exposed skeleton + positive-coordinate
   Markov resolvent + LP/game closed-class augmentation + oriented-circuit
   bookkeeping; pure convex geometry alone is not enough.
+- I/P: closed-bad-class hard-block decomposition.  Active workers:
+  step1 high-slice extraction, step2 top-face exposure, step3 shadow edge,
+  step4 shadow recurrence, step5 circuit extraction, step6 circuit
+  aggregation.  Queued until thread capacity frees: step7 separated-circuit
+  negative-mass lower bound, step8 capstone packaging.  Durable decomposition:
+  `docs/plans/2026-06-07-op-exposed-hull-attack-plan.md`.  Dispatch packets:
+  `agent-B/notes/op-exposed-hull-hard-block-dispatch-packets.md`; expanded
+  prompt roster:
+  `docs/plans/2026-06-07-op-exposed-hull-hard-block-delegation.md`.
+- Step1 high-slice extraction delivered:
+  `agent-B/notes/subagent-op-exposed-hull-step1-high-slice.md`.  Verdict:
+  proof-ready two-scale drift bound:
+  `q_i({phi<=M-gamma}) <= (M-phi(p_i)+L_phi eps)/gamma`, `eps<=4delta`.
+  This gives `O(tau)` leakage from an `O(delta)` top core into a
+  `gamma~tau` high slice; same-scale rowwise closure is too strong.
+- Step2 top-face exposure and Step3 shadow edge delivered:
+  `agent-B/notes/subagent-op-exposed-hull-step2-top-face-exposure.md` and
+  `agent-B/notes/subagent-op-exposed-hull-step3-shadow-edge.md`.  Verdict:
+  deterministic/proof-ready, provided the top row is a global separator
+  maximizer or higher rows are also included in the bad/high set.
+- Step4 shadow recurrence delivered:
+  `agent-B/notes/subagent-op-exposed-hull-step4-shadow-recurrence.md`.
+  Verdict: finite recurrence lemma is clean; open interface is choosing shadow
+  witnesses with high-slice leakage `O(tau)` or proving a q-Lyapunov drift.
+- Step5 failed-exposedness circuit extraction delivered:
+  `agent-B/notes/subagent-op-exposed-hull-step5-circuit-extraction.md`.
+  Verdict: LP/Farkas circuit is proof-ready; uncontrolled lower-face
+  `alpha` mass is load-bearing.
+- Step6 circuit aggregation delivered:
+  `agent-B/notes/subagent-op-exposed-hull-step6-circuit-aggregation.md`.
+  Verdict: aggregation works conditionally with an averaged alpha budget or a
+  calibrated q-compatible dual; raw quasi-closedness controls q-flow but not
+  the failed-exposedness lower-face alpha mass.
+- Step7 separated-circuit lower bound delivered as a sanity/refinement note:
+  `agent-B/notes/subagent-op-exposed-hull-step7-circuit-lower-bound.md`, with
+  reproducible checks in
+  `agent-B/experiments/op-exposed-hull/step7_circuit_sanity.py`.  Verdict:
+  raw affine-circuit lower bound is false because of stochastic transient-row
+  circuits; the viable target must be reduced/vertex or Step-5 anchored.  If
+  Step6 gives only `theta=Omega(tau)` witness mass, Step7 needs at least a
+  `theta*rho` lower bound, not merely `theta*rho^2`.
+- Step8 capstone packaging delivered:
+  `agent-B/notes/subagent-op-exposed-hull-step8-capstone-packaging.md`.
+  Verdict: candidate DAG is clean; the blocker cut is C9 shadow-exit
+  interface, C12 alpha-budget/calibrated-dual, and C13 separated-circuit
+  lower bound.
 
 ### A. LP-dual proof of global exposed hull
 
