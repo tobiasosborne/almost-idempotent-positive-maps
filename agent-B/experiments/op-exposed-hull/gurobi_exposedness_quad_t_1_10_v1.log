@@ -1,0 +1,43 @@
+
+Gurobi 13.0.2 (linux64, gurobi_cl) logging started Sun Jun  7 18:43:33 2026
+
+Set parameter Username
+Set parameter LicenseID to value 2821407
+Set parameter LogFile to value "/home/tobiasosborne/Projects/almost-idempotent-positive-maps/agent-B/experiments/op-exposed-hull/gurobi_exposedness_quad_t_1_10_v1.log"
+Using license file /home/tobiasosborne/gurobi.lic
+Academic license - for non-commercial use only - expires 2027-05-12
+
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Ubuntu 24.04.3 LTS")
+Copyright (c) 2026, Gurobi Optimization, LLC
+
+Read LP format model from file /home/tobiasosborne/Projects/almost-idempotent-positive-maps/agent-B/experiments/op-exposed-hull/gurobi_exposedness_quad_t_1_10_v1.lp
+Reading time = 0.00 seconds
+obj: 12 rows, 6 columns, 45 nonzeros
+
+Using Gurobi shared library /home/tobiasosborne/opt/gurobi1302/linux64/lib/libgurobi.so.13.0.2
+
+CPU model: AMD Ryzen Threadripper 3970X 32-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 32 physical cores, 64 logical processors, using up to 32 threads
+
+Optimize a model with 12 rows, 6 columns and 45 nonzeros (Max)
+Model fingerprint: 0x795f16ac
+Model has 1 linear objective coefficients
+Coefficient statistics:
+  Matrix range     [1e-04, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+
+Presolve removed 10 rows and 4 columns
+Presolve time: 0.00s
+Presolved: 2 rows, 2 columns, 4 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+00   1.010101e-02   0.000000e+00      0s
+       1    9.9000000e-01   0.000000e+00   0.000000e+00      0s
+
+Solved in 1 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  9.900000000e-01
+
+Wrote result file '/home/tobiasosborne/Projects/almost-idempotent-positive-maps/agent-B/experiments/op-exposed-hull/gurobi_exposedness_quad_t_1_10_v1.sol'
+

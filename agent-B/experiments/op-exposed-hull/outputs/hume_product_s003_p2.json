@@ -1,0 +1,2305 @@
+{
+  "command": "agent-B/experiments/op-exposed-hull/scripts/analyze_family.py --family hume-product --s 0.03 --power 2 --rho-mults 0.5,1,2,4,8 --kappa-mults 0.1,0.25,0.5,1 --out-json agent-B/experiments/op-exposed-hull/outputs/hume_product_s003_p2.json --out-csv agent-B/experiments/op-exposed-hull/outputs/hume_product_s003_p2.csv",
+  "matrix": [
+    [
+      0.0008468100000000009,
+      0.027405594300000013,
+      0.0008475957000000004,
+      0.027405594300000013,
+      0.886936383529,
+      0.027431022170999998,
+      0.0008475957000000004,
+      0.027431022170999998,
+      0.000848382129
+    ],
+    [
+      0.0008730000000000004,
+      0.028253190000000015,
+      -2.6190000000000012e-05,
+      0.028253189999999997,
+      0.9143674057,
+      -0.0008475957,
+      0.0008738099999999999,
+      0.028279404299999998,
+      -2.62143e-05
+    ],
+    [
+      0.0,
+      0.0,
+      0.029100000000000015,
+      0.0,
+      0.0,
+      0.941773,
+      0.0,
+      0.0,
+      0.029127
+    ],
+    [
+      0.0008730000000000004,
+      0.028253189999999997,
+      0.0008738099999999999,
+      0.028253190000000015,
+      0.9143674057,
+      0.028279404299999998,
+      -2.6190000000000012e-05,
+      -0.0008475957,
+      -2.62143e-05
+    ],
+    [
+      0.0009,
+      0.029127,
+      -2.7e-05,
+      0.029127,
+      0.94264681,
+      -0.0008738099999999999,
+      -2.7e-05,
+      -0.0008738099999999999,
+      8.1e-07
+    ],
+    [
+      0.0,
+      0.0,
+      0.03,
+      0.0,
+      0.0,
+      0.9709,
+      -0.0,
+      -0.0,
+      -0.0009
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.029100000000000015,
+      0.941773,
+      0.029127
+    ],
+    [
+      0.0,
+      0.0,
+      -0.0,
+      0.0,
+      0.0,
+      -0.0,
+      0.03,
+      0.9709,
+      -0.0009
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "metadata": {
+    "family": "hume_product",
+    "power": 2,
+    "s": 0.03
+  },
+  "reports": [
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.03
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.03000000000003311
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.030000000000000134
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.004244549446054315,
+      "kappa_mult": 0.1,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.021222747230271576,
+      "rho_mult": 0.5,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.03
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.03000000000003311
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.030000000000000134
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.010611373615135788,
+      "kappa_mult": 0.25,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.021222747230271576,
+      "rho_mult": 0.5,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.03
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.03000000000003311
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.030000000000000134
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.021222747230271576,
+      "kappa_mult": 0.5,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.021222747230271576,
+      "rho_mult": 0.5,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.03
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.03000000000003311
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.030000000000000134
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.04244549446054315,
+      "kappa_mult": 1.0,
+      "max_distance_ratio": 47.20410600617518,
+      "max_distance_to_conv_W": 2.0036016200000004,
+      "n": 9,
+      "rho": 0.021222747230271576,
+      "rho_mult": 0.5,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 1.998303235742
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 2.0018000000000002
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 1.941746
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 2.0018000000000002
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 2.0036016200000004
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 2.0018
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 1.941746
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 2.0018
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.03
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.03000000000003311
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.030000000000000134
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.004244549446054315,
+      "kappa_mult": 0.1,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.04244549446054315,
+      "rho_mult": 1.0,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.03
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.03000000000003311
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.030000000000000134
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.010611373615135788,
+      "kappa_mult": 0.25,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.04244549446054315,
+      "rho_mult": 1.0,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.03
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.03000000000003311
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.030000000000000134
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.021222747230271576,
+      "kappa_mult": 0.5,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.04244549446054315,
+      "rho_mult": 1.0,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.03
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.03000000000003311
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.030000000000000134
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.04244549446054315,
+      "kappa_mult": 1.0,
+      "max_distance_ratio": 47.20410600617518,
+      "max_distance_to_conv_W": 2.0036016200000004,
+      "n": 9,
+      "rho": 0.04244549446054315,
+      "rho_mult": 1.0,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 1.998303235742
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 2.0018000000000002
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 1.941746
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 2.0018000000000002
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 2.0036016200000004
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 2.0018
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 1.941746
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 2.0018
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0591
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000002
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000001
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.004244549446054315,
+      "kappa_mult": 0.1,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.0848909889210863,
+      "rho_mult": 2.0,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0591
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000002
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000001
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.010611373615135788,
+      "kappa_mult": 0.25,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.0848909889210863,
+      "rho_mult": 2.0,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0591
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000002
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000001
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.021222747230271576,
+      "kappa_mult": 0.5,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.0848909889210863,
+      "rho_mult": 2.0,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0591
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000002
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000001
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.04244549446054315,
+      "kappa_mult": 1.0,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.0848909889210863,
+      "rho_mult": 2.0,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 1.0
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000002
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000001
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.004244549446054315,
+      "kappa_mult": 0.1,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.1697819778421726,
+      "rho_mult": 4.0,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 1.0
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000002
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000001
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.010611373615135788,
+      "kappa_mult": 0.25,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.1697819778421726,
+      "rho_mult": 4.0,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 1.0
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000002
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000001
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.021222747230271576,
+      "kappa_mult": 0.5,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.1697819778421726,
+      "rho_mult": 4.0,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 1.0
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000002
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000001
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.04244549446054315,
+      "kappa_mult": 1.0,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.1697819778421726,
+      "rho_mult": 4.0,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 1.0
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000002
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000001
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.004244549446054315,
+      "kappa_mult": 0.1,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.3395639556843452,
+      "rho_mult": 8.0,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 1.0
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000002
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000001
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.010611373615135788,
+      "kappa_mult": 0.25,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.3395639556843452,
+      "rho_mult": 8.0,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 1.0
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000002
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000001
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.021222747230271576,
+      "kappa_mult": 0.5,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.3395639556843452,
+      "rho_mult": 8.0,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "W_indices": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "delta": 0.0018016199999999997,
+      "dimension": 9,
+      "errors": {
+        "idempotence_linf_l1": 2.959871930885427e-17,
+        "row_sum_linf": 2.220446049250313e-16
+      },
+      "exposedness": {
+        "4": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 1.0
+        },
+        "5": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000002
+        },
+        "7": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.970000000000001
+        },
+        "8": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.9700000000000001
+        }
+      },
+      "kappa": 0.04244549446054315,
+      "kappa_mult": 1.0,
+      "max_distance_ratio": 0.0,
+      "max_distance_to_conv_W": 0.0,
+      "n": 9,
+      "rho": 0.3395639556843452,
+      "rho_mult": 8.0,
+      "row_distances_to_conv_W": [
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        },
+        {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "status": 0,
+          "success": true,
+          "value": 0.0
+        }
+      ],
+      "tau": 0.04244549446054315,
+      "vertices": [
+        4,
+        5,
+        7,
+        8
+      ]
+    }
+  ]
+}

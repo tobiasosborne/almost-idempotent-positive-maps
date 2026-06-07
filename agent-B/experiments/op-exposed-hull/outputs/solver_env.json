@@ -1,0 +1,46 @@
+{
+  "commands": {
+    "gurobi_cl": {
+      "available": true,
+      "output": "Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - \"Ubuntu 24.04.3 LTS\")\nCopyright (c) 2026, Gurobi Optimization, LLC",
+      "path": "/home/tobiasosborne/opt/gurobi1302/linux64/bin/gurobi_cl",
+      "returncode": 0
+    },
+    "wolframscript": {
+      "available": true,
+      "output": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "path": "/usr/bin/wolframscript",
+      "returncode": 0
+    },
+    "wolframscript_smoke": {
+      "available": true,
+      "output": "Your Wolfram product is not activated or is experiencing a license-related problem.\n\nPlease activate the product at the following WolframKernel location:\n\n    /usr/local/Wolfram/Wolfram/14.3/Executables/WolframKernel",
+      "path": "/usr/bin/wolframscript",
+      "returncode": 255
+    }
+  },
+  "primary_lp_backend": "scipy.optimize.linprog(method='highs')",
+  "python": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+  "python_modules": {
+    "cvxpy": {
+      "available": false,
+      "error": "ModuleNotFoundError(\"No module named 'cvxpy'\")"
+    },
+    "gurobipy": {
+      "available": false,
+      "error": "ModuleNotFoundError(\"No module named 'gurobipy'\")"
+    },
+    "numpy": {
+      "available": true,
+      "version": "1.26.4"
+    },
+    "ortools": {
+      "available": false,
+      "error": "ModuleNotFoundError(\"No module named 'ortools'\")"
+    },
+    "scipy": {
+      "available": true,
+      "version": "1.11.4"
+    }
+  }
+}

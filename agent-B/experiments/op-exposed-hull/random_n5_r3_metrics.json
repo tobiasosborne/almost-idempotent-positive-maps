@@ -1,0 +1,1219 @@
+{
+  "family": "random",
+  "n": 5,
+  "rank": 3,
+  "samples": 2000,
+  "accepted": 355,
+  "rho_factor": 8.0,
+  "kappa_factor": 0.125,
+  "reports": [
+    {
+      "name": "random_n=5_r=3_sample=1",
+      "n": 5,
+      "delta": 0.15929553052850212,
+      "tau": 0.3991184417293971,
+      "rho": 3.1929475338351767,
+      "kappa": 0.049889805216174636,
+      "idempotence_error": 3.191891195797325e-16,
+      "unital_error": 1.1102230246251565e-16,
+      "vertex_indices": [
+        0,
+        3,
+        4
+      ],
+      "w_indices": [
+        0,
+        3,
+        4
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": false,
+          "exposedness": null,
+          "in_w": false,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": false,
+          "exposedness": null,
+          "in_w": false,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=8",
+      "n": 5,
+      "delta": 0.13922712423104258,
+      "tau": 0.37313151063806255,
+      "rho": 2.9850520851045004,
+      "kappa": 0.04664143882975782,
+      "idempotence_error": 3.2959746043559335e-16,
+      "unital_error": 2.220446049250313e-16,
+      "vertex_indices": [
+        0,
+        1,
+        4
+      ],
+      "w_indices": [
+        0,
+        1,
+        4
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": false,
+          "exposedness": null,
+          "in_w": false,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": false,
+          "exposedness": null,
+          "in_w": false,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=13",
+      "n": 5,
+      "delta": 0.19025556879476688,
+      "tau": 0.43618295335187834,
+      "rho": 3.4894636268150268,
+      "kappa": 0.05452286916898479,
+      "idempotence_error": 1.97758476261356e-16,
+      "unital_error": 0.0,
+      "vertex_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "w_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=14",
+      "n": 5,
+      "delta": 0.15481789815883756,
+      "tau": 0.3934690561643159,
+      "rho": 3.147752449314527,
+      "kappa": 0.049183632020539485,
+      "idempotence_error": 1.8041124150158794e-16,
+      "unital_error": 2.220446049250313e-16,
+      "vertex_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "w_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=22",
+      "n": 5,
+      "delta": 0.08922743402639294,
+      "tau": 0.2987096148877584,
+      "rho": 2.389676919102067,
+      "kappa": 0.0373387018609698,
+      "idempotence_error": 4.978656376053436e-16,
+      "unital_error": 1.1102230246251565e-16,
+      "vertex_indices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "w_indices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": false,
+          "exposedness": null,
+          "in_w": false,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=24",
+      "n": 5,
+      "delta": 0.1355604598220716,
+      "tau": 0.36818536068408747,
+      "rho": 2.9454828854726998,
+      "kappa": 0.046023170085510934,
+      "idempotence_error": 2.220446049250313e-16,
+      "unital_error": 3.3306690738754696e-16,
+      "vertex_indices": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "w_indices": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": false,
+          "exposedness": null,
+          "in_w": false,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=30",
+      "n": 5,
+      "delta": 0.12367807060897933,
+      "tau": 0.3516789311417153,
+      "rho": 2.8134314491337222,
+      "kappa": 0.04395986639271441,
+      "idempotence_error": 2.8362728832220796e-16,
+      "unital_error": 0.0,
+      "vertex_indices": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "w_indices": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": false,
+          "exposedness": null,
+          "in_w": false,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=36",
+      "n": 5,
+      "delta": 0.16845917178137387,
+      "tau": 0.41043778064570746,
+      "rho": 3.2835022451656597,
+      "kappa": 0.05130472258071343,
+      "idempotence_error": 1.6740081543176188e-16,
+      "unital_error": 2.220446049250313e-16,
+      "vertex_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "w_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": false,
+          "exposedness": null,
+          "in_w": false,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=39",
+      "n": 5,
+      "delta": 0.18057131451508518,
+      "tau": 0.42493683591221554,
+      "rho": 3.3994946872977243,
+      "kappa": 0.05311710448902694,
+      "idempotence_error": 3.903127820947816e-16,
+      "unital_error": 2.220446049250313e-16,
+      "vertex_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "w_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=40",
+      "n": 5,
+      "delta": 0.16889786004368465,
+      "tau": 0.41097184823742444,
+      "rho": 3.2877747858993955,
+      "kappa": 0.051371481029678055,
+      "idempotence_error": 2.220446049250313e-16,
+      "unital_error": 2.220446049250313e-16,
+      "vertex_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "w_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=47",
+      "n": 5,
+      "delta": 0.19991528542696121,
+      "tau": 0.4471188716962875,
+      "rho": 3.5769509735703,
+      "kappa": 0.05588985896203594,
+      "idempotence_error": 2.7751509857482093e-16,
+      "unital_error": 2.220446049250313e-16,
+      "vertex_indices": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "w_indices": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": false,
+          "exposedness": null,
+          "in_w": false,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=65",
+      "n": 5,
+      "delta": 0.15954981770975926,
+      "tau": 0.39943687575104936,
+      "rho": 3.195495006008395,
+      "kappa": 0.04992960946888117,
+      "idempotence_error": 3.5388358909926865e-16,
+      "unital_error": 2.220446049250313e-16,
+      "vertex_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "w_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": false,
+          "exposedness": null,
+          "in_w": false,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=71",
+      "n": 5,
+      "delta": 0.1673977347202336,
+      "tau": 0.40914268259402314,
+      "rho": 3.273141460752185,
+      "kappa": 0.05114283532425289,
+      "idempotence_error": 2.393918396847994e-16,
+      "unital_error": 2.220446049250313e-16,
+      "vertex_indices": [
+        1,
+        3,
+        4
+      ],
+      "w_indices": [
+        1,
+        3,
+        4
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": false,
+          "exposedness": null,
+          "in_w": false,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": false,
+          "exposedness": null,
+          "in_w": false,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=79",
+      "n": 5,
+      "delta": 0.17676152931636926,
+      "tau": 0.4204301717483764,
+      "rho": 3.363441373987011,
+      "kappa": 0.05255377146854705,
+      "idempotence_error": 3.5171518475429764e-16,
+      "unital_error": 1.1102230246251565e-16,
+      "vertex_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "w_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=80",
+      "n": 5,
+      "delta": 0.18407304308780506,
+      "tau": 0.4290373446307501,
+      "rho": 3.432298757046001,
+      "kappa": 0.05362966807884376,
+      "idempotence_error": 3.8163916471489756e-16,
+      "unital_error": 2.220446049250313e-16,
+      "vertex_indices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "w_indices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": false,
+          "exposedness": null,
+          "in_w": false,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=85",
+      "n": 5,
+      "delta": 0.19581256507977113,
+      "tau": 0.4425071356258237,
+      "rho": 3.5400570850065898,
+      "kappa": 0.055313391953227965,
+      "idempotence_error": 1.6653345369377348e-16,
+      "unital_error": 1.1102230246251565e-16,
+      "vertex_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "w_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": false,
+          "exposedness": null,
+          "in_w": false,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=89",
+      "n": 5,
+      "delta": 0.15735531628183588,
+      "tau": 0.39668037042666465,
+      "rho": 3.173442963413317,
+      "kappa": 0.04958504630333308,
+      "idempotence_error": 1.942890293094024e-16,
+      "unital_error": 2.220446049250313e-16,
+      "vertex_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "w_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": false,
+          "exposedness": null,
+          "in_w": false,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=94",
+      "n": 5,
+      "delta": 0.19276031155371606,
+      "tau": 0.4390447716961404,
+      "rho": 3.5123581735691234,
+      "kappa": 0.05488059646201755,
+      "idempotence_error": 2.983724378680108e-16,
+      "unital_error": 2.220446049250313e-16,
+      "vertex_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "w_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": false,
+          "exposedness": null,
+          "in_w": false,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=103",
+      "n": 5,
+      "delta": 0.1728129230705685,
+      "tau": 0.41570773756398677,
+      "rho": 3.325661900511894,
+      "kappa": 0.051963467195498346,
+      "idempotence_error": 3.0010716134398763e-16,
+      "unital_error": 0.0,
+      "vertex_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "w_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        }
+      ]
+    },
+    {
+      "name": "random_n=5_r=3_sample=108",
+      "n": 5,
+      "delta": 0.1851806151863244,
+      "tau": 0.4303261730203316,
+      "rho": 3.442609384162653,
+      "kappa": 0.05379077162754145,
+      "idempotence_error": 2.6281060661048627e-16,
+      "unital_error": 2.220446049250313e-16,
+      "vertex_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "w_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_distance_to_w": 0.0,
+      "rows": [
+        {
+          "index": 0,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 1,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 2,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 3,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        },
+        {
+          "index": 4,
+          "is_vertex": true,
+          "exposedness": 1.0,
+          "in_w": true,
+          "distance_to_w": 0.0
+        }
+      ]
+    }
+  ]
+}

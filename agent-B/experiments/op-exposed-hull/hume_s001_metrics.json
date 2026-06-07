@@ -1,0 +1,42 @@
+{
+  "name": "hume_s=0.01",
+  "n": 3,
+  "delta": 0.0001,
+  "tau": 0.01,
+  "rho": 0.08,
+  "kappa": 0.00125,
+  "idempotence_error": 2.0816681711721685e-17,
+  "unital_error": 0.0,
+  "vertex_indices": [
+    1,
+    2
+  ],
+  "w_indices": [
+    1,
+    2
+  ],
+  "max_distance_to_w": 0.0,
+  "rows": [
+    {
+      "index": 0,
+      "is_vertex": false,
+      "exposedness": null,
+      "in_w": false,
+      "distance_to_w": 0.0
+    },
+    {
+      "index": 1,
+      "is_vertex": true,
+      "exposedness": 1.0,
+      "in_w": true,
+      "distance_to_w": 0.0
+    },
+    {
+      "index": 2,
+      "is_vertex": true,
+      "exposedness": 0.99,
+      "in_w": true,
+      "distance_to_w": 0.0
+    }
+  ]
+}
