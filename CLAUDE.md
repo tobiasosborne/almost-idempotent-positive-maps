@@ -128,6 +128,8 @@ python3 scripts/tests/test_check_defs.py      # TDD unit tests for the gates (ru
 python3 scripts/tests/test_argument.py
 python3 scripts/tests/test_check_provenance.py
 cd report && make                             # latexmk -pdf; report/main.pdf (13 section files: 00–11 + 06b). Build now GATED by check-provenance --build in check-all.
+python3 scripts/fetch-refs.py --status        # reproducible refs/ reconstruction: present/fetchable/cache/missing
+python3 scripts/fetch-refs.py                 # rebuild refs/ — fetch arXiv-pinned (kitaev,vlw) + verify; AIPM_REFS_CACHE=<dir> restores bespoke
 cd refs && sha256sum -c manifest/checksums.sha256   # ground-truth integrity (50 files; payload gitignored)
 af --version                                  # 0.1.3 — authoritative (the binary self-label may say "dev")
 ```

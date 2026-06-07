@@ -17,6 +17,26 @@ Verify the whole store:
 cd refs && sha256sum -c manifest/checksums.sha256
 ```
 
+**Reproducible reconstruction (no specific machine needed).** `refs/manifest/sources.lock.json` +
+`scripts/fetch-refs.py` rebuild the gitignored payload on any clone, hash-verifying every byte:
+
+```bash
+python3 scripts/fetch-refs.py --status     # what's present / fetchable / cache-only / missing
+python3 scripts/fetch-refs.py              # fetch the arXiv-pinned sources (kitaev, vlw) + verify
+AIPM_REFS_CACHE=<dir> python3 scripts/fetch-refs.py   # restore bespoke sources from a CAS you control
+```
+
+- **Fetch-reproducible (14 files): `kitaev-2405.02434`, `vlw-2604.08380`.** arXiv e-print source
+  tarballs + per-version PDFs are byte-stable, so `fetch-refs.py` reproduces them EXACTLY from the
+  pinned id — verified this session. No local copy required.
+- **Cache-only (36 files): all the rest** — copyrighted book/journal OCR (`hos`, `effros-stormer-1979`,
+  `kaup-1984`, `itoh-1991`), bespoke text extractions (`blecher-neal-*`, `idel-2013`,
+  `blecher-read-2019`), and a version-drifting PDF (`chu-russo-1512.03347`). These cannot be re-fetched
+  byte-identical. Seed a content-addressed cache ONCE from a populated tree
+  (`fetch-refs.py --populate-cache <dir>`), mirror `<dir>` somewhere durable (private repo / cloud /
+  drive), and any clone restores them via `$AIPM_REFS_CACHE`. The cache is just `<sha256>`-named blobs,
+  so it is trivially mirrorable and self-verifying.
+
 Definitions/lemmas cite a source by `<source-id>` + locus (e.g. line number); the
 `definitions/` and `argument/` shards record the 16-hex prefix of the file's SHA256.
 

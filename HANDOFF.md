@@ -21,9 +21,12 @@ NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status s
 >      `lem-cstar-sa-to-epsjb` (the **O(η) crux** — C\*→JB symmetrisation), `thm-dilation-compatible`.
 >    **13 results are `af: validated` total.** `grep -c validated argument/INDEX.md`.
 > 4. Sanity-check: `sh scripts/check-all.sh` must print `[check-all] OK` (check-defs + **check-refs** +
->    linker + **check-provenance** (report↔registry sync + latexmk build) + tests). NOTE: in a clone WITHOUT
->    the gitignored `refs/` payloads, `test_check_refs.py` fails (byte-match can't run) and beads is empty
->    (no dolt remote) — both are environment-provisioning gaps, not code regressions.
+>    linker + **check-provenance** (report↔registry sync + latexmk build) + tests). If `refs/` payloads are
+>    absent in a fresh clone (so `test_check_refs.py`'s byte-match fails), REBUILD them reproducibly:
+>    `python3 scripts/fetch-refs.py` fetches the arXiv-pinned sources (kitaev, vlw) hash-verified, and
+>    `AIPM_REFS_CACHE=<dir> python3 scripts/fetch-refs.py` restores the bespoke ones from a content-addressed
+>    cache (seed it once with `--populate-cache <dir>`). Beads is still empty here (no dolt remote) — an
+>    environment-provisioning gap, not a code regression.
 > 5. **What to do next is in beads (`bd ready`).** Top of the queue: the **classical layer** (`aipm-9mw` split
 >    the `lem-leakage` contract → then af `lem-leakage`/`lem-classical-equiv`; `aipm-18d` acquire the scouted
 >    sources); **`aipm-iel`** (P1, harden check-refs skip_noquote); **`aipm-17f`** (`cited`→`grounded` audit);

@@ -19,7 +19,8 @@ python3 scripts/check-provenance.py --check --build || fail "check-provenance"
 
 echo "[check-all] tooling tests (TDD)"
 for t in scripts/tests/test_check_defs.py scripts/tests/test_check_refs.py \
-         scripts/tests/test_argument.py scripts/tests/test_check_provenance.py; do
+         scripts/tests/test_argument.py scripts/tests/test_check_provenance.py \
+         scripts/tests/test_fetch_refs.py; do
   out=$(python3 "$t" 2>&1) || { echo "$out"; fail "$t"; }
 done
 

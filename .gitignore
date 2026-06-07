@@ -9,6 +9,7 @@
 /refs/manifest/*
 !/refs/manifest/SOURCES.md
 !/refs/manifest/checksums.sha256
+!/refs/manifest/sources.lock.json
 
 # Large ingestion dump (still under agent-A/notes until Phase 4).
 agent-A/notes/ingestion-results-2026-06-01.json

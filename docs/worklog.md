@@ -269,3 +269,30 @@ results; ~⅓ of sources are hash-unverifiable (gitignored payloads). Follow-ups
 `test_check_refs.py` fails its byte-match assertions (the check-refs GATE itself passes — 0 fabrications); and
 beads is unprovisioned (empty DB, `issue_prefix` unset, no dolt remote) so `aipm-*` ids can't be reconciled.
 The new gate + its tests + the other three gates all pass.
+
+---
+
+## 2026-06-07 (side-quest cont.) — reproducible refs/ reconstruction (`fetch-refs.py` + `sources.lock.json`)
+
+**Problem.** `refs/` ground truth (the gitignored payloads the byte-match gates need) lived only on the
+original authoring machine — brittle. Recovered 17/50 locally + by arXiv fetch (HOS/Idel/Kitaev from
+sibling repos; Kitaev PDF + all 6 VLW files fetched byte-exact from arXiv), which already turned
+`check-all` GREEN for the first time in this clone (all 4 af-cited sources — HOS, Kitaev, Idel, VLW —
+present; `test_check_refs` 6 failing → 0).
+
+**Robust fix.** A reproducible, machine-independent reconstruction:
+- `refs/manifest/sources.lock.json` (tracked) — per refs file: sha256 + a *verified* fetch spec
+  (arXiv e-print/PDF by pinned id) for the 14 reproducible ones (kitaev 8 + vlw 6), else `cache-only`
+  (36 bespoke). Hash-driven, honest: a source is `fetch` ONLY because the fetch was proven to byte-match.
+- `scripts/fetch-refs.py` — rebuilds `refs/` on any clone, verifying every byte vs the recorded sha256:
+  (1) FETCH the arXiv-pinned sources (e-print tarball members selected BY HASH, + per-version PDF —
+  proven byte-stable: deleted all 14 and reconstructed them clean from ids alone); (2) restore the
+  bespoke residue from a CONTENT-ADDRESSED cache `$AIPM_REFS_CACHE/<sha256>` (a dir/URL the user
+  controls — seed once with `--populate-cache`, mirror anywhere durable). `--status` (no network),
+  `--require-all` (CI). Never installs a blob whose bytes ≠ recorded hash (tested).
+- 16 offline red→green tests (`test_fetch_refs.py`, incl. tampered-blob refusal), wired into check-all.
+
+**Why this removes the brittleness.** The 14 public sources reproduce from arXiv with zero local
+dependency; the 36 copyrighted/bespoke ones reproduce from a content-addressed cache the user mirrors
+durably — no dependence on any specific live machine. The lock + script are committed (no copyright), so
+the reconstruction recipe travels with the repo. `refs/` payloads stay gitignored.
