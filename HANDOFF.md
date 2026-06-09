@@ -8,199 +8,180 @@ NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status s
 # HANDOFF — argument-architecture build
 
 > ## START HERE (next agent)
-> 0. **Which lane?** If you are **Agent B (exploration / scoping how to land the full proof)**, read
->    **`docs/plans/2026-06-07-agent-b-rules-of-engagement.md`** (mirrored in `agent-B/README.md`) FIRST — it
->    defines your sandbox lane (`agent-B/**`, `docs/plans/`, `docs/worklog.md`) and the do-not-touch list
->    (validated `proofs/<id>/`, generated files, locked defs, `status:`/`af:` upgrades) that protects the
->    validated results. Explore freely there; reach the canonical layers ONLY by *proposing* via Recipe A→B.
->    (Agent B's frozen `op-exposed-hull` exploration lives on branch `agent-b/op-exposed-hull-orchestration`.)
-> 1. `git checkout main` (all work lives on `main`; the `argument-architecture` feature branch was retired).
+> 0. **Which lane?** If you are **Agent B (exploration / scoping)**, read
+>    **`docs/plans/2026-06-07-agent-b-rules-of-engagement.md`** (mirrored in `agent-B/README.md`) FIRST — your
+>    sandbox lane (`agent-B/**`, `docs/plans/`, `docs/worklog.md`) + do-not-touch list (validated `proofs/<id>/`,
+>    generated files, locked defs, `status:`/`af:` upgrades). Reach the canonical layers ONLY via Recipe A→B.
+> 1. `git checkout main` (all work lives on `main`).
 > 2. Read, in order: **`PRD.md`** → **`CLAUDE.md`**(==`AGENTS.md`) → **this file** → `definitions/INDEX.md`
->    + `argument/INDEX.md` + `argument/DAG.md` (the live state). `python3 scripts/argument.py` prints the
->    ready/blocked frontier. (Beads is non-functional in this clone — see gotchas; use the linker, not `bd`.)
-> 3. **15 results are `af: validated`** (`grep -c validated argument/INDEX.md`). Four clusters:
->    - **Algebraic bridge `thm-bridge`** (the unconditional **√η** result) + its 9-lemma DAG (`lem-P-properties`,
->      `lem-bridge-orderunit`, `lem-first-insertion`, `lem-square-hole-almost-positive`, `lem-bridge-easy`,
->      `lem-bridge-polar`, `lem-bridge-onehole`, `prop-bridge-jordan`, `thm-bridge`).
->    - **Dilation-compatible `thm-dilation-compatible`** (the conditional **O(η)** Kitaev-strength result) +
->      `lem-idempotence-inheritance`, `lem-intertwine-spectral-idempotent`, `lem-cstar-sa-to-epsjb` (O(η) crux).
->    - **`thm-faithful-approx`** (the conditioned faithful-invariant **O(η/λ)** bound, §06b) — the corrected
->      statement of the retracted "faithful invariant ⇒ O(η)" overclaim (honest η/λ, no floor on λ).
->    - **`lem-classical-equiv`** (the signed↔stochastic equivalence, §08) — built DIRECTLY from Kitaev's general
->      Banach-algebra binomial calculus at the arena `Mₙ(ℝ)` (NOT importing `lem-P-properties`: B(H)ₛₐ-vs-Mₙ(ℝ)
->      arena mismatch). Unblocks the classical chain (`thm-rank-one`/`thm-simplex`/`prop-approx-simplex` now ready).
-> 4. **The report is now the human-readable front door** (`report/main.pdf`, 39pp): every validated result
->    carries a green **`✓ af-validated`** badge linking to its `proofs/<id>/` on GitHub; definitions cite
->    sources with clickable arXiv/journal links; `tab:status` has an `af` column; §01 has a reading guide; the
->    argument DAG is embedded as `\Cref{fig:dag}` (`report/figures/dag.pdf`). See "Report upkeep" below.
-> 5. Sanity-check: `sh scripts/check-all.sh` must print `[check-all] OK` (check-defs + check-refs + linker +
->    check-provenance `--build` + TDD). GREEN here (20/50 refs present). Fresh clone with absent `refs/`:
->    `python3 scripts/fetch-refs.py` (17/50 authoritative-origin-pinned, hash-verified);
->    `AIPM_REFS_CACHE=<dir> python3 scripts/fetch-refs.py` restores the bespoke residue.
-> 6. **What to do next:** the af frontier (`python3 scripts/argument.py`). With `lem-classical-equiv` now
->    validated, **`thm-rank-one`/`thm-simplex`/`prop-approx-simplex` are freshly ready** (the classical chain).
->    Other strong picks: **`prop-rank-gap`** (small, 0 deps, formalises the √rank "Frobenius ⇏ order-unit"
->    honesty caveat; ground in HOS), or the §10 obstructions (`prop-doubling`/`prop-sartre`/`prop-decomposable-norm`,
->    leaf counterexamples defending the conditional η exponent). Recipes below.
+>    + `argument/INDEX.md` + `argument/DAG.md`. `python3 scripts/argument.py` prints the ready/blocked frontier;
+>    **beads WORKS here** (`bd ready`, `bd show <id>`) — use it.
+> 3. **16 results are `af: validated`** (`grep -c validated argument/INDEX.md`). The bridge (9), dilation (4:
+>    `thm-dilation-compatible`+3), `thm-faithful-approx`, `lem-classical-equiv`, and **NEW `prop-direct-sum`**
+>    (first feeder of the Layer-1 `cor-adjoint-benchmark` cluster — see below).
+> 4. **ACTIVE CAMPAIGN: af-validate the `cor-adjoint-benchmark` cluster** (epic **`aipm-brd`**) — the master
+>    exact-adjoint Jordan-coboundary inversion, the most advanced prose-proved result on the critical path to
+>    Layer-1 (`op-jordan-structure`/`op-layer1-gap`). Five pieces, status:
+>    - `prop-direct-sum` (`aipm-bb4`) — ✅ **DONE** (validated, committed, pushed this session).
+>    - `prop-spin-splitting` (`aipm-8zc`) — kit ready (`proofs/prop-spin-splitting/orchestration/PROOF-KIT.md`,
+>      verdict G, 11-node plan). **Build ATTEMPT 1 FAILED** (af `--dry-run` friction + stall); workspace scrapped,
+>      **REBUILD next** (see NEXT §1 + the `--dry-run` gotcha).
+>    - `prop-comm-scalar` (`aipm-0r4`) — kit ready but **OVER BUDGET** (14 nodes/depth 6); must **factor into ~4
+>      sub-lemmas first** (`aipm-0wn`, Recipe A) before building.
+>    - `thm-matrix-splitting` (`aipm-l3y`) — soundness audit DONE → **`NEEDS-REFORMULATION`** (`aipm-q85`): sound,
+>      `C` genuinely n-independent, log-Schur stress test is NOT a counterexample (the `obs-matrix-audit`/`aipm-36d`
+>      re-audit is resolved: no cb-gap), BUT the **quaternionic mixed-sector twirl is asserted-not-derived** (must
+>      be expanded), `C` should read "universal" not 60/84/124, and it must factor into ~8 sub-lemmas.
+>    - `cor-adjoint-benchmark` (`aipm-i4g`) — capstone (Recipe D), blocked on the four.
+>    **OPEN USER DECISION (matrix):** A = honest maximal progress (reformulate + build R/C/leakage/detection
+>    sub-lemmas, attempt quaternionic last); B = quaternionic-first; C = feeders-only, defer matrix. Default **A**.
+> 5. **The report is the human-readable front door** (`report/main.pdf`): green `✓ af-validated` badges per result.
+>    **Report upkeep for newly-validated results is BATCHED** (`aipm-6ct`) — `prop-direct-sum` does NOT yet have its
+>    `\afbadge`/`tab:status` tick (check-all passes regardless: `status drift OK` = underclaim-safe). Do the batch
+>    (badges + counts + `gen-dag-figure.py` + tracked `main.pdf`) when the clean feeders land.
+> 6. Sanity-check: `sh scripts/check-all.sh` must print `[check-all] OK`. **There IS an active pre-commit hook**
+>    that runs `check-all` on every `git commit` (so commits are auto-gated; latexmk build included). Fresh clone
+>    with absent `refs/`: `python3 scripts/fetch-refs.py` (18/51 arXiv-pinned + hash-verified, now incl.
+>    `baake-sumner-2007.11433`); `AIPM_REFS_CACHE=<dir> python3 scripts/fetch-refs.py` restores the bespoke residue.
 
-**Branch:** `main`. **Date:** 2026-06-07. **Approved design:** `docs/plans/2026-06-05-argument-architecture-plan.md`.
+**Branch:** `main`. **Date:** 2026-06-09. **Approved design:** `docs/plans/2026-06-05-argument-architecture-plan.md`.
 Mental model: definitions = types · each lemma (af workspace) = a module whose *contract* is its one-line
 statement · a linker enforces the DAG.
 
 ## Governing rules (user) — non-negotiable
 1. **No "standard facts"/"citations".** The ONLY ground truth is a **byte/string match to a LOCAL `refs/`
-   source** (enforced by `scripts/check-refs.py`). If a fact is not in `refs/`, **STOP** — do not paraphrase
-   from memory. You MAY dispatch researcher subagents to FIND an authoritative byte-extractable source and
-   propose adding it to `refs/` (manifest + sha256), but the binding step is still a local byte-match.
-2. **"A derivation = lemma = af".** Every non-leaf fact is an af-validated claim. Pure-algebra/definition-
-   unfolding steps are DERIVED af nodes (bottoming at refs leaves or imported validated lemmas), not asserted
-   "elementary".
-3. **One fresh verifier per node** (2026-06-07). In the af verify step, spawn a SINGLE fresh verifier subagent
-   for EVERY node — it gets one node, verifies it, exits. Never one verifier across multiple nodes (max
-   reviewer independence). Run them sequentially (af is not concurrency-safe in a workspace).
+   source** (enforced by `scripts/check-refs.py`). Not in `refs/` ⇒ **STOP**; never paraphrase from memory. You
+   MAY dispatch researchers to FIND an authoritative byte-extractable source + propose adding it (manifest +
+   sha256 + `sources.lock.json`); the binding step is still a local byte-match. (Done this session for
+   `baake-sumner-2007.11433`.)
+2. **"A derivation = lemma = af".** Every non-leaf fact is an af-validated DERIVED node (bottoming at refs leaves
+   or imported validated lemmas), not asserted "elementary".
+3. **One fresh verifier per node.** In the af verify step, spawn a SINGLE fresh verifier subagent for EVERY node —
+   one node, verify, exit. Never one verifier across multiple nodes (max reviewer independence). Serialize af ops
+   per workspace (run verifiers sequentially, leaves→root). **PROVEN this session at scale on `prop-direct-sum`
+   (10 nodes, background subagents).**
 
-## DONE (latest — 2026-06-07, all committed + pushed to `main`)
-- **`lem-classical-equiv` COMPLETE (`af: validated`)** — the 15th validated result; the signed↔stochastic
-  equivalence with explicit universal constants (§08), **orchestrated end-to-end via multi-agent Workflow**:
-  (1) a *groundability gate* (parallel scope→ground→synthesize) returned verdict **A** — the forward direction's
-  hand-waved "spectral separation estimate" is in fact Kitaev's **elementary binomial/Taylor Banach-algebra
-  calculus** (kitaev:503-533, present), used precisely because the holomorphic calculus is "fragile in the
-  approximate setting"; no source acquisition needed. (2) A single prover built an **11-node** workspace (root +
-  1.1–1.10, depth 2): forward N1–N7 instantiating Kitaev's general Prop_P **directly at `Mₙ(ℝ)`** (NOT importing
-  `lem-P-properties` — B(H)ₛₐ-vs-Mₙ(ℝ) arena mismatch; registry `deps` stays empty), converse N8–N10 (exact ring
-  identity `Q²−Q=PD+DP+D²−D` + disjoint-support ℓ¹). 5 externals (4 Kitaev quoted + GT-hyp); `check-refs` 0-failed.
-  (3) **11 fresh per-node verifiers, sequential, leaves→root** (rule 3) — all **accept, 0 challenges**, taint clean;
-  they numerically cross-checked (op-norm = max-row-ℓ¹ to 1e-16; `S²−I=4(Q²−Q)` swept n=2..120) and confirmed the
-  explicit `C=6C₁(η₀)` is **dimension-free** and the multiplicativity step is a sound Cauchy product (not a Kitaev
-  over-citation). Honest flags carried through: the `Mₙ(ℝ)` max-row-ℓ¹ closed form is **extraction-level** (not
-  byte-stated in any ref; derived inline, the `lem-P-properties` 1.1.2 pattern). Orchestration scripts + proof kit: `proofs/lem-classical-equiv/orchestration/`.
-- **`thm-faithful-approx` COMPLETE (`af: validated`)** — the 14th validated result; the O(η/λ) conditioned
-  faithful-invariant bound (`||a∘b−P(a∘b)|| ≤ C(η/λ)||a||||b||`, §06b). 10-node af workspace, depth 3, all
-  validated+clean. Chain: spectral split + square-hole import (`lem-square-hole-almost-positive`) → expectation
-  bound (imports `lem-P-properties` for `||P−Φ||≤Cη`) → faithfulness upgrade `ω(x)=Tr(ρx)≥λTr(x)≥λ||x||`
-  (grounded: VLW `paper.tex:453` trace self-duality + Idel `:333` density + `Tr≥norm`) → diagonal → polarisation.
-  Built by a prover then a **fresh single-node verifier per node** (10 verifiers). **One challenge** (node 1.4
-  cited 1.1 without a declared direct edge) **resolved** via amend + recording 1.1 as a transitive dep
-  (1.4→1.3→1.1; af v0.1.3 has no post-hoc edge command and re-refining would archive validated children),
-  re-verified clean. Registry: `af none→validated`; **deps corrected to add `lem-P-properties`** (genuinely
-  imported, previously undeclared — declare ALL imports as deps up front next time). Commits `71f277a`,`4a282f0`.
-- **Report turned into a status-transparent, provenance-linked front door** (commits `bfedb28`,`d30ef45`,
-  `2b21ec7`). Reused existing infra (no new gates, per user steer "balance utility vs CI ceremony"): clickable
-  bibliography links (`note=\href` to arXiv/Math.Scand. from `sources.lock.json`); `\afbadge`/`\aflink`/`\afyes`
-  macros (`main.tex`) → a green "✓ af-validated" badge per validated result linking to GitHub `proofs/<id>/`;
-  `tab:status` `af` column (Status kept col 2 so `check-provenance`'s parser is unaffected) + legend + count;
-  §01 reading guide; `scripts/gen-dag-figure.py` (reuses `argument.py`'s parser) → `report/figures/dag.{dot,pdf}`
-  via GraphViz, embedded as `fig:dag`. Also fixed a stale tracked `main.pdf` (the gate builds to `.build/`, never
-  refreshes the committed PDF).
+## DONE (latest — 2026-06-09, committed + pushed to `main`)
+- **`prop-direct-sum` COMPLETE (`af: validated`)** — the 16th validated result; first feeder of the
+  `cor-adjoint-benchmark` cluster. The summand-count-free exact-adjoint direct-sum coboundary splitting (constant
+  `max_r K_r + 1`, no m-dependence, adjoint/block-respecting modules). **10-node af workspace** (depth 3),
+  orchestrated via **background subagents**: a groundability scout (verdict G, 4 HOS externals byte-matched:
+  order-unit norm 1.2.1, JB unit-norm 3.1.4, JB-is-order-unit 3.3.10, central-idempotent-summand 2.5.7) → 1 prover
+  → **10 fresh per-node verifiers** (leaves→root). **One challenge** (node 1.7 under-declared its transitive use of
+  node 1.5's norm bound) caught by a fresh verifier, **resolved** by a prover≠challenger (statement-only amend
+  recording 1.5 + root assembly; `thm-faithful-approx` 1.4 precedent), **re-verified clean** by a third agent.
+  Commit `52110bd`. LESSON: declare EVERY cross-node dependency (incl. constant-supplying nodes) at refine time.
+- **Matrix soundness audit DONE → `NEEDS-REFORMULATION`** (`thm-matrix-splitting`, `aipm-l3y`/`aipm-q85`). A
+  read-only adversarial audit + numerics (front-loaded to de-risk the suspect node BEFORE building). Verdict:
+  **sound** — `C` genuinely n-independent; the matching-curvature DETECTION identity verified to machine precision
+  (arbitrary matrix → full Schur multiplier, so NO ordinary-vs-cb amplification gap); the **log-Schur stress test
+  is NOT a counterexample** (`dist/‖f‖` ratio flat ~1.3) ⇒ **`obs-matrix-audit`/`aipm-36d` re-audit RESOLVED**. But
+  NOT build-ready: (1) quaternionic mixed-sector twirl + scalar-amplification lemma are **asserted-not-derived**
+  (expand before any checkmark); (2) state `C` as "universal", drop per-sector numerals 60/84/124 from the
+  contract; (3) factor into ~8 sub-lemmas. Full plan in `aipm-q85`.
+- **refs: added `baake-sumner-2007.11433`** (Baake–Sumner, *On equal-input and monotone Markov matrices*,
+  J. Appl. Probab. 2022) as byte-greppable `.tex` (arXiv e-print source, hash `f358c71c…`, fetch-reproducible).
+  Idempotent Markov-matrix structure (min poly `x(x−1)`, extremal idempotents `E_1..E_d`, equal-input idempotents)
+  for the **commutative case** (`op-classical`/`def-stochastic`/`thm-simplex`). Manifest + `test_fetch_refs.py`
+  counts updated (50→51 files, 17→18 fetch-reproducible); check-all green.
+- **Stale-HANDOFF facts CORRECTED:** beads is **fully functional** here (embedded-dolt + git-backed `origin`
+  remote; `bd create`/`close`/`dep`/`export` all work) — *use it*; there **IS an active pre-commit hook** running
+  `check-all` on every commit. (Both were wrongly listed as broken in the prior HANDOFF.)
 
-## DONE (earlier this cycle — context, condensed; full narrative in docs/worklog.md)
-- **`thm-dilation-compatible` COMPLETE** (conditional O(η)): 3 factored sub-lemmas + capstone. Honest scope:
-  dilation space restricted to `D=B(K)` (general finite-dim C\* `D=⊕Mₙ` deferred, `aipm-us3`). LEARNINGS **R7**:
-  a fresh verifier can produce a confident WRONG counterexample — reproduce any refutation before acting.
-- **`check-provenance.py` report-sync gate** built + wired into `check-all` (forward/reverse labels, claim
-  labels/sources, **status OVERCLAIM** = #1 guarded failure, hash freshness, latexmk `--build`). 52 tests.
-- **Reproducible `refs/`** (`fetch-refs.py` + `sources.lock.json`): 17/50 fetch from authoritative origins,
-  hash-verified; bespoke residue via `$AIPM_REFS_CACHE`. Genuineness audit: GENUINE = HOS/Idel + 6 web-recovered;
-  **SUSPECT = `kaup-1984`, `chu-russo-1512.03347`** (recorded bytes match no authoritative origin; not cited by
-  any af proof — flagged, not trusted). All 4 af-cited sources (HOS/Kitaev/Idel/VLW) GENUINE.
+## DONE (earlier — context; full narrative in docs/worklog.md)
+- `lem-classical-equiv` (15th), `thm-faithful-approx` (14th), `thm-dilation-compatible` (cond. O(η)) + 3 sub-lemmas,
+  the 9-lemma algebraic bridge. `check-provenance.py` report-sync gate. Reproducible `refs/` (`fetch-refs.py`).
+  SUSPECT refs (`kaup-1984`, `chu-russo-1512.03347`) flagged, not af-cited.
 
 ## NEXT (priority order)
-1. **af frontier — pick a ready result** (`python3 scripts/argument.py`):
-   - **Classical chain, freshly unblocked by `lem-classical-equiv`:** `thm-rank-one`, `thm-simplex`,
-     `prop-approx-simplex` are now ready (each `defs: def-stochastic`, `deps: lem-classical-equiv`). Highest
-     leverage continuation — formalise via the same orchestration (groundability gate → prover → fresh per-node
-     verifiers). `thm-well-exposed` likely needs additional deps; check `argument.py --show`.
-   - **`prop-rank-gap`** — small, 0 deps; the √rank order-vs-Frobenius gap (the load-bearing "Frobenius ⇏
-     order-unit" honesty caveat, CLAUDE.md §3). Ground in HOS (present).
-   - **§10 obstructions** `prop-doubling`/`prop-sartre`/`prop-decomposable-norm` — explicit finite
-     counterexamples (ℓ∞ map; depolarizing M₂; transpose norm = n); tractable but leaf (unblock nothing).
-   - Also ready (depends only on the validated `thm-faithful-approx`): `prop-faithful-counterexample`.
-2. **Report upkeep** (do in lockstep when the registry/refs change): after validating a result, add its
-   `\afbadge{<id>}` in the report + flip its `tab:status` `af` cell to `\afyes` + bump the "N results af-validated"
-   counts (§01, §11); re-run `python3 scripts/gen-dag-figure.py` (regenerates `report/figures/dag.pdf`); rebuild
-   the tracked PDF `cd report && latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex` (the gate only
-   builds to `.build/`, so the committed `main.pdf` and `dag.pdf` must be regenerated by hand). Then `check-all`.
-3. **Gate-hardening / hygiene** (were beads `aipm-iel`/`aipm-17f`/`aipm-qpa`): require quotes on the 8 quote-less
-   `skip_noquote` externals; audit every `cited` result vs `refs/`, downgrade ungrounded (`thm-whitehead`,
-   `prop-aut-compact` are PDF-only) `cited`→`grounded`; factor `lem-P-properties` if its workspace balloons.
-4. **refs follow-ups:** seed the durable content-addressed cache (`fetch-refs.py --populate-cache`); decide the
-   2 SUSPECT PDFs (re-derive + re-pin from authoritative origin → user sign-off, or drop); relativise the 2 stale
-   `/home/tobias/...` paths in `report/PROVENANCE.md` to `refs/`. **report-sync:** the `coverage` warn
-   (`lem-cstar-sa-to-epsjb` no per-claim PROVENANCE row) and the `B-ROUND` duplicate-key warn are still open.
-5. **Open-math frontier** (hard, may need the user): Layer-1 coboundary splitting (`op-jordan-structure`/
-   `op-layer1-gap`), NPPS/exposed-hull (`op-npps`/`op-exposed-hull`), matrix benchmark re-audit (`obs-matrix-audit`).
-6. **Backlog:** general-`D` dilation via a Stinespring-stack bridge lemma (`aipm-us3`); af-friction PRs upstream
-   `../vibefeld` (user-authorized); Phase-5 fresh Lean scaffold.
+1. **Finish the `cor-adjoint-benchmark` cluster** (epic `aipm-brd`):
+   - **REBUILD `prop-spin-splitting`** (`aipm-8zc`) — kit is ready & verdict G (11 nodes, two sub-trees:
+     right-inverse + next-arrow). Clean `af init`; follow the kit; **do NOT pass `--dry-run` to `af refine`** (it
+     mutates state — `aipm-rdx`); declare ALL cross-node deps at refine. Then 11 fresh per-node verifiers.
+   - **FACTOR + build `prop-comm-scalar`** (`aipm-0r4`/`aipm-0wn`) — register ~4 sub-lemma shards (Recipe A,
+     reviewer≠author): `-classification` (load-bearing module decomposition), `-rightinv` (norm-one S, ‖Π‖≤3),
+     `-coord-nextarrow` (≤2), `-halfsum-nextarrow` (≤12); make `prop-comm-scalar` a thin assembly; build each.
+     HOS has NO module theory — derive the classification, never cite HOS for it (arena-gap risk).
+   - **`thm-matrix-splitting`** (`aipm-l3y`/`aipm-q85`) — once the user picks A/B/C: reformulate the contract
+     (Recipe A), factor into ~8 sub-lemmas, expand the quaternionic twirl (the hardest node), build. The new
+     `baake-sumner` ref may help the commutative pieces.
+   - **`cor-adjoint-benchmark`** (`aipm-i4g`) — capstone (Recipe D) once the four feeders validate.
+2. **Batch report upkeep** (`aipm-6ct`): `\afbadge` + `tab:status` `af` ticks + count bumps for the newly-validated
+   feeders, `python3 scripts/gen-dag-figure.py`, rebuild tracked `report/main.pdf`. Do before declaring the cluster done.
+3. **Gate-hardening / hygiene** (`aipm-iel`/`aipm-17f`/`aipm-qpa`): quotes on the 8 `skip_noquote` externals;
+   audit `cited` results vs `refs/`, downgrade ungrounded (`thm-whitehead`, `prop-aut-compact` PDF-only).
+4. **refs follow-ups** (`aipm-18d`): more classical-layer sources if needed (matrix norms/convexity); seed the
+   content-addressed cache (`fetch-refs.py --populate-cache`); decide the 2 SUSPECT PDFs. report-sync warns
+   (`lem-cstar-sa-to-epsjb` coverage, `B-ROUND` dup key) still open.
+5. **Open-math frontier** (hard): Layer-1 (`op-jordan-structure`/`op-layer1-gap`), NPPS/exposed-hull
+   (`op-npps`/`op-exposed-hull`). The classical chain (`thm-rank-one`/`thm-simplex`/`prop-approx-simplex`) is also
+   ready (depends on validated `lem-classical-equiv`) — a separate, high-throughput continuation off the critical path.
+6. **Backlog:** general-`D` dilation (`aipm-us3`); af-friction PRs upstream `../vibefeld` (user-authorized — the
+   `--dry-run` bug `aipm-rdx` is a candidate); Phase-5 Lean scaffold.
 
 ## Recipes (do exactly this)
 
-**Recipe B — af per-lemma (PROVEN: bridge, 3 dilation sub-lemmas, thm-faithful-approx).** Drive the ready
-frontier (`python3 scripts/argument.py`). Per lemma:
-1. **Prep:** read the lemma shard + its report prose (`provenance` line range) + cited def shards. For every
-   external fact, locate the verbatim `refs/` string (re-harvest reusable `GT-*` source strings byte-exact from
-   a prior workspace, e.g. `proofs/lem-square-hole-almost-positive/externals/`). Output a proof kit (outline ·
-   externals with loci + verbatim strings · node plan ≤12, depth ≤3 · groundability verdict G/A/R). Two derived
-   facts may NOT be quotable (build them as proven nodes, not externals).
-2. **Build (prover):** `af init -c "<contract VERBATIM>" -a <prover-id> -d proofs/<id>` (root must byte-match the
-   registry contract). Seed defs (`af def-add`) + externals (`af add-external --name … --source "…VERBATIM: \"<refs
-   bytes>\""` — COPY actual bytes, never from memory). Import a validated lemma as a black-box external (source =
-   `Prior VALIDATED registry lemma … VERBATIM contract: "…"`, → `skip_import`). Hypotheses → one `GT-hyp`
-   external (→ `skip_noquote`). Build with `af refine`; **`--depends` AT REFINE TIME** (declare ALL imported
-   lemmas + parent nodes as deps — a missing direct edge IS a verifier challenge). Self-check
-   `python3 scripts/check-refs.py --check` PASSES. Do NOT self-validate.
+**Recipe B — af per-lemma (PROVEN: bridge, dilation, faithful-approx, classical-equiv, prop-direct-sum).**
+1. **Prep (scout):** read the lemma shard + report prose + def shards. For every external, locate the verbatim
+   `refs/` string (re-harvest reusable `GT-*` strings byte-exact, e.g. `proofs/prop-direct-sum/externals/`).
+   Output a proof kit (outline · externals w/ loci+verbatim · node plan ≤12, depth ≤3 · verdict G/A/R).
+2. **Build (prover):** `af init -c "<contract VERBATIM>" -a <prover-id> -d proofs/<id>` (root byte-matches the
+   registry contract). `af def-add` (PLAIN-TEXT content — NO leading `---`, it's parsed as a flag) + `af add-external
+   --source "…VERBATIM: \"<refs bytes>\""` (COPY bytes via grep). Import a validated lemma as black-box external
+   (`skip_import`); hypotheses → one `GT-hyp` (`skip_noquote`). Build with `af refine`; **`--depends` AT REFINE
+   TIME — declare ALL deps incl. any node whose result/constant this node's conclusion uses** (a missing edge IS a
+   challenge — happened on `prop-direct-sum` 1.7). **NEVER `af refine --dry-run`** (it creates the node anyway —
+   `aipm-rdx`). Self-check `python3 scripts/check-refs.py --check` PASSES. Do NOT self-validate.
 3. **Verify — ONE FRESH VERIFIER PER NODE (rule 3), sequential, leaves→root:** each verifier (distinct owner,
-   role verifier) claims its single node, re-greps every refs leaf (FULL quote, R5; asterisk/whitespace-only
-   mismatch is OK per check-refs normalization), confirms imports' hypotheses are satisfied, demands
-   dimension-free constants, reproduces any counterexample (R7), then `af accept <n> --agent <vid>` (add
-   `--confirm`) or `af challenge <n> --owner <vid> --target <…> --reason "…"`. Then exits.
-4. **Resolve (prover, ≠ the verifier):** `af amend <n> --owner <prover> -s "…"` (statement only; pending nodes),
-   then `af resolve-challenge <ch-id> -r "…"` (note: `-r` only, NO `-o`/owner flag; full `ch-…` id). af has no
-   post-hoc dependency-edge command — if a missing-edge challenge can't be fixed without re-refining (which
-   archives validated children), resolve by recording the transitive dep + amending the statement (precedent:
-   `thm-faithful-approx` node 1.4). Re-verify with a NEW fresh verifier.
-5. When all nodes validated+clean: `af export -d proofs/<id> > proofs/<id>/export.md` (+ `--format latex` →
-   `export.tex`); set the shard `af: validated` (+ add any newly-discovered import to `deps`); `python3
-   scripts/argument.py --check --generate`; do the Report upkeep (NEXT §2); commit (Recipe C). >12 nodes or
-   depth >3 ⇒ STOP and factor a sub-lemma.
+   `--role verifier`) claims its node, re-greps every refs leaf (FULL quote), confirms imports' hypotheses,
+   demands dimension-free constants, reproduces any counterexample (R7), then `af accept <n> --agent <vid>
+   --confirm` (clean node needs `--confirm`) or `af challenge <n> --owner <vid> --target <…> --reason "…"`, then
+   `af release <n> --owner <vid>`. The ROOT is discharged by its refinement children (no explicit `--depends` —
+   verify the SYNTHESIS, not edge syntax; precedent `prop-direct-sum`/`lem-bridge-orderunit`).
+4. **Resolve (prover ≠ the verifier):** `af amend <n> --owner <prover> -s "…"` (statement only; pending nodes),
+   then `af resolve-challenge <ch-id> -r "…"` (`-r` only, full `ch-…` id). No post-hoc edge command — record a
+   missing transitive dep in the statement prose (precedent `prop-direct-sum` 1.7, `thm-faithful-approx` 1.4).
+   Re-verify with a NEW fresh verifier (≠ author, ≠ challenger).
+5. When all nodes validated+clean: `af export -d proofs/<id> > proofs/<id>/export.md` (+ `--format latex`); set the
+   shard `af: validated` (+ add any newly-found import to `deps`); `python3 scripts/argument.py --check --generate`;
+   commit (Recipe C); batch the report upkeep (`aipm-6ct`). >12 nodes or depth >3 ⇒ STOP and factor a sub-lemma.
 
-**Recipe D — capstone (assembly of validated lemmas, PROVEN on `thm-dilation-compatible`).** When a theorem
-reduces to already-validated lemmas: `af init` with the contract; `af add-external` each dep lemma's contract
-byte-verbatim (→ `skip_import`); `--depends` to the registry deps; thin assembly (~6–7 nodes) + a `GT-hyp`
-external (`skip_noquote`). The verifier's #1 job: confirm each import's **hypotheses are satisfied** by the
-parent's setup.
+**Recipe D — capstone (assembly of validated lemmas, PROVEN on `thm-dilation-compatible`).** `af init` w/ the
+contract; `af add-external` each dep lemma's contract byte-verbatim (`skip_import`); `--depends` to the registry
+deps; thin assembly (~6–7 nodes) + a `GT-hyp` (`skip_noquote`). Verifier's #1 job: confirm each import's
+**hypotheses are satisfied** by the parent's setup.
 
-**Recipe C — gate / commit.** `python3 scripts/argument.py --check --generate`; then `sh scripts/check-all.sh`
-(no active pre-commit hook here — run it BY HAND). One atomic validated result per commit; end the message with
-the `Co-Authored-By` trailer; `git pull --rebase --autostash` then `git push`. (`bd dolt push` is skipped — beads
-non-functional here.)
+**Recipe C — gate / commit.** `python3 scripts/argument.py --check --generate`; one atomic validated result per
+commit; end the message with the `Co-Authored-By` trailer. **The pre-commit hook runs `check-all` automatically**
+(let it; do NOT bypass with `core.hooksPath`). `git pull --rebase --autostash` then `git push`. Beads syncs via
+git-tracked `.beads/issues.jsonl` (`bd export -o .beads/issues.jsonl` before committing if you changed issues) +
+`bd dolt push` (works — git-backed `origin` remote).
 
 **Recipe A — add a registry shard.** Edit frontmatter (`id`==filename stem; `contract` one line; `defs`/`deps`
-`;`-lists; `status`; `af: none`; `provenance`; `owner`; `workspace`). Every `def`/`dep` must resolve.
-`argument.py --check --generate` → 0 errors. Commit.
+`;`-lists; `status`; `af: none`; `provenance`; `owner`; `workspace`). Every `def`/`dep` resolves.
+`argument.py --check --generate` → 0 errors. Reviewer≠author for new shards. Commit.
 
 ## Key facts / gotchas
-- **check-refs is law.** Every af-external citing a `refs/` locus embeds a verbatim quote that byte-matches
-  (modulo whitespace/markdown-emphasis-asterisk normalization). Imports of validated lemmas = `skip_import`;
-  the theorem's own hypotheses = `skip_noquote`. 8 quote-less externals still slip through as `skip_noquote`.
-- **Report upkeep is manual.** `check-all` builds the report only into gitignored `report/.build/`; the tracked
-  `report/main.pdf` and `report/figures/dag.pdf` are committed artifacts you must regenerate by hand (latexmk +
-  `gen-dag-figure.py`) when sources/registry change. `gen-dag-figure.py` is deliberately NOT gate-wired. New
-  validated results need their `\afbadge` + `tab:status` `af` tick + count bump added in lockstep.
-- **af frictions:** no post-hoc dependency-edge command (declare `--depends` at refine; resolve missing-edge
-  challenges via transitive recording, see Recipe B4); `resolve-challenge` takes `-r` only (no owner flag), full
-  `ch-…` id; `af amend` edits statement text only and only on pending nodes; `af refine` rejects `--depends` with
-  multiple statements; validated nodes can't be amended. Serialize af ops per workspace.
-- **Templates:** `proofs/lem-classical-equiv` (11-node, Workflow-orchestrated end-to-end, refs-grounded
-  forward+converse, 0 challenges — the cleanest worked example; orchestration in `proofs/lem-classical-equiv/orchestration/`),
-  `proofs/thm-faithful-approx` (10-node refs-grounded + a resolved dependency challenge),
-  `proofs/lem-cstar-sa-to-epsjb` (multi-axiom O(η) crux), `proofs/lem-bridge-orderunit` (smallest),
-  `proofs/thm-dilation-compatible` (capstone assembly).
-- **Reviewer ≠ author cuts both ways (R7).** Verifiers catch fabrications AND can produce false claims;
-  independently reproduce counterexamples. Numerics + a one-line proof are the cheap cross-check.
-- **`refs/` trust tiers** (the `(open)`-honesty rule applies to ground truth): GENUINE = HOS/Idel (user-stored
-  `../af-tests`, content-verified) + the 6 web-recovered (authoritative origin + hash); **SUSPECT = `kaup-1984`,
-  `chu-russo-1512.03347`** (do NOT trust without re-deriving). All 4 af-cited sources are GENUINE.
-- **Beads is non-functional in this clone** (empty DB, `issue_prefix` unset → `bd create` errors; no dolt remote
-  → `bd dolt pull/push` fail). Use the linker (`argument.py`) as the frontier, not `bd`; skip `bd dolt push`;
-  commits go directly to git on `main`. No active git pre-commit hook (`core.hooksPath` unset) — run `check-all`
-  by hand. `agent-A/HANDOFF.md` MATH is current; its FILE MAP is stale (repo is `/home/tobias/...`).
+- **check-refs is law.** Every af-external citing a `refs/` locus embeds a verbatim quote that byte-matches (modulo
+  whitespace/markdown-asterisk normalization). Imports = `skip_import`; hypotheses = `skip_noquote`.
+- **Beads WORKS** (embedded-dolt; git-backed `origin` remote; `.beads/issues.jsonl` git-tracked). Use `bd ready`/
+  `bd show`/`bd create`/`bd dep`/`bd close`. `bd doctor`/`bd dolt status` say "unsupported in embedded mode" — that
+  is EXPECTED, not breakage. Sync: `bd export -o .beads/issues.jsonl` + commit + `bd dolt push`.
+- **Active pre-commit hook** runs `check-all` (incl. latexmk) on every commit — commits are auto-gated.
+- **af frictions:** **`af refine --dry-run` STILL CREATES the node** (mutates state — `aipm-rdx`; never use it); no
+  post-hoc dependency-edge command (declare `--depends` at refine; resolve missing-edge challenges via transitive
+  prose recording, Recipe B4); `resolve-challenge` takes `-r` only, full `ch-…` id; `af accept` on a clean (un-
+  challenged) node needs `--confirm`; `af amend` edits statement text only, pending nodes only; `af def-add` chokes
+  on content starting with `---`; validated nodes can't be amended. Serialize af ops per workspace.
+- **Report upkeep is manual + BATCHED** (`aipm-6ct`). `check-all` builds only to gitignored `report/.build/`; the
+  tracked `report/main.pdf` + `report/figures/dag.pdf` are committed artifacts regenerated by hand (latexmk +
+  `gen-dag-figure.py`). `status drift OK` means a validated-but-unbadged result does NOT fail the gate (underclaim-safe).
+- **Templates:** `proofs/prop-direct-sum` (10-node, background-subagent-orchestrated, 1 resolved dep challenge —
+  freshest worked example), `proofs/lem-classical-equiv` (11-node, cleanest 0-challenge), `proofs/thm-faithful-approx`
+  (resolved dep challenge), `proofs/lem-bridge-orderunit` (smallest), `proofs/thm-dilation-compatible` (capstone).
+- **Reviewer ≠ author cuts both ways (R7).** Verifiers catch fabrications AND can produce false claims (e.g. the
+  `prop-direct-sum` 1.7 verifier mis-flagged a 1.7.2 "artifact" by reading a superseded ledger entry — check live
+  state). Independently reproduce counterexamples; numerics + a one-line proof are the cheap cross-check.
+- **`refs/` trust tiers:** GENUINE = HOS/Idel + the web-recovered arXiv-pinned (incl. new `baake-sumner`);
+  **SUSPECT = `kaup-1984`, `chu-russo-1512.03347`** (do NOT trust without re-deriving). All af-cited sources GENUINE.
+- `agent-A/HANDOFF.md` MATH is current; its FILE MAP/paths are stale (repo is `/home/tobias/...`).

@@ -397,3 +397,41 @@ result (orchestration in `proofs/lem-classical-equiv/orchestration/`):
   tree onto branch `agent-b/op-exposed-hull-orchestration` and its index swept 2 exploration notes into the
   `222ced5` docs commit. Consolidated canonical work onto `main` (per user): restored only the 4 intended docs
   files, rewrote HANDOFF; Agent B's exploration stays on its own pushed branch.
+
+## 2026-06-09 — `cor-adjoint-benchmark` cluster launched; `prop-direct-sum` (16th af-validated); matrix audit; refs add
+
+Multi-agent orchestration session (background subagents; opus for prover/verifier/scout/audit). Goal: af-validate
+the **`cor-adjoint-benchmark` cluster** — the master exact-adjoint Jordan-coboundary inversion, the most advanced
+prose-proved result on the critical path to Layer-1 (`op-jordan-structure`/`op-layer1-gap`). Tracked as beads epic
+`aipm-brd` + 5 child issues mirroring the registry DAG (`prop-direct-sum`, `prop-spin-splitting`,
+`prop-comm-scalar`, `thm-matrix-splitting`, `cor-adjoint-benchmark`).
+- **Scoping wave (4 parallel read-only scouts):** proof-kits for the 3 ready feeders (all verdict **G**,
+  byte-grounded in HOS) + a **soundness audit** of the suspect `thm-matrix-splitting` front-loaded to de-risk.
+  `prop-comm-scalar` flagged OVER BUDGET (14 nodes/depth 6) → factor first (`aipm-0wn`).
+- **`prop-direct-sum` COMPLETE (`af: validated`, commit `52110bd`, pushed).** 10-node workspace (depth 3): the
+  summand-count-free direct-sum splitting (constant `max_r K_r+1`, no m-dependence, adjoint modules; off-block
+  primitives via `P_r f(e_r,·)`, aggregation is MAX not sum). 1 prover → **10 fresh per-node verifiers**
+  (leaves→root, one per node, reviewer≠author). 4 HOS externals re-grepped byte-exact. **One challenge** (node 1.7
+  under-declared its transitive use of node 1.5's norm bound — an undeclared DAG edge) caught by verifier
+  `ver-ds-n17`, **resolved** by `prover-direct-sum` (statement amend recording 1.5 + root assembly; no math change;
+  `thm-faithful-approx` 1.4 precedent), **re-verified clean** by fresh `ver-ds-n17b`. Root validated via synthesis
+  of children (1.3 construct + 1.5 bound + 1.7 right-inverse), byte-exact contract-match. LESSON: declare EVERY
+  cross-node dep (incl. constant-supplying nodes) at refine. NOTE: a verifier mis-flagged a 1.7.2 "artifact" by
+  reading a *superseded* ledger entry — live text was clean (check live state, not raw ledger).
+- **Matrix soundness audit → `NEEDS-REFORMULATION`** (`thm-matrix-splitting`, `aipm-l3y`/`aipm-q85`). Adversarial
+  read + numerics: **sound** (C genuinely n-independent; matching-curvature detection identity machine-verified —
+  no ordinary-vs-cb amplification gap; **log-Schur stress test ratio flat ~1.3, NOT a counterexample**) ⇒
+  `obs-matrix-audit`/`aipm-36d` re-audit **RESOLVED**. But NOT build-ready: quaternionic mixed-sector twirl
+  asserted-not-derived (expand first), state C as "universal" (drop 60/84/124), factor into ~8 sub-lemmas. Open
+  user decision A/B/C (default A = honest maximal progress).
+- **refs: added `baake-sumner-2007.11433`** (Baake–Sumner, *On equal-input and monotone Markov matrices*, J. Appl.
+  Probab. 2022) — byte-greppable arXiv `.tex` source (hash `f358c71c…`, fetch-reproducible via `sources.lock.json`,
+  `arxiv-eprint-member`). Idempotent Markov-matrix structure (min poly `x(x−1)`, extremal idempotents `E_1..E_d`)
+  for the commutative case. Manifest (`checksums.sha256` 50→51, `SOURCES.md`, lock `arxiv_verified`) +
+  `test_fetch_refs.py` counts (17→18 fetch-reproducible) updated in lockstep; check-all green.
+- **`prop-spin-splitting` build ATTEMPT 1 FAILED** (`aipm-8zc`): prover hit an **af `--dry-run` friction** — `af
+  refine --dry-run` (intended as preview) actually CREATED a junk placeholder node 1.6, shifting the numbering and
+  breaking the declared dependency edges (13 nodes), then the agent stalled (stream watchdog). 0 nodes validated;
+  broken workspace **scrapped** (kit kept), **rebuild next session**. af bug filed (`aipm-rdx`, candidate upstream PR).
+- **Stale-HANDOFF facts corrected:** beads is fully functional here (embedded-dolt + git-backed `origin` remote);
+  there IS an active pre-commit hook running `check-all`. HANDOFF rewritten accordingly.
