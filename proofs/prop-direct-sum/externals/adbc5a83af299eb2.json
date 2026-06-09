@@ -1,0 +1,8 @@
+{
+  "id": "adbc5a83af299eb2",
+  "name": "GT-hyp",
+  "source": "PROPOSITION HYPOTHESES (prop-direct-sum, registry contract — the antecedent of the implication, given data not derived; this external carries no refs quote, skip_noquote). (E5 DIRECT-SUM MAX NORM) B = direct sum over r=1..m of unital JB-algebras B_r, with coordinatewise Jordan product, and the order-unit norm on B is the maximum of the factor norms: ||x|| = max_r ||x_r|| (written into the contract as \"order-unit norm = max_r\"; this is a defining hypothesis of the statement, NOT a general HOS theorem). (E6 PER-FACTOR SPLITTINGS) each factor B_r carries an exact-adjoint coboundary splitting S_r: im(d^1_{B_r}) -\u003e C^1(B_r,B_r) in the adjoint module, with d^1_{B_r} S_r g = g for all g and ||S_r g|| \u003c= K_r ||g|| in the injective order-unit cochain norm; set K = max_r K_r. (MODULE RESTRICTION) all modules are adjoint / block-respecting: the action is left Jordan multiplication, so the central unit e_r acts as the identity on its own block B_r (no Peirce-1/2 mixing); arbitrary modules are excluded.",
+  "content_hash": "af07414388ed11ecee42fa68b76db7163e8a70677ccbed0a3a318b9a8d33309a",
+  "created": "2026-06-09T09:50:40.122299237Z",
+  "notes": ""
+}

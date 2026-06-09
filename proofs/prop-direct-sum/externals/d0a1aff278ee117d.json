@@ -1,0 +1,8 @@
+{
+  "id": "d0a1aff278ee117d",
+  "name": "GT-orderunit-norm-formula",
+  "source": "HOS Handbook of Operator Algebras (joa-m) @ refs/hos/joa-m.md:370 (§1.2.1). On an order unit space A with order unit e, the order norm is ||a||=inf{lambda\u003e0: -lambda e \u003c= a \u003c= lambda e}. Used for the coordinate-norm bounds ||x_r||\u003c=||x|| in the direct sum. VERBATIM: \"$$||a|| = \\inf\\{\\lambda \u003e 0: -\\lambda e \\le a \\le \\lambda e\\}.$$\"",
+  "content_hash": "f2fcad3bb95732f63411ebdb3f0d307a0609b4dfb29e10928cfaae2a2b9cf2a3",
+  "created": "2026-06-09T09:50:18.586054602Z",
+  "notes": ""
+}

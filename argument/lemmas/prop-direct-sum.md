@@ -5,7 +5,7 @@ contract: If B=⊕_r B_r (order-unit norm = max_r) and each factor has an exact-
 defs: def-jordan-coboundary; def-jb-algebra
 deps:
 status: proved
-af: none
+af: validated
 provenance: agent-B/notes/adjoint-direct-sum-reduction.md; agent-B/notes/spin-direct-sum-adjoint-corollary.md; report prop:direct-sum
 owner: B
 workspace: proofs/prop-direct-sum

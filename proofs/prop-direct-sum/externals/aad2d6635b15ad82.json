@@ -1,0 +1,8 @@
+{
+  "id": "aad2d6635b15ad82",
+  "name": "GT-jb-unit-norm-one",
+  "source": "HOS Handbook of Operator Algebras (joa-m) @ refs/hos/joa-m.md:2318 (§3.1.4). In a unital JB-algebra the identity 1 has norm 1; here it gives ||e_r||=1 for each central unit e_r of the ideal B_r. VERBATIM: \"If A is unital we denote the identity by 1. Then it is clear from (i) that ||1|| = 1.\"",
+  "content_hash": "271355f359389cf2cfd4a3db37abdb06c82799822c53d3ef22ebbad94650861b",
+  "created": "2026-06-09T09:50:26.638939064Z",
+  "notes": ""
+}

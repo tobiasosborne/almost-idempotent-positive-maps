@@ -37,7 +37,7 @@
 | `prop-comm-scalar` | proposition | proved | none | B | Every finite-dim unital Jordan R^m-module splits into one-dim scalar modules wit… |
 | `prop-decomposable-norm` | proposition | proved | none | B | The Haagerup-Wittstock decomposable norm is not 1 for every unital positive deco… |
 | `prop-diag-next-arrow` | proposition | proved | none | B | For the fixed diagonal-frame action of D=R^n on M=H_n(F) (x·m=x•m), every unit-n… |
-| `prop-direct-sum` | proposition | proved | none | B | If B=⊕_r B_r (order-unit norm = max_r) and each factor has an exact-adjoint cobo… |
+| `prop-direct-sum` | proposition | proved | validated | B | If B=⊕_r B_r (order-unit norm = max_r) and each factor has an exact-adjoint cobo… |
 | `prop-doubling` | obstruction | proved | none | B | Naive doubling fails: for Phi=Cj one has F^2-F=j((Phi-1)C), and ||Phi^2-Phi|| co… |
 | `prop-faithful-counterexample` | obstruction | proved | none | A | The family T_a=(1-a)P_0+aJ (0<a<1/2, J=(1/3)ones) gives unital positive Phi_a, e… |
 | `prop-faithful-exact` | proposition | cited | none | A | If a unital positive idempotent P on B(H)_sa admits a faithful invariant state (… |

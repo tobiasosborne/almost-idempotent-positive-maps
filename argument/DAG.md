@@ -37,7 +37,7 @@ graph LR
   prop-comm-scalar["prop-comm-scalar<br/>proved/none"]
   prop-decomposable-norm["prop-decomposable-norm<br/>proved/none"]
   prop-diag-next-arrow["prop-diag-next-arrow<br/>proved/none"]
-  prop-direct-sum["prop-direct-sum<br/>proved/none"]
+  prop-direct-sum["prop-direct-sum<br/>proved/validated"]
   prop-doubling["prop-doubling<br/>proved/none"]
   prop-faithful-counterexample["prop-faithful-counterexample<br/>proved/none"]
   prop-faithful-exact["prop-faithful-exact<br/>cited/none"]

@@ -1,0 +1,8 @@
+{
+  "id": "4b25d160f78acf90",
+  "name": "GT-jb-is-order-unit-space",
+  "source": "HOS Handbook of Operator Algebras (joa-m) @ refs/hos/joa-m.md:2552 (§3.3.10). A unital JB-algebra is a complete order unit space with order unit the identity 1 and order norm equal to the given norm; this licenses applying the order-unit norm formula GT-orderunit-norm-formula to each factor B_r and to B. VERBATIM: \"**3.3.10. Proposition.** If A is a unital JB algebra, then A is a complete order unit space with the ordering induced by  $A_+$  and order unit the identity 1. The order norm is the given one, and  $a \\in A$  satisfies  $-1 \\le a \\le 1$  implies  $0 \\le a^2 \\le 1$ .\"",
+  "content_hash": "49098a0f604030f82e64c911186de1ed0adc59b867f854ddef61742313a6462d",
+  "created": "2026-06-09T09:50:26.653894037Z",
+  "notes": ""
+}

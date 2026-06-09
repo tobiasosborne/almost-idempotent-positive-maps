@@ -1,0 +1,8 @@
+{
+  "id": "746582dd38b07c8b",
+  "name": "GT-central-idempotent-summand",
+  "source": "HOS Handbook of Operator Algebras (joa-m) @ refs/hos/joa-m.md:1473 (§2.5.7). A central idempotent e in a unital Jordan algebra A makes U_e A a direct summand and an ideal; this is the structure of the ideal summands B_r = U_{e_r} B with central units e_r, so e_r acts as identity on its own block B_r and annihilates the others (off-block recovery P_r f(e_r,.)). VERBATIM: \"- **2.5.7.** From the above proof it is clear that, if e is a central idempotent in a unital Jordan algebra A, then  $U_eA$  is a direct summand and, in particular, an ideal in A. Conversely, if e is an idempotent in A such that  $U_eA$  is an ideal, then e is central. For then, if  $a \\in A$ , we must have  $e \\circ a \\in U_eA$ , i.e.  $U_e(e \\circ a) = e \\circ a$ . By (2.62), however, this implies  $U_ea = T_ea$ . Hence by 2.5.5, e is central.\"",
+  "content_hash": "6a7972d7ea48c1560960bafe2daec60fa05827686eaec747483d7567dfbb9c0b",
+  "created": "2026-06-09T09:50:40.099960887Z",
+  "notes": ""
+}
