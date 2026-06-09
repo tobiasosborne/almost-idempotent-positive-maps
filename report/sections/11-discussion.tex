@@ -89,12 +89,13 @@ A green \afyes\ in the final column marks results that are additionally
 result has a tiny formal workspace whose root statement is byte-identical to its
 contract and whose every step is checked by a prover and an independent verifier.
 In the body these carry a green `\textcolor{afgreen}{$\checkmark$\,af-validated}'
-badge linking to the corresponding workspace \texttt{proofs/<id>/}. Fifteen
+badge linking to the corresponding workspace \texttt{proofs/<id>/}. Sixteen
 results are af-validated: the bridge theorem and its nine constituent lemmas
 (\Cref{sec:bridge}, \Cref{sec:spectral}), the dilation-compatible theorem with
 its three sub-lemmas (\Cref{sec:exponent}), the conditioned faithful-invariant
-bound (\Cref{thm:faithful-approx}), and the classical signed/stochastic
-equivalence lemma (\Cref{lem:classical-equiv}). The full machine-checked
+bound (\Cref{thm:faithful-approx}), the classical signed/stochastic
+equivalence lemma (\Cref{lem:classical-equiv}), and the summand-count-free
+direct-sum exact-adjoint splitting (\Cref{prop:direct-sum}). The full machine-checked
 dependency graph is \Cref{fig:dag}.
 
 \begin{table}[ht]
@@ -131,8 +132,10 @@ Classical projection stability (general); global exposed-hull
   & open & \Cref{op:classical}, \Cref{op:exposed-hull} & \\
 Order-vs-Frobenius gap $=\sqrt{\mathrm{rank}}$
   & proved & \Cref{prop:rank-gap} & \\
-Exact-adjoint splitting: spin, direct sums, commutative scalar
-  & benchmark & \Cref{prop:spin-splitting}--\ref{prop:comm-scalar} & \\
+Exact-adjoint splitting: direct sums (summand-count-free)
+  & benchmark & \Cref{prop:direct-sum} & \afyes \\
+Exact-adjoint splitting: spin, commutative scalar
+  & benchmark & \Cref{prop:spin-splitting}, \Cref{prop:comm-scalar} & \\
 Exact-adjoint splitting: high-rank matrix factors
   & benchmark (re-audit pending) & \Cref{thm:matrix-splitting} & \\
 Master exact-adjoint coboundary inversion

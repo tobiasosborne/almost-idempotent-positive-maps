@@ -37,7 +37,7 @@ digraph argument {
   "prop-comm-scalar" [label="prop-comm-scalar", fillcolor="#e9ecef"];
   "prop-decomposable-norm" [label="prop-decomposable-norm", fillcolor="#e9ecef"];
   "prop-diag-next-arrow" [label="prop-diag-next-arrow", fillcolor="#e9ecef"];
-  "prop-direct-sum" [label="prop-direct-sum", fillcolor="#e9ecef"];
+  "prop-direct-sum" [label="prop-direct-sum", fillcolor="#b7e4c7"];
   "prop-doubling" [label="prop-doubling", fillcolor="#ffe5b4"];
   "prop-faithful-counterexample" [label="prop-faithful-counterexample", fillcolor="#ffe5b4"];
   "prop-faithful-exact" [label="prop-faithful-exact", fillcolor="#cfe2ff"];
