@@ -2,7 +2,8 @@
   "_comment": "Reproducible reconstruction manifest for refs/. fetch!=null => byte-reproducible from the pinned arXiv id (verified this session); fetch==null => content-addressed cache only ($AIPM_REFS_CACHE/<sha256>). Hashes are authoritative (== checksums.sha256). Regenerate-or-edit by hand; keep in sync with checksums.sha256.",
   "arxiv_verified": [
     "2405.02434",
-    "2604.08380"
+    "2604.08380",
+    "2007.11433"
   ],
   "files": [
     {
@@ -13,6 +14,15 @@
         "kind": "arxiv-pdf",
         "id": "math/0501158",
         "verified": "fetched from official arXiv + hash-match => genuine"
+      }
+    },
+    {
+      "path": "baake-sumner-2007.11433/equal-fin.tex",
+      "sha256": "f358c71c066293f80c1f2cebd1bfb6b46489bf25320bccef7c5ec6b464b3aa01",
+      "source_id": "baake-sumner-2007.11433",
+      "fetch": {
+        "kind": "arxiv-eprint-member",
+        "id": "2007.11433"
       }
     },
     {

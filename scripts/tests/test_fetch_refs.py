@@ -36,10 +36,10 @@ def sha(b):
 
 # --- the real lock parses and is internally consistent ---
 files = fr.load_lock()
-check("load_lock reads all 50 refs files", len(files) == 50)
+check("load_lock reads all 51 refs files", len(files) == 51)
 check("every lock entry has a 64-hex sha256", all(len(f["sha256"]) == 64 for f in files))
 fetchable = [f for f in files if f.get("fetch")]
-check("17 files are fetch-reproducible (kitaev + vlw + ES + baak-moslehian + blecher-read)", len(fetchable) == 17)
+check("18 files are fetch-reproducible (kitaev + vlw + ES + baak-moslehian + blecher-read + baake-sumner)", len(fetchable) == 18)
 check("every fetch spec is well-formed (arxiv kind has an id; url kind has a url)",
       all((f["fetch"]["kind"].startswith("arxiv") and f["fetch"].get("id"))
           or (f["fetch"]["kind"] == "url" and f["fetch"].get("url")) for f in fetchable))

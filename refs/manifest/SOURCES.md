@@ -10,7 +10,7 @@ Single deduplicated reference store. **Payload (PDF/TeX/txt/png/md) is gitignore
 `manifest/` directory is tracked, so the ledger is auditable from a clean checkout (the
 `check-provenance` gate *warns*, not fails, when a payload is absent locally).
 
-**Integrity.** Authoritative hashes are in `refs/manifest/checksums.sha256` (50 files).
+**Integrity.** Authoritative hashes are in `refs/manifest/checksums.sha256` (51 files).
 Verify the whole store:
 
 ```bash
@@ -26,8 +26,8 @@ python3 scripts/fetch-refs.py              # fetch the arXiv-pinned sources (kit
 AIPM_REFS_CACHE=<dir> python3 scripts/fetch-refs.py   # restore bespoke sources from a CAS you control
 ```
 
-- **Fetch-reproducible (17 files), and thereby GENUINENESS-VERIFIED:** `kitaev-2405.02434` (8),
-  `vlw-2604.08380` (6) from arXiv e-prints/PDFs; `effros-stormer-1979/positive-projections-jordan-structure.pdf`
+- **Fetch-reproducible (18 files), and thereby GENUINENESS-VERIFIED:** `kitaev-2405.02434` (8),
+  `vlw-2604.08380` (6) from arXiv e-prints/PDFs; `baake-sumner-2007.11433/equal-fin.tex` from the arXiv `2007.11433` source; `effros-stormer-1979/positive-projections-jordan-structure.pdf`
   from the official *Mathematica Scandinavica* open-access galley; `baak-moslehian` from arXiv `math/0501158`;
   `blecher-read-2019/...tex` from the arXiv `1905.05836` source. Each was fetched from its AUTHORITATIVE
   origin and byte-matched the recorded hash — a prior agent's wrong/hallucinated file could not match the
@@ -62,6 +62,7 @@ Definitions/lemmas cite a source by `<source-id>` + locus (e.g. line number); th
 | `kaup-1984` | Kaup, *Contractive projections on Jordan C\*-algebras* (1984) | `refs/kaup-1984/` | Jordan contractive projections | `contractive-projections-jordan-cstar.pdf` `16c72dafd7e16a86` |
 | `baak-moslehian` | Baak, Moslehian, J\*-homomorphism stability | `refs/baak-moslehian/` | local J\*-stability (Layer-1 literature check) | `baak-moslehian-J-star-stability.pdf` `027cffddd2735fbe` |
 | `itoh-1991` | Itoh, positive projections, Tokyo 1991 | `refs/itoh-1991/` | positive-projection range structure | `itoh-positive-projections-tokyo1991.txt` `03bd2d3d6ebb2821` |
+| `baake-sumner-2007.11433` | Baake, Sumner, *On equal-input and monotone Markov matrices*, arXiv:2007.11433 (J. Appl. Probab. 2022, DOI 10.1017/apr.2021.39) | `refs/baake-sumner-2007.11433/equal-fin.tex` | idempotent Markov-matrix structure — commutative case (`op-classical` / `def-stochastic` / `thm-simplex`) | `equal-fin.tex` `f358c71c066293f8` |
 
 **Provenance fixed (vs prior state):** previously the Kitaev/VLW/PDF payloads were byte-identical
 duplicates split across `agent-A/refs` and `agent-B/references`, and HOS/Idel ground truth pointed
