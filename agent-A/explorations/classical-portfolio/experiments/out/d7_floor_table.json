@@ -1,0 +1,28 @@
+{
+  "normalization": "delta = max_i neg(p_i) = max-row-neg (SAME units as d3 envelope a in [2.4,3.5])",
+  "regimes": {
+    "d3_envelope_boundary (H ~ tau, v marginally non-exposed)": {
+      "min_delta_over_H2": 3.485756097469357,
+      "typical_delta_over_H2": 4.2968055563530365,
+      "source": "d3_clean_scaling.json (6000 robust instances), reproduced as control iii",
+      "note": "THIS is the global floor: delta/H^2 >= 3.49 (worst), ~4.3 typical"
+    },
+    "d7_deep_ring_shell (H << tau, v deeply non-exposed via helper ring)": {
+      "min_delta_over_H2_hunt": 303.3828158556869,
+      "min_delta_over_H2_tradeoff": 280.1239554776283,
+      "n_entered_hunt": 8,
+      "n_entered_tradeoff": 31,
+      "note": "Hypothesis entered ONLY here (distinct far vertices both fail exposedness), but H collapses so delta/H^2 = 280-26000 >> floor."
+    },
+    "canonical / random distinct vertices (no ring)": {
+      "min_delta_over_H2": null,
+      "note": "Hypothesis EMPTY: distinct far vertices always expose -> join W -> dist=0 (controls i, ii). No (H>=H_target) instance exists."
+    }
+  },
+  "GLOBAL_min_verified_delta_over_H2": 3.485756097469357,
+  "GLOBAL_min_attained_at": "d3 exposedness boundary (dist/tau=0.536), max-neg units",
+  "n_configs_searched": {
+    "hunt": 7272,
+    "tradeoff": 36288
+  }
+}

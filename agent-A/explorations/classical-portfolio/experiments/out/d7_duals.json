@@ -1,0 +1,12 @@
+{
+  "mneg": 0.22,
+  "n": 18,
+  "r": 8,
+  "dual_families_active": {
+    "pin": 2,
+    "neg": 2,
+    "epi": 1
+  },
+  "n_nonzero_duals": 5,
+  "interpretation": "RL (idempotence R Lambda=I) duals nonzero => idempotence is LOAD-BEARING; neg/epi duals => the binding negativity row; pin duals => the pinned far geometry forces the cost."
+}

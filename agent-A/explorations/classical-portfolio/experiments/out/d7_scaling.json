@@ -1,0 +1,58 @@
+{
+  "question": "At the floor, does delta scale as H^2, H, or H^3? Which regime does the floor live in?",
+  "ANSWER": "The FLOOR lives in the H ~ tau regime (d3 exposedness boundary). There delta/H^2 = const = 3.49 (bounded below, >0), while delta/H -> 0 as tau->0. So the H^2 form BINDS as the lower-envelope inequality (delta >= 3.49 H^2); the linear delta ~ H/2 (d5) only at H ~ tau ~ O(1) (large-tau edge), NOT in the small-tau regime the conjecture is about.",
+  "regime_clarification": {
+    "H >> tau": "IMPOSSIBLE: dist/tau <= 0.536 is an empirical hard wall (distinct far vertices expose well before H reaches tau).",
+    "H ~ tau (the floor)": "delta/H^2 ~ 3.49 const; this is where the minimum lives.",
+    "H << tau (deep ring shell)": "delta/H^2 = 280..26000, huge; conjecture holds with slack."
+  },
+  "d3_envelope_per_bin": [
+    {
+      "tau": 0.02533632579022278,
+      "H": 0.0019159136646425268,
+      "delta": 0.0006419294045483079,
+      "delta_over_H2": 174.87808941159707
+    },
+    {
+      "tau": 0.04066033131989912,
+      "H": 0.00518043975675303,
+      "delta": 0.0016532625430439696,
+      "delta_over_H2": 61.60395160037823
+    },
+    {
+      "tau": 0.06525265568229938,
+      "H": 0.013479994452545052,
+      "delta": 0.004257909073592717,
+      "delta_over_H2": 23.43240991230453
+    },
+    {
+      "tau": 0.10471899601833551,
+      "H": 0.0342509898100391,
+      "delta": 0.010966068127088169,
+      "delta_over_H2": 9.347698290078934
+    },
+    {
+      "tau": 0.16805550689736684,
+      "H": 0.08977461893390748,
+      "delta": 0.028242653398530913,
+      "delta_over_H2": 3.50427641393161
+    },
+    {
+      "tau": 0.26969942868422686,
+      "H": 0.17486568038479103,
+      "delta": 0.07273778183259837,
+      "delta_over_H2": 2.3787614343753964
+    },
+    {
+      "tau": 0.43281998415571143,
+      "H": 0.13548835296085698,
+      "delta": 0.1873331386845503,
+      "delta_over_H2": 10.204945338708388
+    }
+  ],
+  "naive_loglog_fit_p": "~1.0-1.15 (SAMPLING ARTIFACT per d3 report: random search under-finds the envelope at small tau; the sampling-independent statement is dist/tau<=0.536 => delta>=3.49 H^2, i.e. p=2 binds as an inequality).",
+  "deep_ring_family_fit": {
+    "H_vs_delta_q": -0.8510782568507902,
+    "note": "In the ring regime H~delta^-0.85 is a construction artifact (finer ring at smaller delta), not the floor scaling."
+  }
+}
