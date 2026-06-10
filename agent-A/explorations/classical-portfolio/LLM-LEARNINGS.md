@@ -49,3 +49,10 @@ Format: `- [date] [worker@effort] [task type] — what happened; lesson.`
 - 2026-06-10 [process] — "progress message after each deliverable" doubles as wedge-detection AND
   server-side checkpointing for codex resume; now standard in every brief. Monitor harness with
   answer-file/process-death/stall detection made 6 long runs babysittable at near-zero attention.
+- 2026-06-10 [fable@max, HLC attack #1] — FAILURE MODE: 64-minute run died at the END with "response
+  exceeded the 64000 output token maximum" — the entire hour of reasoning lived in the final message
+  and was lost (31 tool calls were all reads; nothing on disk; SendMessage continuation unavailable
+  in this harness). LESSON (now standard for ALL long math subagents): the deliverable is a FILE,
+  written INCREMENTALLY after each proof stage; the final message is a ≤300-word pointer+verdict.
+  Same principle as the codex progress-protocol — checkpoint to durable storage, never accumulate
+  the payload in the terminal message.
