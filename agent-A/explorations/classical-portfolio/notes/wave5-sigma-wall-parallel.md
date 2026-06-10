@@ -373,3 +373,34 @@ wildly different consequences:
 ⇒ d11 MUST sweep PROBE 2 across δ scales (≥ 2 decades) tracking g_f vs H vs 2δ separately,
 plus run the w7 M-minimization. Without this, the "linear law" risks being a confident,
 plausible, WRONG claim — the exact failure mode this project guards against.
+
+---
+
+# d11 — scale disambiguation + M-minimization (COMPLETE; 9/9 cells verified)
+
+Report: notes/d11-scale-disambiguation.md; data: out/d11_scalesweep.json.
+
+**TASK A (the degeneracy resolved):** the d8 family RIGIDLY lives on the budget line
+g_f = H = 2δ — all three ratios 1.0000 to all digits across 7 verified collapse edges
+spanning δ ∈ [0.00063, 0.0718] (2.06 decades); slope ½ and R² = 1.0000 at EVERY scale. No
+crossover exists; the orchestrator's contradiction worry is vacuous for THIS family (it
+never populates the flat floor — δ/H² = 1/(4δ) → ∞ along the budget line; the flat-floor
+instances live in the d3/d7 stacking constructions). Sharpened statement: **g_f = H is a
+financier/separator identity (the biorthogonal apex financier's canonical deficit equals the
+full separation); δ = g_f/2 is the budget shadow price.** Resolving column: g_f/(κ·osc)
+climbs 0.10 → 1.000, hitting EXACTLY 1 at the wall edge — the financier reaches the
+top-band threshold precisely at the exposedness wall. [NUMERICAL, scale-swept]
+
+**TASK B (the decisive LP): min M ≥ c·τ — the coupling lemma is NOT refuted, and the
+certificate is in hand.** M/τ = 1.075 (wall, σ_v = 0.5), 3.02 (σ_v = 0.3); realization
+freedom only RAISES it (the edge binds), c ≈ 1.07 at the wall. **76–94% of M is the
+financier's SELF-coupling: the binding term is μ_f·λ_f·P⁺_ff — the financier is
+simultaneously v's top carrier (λ_f) and the top C10 blocker (μ_f).** The reciprocal-carrier
+mechanism is now measured, not just named. [NUMERICAL]
+
+**The proof target in its final form (for the closer):** prove from exactness that the
+binding far top-band blocker's self-coupling μ_f λ_f P⁺_ff ≳ τ (column exactness at the
+DIAGONAL: P_ff = Σ_k P_fk P_kf is the natural untapped identity), then chain:
+self-coupling ⇒ financier cannot sit low (budget shadow price δ = g_f/2 side) ⇒ hiding
+caps H at the wall. All scaffolding (C10-exchange, column-shadow, carrier propagation,
+conditioned F-ψ, large-σ shadow, height-functional wall) is proved and audited.
