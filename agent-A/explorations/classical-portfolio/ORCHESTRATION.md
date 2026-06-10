@@ -142,3 +142,26 @@ positivity-capable output (`op-layer1-gap`).
 
 ## Lane-switch log
 - 2026-06-10: start. Lane D first (D0 cross-check of orchestrator's vacuity analysis).
+
+---
+## STATE SNAPSHOT — 2026-06-10 end of day (supersedes lane-D details above)
+**Conditional theorem (2-family verified):** op-exposed-hull ⟸ HLC, C′ = max(4A, 1/√a)
+(notes/wave2/W2d-grand-assembly.md + assembly-verification-opus.md). HLC = aipm-e71.
+**Proved belt (all independently audited; constants per notes/wave4/audit-summary.md):**
+L1 lone-far-row; L2/L2'; C10 dual; L4 clipping; L5' maximizer leakage; L6 identity-frame linear;
+N1 nilpotent chains; F1 skinny near-coincidence; X1 one-mode wall; X2 complement rank-preservation;
+F-SS; F-ND (c=0.85); F-E kernel energy (R-explicit); F-GB g-budget; F-WR wiggle rigidity (side
+conditions!); F-BC (κ+δ); F-2R. CONDITIONAL: F-ψ (needs ψ-gap lemma: "ρ-far non-S-full rows have
+ψ-gap ≥ κZ"). VACUOUS-AT-SCALE: R1 descent (needs dual localization).
+**Numerics (validated pipeline, multiplicity-correct W, honest τ):** no counterexample in 67k+
+verified exact instances across 4 independent campaigns; floor δ/H² = 3.484 @ H/τ = 0.536 (d3, d7,
+d8 concur); σ_v-wall law H/τ ≈ min(σ_v, 0.536), certificates: budget(=F-GB) / margin-pinned-at-κ.
+**Residual opens:** (1) Branch-A budget analyticization (σ_v ≤ 1/2 ⇒ δ ≥ a₁H²); (2) Branch-B
+margin-pinning (σ_v ≥ 1/2 ⇒ exposed unless H ≤ A₂τ); (3) ψ-gap lemma. Endgame codex push running
+(/tmp/codex-endgame/). Literature: HLC is virgin ground = quantitative Douglas–Ando stability
+(notes/literature-sweep-hlc.md).
+**Process state:** ~30 codex runs (resume-chains + waves; user quota fine), 8 opus workers, 1 fable
+(file-protocol mandatory — see LLM-LEARNINGS), 4 sonnet. All notes under notes/{wave1..4,*}.md.
+**Next after endgame returns:** if branches close → full prose write-up + 2-family verify (done-bar)
+→ Recipe A→B banking on main + report sections. If partial → residual is 1-2 named inequalities;
+consider fable closer pass, then honest obstruction write-up (PRD-legitimate outcome).
