@@ -741,3 +741,36 @@ weighting (carrier mass? μ-mass? row count?); the Δ-bounded vs Δ-unbounded di
 (zero-pattern degeneration → support-graph combinatorics, where the s5 family lives).
 This is the first time the campaign has a PROVED finisher waiting on a single localization
 input of classical type (good-cut/coarea pigeonhole).
+
+---
+
+# WAVE 10.5 + report v2 reviews (answers archived in notes/swarm-answers/ as w105_*, review2_*)
+
+- **bandcut: DIED-AT the uniform cut-leakage estimate.** The pigeonhole/coarea cut gives
+  AVERAGED leakage; t10's finisher (as stated) needs the SUP-form λ_T ≤ c(1−q)τ. The
+  residual is now: either strengthen the cut (sup-control via a two-scale cut / removing
+  few bad rows) or weaken the finisher to tolerate weighted leakage (re-derive Birkhoff
+  contraction under L¹-leakage). BOTH are concrete, classical-type questions — the
+  sharpest the residual has ever been.
+- **wfree: RECOMMENDED W-free form = Baake–Sumner NORMAL-FORM DISTANCE** (dist of P to the
+  exact nonnegative idempotents, after the B–S structure): kills the hiddenness quantifier
+  (the collapse driver), makes the finisher hypothesis natural, δ=0 case is B–S verbatim.
+  Full statement + equivalence losses in the archived answer.
+- **bsautopsy: SOURCE FACT — Baake–Sumner do NOT prove the classification** (stated as a
+  reformulation of Högnäs–Mukherjea; no written proof in the byte-pinned file). The audit
+  reconstructs the proof and flags a NORM LANDMINE: entrywise ≥ −δ only gives block
+  negative mass ≤ mδ (m = block size) — dimension-free control needs the ROW-mass
+  convention throughout. Step table in the archived answer. ⇒ refs acquisition task:
+  byte-pin Högnäs–Mukherjea (L1: TIB).
+- **Report v2 reviews:** overclaim P = 0.86 (passing; no banned resurrection; small fixes
+  listed); readability 0.25 → 0.35 (22 concrete defects; the structural one: the
+  self-containment CLAIM must be qualified to "self-contained modulo two declared
+  black-box imports" or the imports fully stated). v3 fixer launched.
+
+## NEXT (the inward burn continues)
+1. v3 fix round (22 defects + overclaim list) → re-review → ship to user.
+2. Band-cut residual pair: (a) sup-form cut via bad-row removal; (b) weighted-leakage
+   Birkhoff finisher. [the #1 math target]
+3. W-free reformulation: 2-family audit of wfree's equivalence theorem, then adopt as the
+   canonical statement of the open core.
+4. Byte-pin Högnäs–Mukherjea; re-run bsautopsy on the REAL proof.
