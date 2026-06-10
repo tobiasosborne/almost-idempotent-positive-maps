@@ -664,3 +664,36 @@ the pushed-witness lemma certifying that LP methods cannot close it, s3's died-a
 the leakage estimate as the missing technical step, and the s5 family as the sharpening
 test case. Empirically: ZERO verified instances at H ≫ δ exist (the linear law H ≤ ~2δ
 fits the entire record); d13 final verdict pending.
+
+---
+
+# d13 — FINAL VERDICT: OUTCOME (c), HIGH STRENGTH. The flat floor is a corner extrapolation;
+# the LINEAR LAW is the empirical truth.
+
+Report: notes/d13-smalldelta-witnesses.md (NOTE: written under experiments/notes/ — move on
+commit); data: out/d13_smalldelta.json. ~5000 verified exact idempotents PER δ (idem_resid
+= 0, honest τ, multiplicity-correct W, presolve OFF), THREE independent generators (d3
+fixed-τ, d3 random-canonical, d7 shadow-shell). [NUMERICAL, high strength]
+
+- Max H/τ over hidden robust VERTICES collapses monotonically: δ = 1e-2 → 0.222,
+  3e-3 → 0.110, 1e-3 → 0.077, 3e-4 → 0.035 (δ/H² = 20 → 833 ≫ the floor band [3.4, 8]).
+  **No verified hidden-top-vertex instance exists near the floor for δ ≤ 1e-2.**
+- Achieved H tracks 2δ at every δ (H/(2δ) ≈ 1.0–1.2); H/(0.536√δ) → 0.065. Crossover at
+  δ ≈ 0.05–0.06 where 2δ = 0.536√δ — exactly the corner.
+- Pipeline control: the δ = 5e-2 anchor PASSES full d12 anatomy (m* = 1, 100% W-vertex
+  witness) — the machinery finds the floor where it exists; below the corner there is
+  nothing to find.
+- Generator caveats logged honestly (d8_mrp3 corner-only; a d3 rand_P_fixed_tau δ-overshoot
+  bug, neutralized by band-gating).
+- The worker's "hidden NON-vertex remains the open object" caveat is VACUOUS by the
+  top-vertex reduction (w9chain + s9 #4, independently proved: dist₁(·, conv W) is convex ⇒
+  the row-max is attained at a row vertex; no hidden vertex above 2δ ⇒ no row above 2δ).
+  [orchestrator]
+
+**EMPIRICAL CLOSURE:** every verified instance ever produced by this campaign — 67k+ day-1,
+d8–d13, all scales, all families — satisfies the LINEAR LAW δ ≳ H/2 (with the corner δ*
+= (2−√3)² as the unique extremal scale, where the linear and exposedness walls meet). The
+conjectured √δ floor NEVER existed below the corner. The proof target is now unambiguous:
+**the linear law (δ ≥ cH for exact signed idempotents, equivalently the height-conditional
+σ̃ > τ web exclusion)**, which implies HLC, op-exposed-hull, and op-classical with room to
+spare. d13 = the campaign's decisive numeric.
