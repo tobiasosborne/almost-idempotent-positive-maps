@@ -106,28 +106,50 @@ they are not inherited from a design parameter.
 
 \subsection{Two imported reductions}
 
-\begin{proposition}[Equivalence]
+\begin{proposition}[Imported signed/stochastic equivalence]
 \provedbadge
 \label{prop:classical-equiv-consumed}
-The signed-idempotent and stochastic-idempotent formulations of the
-classical stability problem are equivalent, up to universal changes of
-constants and thresholds.  In particular, the original dimension-free
-problem for row-stochastic \(Q\) with small
-\(\eta(Q)=\lVert Q^2-Q\rVert_{\infty\to\infty}\) may be studied through
-exact signed affine retractions \(P\) with small
-\(\delta=\max_i\nu_i\): proving that every such \(P\) is within
-\(C\sqrt{\delta}\) of a stochastic idempotent is the exact signed form
-of the same target.
+\texttt{lem-classical-equiv} is imported as a black-box theorem.  Its
+source contract is:
+\begin{quote}\small
+The signed-idempotent and stochastic-idempotent formulations of classical
+stability are equivalent up to universal constants: \(Q\) row-stochastic
+with \(\lVert Q^2-Q\rVert \leq \eta\) gives
+\(P=\theta(2Q-1)\) signed affine retraction with
+\(\lVert P-Q\rVert \leq C\eta\) and neg mass
+\(\delta\leq C\eta\), and conversely row-normalising \(p_i^+\) gives
+\(Q\) with \(\lVert P-Q\rVert \leq 2\delta\),
+\(\lVert Q^2-Q\rVert \leq 6\delta+4\delta^2\).
+\end{quote}
+In this report the matrix norm in that contract is the maximum row-sum
+norm \(\lVert\cdot\rVert_{\infty\to\infty}\), and all constants are
+universal.  Thus the original dimension-free problem for row-stochastic
+\(Q\) with small \(\eta(Q)=\lVert Q^2-Q\rVert_{\infty\to\infty}\) may be
+studied through exact signed affine retractions \(P\) with small
+\(\delta=\max_i\nu_i\).
 \end{proposition}
 
-\begin{proposition}[Cluster import]
+\begin{proposition}[Imported cluster theorem]
 \provedbadge
 \label{prop:cluster-consumed}
-The main-project clustering theorem is available as a black box.  At
-the contract level used here, it reduces the outer classical target to
-the exposed-hull part of the signed-idempotent problem.  This report
-therefore does not reprove clustering and does not use any
-Jordan-algebra or positive-map material in the linear sections.
+\texttt{thm-cluster} is imported as a black-box theorem.  Its source
+contract is:
+\begin{quote}\small
+There are universal \(\delta_0,C>0\) such that a signed affine
+retraction \(P\) with neg mass \(\leq\delta\leq\delta_0\) having
+representatives \(r^1..r^m\) pairwise \(2\rho\)-separated, each
+\((\rho,\kappa)\)-exposed (disjoint clusters \(U_a\)), with every
+off-cluster row within \(\gamma\) of \(\conv\{r^a\}\), admits a
+stochastic idempotent \(E\) with
+\(\lVert P-E\rVert_{\infty\to\infty}\leq
+C(\rho+\gamma+\delta/\kappa+\delta)\); so
+\(\rho,\gamma=O(\sqrt\delta)\), \(\kappa\geq c\sqrt\delta\) give
+\(O(\sqrt\delta)\), \(C\) independent of \(m\), \(n\), and the number of
+transient rows.
+\end{quote}
+This report does not reprove clustering; later sections only use the
+contract above to pass from exposed-hull control to the original
+classical stability target.
 \end{proposition}
 
 The consequence is methodological but important.  From this point on,

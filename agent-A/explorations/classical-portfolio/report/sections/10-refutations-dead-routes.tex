@@ -14,8 +14,10 @@ Throughout, \(P\) is the exact signed affine retraction, \(p_i\) is its \(i\)-th
   H=\max_i \distone(p_i,C_W).
 \]
 For a height-maximizing hidden row vertex \(v\), the canonical separator is the
-\(\ell^\infty\)-normalized affine functional \(\phi\) that vanishes on \(C_W\) and has
-\(\phi(p_v)=H\).  The deficit vector is \(g_i=H-\phi(p_i)\); the top band means rows
+\(\ell^\infty\)-normalized affine functional \(\phi\) with
+\(\phi\le0\) on \(C_W\), \(\sup_{x\in C_W}\phi(x)=0\), and
+\(\phi(p_v)=H\).  The deficit vector is
+\(g_i=H-\phi(p_i)\); the top band means rows
 with small deficit relative to \(H\) or to the oscillation \(\Omega_g\).  A failed
 exposedness witness is an optimal dual certificate for \(t^*(v)<\kappa\).  Deep-witness
 mass forcing, abbreviated DMF, asks for an optimal witness that places a fixed amount of
@@ -64,14 +66,14 @@ error becomes depth slack because such rows are automatically \(H-\varepsilon\)-
 \downgradedbadge The corner constants
 \(\tau_*=2-\sqrt3\), \(2(2-\sqrt3)\), and \((7+4\sqrt3)/4\) explain the measured
 finite-corner family, but they do not prove the asymptotic HLC.  The finite-corner
-calibration was retracted after the \(R\)-handling bug: the corrected DMF chain is
+calibration was retracted after the \(\Omega_g\)-handling bug: the corrected DMF chain is
 asymptotic, while the numerical corner is a finite point of the tested family.
 \end{downgradedstatement}
 
 \begin{downgradedstatement}[D12 scope]
 \downgradedbadge D12 remains useful numerical evidence, but its scope is downgraded.
 It found twelve verified instances whose optimal witnesses were entirely deep, with
-\(\sigoff\) about \(1.01\) to \(1.07\) but measured non-\(\W\) carrier mass zero.  The
+\(\sigoff\) about \(1.01\) to \(1.07\) but measured index-not-in-\(\W\) carrier mass zero.  The
 post-w9 and swarm audits reinterpret this as corner-regime evidence: d12 measured an
 index-based proxy, and it did not profile a verified small-\(\delta\) web instance.
 \end{downgradedstatement}
@@ -80,9 +82,9 @@ index-based proxy, and it did not profile a verified small-\(\delta\) web instan
 \downgradedbadge The absolute hope that all-shallow optimal faces do not exist is too
 strong.  The post-design s5 refuter gives an exact \(5\times5\) rational certificate
 with hidden \(v\), \(\sigtilde>0\), and an optimal witness supported on a far row with
-deficit \(g=0\).  The certificate is marked exact-rational with audit pending, and it
-lives only at height \(H=O(\delta)\).  Therefore the web exclusion must be
-height-conditional; this example does not refute DMF with \(E(\delta)=O(\delta/\tau)\).
+deficit \(g=0\).  The certificate is exact-rational with mod-audit status and lives only
+at height \(H=O(\delta)\).  Therefore the web exclusion must be height-conditional; this
+example does not refute DMF with \(E(\delta)=O(\delta/\tau)\).
 \end{downgradedstatement}
 
 The L2' recursion warning belongs in the same category.  L2' gives a
@@ -111,13 +113,14 @@ changes of realization, the invariant content is row exactness and column exactn
 recorded as dead-route/refuted guidance.
 \end{refutedstatement}
 
-\begin{refutedstatement}[LP support-cleanup closure]
-\refutedbadge The post-design pushed-witness calculation gives a death certificate for
+\begin{downgradedstatement}[LP support-cleanup route]
+\provedbadge The post-design pushed-witness calculation gives a death certificate for
 support-cleanup as a proof of the remaining branch.  If shallow witness rows are pushed
-through \(P\), negative leakage changes the objective from \(B\) to \((B+N)/M_F\).  To
-remain optimal one would need \(M_F\ge 1+N/B\), while the available bound is
-\(M_F\le 1+N\) and \(B<\kappa<1\).  Any \(N>0\) breaks the argument.
-\end{refutedstatement}
+through \(P\), negative leakage changes the objective from \(B\) to \((B+N)/M_F\).  When
+\(B=t^*(v)>0\), remaining optimal would require \(M_F\ge 1+N/B\), while the available
+bound is \(M_F\le 1+N\) and \(B<\kappa<1\).  Any \(N>0\) breaks the argument.  The
+\(t^*(v)=0\) case is handled by the exchange identity without dividing by \(B\).
+\end{downgradedstatement}
 
 \begin{longtable}{p{0.24\linewidth}p{0.20\linewidth}p{0.42\linewidth}}
 \toprule
@@ -158,9 +161,9 @@ Consequently \(\delta\ge H^2/9\) directly, and existential DMF holds on this bra
 \begin{numericalresult}[Empirical reframing]
 \numbadge The verified record no longer contains a banked small-\(\delta\) flat floor.
 The sw11/sw12 forensics report no verified flat-floor instance below about
-\(\delta=0.06\), and every verified instance in the record satisfies the linear behavior
-\(H\lesssim 2\delta\).  The final d13 outcome is still pending and should be reported as
-pending, not assumed.
+\(\delta=0.06\), and final d13 gives outcome (c): every verified instance in the record
+satisfies the linear behavior \(H\lesssim 2\delta\).  The linear law is the empirical
+truth of the campaign record, not yet a theorem.
 \end{numericalresult}
 
 \begin{openproblem}[Height-conditioned shallow-web exclusion]

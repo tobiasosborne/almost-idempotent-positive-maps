@@ -28,6 +28,19 @@ HLC is the hidden localization claim \(\delta\geq aH^2\) for some universal
 optimal exposedness-dual witness has definite \(\mu\)-mass on rows whose
 deficit \(g_j\) is close to \(H\).
 
+\begin{openproblem}[\texttt{op-exposed-hull}]
+\openbadge
+\label{op:exposed-hull-formal}
+There are universal constants \(c,C>0\) such that, for every near-positive
+signed affine retraction \(P\) with row negative mass at most \(\delta\),
+taking \(\rho=C\sqrt{\delta}\), \(\kappa=c\sqrt{\delta}\), and
+\(W_{\rho,\kappa}=\{\hbox{row vertices }v:\ e_v(\rho)\geq\kappa\}\), every
+row \(p_i\) lies within \(C\sqrt{\delta}\) in \(\ell^1\)-distance of
+\(\conv(W_{\rho,\kappa})\).  Here \(e_v(\rho)\) is the exposedness margin
+against rows at distance at least \(\rho\).  By the imported global
+clustering/factorization route, this open problem implies \texttt{op-classical}.
+\end{openproblem}
+
 \begin{proposition}
 \provedbadge\  The outer classical problem is reduced to the exposed-hull
 problem through the two consumed main-project facts.
@@ -42,18 +55,23 @@ facts.
 \end{proof}
 
 \begin{proposition}
-\modauditbadge\  HLC implies \texttt{op-exposed-hull}.
+\modauditbadge\  The HLC assembly implies \texttt{op-exposed-hull}.
 \end{proposition}
 \begin{proof}
-Let \(C_{\W}=\conv(\W)\).  The verified two-family assembly fixes \(\W\) by
-the separator definition before \(H\) is measured, so there is no circular
-choice of exposed rows.  If \(H\) is below the large-height threshold in HLC,
-then \(H=O(\rho)=O(\tau)\).  If \(H\) is above that threshold, HLC gives
-\(\delta\geq aH^2\), hence \(H\leq\tau/\sqrt a\).  Thus every row is within
-\(C'\tau\) of \(C_{\W}\); in the source normalization
-\(C'=\max(4A_{\mathrm{HLC}},1/\sqrt a)\), where \(A_{\mathrm{HLC}}\) is the
-large-height threshold constant.  The caveat is exactly the ledger caveat:
-this is a conditional assembly, not a proof of HLC.
+Let \(C_{\W}=\conv(\W)\), \(h_i=\distone(p_i,C_{\W})\), and
+\(H=\max_i h_i\).  The source assembly assumes universal
+\(\delta_0,A_{\mathrm{HLC}},a>0\) such that, whenever
+\(\delta\leq\delta_0\), \(H\geq A_{\mathrm{HLC}}\rho\), and
+\(\delta<aH^2\), some row vertex \(v\) with \(h_v\geq H/2\) is
+\((\rho,\kappa)\)-well-exposed.  Since every well-exposed vertex lies in
+\(\W\subset C_{\W}\), that alternative is impossible for \(h_v>0\).
+Thus either \(H<A_{\mathrm{HLC}}\rho=4A_{\mathrm{HLC}}\tau\), or
+\(\delta\geq aH^2\) and \(H\leq\tau/\sqrt a\).  Hence every row is within
+\[
+  C'\tau,\qquad C'=\max(4A_{\mathrm{HLC}},1/\sqrt a),
+\]
+of \(C_{\W}\).  This is exactly the conditional
+\(\texttt{op-exposed-hull}\leq\mathrm{HLC}\) assembly; it does not prove HLC.
 \end{proof}
 
 \subsection{The Historical Sigma Wall}
@@ -163,18 +181,19 @@ witnesses; it is their exclusion at height comparable to \(\tau\).
 shallow witness rows through \(P\) changes the dual objective to
 \((B+N)/M_F\), where \(N>0\) is negative leakage and \(M_F\leq1+N\) is the far
 positive mass after pushing.  Optimality would require
-\(M_F\geq1+N/B\), impossible when \(B=t^*(v)<\kappa<1\).  The residual is not
-another exposedness-dual algebra trick.
+\(M_F\geq1+N/B\), impossible when \(B=t^*(v)>0\) and \(B<\kappa<1\).  If
+\(t^*(v)=0\), the exchange handles the chain case separately and no division
+by \(B\) is made.  The residual is not another exposedness-dual algebra trick.
 \end{warning}
 
 \begin{numericalresult}
-\numbadge\  The empirical record no longer verifies a small-\(\delta\) flat
-floor.  The post-swarm audit reports that every verified instance in the
-saved record satisfies \(H\lesssim2\delta\).  The apparent floor
-\(\delta/H^2\approx3.49\) was verified only near the finite corner, not below
-about \(\delta=0.06\).  The final d13 small-\(\delta\) verdict remains
-\([pending]\); until banked, the small-\(\delta\) flat floor is a numerical
-gap, not a theorem.
+\numbadge\  The d13 small-\(\delta\) verdict is outcome (c), high strength:
+the verified record no longer supports a small-\(\delta\) flat floor.  Across
+the saved campaign record, including d13, every verified instance satisfies
+the empirical linear law \(H\lesssim2\delta\).  The apparent floor
+\(\delta/H^2\approx3.49\) was verified only near the finite corner, with
+crossover near \(\delta=0.05\)--\(0.06\).  This is numerical evidence and a
+reframed proof target, not a theorem.
 \end{numericalresult}
 
 \begin{openproblem}

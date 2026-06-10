@@ -59,9 +59,9 @@ If \(E(\delta)/\tau\to e\), the resulting HLC constant is
 \((e+1/(2m_*))^{-2}\). \\
 \texttt{DMF}
 & \openbadge
-& Deep-witness mass forcing itself is open.  The post-design refinement uses
-existential DMF: one optimal witness, not every feasible witness, must carry
-the deep mass. \\
+& Deep-witness mass forcing itself is open in the high-web branch.  The
+post-design refinement uses existential DMF: one optimal witness, not every
+feasible witness, must carry the deep mass. \\
 \texttt{quantitative Baake-Sumner web stability}
 & \openbadge
 & The remaining structural input is a signed, quantitative stability theorem
@@ -100,14 +100,16 @@ All-shallow optimal face
 & An exact rational \(5\times5\) construction has hidden rows,
 \(\sigtilde>0\), and an optimal failed-exposedness witness supported
 entirely on a far row with \(g=0\).  The certificate is exact-rational with
-audit pending, and it lives on \(H=O(\delta)\).  It refutes any absolute
-ban on all-shallow witnesses, but not the height-comparable-to-\(\tau\)
-web exclusion needed for HLC. \\
+mod-audit status, and it lives on \(H=O(\delta)\).  It refutes any absolute ban
+on all-shallow witnesses, but not the height-comparable-to-\(\tau\) web
+exclusion needed for HLC. \\
 Pushed-witness cleanup
-& \modauditbadge
-& LP support cleanup cannot close the remaining branch.  Pushing shallow
-witness rows through \(P\) changes the dual objective to \((B+N)/M_F\);
-negative leakage \(N>0\) prevents the pushed witness from staying optimal. \\
+& \provedbadge
+& LP support cleanup has a proved death certificate as a proof route.  For
+an optimal witness with \(B=t^*(v)>0\), pushing shallow witness rows through
+\(P\) changes the dual objective to \((B+N)/M_F\); negative leakage \(N>0\)
+prevents the pushed witness from staying optimal.  The \(t^*(v)=0\) case is
+handled separately by the exchange inequality, without division by \(B\). \\
 Feasible versus optimal witnesses
 & \downgradedbadge
 & A deep row-witness is not enough by itself.  The exchange inequality bounds
@@ -165,11 +167,11 @@ linear law \(H\approx2\delta\), not to \(H\asymp\sqrt{\delta}\). \\
 \numbadge
 Across the verified record, including the exact-instance campaigns, the d8
 middle-regime decider, d11 scale sweeps, d12 witness-depth probes, and the
-post-design d13 partial small-\(\delta\) search, no counterexample to HLC is
-known.  The empirical reframing is stronger: every verified instance in the
-record satisfies \(H\lesssim2\delta\), the day-1 linear hull-distance law.
-This is evidence only.  The final d13 small-\(\delta\) verdict remains
-pending.
+final d13 small-\(\delta\) search, no counterexample to HLC is known.  The
+empirical reframing is stronger: every verified instance in the record
+satisfies \(H\lesssim2\delta\), the day-1 linear hull-distance law.  D13
+records outcome (c): the flat floor is a finite-corner extrapolation, and the
+linear law is the empirical small-\(\delta\) behavior.  This is evidence only.
 \end{numericalresult}
 
 \begin{refutedstatement}

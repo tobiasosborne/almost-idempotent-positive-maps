@@ -697,3 +697,47 @@ conjectured √δ floor NEVER existed below the corner. The proof target is now 
 **the linear law (δ ≥ cH for exact signed idempotents, equivalently the height-conditional
 σ̃ > τ web exclusion)**, which implies HLC, op-exposed-hull, and op-classical with room to
 spare. d13 = the campaign's decisive numeric.
+
+---
+
+# WAVE 10 — the 10-strategy-kind swarm (answers: notes/swarm-answers/, t1–t10)
+
+| kind | verdict | death point (native language) |
+|---|---|---|
+| t1 induction-on-n | DIED-AT | W-stability under state deletion (named missing lemma) |
+| t2 probabilistic | DIED-AT / (a) COLLAPSE | (b) signed coupling defect uncontrolled |
+| t3 rank-complement | DIED-AT (native) | quantitative (δ,H,W)-complementation algebra |
+| t4 extremal-KKT | **COLLAPSE** | "the normal cone of the hiddenness constraint IS the exposedness-LP dual cone" |
+| t5 SOS | **COLLAPSE** | quadratic module lacks any generator beyond C10-exchange on each stratum |
+| t6 discharging | DIED-AT | conservation g = Pg yields no forbidden local configuration |
+| t7 Lyapunov | DIED-AT (native) | the designed-Φ inequality unobtainable |
+| t8 minimax | **COLLAPSE** | instance space non-convex; lifted game trivializes or re-enters LP |
+| t9 homotopy | **COLLAPSE** | the wall where the path creates/destroys hidden vertices is an exposedness-LP wall |
+| t10 Birkhoff | DIED-AT (native) — **with the FINISHER proved** | see below |
+
+## META-FINDING (the wave's discovery): hiddenness IS the LP frame
+Five independent strategy kinds collapsed into the exposedness-LP basin at exactly the
+moment they used "v hidden" as a hypothesis — t4's formulation is definitive: the normal
+cone of the hiddenness constraint is the LP dual cone. ⇒ Any proof EITHER works inside the
+LP frame (where the pushed-witness certificate blocks cleanup) OR must avoid hiddenness as
+a hypothesis — i.e. needs a W-FREE surrogate formulation (→ formulation-hunter).
+
+## t10 — THE FINISHER, PROVED (conditional): projective idempotent-collapse lemma
+For a nonneg kernel K with Hilbert projective row-diameter Δ (Birkhoff contraction
+q ≤ tanh(Δ/4) — NO spectral gap) and ‖K²−K‖_{∞→1} ≤ ε: diam₁{rows} ≤ 2ε/(1−q). ⇒ a
+closed, bounded-diameter shallow top block collapses to an EQUAL-INPUT cluster; collapse
+radius < ρ ⇒ g/Ω_g exposes the top row ⇒ contradiction. **The ONLY missing input: top-band
+closure** — λ_T := sup_{i∈T} Σ_{j∉T}|P_ij| small. The harmonic bound P⁺_i(T^c) ≤
+(g_i + δΩ)/(κΩ) is order-1 ONLY for rows with g_i near the band edge. [death certificate:
+λ_T = O(1) possible at the boundary; unbounded-Δ case = support-graph B–S stability]
+
+## POST-WAVE-10 TARGET (the next inward burn): THE BAND-CUT CLOSURE LEMMA
+Choose the band threshold t ADAPTIVELY (pigeonhole over dyadic levels of g in [κΩ/2, κΩ]
+or a weighted average over t): since total crossing mass is budgeted (g = Pg + the
+harmonic bound, summed/integrated over levels), SOME cut level has small boundary leakage
+in the relevant weighting ⇒ T_t is a closed almost-stochastic almost-idempotent positive
+block ⇒ t10's finisher fires ⇒ equal-input collapse ⇒ exposure. Sub-questions: the right
+weighting (carrier mass? μ-mass? row count?); the Δ-bounded vs Δ-unbounded dichotomy
+(zero-pattern degeneration → support-graph combinatorics, where the s5 family lives).
+This is the first time the campaign has a PROVED finisher waiting on a single localization
+input of classical type (good-cut/coarea pigeonhole).

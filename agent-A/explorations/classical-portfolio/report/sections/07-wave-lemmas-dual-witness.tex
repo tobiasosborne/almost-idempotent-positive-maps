@@ -9,16 +9,25 @@ Set
 For a top vertex the wave-9 audit banks \(g_i\ge0\) for all rows.  Hence every \(w\in\W\)
 is deep: \(g_w\ge H\).
 \subsection{The exposedness LP}
-Let \(F_v=\{j\ne v:\|p_j-p_v\|_1\ge\rho\}\), where \(\rho=4\tau\) and \(\kappa=\tau/4\).
-The exposedness LP maximizes \(t\) over affine \(h\) such that
+Let \(F_v=\{j\ne v:\|p_j-p_v\|_1\ge\rho\}\), where \(\rho=4\tau\) and \(\kappa=\tau/4\), and
+put \(d_i=p_i-p_v\).  With \(h(p_i)=u\cdot d_i\), the primal exposedness LP is
 \[
-  0\le h(p_k)\le1,\qquad h(p_v)=0,\qquad h(p_j)\ge t\quad(j\in F_v).
+  \max_{u,t}t\quad\text{s.t.}\quad
+  t-u\cdot d_j\le0\ (j\in F_v),\quad -u\cdot d_k\le0,\quad u\cdot d_k\le1\ (1\le k\le n),
 \]
-Its optimum is \(t^*(v)\).  The row is \((\rho,\kappa)\)-exposed iff \(t^*(v)\ge\kappa\);
-hidden rows have \(t^*(v)<\kappa\).
+with \(u\) free.  Its optimum is \(t^*(v)\); hidden rows have \(t^*(v)<\kappa\).
+For the dual, multipliers \(\mu,\alpha,\beta\ge0\) correspond respectively to far margins,
+lower boxes, and upper boxes.  The free variables \(t,u\) give
+\[
+  \sum_{j\in F_v}\mu_j=1,\qquad
+  -\sum_{j\in F_v}\mu_jd_j-\sum_k\alpha_kd_k+\sum_k\beta_kd_k=0 .
+\]
+Expanding \(d_i=p_i-p_v\) and writing \(A=\sum_k\alpha_k\), \(B=\sum_k\beta_k\), gives dual
+objective \(B\) and the identity below.
 \begin{lemma}
-\provedbadge\ The failed-exposedness dual is exact.  If \(v\) is hidden, there are
-\(\mu_j\ge0\) for \(j\in F_v\), \(\alpha_k,\beta_k\ge0\), and \(\gamma\in\R\), with
+\provedbadge\label{lem:diamond-dual}
+The failed-exposedness dual \((\diamond)\) is exact.  If \(v\) is hidden, there are
+\(\mu_j\ge0\) for \(j\in F_v\), \(\alpha_k,\beta_k\ge0\), and \(\gamma=1+A-B\), with
 \[
   \sum_{j\in F_v}\mu_jp_j+\sum_k\alpha_kp_k=\sum_k\beta_kp_k+\gamma p_v,      \tag{\(\diamond\)}
 \]
@@ -28,6 +37,9 @@ hidden rows have \(t^*(v)<\kappa\).
 \]
 Conversely, such a witness with \(B<\kappa\) certifies failed exposedness.
 \end{lemma}
+\noindent Here \(\mu\) is the far-witness distribution, \(\alpha\) pays for tight lower
+boxes \(h\ge0\), \(\beta\) pays for tight upper boxes \(h\le1\), and \(\gamma\) is only the
+\(p_v\)-coefficient produced by expanding the shifted variables.
 Pairing \((\diamond)\) with any affine \(\psi\) gives
 \[
   \sum_{j\in F_v}\mu_j\psi(p_j)+\sum_k\alpha_k\psi(p_k)
@@ -36,7 +48,7 @@ Pairing \((\diamond)\) with any affine \(\psi\) gives
 When \(t^*(v)>0\), complementary slackness puts \(\alpha\) inside the open \(\rho\)-ball of
 \(v\); at \(t^*(v)=0\), far \(\alpha\)-mass is not excluded.
 \begin{proposition}
-\provedbadge\ The W2 sharp exchange is
+\provedbadge\ The sharp exchange (W2) is
 \[
   \sum_{j\in F_v}\mu_jg_j+\sum_k\alpha_kg_k=\sum_k\beta_kg_k
   \le t^*(v)\Omega_g<\kappa\Omega_g .
@@ -44,14 +56,17 @@ When \(t^*(v)>0\), complementary slackness puts \(\alpha\) inside the open \(\rh
 It prices deep witness mass, but does not create it.
 \end{proposition}
 \begin{warning}
-\provedbadge\ W3 preserves affine residuals but loses signs.  If \(c\) is the signed index
-measure in \((\diamond)\), then \(P^Tc\) still has zero row residual and zero total mass, but
+\provedbadge\ The witness-residual identity (W3) preserves affine residuals but loses signs.
+If \(c\) is the signed index measure in \((\diamond)\), then \(P^Tc\) still has zero row
+residual and zero total mass, but
 its positive and negative parts need not be an exposedness dual.  This is why substituting
 witness rows through \(P\) has not closed the residual.
 \end{warning}
 \subsection{Local consequences}
+Local acronym glossary: return-flow (RF), near-delta depth (ND'), supply-forcing (SF), far-row coefficient cap (FC), carrier-blocker transpose coupling (CPL), margin cap (MC), row-witness (RW), and well-exposed-row locality (WL).
 \begin{lemma}
-\modauditbadge\ RF holds with the audited sign caveat.  If \(P_{vv}\ge0\), \(\delta\le0.1\),
+\modauditbadge\ Return-flow from diagonal exactness (RF) holds with the audited sign caveat.
+If \(P_{vv}\ge0\), \(\delta\le0.1\),
 and \(\sigoff=\sum_{k\ne v}(P_{vk})_+\), then
 \[
   \sum_{k\ne v}(P_{vk})_+(P_{kv})_+\ge\sigoff(1-\sigoff)-3.1\delta .
@@ -59,7 +74,8 @@ and \(\sigoff=\sum_{k\ne v}(P_{vk})_+\), then
 When \(P_{vv}<0\), use the sign-split version; the unsplit formula is not banked.
 \end{lemma}
 \begin{lemma}
-\modauditbadge\ ND' is near-delta depth.  For \(o_x=\sum_{k\ne x}|P_{xk}|\), if
+\modauditbadge\ Near-delta depth (ND') controls rows concentrated near their own site.  For
+\(o_x=\sum_{k\ne x}|P_{xk}|\), if
 \[
   P_{xx}\ge1-t,\qquad t\le t_0=\rho/2-\kappa(1+2\delta)-2\delta,\qquad
   t_0/\tau=7/4-2\tau-\delta/2,
@@ -74,7 +90,8 @@ ND' explains the numerical financier identity without promoting it to exactness:
 concentrated near a private site is forced near \(\W\), hence has deficit close to \(H\).
 On the finite corner family \(H=2\delta\), the \(5\delta\) slack makes this lemma vacuous.
 \begin{lemma}
-\provedbadge\ SF converts the old \(\alpha\)-loophole into \(A=\sum_k\alpha_k\).  With
+\provedbadge\ Supply-forcing with the alpha-mass dichotomy (SF) converts the old
+\(\alpha\)-loophole into \(A=\sum_k\alpha_k\).  With
 \(S=\Av=\{k:P_{vk}>0\}\),
 \[
   \sum_{j\in F_v}\mu_jp_j(S)\ge1-A\delta-t^*(v)(1+2\delta).
@@ -84,7 +101,8 @@ Thus either \(A\le A_0\) and the \(\mu\)-rows are \(S\)-full up to an \(A_0\delt
 do not meet at the audited constants.
 \end{lemma}
 \begin{lemma}
-\modauditbadge\ FC and CPL are the proved half of carrier-blocker coupling.  Every
+\modauditbadge\ Far-row coefficient cap (FC) and carrier-blocker transpose coupling (CPL)
+are the proved half of carrier-blocker coupling.  Every
 \(\rho\)-far row \(j\) has
 \[
   P_{jv}\le1-s_{\min},\qquad s_{\min}=\rho/(2+4\delta)-2\delta .
@@ -97,7 +115,8 @@ The CPL wording must split the \(P_{vv}=0\) and sign cases; \(P_{vv}=0\) only im
 corner estimate.
 \end{lemma}
 \begin{lemma}
-\provedbadge\ MC says that if \(\theta_{\mathrm{far}}\) is the fraction of positive off-self
+\provedbadge\ Margin cap from far carriers (MC) says that if \(\theta_{\mathrm{far}}\) is the
+fraction of positive off-self
 carrier mass of \(v\) lying in \(F_v\), then
 \[
   t^*(v)\le \frac{\nu_v}{\sigoff\,\theta_{\mathrm{far}}}
@@ -106,7 +125,8 @@ carrier mass of \(v\) lying in \(F_v\), then
 This caps the margin; it does not force depth.
 \end{lemma}
 \begin{lemma}
-\provedbadge\ RW, the row-witness lemma, subsumes MC.  Let \(a=P_{vv}\in[0,1)\), let
+\provedbadge\ The generalized row-witness lemma (RW) subsumes the margin cap.  Let
+\(a=P_{vv}\in[0,1)\), let
 \(\sigma'=1+\nu_v-a\), and let \(\theta_{\mathrm{far}}\) be the far fraction of this positive
 off-self mass.  If \(\theta_{\mathrm{far}}>0\), then
 \[
@@ -115,7 +135,8 @@ off-self mass.  If \(\theta_{\mathrm{far}}>0\), then
 The proof is the row identity, normalized into a feasible \((\diamond)\)-dual.
 \end{lemma}
 \begin{lemma}
-\modauditbadge\ WL has the cleaner direct-exposer proof: for every \(w\in\W\),
+\modauditbadge\ Well-exposed-row locality (WL) has the cleaner direct-exposer proof: for
+every \(w\in\W\),
 \[
   \sum_{\substack{k\ne w\\ \|p_k-p_w\|_1\ge\rho}}(P_{wk})_+
   \le\frac{\nu_w}{\kappa}\le4\tau .
@@ -165,10 +186,10 @@ unless it is optimal, or unless deep mass transfers to the optimal dual face.  T
 uses the witness's own \(B\), not automatically \(t^*(v)\).
 \end{warning}
 \begin{warning}
-\downgradedbadge\ All-shallow faces exist, but only at low height here.  A post-ledger
+\modauditbadge\ All-shallow faces exist, but only at low height here.  A post-ledger
 swarm note gives an exact rational \(5\times5\) all-shallow optimal face with hidden \(v\),
 \(\sigtilde>0\), and the optimal witness supported on a far row with \(g=0\), but only at
-\(H=O(\delta)\) \([{\rm exact\text{-}rational,\ audit\ pending}]\).  The needed exclusion is
+\(H=O(\delta)\).  This is an existence certificate modulo audit; the needed exclusion is
 for height of order \(\tau\), not order \(\delta\).
 \end{warning}
 \begin{openproblem}
@@ -183,6 +204,7 @@ optimality.
 \end{openproblem}
 \begin{numericalresult}
 \numbadge\ The empirical record is now framed as linear evidence.  The advertised flat floor
-was never verified below about \(\delta=0.06\); every verified instance currently satisfies
-approximately \(H\le2\delta\).  The final small-\(\delta\) probe d13 is pending.
+was never verified below about \(\delta=0.06\), and d13's final outcome (c) found no verified
+hidden-top-vertex floor instance for \(\delta\le10^{-2}\).  Across the verified record,
+heights track \(H\approx2\delta\).
 \end{numericalresult}

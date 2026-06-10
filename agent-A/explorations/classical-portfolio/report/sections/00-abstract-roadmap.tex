@@ -29,12 +29,13 @@ height is \(O(\tau)\); DMF is deep-witness mass forcing, the assertion that an
 optimal failed-exposedness witness, a dual certificate that a row is not
 well-exposed, carries a universal amount of mass at deficit within the
 permitted depth window.  \(\openbadge\) The current formulation of the open is
-sharper still: HLC is equivalent, at the report's level of reduction, to
-excluding a hidden top vertex with \(\sigtilde>\tau\) at height \(H>B\tau\)
-for a universal constant \(B\).  In words, the remaining problem is signed
-quantitative Baake--Sumner stability, a perturbative version of the exact
-equal-input structure of stochastic idempotents, for shallow hidden webs at
-height comparable to \(\tau\).
+sharper still: after the proved \(\sigtilde\le\tau\) branch, HLC is equivalent,
+at the report's level of reduction, to excluding a hidden top vertex with
+\(\sigtilde>\tau\) at height \(H>B\tau\) for a universal constant \(B\).  In
+words, the remaining problem is signed quantitative Baake--Sumner stability:
+the exact \(\delta=0\) Baake--Sumner theorem gives equal-input recurrent
+classes for stochastic idempotents, while the missing perturbative statement
+must rule out signed shallow hidden webs at height comparable to \(\tau\).
 
 \paragraph{Reader contract.}
 This report is meant to be readable with basic linear algebra, convexity, and
@@ -68,11 +69,11 @@ they are part of the statement being made.
 \paragraph{Roadmap.}
 The first sections set up the signed affine-retraction model, the
 \(\ell^1\) geometry of row polytopes, and the exposedness machinery.  They
-also record the two consumed main-project inputs: the signed/stochastic
-equivalence and the cluster assembly theorem, both with \(\provedbadge\)
-status in the ledger.  These inputs justify working with exact signed
-idempotents while remembering that the target is the original stochastic
-matrix problem.
+also record two consumed main-project inputs as black-box theorems, not as
+proofs reproduced in this report: the signed/stochastic equivalence and the
+cluster assembly theorem, both with \(\provedbadge\) status in the ledger.
+These imports are the reason the report may work with exact signed
+idempotents while the target remains the original stochastic matrix problem.
 
 The middle of the report gives the status table and the reduction chain.  The
 current theorem-shaped progress is conditional.  \(\modauditbadge\)
@@ -118,17 +119,17 @@ The same addendum also prevents an overstrong formulation of the web problem.
 
 \noindent\(\modauditbadge\) An exact rational \(5\times5\) certificate gives
 an all-shallow optimal face with \(\sigtilde>0\) and the entire optimal witness
-on a far row of deficit zero.  This is recorded as [exact-rational, audit
-pending], and it lives only at height \(H=O(\delta)\).  Thus all-shallow faces
-are real; what remains open is their exclusion at height comparable to
-\(\tau\).
+on a far row of deficit zero.  This exact rational certificate lives only at
+height \(H=O(\delta)\).  Thus all-shallow faces are real; what remains open is
+their exclusion at height comparable to \(\tau\).
 
 The numerical section records verification gates rather than theorem claims.
-\(\numbadge\) The reliable record through the sw11/sw12 forensic pass, plus
-partial d13 evidence, satisfies the linear law \(H\lesssim2\delta\); the
-formerly advertised small-\(\delta\) flat floor was not verified below about
-\(\delta=0.06\).  The final d13 small-\(\delta\) verdict is [pending], so the
-report treats this as evidence and reframing, not as a theorem.
+\(\numbadge\) The reliable record through the final d13 small-\(\delta\)
+verdict satisfies the linear law \(H\lesssim2\delta\); the formerly advertised
+small-\(\delta\) flat floor was not verified below about \(\delta=0.06\).
+D13 gives high-strength numerical confirmation of outcome (c): the apparent
+floor is a finite-corner extrapolation, while the empirical small-\(\delta\)
+law is linear.  This remains evidence and reframing, not a theorem.
 
 The dead-route section is included so that later work does not accidentally
 reuse refuted shortcuts.

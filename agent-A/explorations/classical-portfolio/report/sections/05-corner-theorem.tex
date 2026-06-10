@@ -12,19 +12,30 @@ height is
 where \(\W\) is the set of \((\rho,\kappa)\)-well-exposed row vertices.  A top
 hidden vertex is a row vertex \(v\) attaining this maximum.
 
-The corner is the finite scale at which two family laws meet.  The first is the
-budget line \(H=2\delta\): the tested hidden row is poked away from
-\(\conv(\W)\) by exactly twice the negativity budget.  The second is the
-exposedness-margin threshold: the LP margin measuring the best exposing affine
-functional for the top hidden vertex reaches \(\kappa\).  Their intersection
-produces the constants below.
+\begin{definition}[Corner family and its two laws]
+\modauditbadge
+The finite corner family is the verified d8--d12 budget-line family of exact
+signed affine retractions with a hidden top vertex \(v\), a binding financier
+row, and the row-witness dual certificate coming directly from the row identity
+of \(v\).  In this family the audited laws are:
+\[
+  H=2\delta,
+  \qquad
+  t^*=\frac{\nu_v}{1+\nu_v}=\frac{\delta}{1+\delta}.
+\]
+The first is the budget law: the apex poke is exactly twice the negativity
+budget.  The second is the row-witness margin law: the row-witness certificate
+is optimal at the edge and the top row has \(\nu_v=\delta\).  These laws are
+family statements with a proved-mod-audit caveat; the algebraic consequences
+below are exact once the laws are assumed.
+\end{definition}
+
+The corner is the finite scale at which these two family laws meet the exposure
+threshold \(t^*=\kappa\).  Their intersection produces the constants below.
 
 \begin{theorem}[Finite corner constants]
 \modauditbadge
-Assume the corner family laws recorded in the campaign notes: the row-witness
-bound, meaning the dual witness obtained directly from the row identity, is
-optimal for the top hidden vertex at the edge; the vertex negativity is
-\(\nu_v=\delta\); and the family sits on \(H=2\delta\).  Then the edge scale is
+On the corner family above, the edge scale is
 \[
   \tau_* = 2-\sqrt 3,\qquad
   \delta_*=(2-\sqrt 3)^2.
@@ -40,9 +51,9 @@ theorem.
 \end{theorem}
 
 \begin{proof}
-For the corner family, the failed-exposedness row witness has optimal value
+For the corner family, the row-witness margin law gives
 \[
-  t^*=\frac{\nu_v}{1+\nu_v}=\frac{\delta}{1+\delta}.
+  t^*=\frac{\delta}{1+\delta}.
 \]
 Writing \(\delta=\tau^2\), hiding persists exactly while the margin is still
 below the exposure threshold:
@@ -84,8 +95,8 @@ and honest \(\tau=\sqrt\delta\).  The wall cells recorded
 \[
   H/\tau \approx 0.535,\qquad \delta/H^2\approx 3.484\text{--}3.497,
 \]
-with the same level-functional shape and the same binding frame-financing and
-frame-group rows.
+with the same level-functional shape and the same binding financier rows from
+the frame groups.
 
 The d10 perturbation sweep found, on the probed family, the exact numerical
 shadow-price law
@@ -120,13 +131,13 @@ give only an asymptotic implication of the form \(\delta\ge aH^2\), with
 constants depending on the deep-mass and slack parameters.
 \end{downgradedstatement}
 
-This distinction matters because all current small-scale evidence was
-reframed after the corner audit.  The old ``flat floor'' was not verified below
-roughly \(\delta\approx 0.06\).  Every verified instance in the record is
-consistent with a linear law \(H\lesssim 2\delta\), and the final small-\(\delta\)
-d13 probe is still recorded as pending for this report's purposes.  The corner
-therefore calibrates a finite family; it is not evidence by itself for a
-small-\(\delta\) square-root obstruction.
+This distinction matters because all small-scale evidence was reframed after
+the corner audit.  The old ``flat floor'' was not verified below roughly
+\(\delta\approx0.06\).  The final d13 probe found outcome (c): no verified
+hidden-top-vertex instance near the floor for \(\delta\le10^{-2}\), and the
+best hidden-vertex heights instead track the linear law \(H\approx2\delta\).
+The corner therefore calibrates a finite family; it is not evidence by itself
+for a small-\(\delta\) square-root obstruction.
 
 The robust branch variable in the later analysis is not the formal off-own-site
 mass \(\sigoff\).  It is the geometric mass \(\sigtilde\): the positive
@@ -183,15 +194,16 @@ anchor is understood, but no quantitative modulus is banked here.
 The pushed-witness cleanup route is also closed as a proof strategy.  Pushing
 shallow witness rows through \(P\) introduces negative leakage; after
 renormalization, the dual objective changes from \(B\) to \((B+N)/M_F\).  Since
-\(M_F\le 1+N\) while optimality would require \(M_F\ge 1+N/B\) for \(B<1\), any
-positive leakage \(N\) destroys the needed optimality.  The residual is
-therefore not another exposedness-dual algebra trick.
+\(M_F\le 1+N\), any \(N>0\) destroys optimality when \(B=t^*(v)>0\): one would
+need \(M_F\ge 1+N/B\) with \(B<\kappa<1\).  The \(t^*(v)=0\) case is handled by
+the exchange identity without dividing by \(B\).  The residual is therefore not
+another exposedness-dual algebra trick.
 
 \begin{warning}[Writer warning]
 \downgradedbadge
 Do not use the corner constants as a global theorem.  They may be cited as the
 exact explanation of the finite measured corner, with the proved-mod-audit
 family-law caveat above.  They may not be used to assert an asymptotic envelope,
-to remove the \(\sigtilde>\tau\) web case, or to replace the pending
+to remove the \(\sigtilde>\tau\) web case, or to replace the open
 height-qualified Baake--Sumner stability problem.
 \end{warning}

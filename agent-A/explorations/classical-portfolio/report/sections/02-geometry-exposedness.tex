@@ -23,13 +23,25 @@ the maximum may be sought on row vertices.
 
 For a chosen hidden top vertex \(v\), a \emph{canonical separator} is an
 affine functional \(\phi\) with \(\|\nabla\phi\|_\infty\le1\),
-\(\phi(p_v)=H\), and \(\sup_{x\in C_W}\phi(x)=0\).  The associated
-\emph{deficit} is \(g_i=H-\phi(p_i)\), with \(g=(g_i)_i\).  In the
-canonical setup \(g=Pg\); also \(g_v=0\), while topness gives \(g_i\ge0\)
-for every row.  The deficit oscillation is
+\(\phi(x)\le0\) for \(x\in C_W\), \(\sup_{x\in C_W}\phi(x)=0\), and
+\(\phi(p_v)=H\).  The associated \emph{deficit} is
+\(g_i=H-\phi(p_i)\), with \(g=(g_i)_i\).  In the canonical setup
+\(g=Pg\); also \(g_v=0\), while topness gives \(g_i\ge0\) for every
+row.  The deficit oscillation is
 \[
         \Omega_g=\max_i g_i-\min_i g_i .
 \]
+\begin{lemma}
+\provedbadge\label{lem:omega-g-bound}
+For the canonical deficit vector, \(\Omega_g\le 2+4\delta\).
+\end{lemma}
+
+\begin{proof}
+For rows \(i,j\), \(g_i-g_j=\phi(p_j)-\phi(p_i)\), and the dual
+normalization gives \(|\phi(p_i)-\phi(p_j)|\le\|p_i-p_j\|_1\).  Since
+\(\|p_i\|_1=1+2\nu_i\le1+2\delta\), we have
+\(\|p_i-p_j\|_1\le\|p_i\|_1+\|p_j\|_1\le2+4\delta\).
+\end{proof}
 The source notes often wrote a bare \(R\) for this oscillation.  This
 report uses \(\Omega_g\) to avoid collision with the frame matrix
 \(\framemat\).
@@ -46,8 +58,7 @@ This formal quantity is not the robust branch variable.  The robust
 quantity is geometric: for \(\varepsilon\ge0\),
 \[
         \widetilde\sigma_v(\varepsilon)
-        =\sum_{\substack{k:\,P_{vk}>0\\
-             \distone(p_k,C_W)>\varepsilon}} P_{vk}.
+        =\sum_{\substack{k:\,P_{vk}>0\\ \distone(p_k,C_W)>\varepsilon}} P_{vk}.
 \]
 We write \(\sigtilde=\widetilde\sigma_v(0)\) when no halo is being used.
 In the report convention the self-row is included in this sum if
@@ -63,7 +74,8 @@ In the report convention the self-row is included in this sum if
 The report never uses an unqualified sigma symbol for \(v\).  The symbol
 \(\sigoff\) means formal off-own-site positive mass, while \(\sigtilde\)
 means positive carrier mass geometrically outside \(C_W\), with the
-\(\varepsilon\)-halo convention above.  The report also writes
+\(\varepsilon\)-halo convention above.  Index-not-in-\(W\) mass is only a
+numerical proxy used in some d12 records.  The report also writes
 \(\Omega_g\), not the source-note \(R\), for the oscillation of \(g\).
 \end{minipage}}
 
@@ -77,13 +89,25 @@ For the canonical separator of a hidden top vertex \(v\), every
 Since \(p_w\in C_W\), \(\phi(p_w)\le0\), so \(g_w=H-\phi(p_w)\ge H\).
 \end{proof}
 
-The exposedness LP for \(v\) maximizes the margin \(t^*(v)\) over affine
-tests \(h\) with \(0\le h\le1\), \(h(p_v)=0\), and \(h(p_i)\ge t\) on
-the far set \(F_v=\{i:\|p_i-p_v\|_1\ge\rho\}\).  Thus \(v\) fails
-exposedness exactly when \(t^*(v)<\kappa\).  The dual certificate uses
-weights \((\mu,\alpha,\beta,\gamma)\): \(\mu\) is supported on far witness
-rows, \(\alpha,\beta\) are the box slacks, and \(B=\sum_k\beta_k\).  In
-an optimal dual witness, \(B=t^*(v)\).
+The exposedness LP for \(v\) maximizes \(t^*(v)\) over affine tests with
+\(0\le h\le1\), \(h(p_v)=0\), and \(h(p_j)\ge t\) on
+\(F_v=\{j:\|p_j-p_v\|_1\ge\rho\}\).  With \(d_i=p_i-p_v\) and
+\(h(p_i)=u\cdot d_i\), its finite primal is
+\[
+        \max_{u,t} t\quad\text{s.t.}\quad
+        t-u\cdot d_j\le0\ (j\in F_v),\quad
+        -u\cdot d_k\le0,\quad u\cdot d_k\le1\ (1\le k\le n),
+\]
+with \(u\) free.  Its dual minimizes \(B=\sum_k\beta_k\), subject to
+\(\mu_j,\alpha_k,\beta_k\ge0\), \(\sum_{j\in F_v}\mu_j=1\), and
+\[
+        \sum_{j\in F_v}\mu_jp_j+\sum_k\alpha_kp_k
+        =\sum_k\beta_kp_k+(1+A-B)p_v,\qquad A=\sum_k\alpha_k .
+\]
+Thus \(v\) fails exposedness exactly when \(t^*(v)<\kappa\).  Here
+\(\mu\) prices far-row margins, \(\alpha\) lower boxes \(h\ge0\), and
+\(\beta\) upper boxes \(h\le1\); \(\gamma=1+A-B\) is just the produced
+\(p_v\)-coefficient.  In an optimal dual witness, \(B=t^*(v)\).
 
 \begin{warning}
 \provedbadge\label{warn:feasible-optimal-gap}
@@ -97,8 +121,9 @@ the optimal dual face.
 \downgradedbadge\label{warn:old-sigma}
 The historical sigma-wall language is ambiguous.  In the corner family,
 the formal off-own-site mass \(\sigoff\) is about one, while the intended
-branch mass is the positive mass on non-\(W\) carriers, now recorded as
-\(\sigtilde\).  Old branch statements using an unqualified sigma symbol
+branch mass is geometric non-\(C_W\) carrier mass, now recorded as
+\(\sigtilde\).  Some numerical logs measured the index-not-in-\(W\)
+proxy instead.  Old branch statements using an unqualified sigma symbol
 must be read as downgraded until restated with geometric \(\sigtilde\).
 \end{warning}
 
@@ -135,48 +160,48 @@ The final inequalities use \(\nu_v\le\delta=\tau^2\le\tau\) and
 \begin{warning}
 \modauditbadge\label{warn:all-shallow-height}
 All-shallow optimal faces do exist, but only in the height scale seen so
-far at \(H=O(\delta)\).  The exact rational \(5\times5\) construction has
-\(W=\{0,1,2\}\), hidden vertices \(3,4\), \(\sigtilde=1/2000>0\),
-\(H=1/1000\), and for \(v=3\) the entire optimal dual witness lies on the
-far shallow row \(4\) with \(g_4=0\).  This is an audit-pending exact
-certificate, and it forces the web exclusion to be height-conditional;
-it does not refute DMF with a slack of order \(\delta/\tau\).
+far at \(H=O(\delta)\).  In the report's one-based indexing, the exact
+rational \(5\times5\) construction has \(W=\{1,2,3\}\), hidden vertices
+\(4,5\), \(\sigtilde=1/2000>0\), \(H=1/1000\), and for \(v=4\) the
+entire optimal dual witness lies on the far shallow row \(5\) with
+\(g_5=0\).  This proves the low-height existence certificate modulo audit,
+while the height-\(\tau\) web exclusion remains open; it does not refute DMF
+with a slack of order \(\delta/\tau\).
 \end{warning}
 
 \begin{warning}
-\refutedbadge\label{warn:pushed-witness}
-The LP support-cleanup route cannot close the remaining branch.  If an
+\provedbadge\label{warn:pushed-witness}
+The pushed-witness calculation is a death certificate for LP
+support-cleanup as a proof strategy for the remaining branch.  If an
 optimal shallow witness is pushed through \(P\), negative leakage changes
 the normalized dual objective to
 \[
         B_{\rm pushed}=\frac{B+N}{M_F},
 \]
 where \(N\) is the pushed negative leakage and \(M_F\le1+N\) is the
-positive mass returning to the far set.  Optimality would require
-\(M_F\ge1+N/B\), impossible for \(N>0\) when \(B<\kappa<1\).
+positive mass returning to the far set.  When \(B=t^*(v)>0\), optimality
+would require \(M_F\ge1+N/B\), impossible for \(N>0\) and \(B<\kappa<1\).
+When \(t^*(v)=0\), the exchange handles the chain case without division by
+\(B\).  Thus support cleanup is dead-route guidance, not a proof route.
 \end{warning}
 
 \begin{numericalresult}
 \numbadge\label{num:d12-and-floor}
-The d12 witness probe measured an index-based proxy for \(\sigtilde\),
-namely positive mass on indices not in \(W\).  On its verified financed
-wiggle instances this proxy was zero, so the row-witness was supported
-on \(W\)-rows and was deep by \cref{lem:W-rows-deep}.  This is numerical
-evidence for that corner-scale family only.  Later forensics found no
-verified flat floor below about \(\delta=0.06\); every verified instance
-in the record satisfies the linear behavior \(H\lesssim2\delta\).
-The final small-\(\delta\) d13 probe is still marked [pending].
+The d12 witness probe measured an index-based proxy for \(\sigtilde\):
+positive mass on indices not in \(W\).  On its verified financed wiggle
+instances this proxy was zero, so the row-witness was supported on
+\(W\)-rows and was deep by \cref{lem:W-rows-deep}; this is evidence for
+that corner-scale family only.  The d13 final verdict was outcome (c):
+no verified hidden-top-vertex floor instance for \(\delta\le10^{-2}\),
+with achieved heights tracking the linear law \(H\approx2\delta\).
 \end{numericalresult}
 
 \begin{openproblem}
 \openbadge\label{open:height-conditional-web}
 The remaining hidden-localization problem is the height-qualified web
-case: exclude hidden top vertices with \(\sigtilde>\tau\) and
-\[
-        H>B\tau
-\]
-for a universal constant \(B\).  Equivalently in the final reduction
-language, HLC is reduced to signed quantitative Baake--Sumner stability:
-a shallow hidden web carrying almost all positive mass must either
-collapse to height \(O(\delta)\) or produce a deep optimal witness.
+case: exclude hidden top vertices with \(\sigtilde>\tau\) and \(H>B\tau\)
+for a universal \(B\).  Equivalently, HLC is reduced to signed
+quantitative Baake--Sumner stability: a shallow hidden web carrying
+almost all positive mass must either collapse to height \(O(\delta)\) or
+produce a deep optimal witness.
 \end{openproblem}

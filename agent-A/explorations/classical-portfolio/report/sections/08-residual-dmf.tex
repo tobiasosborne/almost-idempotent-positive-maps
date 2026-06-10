@@ -46,7 +46,9 @@ and every optimal failed-exposedness witness for \(v\) satisfy
 The existential form requires only one optimal witness with this much deep
 mass.  This distinction is now load-bearing: the HLC chain needs only the
 existential form, while feasible row witnesses do not help unless they are
-proved to lie on, or transfer to, the optimal dual face.
+proved to lie on, or transfer to, the optimal dual face.  Low-height
+all-shallow optimal faces therefore prove existence only; the general
+height-\(\tau\) exclusion remains open.
 
 \begin{proposition}[Existential DMF suffices for HLC]
 \modauditbadge
@@ -154,9 +156,10 @@ witness is pushed through \(P\), the pushed dual objective becomes
   B_{\mathrm{pushed}}=\frac{B+N}{M_F},
 \]
 where \(N\) is the negative leakage and \(M_F\le1+N\) is the pushed far mass.
-Optimality would require \(M_F\ge1+N/B\), impossible for \(N>0\) because
-\(B=t^*(v)<\kappa<1\).  The missing input is therefore not another
-exposedness-dual algebra trick.
+If \(B=t^*(v)>0\), optimality would require \(M_F\ge1+N/B\), impossible for
+\(N>0\) because \(B<\kappa<1\).  If \(t^*(v)=0\), the exchange identity
+already forces \(\sum_j\mu_jg_j=0\), so this division by \(B\) is not made.
+The missing input is therefore not another exposedness-dual algebra trick.
 \end{warning}
 
 \subsection{Numerical Status And Literature Position}
@@ -172,10 +175,10 @@ high-height web branch.
 
 The empirical reframing is sharper than the original flat-floor story.  The
 verified record has not established a small-\(\delta\) floor with
-\(H\asymp\tau\); all verified instances in the record satisfy roughly
-\(H\le2\delta\).  The final small-\(\delta\) probe is still pending, so the
-report should treat the linear law \(H=O(\delta)\) as a conjectural target,
-not as a theorem.
+\(H\asymp\tau\); all verified instances in the record, including final d13,
+satisfy roughly \(H\le2\delta\).  D13 is the campaign's decisive numerical
+confirmation of outcome (c), not a theorem: the linear law \(H=O(\delta)\) is
+the conjectural target.
 
 The literature sweep found no ready-made quantitative Douglas--Ando,
 Seever, or Baake--Sumner stability theorem that supplies this missing

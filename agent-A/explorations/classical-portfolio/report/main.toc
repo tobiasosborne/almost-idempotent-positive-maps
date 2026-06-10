@@ -1,0 +1,60 @@
+\contentsline {section}{\numberline {1}Abstract and Roadmap}{4}{section.1}%
+\contentsline {paragraph}{Abstract.}{4}{section*.2}%
+\contentsline {paragraph}{Reader contract.}{4}{section*.3}%
+\contentsline {paragraph}{Roadmap.}{4}{section*.4}%
+\contentsline {section}{\numberline {2}Linear Markov Setting}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Stochastic and signed retractions}{7}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}The L1 geometry and negative mass}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Two imported reductions}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Where the remaining branch starts}{9}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Exposed Vertices, Hidden Height, And Separators}{10}{section.3}%
+\contentsline {section}{\numberline {4}Main Results and Status Ledger}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Main chain}{13}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Post-design sharpenings}{14}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Corner, numerical record, and retractions}{15}{subsection.4.3}%
+\contentsline {section}{\numberline {5}The Reduction Chain}{17}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Orientation}{17}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}The Historical Sigma Wall}{18}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}DMF Suffices}{18}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}What The Swarm Changed}{19}{subsection.5.4}%
+\contentsline {section}{\numberline {6}The Finite Corner And Exact Constants}{20}{section.6}%
+\contentsline {section}{\numberline {7}The audited day-1 belt}{23}{section.7}%
+\contentsline {subsection}{\numberline {7.1}First local facts}{23}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}The fable belt after audit}{24}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}What the belt leaves open}{25}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Wave-5--9 Lemmas Around The Dual Witness}{26}{section.8}%
+\contentsline {subsection}{\numberline {8.1}The exposedness LP}{26}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Local consequences}{27}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Wave-5--7 reductions}{28}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}The sigma-tilde split}{28}{subsection.8.4}%
+\contentsline {section}{\numberline {9}DMF, Shallow Webs, And The Remaining Open}{30}{section.9}%
+\contentsline {subsection}{\numberline {9.1}The Residual}{30}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Deep-Witness Mass Forcing}{30}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Shallow Webs}{31}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Numerical Status And Literature Position}{32}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}The Remaining Problem}{32}{subsection.9.5}%
+\contentsline {section}{\numberline {10}Numerics Record}{33}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Verification Gates}{33}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Campaign Ledger}{33}{subsection.10.2}%
+\contentsline {paragraph}{Campaign nickname glossary.}{33}{section*.6}%
+\contentsline {subsection}{\numberline {10.3}Inline Reproducibility Appendix}{34}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Post-Design Corrections}{35}{subsection.10.4}%
+\contentsline {section}{\numberline {11}Refutations and Dead Routes}{36}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Refuted Statements}{36}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Downgrades}{36}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Dead Proof Routes}{37}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}What Remains Open}{38}{subsection.11.4}%
+\contentsline {section}{\numberline {12}Multi-Agent Methodology And Audit Catches}{40}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Method Contract}{40}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Ledger Discipline}{40}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Audit Catches}{41}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}Numerical Gates}{41}{subsection.12.4}%
+\contentsline {subsection}{\numberline {12.5}Compact Timeline}{42}{subsection.12.5}%
+\contentsline {subsection}{\numberline {12.6}What Remains Methodologically Open}{42}{subsection.12.6}%
+\contentsline {section}{\numberline {13}Glossary and Notation}{43}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Canonical Symbols}{43}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Badge Legend and Discipline}{44}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Jargon Glossary}{45}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}Named Results by Status}{47}{subsection.13.4}%
+\contentsline {subsection}{\numberline {13.5}Open Branch Pointer}{48}{subsection.13.5}%
+\contentsline {subsection}{\numberline {13.6}Source-Name Clash Map}{48}{subsection.13.6}%
