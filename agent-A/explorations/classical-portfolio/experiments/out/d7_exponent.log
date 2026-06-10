@@ -1,0 +1,10 @@
+  delta~0.320: NO entered config found
+  delta~0.160: NO entered config found
+  delta~0.080: max H (entered) = 0.00655  delta/H^2=5499.615  delta/H=36.0247
+  delta~0.040: max H (entered) = 0.00879  delta/H^2=2631.954  delta/H=23.1388
+  delta~0.020: max H (entered) = 0.01514  delta/H^2=712.444  delta/H=10.7857
+  delta~0.010: max H (entered) = 0.02028  delta/H^2=560.845  delta/H=11.3750
+
+  FIT: H ~ delta^-0.851  => delta ~ H^-1.175
+  delta/H^2 across the family: [5499.61, 2631.95, 712.44, 560.85]
+  delta/H across the family (->0 confirms H^2 not H): [36.0247, 23.1388, 10.7857, 11.375]

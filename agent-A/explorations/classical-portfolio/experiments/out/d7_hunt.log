@@ -1,0 +1,12 @@
+[d7-hunt] 1080 base combos x rads x rings. Deciding if hypothesis is realizable for DISTINCT far vertices.
+  !!! HYPOTHESIS ENTERED r=4 ma=3 g=0.05 shell=ring rad=0.3: delta/H^2=4076.5226
+  !!! HYPOTHESIS ENTERED r=4 ma=3 g=0.1 shell=ring rad=0.3: delta/H^2=8628.8539
+  !!! HYPOTHESIS ENTERED r=4 ma=4 g=0.05 shell=ring rad=0.3: delta/H^2=303.3828
+  !!! HYPOTHESIS ENTERED r=5 ma=3 g=0.1 shell=ring rad=0.3: delta/H^2=25577.7076
+  !!! HYPOTHESIS ENTERED r=5 ma=4 g=0.1 shell=ring rad=0.3: delta/H^2=10236.6868
+  !!! HYPOTHESIS ENTERED r=5 ma=4 g=0.1 shell=ring rad=0.3: delta/H^2=3081.0017
+  !!! HYPOTHESIS ENTERED r=6 ma=4 g=0.05 shell=ring rad=0.3: delta/H^2=1701.2596
+  !!! HYPOTHESIS ENTERED r=6 ma=4 g=0.05 shell=ring rad=0.3: delta/H^2=1933819.6084
+
+[d7-hunt] 7272 configs. entered=8 min(margin/kappa)=0.014 verdict=HYPOTHESIS_REALIZABLE (507.8s)
+  closest approach: margin/kappa=0.014 at ring shell, delta/H^2=1933819.608370308
