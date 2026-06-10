@@ -462,3 +462,40 @@ Baake–Sumner stability of the shallow hidden-witness graph (the 2-cycle exclus
 In flight: opus d12 witness-depth probe on d3/d7 stacking instances — directly searches
 for shallow hidden webs in verified instances; either supports DMF (m* large observed
 off-family) or finds the refutation candidate.
+
+---
+
+# d12 — DMF off-family probe (COMPLETE): SUPPORTED, m* = 1 exactly; σ̃ finding decisive
+
+Report: notes/d12-dmf-depth-profiles.md; data: out/d12_dmfprobe.json. 12 verified
+hidden-top instances OFF the wall edge (varied σ_v/ℓ/ma/k_groups; δ/H² ∈ [3.57, 35.7]
+covering the floor region + mid-envelope). All gates green (residuals ≤ 3e-16, presolve
+OFF, multiplicity-correct W). [NUMERICAL]
+
+- **min m*_observed = 1.0 to machine precision (median 1.0); shallow fraction 0.0000
+  everywhere; every μ-row at deficit g = H exactly.** DMF exactly saturated off-family,
+  identical to the edge; the wave-8 row-witness mechanism (μ = γP⁺_v on W-vertices,
+  exchange saturated Σμg = t*R) reproduces verbatim.
+- **N3 resolved (decisive):** every instance has formal σ_v ≈ 1.01–1.07 but **σ̃ = 0
+  exactly** (v's positive mass outside conv W is ZERO — v's positive carriers ARE
+  W-vertices; hiddenness comes from negativity alone, the corner mechanism). ⇒ all
+  σ_v-resolved statements must be restated in σ̃. **The all-shallow witness requires
+  σ̃ > 0 — never realized in ANY reachable verified instance.**
+- The FTI-2 distinct-vertex mutual-shadow construction (the only named home of the
+  all-shallow web) could not be verified at small δ — alternating-LP search yields only
+  degenerate instances, re-confirming d7's verdict that distinct far vertices always
+  expose. The all-shallow detector was red→green tested; the negative is trustworthy.
+
+## POST-d12 SHARPENING (orchestrator)
+The chain in 3.2′ needs only EXISTENTIAL DMF (one optimal witness with deep mass m* —
+the exchange Σμg + Σαg = Σβg ≤ t*R holds for every optimal witness, and the lower bound
+m*(H−E) ≤ Σμg needs just one deep witness). Existential DMF ⟸:
+ (i) σ̃-small case: if σ̃ ≈ 0, the RW row-witness is deep by construction (carriers in
+     conv W are deep: g_w ≥ H) — candidate lemma "σ̃ ≤ s ⇒ ∃ optimal witness with deep
+     mass ≥ 1 − f(s)";
+ (ii) σ̃-large case: v draws positive mass onto non-W top-band rows = the mutual-shadow
+     web = exactly what d7/X1 say exposes — candidate lemma "ρ-separated hidden top-band
+     vertices cannot mutually carry each other" (the 2-cycle exclusion, now with a σ̃
+     dichotomy to attack it through).
+Wave 9 targets: (a) verify existential-DMF suffices in the corrected 3.2′ chain (logic
+check); (b) prove (i); (c) attack (ii) via L1/L2/F-ND/X1 + the corner mechanism.
