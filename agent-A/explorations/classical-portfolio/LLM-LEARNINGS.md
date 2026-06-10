@@ -22,6 +22,18 @@ Format: `- [date] [worker@effort] [task type] — what happened; lesson.`
   (2) always `--json` events to a file — "thinking" vs "stuck" must be observable; (3) a 10-second
   low-effort smoke test cleanly separates pipeline-health from run-health before relaunching.
   Also: kill+relaunch cost ≈ nothing (the wedged run generated almost no tokens).
+- 2026-06-10 [codex/gpt-5.5, infra #2] — ROOT CAUSE of the wedges: "idle timeout waiting for
+  websocket" — long silent xhigh reasoning ⇒ idle websocket ⇒ flaky network path drops it ⇒
+  reconnect attempts can exhaust/hang. MITIGATIONS THAT WORK: (1) PROGRESS PROTOCOL — instruct the
+  model to emit a short message after each deliverable; keeps the stream warm, makes stalls
+  observable, AND checkpoints partial results server-side (the resumed thread retained the finished
+  audit). (2) `codex exec resume <thread-id>` genuinely continues with full context — but exec-level
+  flags (-C/-s/--json/-o) must come BEFORE the `resume` subcommand token, only --skip-git-repo-check
+  etc. after. (3) Monitor + bounded watchdog + kill/resume loop = robust against arbitrary flakes.
+- 2026-06-10 [codex/gpt-5.5@xhigh, D0 math] — second-family adversarial audit WORKS: codex verified
+  the orchestrator's vacuity analysis step-by-step (ℓ¹-dual identification, truncation sign,
+  bookkeeping orders) rather than deferring to it — exactly the independent-check value we wanted
+  from a non-Claude family. Quality of partial output: high, precise, no hedging.
 - 2026-06-10 [sonnet Explore x4, parallel summarization, async] — branch-corpus summarization:
   all four faithful and precise on first pass; the registry agent (37 tool uses) correctly
   distinguished proved/conjectured/numerical throughout. Lesson: sonnet Explore is the right

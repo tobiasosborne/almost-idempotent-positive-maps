@@ -113,6 +113,9 @@ positivity-capable output (`op-layer1-gap`).
 ## Delegation ledger (append-only)
 | # | Date | Lane | Worker (model/effort) | Task | Verdict |
 |---|---|---|---|---|---|
+| 1 | 06-10 | — | opus-4.8 (one-shot strategist) | independent strategy generation | HIGH value breadth/critique; 2 concrete constructions flawed (see LLM-LEARNINGS) |
+| 2 | 06-10 | infra | codex gpt-5.5@xhigh | observability smoke test (stationary dist, 3 steps) | PASS: 5 streamed items, math correct, 2.3k out-tokens |
+| 3 | 06-10 | D0 | codex gpt-5.5@xhigh | adversarial check of vacuity claim + τ-plateau | runs 1–2 killed by idle-websocket wedge; run 3 + resume DELIVERED (partial): (a) vacuity audit CONFIRMED "essentially correct" — ℓ¹-dual/submartingale/bookkeeping all check; (b) τ-plateau scalar bookkeeping CONSISTENT with exact idempotence (averaging cannot forbid it); (c) candidate-lemma verdict pending |
 
 ## Lane-switch log
 - 2026-06-10: start. Lane D first (D0 cross-check of orchestrator's vacuity analysis).
