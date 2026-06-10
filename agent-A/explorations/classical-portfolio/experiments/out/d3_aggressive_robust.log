@@ -1,0 +1,11 @@
+trial 0 best=0.0000 flagged=0 t=0s
+trial 400 best=0.0858 flagged=0 t=38s
+trial 800 best=0.0858 flagged=0 t=80s
+trial 1200 best=0.0858 flagged=0 t=118s
+trial 1600 best=0.0858 flagged=0 t=157s
+=== ROBUST aggressive small-delta hunt (N=2000) ===
+band 1e-3: n=668 max_ratio=0.0003 mean=0.00000
+band 1e-4: n=150 max_ratio=0.0001 mean=0.00000
+overall best finite ratio: 0.0858 at delta 0.20551614964461565
+flagged (ratio>0.5): 0
+saved out/d3_aggressive_robust.json

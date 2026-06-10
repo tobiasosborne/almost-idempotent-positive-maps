@@ -1,0 +1,52 @@
+======================================================================
+d3_scaling: ratio vs delta scaling (the decisive test)
+======================================================================
+[staircase sc=0.8000] delta=4.353e-01 tau=6.598e-01 ratio=0.0000 nW=6
+[staircase sc=0.4000] delta=3.183e-01 tau=5.641e-01 ratio=0.0000 nW=6
+[staircase sc=0.2000] delta=1.858e-01 tau=4.310e-01 ratio=0.0000 nW=6
+[staircase sc=0.1000] delta=9.875e-02 tau=3.142e-01 ratio=0.0000 nW=6
+[staircase sc=0.0500] delta=5.066e-02 tau=2.251e-01 ratio=0.0000 nW=6
+[staircase sc=0.0200] delta=2.054e-02 tau=1.433e-01 ratio=0.0000 nW=6
+[staircase sc=0.0100] delta=1.031e-02 tau=1.016e-01 ratio=0.0000 nW=6
+[staircase sc=0.0050] delta=5.168e-03 tau=7.189e-02 ratio=0.0000 nW=6
+[staircase sc=0.0020] delta=2.070e-03 tau=4.549e-02 ratio=0.0000 nW=6
+[staircase sc=0.0010] delta=1.035e-03 tau=3.218e-02 ratio=0.0000 nW=6
+[circuit_r4K8 sc=0.8000] delta=5.399e-01 tau=7.348e-01 ratio=0.0000 nW=11
+[circuit_r4K8 sc=0.4000] delta=3.901e-01 tau=6.245e-01 ratio=0.0000 nW=11
+[circuit_r4K8 sc=0.2000] delta=2.255e-01 tau=4.749e-01 ratio=0.0000 nW=11
+[circuit_r4K8 sc=0.1000] delta=1.195e-01 tau=3.456e-01 ratio=0.0000 nW=11
+[circuit_r4K8 sc=0.0500] delta=6.124e-02 tau=2.475e-01 ratio=0.0000 nW=11
+[circuit_r4K8 sc=0.0200] delta=2.484e-02 tau=1.576e-01 ratio=0.0000 nW=11
+[circuit_r4K8 sc=0.0100] delta=1.247e-02 tau=1.117e-01 ratio=0.0000 nW=11
+[circuit_r4K8 sc=0.0050] delta=6.249e-03 tau=7.905e-02 ratio=0.0000 nW=11
+[circuit_r4K8 sc=0.0020] delta=2.503e-03 tau=5.003e-02 ratio=0.0137 nW=7
+[circuit_r4K8 sc=0.0010] delta=1.252e-03 tau=3.538e-02 ratio=0.0200 nW=5
+[circuit_r6K12 sc=0.8000] delta=7.117e-01 tau=8.436e-01 ratio=0.0000 nW=17
+[circuit_r6K12 sc=0.4000] delta=5.623e-01 tau=7.499e-01 ratio=0.0000 nW=17
+[circuit_r6K12 sc=0.2000] delta=3.359e-01 tau=5.796e-01 ratio=0.0000 nW=17
+[circuit_r6K12 sc=0.1000] delta=1.790e-01 tau=4.231e-01 ratio=0.0000 nW=17
+[circuit_r6K12 sc=0.0500] delta=9.170e-02 tau=3.028e-01 ratio=0.0000 nW=17
+[circuit_r6K12 sc=0.0200] delta=3.712e-02 tau=1.927e-01 ratio=0.0000 nW=17
+[circuit_r6K12 sc=0.0100] delta=1.863e-02 tau=1.365e-01 ratio=0.0000 nW=17
+[circuit_r6K12 sc=0.0050] delta=9.330e-03 tau=9.659e-02 ratio=0.0000 nW=17
+[circuit_r6K12 sc=0.0020] delta=3.736e-03 tau=6.112e-02 ratio=0.0000 nW=17
+[circuit_r6K12 sc=0.0010] delta=1.869e-03 tau=4.323e-02 ratio=0.0000 nW=17
+
+RANDOM HUNT over exact idempotents (max ratio per delta band):
+  hunt trial 0 best_ratio=0.0000 (delta=1.16e-02) t=0s
+  hunt trial 100 best_ratio=0.1081 (delta=1.64e-01) t=5s
+  hunt trial 200 best_ratio=0.1135 (delta=2.09e-01) t=10s
+  hunt trial 300 best_ratio=0.1135 (delta=2.09e-01) t=16s
+  hunt trial 400 best_ratio=0.1135 (delta=2.09e-01) t=21s
+  hunt trial 500 best_ratio=0.1135 (delta=2.09e-01) t=26s
+  hunt trial 600 best_ratio=0.1135 (delta=2.09e-01) t=31s
+  hunt trial 700 best_ratio=69.0071 (delta=8.40e-04) t=36s
+  hunt trial 800 best_ratio=69.0071 (delta=8.40e-04) t=41s
+  hunt trial 900 best_ratio=69.0071 (delta=8.40e-04) t=46s
+  hunt trial 1000 best_ratio=69.0071 (delta=8.40e-04) t=51s
+  hunt trial 1100 best_ratio=69.0071 (delta=8.40e-04) t=57s
+  band 1e-1: n=478 max_ratio=0.1135 at delta=2.09e-01
+  band 1e-2: n=412 max_ratio=0.0057 at delta=1.09e-02
+  band 1e-3: n=114 max_ratio=69.0071 at delta=8.40e-04
+  band other: n=196 max_ratio=0.0208 at delta=4.40e-01
+d3_scaling done. saved out/d3_scaling.json
