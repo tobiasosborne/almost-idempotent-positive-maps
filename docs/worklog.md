@@ -449,3 +449,19 @@ survives, recursion-no-base-case proof skeleton identified. Two numerics failure
 red→green (LP presolve on near-duplicate rows; coincident-vertex misclassification). All in
 agent-A/explorations/classical-portfolio/ (notes/d0..d3*, experiments/). Infra learnings (codex
 idle-websocket wedge, resume protocol, progress-message protocol) in LLM-LEARNINGS.md.
+
+## 2026-06-10 (later) — Agent A: classical-portfolio day-1 conclusion (branch agent-a/classical-portfolio)
+Full-day campaign concluded at a sharply-compressed state. HELD: op-exposed-hull <= HLC (2-family-
+verified assembly, C' = max(4A, 1/sqrt(a))); HLC <= sigma_v-wall lemma (codex endgame glue,
+a = min(4/B_A^2, 1/B_B^2)); sigma_v-wall measured precisely (B_B = 0.536; floor delta/H^2 = 3.484;
+three independent deciders concur; the genuine MRP middle regime is the SAFEST region — fable's
+borderline worry dissolved) but unproved. Proved+audited belt grew to ~17 lemmas (incl. fable's
+kernel-energy Gamma = P(g^2)-g^2 [classical square-hole analogue], wiggle rigidity [X1 all-k],
+near-delta exposure, g-budget, blocker cap). F-psi conditional (psi-gap lemma named). Literature:
+HLC is virgin ground = first quantitative Douglas-Ando stability statement. Waves 1-4 audit sweep
+caught 2 genuine gaps in earlier "proved" steps + multiple constant corrections — every catch by a
+different party than the author. Meta-experiment learnings in LLM-LEARNINGS.md (idle-websocket
+wedge protocol, fable 64k-output file protocol, derive-first audits, certificate-persistence gap).
+Beads: aipm-e71 (HLC), aipm-nhj/mox (absorbed faces), new sigma_v-wall bead. Next session: dual-
+certificate-persisting decider rerun -> fable closer on sigma_v-wall -> write-up (proof or honest
+obstruction map; both PRD-legitimate).
