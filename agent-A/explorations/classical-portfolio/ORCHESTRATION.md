@@ -65,12 +65,26 @@ hoped-for gain. The argument only re-derives the C1/C2 lifetime dichotomy. A τ-
 bad block at φ-height ~τ, internal circulation, O(τ) exit) is NOT excluded by averages; only vertex/
 exposedness geometry can kill it. Reframe: bad configuration ⟺ a 4δ-submartingale plateau with
 Ω(1/τ) lifetime and no new (ρ,κ)-exposed vertex. Question: can an exact retraction support one?
-- D0: codex xhigh cross-check of the vacuity analysis + ideation on what kills a plateau. KILL the
-  original lane if vacuity confirmed; keep the plateau reformulation as the sharpened C14.
-- D1 (numerics): adversarial search maximizing [bad-lifetime × plateau height] over exact retractions
-  (the un-pursued C9e regret item). Counterexample-hunting and structure-revealing at once.
-- Status: ACTIVE (D0 next). Kill criterion: vacuity confirmed AND plateau search finds nothing
-  structurally new → fold remains into Lane E.
+- D0 (DONE 2026-06-10): codex CONFIRMED vacuity (all 5 steps "correct"); proposed feedback identity
+  UV = A(I−A) + W-exclusion (EXP: exposed vertex's own row sends ≤ δ/κ into far rows) + candidate
+  augmentation lemma ("long-lived far block ⇒ contains a well-exposed vertex" = sharpened C14).
+- D′ (DONE 2026-06-10, opus): REFUTED the order-one-return consequence — μUV = μA(I−A) = rA with
+  r = μ(I−A), ‖r‖₁ ≤ 2/L + 3δ = O(τ) (orchestrator re-verified; 2-family confirmation pending).
+  So the block identity gives an UPPER bound (small net exit), the wrong sign for the contradiction.
+  Also: W-exclusion has two loopholes (~1/τ joint carriers; silence on non-exposed shell rows);
+  shell ratchet descends Θ(log 1/δ) layers ⇒ would break the δ-free rate. New required inputs
+  N1 (common separating functional), N2 (carrier control), N3 (lifetime persistence).
+- VERDICT SHIFT: evidence now tilts toward a COUNTEREXAMPLE template — `cex-log-staircase`
+  (multi-layer self-feeding shell, heights 2^{-m}Dτ, exit ε~τ, per-row neg η~δ, exact P²=P closed
+  via UV = A(I−A)). If realizable ⇒ refutes the augmentation lemma and likely op-exposed-hull as
+  stated (dist/τ ~ log(1/δ) → ∞). If provably obstructed ⇒ the obstruction IS the real lemma
+  (idempotent-rigidity/spectral, not flow accounting). Agent-B's 4500-sample numerics could not
+  have seen this (adversarial, measure-zero structure).
+- D1 (NEXT): attempt explicit construction of a MINIMAL self-feeding shell (1–2 layers, small n)
+  exactly — symbolic (wolframscript) + numeric (gurobi nonlinear/LP). Either an exact instance,
+  or the precise over-constraint that kills it.
+- Status: ACTIVE (D1). The lane has transformed from "proof via duality" into "decide the
+  counterexample"; this now leads the whole portfolio (a counterexample would also moot lanes B/E).
 
 ### Lane B — Baake–Sumner probabilistic (quantitative stability of the idempotent classification)
 B–S/Högnäs–Mukherjea (refs/baake-sumner-2007.11433, byte-pinned): exact stochastic idempotents =
@@ -115,7 +129,9 @@ positivity-capable output (`op-layer1-gap`).
 |---|---|---|---|---|---|
 | 1 | 06-10 | — | opus-4.8 (one-shot strategist) | independent strategy generation | HIGH value breadth/critique; 2 concrete constructions flawed (see LLM-LEARNINGS) |
 | 2 | 06-10 | infra | codex gpt-5.5@xhigh | observability smoke test (stationary dist, 3 steps) | PASS: 5 streamed items, math correct, 2.3k out-tokens |
-| 3 | 06-10 | D0 | codex gpt-5.5@xhigh | adversarial check of vacuity claim + τ-plateau | runs 1–2 killed by idle-websocket wedge; run 3 + resume DELIVERED (partial): (a) vacuity audit CONFIRMED "essentially correct" — ℓ¹-dual/submartingale/bookkeeping all check; (b) τ-plateau scalar bookkeeping CONSISTENT with exact idempotence (averaging cannot forbid it); (c) candidate-lemma verdict pending |
+| 3 | 06-10 | D0 | codex gpt-5.5@xhigh | adversarial check of vacuity claim + τ-plateau | DELIVERED (after resume): (a) vacuity CONFIRMED all 5 steps; (b) plateau scalar-consistent; (c) feedback identity UV=A(I−A) + W-exclusion + candidate augmentation lemma |
+| 4 | 06-10 | D′ | opus-4.8 (pure reasoning, 0 tool calls) | rigorous develop/verify of feedback-accounting attack | REFUTED the order-one-return step (μUV = rA, ‖r‖₁=O(τ): upper bound, inverted inequality); shell-height lemma proved mod N1; ratchet costs Θ(log 1/δ); proposed cex-log-staircase template + sub-lemma DAG. Orchestrator re-verified the key algebra |
+| 5 | 06-10 | D′ | codex@xhigh (thread resume) | 2-family confirmation of the refutation | CONFIRMED ("algebraically correct; my consequence was too strong"); re-assessment of lemma truth in answer2.md |
 
 ## Lane-switch log
 - 2026-06-10: start. Lane D first (D0 cross-check of orchestrator's vacuity analysis).
