@@ -814,3 +814,32 @@ remaining unwalked paths:
 3. The honest-stall write-up (PRD-sanctioned): conditional theorem (linear law ⟸ band
    closure) + corner theorem + s8 branch + finisher + atomic residual = a complete,
    publishable obstruction map. The report (v3, delivered) already carries most of it.
+
+---
+
+# d14 — leakage profiling (COMPLETE, 15/15 verified): THE LEAKAGE QUESTION DISSOLVES
+
+Report: notes/d14-leakage-profiles.md; data: out/d14_leakage.json. [NUMERICAL, all gates]
+- Sup-leakage is VIOLATED everywhere but BENIGNLY: the floor is exactly δ = H/2, carried
+  100% by v's own NEGATIVE entries pointing at deep rows; the bad shell carries ZERO
+  leakage. Sup-vs-averaged was a red herring — the sup is one row (v), purely negative,
+  budgeted by δ.
+- **POSITIVE leakage λ⁺ = 0 at a realizable threshold on EVERY instance** — the t10
+  finisher's closure hypothesis HOLDS for the positive kernel B⁺.
+- **The TRUE residual is the finisher's OTHER hypothesis: projective diameter Δ = ∞
+  (q = 1) on every structured instance** — in-band carriers feed disjoint-support
+  W-archetype rows. The band-cut route dies at the SUPPORT-GRAPH / unbounded-Δ branch
+  (exactly where t10 placed it; s5 is the family with no finite-Δ block at any t).
+  This sharpens s3's died-at: the "boundary row" is v, budget δ, purely negative.
+
+# POST-d14 TARGET (wave 12): the SUPPORT-GRAPH COMPONENT FINISHER
+Δ = ∞ comes from zero entries — i.e. the support graph of B⁺ is disconnected/thin. But
+disjoint supports at δ = 0 are EXACTLY the B–S normal form's block structure: infinite Δ
+is intrinsic to the ANSWER, not an obstruction — the contraction must run PER COMPONENT.
+Programme: (1) within a support-component, bootstrap positivity from idempotence
+(K^m ≈ K for all m + primitivity ⇒ effective entrywise positivity at scale path-product
+vs defect — the dimension-free tension is the work); (2) per-component collapse (finisher)
+⇒ equal-input clusters ⇒ expose (F-ND/coincidence machinery); (3) cross-component: B⁺
+components do not interact positively BY DEFINITION; the only couplings are v's δ-budget
+negatives — assemble. Refuter target: a band component that is an arbitrarily long thin
+chain (path products ε^L vs defect — the dimension-free killer candidate).
