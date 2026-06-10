@@ -499,3 +499,60 @@ m*(H−E) ≤ Σμg needs just one deep witness). Existential DMF ⟸:
      dichotomy to attack it through).
 Wave 9 targets: (a) verify existential-DMF suffices in the corrected 3.2′ chain (logic
 check); (b) prove (i); (c) attack (ii) via L1/L2/F-ND/X1 + the corner mechanism.
+
+---
+
+# WAVE 9+ — results (rolling)
+
+## w9chain (codex): EXISTENTIAL-SUFFICIENT CONFIRMED + final clean theorem [P(af) = 0.92]
+- The chain needs ONE optimal witness with deep mass (the exchange Σμg ≤ Σβg ≤ t*R holds
+  for every optimal witness; only the lower bound m*(H−E) ≤ Σμg uses the deep one).
+- **Final theorem (conditional on existential DMF):** H ≤ τ(2+4δ)/(4m*) + E(δ), hence
+  δ ≥ aH² with **a = (1/(2m*) + e)⁻² where e = lim E(δ)/τ** — REFINEMENT vs fable: only
+  E = o(τ) gives a → 4m*²; E = C_D·δ/τ = C_D·τ gives a = (1/(2m*) + C_D)⁻². The deep-band
+  width matters at first order; provers of DMF should minimize E, not just m*.
+- **t* = 0 case CLOSED:** exchange gives Σμg ≤ 0, so DMF forces H ≤ E — the chain survives
+  with NO α-localization needed (removes the standing t* > 0 caveat from the CHAIN; it
+  still rides on the σ̃-small branch's tools).
+- Top-vertex WLOG settled: pick a height-maximizing row vertex; it is hidden if H > 0 and
+  g ≥ 0 holds for it (non-top v is NOT WLOG — g ≥ 0 can fail; HLC only needs the top one).
+- W-rows-deep one-liner recorded (φ(p_w) ≤ 0 ⇒ g_w ≥ H).
+
+## w9deep (codex): σ̃-small branch PROVED — by HEIGHT COLLAPSE [orchestrator-verified]
+**Lemma (σ̃-height-collapse):** hidden top vertex v with σ̃_v ≤ s < 1 ⇒ H ≤ δR/(1−s).
+Proof (4 lines, verified by orchestrator): 0 = g_v = Σ_k P_vk g_k; positive part
+Σ(P_vk)₊g_k = Σ(−P_vk)₊g_k ≤ ν_vR ≤ δR; conv-W rows are deep (g ≥ H) and carry positive
+mass M_C = 1 + ν_v − σ̃_v; so (1+ν−σ̃)H ≤ δR. Sub-lemmas banked: top-separator-nonnegative
+(g_i ≥ 0 for ALL rows when v is the height-max vertex); optimal-witness-vacuous-depth.
+With m(s) = 1, E_s = δR/(1−s): in this branch EVERY optimal witness is (vacuously) deep.
+σ̃ convention pinned: includes the self-row if p_v ∉ conv W and P_vv > 0.
+
+## w9cycle (codex): PARTIAL — 3 new exclusion sub-lemmas; skinny regime survives
+[direct-two-site] P_ab, P_ba ≥ c ⇒ c² ≤ 1/4 + 2δ(1+δ) (diagonal exactness at a) — direct
+mutual carrying with coefficient > 1/2 + O(δ) impossible. [disjoint-two-ball] return mass
+ε ≥ mn − mr − O(δ) — closed disjoint order-one 2-block cycles impossible. [non-skinny
+payment] μν ≤ 1−θ ⇒ δ ≥ (θ²/64)H². Survivor: the SKINNY spread-mass regime
+(μν = 1 − O(ρ/H), mass spread across the partner's ρ-ball). P(full exclusion from banked
+tools) = 0.20 — quantitative B–S stability still the named missing input.
+
+# ⚠ ORCHESTRATOR SYNTHESIS post-w9deep — d12's conclusion DOWNGRADED; the regime map redrawn
+The CONTRAPOSITIVE of σ̃-height-collapse: **M_C ≤ δR/H, i.e. σ̃_v ≥ 1 − δR/H ALWAYS.**
+Consequences (each verified by direct computation):
+1. d12's σ̃ = 0 measurement is a CORNER-SCALE ARTIFACT: at H ≈ 2δ, δR/H ≥ 1 and the bound
+   is vacuous — σ̃ = 0 is possible there and only there. d12's "DMF SUPPORTED" verdict is
+   hereby DOWNGRADED to corner-regime-only; the "all-shallow web requires σ̃ > 0, never
+   realized" framing was sound for the instances probed but says NOTHING about small δ.
+2. At small δ (H ~ τ/2 ≫ δ): σ̃ → 1 PROVABLY — every hidden top vertex is a web; v's
+   positive carriers are (almost all) outside conv W and SHALLOW-leaning (v's deep-mass
+   ≤ δR/H → 0). The corner witness mechanism (μ = γP⁺_v on W-vertices) CANNOT operate
+   there: a deep optimal witness, if it exists, is a structurally different object.
+3. THE DECISIVE UNMEASURED DATUM: no verified small-δ floor instance (d3/d7 stacking,
+   H ≈ 0.536√δ) has ever had its witness depth-profiled — d12's generator degenerated
+   before that regime. If those instances verify and their witnesses are deep ⇒ DMF stands
+   with an unknown mechanism to find; if shallow ⇒ DMF refuted, recalibrate (m*, E);
+   if the instances themselves fail verification at small δ ⇒ the flat floor is itself a
+   corner extrapolation and the true small-δ law may be LINEAR (δ ≥ cH — stronger than
+   HLC). All three outcomes are major. → d13.
+4. The HLC chain simplifies regardless: for the height-max vertex, EITHER σ̃ ≤ s (then
+   δ ≥ (1−s)H/R — LINEAR, better than needed) OR σ̃ > s (the web case = the only
+   remaining battlefield, now by PROOF not heuristic).
