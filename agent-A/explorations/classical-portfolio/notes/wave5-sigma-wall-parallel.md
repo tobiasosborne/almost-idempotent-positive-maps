@@ -843,3 +843,28 @@ vs defect — the dimension-free tension is the work); (2) per-component collaps
 components do not interact positively BY DEFINITION; the only couplings are v's δ-budget
 negatives — assemble. Refuter target: a band component that is an arbitrarily long thin
 chain (path products ε^L vs defect — the dimension-free killer candidate).
+
+---
+
+# WAVE 12 (archived as w12_*) — the component finisher PROVED for fat components; the
+# survivor is the THIN-CHAIN class; the refuter could not realize it
+
+- **comp_finisher PARTIAL (a real theorem):** the support-component finisher holds with
+  explicit constants for every PRIMITIVE component whose minimum path-product Π_C beats
+  the signed/idempotence error: the survivor class is exactly
+  Π_C ≤ E_L(δ,ζ) + 2(1+δ)ε/(r*−4δ), r* = 0.85τ (F-ND consumer) — i.e. edge-floor a gives
+  a^L ≲ Cτ + O(Lδ). Equal-input collapse + exposure runs end-to-end on every fat
+  component. **The open core is now: exclude long-thin chains (vanishing path products)
+  in the σ̃ > τ band.**
+- **chain_refuter NOT-CONSTRUCTED:** every exact-rational thin-chain template snapped on
+  the gates; the s5 seed remains the only living web and it sits at σ̃ < τ — INSIDE the
+  already-proved branch. No verified instance has EVER entered the σ̃ > τ, H > Bτ regime.
+
+# POST-WAVE-12 STATE — the kernel
+The entire campaign now rests on one statement: **thin-chain exclusion** — an exact signed
+idempotent cannot support a σ̃ > τ hidden top vertex whose band component is a long thin
+chain (path products below the finisher's floor). Status: no analytic proof, no
+counterexample, no verified instance anywhere near the regime; the refuter's failure map
++ the comp_finisher's explicit inequality bracket it from both sides. Everything else in
+the chain (linear law ⟸ component finisher + thin-chain exclusion ⟸ ... ⟸ op-classical)
+is proved or proved-mod-audit.
