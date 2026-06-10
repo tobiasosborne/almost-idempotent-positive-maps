@@ -774,3 +774,43 @@ input of classical type (good-cut/coarea pigeonhole).
 3. W-free reformulation: 2-family audit of wfree's equivalence theorem, then adopt as the
    canonical statement of the open core.
 4. Byte-pin Högnäs–Mukherjea; re-run bsautopsy on the REAL proof.
+
+---
+
+# WAVE 11 (answers archived as w11_*) — the band-cut pincer dies; the gap is now atomic
+
+- **bc_supcut DIED-AT the excision-to-sup tradeoff:** the Markov threshold argument cannot
+  reach η* = c(1−q)τ — excising enough rows to force sup-leakage ≤ η* removes a constant
+  fraction of the band per round; the CZ-recursion's re-closure cost (mass the excised rows
+  carried into the kept block) regenerates leakage at the same order. Full display in the
+  archived answer.
+- **bc_weighted PARTIAL:** weighted Dobrushin contraction IS provable (a real new lemma),
+  but the t10 EXPOSURE step (collapse radius < ρ ⇒ g/Ω exposes v) irreducibly needs
+  sup-control on the rows within the collapse radius — the weighted bound cannot see which
+  rows those are. The band-interior observation (g ≤ t/2 rows have automatic sup-leakage
+  ≤ 1/2 + ε) gives a 1/2-contraction, but iterating against K^m ≈ K pays the leakage m
+  times (derived honestly — the hoped-for free iteration fails).
+- **wfree_audit PARTIAL:** B–S normal-form distance is the right CANONICAL TARGET (clean,
+  W-free, δ=0 anchored) but w105_wfree's equivalences need extra hypotheses + unspecified
+  constants; the partition search is "essentially the classical stability problem itself"
+  — not cosmetic, not a shortcut. Adopt as the statement, not as a route.
+
+# ORCHESTRATOR STRATEGIC ASSESSMENT (post-wave-11)
+The residual is now ATOMIC: **sup-vs-averaged leakage control at the band edge of a signed
+almost-idempotent block** — six independent died-at certificates surround this single point
+(s3 leakage, bandcut averaged, supcut excision, weighted exposure-step, plus the t10 and
+s8 death certificates fencing the approaches). Every named classical upgrade (pigeonhole,
+CZ excision, weighted norms, iteration) has been tried and its failure quantified. The
+remaining unwalked paths:
+1. **The real Högnäs–Mukherjea proof** (bead filed) — the δ=0 argument's actual mechanism
+   is UNKNOWN to the campaign (B–S cite it without proof); its structure may dictate the
+   correct δ > 0 surrogate (this is how the corner mechanism was found: read the object,
+   not the wish).
+2. **d14 (numerics): measure the actual band-edge leakage profile** on the corner, s5, and
+   d13 instances — if verified instances ALWAYS satisfy sup-leakage ≤ η* (the lemma being
+   TRUE with a structural input the belt lacks), the certificate shapes say what that
+   input is; if they violate it, the band-cut route is dead for a reason and the honest
+   obstruction map closes there.
+3. The honest-stall write-up (PRD-sanctioned): conditional theorem (linear law ⟸ band
+   closure) + corner theorem + s8 branch + finisher + atomic residual = a complete,
+   publishable obstruction map. The report (v3, delivered) already carries most of it.
