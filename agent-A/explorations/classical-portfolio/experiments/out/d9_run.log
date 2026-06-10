@@ -1,0 +1,27 @@
+[d9-duals] dual-certificate mining over sigma_v sweep (kg=1)
+
+[d9-duals] sigma_v=0.050 -- finding collapse edge ...
+  sigma_v=0.050: H/tau=0.0500 d/H2=400.000 v-margin/k=0.0999 #v-blockers=4 roles=['frame-financing', 'frame-group']
+
+[d9-duals] sigma_v=0.100 -- finding collapse edge ...
+  sigma_v=0.100: H/tau=0.1020 d/H2=96.154 v-margin/k=0.2034 #v-blockers=4 roles=['frame-financing', 'frame-group']
+
+[d9-duals] sigma_v=0.200 -- finding collapse edge ...
+  sigma_v=0.200: H/tau=0.2107 d/H2=22.523 v-margin/k=0.4168 #v-blockers=4 roles=['frame-financing', 'frame-group']
+
+[d9-duals] sigma_v=0.350 -- finding collapse edge ...
+  sigma_v=0.350: H/tau=0.3870 d/H2=6.676 v-margin/k=0.7461 #v-blockers=4 roles=['frame-financing', 'frame-group']
+
+[d9-duals] sigma_v=0.500 -- finding collapse edge ...
+  sigma_v=0.500: H/tau=0.5357 d/H2=3.484 v-margin/k=0.9997 #v-blockers=4 roles=['frame-financing', 'frame-group']
+
+[d9-duals] sigma_v=0.536 -- finding collapse edge ...
+  sigma_v=0.536: H/tau=0.5350 d/H2=3.494 v-margin/k=0.9985 #v-blockers=4 roles=['frame-financing', 'frame-group']
+
+[d9-duals] sigma_v=0.700 -- finding collapse edge ...
+  sigma_v=0.700: H/tau=0.5357 d/H2=3.484 v-margin/k=0.9997 #v-blockers=4 roles=['frame-financing', 'frame-group']
+
+[d9-duals] sigma_v=1.000 -- finding collapse edge ...
+  sigma_v=1.000: H/tau=0.5348 d/H2=3.497 v-margin/k=0.9982 #v-blockers=3 roles=['frame-financing', 'frame-group']
+
+[d9-duals] DONE (64.9s). Wrote out/d9_duals.json and ../notes/d9-dual-certificates.md

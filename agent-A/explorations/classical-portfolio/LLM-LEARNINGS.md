@@ -56,3 +56,23 @@ Format: `- [date] [worker@effort] [task type] — what happened; lesson.`
   written INCREMENTALLY after each proof stage; the final message is a ≤300-word pointer+verdict.
   Same principle as the codex progress-protocol — checkpoint to durable storage, never accumulate
   the payload in the terminal message.
+- 2026-06-11 [wave-5: 8 parallel codex@xhigh, mandated-diverse strategies + 1 unsteered control] —
+  PARALLEL DIVERSITY EXPERIMENT (user: "vive la différence"), results:
+  (1) CONVERGENCE AS SIGNAL: 6/6 A/B provers independently adopted the same deficit frame
+  (g = H−φ, g = Pg, F-GB top-band) and died at the SAME inequality (top-band localization) despite
+  3 disjoint mandated technologies (LP-dual / spectral / functional) — independent convergence on
+  both the frame AND the death-point is strong evidence the residual is genuinely ONE lemma, not an
+  artifact of one prover's blind spot. The unsteered CONTROL choosing the same route as a mandated
+  worker is itself a validity signal for that route.
+  (2) MANDATED-ANGLE value: even DEAD angles paid — the spectral worker's anti-lemma (canonical-g
+  energy ≤ δR² — route provably insufficient) and the duality worker's C10-exchange identity are
+  reusable facts a single-prover session would not have produced.
+  (3) OPPOSITE-BIAS PAIRS on the same target (ψ prove-bias vs ψ2 refute-bias): both refuted the
+  literal lemma with DIFFERENT counterexamples; the refuter ALSO found why its own cex dies under
+  the intended reading, yielding the minimal fix. Bias-pairing produced both the kill AND the
+  rescue — cheaper than a prove-then-audit chain.
+  (4) Asking every worker for "the precise failing inequality in display math" made the 8-way
+  cross-comparison mechanical; the died-at lines aligned almost verbatim.
+  (5) Logistics: 8 concurrent codex@xhigh ran clean (no wedges; progress-protocol in every brief);
+  wall-clock ~35-75 min each; answers landed asynchronously — harvest file written incrementally
+  per landing (crash-safe), convergence table filled as a running artifact.
