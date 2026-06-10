@@ -39,3 +39,13 @@ Format: `- [date] [worker@effort] [task type] — what happened; lesson.`
   distinguished proved/conjectured/numerical throughout. Lesson: sonnet Explore is the right
   tool for corpus distillation; give it explicit "keep proved/conjectured/numerical distinct"
   instructions and it complies.
+- 2026-06-10 [day-1 meta, serial multi-model] — the alternating prover/verifier pattern ACROSS model
+  families (opus proves → codex verifies → codex proposes → opus refutes → ...) caught an inverted
+  inequality, an overclaim, two numerics artifacts, and one vacuous proof route in a single day —
+  each catch by a DIFFERENT party than the author. Thread-resume on codex is the efficiency key
+  (420k cached tokens by D6; each continuation costs only the new reasoning). Opus tool-workers
+  self-debugged honestly (both red→green pins were their own initiative). Calibrated-probability
+  asks ("P(true)? P(provable)?") produced usefully honest numbers from codex, not flattery.
+- 2026-06-10 [process] — "progress message after each deliverable" doubles as wedge-detection AND
+  server-side checkpointing for codex resume; now standard in every brief. Monitor harness with
+  answer-file/process-death/stall detection made 6 long runs babysittable at near-zero attention.

@@ -132,6 +132,13 @@ positivity-capable output (`op-layer1-gap`).
 | 3 | 06-10 | D0 | codex gpt-5.5@xhigh | adversarial check of vacuity claim + τ-plateau | DELIVERED (after resume): (a) vacuity CONFIRMED all 5 steps; (b) plateau scalar-consistent; (c) feedback identity UV=A(I−A) + W-exclusion + candidate augmentation lemma |
 | 4 | 06-10 | D′ | opus-4.8 (pure reasoning, 0 tool calls) | rigorous develop/verify of feedback-accounting attack | REFUTED the order-one-return step (μUV = rA, ‖r‖₁=O(τ): upper bound, inverted inequality); shell-height lemma proved mod N1; ratchet costs Θ(log 1/δ); proposed cex-log-staircase template + sub-lemma DAG. Orchestrator re-verified the key algebra |
 | 5 | 06-10 | D′ | codex@xhigh (thread resume) | 2-family confirmation of the refutation | CONFIRMED ("algebraically correct; my consequence was too strong"); re-assessment of lemma truth in answer2.md |
+| 6 | 06-10 | D1 | opus+tools (138 calls, 40min) | plateau counterexample hunt | NO counterexample (7000+ exact idempotents); 3 obstructions; LP-presolve artifact found+pinned red→green; "PROVED scaling" overclaim flagged by orchestrator AND codex independently |
+| 7 | 06-10 | D2 | codex@xhigh (+script read) | verify obstructions; HCC attempt | lone-far-row lemma PROVED (κ≥ρ/(2+4δ)); HCC reduced to anchored-circuit cost; staircase reconciliation (real δ scales with height) |
+| 8 | 06-10 | D3 | opus+tools (105 calls, 50min) | adversarial envelope mining | p=2 EXACTLY, a∈[2.4,3.5]; recursion-no-base-case skeleton; coincident-vertex bug found+pinned red→green |
+| 9 | 06-10 | D4 | codex@xhigh (resume, 316k cached) | MCC proof attempt | 4 reductions PROVED; 3 opens named; operator-norm reframing ‖P‖≥1+cH²; skinny-quadrilateral = next target |
+| 10 | 06-10 | D5 | opus+tools (53 calls, 40min) | ASQ via agent-B n=4 | n=4 dichotomy VERIFIED; ASQ proved in canonical frame (LINEAR δ≥H/2!); two-shadow composition proved vacuous; gap = frame transfer |
+| 11 | 06-10 | D6 | codex@xhigh (resume, 420k cached) | frame-transfer attack | frame-clipping + intrinsic-leakage lemmas PROVED; gap compressed to FTI-2 + no-staircase (beads aipm-nhj, aipm-mox); P(true)=0.85, P(programme)=0.65 |
+| 12 | 06-10 | D7 | opus+tools | FTI-2 numerical decider | LAUNCHED (running) |
 
 ## Lane-switch log
 - 2026-06-10: start. Lane D first (D0 cross-check of orchestrator's vacuity analysis).
