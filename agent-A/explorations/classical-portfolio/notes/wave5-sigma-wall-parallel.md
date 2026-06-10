@@ -868,3 +868,34 @@ counterexample, no verified instance anywhere near the regime; the refuter's fai
 + the comp_finisher's explicit inequality bracket it from both sides. Everything else in
 the chain (linear law ⟸ component finisher + thin-chain exclusion ⟸ ... ⟸ op-classical)
 is proved or proved-mod-audit.
+
+---
+
+# WAVE 13 (archived as w13_*) — SYMMETRIC STALEMATE AT THE KERNEL
+
+- **chain_excl DIED-AT the path-product lower bound:** the needed-and-unproved inequality
+  is Π_C ≳ τ − O(Lδ) (or any substitute beating the wave-12 survivor inequality). Best
+  honest yield: the recursive high-web reduction (every shallow component node is itself
+  far from conv W with large geometric σ̃) — the budget recursion holds but does not force
+  the path-product floor.
+- **chain_refuter2 NOT-CONSTRUCTED, including the priority PERIODIC template:** the
+  period-two attack (aimed at the finisher's primitivity hypothesis) fails the gates in an
+  instructive dichotomy — either the period-two mass stays below τ (inside the proved s8
+  branch) or raising the height exposes the candidate rows (they enter W). Trees, frame-
+  chains, parallel bundles: all snapped; failure map recorded.
+
+# FINAL STATE OF THE CAMPAIGN (2026-06-11, after 13 waves, 10 strategy kinds, ~55 workers)
+**Prover and refuter are jammed against the SAME inequality from opposite sides:**
+  Π_C ≳ τ − O(Lδ)   for the band component of any σ̃ > τ hidden top vertex.
+- TRUE ⇒ thin-chain exclusion ⇒ (with the proved component finisher + s8 branch) the
+  LINEAR LAW ⇒ HLC ⇒ op-exposed-hull ⇒ op-classical. ALL other links proved or
+  proved-mod-audit, constants explicit.
+- FALSE ⇒ a realizable thin-chain web ⇒ the first H ≫ δ instance ever ⇒ likely
+  refutation geometry for the linear law (HLC itself would survive unless H/τ
+  exceeds ~0.5 — the corner theorem caps what a counterexample can do).
+- No verified instance has ever entered the regime; both directions have quantified
+  failure maps; every classical technique and ten strategy kinds have measured death
+  certificates. Remaining unwalked: the real Hognas–Mukherjea proof (bead), an
+  SOS/certificate search SPECIALIZED to the chain inequality (small n, the reduced
+  problem — distinct from the collapsed full-problem SOS of wave 10), and the
+  PRD-sanctioned obstruction write-up (report v3 already carries the structure).

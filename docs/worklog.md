@@ -475,3 +475,28 @@ persisting decider rerun -> fable closer on sigma_v-wall -> write-up or honest o
 delegation protocol learnings, and beads map (aipm-3u6 -> aipm-e71 -> aipm-nhj/mox, epic aipm-and).
 The agent-B reference worktree is KEPT at /tmp/aipm-agentb-branch (recreate via git worktree add if
 rebooted). Session totals: ~45 delegations across 4 model families, 14 commits, all pushed.
+
+## 2026-06-10/11 — Agent A: classical-portfolio day 2 — the spiral to the kernel (waves 5-13)
+
+Multi-swarm campaign (user-directed: codex swarms liberal, opus serial, fable by approval;
+~55 codex + 5 opus + 1 fable). Arc: 8-prover diverse-strategy wave compressed sigma_v-wall
+to top-band localization; fable closer found the CORNER THEOREM (exact constants tau* =
+2-sqrt3, wall 2(2-sqrt3), floor (7+4sqrt3)/4 — 2-family confirmed) + reduced to DMF; audits
+caught+fixed the R-handling bug, downgraded NG'; d12/d13 deciders + the sigma-tilde
+height-collapse lemma (proved) exposed the flat floor as a CORNER EXTRAPOLATION — the
+empirical truth is the LINEAR LAW delta >= H/2 (entire record; d13 outcome (c), high
+strength). 10-strategy-kind wave (user-requested diversity): 5/10 collapsed into the
+exposedness-LP basin proving "hiddenness IS the LP frame"; t10 PROVED the Birkhoff
+projective idempotent-collapse finisher (no spectral gap). d14: leakage question dissolves
+(positive kernel closes exactly; v's delta-budget negatives are the only crossing); residual
+= unbounded projective diameter = support-graph branch. Wave 12 PROVED the per-component
+finisher (fat components collapse-and-expose); wave 13 = symmetric stalemate at the kernel:
+path-product floor Pi_C >~ tau - O(L*delta) (prover died at it; two refuters could not
+build against it). Literal psi-gap REFUTED twice + conditioned variant PROVED; s5 exact
+all-shallow face constructed (low height only); s8 sigma-tilde<=tau branch PROVED (HLC
+direct there). SOURCE DISCOVERY: Baake-Sumner cite Hognas-Mukherjea WITHOUT proof — the
+delta=0 anchor needs its own byte-pin (bead filed). DELIVERABLE: 49pp self-contained
+LaTeX report (13 shards, 3 hostile review rounds, overclaim bar PASSED) delivered to user;
+sent as report/main.pdf (exploration lane). All ~45 worker verdicts archived in
+notes/swarm-answers/; the complete spiral record in notes/wave5-sigma-wall-parallel.md.
+Beads: aipm-3u6 carries the kernel; aipm-sjw (report) done; H-M acquisition bead filed.
