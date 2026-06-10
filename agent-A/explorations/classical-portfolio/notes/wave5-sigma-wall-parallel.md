@@ -302,3 +302,38 @@ Status of the chain: σ_v-wall ⟸ top-band localization (H²-qualified form, P 
 ⟸ carrier-blocker coupling. F-ψ correctly re-routed (w6psifix, conditioned, PROVED mod
 audit). Next: d10 joint-LP dual mining (w6fin's recipe) + provers on the reciprocal-carrier
 lemma; then the fable closer decision.
+
+---
+
+# WAVE 7 (2 codex: reciprocal-carrier via RΛ=I; carrier-blocker coupling via C10)
+
+| worker | verdict | key output | P |
+|---|---|---|---|
+| w7carrier | DIED-AT (same wall, sharpened) | column-carrier propagation [proved]; GAUGE WARNING; binding-height = LP complementarity (demystified) | 0.72 quantitative / 0.40 literal |
+| w7coupling | DIED-AT (same wall, sharpened) | column-shadow lemma [proved]; coupling ⟸ aggregate pinning Σ_b μ_b P_vb ≥ cτ | 0.65 aggregate form |
+
+**w7carrier:** column idempotence at f: P_vf = Σ_k P_vk P_kf gives [column-carrier
+propagation] Σ_{k∈A} P_vk P⁺_kf ≥ m − δ² for direct carrier mass m = P_vf — propagation is
+proportional to the OVERLAP m; nothing forces m large ⇒ no H, no σ_v. **Gauge warning
+(important for all future provers):** raw-Λ-row arguments are not invariant under Λ → ΛS,
+R → S⁻¹R; the invariant content of the factorization is exactly row exactness g = Pg +
+column exactness P² = P — "RΛ = I" per se adds nothing beyond these. **Binding-height
+identity demystified:** d9's "height = margin" is exposedness-LP complementary slackness
+(active far-row constraint ⇒ h(f) = t*), NOT a hidden exactness identity. So the
+reciprocal-carrier "mechanism" needs a QUANTITATIVE carrier-overlap lower bound, which is
+the open content.
+
+**w7coupling:** [column-shadow lemma] v's carrier system reproduces every column of p_v to
+O(δ/σ_v): Σ_{j∈A_v} λ_j P_jb = P_vb + O(δ/σ_v). [coupling reduction] carrier-blocker
+coupling ⟸ the aggregate pinning inequality **Σ_{b∈B} μ_b P_vb ≥ cτ** (μ = the C10 witness
+measure on far blockers). C10-exchange controls only HEIGHT; α still carries all the
+radius/column information (same uncontrolled high-zero-face term).
+
+**CONVERGENT NEXT EXPERIMENT (both workers, independently, = w6fin's recipe refined):**
+joint LP/alternating search under exact P² = P + C10 witness + σ_v ≥ 1/2 + far top-band
+blocker constraints, with objective MINIMIZING the aggregate coupling
+M := Σ_b μ_b Σ_{j∈A_v} λ_j P⁺_jb (equivalently sweep a floor θ₀ on the carrier-overlap
+θ_f and watch when the 3.48 wall appears). **Decision value: optimum M = 0 ⇒ the coupling
+lemma is FALSE as stated (counterexample direction); M ≥ cτ ⇒ extract the rational dual =
+the missing proof certificate.** d10 (running) covers the neighbourhood of this; a d11
+with the M-objective directly is queued if d10 doesn't settle it.
