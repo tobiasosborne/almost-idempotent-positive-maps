@@ -30,6 +30,16 @@ Every switch logged here + worklog.
 `codex exec` (gpt-5.5, xhigh default; see CODEX_DELEGATION.md). TIB network: paywalled papers
 accessible — refs acquisition is unblocked.
 
+**Observability protocol (user directive 2026-06-10): verbosity + eager flush in ALL activities.**
+- Every long-running delegated process streams a live trace to a file: codex → `--json` events
+  (never `--ephemeral`); python → `python3 -u` (+ per-iteration prints); shell pipelines →
+  `stdbuf -oL -eL`; solvers → native log files (gurobi LogFile, mosek log).
+- Heartbeat rule: any run expected >2 min must emit progress at least every ~60s; silence beyond
+  ~3× the expected cadence ⇒ byte-flow check (`/proc/<pid>/io` rchar delta over 15s) ⇒ kill+resume.
+  Watchdog timeouts on all launches.
+- Process-hygiene: never `pkill -f`/`pgrep -f` with a pattern contained in your own command line
+  (self-match kills your own shell); use bracket-grep `[c]odex` or kill by recorded PID.
+
 **Delegation matrix (initial; evolves via LLM-LEARNINGS.md).**
 | Step type | Worker |
 |---|---|
