@@ -66,10 +66,13 @@ positive weights \(\alpha_j=P_{i_*j}^+/(1+\nu_{i_*})\),
 The same leakage statement for an arbitrary row is false.
 
 \item \textbf{L6 identity-frame linear bound.} \(\modauditbadge\)
-In the identity realization \(\framemat=[I\mid 0]\), if the archetype
+In the identity realization, \(\framemat=[I_r\mid0]\) means the chosen
+archetype rows are literal coordinate vertices, all other rows are represented
+by \(\Lambda\), and the archetype simplex is their convex hull.  If that
 simplex lies in \(C_W\), then every row obeys
 \(\distone(p_i,C_W)\le 2\nu_i\).  Hence \(H\le 2\delta\), equivalently
-\(\delta\ge H/2\).  Transfer to a general frame is open.
+\(\delta\ge H/2\).  Transfer to a general frame would prove the same
+bound for arbitrary \(P=\Lambda\framemat\); that transfer is open.
 
 \item \textbf{N1 nilpotent-chain forcing.} \(\provedbadge\)
 Assume an affine height \(h\) with \(h|_{C_W}=0\),
@@ -92,7 +95,9 @@ then
 \(1-\mu_1\mu_2\le 2\rho/H\).
 
 \item \textbf{X1 one-mode wall.} \(\provedbadge\)
-For an exact nonconstant shell \(p_i=q+t_i r\), biorthogonality gives
+An exact nonconstant shell has rows \(p_i=q+t_i r\) with not all \(t_i\) equal;
+exactness supplies the dual coordinate pairing that reads off \(t_i\).  This
+biorthogonality gives
 \((\max_i t_i-\min_i t_i)\|r\|_1\ge 2\).  Therefore the shell has
 \(\ell^1\)-diameter at least \(2\), so a nonconstant exact one-mode shell
 cannot hide inside a sub-\(\rho\) skinny cluster.
@@ -123,10 +128,10 @@ If \(P_{ii}<1\), then
 If \(P_{ii}\le 0\), the right side may be replaced by \((2+4\delta)\delta\).
 
 \item \textbf{F-ND near-delta exposure.} \(\provedbadge\)
-Rows whose formal off-own-site mass \(\sigoff\) lies below the audited
-near-delta threshold are forced into exposed clusters.  The safe constant
-is conservative, \(c_{\mathrm{ND}}\simeq0.85\), including the lower-order
-\(\delta\) terms from the audit.
+Rows whose formal off-own-site mass obeys the audited threshold
+\(\sigoff\le c_{\mathrm{ND}}\tau\) are forced into exposed clusters.  The
+safe constant is conservative, \(c_{\mathrm{ND}}\simeq0.85\), including the
+lower-order \(\delta\) terms from the audit.
 
 \item \textbf{F-E kernel energy.} \(\provedbadge\)
 For \(\Gamma=P(g^2)-g^2\), where \(g^2\) is coordinatewise,
@@ -206,5 +211,5 @@ quantitative Baake--Sumner stability statement for shallow webs.
 \(\numbadge\) The d13 final verdict is outcome (c): no verified
 small-\(\delta\) flat floor exists, and every verified campaign instance
 satisfies the empirical linear pattern \(H\lesssim 2\delta\).
-\(\openbadge\) The theorem target is therefore the linear law
-\(\delta\ge cH\), which would imply HLC with room to spare.
+\(\numbadge\) The strongest empirical target is the linear law
+\(\delta\ge cH\), which would imply HLC with room to spare if proved.

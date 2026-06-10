@@ -13,11 +13,12 @@ where \(\W\) is the set of \((\rho,\kappa)\)-well-exposed row vertices.  A top
 hidden vertex is a row vertex \(v\) attaining this maximum.
 
 \begin{definition}[Corner family and its two laws]
-\modauditbadge
+\modauditbadge\ \numbadge
 The finite corner family is the verified d8--d12 budget-line family of exact
 signed affine retractions with a hidden top vertex \(v\), a binding financier
 row, and the row-witness dual certificate coming directly from the row identity
-of \(v\).  In this family the audited laws are:
+of \(v\).  This is a named verified construction class, not a parametrization
+of all signed retractions; the report uses only the two laws displayed below:
 \[
   H=2\delta,
   \qquad
@@ -34,7 +35,7 @@ The corner is the finite scale at which these two family laws meet the exposure
 threshold \(t^*=\kappa\).  Their intersection produces the constants below.
 
 \begin{theorem}[Finite corner constants]
-\modauditbadge
+\modauditbadge\ \numbadge
 On the corner family above, the edge scale is
 \[
   \tau_* = 2-\sqrt 3,\qquad
@@ -88,8 +89,10 @@ the algebra above.
 
 \begin{numericalresult}[Dual-certificate confirmations]
 \numbadge
-The d9 dual-certificate sweep verified the same edge across cells
-\(\sigma=0.05,0.10,0.20,0.35,0.50,0.536,0.70,1.00\), using exact idempotence
+The d9 dual-certificate sweep verified the same edge across cells of the
+historical design parameter \(\sigma_{\mathrm{sweep}}\) (the d8 proxy for
+geometric \(\sigtilde\), not the formal \(\sigoff\)):
+\(0.05,0.10,0.20,0.35,0.50,0.536,0.70,1.00\), using exact idempotence
 checks, multiplicity-correct \(W\), robust exposedness LPs with presolve off,
 and honest \(\tau=\sqrt\delta\).  The wall cells recorded
 \[

@@ -4,7 +4,9 @@
 \subsection{Stochastic and signed retractions}
 
 Fix a finite state set \(\{1,\ldots,n\}\).  Vectors are row vectors.
-The all-ones column is \(\one\), and
+The all-ones column is \(\one\), the identity matrix is \(I_n\), and
+\(J=\one\one^{\mathsf T}\) is the all-ones matrix; source-note shorthand
+\(2Q-1\) below means \(2Q-I_n\), not \(2Q-J\).  The simplex
 \[
   \DeltaN=\{x\in \R^n:\ x_k\ge 0\ \hbox{for all }k,\quad x\one=1\}
 \]
@@ -110,36 +112,48 @@ they are not inherited from a design parameter.
 \provedbadge
 \label{prop:classical-equiv-consumed}
 \texttt{lem-classical-equiv} is imported as a black-box theorem.  Its
-source contract is:
+source contract, with all symbols expanded, is:
 \begin{quote}\small
 The signed-idempotent and stochastic-idempotent formulations of classical
-stability are equivalent up to universal constants: \(Q\) row-stochastic
-with \(\lVert Q^2-Q\rVert \leq \eta\) gives
-\(P=\theta(2Q-1)\) signed affine retraction with
-\(\lVert P-Q\rVert \leq C\eta\) and neg mass
-\(\delta\leq C\eta\), and conversely row-normalising \(p_i^+\) gives
-\(Q\) with \(\lVert P-Q\rVert \leq 2\delta\),
-\(\lVert Q^2-Q\rVert \leq 6\delta+4\delta^2\).
+stability are equivalent up to universal constants.  For sufficiently
+small \(\eta\), a row-stochastic \(Q\) with
+\(\lVert Q^2-Q\rVert_{\infty\to\infty}\leq\eta\) gives
+\(P=\theta(2Q-I_n)\), where
+\(\theta(X)=\tfrac12(I_n+\operatorname{sgn}X)\) and
+\(\operatorname{sgn}X=X(X^2)^{-1/2}\) is the finite-dimensional
+spectral/sign transform used in the equivalence.  This \(P\) is a signed affine
+retraction with
+\(\lVert P-Q\rVert_{\infty\to\infty}\leq C\eta\) and negative mass
+\(\delta\leq C\eta\).  Conversely, if \(P\one=\one\), \(P^2=P\), and
+\(\delta=\max_i\sum_k(P_{ik})_-\), define
+\(p_i^+=((P_{ik})_+)_{k=1}^n\), \(a_i=\sum_k(P_{ik})_-\), and
+\(q_i=p_i^+/(1+a_i)\).
+The row-normalized positive-part matrix \(Q\), with rows \(q_i\), is
+row-stochastic and satisfies
+\(\lVert P-Q\rVert_{\infty\to\infty}\leq 2\delta\) and
+\(\lVert Q^2-Q\rVert_{\infty\to\infty}\leq 6\delta+4\delta^2\).
 \end{quote}
-In this report the matrix norm in that contract is the maximum row-sum
-norm \(\lVert\cdot\rVert_{\infty\to\infty}\), and all constants are
-universal.  Thus the original dimension-free problem for row-stochastic
-\(Q\) with small \(\eta(Q)=\lVert Q^2-Q\rVert_{\infty\to\infty}\) may be
-studied through exact signed affine retractions \(P\) with small
-\(\delta=\max_i\nu_i\).
+All constants in this import are universal.  Thus the original
+dimension-free problem for row-stochastic \(Q\) with small
+\(\eta(Q)=\lVert Q^2-Q\rVert_{\infty\to\infty}\) may be studied through
+exact signed affine retractions \(P\) with small \(\delta=\max_i\nu_i\).
 \end{proposition}
 
 \begin{proposition}[Imported cluster theorem]
 \provedbadge
 \label{prop:cluster-consumed}
 \texttt{thm-cluster} is imported as a black-box theorem.  Its source
-contract is:
+contract, with the local symbols made explicit, is:
 \begin{quote}\small
 There are universal \(\delta_0,C>0\) such that a signed affine
-retraction \(P\) with neg mass \(\leq\delta\leq\delta_0\) having
-representatives \(r^1..r^m\) pairwise \(2\rho\)-separated, each
-\((\rho,\kappa)\)-exposed (disjoint clusters \(U_a\)), with every
-off-cluster row within \(\gamma\) of \(\conv\{r^a\}\), admits a
+retraction \(P\) with negative mass at most
+\(\delta\leq\delta_0\) has the following clustering consequence.  Suppose
+there are representative row vertices
+\(r^1=p_{i_1},\ldots,r^m=p_{i_m}\), pairwise
+\(2\rho\)-separated in \(\ell^1\), and each representative is
+\((\rho,\kappa)\)-exposed.  Let \(U_a\) be the associated disjoint
+clusters of rows near \(r^a\), and suppose every row outside the clusters
+lies within \(\gamma\) of \(\conv\{r^1,\ldots,r^m\}\).  Then there is a
 stochastic idempotent \(E\) with
 \(\lVert P-E\rVert_{\infty\to\infty}\leq
 C(\rho+\gamma+\delta/\kappa+\delta)\); so

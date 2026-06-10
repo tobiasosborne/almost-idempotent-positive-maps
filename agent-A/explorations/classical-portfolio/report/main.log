@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.4.29)  10 JUN 2026 23:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.4.29)  10 JUN 2026 23:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -617,9 +617,14 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 111.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 111.
- (./main.toc
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+32.
+
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) (./main.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 6.
+(Font)              <10.95> on input line 7.
  [1
 
 {/home/tobias/.texlive2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/s
@@ -640,33 +645,28 @@ LaTeX Font Info:    Trying to load font information for T1+lmss on input line 3
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [4
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]) [5] [6]
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [5]) [6]
 \openout2 = `sections/01-linear-markov-setting.aux'.
 
- (./sections/01-linear-markov-setting.tex [7
+ (./sections/01-linear-markov-setting.tex
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
+8.
+
+(/usr/share/texmf/tex/latex/lm/ot1lmss.fd
+File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [7
 
 
 
 ]
-LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-97.
-
-(/usr/share/texmf/tex/latex/lm/ot1lmss.fd
-File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 110.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 112.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 110.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 112.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <8> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 110.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 112.
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-12.
-
-(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [8]) [9]
+ [8]) [9]
 \openout2 = `sections/02-geometry-exposedness.aux'.
 
 
@@ -699,22 +699,22 @@ Overfull \hbox (5.25066pt too wide) in paragraph at lines 43--44
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 []|\T1/lmtt/m/n/10.95 existential-DMF
  []
 
 
-Overfull \hbox (5.25066pt too wide) in paragraph at lines 51--52
+Overfull \hbox (5.25066pt too wide) in paragraph at lines 52--53
 []|[][][][][][]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
 []|\T1/lmtt/m/n/10.95 quantitative
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
 \T1/lmtt/m/n/10.95 Baake-Sumner web
  []
 
@@ -723,32 +723,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
 
 ]
-Underfull \hbox (badness 5711) in paragraph at lines 98--99
+Underfull \hbox (badness 5711) in paragraph at lines 99--100
 []|\T1/lmr/m/n/10.95 All-shallow op-ti-mal
  []
 
 
-Overfull \hbox (5.25066pt too wide) in paragraph at lines 99--100
+Overfull \hbox (5.25066pt too wide) in paragraph at lines 100--101
 []|[][][][][][]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 []|\T1/lmr/m/n/10.95 Pushed-witness
  []
 
 
-Overfull \hbox (47.7286pt too wide) in paragraph at lines 114--115
+Overfull \hbox (47.7286pt too wide) in paragraph at lines 115--116
 []|[][][][][][]| 
  []
 
 [14]
-Overfull \hbox (5.25066pt too wide) in paragraph at lines 134--135
+Overfull \hbox (5.25066pt too wide) in paragraph at lines 135--136
 []|[][][][][][]
  []
 
 
-Overfull \hbox (29.21121pt too wide) detected at line 140
+Overfull \hbox (29.21121pt too wide) detected at line 141
 \OML/lmm/m/it/10.95 ^^\[] \OT1/lmr/m/n/10.95 = 2 \OMS/lmsy/m/n/10.95 ^^@ []\OML
 /lmm/m/it/10.95 ;  ^^N[] \OT1/lmr/m/n/10.95 = (2 \OMS/lmsy/m/n/10.95 ^^@ []\OT1
 /lmr/m/n/10.95 )[]\OML/lmm/m/it/10.95 ;  ^^N=H[] \OT1/lmr/m/n/10.95 = (7 + 4[])
@@ -756,32 +756,32 @@ Overfull \hbox (29.21121pt too wide) detected at line 140
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
 []|\T1/lmr/m/n/10.95 Finite-corner cal-i-
  []
 
 
-Overfull \hbox (47.7286pt too wide) in paragraph at lines 144--145
+Overfull \hbox (47.7286pt too wide) in paragraph at lines 145--146
 []|[][][][][][]| 
  []
 
 
-Overfull \hbox (47.7286pt too wide) in paragraph at lines 149--150
+Overfull \hbox (47.7286pt too wide) in paragraph at lines 150--151
 []|[][][][][][]| 
  []
 
 
-Overfull \hbox (47.7286pt too wide) in paragraph at lines 154--155
+Overfull \hbox (47.7286pt too wide) in paragraph at lines 155--156
 []|[][][][][][]
  []
 
 
-Overfull \hbox (47.7286pt too wide) in paragraph at lines 159--160
+Overfull \hbox (47.7286pt too wide) in paragraph at lines 160--161
 []|[][][][][][]
  []
 
 
-Overfull \hbox (6.59055pt too wide) in paragraph at lines 187--195
+Overfull \hbox (6.59055pt too wide) in paragraph at lines 188--196
 []\T1/lmr/bx/n/10.95 Open Prob-lem 4.3. [][][][][][][]\T1/lmr/m/n/10.95 Final r
 esid-ual. Prove, or re-fute by con-struc-tion, the height-conditional
  []
@@ -807,7 +807,7 @@ Overfull \hbox (7.33604pt too wide) in paragraph at lines 49--55
 
 
 ]
-Overfull \hbox (23.15974pt too wide) in paragraph at lines 124--132
+Overfull \hbox (23.15974pt too wide) in paragraph at lines 127--135
 []\T1/lmr/bx/n/10.95 Retracted/Downgraded State-ment 6.4 \T1/lmr/m/n/10.95 (No 
 asymp-totic en-ve-lope)\T1/lmr/bx/n/10.95 . [][][][][][][]\T1/lmr/m/n/10.95 The
 
@@ -841,113 +841,113 @@ asymp-totic en-ve-lope)\T1/lmr/bx/n/10.95 . [][][][][][][]\T1/lmr/m/n/10.95 The
 
 
 (./sections/09-numerics-record.tex
-Underfull \hbox (badness 10000) in paragraph at lines 65--65
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
 []|\T1/lmtt/m/n/10 d8_mrp3.verify\T1/lmr/m/n/10 ; cor-
  []
 
 
-Underfull \hbox (badness 3735) in paragraph at lines 65--65
+Underfull \hbox (badness 3735) in paragraph at lines 71--71
 \T1/lmr/m/n/10 rected $\OMS/lmsy/m/n/10 W$\T1/lmr/m/n/10 ; pre-solve off;
  []
 
 
-Underfull \hbox (badness 1509) in paragraph at lines 66--67
+Underfull \hbox (badness 1509) in paragraph at lines 72--73
 []|\T1/lmr/m/n/10 No MRP refu-ta-tion. Global min-i-mum
  []
 
 
-Overfull \hbox (7.29pt too wide) in paragraph at lines 68--69
+Overfull \hbox (7.29pt too wide) in paragraph at lines 74--75
 []|[][][][][][]| 
  []
 
 
-Underfull \hbox (badness 3068) in paragraph at lines 69--69
+Underfull \hbox (badness 3068) in paragraph at lines 75--75
 []|\T1/lmr/m/n/10 d8 his-tor-i-cal
  []
 
 
-Underfull \hbox (badness 3049) in paragraph at lines 70--70
+Underfull \hbox (badness 3049) in paragraph at lines 76--76
 []|\T1/lmr/m/n/10 Same d8 gate over the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--70
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
 \T1/lmr/m/n/10 source sweep pa-ram-e-ter
  []
 
 
-Overfull \hbox (7.29pt too wide) in paragraph at lines 73--74
+Overfull \hbox (7.29pt too wide) in paragraph at lines 79--80
 []|[][][][][][]| 
  []
 
 
-Overfull \hbox (7.29pt too wide) in paragraph at lines 80--81
+Overfull \hbox (7.29pt too wide) in paragraph at lines 86--87
 []|[][][][][][]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--81
+Underfull \hbox (badness 10000) in paragraph at lines 87--87
 []|\T1/lmr/m/n/10 d10 cer-tifi-
  []
 
 
-Overfull \hbox (10.06775pt too wide) in paragraph at lines 87--88
+Overfull \hbox (10.06775pt too wide) in paragraph at lines 93--94
 []|[][][][][][]\T1/lmr/m/n/10 ,
  []
 
 
-Overfull \hbox (75.0455pt too wide) in paragraph at lines 87--88
+Overfull \hbox (75.0455pt too wide) in paragraph at lines 93--94
 [][][][][][]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--88
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
 []|\T1/lmr/m/n/10 d11 scale
  []
 
 
-Underfull \hbox (badness 5726) in paragraph at lines 89--90
+Underfull \hbox (badness 5726) in paragraph at lines 95--96
 \OT1/lmr/m/n/10 2\OML/lmm/m/it/10 :\OT1/lmr/m/n/10 06$ \T1/lmr/m/n/10 decades; 
 ag-gre-gate
  []
 
 
-Underfull \hbox (badness 4608) in paragraph at lines 89--90
+Underfull \hbox (badness 4608) in paragraph at lines 95--96
 \T1/lmr/m/n/10 cou-pling min-i-mized over
  []
 
 
-Overfull \hbox (7.29pt too wide) in paragraph at lines 94--95
+Overfull \hbox (7.29pt too wide) in paragraph at lines 100--101
 []|[][][][][][]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
 []|\T1/lmr/m/n/10 d12 depth
  []
 
 
-Underfull \hbox (badness 2073) in paragraph at lines 96--97
+Underfull \hbox (badness 2073) in paragraph at lines 102--103
 \T1/lmr/m/n/10 stances; HiGHS pre-solve
  []
 
 
-Overfull \hbox (10.06775pt too wide) in paragraph at lines 101--102
+Overfull \hbox (10.06775pt too wide) in paragraph at lines 107--108
 []|[][][][][][]\T1/lmr/m/n/10 ,
  []
 
 
-Overfull \hbox (75.0455pt too wide) in paragraph at lines 101--102
+Overfull \hbox (75.0455pt too wide) in paragraph at lines 107--108
 [][][][][][]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--102
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
 []|\T1/lmr/m/n/10 d13 small-$\OML/lmm/m/it/10 ^^N$
  []
 
 
-Overfull \hbox (7.29pt too wide) in paragraph at lines 108--109
+Overfull \hbox (7.29pt too wide) in paragraph at lines 114--115
 []|[][][][][][]| 
  []
 
@@ -958,92 +958,92 @@ Overfull \hbox (7.29pt too wide) in paragraph at lines 108--109
 ] [34]) [35]
 \openout2 = `sections/10-refutations-dead-routes.aux'.
 
- (./sections/10-refutations-dead-routes.tex
-Overfull \hbox (5.82199pt too wide) in paragraph at lines 58--63
-[]\T1/lmr/bx/n/10.95 Retracted/Downgraded State-ment 11.4 \T1/lmr/m/n/10.95 (Si
-gma)\T1/lmr/bx/n/10.95 . [][][][][][][]\T1/lmr/m/n/10.95 Older notes used
- []
-
-[36
+ (./sections/10-refutations-dead-routes.tex [36
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Overfull \hbox (5.82199pt too wide) in paragraph at lines 78--83
+[]\T1/lmr/bx/n/10.95 Retracted/Downgraded State-ment 11.4 \T1/lmr/m/n/10.95 (Si
+gma)\T1/lmr/bx/n/10.95 . [][][][][][][]\T1/lmr/m/n/10.95 Older notes used
+ []
+
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
 \T1/lmr/m/n/10.95 terex-am-ples; only the con-di-tioned
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 130--130
+Underfull \hbox (badness 2376) in paragraph at lines 157--157
 []|\T1/lmr/m/n/10.95 Top-band lo-cal-iza-tion
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 132--132
+Underfull \hbox (badness 1297) in paragraph at lines 159--159
 []|\T1/lmr/m/n/10.95 Row ex-act-ness at fi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--134
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
 []|\T1/lmr/m/n/10.95 Raw fac-tor-iza-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--135
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
 []|\T1/lmr/m/n/10.95 Finite-corner equals
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 []|\T1/lmr/m/n/10.95 Evidence ap-plies to pro-filed cor-
  []
 
 
-Underfull \hbox (badness 1484) in paragraph at lines 136--137
+Underfull \hbox (badness 1484) in paragraph at lines 163--164
 \T1/lmr/m/n/10.95 ner/budget regimes, not the small-$\OML/lmm/m/it/10.95 ^^N$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--137
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
 []|\T1/lmr/m/n/10.95 Averaging or quasi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--138
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
 []|\T1/lmr/m/n/10.95 Projection-norm
  []
 
 
-Underfull \hbox (badness 2990) in paragraph at lines 140--140
+Underfull \hbox (badness 2990) in paragraph at lines 167--167
 []|\T1/lmr/m/n/10.95 Unlocalized dual de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--142
+Underfull \hbox (badness 10000) in paragraph at lines 169--169
 []|\T1/lmr/m/n/10.95 Rank in-duc-tion via
  []
 
 
-Underfull \hbox (badness 2065) in paragraph at lines 142--143
+Underfull \hbox (badness 2065) in paragraph at lines 169--170
 []|\T1/lmr/m/n/10.95 Parked for this route de-spite rank-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--143
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
 []|\T1/lmr/m/n/10.95 KKT localization-
  []
 
 
-Underfull \hbox (badness 3547) in paragraph at lines 144--144
+Underfull \hbox (badness 3547) in paragraph at lines 171--171
 []|\T1/lmr/m/n/10.95 Pure con-vex shadow
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 145--145
+Underfull \hbox (badness 1259) in paragraph at lines 172--172
 []|\T1/lmr/m/n/10.95 Log-staircase or shell
  []
 
-[37] [38]) [39]
+[38]) [39]
 \openout2 = `sections/11-methodology.aux'.
 
  (./sections/11-methodology.tex [40
@@ -1052,7 +1052,7 @@ Underfull \hbox (badness 1259) in paragraph at lines 145--145
 
 ] [41]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-48.
+51.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1080,10 +1080,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 81A84614A61FF7B478FB28670868622F;9893.
  ) 
 Here is how much of TeX's memory you used:
- 14809 strings out of 474222
- 249031 string characters out of 5748733
- 1975975 words of memory out of 5000000
- 36516 multiletter control sequences out of 15000+600000
+ 14812 strings out of 474222
+ 249099 string characters out of 5748733
+ 1978975 words of memory out of 5000000
+ 36518 multiletter control sequences out of 15000+600000
  684350 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,79p,641b,658s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1094,21 +1094,23 @@ ublic/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public
-/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbo10.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy
-8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/font
-s/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (49 pages, 665963 bytes).
+fb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss
+bo10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmtti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+symbols/msbm10.pfb>
+Output written on main.pdf (49 pages, 704199 bytes).
 PDF statistics:
- 826 PDF objects out of 1000 (max. 8388607)
- 709 compressed objects within 8 object streams
- 226 named destinations out of 1000 (max. 500000)
+ 838 PDF objects out of 1000 (max. 8388607)
+ 717 compressed objects within 8 object streams
+ 227 named destinations out of 1000 (max. 500000)
  449 words of extra memory for PDF output out of 10000 (max. 10000000)
 

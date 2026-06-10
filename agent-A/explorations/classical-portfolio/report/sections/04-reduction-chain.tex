@@ -54,17 +54,21 @@ stability target follows.  No later step here uses additional main-project
 facts.
 \end{proof}
 
-\begin{proposition}
-\modauditbadge\  The HLC assembly implies \texttt{op-exposed-hull}.
+\begin{proposition}[HLC assembly contract]
+\modauditbadge\  The two-family verified assembly input is the following
+high-shell form of HLC, not a proof that HLC is already known: there are
+universal \(\delta_0,A_{\mathrm{HLC}},a>0\) such that, whenever
+\(\delta\le\delta_0\), \(H\ge A_{\mathrm{HLC}}\rho\), and
+\(\delta<aH^2\), some row vertex \(v\) with
+\(\distone(p_v,\conv(\W))\ge H/2\) is \((\rho,\kappa)\)-well-exposed.
+If this contract holds, then \texttt{op-exposed-hull} follows with
+\(C'=\max(4A_{\mathrm{HLC}},1/\sqrt a)\).
 \end{proposition}
 \begin{proof}
 Let \(C_{\W}=\conv(\W)\), \(h_i=\distone(p_i,C_{\W})\), and
-\(H=\max_i h_i\).  The source assembly assumes universal
-\(\delta_0,A_{\mathrm{HLC}},a>0\) such that, whenever
-\(\delta\leq\delta_0\), \(H\geq A_{\mathrm{HLC}}\rho\), and
-\(\delta<aH^2\), some row vertex \(v\) with \(h_v\geq H/2\) is
-\((\rho,\kappa)\)-well-exposed.  Since every well-exposed vertex lies in
-\(\W\subset C_{\W}\), that alternative is impossible for \(h_v>0\).
+\(H=\max_i h_i\).  Since every well-exposed vertex lies in
+\(\W\subset C_{\W}\), the contract's exposed-vertex alternative is
+impossible when \(h_v\ge H/2>0\).
 Thus either \(H<A_{\mathrm{HLC}}\rho=4A_{\mathrm{HLC}}\tau\), or
 \(\delta\geq aH^2\) and \(H\leq\tau/\sqrt a\).  Hence every row is within
 \[
@@ -88,8 +92,9 @@ H\leq B_A\sigma\tau \quad(\sigma\leq 1/2),
 \]
 Those two estimates would give \(a=\min(4/B_A^2,1/B_B^2)\).  The branch
 estimates themselves remain \openbadge/\numbadge\ in the ledger, and the
-measured wall constant \(B_B\approx0.536\) is numerical evidence, not a
-theorem.
+measured \(B_B\approx0.536\) is the finite-corner value.  The asymptotic
+budget-line behavior tends toward \(1/2\); neither number is a proved Branch B
+constant.
 \end{proof}
 
 \begin{downgradedstatement}

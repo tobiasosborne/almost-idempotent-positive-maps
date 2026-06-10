@@ -12,45 +12,45 @@ symbols, result statuses, and source-note name clashes can be checked in one pla
 Symbol & Meaning & First shard\\
 \midrule
 \endhead
-\(n\) & Number of rows, states, or sites. & 01-setting-objects\\
-\(P\) & Exact signed affine retraction matrix: \(P\one=\one\) and \(P^2=P\). & 01-setting-objects\\
-\(Q\) & Row-stochastic almost-idempotent matrix in the original problem. & 01-setting-objects\\
-\(p_i\) & Row \(i\) of \(P\), viewed as a point and as a coefficient vector. & 01-setting-objects\\
-\(K\) & Row polytope \(\conv\{p_i\}\). & 01-setting-objects\\
-\(\DeltaN\) & Standard simplex. & 01-setting-objects\\
-\(\nu_i\) & Row negative mass, \(\sum_k(P_{ik})_-\). & 01-setting-objects\\
-\(\delta\) & Maximal row negative mass, \(\max_i\nu_i\). & 01-setting-objects\\
-\(\tau\) & Square-root scale \(\sqrt{\delta}\). & 01-setting-objects\\
-\(\rho\) & Exposure radius, fixed as \(4\tau\). & 02-exposed-geometry\\
-\(\kappa\) & Exposure margin, fixed as \(\tau/4\). & 02-exposed-geometry\\
-\(\|x\|_1\) & The \(\ell^1\) norm. & 01-setting-objects\\
-\(D_K\) & \(\ell^1\)-diameter bound for \(K\). & 01-setting-objects\\
-\(\framemat\) & Frame or realization matrix in \(P=\Lambda\framemat\), with \(\framemat\Lambda=I\). & 01-setting-objects\\
-\(\Lambda\) & Coefficient/load matrix in \(P=\Lambda\framemat\). & 01-setting-objects\\
-\(\W\) & Set of \((\rho,\kappa)\)-well-exposed row vertices. & 02-exposed-geometry\\
-\(W\) & Allowed shorthand for \(\W\) inside formulas after first definition. & 02-exposed-geometry\\
-\(C_W\) & Convex hull \(\conv(\W)\). & 02-exposed-geometry\\
-\(H\) & Hidden height, \(\max_i\distone(p_i,C_W)\). & 02-exposed-geometry\\
-\(v\) & Height-maximizing hidden row vertex unless another row is stated. & 02-exposed-geometry\\
-\(\phi\) & Canonical separator for \(v\): normalized \(\ell^\infty\)-dual, \(\phi\le0\) on \(C_W\), \(\sup_{x\in C_W}\phi(x)=0\), and \(\phi(p_v)=H\). & 02-exposed-geometry\\
-\(g_i\) & Canonical deficit \(H-\phi(p_i)\). & 02-exposed-geometry\\
-\(g\) & Deficit vector \((g_i)_i\), with \(g=Pg\) in the canonical setup. & 02-exposed-geometry\\
-\(\Omega_g\) & Oscillation \(\max_i g_i-\min_i g_i\). & 02-exposed-geometry\\
-\(t^*(v)\) & Optimal exposedness LP margin for row \(v\). & 02-exposed-geometry\\
-\(F_v\) & Set of rows \(\rho\)-far from \(v\). & 02-exposed-geometry\\
-\(h\) & Affine exposedness test function with \(0\le h\le1\) and \(h(v)=0\). & 02-exposed-geometry\\
-\(\mu,\alpha,\beta,\gamma\) & Dual witness variables for failed exposedness. & 02-exposed-geometry\\
-\(A\) & Total alpha mass \(\sum_i\alpha_i\); not an algebra symbol here. & 02-exposed-geometry\\
-\(B\) & Total beta mass \(\sum_i\beta_i\), equal to \(t^*\) for an optimal witness. & 02-exposed-geometry\\
-\(S\) & Site set, usually the positive support of \(p_v\) or a selected cluster support. & 02-exposed-geometry\\
-\(\sigoff\) & Formal off-own-site positive mass \(\sum_{k\ne v}(P_{vk})_+\). & 02-exposed-geometry\\
-\(\sigtilde\) & Geometric non-\(C_W\) carrier mass for \(v\), classified by \(\distone(p_k,C_W)\) with the epsilon-halo convention; halo rows are counted as deep. & 02-exposed-geometry\\
-\(\Av\) & Positive carrier set \(\{k:P_{vk}>0\}\). & 02-exposed-geometry\\
-\(\lambda_k\) & Normalized carrier weight \(P_{vk}/\sigma_T\) on a specified carrier set \(T\). & 02-exposed-geometry\\
-\(m_*\) & Deep-witness mass parameter in DMF. & 10-residual-dmf-obstruction\\
-\(E(\delta)\) & DMF depth error width. & 10-residual-dmf-obstruction\\
-\(e\) & Asymptotic ratio \(\lim E(\delta)/\tau\), when the limit exists. & 10-residual-dmf-obstruction\\
-\(\Gamma\) & Kernel energy vector \(P(g^2)-g^2\). & 06-proved-belt-day1\\
+\(n\) & Number of rows, states, or sites. & 01-linear-markov-setting\\
+\(P\) & Exact signed affine retraction matrix: \(P\one=\one\) and \(P^2=P\). & 01-linear-markov-setting\\
+\(Q\) & Row-stochastic almost-idempotent matrix in the original problem. & 01-linear-markov-setting\\
+\(p_i\) & Row \(i\) of \(P\), viewed as a point and as a coefficient vector. & 01-linear-markov-setting\\
+\(K\) & Row polytope \(\conv\{p_i\}\). & 01-linear-markov-setting\\
+\(\DeltaN\) & Standard simplex. & 01-linear-markov-setting\\
+\(\nu_i\) & Row negative mass, \(\sum_k(P_{ik})_-\). & 01-linear-markov-setting\\
+\(\delta\) & Maximal row negative mass, \(\max_i\nu_i\). & 01-linear-markov-setting\\
+\(\tau\) & Square-root scale \(\sqrt{\delta}\). & 01-linear-markov-setting\\
+\(\rho\) & Exposure radius, fixed as \(4\tau\). & 02-geometry-exposedness\\
+\(\kappa\) & Exposure margin, fixed as \(\tau/4\). & 02-geometry-exposedness\\
+\(\|x\|_1\) & The \(\ell^1\) norm. & 01-linear-markov-setting\\
+\(D_K\) & \(\ell^1\)-diameter bound for \(K\). & 01-linear-markov-setting\\
+\(\framemat\) & Frame or realization matrix in \(P=\Lambda\framemat\), with \(\framemat\Lambda=I\). & 01-linear-markov-setting\\
+\(\Lambda\) & Coefficient/load matrix in \(P=\Lambda\framemat\). & 01-linear-markov-setting\\
+\(\W\) & Set of \((\rho,\kappa)\)-well-exposed row vertices. & 02-geometry-exposedness\\
+\(W\) & Allowed shorthand for \(\W\) inside formulas after first definition. & 02-geometry-exposedness\\
+\(C_W\) & Convex hull \(\conv(\W)\). & 02-geometry-exposedness\\
+\(H\) & Hidden height, \(\max_i\distone(p_i,C_W)\). & 02-geometry-exposedness\\
+\(v\) & Height-maximizing hidden row vertex unless another row is stated. & 02-geometry-exposedness\\
+\(\phi\) & Canonical separator for \(v\): normalized \(\ell^\infty\)-dual, \(\phi\le0\) on \(C_W\), \(\sup_{x\in C_W}\phi(x)=0\), and \(\phi(p_v)=H\). & 02-geometry-exposedness\\
+\(g_i\) & Canonical deficit \(H-\phi(p_i)\). & 02-geometry-exposedness\\
+\(g\) & Deficit vector \((g_i)_i\), with \(g=Pg\) in the canonical setup. & 02-geometry-exposedness\\
+\(\Omega_g\) & Oscillation \(\max_i g_i-\min_i g_i\). & 02-geometry-exposedness\\
+\(t^*(v)\) & Optimal exposedness LP margin for row \(v\). & 02-geometry-exposedness\\
+\(F_v\) & Set of rows \(\rho\)-far from \(v\). & 02-geometry-exposedness\\
+\(h\) & Affine exposedness test function with \(0\le h\le1\) and \(h(v)=0\). & 02-geometry-exposedness\\
+\(\mu,\alpha,\beta,\gamma\) & Dual witness variables for failed exposedness. & 02-geometry-exposedness\\
+\(A\) & Total alpha mass \(\sum_i\alpha_i\); not an algebra symbol here. & 02-geometry-exposedness\\
+\(B\) & Total beta mass \(\sum_i\beta_i\), equal to \(t^*\) for an optimal witness. & 02-geometry-exposedness\\
+\(S\) & Site set, usually the positive support of \(p_v\) or a selected cluster support. & 02-geometry-exposedness\\
+\(\sigoff\) & Formal off-own-site positive mass \(\sum_{k\ne v}(P_{vk})_+\). & 02-geometry-exposedness\\
+\(\sigtilde\) & Geometric non-\(C_W\) carrier mass for \(v\), classified by \(\distone(p_k,C_W)\) with the epsilon-halo convention; halo rows are counted as deep. & 02-geometry-exposedness\\
+\(\Av\) & Positive carrier set \(\{k:P_{vk}>0\}\). & 02-geometry-exposedness\\
+\(\lambda_k\) & Normalized carrier weight \(P_{vk}/\sigma_T\) on a specified carrier set \(T\). & 02-geometry-exposedness\\
+\(m_*\) & Deep-witness mass parameter in DMF. & 08-residual-dmf\\
+\(E(\delta)\) & DMF depth error width. & 08-residual-dmf\\
+\(e\) & Asymptotic ratio \(\lim E(\delta)/\tau\), when the limit exists. & 08-residual-dmf\\
+\(\Gamma\) & Kernel energy vector \(P(g^2)-g^2\). & 06-day1-belt\\
 \(d_{\mathrm{poke}}\) & Family poke depth in numerical constructions. & 05-corner-theorem\\
 \(\tau_*\) & Corner scale \(2-\sqrt3\). & 05-corner-theorem\\
 \(\delta_*\) & Corner negativity \((2-\sqrt3)^2\). & 05-corner-theorem\\
@@ -92,7 +92,7 @@ Term & Plain definition & Status if result\\
 \endhead
 \((\rho,\kappa)\)-exposedness & Existence of an affine separator zero at the row and at least \(\kappa\) on all \(\rho\)-far rows. & definition\\
 affine retraction & Exact affine idempotent on row vectors, represented by \(P\one=\one\), \(P^2=P\). & definition\\
-all-shallow witness & Failed-exposedness witness whose \(\mu\)-mass avoids deep rows; exact-rational examples exist only at \(H=O(\delta)\) so far. & \openbadge\\
+all-shallow witness & Failed-exposedness witness whose \(\mu\)-mass avoids deep rows; exact-rational examples exist only at \(H=O(\delta)\) so far. & existence \modauditbadge; height-\(\tau\) exclusion \openbadge\\
 almost idempotent stochastic matrix & Row-stochastic \(Q\) with small \(\|Q^2-Q\|\). & target setting\\
 alpha mass & Total slack mass \(A=\sum_i\alpha_i\) in the dual witness. & open-control issue\\
 blocker & Far row that binds or obstructs an exposedness separator. & definition\\
@@ -126,6 +126,7 @@ MRP & Middle-regime pinch, the original day-1 residual. & \numbadge safe\\
 op-classical & Original dimension-free stability problem for almost-idempotent stochastic matrices. & \openbadge\\
 op-exposed-hull & Global exposed-hull reduction problem. & \openbadge\\
 quantitative Baake--Sumner stability & Exact \(\delta=0\) idempotent Markov chains have Baake--Sumner equal-input recurrent classes; the open perturbative version must exclude signed shallow hidden webs at height \(H>B\tau\). & \openbadge\\
+reciprocal-carrier lemma & Proposed financier/blocker self-coupling mechanism; retained only as an open heuristic after audits. & \openbadge\\
 row negative mass & Total negative coefficient mass in one row. & definition\\
 row polytope & Convex hull of the rows of \(P\). & definition\\
 row-witness & Dual witness built directly from a row identity. & \provedbadge\\
@@ -134,6 +135,7 @@ shallow hidden-witness graph & Directed graph of shallow hidden vertices witness
 sigma-wall & Historical measured law for \(H/\tau\); future statements must use \(\sigtilde\). & \numbadge\newline\openbadge\\
 \(\sigoff\) & Formal positive mass away from row \(v\)'s own index. & definition\\
 signed-idempotent formulation & Exact signed \(P\) with small row negative mass. & \provedbadge\\
+ladder analysis & Heuristic analysis of long hidden ladders; not a theorem and not used to close HLC. & \conjbadge\\
 skinny regime & Spread-mass mutual-shadow regime not killed by wave-9 cycle lemmas. & \openbadge\\
 stochastic idempotent & Row-stochastic matrix satisfying \(Q^2=Q\). & definition\\
 supplier & Row supplying positive coefficient mass to a hidden row. & definition\\

@@ -85,7 +85,9 @@ geometric-\(\widetilde\sigma_v\) branch.  Here
 of row \(v\) on rows whose \(\ell^1\)-distance from \(C_W\) is greater than
 \(\varepsilon\); rows in the \(\varepsilon\)-halo are automatically
 \((H-\varepsilon)\)-deep.  At \(\varepsilon=0\) this is the report's
-geometric branch variable, not the older index-based \(\sigoff\).
+geometric branch variable.  It is distinct both from the formal
+off-own-site mass \(\sigoff=\sum_{k\ne v}(P_{vk})_+\) and from the d12
+index-not-in-\(W\) proxy.
 
 \begin{lemma}[Small-\(\widetilde\sigma_v\) height cap]
 \provedbadge
@@ -103,10 +105,12 @@ In the same branch existential DMF holds vacuously with \(m_*=1\) and
 
 \begin{proof}
 Split the positive part of \(p_v\) into mass on \(C_W\) and mass
-\(\widetilde\sigma_v\) outside \(C_W\).  Normalize the \(C_W\)-part to a
-barycenter \(c\in C_W\).  Since every row has \(\ell^1\)-norm at most
-\(1+2\delta\), the distance from \(p_v\) to \(c\) is bounded by
-\(2(1+2\delta)\max(\widetilde\sigma_v,\nu_v)\).  This bounds
+\(s=\widetilde\sigma_v\) outside \(C_W\).  If the \(C_W\)-mass
+\(1+\nu_v-s\) is zero, then \(s=1+\nu_v\ge1\), and any \(c\in C_W\) gives
+\(H\le D_K\le2+4\delta\le2(1+2\delta)s\).  Otherwise normalize the
+\(C_W\)-part to a barycenter \(c\in C_W\).  Since every row has
+\(\ell^1\)-norm at most \(1+2\delta\), the distance from \(p_v\) to \(c\)
+is bounded by \(2(1+2\delta)\max(s,\nu_v)\).  This bounds
 \(\distone(p_v,C_W)=H\).  Under \(\widetilde\sigma_v\le\tau\) and
 \(\delta\le1/4\), also \(\nu_v\le\delta\le\tau\), so \(H\le3\tau\).  Then
 the depth threshold \(H-3\delta/\tau=H-3\tau\) is nonpositive, while
@@ -122,13 +126,15 @@ shallow hidden rows rather than by rows of \(\W\).  The word ``web'' is meant
 literally here: the obstruction is not one bad row, but a self-sustaining
 top-band component.
 
-\begin{proposition}[Partial web exclusions]
+\begin{proposition}[Partial web exclusions: scoped inventory]
 \modauditbadge
-Wave-9 excludes three simple web mechanisms: direct two-site mutual carrying
-above \(1/2+O(\delta)\), closed disjoint order-one two-ball cycles under the
-return-mass inequality, and non-skinny payment patterns, where the latter
-already force \(\delta\ge cH^2\).  The skinny spread-mass regime remains
-open.
+Wave-9 excludes only the following scoped mechanisms, and this report uses them
+only as inventory.  Direct two-site mutual carrying is impossible when each of
+two hidden rows carries the other with coefficient \(>1/2+O(\delta)\).  A
+closed disjoint order-one two-ball cycle is impossible under the stated
+return-mass inequality.  If the mutual-shadow mass is not concentrated in the
+skinny partner \(\rho\)-balls, then that non-skinny payment pattern already
+forces \(\delta\ge cH^2\).  The skinny spread-mass regime remains open.
 \end{proposition}
 
 \begin{proposition}[Low-height all-shallow faces exist]

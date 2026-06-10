@@ -28,8 +28,28 @@ mass on rows with deficit near \(H\); an all-shallow witness avoids such rows.
 \begin{refutedstatement}[Literal psi-gap]
 \refutedbadge The literal psi-gap route is false.  In its unconditioned form, far
 non-\(S\)-full rows can trade \(S\)-deficit against the \(\lambda\phi\) term.  The
-source notes contain an exact-rational counterexample and an independent second
-counterexample, so the bare lemma is not available as an input.
+following exact-rational \(6\times6\) idempotent gives a self-contained
+counterexample to the bare lemma:
+\[
+\begin{pmatrix}
+1&0&0&0&0&0\\
+0&1&0&0&0&0\\
+0&0&1&0&0&0\\
+0&0&0&1&0&0\\
+1/2&1/2&1/16&-1/16&0&0\\
+29/32&0&5/32&-1/16&0&0
+\end{pmatrix}.
+\]
+It has \(\delta=1/16\), hence \(\rho=1\), \(\kappa=1/16\).  With
+\(S=\{1,2\}\), \(\phi(x)=-2x_4\), \(\psi=x_1+x_2-x_4\),
+\(v^*=p_5\), and \(q=p_6\), one has
+\(q(S)=29/32<15/16\), \(\|p_5-p_6\|_1=1\), but
+\[
+  \psi(p_5)-\psi(p_6)=3/32
+  <(1/16)(33/16)=\kappa(\max_i\psi(p_i)-\min_i\psi(p_i)).
+\]
+This refutes only the unconditioned psi-gap input; the canonical-\(\W\)
+replacement is the scoped mod-audit route below.
 \end{refutedstatement}
 
 The surviving replacement is narrower.  The canonical-\(\W\) conditioned version uses
@@ -121,6 +141,13 @@ through \(P\), negative leakage changes the objective from \(B\) to \((B+N)/M_F\
 bound is \(M_F\le 1+N\) and \(B<\kappa<1\).  Any \(N>0\) breaks the argument.  The
 \(t^*(v)=0\) case is handled by the exchange identity without dividing by \(B\).
 \end{downgradedstatement}
+
+Route dictionary for the table: a high zero face is a low-deficit face where
+dual slack can concentrate; raw circuit bounds are unsigned combinatorial
+cycle estimates on coefficient support; the KKT localization-energy dichotomy
+is the failed attempt to split exposedness optimality into a local KKT case and
+an energy-payment case; a log-staircase is a chain of shells with geometrically
+changing heights.
 
 \begin{longtable}{p{0.24\linewidth}p{0.20\linewidth}p{0.42\linewidth}}
 \toprule

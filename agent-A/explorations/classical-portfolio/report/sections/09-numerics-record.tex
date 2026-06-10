@@ -55,6 +55,12 @@ The status column follows the report ledger, with post-design corrections
 applied where the ledger predates the swarm.
 \end{warning}
 
+For the d10 row,
+\(T_{\mathrm{far}}=\{j:\|p_j-p_v\|_1\ge\rho,\ g_j<\kappa\Omega_g\}\).
+The observable \(M_{\mathrm{far}}\) is direct positive feed from \(v\) into
+this set plus one-step carrier-mediated positive feed; it is a numerical
+diagnostic, not a conserved mass.
+
 \begin{center}
 \small
 \begin{tabular}{@{}p{0.13\textwidth}p{0.26\textwidth}p{0.42\textwidth}p{0.10\textwidth}@{}}
@@ -153,7 +159,8 @@ d12 records \(12\) passing depth-profile instances with minimum observed
 \(m_*=1\) and no all-shallow witness in its corner/budget scope.  The d13
 anchor at \(\delta=5\cdot10^{-2}\) has residuals
 \(\|P^2-P\|=0\), identity residual \(4\cdot10^{-16}\), mass-balance residual
-\(0\), \(\sigtilde=0\), and shallow fraction \(0\).
+\(0\), geometric \(\sigtilde=0\) under the d13 distance-to-\(C_W\) test, and
+shallow fraction \(0\).
 
 \subsection{Post-Design Corrections}
 
@@ -201,9 +208,8 @@ Every verified instance in the full record satisfies the linear pattern
 \end{remark}
 
 \begin{openproblem}[Linear-law proof target]
-\openbadge The proof target is now the linear law \(\delta\ge cH\) for exact
-signed affine retractions, equivalently the height-conditional exclusion of
-\(\sigtilde>\tau\) shallow webs, and still asks for a signed quantitative
-Baake--Sumner stability modulus at positive \(\delta\).
+\openbadge The report-chain open is excluding hidden top vertices with
+\(\sigtilde>\tau\) and \(H>B\tau\).  The stronger linear law
+\(\delta\ge cH\) is the empirical d13 target; it would imply HLC, but is not
+equivalent to this residual.
 \end{openproblem}
-The final numerical verdict is narrow: no exact counterexample was found, and the record supports the linear law, but HLC and the linear law are not proved.
