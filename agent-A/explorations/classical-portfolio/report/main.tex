@@ -1,0 +1,132 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1.1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\usepackage{enumitem}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!55!black,
+  citecolor=blue!55!black,
+  urlcolor=blue!55!black
+}
+
+% --------------------------------------------------------------------------
+% Status badges. Every result-like statement in the prose must carry one.
+% --------------------------------------------------------------------------
+\newcommand{\statusbadge}[2]{%
+  \begingroup
+  \setlength{\fboxsep}{1.5pt}%
+  \colorbox{#1!12}{\textcolor{#1!70!black}{\sffamily\scriptsize\bfseries #2}}%
+  \endgroup}
+
+\newcommand{\provedbadge}{\statusbadge{green}{PROVED}}
+\newcommand{\modauditbadge}{\statusbadge{orange}{PROVED-mod-audit}}
+\newcommand{\numbadge}{\statusbadge{blue}{NUMERICAL}}
+\newcommand{\conjbadge}{\statusbadge{violet}{CONJECTURAL}}
+\newcommand{\openbadge}{\statusbadge{red}{OPEN}}
+\newcommand{\refutedbadge}{\statusbadge{red}{REFUTED}}
+\newcommand{\downgradedbadge}{\statusbadge{gray}{RETRACTED/DOWNGRADED}}
+\newcommand{\ambigbadge}{\statusbadge{orange}{AMBIGUOUS}}
+
+% --------------------------------------------------------------------------
+% Theorem-like environments.
+% --------------------------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{numericalresult}[theorem]{Numerical Result}
+\newtheorem{openproblem}[theorem]{Open Problem}
+\newtheorem{refutedstatement}[theorem]{Refuted Statement}
+\newtheorem{downgradedstatement}[theorem]{Retracted/Downgraded Statement}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+
+% --------------------------------------------------------------------------
+% Canonical notation macros.
+% --------------------------------------------------------------------------
+\newcommand{\one}{\mathbf 1}
+\newcommand{\R}{\mathbb R}
+\newcommand{\DeltaN}{\Delta_n}
+\newcommand{\ellone}{\ell^1}
+\newcommand{\distone}{\operatorname{dist}_1}
+\newcommand{\diamone}{\operatorname{diam}_1}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\osc}{\operatorname{osc}}
+\newcommand{\negmass}{\operatorname{neg}}
+\newcommand{\Rg}{R_g}
+\newcommand{\sigoff}{\sigma_v^{\mathrm{off}}}
+\newcommand{\sigtilde}{\widetilde{\sigma}_v}
+\newcommand{\W}{\mathcal W}
+\newcommand{\Av}{A_v}
+\newcommand{\Mcoup}{M_{\mathrm{coup}}}
+\newcommand{\framemat}{\mathsf R}
+\newcommand{\tp}{t_*}
+
+% --------------------------------------------------------------------------
+% Section include stubs. Writer agents may create files under report/sections/.
+% Until then, this skeleton still compiles as a design stub.
+% --------------------------------------------------------------------------
+\newcommand{\stubnote}[1]{%
+  \par\medskip
+  \noindent\textbf{TODO.} Writer shard \texttt{#1} is planned in
+  \texttt{report/PLAN.md}. Transcribe only from
+  \texttt{report/STATUS-LEDGER.md} and \texttt{report/NOTATION.md}.%
+  \par\medskip}
+
+\newcommand{\plannedinclude}[2]{%
+  \IfFileExists{#1.tex}{%
+    \include{#1}%
+  }{%
+    \clearpage
+    \section{#2}
+    \stubnote{#1.tex}
+  }%
+}
+
+\title{Classical Portfolio: A Two-Day Campaign Toward Dimension-Free Stability}
+\author{Exploration report design}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent\textbf{TODO.} Abstract stub. State the classical stability target,
+the audited reductions, the finite-corner theorem, the numerical record, and
+the remaining open DMF/shallow-web obstruction without presenting any
+numerical or conditional statement as a theorem.
+\end{abstract}
+
+\tableofcontents
+
+\plannedinclude{sections/00-abstract-roadmap}{Abstract, Reader Contract, And Roadmap}
+\plannedinclude{sections/01-linear-markov-setting}{Linear And Markov Setting}
+\plannedinclude{sections/02-geometry-exposedness}{Exposed Vertices, Hidden Height, And Separators}
+\plannedinclude{sections/03-main-results-status}{Main Results And Status Table}
+\plannedinclude{sections/04-reduction-chain}{Reduction Chain To The Residual}
+\plannedinclude{sections/05-corner-theorem}{The Finite Corner And Exact Constants}
+\plannedinclude{sections/06-day1-belt}{The Audited Day-1 Belt}
+\plannedinclude{sections/07-wave-lemmas-dual-witness}{Wave-5--9 Lemmas Around The Dual Witness}
+\plannedinclude{sections/08-residual-dmf}{DMF, Shallow Webs, And The Remaining Open}
+\plannedinclude{sections/09-numerics-record}{Numerical Campaigns And Verification Gates}
+\plannedinclude{sections/10-refutations-dead-routes}{Refutations, Downgrades, And Dead Routes}
+\plannedinclude{sections/11-methodology}{Multi-Agent Methodology And Audit Catches}
+\plannedinclude{sections/99-glossary-notation}{Glossary, Notation, And Index}
+
+\end{document}

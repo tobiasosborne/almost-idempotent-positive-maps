@@ -1,0 +1,188 @@
+\section{The audited day-1 belt}
+
+The day-1 belt is a toolkit of local facts about an exact signed affine
+retraction \(P\), meaning \(P\one=\one\) and \(P^2=P\), whose rows are
+points \(p_i\) in the row polytope \(K=\conv\{p_i\}\).  The row negative
+mass is \(\nu_i=\sum_k(P_{ik})_-\), the global small parameter is
+\(\delta=\max_i\nu_i\), and \(\tau=\sqrt\delta\).  The exposed geometry
+uses \(\rho=4\tau\) and \(\kappa=\tau/4\).  A row vertex is
+well-exposed if an affine test function separates it from all
+\(\rho\)-far rows by margin at least \(\kappa\); \(\W\) is the set of
+well-exposed row vertices, \(C_W=\conv(\W)\), and
+\[
+        H=\max_i \distone(p_i,C_W)
+\]
+is the hidden height.  A hidden top vertex is a row vertex \(v\) attaining
+this maximum.  For such \(v\), the canonical separator \(\phi\) is the
+normalized \(\ell^\infty\)-dual affine functional with \(\phi=0\) on
+\(C_W\) and \(\phi(p_v)=H\), and the deficit vector is
+\(g_i=H-\phi(p_i)\), with oscillation \(\Omega_g=\max_i g_i-\min_i g_i\).
+The hidden localization claim (HLC) asks for a dimension-free constant
+\(a>0\) with \(\delta\ge aH^2\).
+
+The belt below is not the proof of hidden localization.  It records the
+audited local moves that survived the first day, together with the exact
+caveats that stop them from closing the problem.
+
+\subsection{First local facts}
+
+\begingroup
+\small
+\begin{longtable}{p{0.16\linewidth}p{0.20\linewidth}p{0.51\linewidth}}
+\toprule
+Fact & Status & What is banked for the report \\
+\midrule
+L1 lone-far-row & \provedbadge &
+If a row is at \(\ell^1\)-distance at least \(\rho\) from the hull of all
+other rows, it is exposed with margin at least
+\(\rho/(2+4\delta)\).  The constant uses the signed-row diameter bound
+\(D_K\le 2+4\delta\). \\
+L2 far/high row to vertex & \provedbadge &
+A height or farness witness may be chosen at a row vertex.  This is a
+convexity reduction, not an iteration scheme. \\
+L2' \(\rho\)-shadow & \modauditbadge &
+A hidden vertex has a \(\rho\)-shadow, meaning a point of the hull of
+the other rows within \(\rho\).  The attempted recursion to a new hidden
+vertex is not banked without an extra no-reuse input. \\
+C10 failed-exposedness dual & \provedbadge &
+If the exposedness LP for \(v\) has optimum \(t^*(v)<\kappa\), there is
+a dual witness \((\mu,\alpha,\beta,\gamma)\).  The identity is proved;
+controlling the total alpha mass \(A=\sum_i\alpha_i\) is still the old
+crux. \\
+L4 frame-clipping & \provedbadge &
+Signed coefficient mass clips distance to a convex frame: after
+separating positive and negative coefficients, a row lies within
+\((2+4\delta)\nu_i\) of the corresponding positive hull. \\
+L5' leakage at global maximizer & \modauditbadge &
+At a global height maximizer only, positive coefficient leakage from the
+top level to rows below \(H/2\) is \(O(\delta/H)\).  The corresponding
+statement for an arbitrary row is false. \\
+L6 identity-frame linear bound & \modauditbadge &
+In the identity realization \(\framemat=[I\mid 0]\), coordinate
+negative mass equals realized row negative mass, so \(\delta\ge H/2\).
+The transfer of this linear estimate to a general frame is open. \\
+N1 nilpotent-chain forcing & \provedbadge &
+An acyclic high chain cannot reproduce height using only lower rows:
+nilpotence forces substantial positive mass to off-chain high rows
+unless the negative mass is already large. \\
+F1 skinny near-coincidence & \provedbadge &
+For two mutually shadowing high rows under the stated hypotheses, the
+scalar exactness relations force the skinny degeneracy
+\(1-\mu_1\mu_2=O(\rho/H)\).  This explains why the projection-norm route
+alone does not close the residual. \\
+X1 one-mode wall & \provedbadge &
+In an exact one-mode shell \(p_i=q+t_i r\), biorthogonality forces
+diameter at least \(2\).  Thus a nonconstant high mode cannot stay
+inside a sub-\(\rho\) skinny cluster. \\
+X2 stochastic-complement rank preservation & \provedbadge &
+The exact stochastic complement \(A+B(I-D)^{-1}C\), when defined,
+remains row-stochastic and idempotent and preserves rank.  This is useful
+as an obstruction to naive rank induction, not as a closure. \\
+\bottomrule
+\end{longtable}
+\endgroup
+
+These facts explain why the first easy geometries fail.  Lone isolated
+vertices expose; exact one-mode shells hit a wall; and acyclic chains
+must feed height into other high rows.  What remains is not absence of
+local structure, but the possibility that the structure circulates inside
+a shallow hidden web.
+
+\subsection{The fable belt after audit}
+
+The fable pass introduced a second layer of local estimates.  In this
+table, a shadow is a near representation by other rows, a blocker is a
+\(\rho\)-far row that binds an exposedness separator, and an \(S\)-full
+row is one with almost all its mass on a selected site set \(S\).  The
+word self-indexed means that row labels also serve as coefficient
+coordinates.  For a selected row \(v\),
+\(\sigoff=\sum_{k\ne v}(P_{vk})_+\) is the formal positive mass away
+from its own row coordinate.  The
+wave-4 audit controls the constants used here; when the original fable
+has a stronger number, the audited number wins.
+
+\begingroup
+\small
+\begin{longtable}{p{0.14\linewidth}p{0.19\linewidth}p{0.54\linewidth}}
+\toprule
+Fact & Status & Audited content \\
+\midrule
+F-SS sharp shadow & \provedbadge &
+Rows with nontrivial self-defect, meaning \(P_{ii}<1\), have small
+shadows in the hull of the other rows, at scale
+\(O(\delta/(1-P_{ii}))\). \\
+F-ND near-delta exposure & \provedbadge &
+Rows whose formal off-own-site mass \(\sigoff\) is small enough are
+forced into exposed clusters.  The safe audited constant is conservative,
+about \(0.85\), rather than the sharper fable value. \\
+F-E kernel energy & \provedbadge &
+The classical kernel-energy object is
+\[
+        \Gamma=P(g^2)-g^2,
+\]
+where \(g^2\) is coordinatewise.  It satisfies \(P\Gamma=0\), and its
+starvation/localization bounds carry explicit \(\Omega_g\)-dependence. \\
+F-GB deficit budget & \provedbadge &
+If a row places positive coefficient mass at deficit level at least
+\(\ell\), then the product of that mass with \(\ell\) is bounded by
+\(g_j+\delta\Omega_g\).  The original constant-only version is not used
+without an independent oscillation bound. \\
+F-WR wiggle rigidity & \modauditbadge &
+Common-pattern self-indexed webs, meaning mutually shadowing hidden rows
+with matching coefficient patterns, obey a rigidity estimate; closed
+webs coincide up to the stated error.  The side conditions are part of
+the result: self-indexing, small \(\delta\), and, for the separation
+corollary, a web-radius bound. \\
+F-BC blocker cap & \provedbadge &
+An \(S\)-full blocker has at most \(\kappa+\delta\) external coefficient
+mass.  This is stronger than the fable constant after audit. \\
+F-2R private two-shell collapse & \modauditbadge &
+Exact private two-shell configurations collapse to coincident
+equal-input classes in the private-site case, where the two shells use
+disjoint private sites. \\
+\bottomrule
+\end{longtable}
+\endgroup
+
+The original F-\(\psi\) route is not part of the proved belt.
+\(\downgradedbadge\) The uniform \(\psi\)-gap/max-selection statement was
+not confirmed by the audit.  \(\refutedbadge\) The literal gap was later
+refuted: a \(\rho\)-far non-\(S\)-full row can trade \(S\)-deficit
+against the separator term.  \(\modauditbadge\) There is a conditioned
+canonical-\(\W\) replacement elsewhere, but it reroutes into the same
+residual rather than closing it.
+
+\subsection{What the belt leaves open}
+
+The belt narrows the obstruction but does not remove it.  The failed
+exposedness dual gives witnesses, the energy object localizes only where
+\(\Omega_g\) is controlled, and the leakage facts control high-to-low
+escape but not a high-to-high circulation of hidden rows.  In the day-1
+language \(\openbadge\) this was the middle-regime pinch; after the
+later synthesis it is cleaner to call it the shallow hidden-witness web.
+
+For later sections, \(\sigtilde\) is the geometric non-\(W\) positive
+carrier mass: positive coefficient mass on rows outside \(C_W\), with an
+\(\epsilon\)-halo treated as depth slack.  The post-design synthesis
+records \(\provedbadge\) the branch \(\sigtilde\le\tau\): the height cap
+\[
+        H\le 2(1+2\delta)\max(\sigtilde,\nu_v)
+\]
+gives \(H\le 3\tau\) when \(\delta\le 1/4\), hence \(\delta\ge H^2/9\)
+directly on that branch.  It also records \(\modauditbadge\) an
+audit-pending exact rational \(5\times 5\) all-shallow optimal face,
+meaning an optimal failed-exposedness witness face whose \(\mu\)-mass
+stays away from deep rows with deficit near \(H\).  This construction has
+\(\sigtilde>0\), but only at height \(H=O(\delta)\); it warns that
+shallow webs cannot be excluded absolutely.
+
+Thus the final open should be read height-conditionally:
+\(\openbadge\) HLC is equivalent to excluding hidden top vertices with
+\(\sigtilde>\tau\) at height \(H>B\tau\), i.e. to a signed quantitative
+Baake--Sumner stability statement: a stability version of the exact
+equal-input idempotent Markov normal form for signed shallow webs.
+\(\numbadge\) The empirical record has not verified a flat floor below
+\(\delta\approx 0.06\); every verified instance in the record satisfies
+the stronger linear pattern \(H\lesssim 2\delta\).  \(\openbadge\) The
+final small-\(\delta\) probe d13 remains [pending], so this section uses
+the belt only as audited structure, not as an asymptotic theorem.

@@ -1,0 +1,200 @@
+\section{Numerics Record}
+\label{sec:numerics-record}
+
+This section records what the numerical campaigns actually verified.  It is not
+a proof section.  The ambient object is the exact signed affine retraction
+\(P\), with \(P\one=\one\) and \(P^2=P\); the row negative mass is
+\(\nu_i=\sum_k(P_{ik})_-\), \(\delta=\max_i\nu_i\), and \(\tau=\sqrt{\delta}\).
+The exposedness scales are \(\rho=4\tau\) and \(\kappa=\tau/4\).  The set \(\W\)
+consists of rows passing the \((\rho,\kappa)\)-exposedness test, \(C_W=\conv(\W)\),
+and the hidden height is \(H=\max_i\distone(p_i,C_W)\).
+
+The final branch variable is geometric.  Throughout this section
+\(\sigtilde\) means positive coefficient mass from the hidden top row onto
+rows outside \(C_W\), with an \(\varepsilon\)-halo convention when a numerical
+distance test is used: rows inside the halo are automatically
+\((H-\varepsilon)\)-deep for the canonical deficit \(g_i=H-\phi(p_i)\).  The
+formal off-own-site mass \(\sigoff\) is a different quantity.
+
+\begin{warning}
+\numbadge No entry in this section is a theorem.  Tables below summarize
+verified computations, gates, and later scope corrections; finite-corner
+constants are not asymptotic claims.
+\end{warning}
+
+\subsection{Verification Gates}
+
+A reported row set \(\W\) was accepted only after a robust vertex and
+exposedness gate: multiplicities were handled as geometric coincidences,
+vertices were tested with the corrected vertex routine, and the exposedness LPs
+were solved with presolve off.  The value of \(\tau\) was always recomputed from
+the verified \(\delta\), not from a design parameter.  Exact constructions were
+checked through the affine-retraction identities \(P\one=\one\) and
+\(P^2=P\), often via a factorization \(P=\Lambda\framemat\) with
+\(\framemat\Lambda=I\).  Dual-certificate runs additionally required optimal
+LP status and small primal/dual residuals.
+
+\begin{numericalresult}[Campaign inventory]
+\numbadge The ledger records more than \(67{,}000\) exact verified instances
+across independent campaigns, with no exact counterexample found.  This is
+evidence only: it supports the current residual formulation but does not prove
+HLC or the classical stability problem.
+\end{numericalresult}
+
+\subsection{Campaign Ledger}
+
+\begin{warning}
+\numbadge The following table is a numerical inventory, not a theorem list.
+The status column follows the report ledger, with post-design corrections
+applied where the ledger predates the swarm.
+\end{warning}
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.13\textwidth}p{0.26\textwidth}p{0.42\textwidth}p{0.10\textwidth}@{}}
+\toprule
+Campaign & Verification gate & Numerical outcome & Status \\
+\midrule
+d8 MRP decider &
+\texttt{d8\_mrp3.verify}; corrected \(\W\); exposedness LP presolve off;
+honest \(\tau\); exact idempotence &
+No MRP refutation.  Global verified minimum
+\(\delta/H^2\approx3.484\) at \(H/\tau\approx0.536\).  The middle regime was
+numerically the safest part of the tested family. &
+\numbadge \\
+d8 historical \(\widetilde\sigma\) wall &
+Same d8 gate over the source sweep parameter and \(k\)-group variants &
+Tested family followed \(H/\tau\approx\min(\widetilde\sigma,0.536)\) and
+floor \(\max(1/\widetilde\sigma^2,3.49)\); \(k\)-groups did not move the floor
+to four digits. &
+\numbadge \\
+d9 dual certificates &
+Gurobi dual simplex, presolve off, all edge LPs optimal; honest
+\(\tau\), robust distances &
+Budget and wall cells used the same level functional.  Binding blockers were
+financing and frame-group rows; final min-neg dual mass sat on pin/neg/epi
+families, not frame freedom. &
+\numbadge \\
+d10 certificate mining &
+Verified d8 instances; separator and exposedness LPs with presolve off &
+Far top-band mass was robustly present:
+\(M_{\mathrm{far}}\in[2.045,2.141]\), so the literal claim
+\(T_{\mathrm{far}}=\emptyset\) is false.  The measured financier law
+\(\delta_{\min}=g_f/2\) with \(g_f=H\) was later reinterpreted by d11. &
+\numbadge, \downgradedbadge \\
+d11 scale sweep &
+Seven verified scales over \(2.06\) decades; aggregate coupling minimized over
+family realization freedom &
+The d8 family lies rigidly on \(g_f=H=2\delta\).  It is a budget-line carrier,
+not a small-\(\delta\) flat-floor carrier.  The aggregate coupling check gave
+\(\min M/\tau\ge1.075\) in the probed wall instance. &
+\numbadge \\
+d12 depth profiles &
+Twelve off-edge stacking instances; HiGHS presolve off; residuals
+\(\le3\cdot10^{-16}\); robust \(\W\) &
+All exposedness witnesses found were deep with observed \(m_*=1\), and no
+all-shallow witness was found.  Scope is corner/budget only; d12 measured an
+index-based proxy for \(\sigtilde\), not the final geometric test. &
+\numbadge, \downgradedbadge \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Reproducibility Pointers}
+
+\begin{warning}
+\numbadge The next table lists source-note artifact names.  The notes say these
+were campaign artifacts, not necessarily committed report inputs.
+\end{warning}
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.16\textwidth}p{0.72\textwidth}@{}}
+\toprule
+Campaign & Scripts and outputs named in the notes \\
+\midrule
+d8 &
+\texttt{experiments/d8\_mrp3.py},
+\texttt{experiments/d8\_opt.py},
+\texttt{experiments/d8\_decision.py} to
+\texttt{experiments/out/d8\_decision.json},
+\texttt{experiments/d8\_controls.py} to
+\texttt{experiments/out/d8\_controls.json},
+and the superseded raw sweep
+\texttt{experiments/d8\_sweep.py} to
+\texttt{experiments/out/d8\_sweep.json}. \\
+d9 &
+Persisted edge-cell dual records in \texttt{notes/d9-dual-certificates.md};
+all exposedness LPs were recorded as optimal with presolve off. \\
+d10 &
+\texttt{notes/d10-certificate-mining.md} records the far-top-band feed and
+financier-height perturbation curves, including the
+\(\delta_{\min}=g_f/2\) fits. \\
+d11 &
+\texttt{notes/d11-scale-disambiguation.md} records the seven-scale
+financier-law sweep and the aggregate-coupling minimization. \\
+d12 &
+\texttt{notes/d12-dmf-depth-profiles.md} records the passing table.  It also
+states that no \texttt{d12\_DMF\_witness\_candidate.json} was written because
+no all-shallow witness was found. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Post-Design Corrections}
+
+\begin{remark}[Geometric carrier convention]
+\modauditbadge The d12 line ``\(\sigtilde=0\)'' is retained only with its
+scope correction.  Its code checked positive mass on indices not in \(\W\).
+The final convention is geometric distance to \(C_W\); a future nonzero
+\(\sigtilde\) claim must use a \(\distone(\cdot,C_W)\) test, with halo rows
+counted as deep slack rather than as shallow carriers.
+\end{remark}
+
+\begin{remark}[Small-\(\sigtilde\) branch]
+\provedbadge The post-design swarm proved the branch
+\(\sigtilde\le\tau\): for a hidden top vertex,
+\[
+  H\le 2(1+2\delta)\max(\sigtilde,\nu_v).
+\]
+Thus, when \(\delta\le1/4\), \(\sigtilde\le\tau\) gives \(H\le3\tau\) and
+directly \(\delta\ge H^2/9\).  In DMF language this branch has existential
+deep mass \(m_*=1\) with depth width constant \(C_D=3\).
+\end{remark}
+
+\begin{remark}[All-shallow faces]
+\modauditbadge An exact rational \(5\times5\) construction after d12 has
+\(\sigtilde>0\) and an all-shallow optimal exposedness face.  It lives at
+\(H=O(\delta)\), with \(H/\tau\to0\), so it does not refute DMF with
+\(O(\delta/\tau)\) depth slack.  It makes the web exclusion height-conditional:
+shallow optimal faces exist, but height comparable to \(\tau\) remains open.
+\end{remark}
+
+\begin{remark}[Pushed-witness death certificate]
+\provedbadge LP support cleanup cannot close the remaining branch.  Pushing a
+shallow optimal witness through \(P\) changes the dual cost to
+\((B+N)/M_F\), where \(N\) is negative leakage and \(M_F\le1+N\).  Optimality
+would require \(M_F\ge1+N/B\), impossible for \(N>0\) when \(B<\kappa<1\).
+The surviving problem is therefore not another exposedness-dual algebra trick.
+\end{remark}
+
+\begin{remark}[Empirical reframing]
+\numbadge The post-swarm audit found that the ``flat floor'' was never
+verified below roughly \(\delta=0.06\).  Every verified instance in the record,
+including the d12 family and partial d13 output cited in the notes, satisfies
+the linear pattern \(H\lesssim2\delta\).  The final small-\(\delta\) d13
+outcome remains \openbadge pending.
+\end{remark}
+
+\begin{openproblem}[Numerical residual after the campaigns]
+\openbadge The numerical record leaves a single sharp target: exclude hidden
+top vertices with geometric \(\sigtilde>\tau\) and height larger than a
+universal multiple of \(\tau\).  Equivalently, the remaining analytic input is
+a signed quantitative Baake--Sumner stability statement for shallow hidden
+webs; the \(\delta=0\) anchor is banked, but the positive-\(\delta\)
+stability modulus is open.
+\end{openproblem}
+The final numerical verdict is narrow.  Verified campaigns found no exact
+counterexample and repeatedly collapsed to \(H\lesssim2\delta\), but they did not
+prove HLC.  The unresolved high-height geometric-\(\sigtilde\) web is where
+a future counterexample, or the final proof, can live.
