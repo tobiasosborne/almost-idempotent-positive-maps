@@ -556,3 +556,111 @@ Consequences (each verified by direct computation):
 4. The HLC chain simplifies regardless: for the height-max vertex, EITHER σ̃ ≤ s (then
    δ ≥ (1−s)H/R — LINEAR, better than needed) OR σ̃ > s (the web case = the only
    remaining battlefield, now by PROOF not heuristic).
+
+---
+
+# sw10/sw11/sw12 — the analytic triangulators: THE FLAT FLOOR WAS NEVER REAL
+
+## sw12 (d3/d7 forensics) — the record audited, with receipts
+- **No saved d3/d7 entry verifies the flat floor below δ ≈ 0.06.** d3_clean_scaling.npy:
+  max H/τ = 0.5356 at δ = 0.0829 (corner); floor-like rows (H/τ ≥ 0.5) bottom out at
+  δ = 0.0625; the best δ < 0.01 entry has H/τ = 0.197 ≈ budget-line. d7_hunt entries are
+  ring-shell deep-collapse (δ/H² ≥ 303) — not floor instances. d12's smallest passing row:
+  H = 2δ, δ/H² = 35.7.
+- **[σ̃-zero floor exclusion, proved]:** σ̃ = 0 ⇒ H ≤ δR (height collapse) ⇒ a flat floor
+  H ≈ 0.536√δ requires δ ≳ 0.0718 = the corner. It CANNOT persist to small δ with the
+  measured (σ̃ = 0) mechanism.
+- Hand-derived the corner separator (φ = −2x₀ negative-anchor form, g = 2δ + 2x₀): the
+  RW witness is deep with m* = 1 — predicts d13 outcome (c) + deep witnesses on whatever
+  collapsed instances it profiles. P(forensic prediction survives) = 0.84.
+
+## sw11 (linear law) — DIED-AT the web exclusion, but with the record correction
+Cross-checked d13's IN-PROGRESS output (d13_smalldelta.json): verified small-δ search
+collapses to **H/τ = 0.2000, 0.1095, 0.0632, 0.0346 at δ targets 1e-2 … 3e-4 — exactly
+H ≈ 2δ**, not c√δ; the "all-shallow" artifacts in d13_logs have δ = 10.5, 6.9 (INVALID,
+not small-δ evidence). Died at: the web-exclusion inequality M_C ≥ c₀ (= excluding σ̃→1
+webs) — same nucleus. P(existential DMF) = 0.62.
+
+## sw10 (web anatomy) — the surviving blueprint, sharply drawn
+New proved bits: sigma-web balance; corrected carrier shadow (it is BARYCENTRIC only —
+"σ̃ ≈ 1 web" does NOT mean visible clustering; the real failure mode is a facial-angle
+failure: top-band non-W rows averaging back near v while avoiding W); shallow recursion
+(shallow carriers finance from shallow non-W rows: the web is self-similar); multiplicity
+convention (duplicates cannot fake non-vertexhood); F-ND forces every web node to have
+nontrivial off-own-site spread; the cycle caps (direct ≤ 1/2, disjoint-balls, non-skinny
+pays) force any closed shallow class to be SKINNY (μν = 1 − o(1)) and spread. **Missing
+lemma named: a uniform facial/exposedness modulus for hidden top-band webs.**
+
+# ORCHESTRATOR SYNTHESIS #2 (post sw10/11/12): THE LINEAR LAW IS THE TRUE TARGET
+The ENTIRE verified record — every scale, every family, 67k+ instances + d12 + d13-partial
+— satisfies **H ≤ ~2δ** (the budget line). The "wall H/τ = 0.536" and "floor δ/H² = 3.48"
+are the linear law re-expressed AT the corner (2δ = 0.536τ ⟺ δ = δ*). The √δ-scaling
+was never observed at small δ; it was conjectured from corner data. Consequences:
+1. **The true conjecture is the LINEAR LAW (= X3's hull-distance half, day-1!):** every
+   exact signed affine retraction has every row within Cδ of conv W (numerics: C ≈ 2).
+   LINEAR ⇒ existential DMF (vacuous depth) ⇒ HLC with room to spare.
+2. The σ_v-wall/HLC's √δ-form was always SAFE but the campaign was trying to prove a
+   statement weaker than the truth while calibrating against corner-only data.
+3. The single open is UNCHANGED in identity but upgraded in prize: exclude σ̃ → 1 shallow
+   webs (uniform facial modulus / quantitative B–S stability). If excluded ⇒ LINEAR law
+   ⇒ everything. If a web exists ⇒ it is the first H ≫ δ instance ever seen and the real
+   geometry of the problem.
+4. d13's final verdict (outcome (c) expected) is the remaining empirical confirmation.
+
+---
+
+# THE 9-AGENT DMF SWARM (s1–s9) — full verdicts in notes/swarm-answers/ (all 32 campaign
+# answers archived there)
+
+| agent | verdict | death point / key yield |
+|---|---|---|
+| s1 LP-face | DIED-AT | basicness gives only support ≤ d+1 — no depth control |
+| s2 σ̃-bound | DIED-AT | σ̃ = O(δ/τ) NOT provable — "exact identities give the opposite pressure" (consistent with s5!) |
+| s3 block-stability | DIED-AT | the leakage estimate ‖B²−B‖ = O(δ/κR) for the top-band block is not derivable from the belt |
+| s4 closed-class | DIED-AT | μ-to-P closure / α-slack inequality |
+| s5 REFUTER | **PARTIAL — exact all-shallow face CONSTRUCTED** | see below |
+| s6 compactness | DIED-AT | the scale-collapse inequality (W jumps in limits) |
+| s7 trace/spectral | DIED-AT | boundary-product bound |
+| s8 control | **PARTIAL — σ̃ ≤ τ branch PROVED** | see below |
+| s9 meta-auditor | PARTIAL | framing corrections + the gap list — see below |
+
+## s5 — ALL-SHALLOW OPTIMAL FACES EXIST (exact 5×5 rational certificate)
+P = ΛR (RΛ = I, P² = P exact), δ = 1841/1600000, W = {0,1,2}, hidden vertices 3,4 with
+σ̃ = 1/2000 > 0; for v = 3: H = 1/1000, the far shallow row 4 (g₄ = 0) carries the ENTIRE
+optimal witness (μ = δ₄ forced by complementary slackness; exact primal/dual certificates,
+t* = 1/200 < κ). **BUT the family lives on H = O(δ) (H/τ ≈ 0.03), and its scaling keeps
+H/τ → 0** — so DMF-with-E-slack survives vacuously. THE LESSON: all-shallow faces are real
+once σ̃ > 0; existence is NOT the obstruction — HEIGHT is. Any final statement must exclude
+shallow webs only at height ~τ, not absolutely. [exact-rational, P(survives audit) = 0.88]
+
+## s8 — the σ̃ ≤ τ branch of DMF is PROVED (explicit constants)
+[σ̃ height cap] H ≤ 2(1+2δ)·max(σ̃_v, neg(p_v)) (barycenter split; cleaner than w9deep's
+collapse). ⇒ σ̃ ≤ τ, δ ≤ 1/4 ⇒ H ≤ 3τ ⇒ (with C_D = 3) the DMF threshold is ≤ 0 and EVERY
+witness is deep: **existential DMF holds on the σ̃ ≤ τ branch with m* = 1, C_D = 3.**
+NOTE (orchestrator): this branch gives HLC DIRECTLY (H ≤ 3τ ⇒ δ ≥ H²/9) with no witness
+machinery at all. [pushed-witness death certificate] LP support-cleanup can NEVER finish
+the other branch: pushing shallow witness rows through P costs (B+N)/M_F with M_F ≤ 1+N,
+so optimality needs M_F ≥ 1 + N/B — impossible for any negative leakage N > 0 (B < κ < 1).
+"The remaining problem is genuinely quantitative B–S stability for a SIGNED shallow web,
+not another exposedness-dual algebra trick."
+
+## s9 — meta-audit: framing corrections (adopt these conventions)
+- **Canonical σ̃ = geometric + halo:** σ̃_x(ε) = positive mass on rows with dist₁ to
+  C_W > ε; halo rows are automatically (H−ε)-deep (φ ≤ ε) — halo ambiguity becomes depth
+  slack. d12 measured INDEX-not-in-W, not the geometric test (still strong for those
+  instances; convention change required going forward).
+- Existential sufficiency independently re-derived (matches w9chain; a = (C_D + 1/(2m*))⁻²).
+- **The feasible-vs-optimal gap:** the exchange bounds a FEASIBLE witness by its own B·R,
+  not t*R — RW-deep helps only if B_RW < κ is also proved. (w9deep's height-collapse branch
+  is unaffected — it never used RW.) Gap list recorded for the next wave.
+
+# GRAND STATE after the swarm (the campaign's sharpest-ever form)
+**HLC ⟺ excluding hidden top vertices with σ̃ > τ at height H > Bτ** (the σ̃ ≤ τ branch is
+proved + gives HLC directly; the s5 construction shows low-height σ̃ > 0 webs exist, so the
+exclusion is genuinely height-conditional). Everything else — the chain, both edge cases,
+the corner, the σ̃ ≤ τ branch — is proved (much of it 2-family). The single open is now a
+SIGNED quantitative Baake–Sumner stability statement, with: the δ = 0 anchor byte-pinned,
+the pushed-witness lemma certifying that LP methods cannot close it, s3's died-at marking
+the leakage estimate as the missing technical step, and the s5 family as the sharpening
+test case. Empirically: ZERO verified instances at H ≫ δ exist (the linear law H ≤ ~2δ
+fits the entire record); d13 final verdict pending.
