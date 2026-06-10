@@ -157,15 +157,27 @@ def build_mrp_targets(sigma_v=0.1, tau=0.1, k_groups=2, ell_supplier=None,
     # S-mass ~ 1 but wiggle by ~rho in the OTHER coordinates (so they are rho-far yet
     # carry the pattern, defeating the S-indicator exposer).  By F-BC their external mass
     # is small.  We place blocker b_j ~ pillar + a rho-wiggle in a low axis.
+    # CORRECT blocker geometry: b sits at the SAME height as v (same pillar excursion, same
+    # S=pillar pattern, S-mass ~ 1) but is rho-separated from v by a ZERO-SUM wiggle in the
+    # low/group axes.  This makes v one of a rho-cluster of equal-height rows so no affine
+    # functional in [0,1] vanishing at v lifts every rho-far row above kappa => v fails
+    # exposedness, WITHOUT lowering the blockers below v (the prior bug).  Blockers are
+    # arranged to SURROUND v: their wiggles point in different low-axis directions.
     blockers = []
     for j in range(nb):
-        b = vec()
-        b[ax_pillar] = 1.0 - (rho / 2.0)
-        # wiggle of size rho/2 into a low axis (zero-sum: take from pillar)
-        if low_ax:
-            b[low_ax[j % nlow]] = rho / 2.0
+        b = vrow.copy()                       # start from v's exact vector (same height)
+        # zero-sum rho-wiggle in two low axes (or base axes if no low axes)
+        if low_ax and nlow >= 2:
+            wa = low_ax[j % nlow]
+            wb = low_ax[(j + 1) % nlow]
+            b[wa] += rho / 2.0
+            b[wb] -= rho / 2.0
+        elif low_ax:
+            b[low_ax[0]] += rho / 2.0
+            b[ax_pillar] -= rho / 2.0
         else:
-            b[base[(j + 1) % ma]] = rho / 2.0
+            b[base[(j + 1) % ma]] += rho / 2.0
+            b[base[(j + 2) % ma]] -= rho / 2.0
         blockers.append(len(rows)); rows.append(b)
     idx["blockers"] = blockers
 
