@@ -1,0 +1,18 @@
+{
+  "note": "max dist/tau by tau-band, small-displacement ensemble (seed 99, 4000 trials), robust W",
+  "C4_c0.25": {
+    "tau<0.1": 0.199,
+    "tau<0.2": 0.399,
+    "tau<0.4": 0.549
+  },
+  "C2_c0.5": {
+    "tau<0.1": 0.199,
+    "tau<0.2": 0.4,
+    "tau<0.4": 0.8
+  },
+  "full_ensemble_C2_c0.5_blowup": {
+    "max_dist_over_tau": 5.06,
+    "audited_witness_tau": 1.378,
+    "verdict": "large-tau artifact, scaling vacuous"
+  }
+}

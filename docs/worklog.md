@@ -435,3 +435,17 @@ prose-proved result on the critical path to Layer-1 (`op-jordan-structure`/`op-l
   broken workspace **scrapped** (kit kept), **rebuild next session**. af bug filed (`aipm-rdx`, candidate upstream PR).
 - **Stale-HANDOFF facts corrected:** beads is fully functional here (embedded-dolt + git-backed `origin` remote);
   there IS an active pre-commit hook running `check-all`. HANDOFF rewritten accordingly.
+
+## 2026-06-10 — Agent A: classical-portfolio sidequest, day 1 (branch agent-a/classical-portfolio)
+Portfolio attack on op-classical opened (epic aipm-and; ORCHESTRATION.md). Serial multi-model
+delegation (opus 4.8 / codex gpt-5.5 xhigh, 2-family verification per load-bearing claim). Arc:
+transport-duality route proved vacuous (2-family); codex feedback-accounting repair REFUTED by opus
+(muUV = rA upper bound), confirmed by codex; counterexample hunt (7000+ exact idempotents, exact-by-
+construction P=ΛR, RΛ=I) found NO plateau and three structural obstructions; lone-far-row lemma
+PROVED (kappa >= rho/(2+4delta)); op-exposed-hull reduced to ONE inequality (HCC: hidden cluster at
+height H forces max neg >= a*H^2) — the same alpha-mass wall as agent-B's C12, rediscovered
+independently by both families. D3 envelope mining: p = 2 EXACTLY, a ≈ 2.4–3.5, sqrt(delta) rate
+survives, recursion-no-base-case proof skeleton identified. Two numerics failure modes found+pinned
+red→green (LP presolve on near-duplicate rows; coincident-vertex misclassification). All in
+agent-A/explorations/classical-portfolio/ (notes/d0..d3*, experiments/). Infra learnings (codex
+idle-websocket wedge, resume protocol, progress-message protocol) in LLM-LEARNINGS.md.

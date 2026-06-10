@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "created": "2026-06-10 13:08:54"
+  },
+  "scaling": [
+    {
+      "tau": 0.4,
+      "max_dist": Infinity,
+      "ratio": Infinity,
+      "neg_over_dist2": 0.0,
+      "witness": [
+        4,
+        3,
+        19.68192823318455
+      ]
+    },
+    {
+      "tau": 0.3,
+      "max_dist": Infinity,
+      "ratio": Infinity,
+      "neg_over_dist2": 0.0,
+      "witness": [
+        5,
+        2,
+        56.865851499218756
+      ]
+    },
+    {
+      "tau": 0.2,
+      "max_dist": Infinity,
+      "ratio": Infinity,
+      "neg_over_dist2": 0.0,
+      "witness": [
+        4,
+        3,
+        19.45018404747416
+      ]
+    },
+    {
+      "tau": 0.15,
+      "max_dist": Infinity,
+      "ratio": Infinity,
+      "neg_over_dist2": 0.0,
+      "witness": [
+        4,
+        1,
+        18.794097279662083
+      ]
+    },
+    {
+      "tau": 0.1,
+      "max_dist": Infinity,
+      "ratio": Infinity,
+      "neg_over_dist2": 0.0,
+      "witness": [
+        4,
+        5,
+        41.904828434086134
+      ]
+    },
+    {
+      "tau": 0.07,
+      "max_dist": Infinity,
+      "ratio": Infinity,
+      "neg_over_dist2": 0.0,
+      "witness": [
+        5,
+        3,
+        20.072982813332587
+      ]
+    },
+    {
+      "tau": 0.05,
+      "max_dist": Infinity,
+      "ratio": Infinity,
+      "neg_over_dist2": 0.0,
+      "witness": [
+        3,
+        5,
+        8.928928180049379
+      ]
+    },
+    {
+      "tau": 0.03,
+      "max_dist": Infinity,
+      "ratio": Infinity,
+      "neg_over_dist2": 0.0,
+      "witness": [
+        3,
+        5,
+        16.450178413445347
+      ]
+    },
+    {
+      "tau": 0.02,
+      "max_dist": Infinity,
+      "ratio": Infinity,
+      "neg_over_dist2": 0.0,
+      "witness": [
+        3,
+        5,
+        20.04497329272663
+      ]
+    },
+    {
+      "tau": 0.01,
+      "max_dist": Infinity,
+      "ratio": Infinity,
+      "neg_over_dist2": 0.0,
+      "witness": [
+        5,
+        3,
+        16.171624629329084
+      ]
+    }
+  ],
+  "fit": {
+    "dist_vs_tau_slope": NaN,
+    "intercept": NaN,
+    "env_exponent_p": NaN,
+    "n": 10
+  }
+}
