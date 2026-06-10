@@ -228,3 +228,77 @@ leverage for Branch B: v's separating data lives almost entirely in the other ro
 deliverable of this wave is the compression 2 branches + 1 sub-residual → 1 named inequality
 + 1 refutation + ~6 new auditable belt facts + the analytic origin of both measured constants
 (0.5 from B2's margin arithmetic; linear σ_v-law from d9 duals).
+
+---
+
+# WAVE 6 (post-synthesis, 4 codex on the sharpened residual)
+
+| worker | verdict | key output | P(target true) |
+|---|---|---|---|
+| w6fin (financing route) | DIED-AT (same wall) | financing-row no-gain lemma: exactness at f alone is H- and σ_v-free | 0.65 (H²-form) / 0.35 (literal T_far=∅) |
+| w6shadow (sharp shadow) | DIED-AT (sharper) | positive-carrier sharp shadow [proved]; residual = carrier-blocker COUPLING | 0.80 (Branch B) |
+| w6psifix (conditioned F-ψ) | **PROVED (conditioned)** | the corrected F-ψ input, short clean proof, excludes both wave-5 cex, fits consumer | 0.99 (variant) |
+| w6refute (refuter) | NOT-REFUTED | 6-template failure map; **reciprocal-carrier mechanism named**; floor 3.484 re-found independently | **0.83** (raised) |
+
+## w6psifix — PROVED: the canonical-W conditioned ψ-gap (F-ψ replacement)
+
+Statement (self-contained in /tmp/codex-sigma-wall/w6psifix/answer.md, to be banked): with φ
+the CANONICAL top separator (sup_{conv W} φ = 0, φ(p_v) = H, dual-norm ≤ 1), ψ = x(S) + φ/2,
+v″ the ψ-max row vertex with s_{v″} ≥ 1−κ, and the high-danger band
+𝒵_hi = {i : ρ-far from v″, g_i ≤ g_{v″} + 2κZ}: IF every row of 𝒵_hi is S-full, THEN every
+ρ-far non-S-full q has ψ-gap ≥ κZ. Plus the height bound g_{v″} ≤ 2σ_v + 2δ (clean 4-line
+proofs). Explicit exclusion checks on BOTH wave-5 counterexamples (each had a non-canonical φ:
+sup_C φ = 0 violated). Consumer fit verified against fable-hlc-attack.md:479 with O(δ) = 2δ.
+HONEST: the 𝒵_hi/S-full condition is itself ~top-band localization — this lemma RE-ROUTES
+F-ψ through the single residual rather than adding a second one. [codex, P=0.99/0.82 —
+needs Claude-family audit before banking]
+
+## w6fin — financing route dies at the SAME wall; useful no-gain lemma
+
+Exactness applied to the financier f's own row gives only Σ_k P⁺_fk g_k ≤ g_f + δR — an
+inequality containing NEITHER H nor σ_v ⇒ cannot by itself give A_v ≥ cH²/σ_v² or T_far = ∅.
+[financing-row no-gain lemma, proved]. Also: positive-support shadow (recovers B3's shadow
+via the row identity). NOTE the calibration split: P(H²-qualified form) = 0.65 vs P(literal
+T_far = ∅) = 0.35 — the literal form may be FALSE while the qualified form holds; the closer
+should target the qualified form. Concrete closer suggestion: JOINT LP certificate search
+(variables P, g, φ, C10 witness; objective max far top-band α-mass s.t. P² = P) → extract the
+rational dual = the missing inequality. [→ d10 decider]
+
+## w6shadow — carrier-blocker coupling is the sharpened residual
+
+NEW proved (strengthens B3): **positive-carrier sharp shadow** — v's positive off-site
+carrier measure q_v = (1/σ)Σ_A P_vj p_j satisfies ‖q_v − p_v‖₁ ≤ (2+4δ)ν/σ ≤ 2(2+4δ)δ AND
+mean deficit (1/σ)Σ_A P_vj g_j ≤ δR/σ ≤ 2δR; carrier mass in {g ≥ κR} ≤ 8τ. Carrier
+dichotomy: either a positive fraction of carriers are ρ-far top-band rows, or v has an
+O(δ+τ) shadow inside its ρ-ball (the exemption case, needs a cluster-exposure lemma).
+Death point — the COUPLING inequality: nothing forces the C10 dual blocker (a far top-band
+row) to RECEIVE mass from v's carrier system. Suggestion: apply P² = P to the BLOCKER row,
+not to v. [consistent with w6fin's death + w6refute's mechanism]
+
+## w6refute — NOT-REFUTED after 6 adversarial templates; THE mechanism named
+
+Templates → kills: belt-insufficiency scaling realizations collapse to the wall (financier
+height pinned at g = H); optimized financed-wiggle grid best 3.571, refined known cell 3.484
+(re-found INDEPENDENTLY, scipy reimplementation — cross-validates d8/d9 without gurobi);
+multi-group financing duplicates the blocker, doesn't lower the wall; canonical frame killed
+HARDER (dist ≤ 2·neg, linear); staircase dies by X1; 1220 random exact projections best 176.
+**Sharpest insight (the analytic seed for the closer):** "The belt lets the financier be a
+free low-g far row. Exactness does not. RΛ = I turns the financier into a biorthogonal
+carrier, and its canonical height is forced up to the wall. Every attempt to make that row
+hidden recursively creates the same reciprocal-carrier obstruction." P(localization true)
+raised to 0.83.
+
+# POST-WAVE-6 STATE
+
+The single residual, now in its sharpest form (three independent formulations that coincide):
+> **Carrier-blocker coupling / reciprocal-carrier lemma.** Apply exactness to the BLOCKER
+> (financier) row: since P = ΛR with RΛ = I (any rank factorization of an exact idempotent),
+> the financier is a biorthogonal carrier of v's representation; prove its canonical height
+> g_f is forced ≥ ~κR (equivalently: a C10 far top-band blocker must receive carrier mass).
+The proof must use the BIORTHOGONALITY (column/dual-frame structure), not row budgets alone
+(w6fin's no-gain lemma shows row-side exactness at f is insufficient).
+
+Status of the chain: σ_v-wall ⟸ top-band localization (H²-qualified form, P ≈ 0.65–0.83)
+⟸ carrier-blocker coupling. F-ψ correctly re-routed (w6psifix, conditioned, PROVED mod
+audit). Next: d10 joint-LP dual mining (w6fin's recipe) + provers on the reciprocal-carrier
+lemma; then the fable closer decision.
