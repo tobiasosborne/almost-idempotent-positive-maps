@@ -337,3 +337,39 @@ M := Σ_b μ_b Σ_{j∈A_v} λ_j P⁺_jb (equivalently sweep a floor θ₀ on th
 lemma is FALSE as stated (counterexample direction); M ≥ cτ ⇒ extract the rational dual =
 the missing proof certificate.** d10 (running) covers the neighbourhood of this; a d11
 with the M-objective directly is queued if d10 doesn't settle it.
+
+---
+
+# d10 — certificate mining (COMPLETE, clean) + AN ORCHESTRATOR CATCH
+
+Report: notes/d10-certificate-mining.md; data: out/d10_certmine.json (16 PROBE-1 + 3 PROBE-2
+cells, all verified, gurobi OPTIMAL throughout, zero anomalies).
+
+**PROBE 1 [NUMERICAL]:** far top-band positive feed M_far stays BOUNDED (≈ 2.0–2.14,
+σ_v-independent, ≈ 2 + 0.27·H/τ) as H → wall; 1-step and 2-step feeds EQUAL to machine
+precision. ⇒ literal T_far = ∅ is FALSE (the far top band is robustly occupied at bounded
+mass); the H²-qualified form is the right target — confirms w6fin's 0.65/0.35 split.
+
+**PROBE 2 [NUMERICAL, the headline]:** at every probed collapse edge the binding financier
+is the SAME row; the forced-height cost curve is EXACTLY linear with universal slope:
+**δ_min = ½·g_f, intercept 0, R² = 1.000, σ_v-independent**; and at the natural edge
+g_f = H to all digits. Conjectured shape: "forcing the biorthogonal financier to height t
+costs negativity t/2"; the δ/H² → 3.49 wall is a SEPARATE exposedness saturation
+(margin/κ → 1.000 at H/τ = 0.53). Supports the two-branch split: linear financier law
+(Branch A side) + exposedness wall (Branch B side).
+
+**⚠ ORCHESTRATOR CATCH — scale degeneracy in "g_f = H" [must resolve before the closer]:**
+PROBE 2 ran only at the default family scale, where the collapse edge sits at δ ≈ 0.0718 —
+and there H = 2δ EXACTLY (the d8 floor identity δ/H² = 1/(4d)). So the measurements
+"g_f = H" and "g_f = 2δ" are INDISTINGUISHABLE at the probed scale. The two readings have
+wildly different consequences:
+- If g_f ≈ H persists across δ scales: δ ≥ H/2 for hidden tops — but this CONTRADICTS the
+  established d3/d7/d8 record (flat floor δ/H² ≈ 3.49 as δ → 0 means instances exist with
+  H ≈ 0.536√δ ≫ 2δ at small δ). So this reading is almost certainly WRONG at small δ.
+- If g_f ≈ 2δ (financier sits at height ~2δ, deep inside the top band at small δ): the law
+  δ_min = g_f/2 is the TAUTOLOGY-like budget identity "financier height = 2·negativity",
+  consistent with the H² envelope, and the real question becomes why the EDGE forces
+  g_f up to ~H (i.e., why hiding pushes the financier to the band edge ONLY near the wall).
+⇒ d11 MUST sweep PROBE 2 across δ scales (≥ 2 decades) tracking g_f vs H vs 2δ separately,
+plus run the w7 M-minimization. Without this, the "linear law" risks being a confident,
+plausible, WRONG claim — the exact failure mode this project guards against.
