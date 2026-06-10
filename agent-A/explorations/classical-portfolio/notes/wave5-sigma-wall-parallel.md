@@ -404,3 +404,61 @@ DIAGONAL: P_ff = Σ_k P_fk P_kf is the natural untapped identity), then chain:
 self-coupling ⇒ financier cannot sit low (budget shadow price δ = g_f/2 side) ⇒ hiding
 caps H at the wall. All scaffolding (C10-exchange, column-shadow, carrier propagation,
 conditioned F-ψ, large-σ shadow, height-functional wall) is proved and audited.
+
+---
+
+# WAVE 8 — fable closer + 2-family audits + DMF descent attack
+
+Closer deliverable: **notes/wave8-fable-closer.md** (641 lines; the full state). Headlines:
+corner theorem (exact constants τ* = 2−√3, wall 2(2−√3), floor (7+4√3)/4); d11
+reciprocal-carrier demystified (witness = v's own row identity, verified 1e−16); 9 new
+lemmas; residual compressed to **DMF** (optimal witnesses carry m* mass at deficit
+≥ H − O(δ/τ)) ⇒ HLC with a → 4m*²; σ̃-vs-σ_v catch (N3). Verifier:
+experiments/w8_witness_check.py (independently reproduces d11's M/τ = 1.0754).
+
+## Audit 1 (codex, hostile derive-first on the 9 lemmas)
+4 SOUND (W2 exchange, RW, plus dual-core of §1.1, WL-statement), 5 SOUND-WITH-FIX, 1 BROKEN:
+- **NG′ DOWNGRADED** from proved lemma to analysis/dead-end guidance (its "consistency at
+  any H" claim was template/numerics-supported, not derived) — keep only its algebraic
+  identities.
+- Fixes to apply before banking: ND′ threshold is t₀/τ = 7/4 − 2τ − δ/2 (the advertised
+  "≥ 1.7τ for δ ≤ 0.05" is FALSE — it is ≈ 1.278τ at δ = 0.05); RF needs the hypothesis
+  P_vv ≥ 0 (else ν_v includes the self-entry) and its 3.1δ constant re-proved; CPL wording
+  split on sign(P_vv); WL gets a cleaner direct exposer proof (κΣ_far P⁺_wk ≤ ν_w);
+  EVERY α-localization use carries the t* > 0 hypothesis (t* = 0 admits far α).
+P(suite survives af-formalization): 0.45 as written, **0.78 with fixes + NG′ downgraded**.
+
+## Audit 2 (codex, corner forms + 3.2′ chain)
+- **Corner closed forms CONFIRMED by independent derivation** (τ²−4τ+1 > 0 ⇔ τ < 2−√3;
+  all five numbers re-derived; d9 bracket check passes; raw-κ vs κR normalization verified
+  against d1_infra). Now 2-family. P(exactly right) = 0.90.
+- Sharp exchange ≤ t*R: CONFIRMED.
+- **3.2′ chain: SOUND asymptotically AFTER a fix, BROKEN as finite-corner calibration.**
+  The R-handling bug: R ≤ 2+4δ universally (g_i ≤ diam; the closer's R = 2+4δ+H is wrong
+  as a universal bound — it is the FAMILY identity R = 2+H that recovers the corner value).
+  Corrected chain (CLEANER): m*(H − C_Dδ/τ) ≤ t*R < κR ≤ (τ/4)(2+4δ) ⇒
+  H ≤ τ[(2+4δ)/(4m*) + C_Dτ] ⇒ **δ ≥ aH², a → 4m*²; B_B → 1/2 asymptotically** (the 0.536
+  is the finite-corner value, exact AT the corner only). RETRACT the closer's "DMF(m*=1)
+  reproduces the entire measured envelope" finite-δ calibration (its finite formula
+  evaluates to 2.36, not 3.4). P(corrected chain survives af): 0.80.
+
+## DMF descent attack (codex w8dmf) — DIED-AT hidden-vertex recursion; minimal obstruction found
+- VALID: non-vertex Krein–Milman descent (face dimension strictly drops, stays in
+  F_v ∩ T_E); W-rows are automatically DEEP (g_w ≥ H — confirmed); the δ = 0 Baake–Sumner
+  anchor (byte-pinned: equal-fin.tex:1060 normal form kills the shallow web exactly).
+- INVALID: recursing through a hidden vertex's own witness — (♦) solved for p_x is SIGNED
+  (the −β term); no preserved probability measure; no decreasing invariant.
+- **Minimal obstruction (the irreducible object): a 2-cycle of shallow hidden vertices
+  a → b → a, each all-shallow-witnessed by the other.** Every candidate decreasing quantity
+  stalls on it. Baake–Sumner forbids it at δ = 0; the missing theorem is its quantitative
+  δ > 0 exclusion.
+- Reduction banked: **DMF ⟸ "every closed class in the shallow hidden-witness graph has
+  universal escape mass to the deep set"** — i.e. exactly quantitative Baake–Sumner
+  stability. P(DMF as stated) ≈ 0.55; P(pruned/extreme-witness weakening) ≈ 0.70.
+
+## POST-WAVE-8 STATE (the campaign's terminal form)
+HLC ⟸ DMF (corrected 3-line chain, 2-family-audited, a → 4m*²) ⟸ quantitative
+Baake–Sumner stability of the shallow hidden-witness graph (the 2-cycle exclusion).
+In flight: opus d12 witness-depth probe on d3/d7 stacking instances — directly searches
+for shallow hidden webs in verified instances; either supports DMF (m* large observed
+off-family) or finds the refutation candidate.
