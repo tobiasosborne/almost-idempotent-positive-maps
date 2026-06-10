@@ -15,6 +15,13 @@ Format: `- [date] [worker@effort] [task type] — what happened; lesson.`
   (ii) Strategy 3's killer test (Lip of optimal dual potential) is trivially green — the ℓ¹-dist
   dual is ‖φ‖_∞ ≤ 1 BY CONSTRAINT. Lesson: opus one-shot ideation = excellent breadth + critique;
   every concrete construction needs an independent derivation pass before resources are committed.
+- 2026-06-10 [codex/gpt-5.5@xhigh, infra] — WEDGED-SOCKET failure mode: a wifi blip mid-run left
+  codex retrying ("Reconnecting 2/5..4/5"), then it hung indefinitely on an ESTAB-but-dead TLS
+  socket — no output, no exit, for ~25 min. Undetectable without event streaming. FIXES (now
+  standard for all codex runs): (1) never `--ephemeral` on long runs (it kills `codex exec resume`);
+  (2) always `--json` events to a file — "thinking" vs "stuck" must be observable; (3) a 10-second
+  low-effort smoke test cleanly separates pipeline-health from run-health before relaunching.
+  Also: kill+relaunch cost ≈ nothing (the wedged run generated almost no tokens).
 - 2026-06-10 [sonnet Explore x4, parallel summarization, async] — branch-corpus summarization:
   all four faithful and precise on first pass; the registry agent (37 tool uses) correctly
   distinguished proved/conjectured/numerical throughout. Lesson: sonnet Explore is the right
