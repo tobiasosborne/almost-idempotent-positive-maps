@@ -518,5 +518,11 @@
     "kappa": 0.13613452426055184,
     "nW": 4
   },
-  "refutation": null
+  "refutation": null,
+  "summary": {
+    "n_configs": 36288,
+    "n_entered": 31,
+    "min_delta_over_H2_entered": 280.1239554776283,
+    "verdict": "SUPPORTED: entered-region floor delta/H^2 >= 280.12"
+  }
 }

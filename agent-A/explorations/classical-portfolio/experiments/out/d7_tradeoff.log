@@ -22,3 +22,7 @@
   ...32064 configs, entered_min delta/H^2=280.1239554776283
   ...32088 configs, entered_min delta/H^2=280.1239554776283
   ...34080 configs, entered_min delta/H^2=280.1239554776283
+  ...36096 configs, entered_min delta/H^2=280.1239554776283
+
+[d7-tradeoff] 36288 configs, 31 entered. min delta/H^2 (entered) = 280.1239554776283
+  verdict: SUPPORTED: entered-region floor delta/H^2 >= 280.12
