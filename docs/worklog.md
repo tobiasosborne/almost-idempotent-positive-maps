@@ -465,3 +465,13 @@ wedge protocol, fable 64k-output file protocol, derive-first audits, certificate
 Beads: aipm-e71 (HLC), aipm-nhj/mox (absorbed faces), new sigma_v-wall bead. Next session: dual-
 certificate-persisting decider rerun -> fable closer on sigma_v-wall -> write-up (proof or honest
 obstruction map; both PRD-legitimate).
+
+## 2026-06-10 (session close) — Agent A: classical-portfolio handoff written
+Detailed continuation handoff at agent-A/explorations/classical-portfolio/HANDOFF.md (read after
+the repo gate files): result chain (op-classical <= op-exposed-hull <= HLC <= sigma_v-wall), the
+~17-lemma audited belt with constants-authority pointer (wave4/audit-summary.md), dead-route map,
+validated numerics pipeline + the dual-certificate-persistence gap, NEXT queue (certificate-
+persisting decider rerun -> fable closer on sigma_v-wall -> write-up or honest obstruction map),
+delegation protocol learnings, and beads map (aipm-3u6 -> aipm-e71 -> aipm-nhj/mox, epic aipm-and).
+The agent-B reference worktree is KEPT at /tmp/aipm-agentb-branch (recreate via git worktree add if
+rebooted). Session totals: ~45 delegations across 4 model families, 14 commits, all pushed.
