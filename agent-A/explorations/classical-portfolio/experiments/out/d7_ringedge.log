@@ -1,0 +1,8 @@
+  cell g=0.08 r=5 ma=3: min delta/H^2=705268.313 (H=0.0006 rad=0.383)
+  cell g=0.08 r=6 ma=4: NO entered config
+  cell g=0.16 r=6 ma=4: NO entered config
+  cell g=0.32 r=6 ma=4: NO entered config
+  cell g=0.04 r=6 ma=4: NO entered config
+
+[d7-ringedge] 1500 configs. GLOBAL min delta/H^2 = 705268.313
+  SUPPORTED: ring-regime floor delta/H^2 >= 705268.3 (>> d3 floor 3.49)

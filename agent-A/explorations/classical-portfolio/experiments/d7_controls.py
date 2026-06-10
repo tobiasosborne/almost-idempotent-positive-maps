@@ -64,9 +64,30 @@ def control_ii_canonical_linear():
     return out
 
 
+def control_iii_d3_band():
+    """Reproduce the d3 floor: from the saved d3 robust envelope (dist/tau bound), the
+       worst-case delta/H^2 = 1/(max dist/tau)^2.  This is the floor FTI-2 must beat to
+       be refuted.  We recompute it from out/d3_clean_scaling.json (robust W)."""
+    try:
+        d3 = json.load(open(os.path.join(OUTDIR, "d3_clean_scaling.json")))
+    except Exception:
+        return None
+    env = d3["envelope"]; rows = []
+    for tau, H in env:
+        delta = tau ** 2
+        rows.append({"tau": float(tau), "H": float(H), "delta": float(delta),
+                     "delta_over_H2": float(delta / H ** 2) if H > 1e-9 else None})
+    maxr = d3["global_max_ratio"]
+    return {"per_bin": rows, "global_max_dist_over_tau": float(maxr),
+            "floor_delta_over_H2": float(1.0 / maxr ** 2),
+            "p99_dist_over_tau": float(d3["p99"]),
+            "typical_delta_over_H2": float(1.0 / d3["p99"] ** 2)}
+
+
 def main():
     res = {"control_i_transient": control_i_transient(),
-           "control_ii_canonical": control_ii_canonical_linear()}
+           "control_ii_canonical": control_ii_canonical_linear(),
+           "control_iii_d3_band": control_iii_d3_band()}
     # summaries
     ci = res["control_i_transient"]
     res["control_i_summary"] = {
