@@ -274,10 +274,12 @@ $\ell^1$-isometry on row differences under which exposing functionals lift and d
 the high-hidden antecedent), while every raw-index path product through the cloned
 fibers decays as $\Pi\le(1+\delta)/M$. Hence Conjecture~\ref{conj:floor} \emph{as
 written} (raw-index carrier graph) is refuted by cloning any antecedent-realizing
-instance; since no such instance is known (item~1 below), its precise status is:
-\emph{true iff the high-hidden antecedent is empty} --- it carries no intermediate
-content beyond Conjecture~\ref{conj:kernel} itself. The multiplicity-correct
-replacement is:
+instance --- and such an instance now exists (item~1 below, certified exact at
+$\delta=0.2329$): \textbf{the raw-index floor is refuted outright for any
+$\delta_0\ge0.233$}. For small $\delta_0$ (below the corner scale) its status
+remains: \emph{true iff the high-hidden antecedent is empty there} --- it carries no
+intermediate content beyond Conjecture~\ref{conj:kernel} itself. The
+multiplicity-correct replacement is:
 
 \begin{conjecture}[Multiplicity-correct path-product floor]\label{conj:quotient-floor}
 Let $i\sim j$ mean $p_i=p_j$ as vectors, and for classes set
@@ -329,11 +331,18 @@ dossier \texttt{notes/wave5-sigma-wall-parallel.md}, worker verdicts
 \begin{enumerate}
 \item \textbf{Empirical record.} $67{,}000$+ verified exact instances over six
 independent campaigns (d1--d14), all scales $\delta\in[6\times10^{-4},0.25]$: every
-instance satisfies the \emph{linear law} $\delta\gtrsim H/2$; no verified instance has
-$\sigt_v>\tau$ together with $H>0.1\tau$. Two dedicated counterexample agents with
-distinct template families (chains, trees, frame-chains, parallel bundles, periodic
-components) failed against full verification gates, with recorded per-template failure
-displays.
+instance satisfies the \emph{linear law} $\delta\gtrsim H/2$. Two dedicated
+counterexample agents with distinct template families (chains, trees, frame-chains,
+parallel bundles, periodic components) failed against full verification gates, with
+recorded per-template failure displays. \emph{Above-corner correction (2026-06-11):}
+the high-hidden antecedent IS realizable above the corner scale --- an exact rational
+instance ($n=10$, $k=5$, $\delta=0.2329$, independently certified, hiddenness decided
+exactly) has a hidden top vertex with $\sigt_v>\tau$ \emph{and} $H/\tau=0.1002$ (a
+second robust instance at $H/\tau=0.1000$). Both satisfy the linear law ($H\le2\delta$).
+\textbf{Below the corner scale $\delta^*=(2-\sqrt3)^2\approx0.0718$ the antecedent
+remains un-entered} (d13: max $H/\tau$ over hidden vertices collapses $\sim2\delta/\tau$
+as $\delta\to0$) --- the emptiness question, and with it the content of both floor
+conjectures, lives entirely in the small-$\delta$ regime.
 \item \textbf{The corner.} The historically measured ``wall'' $H/\tau=0.536$ and
 ``floor'' $\delta/H^2=3.48$ are the finite-$\delta$ corner $\tau^*=2-\sqrt3$,
 $H/\tau=2(2-\sqrt3)$, $\delta/H^2=(7+4\sqrt3)/4$ (exact closed forms, two-family

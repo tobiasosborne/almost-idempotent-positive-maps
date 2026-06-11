@@ -1220,3 +1220,68 @@ constrained to the tangent corners (project the negativity onto E_10 + E_01 move
 (b) co-optimize the base point + gauge (the H-M family + similarity simultaneously);
 (c) the Douglas-Ando norm-excess functional as the Lyapunov function for the loop instead
 of raw negativity.
+
+## w18_variety (codex) — THE TANGENT-CONE PROGRAM (the round's sharpest plan, P = 0.68)
+Full answer: notes/swarm-answers/w18_variety.md. STRUCTURE DELIVERED: I^1_{n,k} = {P^2=P,
+P1=1, rank k} is a homogeneous space of G_1 = {S: S1=1}, dim = (n-k)(2k-1); tangent
+PA + AP = A => pure off-diagonal corners (D1 = 0 on the stochastic slice); EXACT chart
+P(C,D) with (I+CD)^{-1} blocks — off-diagonal first-order, diagonal deviations QUADRATIC
+(-CD, DC + O(3)): "exactly where the unused quadratic constraint lives". H-M locus =
+finite semialgebraic stratification by partition data, stratum dim n - k + t(k-2).
+NORMAL GEOMETRY: delta(P_0 + tA) = t * max_i sum_{j: P_{0,ij}=0} (-A_ij)_+ + O(t^2) —
+crossing the nonneg boundary pays LINEARLY at active zeros. PLAN 1 (P = 0.68): the linear
+law IS the tangent-cone inequality dH/dt <= C * ddelta/dt at every stratum point; the
+counterexample side reduces by CURVE SELECTION to an analytic arc whose leading direction
+has ddelta = 0 but dH > 0 — the cleanest target in the campaign. Testable at n=3, k=2:
+P = I - u v^T (v^T u = 1, v^T 1 = 0), 3-dim variety vs 1-dim normal-form strata. PLAN 2
+(0.58): Riccati-corner local model H <= C*delta + O(||(C,D)||^2) uniformly over strata.
+PLAN 3 (0.36): quotient anti-splitting from exact idempotence. Certified-instance check
+coherent ("high invisible mass can live almost tangent to the H = 0 locus" — exactly why
+height-free barriers died). P(at least one plan -> new proved lemma in one wave) = 0.82.
+
+# WAVE 18 SYNTHESIS (orchestrator; all 5 research answers harvested)
+The round confirms the user's diagnosis: the quadratic constraint was being consumed only
+through weak corollaries (row reproduction, P^k = P sums). What it actually provides:
+(1) an exact finite-dim HOMOGENEOUS-SPACE geometry with quadratically-determined diagonal
+corners (variety); (2) an exact k-dim spectral/fixed-space coordinate system for all rows
+(semigroup); (3) exact all-length boundary-product identities (semigroup); (4) at delta=0,
+the Douglas-Ando contractive-projection normal form, making the linear law a PROJECTION-
+NORM-EXCESS stability statement (quadlit). CONVERGENCES: [A] variety plan 1 + semigroup
+plan 1 + quadlit #2 are three coordinatizations of ONE attack: a clone-invariant,
+hiddenness-free, k-dimensional normal-displacement inequality — this is the wave-19 core.
+[B] The cohomological Newton loop (similarity) fails EXACTLY at first-order diagonal
+displacement from positivity projection — the tangent-cone lemma is its correct
+infinitesimal form (prove the inequality BEFORE iterating; cross-lane twin of
+op-layer1-gap's positivity-capable output). [C] SOS-mod-ideal re-confirms: hiddenness is
+the only structure that resists polynomial lifting (meta-finding upheld on the variety).
+WAVE 19 (launching): w19_tangent (the tangent-cone lemma; n=3 model first + numerical
+tangent-cone decider), w19_leftcone (the quasi-positive left-fixed-cone extreme-point
+lemma), w19_boundary (the boundary-product dichotomy at the w12-finisher interface).
+Deferred pending acquisitions (bead): the Douglas-Ando and Luo-Pang formalizations.
+
+## w17_cert_audit (codex, independent verifier) — BOTH ANTECEDENT INSTANCES CERTIFIED EXACT
+Full report: notes/swarm-answers/w17_cert_audit.md; verifier + exact rational instances:
+experiments/out/w17_cert_audit/. MAIN (delta = 0.23293, H/tau = 0.10019) and ROBUST
+(delta = 0.23459, H/tau = 0.10000) both hardened to EXACT rational (B = [I; X],
+L = [I - QX, Q] gives LB = I, P^2 = P, P1 = 1 exactly); hiddenness decided NOT-float-only
+(exact drifts ~1.3e-11 vs flip radii 6.6e-6 / 8.5e-5); sigma_tilde > tau certified via the
+self-coefficient P_55 = 0.727 > tau; 9 Pareto points re-checked, no systematic bias.
+W = {0,1,2,3,4} (k = 5 visible), hidden {5,6,7}, nonvertices {8,9}. CONSEQUENCES RECORDED:
+(1) ledger item 1 falsified AS STATED -> doc re-scoped (the emptiness question lives
+BELOW the corner delta* = 0.0718; both instances satisfy the linear law H <= 2*delta);
+(2) via cloning, the RAW-INDEX FLOOR IS REFUTED OUTRIGHT for delta_0 >= 0.233 (doc
+status-correction paragraph updated); (3) the quotient floor's first genuine test objects
+(quotient Pi/tau ~ 2.5e-4 — thin, but at this delta the floor RHS is vacuous-ish; the
+small-delta question is untouched). P(exact antecedent instance exists at delta <= 0.25)
+> 0.999999. kernel-conjecture.tex updated + recompiled clean.
+
+# WAVE 19 — launched 2026-06-11 (3 codex provers on the wave-18 synthesis targets)
+- w19_tangent: the tangent-cone lemma dH <= C * ddelta at H-M stratum points (n=3 model
+  explicit first; numerical tangent-cone decider over sampled strata; curve-selection
+  counterexample side). The round's sharpest target (w18 P = 0.68).
+- w19_leftcone: the quasi-positive left-fixed-cone extreme-point lemma (extreme points of
+  {l : lP = l, l1 = 1, neg(l) <= C*delta} near visible rows) + the duality implication
+  chain; vertex-enumeration test on the certified n=7 instance.
+- w19_boundary: the boundary-product dichotomy on the quotient (B^m - B = -sum B^r E C'
+  exact; fat component OR charged boundary mass) at the anti-splitting frontier; horn
+  measurements on the certified antecedent instances.

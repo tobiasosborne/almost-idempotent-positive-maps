@@ -1,0 +1,273 @@
+[
+  {
+    "subdir": "run1",
+    "factorization": "/tmp/codex-sigma-wall/w17_antecedent/run1/w17_best_branch_factorization.json",
+    "certificate": "/tmp/codex-sigma-wall/w17_antecedent/run1/w17_best_branch_certificate.json",
+    "delta_computed": 0.14090489780347532,
+    "delta_claimed": 0.14090489780347532,
+    "H_over_tau_computed": 0.10540819545478369,
+    "H_over_tau_claimed": 0.10540819545478369,
+    "sigma_over_tau_computed": 1.2584201055461093,
+    "sigma_over_tau_claimed": 1.2584201055461093,
+    "W_computed": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "W_claimed": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "top_computed": 4,
+    "v_claimed": 4,
+    "tstar_over_kappa_computed": 0.9960082636455224,
+    "tstar_claimed": 0.09346865536445348,
+    "row_sum_resid": 2.220446049250313e-16,
+    "idem_resid": 2.220446049250313e-16
+  },
+  {
+    "subdir": "run1",
+    "factorization": "/tmp/codex-sigma-wall/w17_antecedent/run1/w17_best_realized_factorization.json",
+    "certificate": "/tmp/codex-sigma-wall/w17_antecedent/run1/w17_best_realized_certificate.json",
+    "delta_computed": 0.14090489780347532,
+    "delta_claimed": 0.14090489780347532,
+    "H_over_tau_computed": 0.10540819545478369,
+    "H_over_tau_claimed": 0.10540819545478369,
+    "sigma_over_tau_computed": 1.2584201055461093,
+    "sigma_over_tau_claimed": 1.2584201055461093,
+    "W_computed": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "W_claimed": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "top_computed": 4,
+    "v_claimed": 4,
+    "tstar_over_kappa_computed": 0.9960082636455224,
+    "tstar_claimed": 0.09346865536445348,
+    "row_sum_resid": 2.220446049250313e-16,
+    "idem_resid": 2.220446049250313e-16
+  },
+  {
+    "subdir": "run2",
+    "factorization": "/tmp/codex-sigma-wall/w17_antecedent/run2/w17_best_branch_factorization.json",
+    "certificate": "/tmp/codex-sigma-wall/w17_antecedent/run2/w17_best_branch_certificate.json",
+    "delta_computed": 0.21949445044299987,
+    "delta_claimed": 0.21949445044299987,
+    "H_over_tau_computed": 0.09914886332849909,
+    "H_over_tau_claimed": 0.09914886332849941,
+    "sigma_over_tau_computed": 1.5030941006007301,
+    "sigma_over_tau_claimed": 1.5030941006007301,
+    "W_computed": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "W_claimed": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "top_computed": 5,
+    "v_claimed": 5,
+    "tstar_over_kappa_computed": 0.9927168613088436,
+    "tstar_claimed": 0.11627254520134112,
+    "row_sum_resid": 2.220446049250313e-16,
+    "idem_resid": 1.1102230246251565e-16
+  },
+  {
+    "subdir": "targeted1",
+    "factorization": "/tmp/codex-sigma-wall/w17_antecedent/targeted1/targeted_best_factorization.json",
+    "certificate": "/tmp/codex-sigma-wall/w17_antecedent/targeted1/targeted_best_certificate.json",
+    "delta_computed": 0.21166686613188773,
+    "delta_claimed": 0.21166686613188773,
+    "H_over_tau_computed": 0.10089541485590278,
+    "H_over_tau_claimed": 0.10089541485590278,
+    "sigma_over_tau_computed": 1.4770623079440957,
+    "sigma_over_tau_claimed": 1.4770623079440957,
+    "W_computed": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "W_claimed": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "top_computed": 5,
+    "v_claimed": 5,
+    "tstar_over_kappa_computed": 0.9793081052943003,
+    "tstar_claimed": 0.11263822487313369,
+    "row_sum_resid": 2.220446049250313e-16,
+    "idem_resid": 2.220446049250313e-16
+  },
+  {
+    "subdir": "targeted1",
+    "factorization": "/tmp/codex-sigma-wall/w17_antecedent/targeted1/targeted_realized_factorization.json",
+    "certificate": "/tmp/codex-sigma-wall/w17_antecedent/targeted1/targeted_realized_certificate.json",
+    "delta_computed": 0.21166686613188773,
+    "delta_claimed": 0.21166686613188773,
+    "H_over_tau_computed": 0.10089541485590278,
+    "H_over_tau_claimed": 0.10089541485590278,
+    "sigma_over_tau_computed": 1.4770623079440957,
+    "sigma_over_tau_claimed": 1.4770623079440957,
+    "W_computed": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "W_claimed": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "top_computed": 5,
+    "v_claimed": 5,
+    "tstar_over_kappa_computed": 0.9793081052943003,
+    "tstar_claimed": 0.11263822487313369,
+    "row_sum_resid": 2.220446049250313e-16,
+    "idem_resid": 2.220446049250313e-16
+  },
+  {
+    "subdir": "smoke",
+    "factorization": "/tmp/codex-sigma-wall/w17_antecedent/smoke/w17_best_branch_factorization.json",
+    "certificate": "/tmp/codex-sigma-wall/w17_antecedent/smoke/w17_best_branch_certificate.json",
+    "delta_computed": 0.19861691147132773,
+    "delta_claimed": 0.19861691147132773,
+    "H_over_tau_computed": 0.10667389377303212,
+    "H_over_tau_claimed": 0.1066738937730325,
+    "sigma_over_tau_computed": 1.4887259489571267,
+    "sigma_over_tau_claimed": 1.4887259489571267,
+    "W_computed": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "W_claimed": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "top_computed": 4,
+    "v_claimed": 4,
+    "tstar_over_kappa_computed": 0.9946356423924231,
+    "tstar_claimed": 0.11081846717084676,
+    "row_sum_resid": 2.220446049250313e-16,
+    "idem_resid": 1.1102230246251565e-16
+  },
+  {
+    "subdir": "smoke",
+    "factorization": "/tmp/codex-sigma-wall/w17_antecedent/smoke/w17_best_realized_factorization.json",
+    "certificate": "/tmp/codex-sigma-wall/w17_antecedent/smoke/w17_best_realized_certificate.json",
+    "delta_computed": 0.19861691147132773,
+    "delta_claimed": 0.19861691147132773,
+    "H_over_tau_computed": 0.10667389377303212,
+    "H_over_tau_claimed": 0.1066738937730325,
+    "sigma_over_tau_computed": 1.4887259489571267,
+    "sigma_over_tau_claimed": 1.4887259489571267,
+    "W_computed": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "W_claimed": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "top_computed": 4,
+    "v_claimed": 4,
+    "tstar_over_kappa_computed": 0.9946356423924231,
+    "tstar_claimed": 0.11081846717084676,
+    "row_sum_resid": 2.220446049250313e-16,
+    "idem_resid": 1.1102230246251565e-16
+  },
+  {
+    "subdir": "targeted_best",
+    "factorization": "/tmp/codex-sigma-wall/w17_antecedent/targeted_best/fine_best_factorization.json",
+    "certificate": "/tmp/codex-sigma-wall/w17_antecedent/targeted_best/fine_best_certificate.json",
+    "delta_computed": 0.23293352400054423,
+    "delta_claimed": 0.23293352400054423,
+    "H_over_tau_computed": 0.10019261004117462,
+    "H_over_tau_claimed": 0.10019261004117462,
+    "sigma_over_tau_computed": 1.546673312722326,
+    "sigma_over_tau_claimed": 1.546673312722326,
+    "W_computed": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "W_claimed": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "top_computed": 5,
+    "v_claimed": 5,
+    "tstar_over_kappa_computed": 0.999877369278981,
+    "tstar_claimed": 0.12064317166013583,
+    "row_sum_resid": 2.220446049250313e-16,
+    "idem_resid": 1.1102230246251565e-16
+  },
+  {
+    "subdir": "targeted_robust",
+    "factorization": "/tmp/codex-sigma-wall/w17_antecedent/targeted_robust/robust_factorization.json",
+    "certificate": "/tmp/codex-sigma-wall/w17_antecedent/targeted_robust/robust_certificate.json",
+    "delta_computed": 0.23459249106552182,
+    "delta_claimed": 0.23459249106552182,
+    "H_over_tau_computed": 0.10000254724475996,
+    "H_over_tau_claimed": 0.10000254724475997,
+    "sigma_over_tau_computed": 1.5521010289492778,
+    "sigma_over_tau_claimed": 1.5521010289492778,
+    "W_computed": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "W_claimed": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "top_computed": 5,
+    "v_claimed": 5,
+    "tstar_over_kappa_computed": 0.9977747381613528,
+    "tstar_claimed": 0.12081742250249106,
+    "row_sum_resid": 2.220446049250313e-16,
+    "idem_resid": 1.1102230246251565e-16
+  }
+]
