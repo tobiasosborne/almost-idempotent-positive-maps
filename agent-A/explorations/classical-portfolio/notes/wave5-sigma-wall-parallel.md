@@ -1372,3 +1372,23 @@ tangent-cone inequality q_H <= C_2 * q_delta (+ finite-jet iteration for doubly-
 directions). LAUNCHED: w20_t1_audit (hostile audit of T1: the recoding step under mixed-
 rate degenerations is the prime target; plus the W-jump disarmament assessment) and
 w21_second (the second-order lemma + assembly to the local law; decider-first).
+
+## w20_t1_audit (codex, hostile) — T1 HOLDS WITH REPAIR; the recoding step is INVALID as written
+Full report: notes/swarm-answers/w20_t1_audit.md + experiments/out/w20_t1_audit/.
+BANKED (repaired, AMBIENT — stronger than claimed): fixed-mass visibility — for an H-M
+base P0, every recurrent-cluster vertex with LP support margin eta > 0 stays visible
+whenever the max-row-l1 distance eps <= min{ mu(P0)/8, tau/64, eta*tau/64, 1/64 }
+(uses only row proximity + the support-margin LP; the H-M exposer has exact margin rho/2
+via disjoint supports; nonneg repaired by f = (g_s - g_s(p_v)) + (2eps/eta) l_v).
+INVALID AS WRITTEN: (a) the mu -> 0 RECODING — dropping several small recurrent
+coordinates can put the recoded H-M point ~ n*theta away while surviving min mass is
+~ theta: the fixed-mass hypotheses then FAIL by factors 62.7-314 (independent stress
+numerics); must be restated via TOTAL MASS REMOVED per block + recode degenerate
+transient faces (alpha_is -> 0) too. (b) the claimed arc radius involved tau(t) — a
+TARGET-point quantity, not base data; the clean ambient estimate is eps(t) <=
+2M e^{2Mt} t (M = row-sum norm of the generator) + a separate lower scale estimate for
+tau along the arc. Fixed-mass independent numerics: zero condition-implies-visible
+violations (incl. the 1e-6 stress family). P(repaired verdict survives) = 0.74.
+STATE: tangent-cone lemma BANKED; T1-fixed-mass BANKED (repaired); OPEN SUB-TASKS:
+the mass-removed recoding lemma + the arc-scale estimate; w21_second (the decisive
+second-order lemma) still in flight.

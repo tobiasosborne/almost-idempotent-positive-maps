@@ -1,0 +1,27 @@
+fixed-mass T1 pointwise check
+records: 1848
+condition_true: 949
+formula_condition_true: 33
+condition_violations: 0
+
+tiny active-entry stress
+mu: 9.99999000001e-07
+lp_value: 0
+lp_row: 0
+lp_neg_subset: []
+tangent_residual: 4.98774355151e-11
+active_zero_derivative_cost: 0
+t=0.0001 delta/t=0.99 H/t=1.97999800001 H/delta=1.99999797981 visible=3 vertices=4
+t=3e-05 delta/t=0.966666666667 H/t=2.99666356667e-05 H/delta=3.0999967931e-05 visible=4 vertices=4
+t=1e-05 delta/t=0.9 H/t=9.899989e-06 H/delta=1.09999877778e-05 visible=4 vertices=4
+t=3e-06 delta/t=0.666666666667 H/t=2.66666266667e-06 H/delta=3.999994e-06 visible=4 vertices=4
+t=1e-06 delta/t=0 H/t=0 H/delta=0 visible=3 vertices=3
+t=3e-07 delta/t=0 H/t=0 H/delta=0 visible=3 vertices=3
+t=1e-07 delta/t=0 H/t=0 H/delta=0 visible=3 vertices=3
+t=3e-08 delta/t=0 H/t=0 H/delta=0 visible=2 vertices=2
+
+recoding stress
+nsmall=4 theta=1.0e-05 dropped=3.96e-05 eps_rec/theta=7.92 eps/(mu/8)=62.7 alpha=5.0e-06
+nsmall=8 theta=1.0e-05 dropped=7.92e-05 eps_rec/theta=15.8 eps/(mu/8)=125 alpha=5.0e-06
+nsmall=20 theta=1.0e-05 dropped=0.000198 eps_rec/theta=39.6 eps/(mu/8)=314 alpha=5.0e-06
+nsmall=20 theta=1.0e-04 dropped=0.00198 eps_rec/theta=39.6 eps/(mu/8)=313 alpha=5.0e-05
