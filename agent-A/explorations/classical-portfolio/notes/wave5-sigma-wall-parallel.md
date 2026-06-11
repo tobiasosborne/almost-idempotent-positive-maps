@@ -1145,3 +1145,28 @@ genuine test object + via CLONING an outright raw-floor refutation for delta0 >=
 IF CERTIFIED: ledger item 1 must be re-scoped to below-corner scales; the decisive
 remaining empirical question becomes whether the antecedent persists BELOW the corner
 (d13 says max H/tau collapses ~ 2*delta/tau there — the conjectures' real regime).
+
+# WAVE 18 — the idempotence-exploitation research round (user-directed, 2026-06-11; 5 codex)
+Charge: P^2 = P has not been exploited to its fullest; the reformulations retreat to
+convex-hull information. Lenses: variety geometry / SOS-mod-ideal / quadratic-matrix
+literature / cohomological-similarity (never run in this lane) / semigroup-two-sided.
+Answers land below as harvested; bead aipm-(wave18).
+
+## w18_semigroup (codex) — TOP PLAN: fixed-space duality; NEW exact boundary-product identity
+Full answer: notes/swarm-answers/w18_semigroup.md. Plan 1 (P_useful = 0.78): the EXACT
+spectral form P = sum_s u_s l_s^T (biorthogonal fixed bases) puts every row INSIDE the
+k-dim left fixed space — hiddenness/H become statements in the exact affine duality
+between left fixed rows and right fixed functions ({g : Pg = g} ~ Aff({p_i}), g_i =
+phi_g(p_i)); clone-invariant by construction; candidate replacement for "recurrent
+classes" = extreme points of the quasi-positive left-fixed cone K_delta. Plan 2 (P_true
+= 0.60): the boundary-product family B^m - B = - sum_{r<=m-2} B^r E C for every band
+split — all lengths at once, on the QUOTIENT; dichotomy: fat quotient path product OR
+large boundary product charged to deep/visible mass — the most direct route to the w12
+finisher. Plan 3 (P_supporting = 0.55): trace tax tr B - tr B^2 = tr(EC), integer total
+trace; clone-invariant; candidate sign-robust replacement for the dead positive-diagonal
+step (per-component trace >= 1 - O(delta)?). Honest note: the certified n=7 crossing
+instance has epsilon_2 ~ 0.61 — at delta ~ 0.23 NO path-product finisher can bite; the
+asymptotic regime is where these plans live. Leads to bank: the quasi-positive left-fixed
+cone lemma (internal); the clustered quotient floor (internal); Kato/Stewart-Sun
+projection-perturbation + Birkhoff-Hilbert contraction sources (ACQUIRE before canonical
+use). Synthesis deferred until all 5 land.
