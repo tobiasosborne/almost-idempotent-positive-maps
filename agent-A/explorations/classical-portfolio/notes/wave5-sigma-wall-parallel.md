@@ -1410,3 +1410,19 @@ That single lemma would (a) repair T1's mu -> 0 case, (b) resolve the sharp boun
 events in the second-order race, and plausibly (c) close the local linear law by
 induction on strata (each recoding strictly reduces the support pattern — finitely many
 steps). LAUNCHING: w21_recode.
+
+## w21_recode (codex) — L1+L2 PROVED: the mass-removed recoding lemma [audit in flight]
+Full answer + proof note: notes/swarm-answers/w21_recode.md; checks:
+experiments/out/w21_recode/. L1: recoded boundary H-M point with ||P0 - P0'||_{infty,1}
+<= 2*(sum_s q_s + q') (A = 2; bounds in REMOVED MASS, never the threshold), survivor mass
+>= min surviving original mass, survivor shift exactly q_s, face-drop shift 2*r_i. L2: the
+honest two-scale uniform visibility assembly (iterate recoding, support pattern strictly
+shrinks, <= n steps; ambient fixed-mass lemma at each base; w19 lemma applies at every
+recoded base). EVIDENCE: the w20_t1_audit stress family that killed the naive version
+(62.7-313x) now PASSES under the removed-mass bounds (eps/(2Q) < 1); 12/12 mixed-rate
+degenerations clean; the w21_second sharp boundary events localized to t >> min-entry
+windows with fixed-base ratio 0. L3 (the local linear law) NOT assembled — the one
+remaining estimate is the finite-jet normal projection bound after all rebasings.
+P(L1+L2 survive audit) = 0.78; P(L3 assembles from present ingredients) = 0.34.
+AUDIT LAUNCHED (w21_recode_audit: exactness of P0', compounding over iterations
+(telescoping vs n-factor), oscillating-arc stopping condition, independent stress re-run).

@@ -1,0 +1,30 @@
+w21 removed-mass recoding checks
+
+w20 audit stress family under repaired quantities
+w20_stress_4_1e-05: q=3.96e-05 q_alpha=5e-06 eps=7.92e-05 2Q=8.92e-05 eps/(2Q)=0.887892 old eps/(mu_after/8)=62.7302 survivor_shift=3.96e-05 qmax=3.96e-05 face_l1=1e-05 face_bound=1e-05 passes=True/True/True
+w20_stress_8_1e-05: q=7.92e-05 q_alpha=5e-06 eps=0.0001584 2Q=0.0001684 eps/(2Q)=0.940618 old eps/(mu_after/8)=125.455 survivor_shift=7.91999999999e-05 qmax=7.92e-05 face_l1=1e-05 face_bound=1e-05 passes=True/True/True
+w20_stress_20_1e-05: q=0.000198 q_alpha=5e-06 eps=0.000396 2Q=0.000406 eps/(2Q)=0.975369 old eps/(mu_after/8)=313.601 survivor_shift=0.000198 qmax=0.000198 face_l1=1e-05 face_bound=1e-05 passes=True/True/True
+w20_stress_20_0.0001: q=0.00198 q_alpha=5e-05 eps=0.00396 2Q=0.00406 eps/(2Q)=0.975369 old eps/(mu_after/8)=313.042 survivor_shift=0.00198 qmax=0.00198 face_l1=0.0001 face_bound=0.0001 passes=True/True/True
+
+mixed-rate recurrent and transient-face degenerations
+cases: 12
+nonexpansive_failures: 0
+delta_nonincrease_failures: 0
+worst eps/(2Q): 0.925227 case=mixed_1 q_total=1.16922788556e-06 r_max=1.39816464598e-05 mu_after=0.185166418728 passes=True
+
+w21_second boundary-event filter
+source: /tmp/codex-sigma-wall/w21_second/second_order_full_records.json
+records: 172
+with_local_samples: 252
+max_local_ratio: 0.0
+with_transition_samples: 608
+max_transition_ratio: 2.0000000000392326
+sharp_transition_count_ratio_ge_1p9: 49
+sharp ratio=2.00000000004 stratum=random_014 source=zero-active-nullspace t=1e-05 min_entry=3.51e-07 t/min_entry=28.4664 visible=5 vertices=6
+sharp ratio=2.00000000001 stratum=random_014 source=zero-active-basis t=3e-05 min_entry=3.51e-07 t/min_entry=85.3991 visible=5 vertices=6
+sharp ratio=2 stratum=random_011 source=zero-active-basis t=3e-05 min_entry=4.44e-07 t/min_entry=67.4924 visible=3 vertices=4
+sharp ratio=2 stratum=random_014 source=zero-active-nullspace t=0.0001 min_entry=3.51e-07 t/min_entry=284.664 visible=5 vertices=6
+sharp ratio=2 stratum=random_011 source=zero-active-nullspace t=0.0003 min_entry=4.44e-07 t/min_entry=674.924 visible=3 vertices=4
+sharp ratio=2 stratum=random_014 source=zero-active-basis t=0.0003 min_entry=3.51e-07 t/min_entry=853.991 visible=5 vertices=6
+sharp ratio=2 stratum=random_011 source=zero-active-basis t=0.0001 min_entry=4.44e-07 t/min_entry=224.975 visible=3 vertices=4
+sharp ratio=2 stratum=random_011 source=zero-active-basis t=0.001 min_entry=4.44e-07 t/min_entry=2249.75 visible=3 vertices=4
