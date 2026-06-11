@@ -1622,3 +1622,18 @@ mass. If it lands: C_D = 2(1+2*delta_0)(2 + C_mu) and the displacement lemma fol
 This is exactly w30_maxvol's territory (negative coefficients vs maximality) — awaiting
 its verdict; if its died-at dovetails, the combined prover takes the interface fact as
 the single target.
+
+## w30_maxvol (codex) — DIED-AT THE SAME STATEMENT: the TRANSVERSE COEFFICIENT TAX
+Full answer + proof note: notes/swarm-answers/w30_maxvol.md; numerics:
+experiments/out/w30_maxvol/. Independently reduces the displacement lemma to EXACTLY the
+w30_telescope interface fact, with the SAME conditional constant:
+  TAX: sum_j (P_{u_s j})_+ * sum_{t != s} (-a_t(j))_+ <= C_mu * delta
+  => C_D <= 2(1+2*delta_0)(2 + C_mu) => displacement lemma => face estimate (Markov,
+  written) => conditional L4 => THE GLOBAL W-FREE O(sqrt(delta)) THEOREM.
+Max-volume gives the Cramer bounds (|a| <= 1) but does NOT rule out signed-face
+cancellation — the tax is genuinely new content. Note: the tax VANISHES at delta = 0
+(all coefficients convex in the H-M form); it asserts near-positivity forces
+near-convexity of coefficients ON the representative's positive support, at rate delta.
+TWO INDEPENDENT PROVERS CONVERGED on one exact inequality with matching constants — the
+campaign's named open is now THE TAX. LAUNCHING w31_tax (combined prover: both proof
+notes as input + the sum rules + in-class concentration + the exact coefficient algebra).

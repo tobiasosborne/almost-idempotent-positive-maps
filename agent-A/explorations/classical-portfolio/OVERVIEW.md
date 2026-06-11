@@ -308,10 +308,20 @@ same nearest-branch/merging phenomenon that broke the local-law assembly. Synthe
 (end of 2026-06-11): the clustered-conditioning lemma (L2) is PROVED AND AUDITED in
 dimension-free form (η = √δ clustering; max-volume actual-row basis gives coefficient
 bound A = 1 — the initial rank-dependent bound was an artifact, `w26_cluster` +
-`w26_cluster_audit`). The single remaining lemma of the bridge is **L3, the
-support-concentration estimate** (bounded merged coordinates + the exact sum rules +
-near-positivity ⇒ classes near equal-input blocks, cross-class mass small) —
-`w27_concentration` in flight.
+`w26_cluster_audit`). The bridge then cascaded through three
+further reductions (each wave proving partials and naming the next statement —
+`w27_concentration`: O(δ) support-concentration refuted, true scale √δ;
+`w28_face`: reduced to the representative displacement lemma; `w29_displacement`:
+general-row version refuted at δ=0, max-volume form numerically bounded;
+`w30_telescope` + `w30_maxvol`: TWO INDEPENDENT reductions converging on one
+inequality with matching constants). THE CAMPAIGN'S SINGLE NAMED OPEN (as of the end
+of 2026-06-11) is the **transverse coefficient tax**:
+Σⱼ(P_{u_s j})₊·Σ_{t≠s}(−a_t(j))₊ ≤ C_μ·δ — rows positively fed by a max-volume
+representative cannot carry much negative foreign-coefficient mass. It vanishes at
+δ=0 (coefficients are convex there); proving it closes, in sequence: the displacement
+lemma → the face estimate (Markov step, written) → the L4 assembly → the GLOBAL
+W-free O(√δ) theorem feeding `op-exposed-hull` → `op-classical`. Prover in flight
+(`w31_tax`).
 
 
 ## 5. What a future agent should do (and not do)
