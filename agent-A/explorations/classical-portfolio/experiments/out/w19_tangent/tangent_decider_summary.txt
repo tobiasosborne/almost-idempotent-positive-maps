@@ -1,0 +1,28 @@
+tangent-cone decider summary
+created: 2026-06-11 13:31:48
+seed: 19020
+samples_random: 240
+samples_total: 246
+norm: entrywise infinity
+norm_bound: 1.0
+zero_budget_max: 0.0
+budget1_min: 0.0
+budget1_median: 0.0
+budget1_mean: 0.975609756097561
+budget1_p90: 2.0
+budget1_p99: 2.0
+budget1_max: 2.0
+counterexample_count: 0
+elapsed_s: 7.7949748039245605
+
+top budget1 strata
+idx=0 n=3 k=2 t=1 zero=0 budget1=2 row=2 neg_subset=[0] gammas=[-1.0, 1.0]
+idx=4 n=3 k=2 t=1 zero=0 budget1=2 row=2 neg_subset=[1] gammas=[1.0, -1.0]
+idx=5 n=6 k=3 t=2 zero=0 budget1=2 row=4 neg_subset=[1] gammas=[0.0, -1.0, 1.0]
+idx=6 n=7 k=2 t=3 zero=0 budget1=2 row=5 neg_subset=[0] gammas=[-1.0, 1.0]
+idx=7 n=8 k=4 t=2 zero=0 budget1=2 row=5 neg_subset=[0] gammas=[-1.0, 1.0, 1.0572696179070231, -1.0572696179070231]
+idx=8 n=3 k=2 t=1 zero=0 budget1=2 row=0 neg_subset=[0] gammas=[-1.0, 1.0]
+idx=10 n=5 k=2 t=2 zero=0 budget1=2 row=0 neg_subset=[0] gammas=[-1.0, 0.9999999999999998]
+idx=11 n=6 k=4 t=1 zero=0 budget1=2 row=5 neg_subset=[0] gammas=[-1.0, 0.0, 0.0, 1.0]
+idx=13 n=9 k=4 t=3 zero=0 budget1=2 row=0 neg_subset=[0] gammas=[-1.0, 1.1190550498326832, 1.4639493217143387, -1.583004371547022]
+idx=14 n=10 k=5 t=4 zero=0 budget1=2 row=0 neg_subset=[0] gammas=[-1.0, -1.0, 0.34640485148819306, 1.3564043280330211, 0.29719082047878576]

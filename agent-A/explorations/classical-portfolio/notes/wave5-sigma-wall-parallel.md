@@ -1314,3 +1314,23 @@ system stands as GEOMETRY (rows still live in it exactly) but supplies no proxim
 principle — the left/right duality is NOT where hiddenness pays. Wave-19 scoreboard so
 far: boundary DIED-AT (budgets-not-bounds), leftcone REFUTED; the tangent-cone lemma
 (w19_tangent, in flight) carries the round.
+
+## w19_tangent (codex) — THE TANGENT-CONE LEMMA: PROVED (claimed), C = 2 DIMENSION-FREE [pending w19_tangent_audit]
+Full statement + RECOVERED FULL PROOF NOTE: notes/swarm-answers/w19_tangent.md; decider +
+outputs: experiments/out/w19_tangent/. CLAIM: for every H-M normal-form point P_0 and
+every variety tangent A (P_0 A + A P_0 = A, A1 = 0), along any exact C^1 arc:
+  dot-H+(A) <= 2 * dot-delta(A),   dot-delta(A) = max_i sum_{j: P0_ij=0} (-A_ij)_+,
+with C = 2 independent of n, k, partition, mixtures, and minimal block mass — THE
+INFINITESIMAL FORM OF THE LINEAR LAW, dimension-free, hiddenness-free, clone-invariant.
+Sharp at the recurrent-hull derivative; visible-set changes claimed to only lower
+first-order height (the semicontinuity step — the audit's prime target). Decider: 246
+strata, zero dangerous-cone (dot-delta = 0) directions, budget-1 max = 2.0 exactly
+(matches sharpness). Remaining gap (honest): second-order/curve-selection upgrade through
+the exact chart + stratum-boundary handling => the LOCAL linear law near the H-M locus.
+P(local route works) = 0.74; P(global all-strata-uniform) = 0.52. AUDIT LAUNCHED
+(w19_tangent_audit: re-derivation, the semicontinuity attack, independent decider with
+extreme strata, arc-level integration spot check).
+ORCHESTRATION LESSON (logged): codex `-o answer.md` OVERWRITES a worker-authored
+answer.md in the same workdir — the proof note had to be recovered from the transcript.
+Future briefs: instruct workers to write long artifacts to proof.md/verdict.md, never
+answer.md.
