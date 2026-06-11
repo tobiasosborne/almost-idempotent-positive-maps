@@ -1032,3 +1032,26 @@ Equivalently: the sharpest new attack target is the BARRIER INEQUALITY itself �
 "hidden top vertex => sigma_tilde_v <= C0 * sqrt(delta)" directly (if true with any
 universal C0, the s8 + height-collapse branches finish via the proved belt: that IS the
 kernel conjecture in its leanest form yet, now with a measured constant 1.52 to beat).
+
+## w16_quotient (codex) — 2' FORMULATED + BRIDGE SECURED; clone-invariance PROVED; died at ANTI-SPLITTING
+Full answer (LaTeX-ready statements): notes/swarm-answers/w16_quotient.md. DELIVERED:
+(1) Conjecture 2' — the floor on the QUOTIENT carrier graph (classes = exactly coincident
+rows; Q_{alpha beta} = aggregated mass; well-definedness proved). (2) CLONE-INVARIANCE
+PROVED: quotient objects of any duplicate split are canonically isomorphic with equal Q —
+the w15 obstruction is neutralized BY CONSTRUCTION. (3) LUMPING LEMMA (the bridge): Q1 = 1,
+Q^2 = Q, delta(Q) <= delta(P), g descends Q-harmonically, band closure descends,
+||(B')^2 - B'|| <= ||B^2 - B||, and the w12 finisher applied to Q gives class collapse
+= index collapse (identical rows). Finisher-calibrated form: theta_C >= 20*tau suffices at
+delta_0 <= 1e-4. (4) NEW CAVEAT — exact quotienting is NOT ROBUST: similarity conjugation
+P_eta = S P_hat S^{-1}, S = I + O(eta), keeps exact idempotence + row sums while smearing
+duplicates into an eta-cloud (path weights O(1/M) + O(eta)); the honest target is the
+eta_cl-CLUSTERED quotient with eta_cl <~ delta (cost: zeta -> zeta + O(eta_cl)).
+(5) DIED-AT (boxed): Pi'_C >= c*tau - C'*L*delta — current identities control AGGREGATE
+path sums, not a best single path product; mass can split over many nearly coincident
+quotient classes; the missing piece is an ANTI-SPLITTING principle from hiddenness/
+realization. The quotient H-M surrogate survives: (Q^+)_{[v]}(S_t \ C_W) >= (B/3-5)*tau,
+Q^k = Q. P(2' true exact) ~ 0.48, provable-in-frame ~ 0.22; CLUSTERED variant: ~ 0.66 /
+0.38. ORCHESTRATOR: the campaign's kernel is now the pair {anti-splitting principle for
+the clustered quotient, the barrier inequality sigma_tilde <= C0*sqrt(delta)} — these are
+dual faces: anti-splitting concentrates shallow mass into one fat quotient component
+(finisher exposes => contradiction => barrier); splitting forever IS the thin-web geometry.
