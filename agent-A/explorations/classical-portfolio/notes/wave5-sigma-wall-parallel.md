@@ -1538,3 +1538,18 @@ clip/normalize. Instance checks: w19 leftcone family harmless here (2*delta dire
 w16/w17 (above-corner) warn only about singleton-representative choice (their B
 coefficients are already near-convex). P(reading survives audit) = 0.83.
 NEXT: the clustered-conditioning lemma (L2) is the single named missing step.
+
+## w26_cluster (codex) — L2 PARTIAL: the rank-conditioned clustered chart [audit in flight]
+Full answer + proof note: notes/swarm-answers/w26_cluster.md; verification:
+experiments/out/w26_cluster/. LANDED: a clustered 1.12 chart with explicit constants —
+clustering scale eta = sqrt(delta), proportionality error F = eta, coefficient bound
+A = R(1+R)^{k-1} (R = 1 + 2*delta, k = rank). VERIFIED: kills the split-block 1/delta
+blow-up (old coefficient negative mass 500/5000 -> merged max coefficient 1.0, merged
+H-M distance 2*delta); leftcone + certified instances behave. HONEST DEFECT: A is
+RANK-DEPENDENT (~2^{k-1} at small delta) — the classical twin of the parent project's
+Frobenius-vs-order-unit /prop-rank-gap disease; NOT yet the dimension-free L2 the global
+route needs. L3 stated precisely in the proof note; remaining gap = a dimension-free
+support-margin/concentration estimate. AUDIT LAUNCHED (w26_cluster_audit) with the
+DECISIVE EXPERIMENT specified: adversarial chains of k near-proportional classes at
+pairwise scale eta to measure whether the (1+R)^{k-1} cascade SATURATES (rank-dependence
+real) or stays O(1) (bound loose — improvable to polynomial/constant).

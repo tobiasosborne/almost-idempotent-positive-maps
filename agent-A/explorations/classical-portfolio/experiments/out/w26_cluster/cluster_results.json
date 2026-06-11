@@ -1,0 +1,284 @@
+[
+  {
+    "delta": 0.001,
+    "idempotence_inf": 0.0,
+    "max_coeff_negative_mass": 500.0,
+    "max_old_singleton_l1": 2.0,
+    "n": 3,
+    "name": "split_block_unmerged_eps_0.001",
+    "rank_numeric": 2,
+    "rep_pair_l1": {
+      "0-1": 0.003996007984031963
+    },
+    "repaired_merged_chart": {
+      "basis_reps": [
+        0,
+        2
+      ],
+      "clustered_rows": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "coefficients": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.998003992015968,
+          0.001996007984031936
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "max_abs_coeff": 1.0,
+      "max_negative_coeff_mass": 0.0,
+      "merged_HM_candidate_l1": 0.002000000000000001,
+      "merged_HM_candidate_over_delta": 2.000000000000001,
+      "q1_q2_l1": 0.003996007984031963
+    },
+    "reps": [
+      0,
+      1
+    ],
+    "rowsum_inf": 1.1102230246251565e-16,
+    "sqrt_delta": 0.03162277660168379,
+    "sqrt_delta_components_on_given_reps": [
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "delta": 0.0001,
+    "idempotence_inf": 0.0,
+    "max_coeff_negative_mass": 5000.0,
+    "max_old_singleton_l1": 2.0,
+    "n": 3,
+    "name": "split_block_unmerged_eps_0.0001",
+    "rank_numeric": 2,
+    "rep_pair_l1": {
+      "0-1": 0.00039996000799837853
+    },
+    "repaired_merged_chart": {
+      "basis_reps": [
+        0,
+        2
+      ],
+      "clustered_rows": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "coefficients": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.9998000399920016,
+          0.00019996000799840034
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "max_abs_coeff": 1.0,
+      "max_negative_coeff_mass": 0.0,
+      "merged_HM_candidate_l1": 0.00019999999999998898,
+      "merged_HM_candidate_over_delta": 1.9999999999998896,
+      "q1_q2_l1": 0.00039996000799837853
+    },
+    "reps": [
+      0,
+      1
+    ],
+    "rowsum_inf": 0.0,
+    "sqrt_delta": 0.01,
+    "sqrt_delta_components_on_given_reps": [
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "comment": "no merge at sqrt(delta); transient coefficient is convex",
+    "delta": 0.001,
+    "idempotence_inf": 4.336808689942022e-22,
+    "max_coeff_negative_mass": 0.0,
+    "max_old_singleton_l1": 0.001999999999999963,
+    "n": 4,
+    "name": "w19_leftcone_eps_0.001",
+    "rank_numeric": 3,
+    "rep_pair_l1": {
+      "0-1": 2.0026666666666664,
+      "0-2": 2.001333333333333,
+      "1-2": 2.001333333333333
+    },
+    "reps": [
+      0,
+      1,
+      2
+    ],
+    "rowsum_inf": 1.1102230246251565e-16,
+    "sqrt_delta": 0.03162277660168379,
+    "sqrt_delta_components_on_given_reps": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "delta": 0.2284002678967354,
+    "idempotence_inf": 2.220446049250313e-16,
+    "max_coeff_negative_mass": 0.0037735849056603774,
+    "max_old_singleton_l1": 1.9372524801592854,
+    "n": 7,
+    "name": "w16_best_rational",
+    "rank_numeric": 4,
+    "rep_pair_l1": {
+      "0-1": 2.4447233377956747,
+      "0-2": 2.3163720125974776,
+      "0-3": 2.799193075875355,
+      "1-2": 2.397469324155536,
+      "1-3": 2.365096166316786,
+      "2-3": 2.4672701996279023
+    },
+    "reps": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "rowsum_inf": 1.1102230246251565e-16,
+    "sqrt_delta": 0.47791240609209484,
+    "sqrt_delta_components_on_given_reps": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ]
+  },
+  {
+    "delta": 0.2329335240003862,
+    "idempotence_inf": 1.1102230246251565e-16,
+    "max_coeff_negative_mass": 0.02387204535160837,
+    "max_old_singleton_l1": 1.8724196588770992,
+    "n": 10,
+    "name": "w17_main_rational",
+    "rank_numeric": 5,
+    "rep_pair_l1": {
+      "0-1": 2.437526146940055,
+      "0-2": 2.3370911785755606,
+      "0-3": 2.814002588867565,
+      "0-4": 2.3562193818214436,
+      "1-2": 2.3948527098740673,
+      "1-3": 2.3958446677777383,
+      "1-4": 2.139613058458305,
+      "2-3": 2.465148855786519,
+      "2-4": 2.437381297246744,
+      "3-4": 2.489317320442078
+    },
+    "reps": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "rowsum_inf": 2.220446049250313e-16,
+    "sqrt_delta": 0.4826318721348459,
+    "sqrt_delta_components_on_given_reps": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ]
+    ]
+  },
+  {
+    "delta": 0.23459249106770677,
+    "idempotence_inf": 2.220446049250313e-16,
+    "max_coeff_negative_mass": 0.02390954533290774,
+    "max_old_singleton_l1": 1.8857127302782624,
+    "n": 10,
+    "name": "w17_robust_rational",
+    "rank_numeric": 5,
+    "rep_pair_l1": {
+      "0-1": 2.4406402676507657,
+      "0-2": 2.3394211742450266,
+      "0-3": 2.8197999399056854,
+      "0-4": 2.3587514078085183,
+      "1-2": 2.3976924097499226,
+      "1-3": 2.3986600669760163,
+      "1-4": 2.1406030934679188,
+      "2-3": 2.4684956749949736,
+      "2-4": 2.4405204357459156,
+      "3-4": 2.492796289487908
+    },
+    "reps": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "rowsum_inf": 1.1102230246251565e-16,
+    "sqrt_delta": 0.4843474899983552,
+    "sqrt_delta_components_on_given_reps": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ]
+    ]
+  }
+]
