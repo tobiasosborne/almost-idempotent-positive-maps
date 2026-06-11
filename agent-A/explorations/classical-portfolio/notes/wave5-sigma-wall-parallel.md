@@ -1445,3 +1445,22 @@ fixed-mass visibility + L1 recoding + L2 (final-profile). ONE estimate remains f
 LOCAL LINEAR LAW: the finite-jet normal projection bound ||(C,D)_{perp M}||^2 <= L *
 delta after final-profile rebasing (+ the arc-scale tau(t) estimate where needed).
 LAUNCHING w22_jet.
+
+## w22_jet (codex) — J1 REFUTED AS STATED: support-addition arcs; the repair is the STRATIFIED bound
+Full answer + long form: notes/swarm-answers/w22_jet.md; counterexample code:
+experiments/out/w22_jet/. THE COUNTEREXAMPLE: exact nonnegative H-M SUPPORT-ADDITION arcs
+(moving from a boundary stratum into a larger stratum, staying exactly H-M) have delta = 0
+to ALL orders but first jet NOT tangent to the fixed stratum — so ||(C,D)_{perp M}||^2 <=
+L*delta is FALSE for ANY finite L, already at n = 2, k = 1 (mu = 1, no small masses, no
+eta involved, arbitrarily small radius): a dimension-free fixed-stratum estimate is not
+unproved but FALSE. HARMLESS FOR THE LAW: along such arcs H = 0 too (they stay in the H-M
+family); they break the CHOSEN COORDINATES only. THE REPAIR (worker's option 3 = the
+orchestrator's reading): the stratified error bound
+  dist_chart((C,D), M_HM)^2 <= L * delta,
+distance to the LOCAL delta = 0 LOCUS (finite union of strata through the base), not one
+stratum — a Lojasiewicz-type error bound on the variety (re-connecting the w18_quadlit
+Luo-Pang lead #1; the numerics' sharp H/delta = 2 says exponent 2 is the truth).
+P(local law true after the repair) = 0.78; P(repaired assembly survives audit) = 0.55.
+LAUNCHING w23_loj (the stratified bound: prove no third-order-flat transverse direction
+exists via the chart second-order algebra; support-addition directions are now INSIDE
+the locus and harmless).

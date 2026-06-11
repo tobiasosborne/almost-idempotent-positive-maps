@@ -1,0 +1,27 @@
+w22_jet exact-chart/support-addition numerics
+{
+  "records": 16,
+  "infinite_J1_ratios": 10,
+  "max_finite_normal_sq_over_delta": 0.10000000000000002,
+  "max_idempotence_err": 2.220446049250313e-16,
+  "max_row_stoch_err": 1.1102230246251565e-16,
+  "max_H_over_delta_finite": 0.0
+}
+
+family parameter delta normal_norm_sq normal_sq/delta H/delta idem_err
+rank1_exact_chart -0.10000000000000001 0.10000000000000001 0.010000000000000002 0.10000000000000002 0 1.39e-17
+rank1_exact_chart -0.029999999999999999 0.029999999999999999 0.00089999999999999998 0.029999999999999999 0 0
+rank1_exact_chart -0.01 0.01 0.0001 0.01 0 0
+rank1_exact_chart -0.001 0.001 9.9999999999999995e-07 0.001 0 2.22e-16
+rank1_exact_chart -0.0001 0.0001 1e-08 9.9999999999999991e-05 0 0
+rank1_exact_chart 0 0 0 0/0 0/0 0
+rank1_exact_chart 1e-08 0 1.0000000000000001e-16 inf 0/0 0
+rank1_exact_chart 9.9999999999999995e-07 0 9.9999999999999998e-13 inf 0/0 0
+rank1_exact_chart 0.0001 0 1e-08 inf 0/0 1.11e-16
+rank1_exact_chart 0.001 0 9.9999999999999995e-07 inf 0/0 0
+rank1_exact_chart 0.01 0 0.0001 inf 0/0 0
+rank2_support_addition 1e-08 0 4.0000000000000004e-16 inf 0/0 0
+rank2_support_addition 9.9999999999999995e-07 0 3.9999999999999999e-12 inf 0/0 0
+rank2_support_addition 0.0001 0 4.0000000000000001e-08 inf 0/0 1.11e-16
+rank2_support_addition 0.001 0 3.9999999999999998e-06 inf 0/0 0
+rank2_support_addition 0.01 0 0.00040000000000000002 inf 0/0 0
