@@ -1,0 +1,163 @@
+nd(row)
++            ub_rhs.append(0.0)
++
++        c = np.zeros(total)
++        for j in pos:
++            c[bidx(s, j)] -= E[j]
++        c[didx] = C
++        res = linprog(
++            c,
++            A_ub=np.array(ub_rows),
++            b_ub=np.array(ub_rhs),
++            A_eq=A_eq,
++            b_eq=b_eq,
++            bounds=bounds,
++            method="highs",
++        )
++        if res.status == 3:
++            unbounded += 1
++            continue
++        if not res.success:
++            infeasible += 1
++            continue
++        margin = -float(res.fun)
++        if best is None or margin > best["margin"]:
++            B = res.x[:nb].reshape(k, n)
++            P = L @ B
++            target = float(sum(max(B[s, j], 0.0) * E[j] for j in range(n)))
++            delta = float(np.maximum(-P, 0.0).sum(axis=1).max())
++            best = {
++                "margin": margin,
++                "target": target,
++                "delta": delta,
++                "ratio": None if delta <= 1e-12 else target / delta,
++                "mask": mask,
++                "positive_columns": pos,
++                "idempotence_inf": float(np.max(np.abs(P @ P - P))),
++                "BL_error_inf": float(np.max(np.abs(B @ L - np.eye(k)))),
++                "rowsum_inf": float(np.max(np.abs(P.sum(axis=1) - 1.0))),
++                "min_entry": float(P.min()),
++                "max_row_negative_mass": delta,
++            }
++
++    if best is None:
++        best = {"margin": None, "target": None, "delta": None, "ratio": None}
++    return {
++        "C": C,
++        "patterns": patterns,
++        "unbounded_patterns": unbounded,
++        "infeasible_patterns": infeasible,
++        "best": best,
++    }
++
++
++def support_constant_upper(L: np.ndarray, s: int, lo: float = 0.0, hi: float = 8.0) -> dict:
++    while True:
++        rec = solve_support_margin(L, s, hi)
++        if rec["unbounded_patterns"] == 0 and rec["best"]["margin"] is not None and rec["best"]["margin"] <= 2e-8:
++            break
++        hi *= 2.0
++        if hi > 512:
++            return {"status": "failed_to_bracket", "hi": hi, "last": rec}
++    last = rec
++    for _ in range(32):
++        mid = 0.5 * (lo + hi)
++        rec = solve_support_margin(L, s, mid)
++        if rec["unbounded_patterns"] == 0 and rec["best"]["margin"] is not None and rec["best"]["margin"] <= 2e-8:
++            hi = mid
++            last = rec
++        else:
++            lo = mid
++    return {"status": "bracketed", "upper_C": hi, "last_nonpositive": last}
++
++
++def summarize(records: list[dict]) -> str:
++    lines = []
++    for rec in records:
++        if rec["kind"] == "coefficient_only_relaxation":
++            lines.append(
++                f"RELAX k={rec['k']} a={rec['a']}: delta={rec['row_negative_mass_of_test_weight']:.6g} "
++                f"bary_err={rec['barycenter_error_inf']:.3g} excess={rec['signed_face_excess']:.6g} "
++                f"max_minor={rec['max_abs_minor']:.6g}"
++            )
++            continue
++        c2 = rec["C2"]["best"]
++        upper = rec["upper"]
++        upper_txt = upper.get("upper_C", upper.get("hi"))
++        lines.append(
++            f"FULL {rec['name']}: k={rec['k']} n={rec['n']} a={rec['a']} "
++            f"max_minor={rec['max_abs_minor']:.6g} "
++            f"C2_margin={c2['margin']:.3g} C2_target={c2['target']:.6g} "
++            f"C2_delta={c2['delta']:.6g} C2_ratio={c2['ratio'] if c2['ratio'] is not None else 'na'} "
++            f"cert_upper_C~{upper_txt:.6g}"
++        )
++    return "\n".join(lines) + "\n"
++
++
++def main() -> None:
++    records: list[dict] = []
++    records.append(relaxed_signed_pair_record(3, 0.5))
++    records.append(relaxed_signed_pair_record(4, 0.5))
++
++    cases = []
++    for a in [0.05, 0.2, 0.5]:
++        cases.append((f"pair_k3_a_{a:g}", signed_pair_support(3, a), a))
++    for a in [0.05, 0.2, 0.35]:
++        cases.append((f"cycle_k4_a_{a:g}", cycle_support(4, a), a))
++
++    for name, L, a in cases:
++        k = L.shape[1]
++        minor, arg = max_abs_minor(L, k)
++        if minor > 1.0 + 1e-9:
++            records.append(
++                {
++                    "kind": "full_support_skipped",
++                    "name": name,
++                    "k": k,
++                    "n": int(len(L)),
++                    "a": a,
++                    "max_abs_minor": minor,
++                    "reason": "support violates max-volume minor bound",
++                }
++            )
++            continue
++        c2 = solve_support_margin(L, 0, 2.0)
++        upper = support_constant_upper(L, 0)
++        records.append(
++            {
++                "kind": "full_support_lp",
++                "name": name,
++                "k": k,
++                "n": int(len(L)),
++                "a": a,
++                "max_abs_minor": minor,
++                "max_minor_rows": list(arg) if arg is not None else None,
++                "C2": c2,
++                "upper": upper,
++            }
++        )
++
++    (OUT / "lp_excess_audit_results.json").write_text(json.dumps(records, indent=2, sort_keys=True))
++    summary = summarize([r for r in records if r["kind"] != "full_support_skipped"])
++    skipped = [
++        f"SKIP {r['name']}: max_minor={r['max_abs_minor']:.6g} {r['reason']}"
++        for r in records
++        if r["kind"] == "full_support_skipped"
++    ]
++    if skipped:
++        summary += "".join(line + "\n" for line in skipped)
++    (OUT / "lp_excess_audit_summary.txt").write_text(summary)
++    print(summary, end="")
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/codex-sigma-wall/w32_excess/progress.md b/codex-sigma-wall/w32_excess/progress.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..6a742ddcaff4c99d2c6cc396d67bc0620747a993
+--- /dev/null
++++ b/codex-sigma-wall/w32_excess/progress.md
+@@ -0,0 +1,2 @@
++stage 1: workspace mapped; reading w31/w30/w27 artifacts and scripts next.
++stage 2: prior reductions read; coefficient-only relaxation identified as too weak at delta=0.
+

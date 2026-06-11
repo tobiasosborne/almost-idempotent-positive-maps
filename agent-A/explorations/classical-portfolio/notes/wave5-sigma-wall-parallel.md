@@ -1653,3 +1653,13 @@ under exact idempotence. Chain unchanged: excess => tax => displacement => face 
 the global W-free O(sqrt(delta)) theorem. LAUNCHING w32_excess (extremal/LP-duality
 attack at fixed small k + the exact coefficient identities; the statement's finiteness
 is the new leverage).
+
+## w32_excess — INTERRUPTED (user pause: network maintenance, 2026-06-11 ~18:15)
+Stopped cleanly at stage 2. Partial state saved to experiments/out/w32_excess/ (brief,
+progress, lp_excess_audit.py, err tail). Intermediate finding worth keeping: the
+COEFFICIENT-ONLY LP relaxation of the signed-face excess is TOO WEAK already at
+delta = 0 — the geometric/full-idempotence constraints are load-bearing from the start
+(the LP loop must include them from round one). RELAUNCH: the brief is at
+notes/briefs/w32_excess.md (verbatim); relaunch when the network is stable.
+ALSO ARCHIVED (volatility insurance): ALL wave-14..32 worker briefs from /tmp into
+notes/briefs/ (44 files) — the complete orchestration record is now in-repo.
