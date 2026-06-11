@@ -1609,3 +1609,16 @@ R1 — iterated identity / self-improvement T <= a*T + b*delta) and w30_maxvol (
 max-volume property directly: Cramer-type coefficient bounds — what does max-volume
 FORBID about positive mass at large displacement; the delta=0 counterexample shows
 exactly the failure mode the property must exclude — use it as the guide).
+
+## w30_telescope (codex) — DIED-AT: idempotence alone gives NO contraction; the interface fact is named
+Full answer + proof note: notes/swarm-answers/w30_telescope.md; numerics:
+experiments/out/w30_telescope/. THE EXACT LEAK: in the two-step positive expansion the
+identity a*P^+ = P_{u.} + a*P^- + b*P^+ - b*P^- returns T with coefficient EXACTLY 1 —
+T <= T + O(delta), no contraction from idempotence alone (a clean structural fact: the
+displacement lemma genuinely needs the max-volume input). THE MINIMAL INTERFACE FACT
+(precisely posed): sum_j (P_{u_s j})_+ * sum_{t != s} (-beta_t(j))_+ <= C_mu * delta —
+the representative's positive mass weighted by the target rows' NEGATIVE coefficient
+mass. If it lands: C_D = 2(1+2*delta_0)(2 + C_mu) and the displacement lemma follows.
+This is exactly w30_maxvol's territory (negative coefficients vs maximality) — awaiting
+its verdict; if its died-at dovetails, the combined prover takes the interface fact as
+the single target.
