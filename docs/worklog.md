@@ -500,3 +500,22 @@ LaTeX report (13 shards, 3 hostile review rounds, overclaim bar PASSED) delivere
 sent as report/main.pdf (exploration lane). All ~45 worker verdicts archived in
 notes/swarm-answers/; the complete spiral record in notes/wave5-sigma-wall-parallel.md.
 Beads: aipm-3u6 carries the kernel; aipm-sjw (report) done; H-M acquisition bead filed.
+
+## 2026-06-11 (cont.) — kernel-conjecture document; Hognas-Mukherjea acquired; autopsy launched
+
+Three follow-ons after the day-2 close. (1) **report/kernel-conjecture.tex** (user
+deliverable, sent): the fully self-contained statement of the minimal open input — the
+KERNEL CONJECTURE (exists universal delta_0, B: for delta <= delta_0, W nonempty and every
+hidden row vertex with sigma-tilde > sqrt(delta) is within B*sqrt(delta) of conv W), with
+all 7 definitions from scratch, the conditional chain theorem (kernel => linear hull bound
+=> HLC => op-exposed-hull => op-classical, per-link statuses), the stronger path-product-
+floor working form (Conjecture 2 + the proved component-finisher bridge), and the
+evidence/constraints ledger (what any proof must respect, what routes are proved dead).
+(2) **refs: Hognas-Mukherjea ingested** (user-downloaded book, ISBN 978-0-387-77548-7):
+refs/hognas-mukherjea-2011/ PDF + pdftotext extraction; manifest lockstep (checksums
+51->53, lock cache-only entries, SOURCES.md, test_fetch_refs count red->green; 53/53
+verify). Closes the wave-10.5 source-gap discovery (B-S cite the idempotent classification
+without proof). (3) **w14 autopsy launched** (codex): locate the real structure-theorem
+proof (section 2.2) and audit each step under the campaign's ACTUAL perturbation (exactness
+free, only positivity perturbed): SIGN-ROBUST vs SIGN-RIGID per step + the signed-surrogate
+synthesis question. Bead aipm-e9p in progress. All pushed through 2d090de.
