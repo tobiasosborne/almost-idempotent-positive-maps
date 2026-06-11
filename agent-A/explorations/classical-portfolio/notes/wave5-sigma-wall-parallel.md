@@ -1170,3 +1170,23 @@ asymptotic regime is where these plans live. Leads to bank: the quasi-positive l
 cone lemma (internal); the clustered quotient floor (internal); Kato/Stewart-Sun
 projection-perturbation + Birkhoff-Hilbert contraction sources (ACQUIRE before canonical
 use). Synthesis deferred until all 5 land.
+
+## w18_quadlit (codex) — 10 ranked literature leads; the Douglas-Ando reframing
+Full table: notes/swarm-answers/w18_quadlit.md (every item UNVERIFIED-LEAD until byte-
+pinned). HEADLINES: (#2, conf 0.85) Douglas 1965 / Ando 1966 — norm-one projections on
+l1/l-infty have averaging/conditional-expectation normal forms = the H-M family; our P has
+||P||_{infty->infty} = 1 + 2*delta, so THE LINEAR LAW IS EXACTLY a quantitative stability
+statement for contractive projections on l_infty^n ("hidden height forces projection-norm
+excess >= c*H") — the cleanest W-free reframing yet. (#1, conf 0.75) Luo-Pang 1994 /
+Hoffman / metric-subregularity error bounds: dist(x, S) <= C||F(x)||^theta on compact
+semialgebraic sets; theta = 1 under linear regularity => the FIXED-n linear law may be
+nearly free; the singular strata where theta < 1 would be exactly the interesting
+geometry; n-dependence of C is the named risk. (#4, conf 0.75) Markov chain tree theorem
+(Freidlin-Wentzell): stationary weights = spanning-tree products — a candidate mechanism
+to convert aggregate shallow mass into tree products (anti-splitting), with the honest
+risk that tree products decay exponentially in component size (the thin-chain obstruction
+reborn). Also: Kato similarity (conf 0.95) for the clustered-quotient robustness; Meyer
+stochastic complementation (0.90) for cluster aggregation; Stewart-Sun Riccati sep-bounds;
+Putinar/Lasserre for hiddenness-aware fixed-n SOS. One suspicious citation flagged by the
+orchestrator: an attribution to "Hume" (impossibility of raw O(delta) distance) — likely
+garbled; verify before any use. Acquisition shopping list filed as a bead.
