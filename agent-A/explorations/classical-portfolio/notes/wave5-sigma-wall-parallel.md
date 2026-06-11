@@ -1285,3 +1285,18 @@ small-delta question is untouched). P(exact antecedent instance exists at delta 
 - w19_boundary: the boundary-product dichotomy on the quotient (B^m - B = -sum B^r E C'
   exact; fat component OR charged boundary mass) at the anti-splitting frontier; horn
   measurements on the certified antecedent instances.
+
+## w19_boundary (codex) — DIED-AT: the boundary-product dichotomy fails as stated (height cancels)
+Full answer: notes/swarm-answers/w19_boundary.md; measurements + both-horns-fail candidate:
+experiments/out/w19_boundary/. BANKED (exact, clone-invariant, quotient): B^2 - B = -EC;
+B^m - B = -sum_{r<=m-2} B^r EC; tr B - tr B^2 = tr(EC). DIED-AT (boxed): ||(EC)_{alpha,*}||_1
+>= c''*tau (or ||EC||_{infty->1} >= c''*tau) for shallow rows carrying high-hidden mass —
+the identities only yield the UPPER budget (Q^+)_{vT} <= 4*tau/lambda from v's own negative
+budget; it is not a lower bound and H CANCELS from it. Horn measurements on the certified
+instances: Pi/tau ~ 1e-4..2.5e-4 AND ||EC||/tau ~ 0.003..0.021 — both horns fail there.
+ORCHESTRATOR CAVEAT: those instances are ABOVE-CORNER (delta ~ 0.23), where 4*delta = 0.93
+> 0.85*tau = 0.41 — the finisher horn is arithmetically dead at that scale regardless; the
+dichotomy's live habitat (small delta) is untested by these objects. Still, "the charge is
+a budget, not a bound" is a genuine structural death certificate for the m-identity route
+ALONE. P(dichotomy as stated) = 0.18; P(closes anti-splitting) = 0.07. The anti-splitting
+frontier now rests on w19_tangent / w19_leftcone (in flight).
