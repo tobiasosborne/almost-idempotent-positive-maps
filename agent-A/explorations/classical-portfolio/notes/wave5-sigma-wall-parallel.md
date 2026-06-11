@@ -1300,3 +1300,17 @@ dichotomy's live habitat (small delta) is untested by these objects. Still, "the
 a budget, not a bound" is a genuine structural death certificate for the m-identity route
 ALONE. P(dichotomy as stated) = 0.18; P(closes anti-splitting) = 0.07. The anti-splitting
 frontier now rests on w19_tangent / w19_leftcone (in flight).
+
+## w19_leftcone (codex) — REFUTED AS STATED (exact n=4 family); weak replacement proved
+Full answer: notes/swarm-answers/w19_leftcone.md; counterexample + w16 vertex enumeration:
+experiments/out/w19_leftcone/. The quasi-positive left-fixed-cone extreme-point lemma is
+FALSE: an exact n=4, rank-3 idempotent family with delta = eps has a K_C extreme point
+-> (1/2, 1/2, 0, 0) at l1-distance -> 2/3 from the ROW SET (-> 1 from the visible rows) as
+eps -> 0. No O(delta) row-proximity holds for left-fixed quasi-positive extreme points.
+PROVED replacement (clone-invariant but too weak for the height payoff):
+dist_1(l, conv{p_i}) <= (2+4*delta)*neg(l). The w16 n=7 vertex enumeration is consistent
+(many K_C vertices far from visible rows). READING: the k-dim fixed-space coordinate
+system stands as GEOMETRY (rows still live in it exactly) but supplies no proximity
+principle — the left/right duality is NOT where hiddenness pays. Wave-19 scoreboard so
+far: boundary DIED-AT (budgets-not-bounds), leftcone REFUTED; the tangent-cone lemma
+(w19_tangent, in flight) carries the round.

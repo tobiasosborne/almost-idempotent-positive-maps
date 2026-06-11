@@ -1,0 +1,254 @@
+[
+  {
+    "C": 0.0,
+    "claimed_dist_rows": 0.6666666666666667,
+    "claimed_dist_visible_rows_0_1_2": 1.1333333333333335,
+    "claimed_fixed_inf": 0.0,
+    "claimed_l": [
+      0.5,
+      0.5,
+      -0.0,
+      0.0
+    ],
+    "claimed_neg": 0.0,
+    "delta": 0.1,
+    "enumerated_vertices": 3,
+    "enumeration_contains_claimed": true,
+    "eps": 0.1,
+    "idempotence_inf": 5.597374415818497e-17,
+    "max_enum_dist_rows": 0.6666666666666664,
+    "min_enum_distance_to_claimed": 9.506284648352903e-16,
+    "rowsum_inf": 2.220446049250313e-16
+  },
+  {
+    "C": 1.0,
+    "claimed_dist_rows": 0.8666666666666668,
+    "claimed_dist_visible_rows_0_1_2": 1.1666666666666667,
+    "claimed_fixed_inf": 1.1102230246251565e-16,
+    "claimed_l": [
+      0.55,
+      0.55,
+      -0.1,
+      0.0
+    ],
+    "claimed_neg": 0.1,
+    "delta": 0.1,
+    "enumerated_vertices": 8,
+    "enumeration_contains_claimed": true,
+    "eps": 0.1,
+    "idempotence_inf": 5.597374415818497e-17,
+    "max_enum_dist_rows": 0.8666666666666665,
+    "min_enum_distance_to_claimed": 8.101158632811689e-16,
+    "rowsum_inf": 2.220446049250313e-16
+  },
+  {
+    "C": 2.0,
+    "claimed_dist_rows": 1.0666666666666667,
+    "claimed_dist_visible_rows_0_1_2": 1.2666666666666668,
+    "claimed_fixed_inf": 0.0,
+    "claimed_l": [
+      0.6,
+      0.6,
+      -0.2,
+      0.0
+    ],
+    "claimed_neg": 0.2,
+    "delta": 0.1,
+    "enumerated_vertices": 8,
+    "enumeration_contains_claimed": true,
+    "eps": 0.1,
+    "idempotence_inf": 5.597374415818497e-17,
+    "max_enum_dist_rows": 1.0666666666666664,
+    "min_enum_distance_to_claimed": 1.762479051592436e-15,
+    "rowsum_inf": 2.220446049250313e-16
+  },
+  {
+    "C": 0.0,
+    "claimed_dist_rows": 0.6666666666666667,
+    "claimed_dist_visible_rows_0_1_2": 1.0133333333333334,
+    "claimed_fixed_inf": 0.0,
+    "claimed_l": [
+      0.5,
+      0.5,
+      -0.0,
+      0.0
+    ],
+    "claimed_neg": 0.0,
+    "delta": 0.01,
+    "enumerated_vertices": 3,
+    "enumeration_contains_claimed": true,
+    "eps": 0.01,
+    "idempotence_inf": 1.734723475976807e-18,
+    "max_enum_dist_rows": 0.6666666666666667,
+    "min_enum_distance_to_claimed": 8.11004909062607e-15,
+    "rowsum_inf": 0.0
+  },
+  {
+    "C": 1.0,
+    "claimed_dist_rows": 0.6866666666666668,
+    "claimed_dist_visible_rows_0_1_2": 1.0166666666666666,
+    "claimed_fixed_inf": 0.0,
+    "claimed_l": [
+      0.505,
+      0.505,
+      -0.01,
+      0.0
+    ],
+    "claimed_neg": 0.01,
+    "delta": 0.01,
+    "enumerated_vertices": 8,
+    "enumeration_contains_claimed": true,
+    "eps": 0.01,
+    "idempotence_inf": 1.734723475976807e-18,
+    "max_enum_dist_rows": 0.6866666666666668,
+    "min_enum_distance_to_claimed": 6.910054126119114e-15,
+    "rowsum_inf": 0.0
+  },
+  {
+    "C": 2.0,
+    "claimed_dist_rows": 0.7066666666666668,
+    "claimed_dist_visible_rows_0_1_2": 1.0266666666666666,
+    "claimed_fixed_inf": 0.0,
+    "claimed_l": [
+      0.51,
+      0.51,
+      -0.02,
+      0.0
+    ],
+    "claimed_neg": 0.02,
+    "delta": 0.01,
+    "enumerated_vertices": 8,
+    "enumeration_contains_claimed": true,
+    "eps": 0.01,
+    "idempotence_inf": 1.734723475976807e-18,
+    "max_enum_dist_rows": 0.7066666666666668,
+    "min_enum_distance_to_claimed": 9.349509014211499e-15,
+    "rowsum_inf": 0.0
+  },
+  {
+    "C": 0.0,
+    "claimed_dist_rows": 0.6666666666666667,
+    "claimed_dist_visible_rows_0_1_2": 1.0013333333333332,
+    "claimed_fixed_inf": 0.0,
+    "claimed_l": [
+      0.5,
+      0.5,
+      -0.0,
+      0.0
+    ],
+    "claimed_neg": 0.0,
+    "delta": 0.001,
+    "enumerated_vertices": 3,
+    "enumeration_contains_claimed": true,
+    "eps": 0.001,
+    "idempotence_inf": 4.336808689942022e-22,
+    "max_enum_dist_rows": 0.6666666666666663,
+    "min_enum_distance_to_claimed": 1.2456705046799688e-13,
+    "rowsum_inf": 0.0
+  },
+  {
+    "C": 1.0,
+    "claimed_dist_rows": 0.6686666666666665,
+    "claimed_dist_visible_rows_0_1_2": 1.0016666666666665,
+    "claimed_fixed_inf": 0.0,
+    "claimed_l": [
+      0.5005,
+      0.5005,
+      -0.001,
+      0.0
+    ],
+    "claimed_neg": 0.001,
+    "delta": 0.001,
+    "enumerated_vertices": 8,
+    "enumeration_contains_claimed": true,
+    "eps": 0.001,
+    "idempotence_inf": 4.336808689942022e-22,
+    "max_enum_dist_rows": 0.6686666666666661,
+    "min_enum_distance_to_claimed": 1.0172020018829608e-13,
+    "rowsum_inf": 0.0
+  },
+  {
+    "C": 2.0,
+    "claimed_dist_rows": 0.6706666666666667,
+    "claimed_dist_visible_rows_0_1_2": 1.0026666666666666,
+    "claimed_fixed_inf": 0.0,
+    "claimed_l": [
+      0.501,
+      0.501,
+      -0.002,
+      0.0
+    ],
+    "claimed_neg": 0.002,
+    "delta": 0.001,
+    "enumerated_vertices": 8,
+    "enumeration_contains_claimed": true,
+    "eps": 0.001,
+    "idempotence_inf": 4.336808689942022e-22,
+    "max_enum_dist_rows": 0.6706666666666663,
+    "min_enum_distance_to_claimed": 1.2057618358624067e-13,
+    "rowsum_inf": 0.0
+  },
+  {
+    "C": 0.0,
+    "claimed_dist_rows": 0.6666666666666667,
+    "claimed_dist_visible_rows_0_1_2": 1.0001333333333333,
+    "claimed_fixed_inf": 0.0,
+    "claimed_l": [
+      0.5,
+      0.5,
+      -0.0,
+      0.0
+    ],
+    "claimed_neg": 0.0,
+    "delta": 0.0001,
+    "enumerated_vertices": 3,
+    "enumeration_contains_claimed": true,
+    "eps": 0.0001,
+    "idempotence_inf": 1.8503717077085943e-21,
+    "max_enum_dist_rows": 0.6666666666666659,
+    "min_enum_distance_to_claimed": 1.0129675147730471e-12,
+    "rowsum_inf": 0.0
+  },
+  {
+    "C": 1.0,
+    "claimed_dist_rows": 0.6668666666666667,
+    "claimed_dist_visible_rows_0_1_2": 1.0001666666666666,
+    "claimed_fixed_inf": 0.0,
+    "claimed_l": [
+      0.50005,
+      0.50005,
+      -0.0001,
+      0.0
+    ],
+    "claimed_neg": 0.0001,
+    "delta": 0.0001,
+    "enumerated_vertices": 9,
+    "enumeration_contains_claimed": true,
+    "eps": 0.0001,
+    "idempotence_inf": 1.8503717077085943e-21,
+    "max_enum_dist_rows": 0.6668666666666658,
+    "min_enum_distance_to_claimed": 8.924203776406337e-13,
+    "rowsum_inf": 0.0
+  },
+  {
+    "C": 2.0,
+    "claimed_dist_rows": 0.6670666666666667,
+    "claimed_dist_visible_rows_0_1_2": 1.0002666666666666,
+    "claimed_fixed_inf": 2.710505431213761e-20,
+    "claimed_l": [
+      0.5001,
+      0.5001,
+      -0.0002,
+      0.0
+    ],
+    "claimed_neg": 0.0002,
+    "delta": 0.0001,
+    "enumerated_vertices": 8,
+    "enumeration_contains_claimed": true,
+    "eps": 0.0001,
+    "idempotence_inf": 1.8503717077085943e-21,
+    "max_enum_dist_rows": 0.6670666666666656,
+    "min_enum_distance_to_claimed": 1.2784703309030865e-12,
+    "rowsum_inf": 0.0
+  }
+]

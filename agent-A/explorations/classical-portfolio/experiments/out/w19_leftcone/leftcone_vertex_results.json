@@ -1,0 +1,1204 @@
+{
+  "random_chart_sweep": [
+    {
+      "delta": 0.0023232813871010153,
+      "idempotence_inf": 1.1123914289701275e-16,
+      "max_dist_rows": 0.7841412169540075,
+      "max_dist_rows_over_delta": 337.51452635380383,
+      "max_dist_visible": 0.9704660400457824,
+      "max_dist_visible_over_delta": 417.7135173698127,
+      "num_vertices": 10,
+      "rowsum_inf": 1.1102230246251565e-16,
+      "scale": 0.002,
+      "trial": 10
+    },
+    {
+      "delta": 0.006440482871588285,
+      "idempotence_inf": 1.1123914289701275e-16,
+      "max_dist_rows": 0.6058528396863253,
+      "max_dist_rows_over_delta": 94.06947456672859,
+      "max_dist_visible": 0.7964286711400805,
+      "max_dist_visible_over_delta": 123.65977629619464,
+      "num_vertices": 10,
+      "rowsum_inf": 2.220446049250313e-16,
+      "scale": 0.01,
+      "trial": 3
+    },
+    {
+      "delta": 0.046501764996825276,
+      "idempotence_inf": 4.484260185400046e-16,
+      "max_dist_rows": 0.7647872883432415,
+      "max_dist_rows_over_delta": 16.44641420375021,
+      "max_dist_visible": 0.9856447485516543,
+      "max_dist_visible_over_delta": 21.195856729716503,
+      "num_vertices": 12,
+      "rowsum_inf": 2.220446049250313e-16,
+      "scale": 0.05,
+      "trial": 4
+    }
+  ],
+  "w16": {
+    "C": {
+      "1.0": {
+        "max_dist_rows": 1.355071587364331,
+        "max_dist_rows_over_delta": 5.932880901772793,
+        "max_dist_visible": 1.4701079306297538,
+        "max_dist_visible_over_delta": 6.4365420591118605,
+        "num_vertices": 30,
+        "vertices": [
+          {
+            "dist_rows": 0.5494346766955625,
+            "dist_visible": 0.6193535997035633,
+            "nearest_row": 6,
+            "nearest_visible": 3,
+            "neg": 0.22840026789673545,
+            "vertex": 0
+          },
+          {
+            "dist_rows": 1.0739054910369075,
+            "dist_visible": 1.4701079306297538,
+            "nearest_row": 6,
+            "nearest_visible": 2,
+            "neg": 0.2284002678967354,
+            "vertex": 1
+          },
+          {
+            "dist_rows": 0.6378974602656966,
+            "dist_visible": 1.1487549836104345,
+            "nearest_row": 6,
+            "nearest_visible": 3,
+            "neg": 0.2284002678967355,
+            "vertex": 2
+          },
+          {
+            "dist_rows": 0.5461002824191112,
+            "dist_visible": 0.5461002824191112,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 0.2284002678967355,
+            "vertex": 3
+          },
+          {
+            "dist_rows": 0.40882467343664314,
+            "dist_visible": 0.40882467343664314,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.22840026789673534,
+            "vertex": 4
+          },
+          {
+            "dist_rows": 1.0060192607386786,
+            "dist_visible": 1.0060192607386786,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.2284002678967354,
+            "vertex": 5
+          },
+          {
+            "dist_rows": 1.355071587364331,
+            "dist_visible": 1.374398942554546,
+            "nearest_row": 6,
+            "nearest_visible": 0,
+            "neg": 0.22840026789673554,
+            "vertex": 6
+          },
+          {
+            "dist_rows": 0.47015039385469454,
+            "dist_visible": 0.47015039385469454,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.22840026789673548,
+            "vertex": 7
+          },
+          {
+            "dist_rows": 0.48884698070848354,
+            "dist_visible": 0.48884698070848354,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.22840026789673537,
+            "vertex": 8
+          },
+          {
+            "dist_rows": 1.196622717493676,
+            "dist_visible": 1.2198529270985936,
+            "nearest_row": 4,
+            "nearest_visible": 0,
+            "neg": 0.22840026789673548,
+            "vertex": 9
+          },
+          {
+            "dist_rows": 0.49758456437790094,
+            "dist_visible": 0.49758456437790094,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.2284002678967354,
+            "vertex": 10
+          },
+          {
+            "dist_rows": 1.1727411881033984,
+            "dist_visible": 1.1727411881033984,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.22840026789673545,
+            "vertex": 11
+          },
+          {
+            "dist_rows": 1.0028344885202425,
+            "dist_visible": 1.0028344885202425,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.22840026789673554,
+            "vertex": 12
+          },
+          {
+            "dist_rows": 0.036099863515460115,
+            "dist_visible": 0.036099863515460115,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 0.22840026789673545,
+            "vertex": 13
+          },
+          {
+            "dist_rows": 0.9856048340705039,
+            "dist_visible": 1.0378078527653043,
+            "nearest_row": 6,
+            "nearest_visible": 3,
+            "neg": 0.2284002678967354,
+            "vertex": 14
+          },
+          {
+            "dist_rows": 1.097011990827688,
+            "dist_visible": 1.097011990827688,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 0.22840026789673556,
+            "vertex": 15
+          },
+          {
+            "dist_rows": 1.04860195229129,
+            "dist_visible": 1.308420800032773,
+            "nearest_row": 5,
+            "nearest_visible": 1,
+            "neg": 0.2284002678967355,
+            "vertex": 16
+          },
+          {
+            "dist_rows": 0.5169901756193489,
+            "dist_visible": 0.5169901756193489,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.22840026789673518,
+            "vertex": 17
+          },
+          {
+            "dist_rows": 1.1609938752538511,
+            "dist_visible": 1.1609938752538511,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.22840026789673545,
+            "vertex": 18
+          },
+          {
+            "dist_rows": 0.47253537200978357,
+            "dist_visible": 0.47253537200978357,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.22840026789673548,
+            "vertex": 19
+          },
+          {
+            "dist_rows": 0.4495803997492064,
+            "dist_visible": 0.4495803997492064,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.22840026789673543,
+            "vertex": 20
+          },
+          {
+            "dist_rows": 0.08059925810336281,
+            "dist_visible": 0.08059925810336281,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.22840026789673548,
+            "vertex": 21
+          },
+          {
+            "dist_rows": 0.5158485897298297,
+            "dist_visible": 0.5158485897298297,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.22840026789673545,
+            "vertex": 22
+          },
+          {
+            "dist_rows": 0.4987488690809469,
+            "dist_visible": 0.4987488690809469,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.22840026789673554,
+            "vertex": 23
+          },
+          {
+            "dist_rows": 1.1636142501899915,
+            "dist_visible": 1.3175074033105034,
+            "nearest_row": 4,
+            "nearest_visible": 0,
+            "neg": 0.22840026789673548,
+            "vertex": 24
+          },
+          {
+            "dist_rows": 0.497008154233314,
+            "dist_visible": 0.497008154233314,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.22840026789673556,
+            "vertex": 25
+          },
+          {
+            "dist_rows": 0.4978635191603096,
+            "dist_visible": 0.4978635191603096,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.22840026789673573,
+            "vertex": 26
+          },
+          {
+            "dist_rows": 0.4255437324307139,
+            "dist_visible": 0.4255437324307139,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.2284002678967354,
+            "vertex": 27
+          },
+          {
+            "dist_rows": 0.4420384226501579,
+            "dist_visible": 0.4420384226501579,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.22840026789673545,
+            "vertex": 28
+          },
+          {
+            "dist_rows": 0.44190236194698645,
+            "dist_visible": 0.44190236194698645,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.22840026789673556,
+            "vertex": 29
+          }
+        ]
+      },
+      "10.0": {
+        "max_dist_rows": 5.027503333292128,
+        "max_dist_rows_over_delta": 22.011810141856618,
+        "max_dist_visible": 5.027503333292128,
+        "max_dist_visible_over_delta": 22.011810141856618,
+        "num_vertices": 42,
+        "vertices": [
+          {
+            "dist_rows": 4.619972495864864,
+            "dist_visible": 4.619972495864864,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 2.284002678967354,
+            "vertex": 0
+          },
+          {
+            "dist_rows": 4.624095794068078,
+            "dist_visible": 4.624095794068078,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 2.2840026789673535,
+            "vertex": 1
+          },
+          {
+            "dist_rows": 4.582225166984542,
+            "dist_visible": 4.589439323488944,
+            "nearest_row": 6,
+            "nearest_visible": 3,
+            "neg": 2.284002678967353,
+            "vertex": 2
+          },
+          {
+            "dist_rows": 4.204107292659506,
+            "dist_visible": 4.204107292659506,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 2.2840026789673535,
+            "vertex": 3
+          },
+          {
+            "dist_rows": 4.602661828513841,
+            "dist_visible": 4.602661828513841,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 2.2840026789673544,
+            "vertex": 4
+          },
+          {
+            "dist_rows": 4.475557590647109,
+            "dist_visible": 4.475557590647109,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 2.284002678967354,
+            "vertex": 5
+          },
+          {
+            "dist_rows": 4.8164962358770405,
+            "dist_visible": 4.8164962358770405,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 2.284002678967354,
+            "vertex": 6
+          },
+          {
+            "dist_rows": 4.210388769761432,
+            "dist_visible": 4.210388769761432,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 2.2840026789673544,
+            "vertex": 7
+          },
+          {
+            "dist_rows": 4.535747230472987,
+            "dist_visible": 4.535747230472987,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 2.2840026789673544,
+            "vertex": 8
+          },
+          {
+            "dist_rows": 4.210403681121,
+            "dist_visible": 4.210403681121,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 2.2840026789673544,
+            "vertex": 9
+          },
+          {
+            "dist_rows": 4.488557668954208,
+            "dist_visible": 4.488557668954208,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 2.2840026789673535,
+            "vertex": 10
+          },
+          {
+            "dist_rows": 4.210403681121001,
+            "dist_visible": 4.210403681121001,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 2.284002678967355,
+            "vertex": 11
+          },
+          {
+            "dist_rows": 4.635436395899289,
+            "dist_visible": 4.635436395899289,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 2.284002678967355,
+            "vertex": 12
+          },
+          {
+            "dist_rows": 4.300256430837754,
+            "dist_visible": 4.300256430837754,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 2.284002678967354,
+            "vertex": 13
+          },
+          {
+            "dist_rows": 4.6437065655878325,
+            "dist_visible": 4.6437065655878325,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 2.284002678967354,
+            "vertex": 14
+          },
+          {
+            "dist_rows": 4.190631859855689,
+            "dist_visible": 4.190631859855689,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 2.284002678967354,
+            "vertex": 15
+          },
+          {
+            "dist_rows": 4.474083220674439,
+            "dist_visible": 4.474083220674439,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 2.284002678967354,
+            "vertex": 16
+          },
+          {
+            "dist_rows": 4.508739691253571,
+            "dist_visible": 4.508739691253571,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 2.2840026789673544,
+            "vertex": 17
+          },
+          {
+            "dist_rows": 4.495517186228676,
+            "dist_visible": 4.495517186228676,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 2.2840026789673544,
+            "vertex": 18
+          },
+          {
+            "dist_rows": 4.4969605791650045,
+            "dist_visible": 4.4969605791650045,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 2.284002678967354,
+            "vertex": 19
+          },
+          {
+            "dist_rows": 4.6281949977605885,
+            "dist_visible": 4.6281949977605885,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 2.284002678967354,
+            "vertex": 20
+          },
+          {
+            "dist_rows": 4.5801952202056055,
+            "dist_visible": 4.5801952202056055,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 2.2840026789673535,
+            "vertex": 21
+          },
+          {
+            "dist_rows": 4.658999230370358,
+            "dist_visible": 4.658999230370358,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 2.284002678967354,
+            "vertex": 22
+          },
+          {
+            "dist_rows": 4.210403681121001,
+            "dist_visible": 4.210403681121001,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 2.2840026789673544,
+            "vertex": 23
+          },
+          {
+            "dist_rows": 4.506361823256877,
+            "dist_visible": 4.506361823256877,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 2.2840026789673544,
+            "vertex": 24
+          },
+          {
+            "dist_rows": 4.318060585140422,
+            "dist_visible": 4.318060585140422,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 2.284002678967354,
+            "vertex": 25
+          },
+          {
+            "dist_rows": 4.658999230370356,
+            "dist_visible": 4.658999230370356,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 2.284002678967354,
+            "vertex": 26
+          },
+          {
+            "dist_rows": 4.5878972418464805,
+            "dist_visible": 4.5878972418464805,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 2.284002678967354,
+            "vertex": 27
+          },
+          {
+            "dist_rows": 4.581326957388623,
+            "dist_visible": 4.581326957388623,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 2.284002678967354,
+            "vertex": 28
+          },
+          {
+            "dist_rows": 4.581790004347656,
+            "dist_visible": 4.581790004347656,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 2.284002678967354,
+            "vertex": 29
+          },
+          {
+            "dist_rows": 4.2108493167528,
+            "dist_visible": 4.2108493167528,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 2.2840026789673535,
+            "vertex": 30
+          },
+          {
+            "dist_rows": 4.581790004347655,
+            "dist_visible": 4.581790004347655,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 2.284002678967355,
+            "vertex": 31
+          },
+          {
+            "dist_rows": 4.560486203133953,
+            "dist_visible": 4.560486203133953,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 2.284002678967355,
+            "vertex": 32
+          },
+          {
+            "dist_rows": 4.553107184088225,
+            "dist_visible": 4.553107184088225,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 2.2840026789673535,
+            "vertex": 33
+          },
+          {
+            "dist_rows": 4.576461363117225,
+            "dist_visible": 4.576461363117225,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 2.2840026789673544,
+            "vertex": 34
+          },
+          {
+            "dist_rows": 4.576666160058069,
+            "dist_visible": 4.576666160058069,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 2.2840026789673544,
+            "vertex": 35
+          },
+          {
+            "dist_rows": 4.5878972418464805,
+            "dist_visible": 4.5878972418464805,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 2.284002678967355,
+            "vertex": 36
+          },
+          {
+            "dist_rows": 4.590403518541614,
+            "dist_visible": 4.590403518541614,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 2.284002678967354,
+            "vertex": 37
+          },
+          {
+            "dist_rows": 4.625053256832261,
+            "dist_visible": 4.625053256832261,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 2.284002678967354,
+            "vertex": 38
+          },
+          {
+            "dist_rows": 5.027503333292128,
+            "dist_visible": 5.027503333292128,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 2.284002678967354,
+            "vertex": 39
+          },
+          {
+            "dist_rows": 4.624848459891421,
+            "dist_visible": 4.624848459891421,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 2.2840026789673553,
+            "vertex": 40
+          },
+          {
+            "dist_rows": 4.6250532568322615,
+            "dist_visible": 4.6250532568322615,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 2.2840026789673544,
+            "vertex": 41
+          }
+        ]
+      },
+      "2.0": {
+        "max_dist_rows": 1.5940358512727315,
+        "max_dist_rows_over_delta": 6.979133019202188,
+        "max_dist_visible": 1.6140812433223872,
+        "max_dist_visible_over_delta": 7.066897329788367,
+        "num_vertices": 30,
+        "vertices": [
+          {
+            "dist_rows": 0.957996225064386,
+            "dist_visible": 0.957996225064386,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 0.4568005357934708,
+            "vertex": 0
+          },
+          {
+            "dist_rows": 1.153714046589258,
+            "dist_visible": 1.6140812433223872,
+            "nearest_row": 6,
+            "nearest_visible": 3,
+            "neg": 0.456800535793471,
+            "vertex": 1
+          },
+          {
+            "dist_rows": 0.9290540979916639,
+            "dist_visible": 1.2567806161118817,
+            "nearest_row": 6,
+            "nearest_visible": 3,
+            "neg": 0.4568005357934709,
+            "vertex": 2
+          },
+          {
+            "dist_rows": 0.9482575421660736,
+            "dist_visible": 0.9482575421660736,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 0.4568005357934708,
+            "vertex": 3
+          },
+          {
+            "dist_rows": 0.5437993195464337,
+            "dist_visible": 0.5437993195464337,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.45680053579347096,
+            "vertex": 4
+          },
+          {
+            "dist_rows": 1.2247491221368498,
+            "dist_visible": 1.2247491221368498,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.4568005357934708,
+            "vertex": 5
+          },
+          {
+            "dist_rows": 1.5940358512727315,
+            "dist_visible": 1.6068205232671764,
+            "nearest_row": 6,
+            "nearest_visible": 0,
+            "neg": 0.4568005357934708,
+            "vertex": 6
+          },
+          {
+            "dist_rows": 0.5365531464932595,
+            "dist_visible": 0.5365531464932595,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.456800535793471,
+            "vertex": 7
+          },
+          {
+            "dist_rows": 0.8813429441252216,
+            "dist_visible": 0.8813429441252216,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.45680053579347085,
+            "vertex": 8
+          },
+          {
+            "dist_rows": 1.3772392900244876,
+            "dist_visible": 1.388131437137278,
+            "nearest_row": 4,
+            "nearest_visible": 2,
+            "neg": 0.4568005357934708,
+            "vertex": 9
+          },
+          {
+            "dist_rows": 0.9550718255022732,
+            "dist_visible": 0.9550718255022732,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.4568005357934708,
+            "vertex": 10
+          },
+          {
+            "dist_rows": 1.1032808532365668,
+            "dist_visible": 1.1032808532365668,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.45680053579347074,
+            "vertex": 11
+          },
+          {
+            "dist_rows": 1.0517696555356948,
+            "dist_visible": 1.0517696555356948,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.4568005357934709,
+            "vertex": 12
+          },
+          {
+            "dist_rows": 0.4930794509654118,
+            "dist_visible": 0.4930794509654118,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 0.4568005357934708,
+            "vertex": 13
+          },
+          {
+            "dist_rows": 1.1227675123508278,
+            "dist_visible": 1.37903751449744,
+            "nearest_row": 5,
+            "nearest_visible": 3,
+            "neg": 0.45680053579347074,
+            "vertex": 14
+          },
+          {
+            "dist_rows": 1.09039201989372,
+            "dist_visible": 1.09039201989372,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 0.456800535793471,
+            "vertex": 15
+          },
+          {
+            "dist_rows": 1.1848097790522802,
+            "dist_visible": 1.4446286267937638,
+            "nearest_row": 5,
+            "nearest_visible": 1,
+            "neg": 0.4568005357934709,
+            "vertex": 16
+          },
+          {
+            "dist_rows": 0.9737907114128201,
+            "dist_visible": 0.9737907114128201,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.45680053579347074,
+            "vertex": 17
+          },
+          {
+            "dist_rows": 1.4286354651629438,
+            "dist_visible": 1.4286354651629438,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.45680053579347096,
+            "vertex": 18
+          },
+          {
+            "dist_rows": 0.9187446468638797,
+            "dist_visible": 0.9187446468638797,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.45680053579347085,
+            "vertex": 19
+          },
+          {
+            "dist_rows": 0.9086633505980306,
+            "dist_visible": 0.9086633505980306,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.4568005357934709,
+            "vertex": 20
+          },
+          {
+            "dist_rows": 0.5420184135203285,
+            "dist_visible": 0.5420184135203285,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.4568005357934708,
+            "vertex": 21
+          },
+          {
+            "dist_rows": 0.9763074611629676,
+            "dist_visible": 0.9763074611629676,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.45680053579347074,
+            "vertex": 22
+          },
+          {
+            "dist_rows": 0.9645944989004827,
+            "dist_visible": 0.9645944989004827,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.4568005357934708,
+            "vertex": 23
+          },
+          {
+            "dist_rows": 1.3741329478519815,
+            "dist_visible": 1.5387840170186142,
+            "nearest_row": 4,
+            "nearest_visible": 2,
+            "neg": 0.45680053579347085,
+            "vertex": 24
+          },
+          {
+            "dist_rows": 0.9590080863258905,
+            "dist_visible": 0.9590080863258905,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.45680053579347096,
+            "vertex": 25
+          },
+          {
+            "dist_rows": 0.961492371532102,
+            "dist_visible": 0.961492371532102,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.45680053579347113,
+            "vertex": 26
+          },
+          {
+            "dist_rows": 0.8907608680571782,
+            "dist_visible": 0.8907608680571782,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.45680053579347074,
+            "vertex": 27
+          },
+          {
+            "dist_rows": 0.8996437315928018,
+            "dist_visible": 0.8996437315928018,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.45680053579347096,
+            "vertex": 28
+          },
+          {
+            "dist_rows": 0.8987028977404574,
+            "dist_visible": 0.8987028977404574,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.4568005357934711,
+            "vertex": 29
+          }
+        ]
+      },
+      "4.0": {
+        "max_dist_rows": 2.286700118531304,
+        "max_dist_rows_over_delta": 10.011810141856618,
+        "max_dist_visible": 2.286700118531304,
+        "max_dist_visible_over_delta": 10.011810141856618,
+        "num_vertices": 38,
+        "vertices": [
+          {
+            "dist_rows": 1.8719656669309448,
+            "dist_visible": 1.8719656669309448,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 0.9136010715869417,
+            "vertex": 0
+          },
+          {
+            "dist_rows": 1.8924157028124127,
+            "dist_visible": 1.8924157028124127,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 0.9136010715869418,
+            "vertex": 1
+          },
+          {
+            "dist_rows": 1.8414219522237192,
+            "dist_visible": 1.8517558077217802,
+            "nearest_row": 6,
+            "nearest_visible": 3,
+            "neg": 0.9136010715869418,
+            "vertex": 2
+          },
+          {
+            "dist_rows": 1.4593736307088008,
+            "dist_visible": 1.4593736307088008,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.9136010715869416,
+            "vertex": 3
+          },
+          {
+            "dist_rows": 1.8618586137530149,
+            "dist_visible": 1.8618586137530149,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 0.9136010715869418,
+            "vertex": 4
+          },
+          {
+            "dist_rows": 1.736448666454678,
+            "dist_visible": 1.736448666454678,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.913601071586942,
+            "vertex": 5
+          },
+          {
+            "dist_rows": 2.075693021116217,
+            "dist_visible": 2.075693021116217,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.9136010715869418,
+            "vertex": 6
+          },
+          {
+            "dist_rows": 1.4605506793853298,
+            "dist_visible": 1.4605506793853298,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.9136010715869418,
+            "vertex": 7
+          },
+          {
+            "dist_rows": 1.7949440157121632,
+            "dist_visible": 1.7949440157121632,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.9136010715869416,
+            "vertex": 8
+          },
+          {
+            "dist_rows": 1.4558751555683567,
+            "dist_visible": 1.4558751555683567,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.9136010715869421,
+            "vertex": 9
+          },
+          {
+            "dist_rows": 1.9090613908583562,
+            "dist_visible": 1.9090613908583562,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.9136010715869418,
+            "vertex": 10
+          },
+          {
+            "dist_rows": 1.8751629681015267,
+            "dist_visible": 1.8751629681015267,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.9136010715869416,
+            "vertex": 11
+          },
+          {
+            "dist_rows": 1.5696754448275207,
+            "dist_visible": 1.5696754448275207,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.9136010715869416,
+            "vertex": 12
+          },
+          {
+            "dist_rows": 1.9013039018810864,
+            "dist_visible": 1.9013039018810864,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.9136010715869418,
+            "vertex": 13
+          },
+          {
+            "dist_rows": 1.417467553187981,
+            "dist_visible": 1.417467553187981,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 0.9136010715869417,
+            "vertex": 14
+          },
+          {
+            "dist_rows": 1.8169025790742774,
+            "dist_visible": 1.8169025790742774,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.9136010715869417,
+            "vertex": 15
+          },
+          {
+            "dist_rows": 1.7679364764927472,
+            "dist_visible": 1.7679364764927472,
+            "nearest_row": 3,
+            "nearest_visible": 3,
+            "neg": 0.9136010715869419,
+            "vertex": 16
+          },
+          {
+            "dist_rows": 1.8218735019434533,
+            "dist_visible": 1.8218735019434533,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.9136010715869418,
+            "vertex": 17
+          },
+          {
+            "dist_rows": 1.8873917829997617,
+            "dist_visible": 1.8873917829997617,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.9136010715869414,
+            "vertex": 18
+          },
+          {
+            "dist_rows": 1.9530650855824774,
+            "dist_visible": 1.9530650855824774,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.9136010715869418,
+            "vertex": 19
+          },
+          {
+            "dist_rows": 1.8380106771028295,
+            "dist_visible": 1.8380106771028295,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.9136010715869419,
+            "vertex": 20
+          },
+          {
+            "dist_rows": 1.8268292522956788,
+            "dist_visible": 1.8268292522956788,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.9136010715869416,
+            "vertex": 21
+          },
+          {
+            "dist_rows": 1.8395915718894336,
+            "dist_visible": 1.8395915718894336,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.913601071586942,
+            "vertex": 22
+          },
+          {
+            "dist_rows": 1.883007950511044,
+            "dist_visible": 1.883007950511044,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.9136010715869421,
+            "vertex": 23
+          },
+          {
+            "dist_rows": 1.8840452451305951,
+            "dist_visible": 1.8840452451305951,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.913601071586942,
+            "vertex": 24
+          },
+          {
+            "dist_rows": 1.4625436467957516,
+            "dist_visible": 1.4625436467957516,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.9136010715869418,
+            "vertex": 25
+          },
+          {
+            "dist_rows": 1.9096521934376225,
+            "dist_visible": 1.9096521934376225,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.9136010715869417,
+            "vertex": 26
+          },
+          {
+            "dist_rows": 1.7619102108462277,
+            "dist_visible": 1.7619102108462277,
+            "nearest_row": 0,
+            "nearest_visible": 0,
+            "neg": 0.9136010715869417,
+            "vertex": 27
+          },
+          {
+            "dist_rows": 1.8842500420714363,
+            "dist_visible": 1.8842500420714363,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.9136010715869417,
+            "vertex": 28
+          },
+          {
+            "dist_rows": 1.8840452451305942,
+            "dist_visible": 1.8840452451305942,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.9136010715869418,
+            "vertex": 29
+          },
+          {
+            "dist_rows": 1.8211951393101076,
+            "dist_visible": 1.8211951393101076,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.9136010715869417,
+            "vertex": 30
+          },
+          {
+            "dist_rows": 1.8148543494780898,
+            "dist_visible": 1.8148543494780898,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.9136010715869418,
+            "vertex": 31
+          },
+          {
+            "dist_rows": 1.8123039693274,
+            "dist_visible": 1.8123039693274,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.9136010715869423,
+            "vertex": 32
+          },
+          {
+            "dist_rows": 1.8358629452972433,
+            "dist_visible": 1.8358629452972433,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.913601071586942,
+            "vertex": 33
+          },
+          {
+            "dist_rows": 1.8815837619979239,
+            "dist_visible": 1.8815837619979239,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.9136010715869419,
+            "vertex": 34
+          },
+          {
+            "dist_rows": 1.8842500420714359,
+            "dist_visible": 1.8842500420714359,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.9136010715869415,
+            "vertex": 35
+          },
+          {
+            "dist_rows": 2.286700118531304,
+            "dist_visible": 2.286700118531304,
+            "nearest_row": 2,
+            "nearest_visible": 2,
+            "neg": 0.9136010715869418,
+            "vertex": 36
+          },
+          {
+            "dist_rows": 1.8842500420714363,
+            "dist_visible": 1.8842500420714363,
+            "nearest_row": 1,
+            "nearest_visible": 1,
+            "neg": 0.9136010715869421,
+            "vertex": 37
+          }
+        ]
+      }
+    },
+    "delta": 0.2284002678967354,
+    "idempotence_inf": 2.3592239273284576e-16,
+    "rowsum_inf": 1.1102230246251565e-16,
+    "tau": 0.47791240609209484
+  }
+}
