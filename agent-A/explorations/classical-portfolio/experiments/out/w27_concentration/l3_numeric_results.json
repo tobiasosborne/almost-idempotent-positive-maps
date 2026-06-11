@@ -1,0 +1,1069 @@
+[
+  {
+    "B_eta": [],
+    "clusters": [
+      [
+        0,
+        1
+      ],
+      [
+        2
+      ]
+    ],
+    "delta": 0.001,
+    "eta": 0.03162277660168379,
+    "hm_candidate_max_row_l1": 0.00199999999999989,
+    "hm_candidate_row_l1": [
+      0.00199999999999989,
+      0.0019960079840320734,
+      0.0
+    ],
+    "idempotence_inf": 0.0,
+    "max_abs_coeff": 0.9999999999999999,
+    "max_coeff_neg_mass_B_eta": 0.0,
+    "max_coeff_neg_mass_all_rows": 1.7246628177618832e-18,
+    "max_rep_l1_mass_outside_own": 0.001,
+    "max_rep_positive_mass_B_eta": 0.0,
+    "max_rep_positive_mass_other_clusters": 0.0,
+    "maxvol_exact": true,
+    "maxvol_pivots": [
+      0,
+      2
+    ],
+    "n": 3,
+    "name": "split_block_eps_0.001",
+    "overlaps": {},
+    "rank": 2,
+    "rep_records": [
+      {
+        "cluster_size": 2,
+        "l1_mass_B_eta": 0.0,
+        "l1_mass_other_clusters": 0.001,
+        "neg_mass": 0.001,
+        "pivot": 0,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 1.001
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.0,
+        "l1_mass_other_clusters": 0.0,
+        "neg_mass": 0.0,
+        "pivot": 2,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 1.0
+      }
+    ],
+    "rowsum_inf": 1.1102230246251565e-16
+  },
+  {
+    "B_eta": [],
+    "clusters": [
+      [
+        0,
+        1
+      ],
+      [
+        2
+      ]
+    ],
+    "delta": 0.0001,
+    "eta": 0.01,
+    "hm_candidate_max_row_l1": 0.00019999999999998898,
+    "hm_candidate_row_l1": [
+      0.00019999999999998898,
+      0.00019996000799838955,
+      0.0
+    ],
+    "idempotence_inf": 0.0,
+    "max_abs_coeff": 1.0000000000000004,
+    "max_coeff_neg_mass_B_eta": 0.0,
+    "max_coeff_neg_mass_all_rows": 1.841472589155636e-20,
+    "max_rep_l1_mass_outside_own": 0.0001,
+    "max_rep_positive_mass_B_eta": 0.0,
+    "max_rep_positive_mass_other_clusters": 0.0,
+    "maxvol_exact": true,
+    "maxvol_pivots": [
+      0,
+      2
+    ],
+    "n": 3,
+    "name": "split_block_eps_0.0001",
+    "overlaps": {},
+    "rank": 2,
+    "rep_records": [
+      {
+        "cluster_size": 2,
+        "l1_mass_B_eta": 0.0,
+        "l1_mass_other_clusters": 0.0001,
+        "neg_mass": 0.0001,
+        "pivot": 0,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 1.0001
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.0,
+        "l1_mass_other_clusters": 0.0,
+        "neg_mass": 0.0,
+        "pivot": 2,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 1.0
+      }
+    ],
+    "rowsum_inf": 0.0
+  },
+  {
+    "B_eta": [],
+    "clusters": [
+      [
+        0,
+        1
+      ],
+      [
+        2
+      ]
+    ],
+    "delta": 1e-05,
+    "eta": 0.0031622776601683794,
+    "hm_candidate_max_row_l1": 2.000000000001e-05,
+    "hm_candidate_row_l1": [
+      2.000000000001e-05,
+      1.9999600007879155e-05,
+      0.0
+    ],
+    "idempotence_inf": 0.0,
+    "max_abs_coeff": 1.0,
+    "max_coeff_neg_mass_B_eta": 0.0,
+    "max_coeff_neg_mass_all_rows": 5.468941054320695e-21,
+    "max_rep_l1_mass_outside_own": 1e-05,
+    "max_rep_positive_mass_B_eta": 0.0,
+    "max_rep_positive_mass_other_clusters": 0.0,
+    "maxvol_exact": true,
+    "maxvol_pivots": [
+      0,
+      2
+    ],
+    "n": 3,
+    "name": "split_block_eps_1e-05",
+    "overlaps": {},
+    "rank": 2,
+    "rep_records": [
+      {
+        "cluster_size": 2,
+        "l1_mass_B_eta": 0.0,
+        "l1_mass_other_clusters": 1e-05,
+        "neg_mass": 1e-05,
+        "pivot": 0,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 1.00001
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.0,
+        "l1_mass_other_clusters": 0.0,
+        "neg_mass": 0.0,
+        "pivot": 2,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 1.0
+      }
+    ],
+    "rowsum_inf": 0.0
+  },
+  {
+    "B_eta": [
+      3
+    ],
+    "clusters": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ]
+    ],
+    "delta": 0.001,
+    "eta": 0.03162277660168379,
+    "hm_candidate_max_row_l1": 0.001999999999999963,
+    "hm_candidate_row_l1": [
+      0.001999999999999963,
+      0.001999999999999963,
+      0.0,
+      1.1102230246251565e-16
+    ],
+    "idempotence_inf": 4.336808689942022e-22,
+    "max_abs_coeff": 1.0,
+    "max_coeff_neg_mass_B_eta": 0.0,
+    "max_coeff_neg_mass_all_rows": 1.1102230246251565e-16,
+    "max_rep_l1_mass_outside_own": 0.0016666666666666666,
+    "max_rep_positive_mass_B_eta": 0.001,
+    "max_rep_positive_mass_other_clusters": 0.0006666666666666666,
+    "maxvol_exact": true,
+    "maxvol_pivots": [
+      0,
+      1,
+      2
+    ],
+    "n": 4,
+    "name": "w19_leftcone_eps_0.001",
+    "overlaps": {},
+    "rank": 3,
+    "rep_records": [
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.001,
+        "l1_mass_other_clusters": 0.0006666666666666666,
+        "neg_mass": 0.0006666666666666666,
+        "pivot": 0,
+        "positive_mass_B_eta": 0.001,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 0.9996666666666667
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.001,
+        "l1_mass_other_clusters": 0.0006666666666666666,
+        "neg_mass": 0.001,
+        "pivot": 1,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 0.0006666666666666666,
+        "positive_mass_own": 1.0003333333333333
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.0,
+        "l1_mass_other_clusters": 0.0,
+        "neg_mass": 0.0,
+        "pivot": 2,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 1.0
+      }
+    ],
+    "rowsum_inf": 1.1102230246251565e-16
+  },
+  {
+    "B_eta": [
+      3
+    ],
+    "clusters": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ]
+    ],
+    "delta": 0.0001,
+    "eta": 0.01,
+    "hm_candidate_max_row_l1": 0.00019999999999999635,
+    "hm_candidate_row_l1": [
+      0.00019999999999999635,
+      0.00019999999999999635,
+      0.0,
+      2.220446049250313e-16
+    ],
+    "idempotence_inf": 1.8503717077085943e-21,
+    "max_abs_coeff": 1.0000000000000004,
+    "max_coeff_neg_mass_B_eta": 0.0,
+    "max_coeff_neg_mass_all_rows": 2.220446049250313e-16,
+    "max_rep_l1_mass_outside_own": 0.0001666666666666667,
+    "max_rep_positive_mass_B_eta": 0.0001,
+    "max_rep_positive_mass_other_clusters": 6.666666666666667e-05,
+    "maxvol_exact": true,
+    "maxvol_pivots": [
+      0,
+      1,
+      2
+    ],
+    "n": 4,
+    "name": "w19_leftcone_eps_0.0001",
+    "overlaps": {},
+    "rank": 3,
+    "rep_records": [
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.0001,
+        "l1_mass_other_clusters": 6.666666666666667e-05,
+        "neg_mass": 6.666666666666667e-05,
+        "pivot": 0,
+        "positive_mass_B_eta": 0.0001,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 0.9999666666666667
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.0001,
+        "l1_mass_other_clusters": 6.666666666666667e-05,
+        "neg_mass": 0.0001,
+        "pivot": 1,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 6.666666666666667e-05,
+        "positive_mass_own": 1.0000333333333333
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.0,
+        "l1_mass_other_clusters": 0.0,
+        "neg_mass": 0.0,
+        "pivot": 2,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 1.0
+      }
+    ],
+    "rowsum_inf": 0.0
+  },
+  {
+    "B_eta": [
+      3
+    ],
+    "clusters": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ]
+    ],
+    "delta": 1e-05,
+    "eta": 0.0031622776601683794,
+    "hm_candidate_max_row_l1": 2.0000000000021838e-05,
+    "hm_candidate_row_l1": [
+      2.0000000000021838e-05,
+      2.0000000000021838e-05,
+      0.0,
+      3.885780586188048e-16
+    ],
+    "idempotence_inf": 4.235164736271502e-22,
+    "max_abs_coeff": 0.9999999999999999,
+    "max_coeff_neg_mass_B_eta": 0.0,
+    "max_coeff_neg_mass_all_rows": 5.878819805246137e-17,
+    "max_rep_l1_mass_outside_own": 1.6666666666666667e-05,
+    "max_rep_positive_mass_B_eta": 1e-05,
+    "max_rep_positive_mass_other_clusters": 6.6666666666666675e-06,
+    "maxvol_exact": true,
+    "maxvol_pivots": [
+      0,
+      1,
+      2
+    ],
+    "n": 4,
+    "name": "w19_leftcone_eps_1e-05",
+    "overlaps": {},
+    "rank": 3,
+    "rep_records": [
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 1e-05,
+        "l1_mass_other_clusters": 6.6666666666666675e-06,
+        "neg_mass": 6.6666666666666675e-06,
+        "pivot": 0,
+        "positive_mass_B_eta": 1e-05,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 0.9999966666666666
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 1e-05,
+        "l1_mass_other_clusters": 6.6666666666666675e-06,
+        "neg_mass": 1e-05,
+        "pivot": 1,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 6.6666666666666675e-06,
+        "positive_mass_own": 1.0000033333333334
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.0,
+        "l1_mass_other_clusters": 0.0,
+        "neg_mass": 0.0,
+        "pivot": 2,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 1.0
+      }
+    ],
+    "rowsum_inf": 1.1102230246251565e-16
+  },
+  {
+    "B_eta": [
+      2
+    ],
+    "clusters": [
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ],
+    "delta": 0.001,
+    "eta": 0.03162277660168379,
+    "hm_candidate_max_row_l1": 0.06324555320336758,
+    "hm_candidate_row_l1": [
+      0.06324555320336758,
+      0.0,
+      0.061245553203367636
+    ],
+    "idempotence_inf": 1.1102230246251565e-16,
+    "max_abs_coeff": 1.0,
+    "max_coeff_neg_mass_B_eta": 0.0,
+    "max_coeff_neg_mass_all_rows": 0.0,
+    "max_rep_l1_mass_outside_own": 0.0326227766016838,
+    "max_rep_positive_mass_B_eta": 0.0316227766016838,
+    "max_rep_positive_mass_other_clusters": 0.0,
+    "maxvol_exact": true,
+    "maxvol_pivots": [
+      0,
+      1
+    ],
+    "n": 3,
+    "name": "leakage_family_delta_0.001",
+    "overlaps": {},
+    "rank": 2,
+    "rep_records": [
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.0316227766016838,
+        "l1_mass_other_clusters": 0.001,
+        "neg_mass": 0.001,
+        "pivot": 0,
+        "positive_mass_B_eta": 0.0316227766016838,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 0.9693772233983162
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.0,
+        "l1_mass_other_clusters": 0.0,
+        "neg_mass": 0.0,
+        "pivot": 1,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 1.0
+      }
+    ],
+    "rowsum_inf": 0.0
+  },
+  {
+    "B_eta": [
+      2
+    ],
+    "clusters": [
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ],
+    "delta": 0.0001,
+    "eta": 0.01,
+    "hm_candidate_max_row_l1": 0.020000000000000018,
+    "hm_candidate_row_l1": [
+      0.020000000000000018,
+      0.0,
+      0.01980000000000018
+    ],
+    "idempotence_inf": 0.0,
+    "max_abs_coeff": 1.0000000000000007,
+    "max_coeff_neg_mass_B_eta": 0.0,
+    "max_coeff_neg_mass_all_rows": 0.0,
+    "max_rep_l1_mass_outside_own": 0.0101,
+    "max_rep_positive_mass_B_eta": 0.01,
+    "max_rep_positive_mass_other_clusters": 0.0,
+    "maxvol_exact": true,
+    "maxvol_pivots": [
+      0,
+      1
+    ],
+    "n": 3,
+    "name": "leakage_family_delta_0.0001",
+    "overlaps": {},
+    "rank": 2,
+    "rep_records": [
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.01,
+        "l1_mass_other_clusters": 0.0001,
+        "neg_mass": 0.0001,
+        "pivot": 0,
+        "positive_mass_B_eta": 0.01,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 0.9901
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.0,
+        "l1_mass_other_clusters": 0.0,
+        "neg_mass": 0.0,
+        "pivot": 1,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 1.0
+      }
+    ],
+    "rowsum_inf": 0.0
+  },
+  {
+    "B_eta": [
+      2
+    ],
+    "clusters": [
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ],
+    "delta": 1e-05,
+    "eta": 0.0031622776601683794,
+    "hm_candidate_max_row_l1": 0.006324555320336836,
+    "hm_candidate_row_l1": [
+      0.006324555320336836,
+      0.0,
+      0.006304555320336791
+    ],
+    "idempotence_inf": 1.1102230246251565e-16,
+    "max_abs_coeff": 1.0000000000000007,
+    "max_coeff_neg_mass_B_eta": 0.0,
+    "max_coeff_neg_mass_all_rows": 4.328865123050708e-19,
+    "max_rep_l1_mass_outside_own": 0.0031722776601683794,
+    "max_rep_positive_mass_B_eta": 0.0031622776601683794,
+    "max_rep_positive_mass_other_clusters": 0.0,
+    "maxvol_exact": true,
+    "maxvol_pivots": [
+      0,
+      1
+    ],
+    "n": 3,
+    "name": "leakage_family_delta_1e-05",
+    "overlaps": {},
+    "rank": 2,
+    "rep_records": [
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.0031622776601683794,
+        "l1_mass_other_clusters": 1e-05,
+        "neg_mass": 1e-05,
+        "pivot": 0,
+        "positive_mass_B_eta": 0.0031622776601683794,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 0.9968477223398315
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.0,
+        "l1_mass_other_clusters": 0.0,
+        "neg_mass": 0.0,
+        "pivot": 1,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 0.0,
+        "positive_mass_own": 1.0
+      }
+    ],
+    "rowsum_inf": 1.1102230246251565e-16
+  },
+  {
+    "B_eta": [
+      6
+    ],
+    "clusters": [
+      [
+        0
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3
+      ]
+    ],
+    "delta": 0.2284002678967354,
+    "eta": 0.47791240609209484,
+    "hm_candidate_max_row_l1": 0.47939609814571726,
+    "hm_candidate_row_l1": [
+      0.39260238393310165,
+      0.07567992983241775,
+      0.39160719985433007,
+      0.47939609814571726,
+      0.1005193142558824,
+      0.3813777012358212,
+      0.351223003677576
+    ],
+    "idempotence_inf": 2.220446049250313e-16,
+    "max_abs_coeff": 1.0000000000000004,
+    "max_coeff_neg_mass_B_eta": 0.003593556381660769,
+    "max_coeff_neg_mass_all_rows": 0.003773584905660139,
+    "max_rep_l1_mass_outside_own": 0.46809831696959403,
+    "max_rep_positive_mass_B_eta": 0.011438679245283018,
+    "max_rep_positive_mass_other_clusters": 0.22825936982757555,
+    "maxvol_exact": true,
+    "maxvol_pivots": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "n": 7,
+    "name": "w16_best_rational_above_corner",
+    "overlaps": {},
+    "rank": 4,
+    "rep_records": [
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.008902077151335312,
+        "l1_mass_other_clusters": 0.38297335935579047,
+        "neg_mass": 0.19630119196655077,
+        "pivot": 0,
+        "positive_mass_B_eta": 0.008902077151335312,
+        "positive_mass_other_clusters": 0.18667216738923964,
+        "positive_mass_own": 1.000726947425976
+      },
+      {
+        "cluster_size": 2,
+        "l1_mass_B_eta": 0.013544018058690745,
+        "l1_mass_other_clusters": 0.05458442638006317,
+        "neg_mass": 0.03783996491620886,
+        "pivot": 1,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 0.03028847952254505,
+        "positive_mass_own": 1.0075514853936638
+      },
+      {
+        "cluster_size": 2,
+        "l1_mass_B_eta": 0.003528409782211948,
+        "l1_mass_other_clusters": 0.20574954188305233,
+        "neg_mass": 0.195803599927165,
+        "pivot": 2,
+        "positive_mass_B_eta": 0.0,
+        "positive_mass_other_clusters": 0.013474351738099244,
+        "positive_mass_own": 1.1823292481890657
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.011438679245283018,
+        "l1_mass_other_clusters": 0.456659637724311,
+        "neg_mass": 0.2284002678967354,
+        "pivot": 3,
+        "positive_mass_B_eta": 0.011438679245283018,
+        "positive_mass_other_clusters": 0.22825936982757555,
+        "positive_mass_own": 0.9887022188238768
+      }
+    ],
+    "rowsum_inf": 1.1102230246251565e-16
+  },
+  {
+    "B_eta": [
+      7,
+      8,
+      9
+    ],
+    "clusters": [
+      [
+        0
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ]
+    ],
+    "delta": 0.2329335240003862,
+    "eta": 0.4826318721348459,
+    "hm_candidate_max_row_l1": 0.48404667307322496,
+    "hm_candidate_row_l1": [
+      0.3677801455403582,
+      0.08551598742983847,
+      0.40388252153788157,
+      0.48404667307322496,
+      0.07796685653911342,
+      0.13691645599809701,
+      0.4365012659030541,
+      0.3817693665040505,
+      0.1874217427321568,
+      0.05869274856923886
+    ],
+    "idempotence_inf": 1.1102230246251565e-16,
+    "max_abs_coeff": 1.0000000000000004,
+    "max_coeff_neg_mass_B_eta": 0.016945935059102683,
+    "max_coeff_neg_mass_all_rows": 0.02387204535160803,
+    "max_rep_l1_mass_outside_own": 0.4749568605369987,
+    "max_rep_positive_mass_B_eta": 0.02817399420082635,
+    "max_rep_positive_mass_other_clusters": 0.22648982855490277,
+    "maxvol_exact": true,
+    "maxvol_pivots": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "n": 10,
+    "name": "w17_main_rational_above_corner",
+    "overlaps": {},
+    "rank": 5,
+    "rep_records": [
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.01914404962659228,
+        "l1_mass_other_clusters": 0.34792388047577993,
+        "neg_mass": 0.18389007277017902,
+        "pivot": 0,
+        "positive_mass_B_eta": 0.01914404962659228,
+        "positive_mass_other_clusters": 0.16403380770560091,
+        "positive_mass_own": 1.000712215437986
+      },
+      {
+        "cluster_size": 2,
+        "l1_mass_B_eta": 0.022308884797612744,
+        "l1_mass_other_clusters": 0.05728271624870121,
+        "neg_mass": 0.042757993714919285,
+        "pivot": 1,
+        "positive_mass_B_eta": 0.0038447393164125075,
+        "positive_mass_other_clusters": 0.03298886801498216,
+        "positive_mass_own": 1.0059243863835245
+      },
+      {
+        "cluster_size": 2,
+        "l1_mass_B_eta": 0.016695366818769566,
+        "l1_mass_other_clusters": 0.23137067742954084,
+        "neg_mass": 0.20194126076894087,
+        "pivot": 2,
+        "positive_mass_B_eta": 0.0035350173162453655,
+        "positive_mass_other_clusters": 0.042589766163124175,
+        "positive_mass_own": 1.1558164772895712
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.03068539153983059,
+        "l1_mass_other_clusters": 0.44427146899716813,
+        "neg_mass": 0.2329335240003862,
+        "pivot": 3,
+        "positive_mass_B_eta": 0.015533507981709714,
+        "positive_mass_other_clusters": 0.22648982855490277,
+        "positive_mass_own": 0.9909101874637737
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.02817399420082635,
+        "l1_mass_other_clusters": 0.0455048088505542,
+        "neg_mass": 0.034695374781823815,
+        "pivot": 4,
+        "positive_mass_B_eta": 0.02817399420082635,
+        "positive_mass_other_clusters": 0.010809434068730384,
+        "positive_mass_own": 0.9957119465122671
+      }
+    ],
+    "rowsum_inf": 2.220446049250313e-16
+  },
+  {
+    "B_eta": [
+      7,
+      8,
+      9
+    ],
+    "clusters": [
+      [
+        0
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ]
+    ],
+    "delta": 0.23459249106770677,
+    "eta": 0.4843474899983552,
+    "hm_candidate_max_row_l1": 0.4874878103708691,
+    "hm_candidate_row_l1": [
+      0.370398557284653,
+      0.08612272071180721,
+      0.4067625904452344,
+      0.4874878103708691,
+      0.07851832898184449,
+      0.13509831233853575,
+      0.4368183582399716,
+      0.3839928006097244,
+      0.18850009484460953,
+      0.05924444203992024
+    ],
+    "idempotence_inf": 2.220446049250313e-16,
+    "max_abs_coeff": 1.0000000000000002,
+    "max_coeff_neg_mass_B_eta": 0.016945935059102468,
+    "max_coeff_neg_mass_all_rows": 0.02390954533290783,
+    "max_rep_l1_mass_outside_own": 0.4783363962531413,
+    "max_rep_positive_mass_B_eta": 0.028373338487265427,
+    "max_rep_positive_mass_other_clusters": 0.22810049031027216,
+    "maxvol_exact": true,
+    "maxvol_pivots": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "n": 10,
+    "name": "w17_robust_rational_above_corner",
+    "overlaps": {},
+    "rank": 5,
+    "rep_records": [
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.019279502807159333,
+        "l1_mass_other_clusters": 0.3503937029064007,
+        "neg_mass": 0.1851992786423265,
+        "pivot": 0,
+        "positive_mass_B_eta": 0.019279502807159333,
+        "positive_mass_other_clusters": 0.1651944242640742,
+        "positive_mass_own": 1.000725351571093
+      },
+      {
+        "cluster_size": 2,
+        "l1_mass_B_eta": 0.022466730683631538,
+        "l1_mass_other_clusters": 0.05768940792969877,
+        "neg_mass": 0.043061360355903563,
+        "pivot": 1,
+        "positive_mass_B_eta": 0.003871942664598075,
+        "positive_mass_other_clusters": 0.03322283559282867,
+        "positive_mass_own": 1.005966582098477
+      },
+      {
+        "cluster_size": 2,
+        "l1_mass_B_eta": 0.016813494419101786,
+        "l1_mass_other_clusters": 0.23304134843648425,
+        "neg_mass": 0.20338129522261722,
+        "pivot": 2,
+        "positive_mass_B_eta": 0.0035600292360502233,
+        "positive_mass_other_clusters": 0.04291351839691861,
+        "positive_mass_own": 1.1569077475896483
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.03090250516137594,
+        "l1_mass_other_clusters": 0.44743389109176535,
+        "neg_mass": 0.23459249106770677,
+        "pivot": 3,
+        "positive_mass_B_eta": 0.015643414875162392,
+        "positive_mass_other_clusters": 0.22810049031027216,
+        "positive_mass_own": 0.9908485858822722
+      },
+      {
+        "cluster_size": 1,
+        "l1_mass_B_eta": 0.028373338487265427,
+        "l1_mass_other_clusters": 0.045826507100330066,
+        "neg_mass": 0.03494068109667327,
+        "pivot": 4,
+        "positive_mass_B_eta": 0.028373338487265427,
+        "positive_mass_other_clusters": 0.010885826003656805,
+        "positive_mass_own": 0.995681516605751
+      }
+    ],
+    "rowsum_inf": 1.1102230246251565e-16
+  },
+  {
+    "name": "random_small_delta_conjugation_summary",
+    "records": [
+      {
+        "delta": 0.001,
+        "eta": 0.03162277660168379,
+        "hm_candidate_max_row_l1": 0.0019999999999999315,
+        "idempotence_inf": 2.220446049250313e-16,
+        "max_coeff_neg_mass_B_eta": 0.0,
+        "max_rep_B_eta": 0.0,
+        "max_rep_cross": 0.0006256684455403922,
+        "name": "random_conjugate_delta_0.001_trial_0"
+      },
+      {
+        "delta": 0.001,
+        "eta": 0.03162277660168379,
+        "hm_candidate_max_row_l1": 0.001999999999999666,
+        "idempotence_inf": 1.1102230246251565e-16,
+        "max_coeff_neg_mass_B_eta": 0.0,
+        "max_rep_B_eta": 0.0,
+        "max_rep_cross": 0.0007792241684617127,
+        "name": "random_conjugate_delta_0.001_trial_1"
+      },
+      {
+        "delta": 0.001,
+        "eta": 0.03162277660168379,
+        "hm_candidate_max_row_l1": 0.0030648192095201606,
+        "idempotence_inf": 4.440892098500626e-16,
+        "max_coeff_neg_mass_B_eta": 0.0,
+        "max_rep_B_eta": 0.0,
+        "max_rep_cross": 0.0009993949295058683,
+        "name": "random_conjugate_delta_0.001_trial_2"
+      },
+      {
+        "delta": 0.001,
+        "eta": 0.03162277660168379,
+        "hm_candidate_max_row_l1": 0.0020654940570997526,
+        "idempotence_inf": 1.1102230246251565e-16,
+        "max_coeff_neg_mass_B_eta": 0.0,
+        "max_rep_B_eta": 0.0,
+        "max_rep_cross": 0.0009105157703442233,
+        "name": "random_conjugate_delta_0.001_trial_3"
+      },
+      {
+        "delta": 0.001,
+        "eta": 0.03162277660168379,
+        "hm_candidate_max_row_l1": 0.002048525025166464,
+        "idempotence_inf": 2.220446049250313e-16,
+        "max_coeff_neg_mass_B_eta": 0.0,
+        "max_rep_B_eta": 0.0,
+        "max_rep_cross": 0.0009549190369190944,
+        "name": "random_conjugate_delta_0.001_trial_4"
+      },
+      {
+        "delta": 0.001,
+        "eta": 0.03162277660168379,
+        "hm_candidate_max_row_l1": 0.00199999999999989,
+        "idempotence_inf": 2.220446049250313e-16,
+        "max_coeff_neg_mass_B_eta": 0.0,
+        "max_rep_B_eta": 0.0,
+        "max_rep_cross": 0.0007083932068884323,
+        "name": "random_conjugate_delta_0.001_trial_5"
+      },
+      {
+        "delta": 0.001,
+        "eta": 0.03162277660168379,
+        "hm_candidate_max_row_l1": 0.0024804566071408435,
+        "idempotence_inf": 5.551115123125783e-17,
+        "max_coeff_neg_mass_B_eta": 0.0,
+        "max_rep_B_eta": 0.0,
+        "max_rep_cross": 0.0005430763104336549,
+        "name": "random_conjugate_delta_0.001_trial_6"
+      },
+      {
+        "delta": 0.001,
+        "eta": 0.03162277660168379,
+        "hm_candidate_max_row_l1": 0.002000000000000051,
+        "idempotence_inf": 2.220446049250313e-16,
+        "max_coeff_neg_mass_B_eta": 0.0,
+        "max_rep_B_eta": 0.0,
+        "max_rep_cross": 0.0005576746560588216,
+        "name": "random_conjugate_delta_0.001_trial_7"
+      },
+      {
+        "delta": 0.00010000000000000002,
+        "eta": 0.01,
+        "hm_candidate_max_row_l1": 0.00022550488221954304,
+        "idempotence_inf": 1.1102230246251565e-16,
+        "max_coeff_neg_mass_B_eta": 0.0,
+        "max_rep_B_eta": 0.0,
+        "max_rep_cross": 5.937166527561514e-05,
+        "name": "random_conjugate_delta_0.0001_trial_0"
+      },
+      {
+        "delta": 0.0001,
+        "eta": 0.01,
+        "hm_candidate_max_row_l1": 0.00020000000000002714,
+        "idempotence_inf": 2.220446049250313e-16,
+        "max_coeff_neg_mass_B_eta": 0.0,
+        "max_rep_B_eta": 0.0,
+        "max_rep_cross": 8.446000248684602e-05,
+        "name": "random_conjugate_delta_0.0001_trial_1"
+      },
+      {
+        "delta": 0.0001,
+        "eta": 0.01,
+        "hm_candidate_max_row_l1": 0.00020000000000023173,
+        "idempotence_inf": 1.1102230246251565e-16,
+        "max_coeff_neg_mass_B_eta": 0.0,
+        "max_rep_B_eta": 0.0,
+        "max_rep_cross": 9.99936893453442e-05,
+        "name": "random_conjugate_delta_0.0001_trial_2"
+      },
+      {
+        "delta": 0.00010000000000000002,
+        "eta": 0.01,
+        "hm_candidate_max_row_l1": 0.0002428022870538816,
+        "idempotence_inf": 5.551115123125783e-17,
+        "max_coeff_neg_mass_B_eta": 0.0,
+        "max_rep_B_eta": 0.0,
+        "max_rep_cross": 9.373074724431654e-05,
+        "name": "random_conjugate_delta_0.0001_trial_3"
+      },
+      {
+        "delta": 0.0001,
+        "eta": 0.01,
+        "hm_candidate_max_row_l1": 0.00019999999999976693,
+        "idempotence_inf": 1.6653345369377348e-16,
+        "max_coeff_neg_mass_B_eta": 0.0,
+        "max_rep_B_eta": 0.0,
+        "max_rep_cross": 4.315755464838749e-05,
+        "name": "random_conjugate_delta_0.0001_trial_4"
+      },
+      {
+        "delta": 0.0001,
+        "eta": 0.01,
+        "hm_candidate_max_row_l1": 0.00026546261499133157,
+        "idempotence_inf": 1.1102230246251565e-16,
+        "max_coeff_neg_mass_B_eta": 0.0,
+        "max_rep_B_eta": 0.0,
+        "max_rep_cross": 7.640211703636589e-05,
+        "name": "random_conjugate_delta_0.0001_trial_5"
+      },
+      {
+        "delta": 0.00010000000000000003,
+        "eta": 0.010000000000000002,
+        "hm_candidate_max_row_l1": 0.0002606815113317324,
+        "idempotence_inf": 2.220446049250313e-16,
+        "max_coeff_neg_mass_B_eta": 0.0,
+        "max_rep_B_eta": 0.0,
+        "max_rep_cross": 7.887296217022559e-05,
+        "name": "random_conjugate_delta_0.0001_trial_6"
+      },
+      {
+        "delta": 0.0001,
+        "eta": 0.01,
+        "hm_candidate_max_row_l1": 0.0002707308179686552,
+        "idempotence_inf": 1.1102230246251565e-16,
+        "max_coeff_neg_mass_B_eta": 0.0,
+        "max_rep_B_eta": 0.0,
+        "max_rep_cross": 5.6846228841973295e-05,
+        "name": "random_conjugate_delta_0.0001_trial_7"
+      }
+    ]
+  }
+]

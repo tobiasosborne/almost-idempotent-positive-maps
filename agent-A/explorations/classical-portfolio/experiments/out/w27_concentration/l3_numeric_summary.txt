@@ -1,0 +1,13 @@
+split_block_eps_0.001: delta=0.001 eta=0.0316228 pivots=[0, 2] B_eta=[] rep_cross=0 rep_B=0 rep_B/eta=0 coeffneg_B=0 HMdist=0.002 HMdist/eta=0.0632456
+split_block_eps_0.0001: delta=0.0001 eta=0.01 pivots=[0, 2] B_eta=[] rep_cross=0 rep_B=0 rep_B/eta=0 coeffneg_B=0 HMdist=0.0002 HMdist/eta=0.02
+split_block_eps_1e-05: delta=1e-05 eta=0.00316228 pivots=[0, 2] B_eta=[] rep_cross=0 rep_B=0 rep_B/eta=0 coeffneg_B=0 HMdist=2e-05 HMdist/eta=0.00632456
+w19_leftcone_eps_0.001: delta=0.001 eta=0.0316228 pivots=[0, 1, 2] B_eta=[3] rep_cross=0.000666667 rep_B=0.001 rep_B/eta=0.0316228 coeffneg_B=0 HMdist=0.002 HMdist/eta=0.0632456
+w19_leftcone_eps_0.0001: delta=0.0001 eta=0.01 pivots=[0, 1, 2] B_eta=[3] rep_cross=6.66667e-05 rep_B=0.0001 rep_B/eta=0.01 coeffneg_B=0 HMdist=0.0002 HMdist/eta=0.02
+w19_leftcone_eps_1e-05: delta=1e-05 eta=0.00316228 pivots=[0, 1, 2] B_eta=[3] rep_cross=6.66667e-06 rep_B=1e-05 rep_B/eta=0.00316228 coeffneg_B=0 HMdist=2e-05 HMdist/eta=0.00632456
+leakage_family_delta_0.001: delta=0.001 eta=0.0316228 pivots=[0, 1] B_eta=[2] rep_cross=0 rep_B=0.0316228 rep_B/eta=1 coeffneg_B=0 HMdist=0.0632456 HMdist/eta=2
+leakage_family_delta_0.0001: delta=0.0001 eta=0.01 pivots=[0, 1] B_eta=[2] rep_cross=0 rep_B=0.01 rep_B/eta=1 coeffneg_B=0 HMdist=0.02 HMdist/eta=2
+leakage_family_delta_1e-05: delta=1e-05 eta=0.00316228 pivots=[0, 1] B_eta=[2] rep_cross=0 rep_B=0.00316228 rep_B/eta=1 coeffneg_B=0 HMdist=0.00632456 HMdist/eta=2
+w16_best_rational_above_corner: delta=0.2284 eta=0.477912 pivots=[0, 1, 2, 3] B_eta=[6] rep_cross=0.228259 rep_B=0.0114387 rep_B/eta=0.0239347 coeffneg_B=0.00359356 HMdist=0.479396 HMdist/eta=1.0031
+w17_main_rational_above_corner: delta=0.232934 eta=0.482632 pivots=[0, 1, 2, 3, 4] B_eta=[7, 8, 9] rep_cross=0.22649 rep_B=0.028174 rep_B/eta=0.0583757 coeffneg_B=0.0169459 HMdist=0.484047 HMdist/eta=1.00293
+w17_robust_rational_above_corner: delta=0.234592 eta=0.484347 pivots=[0, 1, 2, 3, 4] B_eta=[7, 8, 9] rep_cross=0.2281 rep_B=0.0283733 rep_B/eta=0.0585805 coeffneg_B=0.0169459 HMdist=0.487488 HMdist/eta=1.00648
+random small-delta conjugations: samples=16 max_candidate_l1=0.00306482 max_rep_B_eta=0 max_rep_cross=0.000999395

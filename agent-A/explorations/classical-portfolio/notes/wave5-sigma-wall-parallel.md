@@ -1564,3 +1564,17 @@ of the 1.12 bridge: L3 — the support-concentration estimate (bounded merged co
 + exact sum rules + entries >= -delta => mass outside the eta-pivot clusters is small /
 each merged class is near an equal-input block, with dimension-free moduli). L4
 (constructive projection) is expected mechanical once L3 exists. LAUNCHING w27_concentration.
+
+## w27_concentration (codex) — L3 DIED-AT, productively: the scale is sqrt(delta), ONE estimate remains
+Full answer + proof note: notes/swarm-answers/w27_concentration.md; numerics:
+experiments/out/w27_concentration/. PROVED: (a) in-class concentration G1 = eta + 2*delta;
+(b) cross-cluster representative leakage <= 2*delta/(1-eta) (+delta in l1). REFUTED:
+O(delta) support-concentration — an explicit rank-2 family has representative mass
+sqrt(delta) on B_eta at eta = sqrt(delta); the TRUE scale is sqrt(delta) (consistent with
+ex-hume and the audited B-S-distance target — the bridge was always going to land at
+O(sqrt(delta)) in full distance). THE LAST NAMED ESTIMATE (the whole 1.12 bridge now
+hangs on it): max_s sum_{j not in M_s} |P_{u_s j}| <= C*(eta + delta/eta) in the signed
+affine-face case (= C*sqrt(delta) at eta = sqrt(delta)). IF IT LANDS: the conditional L4
+assembly in the proof note gives the GLOBAL W-free O(sqrt(delta)) H-M distance in
+||.||_{infty,1} — the campaign landmark feeding op-exposed-hull -> op-classical.
+LAUNCHING w28_face on it.
