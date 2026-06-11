@@ -1126,3 +1126,22 @@ P(genuine) = 0.999. STATUS CHANGES: (1) height-free barrier formulation DEAD (re
 (2) doc ledger 6(c) REWRITTEN (the sigma gate is crossable; the open question is the
 sigma-H TRADEOFF); (3) the w15_refuter "1.52 barrier" superseded. w17_antecedent (the
 tradeoff decider) is the live worker.
+
+## w17_antecedent (codex) — ANTECEDENT REALIZED (claimed) [pending w17_cert_audit]
+Full answer: notes/swarm-answers/w17_antecedent.md; instances + Pareto front + decider:
+experiments/out/w17_antecedent/. Claimed FIRST EVER instance with the floor conjectures'
+joint antecedent: (n,k) = (10,5), hidden v = 5, delta = 0.23293, sigma_tilde/tau = 1.5467,
+H/tau = 0.10019 (cross-checked vs the independent w15 verifier; idempotence residuals
+1.1e-16). CAUTION FLAGS (orchestrator): (1) hiddenness margin RAZOR-THIN — t*/kappa =
+0.99988 (1.2e-4 relative; robust companion 0.99777) — certification audit launched before
+any record correction; (2) delta = 0.233 is ABOVE the corner scale delta* ~ 0.0718: the
+SMALL-delta regime of the conjectures is untouched; the linear law is NOT violated
+(H = 0.048 <= 2*delta); what would be falsified is the ledger item-1 claim AS STATED
+("no instance with sigma>tau AND H>0.1tau", asserted over all scales including large).
+QUOTIENT-FLOOR TEST OBJECT: all rows distinct (quotient = raw); main quotient component
+[1,2,3,5,6,7], L = 2, Pi/tau = 2.5e-4 — extremely thin; at this delta the floor RHS
+c*tau - C'*L*delta can be vacuous, so NOT yet a small-delta refutation, but the first
+genuine test object + via CLONING an outright raw-floor refutation for delta0 >= 0.233.
+IF CERTIFIED: ledger item 1 must be re-scoped to below-corner scales; the decisive
+remaining empirical question becomes whether the antecedent persists BELOW the corner
+(d13 says max H/tau collapses ~ 2*delta/tau there — the conjectures' real regime).
