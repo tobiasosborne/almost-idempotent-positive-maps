@@ -1,0 +1,826 @@
+{
+  "created": "2026-06-11 12:04:59",
+  "seed": 919191,
+  "s5_cycles": {
+    "counts": {
+      "cases": 1760,
+      "lp_ok": 352,
+      "pass_regime": 272,
+      "branch": 0
+    },
+    "bests": {
+      "max_sigma_over_tau": {
+        "value": 0.07201100123369526,
+        "record": {
+          "label": "audit_s5_cycle",
+          "gate": "PASS",
+          "n": 5,
+          "delta": 0.2362318167910222,
+          "tau": 0.48603684715361056,
+          "W": [
+            0,
+            1,
+            2
+          ],
+          "v": 4,
+          "H": 0.0040192565060685635,
+          "H_over_delta": 0.01701403545325192,
+          "H_over_tau": 0.008269448149058315,
+          "sigma_tilde": 0.035,
+          "sigma_tilde_over_tau": 0.07201100123369526,
+          "P_vv": 0.0,
+          "nu_v": 0.0019299999999999999,
+          "best_component": {
+            "t": 0.1223383608519645,
+            "t_over_kappaOmega": 0.5,
+            "component": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "size": 4,
+            "mass_from_v": 1.00193,
+            "Pi_C": 0.0018694514249712627,
+            "L": 2,
+            "Pi_over_tau": 0.0038463162534268266,
+            "min_edge": 0.032999999999999995
+          },
+          "best_Pi_over_tau": 0.0038463162534268266
+        }
+      },
+      "max_H_over_tau": {
+        "value": 0.08945162900452061,
+        "record": {
+          "label": "audit_s5_cycle",
+          "gate": "PASS",
+          "n": 5,
+          "delta": 0.0019996,
+          "tau": 0.04471688719041163,
+          "W": [
+            0,
+            1,
+            2
+          ],
+          "v": 4,
+          "H": 0.003999998403193701,
+          "H_over_delta": 2.000399281453141,
+          "H_over_tau": 0.08945162900452061,
+          "sigma_tilde": 0.0002,
+          "sigma_tilde_over_tau": 0.004472583235688302,
+          "P_vv": 0.0,
+          "nu_v": 0.0019996,
+          "best_component": {
+            "t": 0.011201575769509394,
+            "t_over_kappaOmega": 0.5,
+            "component": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "size": 4,
+            "mass_from_v": 1.0019996,
+            "Pi_C": 5.989193209856595e-08,
+            "L": 2,
+            "Pi_over_tau": 1.3393582572851406e-06,
+            "min_edge": 0.0002
+          },
+          "best_Pi_over_tau": 1.3393582572851406e-06
+        }
+      },
+      "max_H_over_delta": {
+        "value": 2.000399281453141,
+        "record": {
+          "label": "audit_s5_cycle",
+          "gate": "PASS",
+          "n": 5,
+          "delta": 0.0019996,
+          "tau": 0.04471688719041163,
+          "W": [
+            0,
+            1,
+            2
+          ],
+          "v": 4,
+          "H": 0.003999998403193701,
+          "H_over_delta": 2.000399281453141,
+          "H_over_tau": 0.08945162900452061,
+          "sigma_tilde": 0.0002,
+          "sigma_tilde_over_tau": 0.004472583235688302,
+          "P_vv": 0.0,
+          "nu_v": 0.0019996,
+          "best_component": {
+            "t": 0.011201575769509394,
+            "t_over_kappaOmega": 0.5,
+            "component": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "size": 4,
+            "mass_from_v": 1.0019996,
+            "Pi_C": 5.989193209856595e-08,
+            "L": 2,
+            "Pi_over_tau": 1.3393582572851406e-06,
+            "min_edge": 0.0002
+          },
+          "best_Pi_over_tau": 1.3393582572851406e-06
+        }
+      },
+      "min_Pi_over_tau": {
+        "value": 1.9695379558664763e-11,
+        "record": {
+          "label": "audit_s5_cycle",
+          "gate": "PASS",
+          "n": 5,
+          "delta": 0.0199982,
+          "tau": 0.14141499213308326,
+          "W": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "v": 4,
+          "H": 0.006530203468972236,
+          "H_over_delta": 0.3265395620091926,
+          "H_over_tau": 0.04617758959267043,
+          "sigma_tilde": 0.0,
+          "sigma_tilde_over_tau": 0.0,
+          "P_vv": 0.0,
+          "nu_v": 0.0199982,
+          "best_component": {
+            "t": 0.053200453037068045,
+            "t_over_kappaOmega": 0.75,
+            "component": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "size": 4,
+            "mass_from_v": 1.0199982,
+            "Pi_C": 2.7852219453466664e-12,
+            "L": 3,
+            "Pi_over_tau": 1.9695379558664763e-11,
+            "min_edge": 5.72478431372549e-05
+          },
+          "best_Pi_over_tau": 1.9695379558664763e-11
+        }
+      }
+    }
+  },
+  "positive_diagonal": {
+    "counts": {
+      "cases": 275,
+      "lp_ok": 233,
+      "pass_regime": 45,
+      "branch": 0
+    },
+    "per_diag": {
+      "0.05": {
+        "diag": 0.05,
+        "min_delta_over_diag2": 26.476840911827974,
+        "best_sigma_over_tau": 0.1943421115255446,
+        "best_H_over_tau": 0.2789314464256671,
+        "best_record": {
+          "label": "audit_posdiag",
+          "gate": "PASS",
+          "n": 9,
+          "delta": 0.09380011901161003,
+          "tau": 0.30626805091555015,
+          "W": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "v": 6,
+          "H": 0.0003333428384396176,
+          "H_over_delta": 0.0035537570948962053,
+          "H_over_tau": 0.0010884022588811687,
+          "sigma_tilde": 0.059520779707741014,
+          "sigma_tilde_over_tau": 0.1943421115255446,
+          "P_vv": 0.05,
+          "nu_v": 0.004803284194006271,
+          "best_component": {
+            "t": 0.0765770574105439,
+            "t_over_kappaOmega": 0.5,
+            "component": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "size": 8,
+            "mass_from_v": 1.0048032841940062,
+            "Pi_C": 0.0001511578891613384,
+            "L": 3,
+            "Pi_over_tau": 0.0004935476903629705,
+            "min_edge": 0.002144871665373345
+          },
+          "best_Pi_over_tau": 0.0004935476903629705
+        }
+      },
+      "0.08": {
+        "diag": 0.08,
+        "min_delta_over_diag2": 13.212705093131731,
+        "best_sigma_over_tau": 0.27510857615174433,
+        "best_H_over_tau": 0.16428810292086907,
+        "best_record": {
+          "label": "audit_posdiag",
+          "gate": "PASS",
+          "n": 9,
+          "delta": 0.08492792269225483,
+          "tau": 0.29142395696348444,
+          "W": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "v": 6,
+          "H": 0.00016516305004584192,
+          "H_over_delta": 0.0019447437875565075,
+          "H_over_tau": 0.0005667449298498714,
+          "sigma_tilde": 0.08017322985673142,
+          "sigma_tilde_over_tau": 0.27510857615174433,
+          "P_vv": 0.08,
+          "nu_v": 0.000127095948014791,
+          "best_component": {
+            "t": 0.07286073182572916,
+            "t_over_kappaOmega": 0.5,
+            "component": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "size": 8,
+            "mass_from_v": 1.0001270959480146,
+            "Pi_C": 2.3927738924088507e-07,
+            "L": 3,
+            "Pi_over_tau": 8.210628657096528e-07,
+            "min_edge": 0.00013886782434085484
+          },
+          "best_Pi_over_tau": 8.210628657096528e-07
+        }
+      },
+      "0.1": {
+        "diag": 0.1,
+        "min_delta_over_diag2": 5644.898813550579,
+        "best_sigma_over_tau": 0.013309811942315578,
+        "best_H_over_tau": 0.07635421776226381,
+        "best_record": {
+          "label": "audit_posdiag",
+          "gate": "PASS",
+          "n": 9,
+          "delta": 0.17695328758691561,
+          "tau": 0.4206581600146556,
+          "W": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "v": 8,
+          "H": 0.03211902475323223,
+          "H_over_delta": 0.1815113196891358,
+          "H_over_tau": 0.07635421776226381,
+          "sigma_tilde": 0.00559888100179556,
+          "sigma_tilde_over_tau": 0.013309811942315578,
+          "P_vv": 0.0,
+          "nu_v": 0.017051976121436295,
+          "best_component": {
+            "t": 0.10826800350728363,
+            "t_over_kappaOmega": 0.5,
+            "component": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "size": 8,
+            "mass_from_v": 1.0170519761214363,
+            "Pi_C": 3.1341766257621946e-05,
+            "L": 3,
+            "Pi_over_tau": 7.450649776181688e-05,
+            "min_edge": 0.000300110914045281
+          },
+          "best_Pi_over_tau": 7.450649776181688e-05
+        }
+      },
+      "0.15": {
+        "diag": 0.15,
+        "min_delta_over_diag2": 10.104559976764161,
+        "best_sigma_over_tau": 0.3145873803743183,
+        "best_H_over_tau": 0.11095727494625064,
+        "best_record": {
+          "label": "audit_posdiag",
+          "gate": "PASS",
+          "n": 8,
+          "delta": 0.2299501751023362,
+          "tau": 0.4795312034709902,
+          "W": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "v": 5,
+          "H": 0.010512783096721656,
+          "H_over_delta": 0.04571765640988568,
+          "H_over_tau": 0.02192304279810571,
+          "sigma_tilde": 0.15085446510768302,
+          "sigma_tilde_over_tau": 0.3145873803743183,
+          "P_vv": 0.15,
+          "nu_v": 0.004738933911872053,
+          "best_component": {
+            "t": 0.12101219651857896,
+            "t_over_kappaOmega": 0.5,
+            "component": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "size": 7,
+            "mass_from_v": 1.004738933911872,
+            "Pi_C": 3.878416506049632e-05,
+            "L": 2,
+            "Pi_over_tau": 8.087933544212542e-05,
+            "min_edge": 5.604548807936949e-05
+          },
+          "best_Pi_over_tau": 8.087933544212542e-05
+        }
+      },
+      "0.2": {
+        "diag": 0.2,
+        "min_delta_over_diag2": 4.004472557096476,
+        "best_sigma_over_tau": 0.4997206993824003,
+        "best_H_over_tau": 0.05486632312345307,
+        "best_record": {
+          "label": "audit_posdiag",
+          "gate": "PASS",
+          "n": 10,
+          "delta": 0.16097695812596566,
+          "tau": 0.4012193391724353,
+          "W": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "v": 6,
+          "H": 0.022013429906413147,
+          "H_over_delta": 0.13674894943155452,
+          "H_over_tau": 0.05486632312345307,
+          "sigma_tilde": 0.20049760877699385,
+          "sigma_tilde_over_tau": 0.4997206993824003,
+          "P_vv": 0.2,
+          "nu_v": 0.00889558765919439,
+          "best_component": {
+            "t": 0.10090021589615293,
+            "t_over_kappaOmega": 0.5,
+            "component": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "size": 9,
+            "mass_from_v": 1.0088955876591945,
+            "Pi_C": 4.4386812030519415e-07,
+            "L": 3,
+            "Pi_over_tau": 1.1062979197880323e-06,
+            "min_edge": 3.887179073442458e-06
+          },
+          "best_Pi_over_tau": 1.1062979197880323e-06
+        }
+      },
+      "0.25": {
+        "diag": 0.25,
+        "min_delta_over_diag2": 2.55156792102939,
+        "best_sigma_over_tau": 0.6260318562470425,
+        "best_H_over_tau": 0.17538666858172794,
+        "best_record": {
+          "label": "audit_posdiag",
+          "gate": "PASS",
+          "n": 8,
+          "delta": 0.15947299506433688,
+          "tau": 0.399340700485609,
+          "W": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "v": 5,
+          "H": 0.07003903508726458,
+          "H_over_delta": 0.43919056677281587,
+          "H_over_tau": 0.17538666858172794,
+          "sigma_tilde": 0.25,
+          "sigma_tilde_over_tau": 0.6260318562470425,
+          "P_vv": 0.25,
+          "nu_v": 0.0402762211802088,
+          "best_component": {
+            "t": 0.10228666458494756,
+            "t_over_kappaOmega": 0.5,
+            "component": [
+              1,
+              2,
+              4,
+              5,
+              7
+            ],
+            "size": 5,
+            "mass_from_v": 0.9070598001291401,
+            "Pi_C": 0.00012770289417811278,
+            "L": 3,
+            "Pi_over_tau": 0.0003197843195617743,
+            "min_edge": 0.0031620482754916666
+          },
+          "best_Pi_over_tau": 0.0003197843195617743
+        }
+      },
+      "0.3": {
+        "diag": 0.3,
+        "min_delta_over_diag2": 1.3945674453661729e+299,
+        "best_sigma_over_tau": -Infinity,
+        "best_H_over_tau": 0.005074104931542761,
+        "best_record": {
+          "label": "audit_posdiag",
+          "gate": "PASS",
+          "n": 9,
+          "delta": 0.1394567445366173,
+          "tau": 0.37343907740971255,
+          "W": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8
+          ],
+          "v": 7,
+          "H": 0.001894869064315401,
+          "H_over_delta": 0.013587503928989705,
+          "H_over_tau": 0.005074104931542761,
+          "sigma_tilde": 0.0,
+          "sigma_tilde_over_tau": 0.0,
+          "P_vv": 0.0,
+          "nu_v": 0.019449303386089658,
+          "best_component": {
+            "t": 0.09344767647282648,
+            "t_over_kappaOmega": 0.5,
+            "component": [
+              2,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "size": 6,
+            "mass_from_v": 0.7882518140594704,
+            "Pi_C": 1.681532871024524e-08,
+            "L": 3,
+            "Pi_over_tau": 4.502830509030146e-08,
+            "min_edge": 0.0003158482901220725
+          },
+          "best_Pi_over_tau": 4.502830509030146e-08
+        }
+      },
+      "0.4": {
+        "diag": 0.4,
+        "min_delta_over_diag2": Infinity,
+        "best_sigma_over_tau": -Infinity,
+        "best_H_over_tau": -Infinity,
+        "best_record": null
+      },
+      "0.5": {
+        "diag": 0.5,
+        "min_delta_over_diag2": Infinity,
+        "best_sigma_over_tau": -Infinity,
+        "best_H_over_tau": -Infinity,
+        "best_record": null
+      },
+      "0.7": {
+        "diag": 0.7,
+        "min_delta_over_diag2": Infinity,
+        "best_sigma_over_tau": -Infinity,
+        "best_H_over_tau": -Infinity,
+        "best_record": null
+      },
+      "0.9": {
+        "diag": 0.9,
+        "min_delta_over_diag2": Infinity,
+        "best_sigma_over_tau": -Infinity,
+        "best_H_over_tau": -Infinity,
+        "best_record": null
+      }
+    },
+    "bests": {
+      "max_sigma_over_tau": {
+        "value": 0.6260318562470425,
+        "record": {
+          "label": "audit_posdiag",
+          "gate": "PASS",
+          "n": 8,
+          "delta": 0.15947299506433688,
+          "tau": 0.399340700485609,
+          "W": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "v": 5,
+          "H": 0.07003903508726458,
+          "H_over_delta": 0.43919056677281587,
+          "H_over_tau": 0.17538666858172794,
+          "sigma_tilde": 0.25,
+          "sigma_tilde_over_tau": 0.6260318562470425,
+          "P_vv": 0.25,
+          "nu_v": 0.0402762211802088,
+          "best_component": {
+            "t": 0.10228666458494756,
+            "t_over_kappaOmega": 0.5,
+            "component": [
+              1,
+              2,
+              4,
+              5,
+              7
+            ],
+            "size": 5,
+            "mass_from_v": 0.9070598001291401,
+            "Pi_C": 0.00012770289417811278,
+            "L": 3,
+            "Pi_over_tau": 0.0003197843195617743,
+            "min_edge": 0.0031620482754916666
+          },
+          "best_Pi_over_tau": 0.0003197843195617743
+        }
+      },
+      "max_H_over_tau": {
+        "value": 0.2789314464256671,
+        "record": {
+          "label": "audit_posdiag",
+          "gate": "PASS",
+          "n": 8,
+          "delta": 0.08002662055287188,
+          "tau": 0.2828897674941105,
+          "W": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "v": 5,
+          "H": 0.0789068520261529,
+          "H_over_delta": 0.9860075495006169,
+          "H_over_tau": 0.2789314464256671,
+          "sigma_tilde": 0.05062337609287083,
+          "sigma_tilde_over_tau": 0.17895089151262694,
+          "P_vv": 0.05,
+          "nu_v": 0.037858106801489495,
+          "best_component": {
+            "t": 0.07304926986943838,
+            "t_over_kappaOmega": 0.5,
+            "component": [
+              5,
+              6,
+              7
+            ],
+            "size": 3,
+            "mass_from_v": 0.05062337609287083,
+            "Pi_C": 3.8859775316289394e-07,
+            "L": 2,
+            "Pi_over_tau": 1.3736720016604496e-06,
+            "min_edge": 0.0006233760928708238
+          },
+          "best_Pi_over_tau": 1.3736720016604496e-06
+        }
+      },
+      "min_delta_over_sigma2": {
+        "value": 2.55156792102939,
+        "record": {
+          "label": "audit_posdiag",
+          "gate": "PASS",
+          "n": 8,
+          "delta": 0.15947299506433688,
+          "tau": 0.399340700485609,
+          "W": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "v": 5,
+          "H": 0.07003903508726458,
+          "H_over_delta": 0.43919056677281587,
+          "H_over_tau": 0.17538666858172794,
+          "sigma_tilde": 0.25,
+          "sigma_tilde_over_tau": 0.6260318562470425,
+          "P_vv": 0.25,
+          "nu_v": 0.0402762211802088,
+          "best_component": {
+            "t": 0.10228666458494756,
+            "t_over_kappaOmega": 0.5,
+            "component": [
+              1,
+              2,
+              4,
+              5,
+              7
+            ],
+            "size": 5,
+            "mass_from_v": 0.9070598001291401,
+            "Pi_C": 0.00012770289417811278,
+            "L": 3,
+            "Pi_over_tau": 0.0003197843195617743,
+            "min_edge": 0.0031620482754916666
+          },
+          "best_Pi_over_tau": 0.0003197843195617743
+        }
+      }
+    }
+  },
+  "conjugates": {
+    "counts": {
+      "cases": 120,
+      "pass_regime": 3,
+      "branch": 0
+    },
+    "bests": {
+      "max_sigma_over_tau": {
+        "value": 0.030638341112873727,
+        "record": {
+          "label": "audit_conjugate",
+          "gate": "PASS",
+          "n": 8,
+          "delta": 0.08211341572470085,
+          "tau": 0.2865543852826211,
+          "W": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "v": 4,
+          "H": 0.004607696287089407,
+          "H_over_delta": 0.056113806086662985,
+          "H_over_tau": 0.01607965720903191,
+          "sigma_tilde": 0.008779551003678788,
+          "sigma_tilde_over_tau": 0.030638341112873727,
+          "P_vv": 0.008779551003678788,
+          "nu_v": 0.016956948778001513,
+          "best_component": {
+            "t": 0.07464434686315528,
+            "t_over_kappaOmega": 0.5,
+            "component": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "size": 4,
+            "mass_from_v": 1.0090240230833794,
+            "Pi_C": 1.4746640160595041e-05,
+            "L": 2,
+            "Pi_over_tau": 5.1461924569923484e-05,
+            "min_edge": 0.00019376479330167248
+          },
+          "best_Pi_over_tau": 5.1461924569923484e-05
+        }
+      },
+      "max_H_over_tau": {
+        "value": 0.03296676398059492,
+        "record": {
+          "label": "audit_conjugate",
+          "gate": "PASS",
+          "n": 9,
+          "delta": 0.11351298100723914,
+          "tau": 0.3369168755156665,
+          "W": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "v": 6,
+          "H": 0.011107059116204458,
+          "H_over_delta": 0.09784836075704963,
+          "H_over_tau": 0.03296676398059492,
+          "sigma_tilde": 0.008905454469017481,
+          "sigma_tilde_over_tau": 0.0264322006886336,
+          "P_vv": 0.008905454469017481,
+          "nu_v": 0.060519664834413366,
+          "best_component": {
+            "t": 0.09023824228446205,
+            "t_over_kappaOmega": 0.5,
+            "component": [
+              1,
+              2,
+              3,
+              6
+            ],
+            "size": 4,
+            "mass_from_v": 1.0482916639288704,
+            "Pi_C": 0.0005266803506189327,
+            "L": 2,
+            "Pi_over_tau": 0.0015632352930164885,
+            "min_edge": 0.008367638703166305
+          },
+          "best_Pi_over_tau": 0.0015632352930164885
+        }
+      },
+      "max_H_over_delta": {
+        "value": 0.1217685783260389,
+        "record": {
+          "label": "audit_conjugate",
+          "gate": "PASS",
+          "n": 5,
+          "delta": 0.0014143399595775504,
+          "tau": 0.037607711437649995,
+          "W": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "v": 4,
+          "H": 0.00017222216614746564,
+          "H_over_delta": 0.1217685783260389,
+          "H_over_tau": 0.004579437555858553,
+          "sigma_tilde": 0.0006937045857057387,
+          "sigma_tilde_over_tau": 0.01844580696849461,
+          "P_vv": 0.0006937045857057387,
+          "nu_v": 8.605136789642846e-05,
+          "best_component": {
+            "t": 0.009402735232412704,
+            "t_over_kappaOmega": 0.5,
+            "component": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "size": 4,
+            "mass_from_v": 1.0000860513678966,
+            "Pi_C": 1.6166076128746616e-07,
+            "L": 2,
+            "Pi_over_tau": 4.29860672472677e-06,
+            "min_edge": 2.0307585077700925e-05
+          },
+          "best_Pi_over_tau": 4.29860672472677e-06
+        }
+      }
+    }
+  },
+  "elapsed_s": 58.77602744102478
+}

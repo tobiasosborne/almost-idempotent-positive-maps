@@ -1005,3 +1005,30 @@ the separate analytic band-closure caveat (already recorded in kernel-conjecture
 "periodic components" open sub-issue riding with conj:floor is CLOSED for closed components
 (prover w15_periodic + independent hostile audit, P = 0.92/0.87). Doc edit deferred until the
 cloning question settles (conj:floor may be restated as 2').
+
+## w15_refuter (codex) — NOT-REFUTED; the new quantified barrier: delta/sigma_tilde^2 >= 1.52
+Full answer + long-form verdict: notes/swarm-answers/w15_refuter.md; full stack (search +
+template audit + best instances): experiments/out/w15_refuter/. Three template families
+(LP-financed s5/cycles: 272 in-regime verified; positive-diagonal/self-mass: 45;
+stochastic conjugations: 3) — 1368 verified exactly-idempotent matrices total, ZERO
+in-regime branch hits. Closest record: delta = 0.0609, sigma_tilde/tau = 0.811,
+H/tau = 0.029, Pi_C/tau ~ 6e-6 — a genuinely thin shallow SCC exists, but the
+LOAD-BEARING GATE sigma_tilde > tau is never crossed (best self-mass attempt:
+delta/sigma_tilde^2 = 1.52 > 1). Updated P(floor true in small-delta regime) = 0.84.
+Most promising remaining DOF: end-to-end nonlinear optimization over (L,B) with W-aware
+loss instead of LP-completing Q; the concrete barrier to beat is delta/sigma_tilde^2 < 1
+while keeping the top vertex hidden.
+
+## ORCHESTRATOR SYNTHESIS (post w15_prover + w15_refuter, pending w15_clone_audit)
+The cloning obstruction + the refuter's empty in-regime record CLOSE A LOGICAL LOOP:
+cloning maps any antecedent-realizing seed to a floor-violating instance (geometry
+preserved, Pi -> 0), hence the RAW-INDEX floor is true IFF the antecedent regime
+(hidden v, sigma_tilde > tau, H > B*tau) is EMPTY — i.e. Conjecture 2 as written is
+either FALSE or exactly EQUIVALENT to the hard case of Conjecture 1 (no intermediate
+content). The refuter's barrier (delta/sigma_tilde^2 never < 1.52, 67k+ + 1368 instances,
+zero antecedent hits ever) is evidence FOR emptiness — i.e. for the kernel itself. The
+only viable INTERMEDIATE working form is the quotient floor 2' (w16_quotient in flight).
+Equivalently: the sharpest new attack target is the BARRIER INEQUALITY itself — prove
+"hidden top vertex => sigma_tilde_v <= C0 * sqrt(delta)" directly (if true with any
+universal C0, the s8 + height-collapse branches finish via the proved belt: that IS the
+kernel conjecture in its leanest form yet, now with a measured constant 1.52 to beat).
