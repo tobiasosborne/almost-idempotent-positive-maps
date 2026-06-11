@@ -1578,3 +1578,19 @@ affine-face case (= C*sqrt(delta) at eta = sqrt(delta)). IF IT LANDS: the condit
 assembly in the proof note gives the GLOBAL W-free O(sqrt(delta)) H-M distance in
 ||.||_{infty,1} — the campaign landmark feeding op-exposed-hull -> op-classical.
 LAUNCHING w28_face on it.
+
+## w28_face (codex) — DIED-AT: the bridge reduces to the REPRESENTATIVE DISPLACEMENT LEMMA
+Full answer + proof note: notes/swarm-answers/w28_face.md; numerics:
+experiments/out/w28_face/. Neither proved nor refuted; the named reduction: prove
+  sum_j (P_{u_s j})_+ * ||p_j - p_{u_s}||_1 <= C_D * delta
+(the representative's positive mass, transport-weighted, is O(delta)); then the face
+estimate (and hence the conditional L4 assembly = the GLOBAL W-free O(sqrt(delta))
+theorem) follows by Markov over rows outside M_s. Numerics strongly support the lemma.
+ORCHESTRATOR IDENTITY (hand to the prover): the VECTOR version is exact and free —
+idempotence + row sums give sum_j P_{u j}(p_j - p_u) = (P^2)_u - p_u = 0, so the signed
+displacement sum VANISHES IDENTICALLY and ||sum_j (P_{uj})_+ (p_j - p_u)||_1 =
+||sum_j (P_{uj})_- (p_j - p_u)||_1 <= nu_u * (2 + 4delta) <= 2delta(1+2delta). The whole
+difficulty: upgrade the vector cancellation to the SCALAR (no-cancellation) sum — i.e.
+exclude a conspiracy where O(sqrt(delta)) positive mass sits at O(1) displacement in
+mutually-cancelling directions. The w27 rank-2 saturator (mass sqrt(delta) at
+displacement sqrt(delta), scalar sum = delta) is consistent. LAUNCHING w29_displacement.

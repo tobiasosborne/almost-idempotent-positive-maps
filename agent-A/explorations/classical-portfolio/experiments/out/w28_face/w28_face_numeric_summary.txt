@@ -1,0 +1,17 @@
+w27_rank2_leakage_delta_0.01: delta=0.01 eta=0.1 denom=0.2 pivots=[0, 1] B_eta=[2] target_l1=0.11 target_ratio=0.55 HMdist=0.2 HMratio=1 coeffneg_B=0 rep_disp/delta=2.02
+w27_rank2_leakage_delta_0.001: delta=0.001 eta=0.031622777 denom=0.063245553 pivots=[0, 1] B_eta=[2] target_l1=0.032622777 target_ratio=0.515811 HMdist=0.063245553 HMratio=1 coeffneg_B=0 rep_disp/delta=2.002
+w27_rank2_leakage_delta_0.0001: delta=0.0001 eta=0.01 denom=0.02 pivots=[0, 1] B_eta=[2] target_l1=0.0101 target_ratio=0.505 HMdist=0.02 HMratio=1 coeffneg_B=0 rep_disp/delta=2.0002
+w27_rank2_leakage_delta_1e-05: delta=1e-05 eta=0.0031622777 denom=0.0063245553 pivots=[0, 1] B_eta=[2] target_l1=0.0031722777 target_ratio=0.501581 HMdist=0.0063245553 HMratio=1 coeffneg_B=0 rep_disp/delta=2.00002
+w27_rank2_leakage_delta_1e-06: delta=1e-06 eta=0.001 denom=0.002 pivots=[0, 1] B_eta=[2] target_l1=0.001001 target_ratio=0.5005 HMdist=0.002 HMratio=1 coeffneg_B=0 rep_disp/delta=2
+split_block_eps_0.01: delta=0.01 eta=0.1 denom=0.2 pivots=[0, 2] B_eta=[] target_l1=0.01 target_ratio=0.05 HMdist=0.02 HMratio=0.1 coeffneg_B=0 rep_disp/delta=2.02
+split_block_eps_0.001: delta=0.001 eta=0.031622777 denom=0.063245553 pivots=[0, 2] B_eta=[] target_l1=0.001 target_ratio=0.0158114 HMdist=0.002 HMratio=0.0316228 coeffneg_B=0 rep_disp/delta=2.002
+split_block_eps_0.0001: delta=0.0001 eta=0.01 denom=0.02 pivots=[0, 2] B_eta=[] target_l1=0.0001 target_ratio=0.005 HMdist=0.0002 HMratio=0.01 coeffneg_B=0 rep_disp/delta=2.0002
+split_block_eps_1e-05: delta=1e-05 eta=0.0031622777 denom=0.0063245553 pivots=[0, 2] B_eta=[] target_l1=1e-05 target_ratio=0.00158114 HMdist=2e-05 HMratio=0.00316228 coeffneg_B=0 rep_disp/delta=2.00002
+w19_leftcone_eps_0.01: delta=0.01 eta=0.1 denom=0.2 pivots=[0, 1, 2] B_eta=[3] target_l1=0.016666667 target_ratio=0.0833333 HMdist=0.02 HMratio=0.1 coeffneg_B=0 rep_disp/delta=1.34667
+w19_leftcone_eps_0.001: delta=0.001 eta=0.031622777 denom=0.063245553 pivots=[0, 1, 2] B_eta=[3] target_l1=0.0016666667 target_ratio=0.0263523 HMdist=0.002 HMratio=0.0316228 coeffneg_B=0 rep_disp/delta=1.33467
+w19_leftcone_eps_0.0001: delta=0.0001 eta=0.01 denom=0.02 pivots=[0, 1, 2] B_eta=[3] target_l1=0.00016666667 target_ratio=0.00833333 HMdist=0.0002 HMratio=0.01 coeffneg_B=0 rep_disp/delta=1.33347
+w19_leftcone_eps_1e-05: delta=1e-05 eta=0.0031622777 denom=0.0063245553 pivots=[0, 1, 2] B_eta=[3] target_l1=1.6666667e-05 target_ratio=0.00263523 HMdist=2e-05 HMratio=0.00316228 coeffneg_B=0 rep_disp/delta=1.33335
+w16_best_rational_above_corner: delta=0.22840027 eta=0.47791241 denom=0.95582481 pivots=[0, 1, 2, 3] B_eta=[6] target_l1=0.46809832 target_ratio=0.489732 HMdist=0.4793961 HMratio=0.501552 coeffneg_B=0.00359356 rep_disp/delta=2.42781
+w17_main_rational_above_corner: delta=0.23293352 eta=0.48263187 denom=0.96526374 pivots=[0, 1, 2, 3, 4] B_eta=[7, 8, 9] target_l1=0.47495686 target_ratio=0.492049 HMdist=0.48404667 HMratio=0.501466 coeffneg_B=0.0169459 rep_disp/delta=2.37327
+w17_robust_rational_above_corner: delta=0.23459249 eta=0.48434749 denom=0.96869498 pivots=[0, 1, 2, 3, 4] B_eta=[7, 8, 9] target_l1=0.4783364 target_ratio=0.493795 HMdist=0.48748781 HMratio=0.503242 coeffneg_B=0.0169459 rep_disp/delta=2.37642
+random small-delta conjugations: samples=36 max_target_ratio=0.100086 max_target_l1=0.0200172 max_HM_ratio=0.137296
