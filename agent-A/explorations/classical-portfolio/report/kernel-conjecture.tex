@@ -406,12 +406,17 @@ removed mass --- valid only in the one-shot final-profile form (stepwise iterati
 provably overcharges by $O(n)$). The fixed-base second-order race on the dangerous
 cone $\dot\delta=0$ is empirically \emph{empty} (clean-window ratio $0$); all
 sharpness comes from boundary-crossing arcs, which the recoding now handles.
-\emph{The remaining gap to the local linear law is one named estimate}: the
-finite-jet normal projection bound $\|(C,D)_{\perp\mathcal M}\|^2\le L\,\delta$ in
-the exact chart after final-profile rebasing (equivalently: second-order rigidity of
-the $\delta=0$ locus). Local numerics: the worst stable ratio is
-$H/\delta=2.000000000013$ --- the local law appears to hold with exactly the lemma's
-constant.
+\emph{Also proved and audited:} the \emph{stratified distance bound} --- squared
+chart-distance to the \emph{full} local $\delta=0$ locus (the union of H--M strata,
+support additions included) is $\le L\,\delta$; the fixed-single-stratum version is
+\emph{false} (support-addition arcs, $\delta\equiv0$ with jets transverse to one
+stratum). \emph{The remaining gap to the local linear law is the ASSEMBLY}: the
+first attempt to combine the four audited lemmas into $H\le C_{\mathrm{loc}}\delta$
+near the H--M locus was broken by its hostile audit (the visibility hypotheses fail
+at the chosen recoded base by factors $12.8$--$128$ on a nearest-branch test); the
+law itself is not refuted --- local numerics give worst stable ratio
+$H/\delta=2.000000000013$ --- and the open problem is an arc/base construction whose
+hypotheses hold.
 \item \textbf{The $\delta=0$ anchor.} At $\delta=0$ both conjectures hold by the
 finite stochastic-idempotent normal form of H\"ogn\"as--Mukherjea,
 \emph{Probability Measures on Semigroups}, Thm.~1.16; local extraction

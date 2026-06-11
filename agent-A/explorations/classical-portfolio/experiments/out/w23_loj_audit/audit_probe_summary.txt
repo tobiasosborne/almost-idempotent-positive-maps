@@ -1,0 +1,97 @@
+w23_loj_audit independent probe
+
+n=3,k=2 exact product-family summary:
+{
+  "grid_records": 1156,
+  "max_dist2_over_delta": 2.4290192411911775,
+  "worst": {
+    "b": 1e-06,
+    "g": 1.388011391556985e-06,
+    "delta": 1.388011391556985e-12,
+    "dist2": 3.371506377084458e-12,
+    "ratio": 2.4290192411911775,
+    "branch": "promote",
+    "branch_param": 1.3470010263416894e-06
+  },
+  "median_dist2_over_delta": 0.09151563920412159
+}
+
+selected exact mixed jets:
+balanced t=1.0e-02 b=1.000e-02 g=1.000e-02 delta=1.000e-04 dist2=1.745e-04 dist2/delta=1.74517 H/delta=0 eps/(mu/8)=12.9797 eps/(tau/64)=128 branch=promote
+balanced t=1.0e-03 b=1.000e-03 g=1.000e-03 delta=1.000e-06 dist2=1.750e-06 dist2/delta=1.7495 H/delta=0 eps/(mu/8)=12.8179 eps/(tau/64)=128 branch=promote
+balanced t=3.0e-04 b=3.000e-04 g=3.000e-04 delta=9.000e-08 dist2=1.575e-07 dist2/delta=1.74985 H/delta=0 eps/(mu/8)=12.8054 eps/(tau/64)=128 branch=promote
+promotion-first_face-second t=1.0e-02 b=1.000e-02 g=1.000e-04 delta=1.000e-06 dist2=1.745e-08 dist2/delta=0.0174517 H/delta=0 eps/(mu/8)=0.161205 eps/(tau/64)=12.8 branch=promote
+promotion-first_face-second t=1.0e-03 b=1.000e-03 g=1.000e-06 delta=1.000e-09 dist2=1.750e-12 dist2/delta=0.0017495 H/delta=1 eps/(mu/8)=0.016012 eps/(tau/64)=4.04772 branch=promote
+promotion-first_face-second t=3.0e-04 b=3.000e-04 g=9.000e-08 delta=2.700e-11 dist2=1.417e-14 dist2/delta=0.000524955 H/delta=1 eps/(mu/8)=0.00480108 eps/(tau/64)=2.21703 branch=promote
+face-first_promotion-second t=1.0e-02 b=1.000e-04 g=1.000e-02 delta=1.000e-06 dist2=3.450e-08 dist2/delta=0.0344966 H/delta=0 eps/(mu/8)=0.00159984 eps/(tau/64)=12.7987 branch=face-open
+face-first_promotion-second t=1.0e-03 b=1.000e-06 g=1.000e-03 delta=1.000e-09 dist2=3.495e-12 dist2/delta=0.003495 H/delta=1 eps/(mu/8)=1.6e-05 eps/(tau/64)=4.04771 branch=face-open
+face-first_promotion-second t=3.0e-04 b=9.000e-08 g=3.000e-04 delta=2.700e-11 dist2=2.834e-14 dist2/delta=0.00104955 H/delta=1 eps/(mu/8)=1.44e-06 eps/(tau/64)=2.21702 branch=face-open
+both-second t=1.0e-02 b=1.000e-04 g=1.000e-04 delta=1.000e-08 dist2=1.750e-08 dist2/delta=1.74995 H/delta=0 eps/(mu/8)=12.8018 eps/(tau/64)=128 branch=promote
+both-second t=1.0e-03 b=1.000e-06 g=1.000e-06 delta=1.000e-12 dist2=1.750e-12 dist2/delta=1.75 H/delta=1 eps/(mu/8)=12.8 eps/(tau/64)=128 branch=promote
+both-second t=3.0e-04 b=9.000e-08 g=9.000e-08 delta=8.100e-15 dist2=1.417e-14 dist2/delta=1.75 H/delta=0 eps/(mu/8)=12.8 eps/(tau/64)=128 branch=promote
+third-order-face-mix t=1.0e-02 b=1.000e-02 g=1.000e-06 delta=1.000e-08 dist2=1.745e-12 dist2/delta=0.000174517 H/delta=0 eps/(mu/8)=0.00161596 eps/(tau/64)=1.28 branch=promote
+third-order-face-mix t=1.0e-03 b=1.000e-03 g=1.000e-09 delta=1.000e-12 dist2=1.750e-18 dist2/delta=1.7495e-06 H/delta=1 eps/(mu/8)=1.6016e-05 eps/(tau/64)=0.128 branch=promote
+third-order-face-mix t=3.0e-04 b=3.000e-04 g=2.700e-11 delta=8.100e-15 dist2=1.276e-21 dist2/delta=1.57486e-07 H/delta=0 eps/(mu/8)=1.44043e-06 eps/(tau/64)=0.0384 branch=promote
+third-order-promotion-mix t=1.0e-02 b=1.000e-06 g=1.000e-02 delta=1.000e-08 dist2=3.450e-12 dist2/delta=0.000345034 H/delta=0 eps/(mu/8)=1.6e-05 eps/(tau/64)=1.28 branch=face-open
+third-order-promotion-mix t=1.0e-03 b=1.000e-09 g=1.000e-03 delta=1.000e-12 dist2=3.495e-18 dist2/delta=3.495e-06 H/delta=1 eps/(mu/8)=1.6e-08 eps/(tau/64)=0.128 branch=face-open
+third-order-promotion-mix t=3.0e-04 b=2.700e-11 g=3.000e-04 delta=8.100e-15 dist2=2.550e-21 dist2/delta=3.14865e-07 H/delta=0 eps/(mu/8)=4.32001e-10 eps/(tau/64)=0.0384 branch=face-open
+
+certified matrix recomputations:
+[
+  {
+    "name": "w16_rational",
+    "path": "/home/tobias/Projects/almost-idempotent-positive-maps/agent-A/explorations/classical-portfolio/experiments/out/w16_cert_audit/w16_best_rational_instance.json",
+    "n": 7,
+    "delta": 0.2284002678967354,
+    "tau": 0.47791240609209484,
+    "H": 0.007566906719580123,
+    "H_over_delta": 0.03313002558736613,
+    "H_over_tau": 0.015833250242350817,
+    "visible": 4,
+    "vertices": 7,
+    "idem_err": 2.220446049250313e-16,
+    "row_err": 1.1102230246251565e-16
+  },
+  {
+    "name": "w17_main",
+    "path": "/home/tobias/Projects/almost-idempotent-positive-maps/agent-A/explorations/classical-portfolio/experiments/out/w17_cert_audit/main_rational_instance.json",
+    "n": 10,
+    "delta": 0.2329335240003862,
+    "tau": 0.4826318721348459,
+    "H": 0.0483561469591021,
+    "H_over_delta": 0.20759633962787566,
+    "H_over_tau": 0.10019261004294291,
+    "visible": 5,
+    "vertices": 8,
+    "idem_err": 1.1102230246251565e-16,
+    "row_err": 2.220446049250313e-16
+  },
+  {
+    "name": "w17_robust",
+    "path": "/home/tobias/Projects/almost-idempotent-positive-maps/agent-A/explorations/classical-portfolio/experiments/out/w17_cert_audit/robust_rational_instance.json",
+    "n": 10,
+    "delta": 0.23459249106770677,
+    "tau": 0.4843474899983552,
+    "H": 0.04843598271429654,
+    "H_over_delta": 0.2064685979242073,
+    "H_over_tau": 0.1000025471680694,
+    "visible": 5,
+    "vertices": 8,
+    "idem_err": 2.220446049250313e-16,
+    "row_err": 1.1102230246251565e-16
+  }
+]
+
+w20/w21 audited scalar stress windows:
+{
+  "source_note": "scalar reuse of previously audited w20/w21 artifacts; not counted as new matrix recomputation",
+  "w20_tiny_mu": 9.99999000001e-07,
+  "w20_local_samples": 3,
+  "w20_local_max_H_over_delta": 0.0,
+  "w20_transition_samples": 5,
+  "w20_transition_max_H_over_delta": 1.9999979798126173,
+  "w21_local_samples": 252,
+  "w21_local_max_H_over_delta": 0.0,
+  "w21_transition_samples": 608,
+  "w21_transition_max_H_over_delta": 2.0000000000392326
+}

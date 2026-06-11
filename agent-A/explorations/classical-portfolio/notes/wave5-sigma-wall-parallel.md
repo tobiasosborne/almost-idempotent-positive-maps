@@ -1480,3 +1480,19 @@ boundary-transition events (handled by the recode). P(J1') = 0.74; P(J2' survive
 = 0.60. AUDIT LAUNCHED (w23_loj_audit; prime targets: the promotable-zeros enumeration
 completeness, mixed 2-jets, and the assembly's integration step — a pointwise derivative
 bound at one endpoint must not be silently integrated along the arc).
+
+## w23_loj_audit (codex, hostile) — J1' BANKED (mod clarification); THE ASSEMBLY (J2') BROKEN
+Full report: notes/swarm-answers/w23_loj_audit.md + experiments/out/w23_loj_audit/.
+J1' (the stratified distance-to-locus bound) HOLDS WITH REPAIR/CLARIFICATION: support
+additions and mixed promotion/face 2-jets did NOT break it; the promotable-zero
+enumeration must explicitly include the INDUCED TRANSIENT-ROW entries. J2' (the local
+linear law as assembled) BROKEN: not numerically refuted, but the step H <= 2*delta +
+K_vis*r^2 is NOT LICENSED by w19+w20+w21+J1' — the w20 visibility hypotheses FAIL on a
+concrete nearest-branch test by factors 12.8 and 128 (the eps-condition does not hold at
+the chosen recoded base for the nearest locus point). PROTOCOL NOTE: the hostile audit
+caught an invalid landmark claim before it entered the record — the audited chain stands
+at: tangent-cone + ambient fixed-mass visibility + L1/L2 recoding + J1' stratified bound;
+THE LOCAL-LAW ASSEMBLY IS THE OPEN PIECE (an arc/base-choice construction whose
+visibility hypotheses actually hold — possibly choosing the recode profile from the
+NEAREST BRANCH rather than the final profile, or a visibility statement at the nearest
+locus point itself). The GLOBAL gap (B-S normal-form distance) stands behind it.
