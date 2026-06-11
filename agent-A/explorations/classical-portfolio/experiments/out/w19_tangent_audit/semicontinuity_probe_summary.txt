@@ -1,0 +1,16 @@
+zero-budget semicontinuity probe
+seed: 7219
+strata: 34
+directions: 265
+max_H_over_t: 1.999991666609108
+tail_max_H_over_t: 0.0
+worst: idx=6 name=tiny_pi_many_transients_k3 n=12 k=3 t=6 trial=1 dot_delta=0 frozen_D=0
+  t=0.0001 delta/t=0.989998010002 H/t=1.9997010301 visible=3 vertices=4
+  t=3e-05 delta/t=0.966664700002 H/t=1.99991096933 visible=5 vertices=5
+  t=1e-05 delta/t=0.899998100002 H/t=1.9999709003 visible=5 vertices=5
+  t=3e-06 delta/t=0.666665000002 H/t=1.99999166661 visible=4 vertices=4
+  t=1e-06 delta/t=0 H/t=0 visible=2 vertices=2
+  t=3e-07 delta/t=0 H/t=0 visible=3 vertices=3
+  t=1e-07 delta/t=0 H/t=0 visible=3 vertices=3
+  t=3e-08 delta/t=0 H/t=0 visible=3 vertices=3
+tail_worst: idx=0 name=n3_k2_endpoint_sweep_0 n=3 k=2 t=1 trial=0 dot_delta=0 frozen_D=0 tail=0

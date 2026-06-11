@@ -1,0 +1,68 @@
+independent tangent audit summary
+created: 2026-06-11 13:54:04
+seed: 19020
+samples_random: 200
+samples_total: 209
+norm_bound: 1.0
+elapsed_s: 111.83328652381897
+zero_budget_max: 0.0
+zero_budget_positive_count: 0
+budget1_min: 0.0
+budget1_median: 2.0
+budget1_mean: 1.519230781717535
+budget1_p90: 2.0
+budget1_p99: 2.0
+budget1_max: 2.000000000000002
+best_idx: 74
+best_name: random_065
+
+top budget1 strata
+idx=0 name=n3_k2_endpoint_sweep_0 n=3 k=2 t=1 value=2 row=2 neg_subset=[0] ddelta=1 max_abs=1
+  gammas=[-1.0, 1.0]
+idx=4 name=n3_k2_endpoint_sweep_1 n=3 k=2 t=1 value=2 row=2 neg_subset=[1] ddelta=1 max_abs=1
+  gammas=[1.0, -1.0]
+idx=6 name=tiny_pi_many_transients_k3 n=12 k=3 t=6 value=2 row=0 neg_subset=[1] ddelta=1.00000000036 max_abs=1.00000000019
+  gammas=[0.9999990000010002, -1.0, 9.999990000009998e-07]
+idx=7 name=n12_boundary_faces_k4 n=12 k=4 t=6 value=2 row=0 neg_subset=[1, 2] ddelta=1 max_abs=1
+  gammas=[0.0, -1.0, 0.0, 1.0]
+idx=10 name=random_001 n=9 k=3 t=4 value=2 row=2 neg_subset=[0] ddelta=1 max_abs=1
+  gammas=[-1.0, 0.0, 1.0]
+idx=12 name=random_003 n=9 k=5 t=2 value=2 row=4 neg_subset=[0] ddelta=1 max_abs=1
+  gammas=[-1.0, 1.0, 0.0, 1.0, -1.0]
+idx=13 name=random_004 n=10 k=3 t=7 value=2 row=9 neg_subset=[2] ddelta=1 max_abs=1
+  gammas=[-0.9999611318433789, 1.999961131843379, -1.0]
+idx=15 name=random_006 n=9 k=2 t=3 value=2 row=0 neg_subset=[1] ddelta=1 max_abs=1
+  gammas=[1.0, -1.0]
+idx=16 name=random_007 n=11 k=3 t=3 value=2 row=1 neg_subset=[0] ddelta=1 max_abs=1
+  gammas=[-1.0, -1.0724079995379427, 2.0724079995379414]
+idx=18 name=random_009 n=5 k=2 t=1 value=2 row=0 neg_subset=[1] ddelta=1 max_abs=1
+  gammas=[1.0, -1.0]
+idx=21 name=random_012 n=12 k=3 t=5 value=2 row=0 neg_subset=[1] ddelta=1 max_abs=1
+  gammas=[4.987776858200732e-11, -1.0, 0.9999999999501223]
+idx=22 name=random_013 n=12 k=5 t=4 value=2 row=0 neg_subset=[1] ddelta=1 max_abs=1
+  gammas=[1.0, -1.0, 0.0, 0.0, 0.0]
+
+top zero-budget strata
+idx=0 name=n3_k2_endpoint_sweep_0 n=3 k=2 t=1 value=0 row=0 neg_subset=[]
+idx=1 name=n3_k2_endpoint_sweep_0.2 n=3 k=2 t=1 value=0 row=0 neg_subset=[]
+idx=2 name=n3_k2_endpoint_sweep_0.5 n=3 k=2 t=1 value=0 row=0 neg_subset=[]
+idx=3 name=n3_k2_endpoint_sweep_0.8 n=3 k=2 t=1 value=0 row=0 neg_subset=[]
+idx=4 name=n3_k2_endpoint_sweep_1 n=3 k=2 t=1 value=0 row=0 neg_subset=[]
+idx=5 name=k1_rank1_many_transients n=9 k=1 t=6 value=0 row=0 neg_subset=[]
+idx=6 name=tiny_pi_many_transients_k3 n=12 k=3 t=6 value=0 row=0 neg_subset=[]
+idx=7 name=n12_boundary_faces_k4 n=12 k=4 t=6 value=0 row=0 neg_subset=[]
+idx=8 name=leftcone_shape_hm_anchor n=4 k=3 t=1 value=0 row=0 neg_subset=[]
+idx=9 name=random_000 n=9 k=1 t=1 value=0 row=0 neg_subset=[]
+idx=10 name=random_001 n=9 k=3 t=4 value=0 row=0 neg_subset=[]
+idx=11 name=random_002 n=12 k=1 t=6 value=0 row=0 neg_subset=[]
+
+arc spot check for best budget1 direction
+dot_delta_A: 1.000000000000001
+two_dot_delta_A: 2.000000000000002
+t=1e-05 delta/t=1.9 H/t=9.10790591311e-06 visible=5 vertices=5 idem_res=2.22e-16
+t=3e-06 delta/t=1.66666666667 H/t=2.73235760855e-06 visible=4 vertices=4 idem_res=2.22e-16
+t=1e-06 delta/t=1.00000200385 H/t=9.10784520448e-07 visible=4 vertices=4 idem_res=1.11e-16
+t=3e-07 delta/t=1.00000060115 H/t=0 visible=4 vertices=4 idem_res=1.11e-16
+t=1e-07 delta/t=1.00000020038 H/t=0 visible=4 vertices=4 idem_res=1.11e-16
+t=3e-08 delta/t=1.00000006012 H/t=0 visible=4 vertices=4 idem_res=1.11e-16
+t=1e-08 delta/t=1.00000002004 H/t=0.0979530477535 visible=3 vertices=3 idem_res=1.11e-16

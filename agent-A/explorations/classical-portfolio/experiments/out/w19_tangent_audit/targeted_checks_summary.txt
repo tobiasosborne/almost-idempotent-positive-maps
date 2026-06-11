@@ -1,0 +1,16 @@
+n=3 endpoint frozen-sharp direction
+tangent_residual: 0.0
+dot_delta: 1.0
+frozen_D: 2.0
+  t=0.1 delta/t=1 H/t=0 visible=2 vertices=2
+  t=0.03 delta/t=1 H/t=0 visible=2 vertices=2
+  t=0.01 delta/t=1 H/t=0 visible=2 vertices=2
+  t=0.003 delta/t=1 H/t=0 visible=2 vertices=2
+  t=0.001 delta/t=1 H/t=0 visible=2 vertices=2
+  t=0.0003 delta/t=1 H/t=0 visible=2 vertices=2
+  t=0.0001 delta/t=1 H/t=0 visible=2 vertices=2
+
+leftcone derivative at H-M anchor
+tangent_residual: 1.1102230246251565e-16
+dot_delta: 1.0
+frozen_D: 0.0

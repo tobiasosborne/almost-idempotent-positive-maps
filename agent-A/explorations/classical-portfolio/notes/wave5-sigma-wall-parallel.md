@@ -1334,3 +1334,24 @@ ORCHESTRATION LESSON (logged): codex `-o answer.md` OVERWRITES a worker-authored
 answer.md in the same workdir — the proof note had to be recovered from the transcript.
 Future briefs: instruct workers to write long artifacts to proof.md/verdict.md, never
 answer.md.
+
+## w19_tangent_audit (codex, hostile) — THE TANGENT-CONE LEMMA HOLDS WITH REPAIR: BANKED
+Full report: notes/swarm-answers/w19_tangent_audit.md + experiments/out/w19_tangent_audit/
+(incl. audit_report.md). Independent re-derivation + independent decider re-implementation:
+209 strata (incl. extreme tiny-mass geometries), zero dangerous-cone directions,
+budget1_max = 2.000000000000002; EXACT ARC integration along the worst LP direction stays
+below 2*dot-delta (idempotence residual 1e-16); the w19_leftcone refutation family does
+NOT attack this lemma (at its H-M anchor: dot-delta = 1, frozen D = 0). REPAIRS:
+(1) SHARPNESS only for the FROZEN recurrent-hull derivative — the n=3 endpoint direction
+has frozen D = 2 but ACTUAL H/t = 0 (actual-height sharpness unconfirmed; the lemma's
+inequality is what matters). (2) The semicontinuity step: pointwise Dini fine, but NO
+uniform local radius over tiny recurrent masses — an explicit TWO-SCALE VISIBILITY LEMMA
+is required (made concrete by a finite-scale stress: H/t ~ 2 above a 1e-6 active-entry
+scale on a tiny-mass stratum; tail below that scale = 0, so no Dini failure).
+P(repaired verdict survives) = 0.82. STATUS: the repaired lemma is PROVED + HOSTILE-
+AUDITED at exploration level — the first new proved result of the idempotence-
+exploitation programme. WAVE 20 LAUNCHED: w20_curve — T1 the two-scale visibility lemma
+(the audit's named gap), T2 the LOCAL linear law near the H-M locus (fixed n; explicit
+radius; must explicitly disarm the recorded "naive compactness / W-jump" dead route),
+T3 the honest dimension-dependence list + the standing global gap (B-S normal-form
+distance — every small-delta idempotent near the locus — NOT claimed).
