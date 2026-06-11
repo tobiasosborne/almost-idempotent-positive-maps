@@ -178,6 +178,43 @@ proof*.
 
 ---
 
+## 2bis. Timescale recalibration (agent tooling) — the buckets above are human-FTE and misleading
+
+The S/M/L/R buckets in §1–§2 are *human* effort. With agent tooling they are the
+wrong unit. The correct decomposition is **formalisation-labor vs open
+mathematics**, because only one of the two is compressible by parallelism:
+
+- **Formalisation labor** — the math is *already known on paper* (proof exists),
+  Lean just has to encode and discharge it. This is mechanical, decomposes into
+  near-independent lemma files, and is **massively swarm-parallelisable**: wall-clock
+  is set by the *dependency depth* (critical path) and the slowest single lemma, not
+  by total volume. Most "L"/"R" items here that are *labor* (octonions/Cayley–Dickson,
+  Albert algebra, the JNW classification, Penico `H²=0`, compact-group Haar
+  averaging, `Aut(J)`/`O(n)` compactness, Effros–Størmer, the order-unit-space
+  library, Kadison) collapse to **days of wall-clock**, fanned out.
+- **Open mathematics** — no agreed proof exists yet, so there is nothing to
+  *encode*. Lean cannot precede the math. This is the genuinely irreducible cost,
+  and it is exactly the project's research frontier: the **full Layer-1 structure
+  theorem** (the approximate-cocycle / arbitrary-module / positivity package of
+  `op:layer1-gap`), the **α=1 exponent**, **near-positive projection stability /
+  global exposed-hull**, and the independent re-audit of B's matrix exact-adjoint
+  benchmark. Swarms help here only by *parallel proof search* and by *checking*,
+  not by guaranteeing.
+
+Crucial reframe this implies: **Lean is usable now as an adversarial verifier, not
+just as an end-goal.** Formalising the bridge would *certify* the one fully-proved
+theorem; attempting to formalise B's matrix exact-adjoint benchmark would either
+certify the intricate sector-reconstruction chain or expose the gap the two
+sidecar audits flagged (`rem:matrix-audit`). That is high-value on the front half
+*today*.
+
+Dependency structure (what gates what, hence the critical path):
+`order-unit space → ε-JB def`; `formally-real Jordan + norm → JB-algebra def`;
+`JB/JC def → Effros–Størmer → Theorem C`; `octonions → Albert → (exceptional part
+of) JNW`. The commutative/classical track and the bridge track share almost no
+prerequisites with each other or with the classification, so they run fully in
+parallel.
+
 ## 3. Recommended staging (if we pursue this)
 
 1. **Milestone 0 — statements.** Order-unit space + order-unit norm; ε-JB algebra;

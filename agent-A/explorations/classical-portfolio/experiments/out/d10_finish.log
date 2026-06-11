@@ -1,0 +1,6 @@
+skip sigma 0.3 (checkpointed)
+PROBE2 sigma 0.5 ...
+  -> OK slope 0.5000000000000001 R2 1.0
+PROBE2 sigma 0.7 ...
+  -> OK slope 0.5000000000000002 R2 1.0
+DONE report written

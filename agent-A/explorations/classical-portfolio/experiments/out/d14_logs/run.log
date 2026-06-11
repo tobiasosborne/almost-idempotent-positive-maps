@@ -1,0 +1,98 @@
+[d14] loading d12 PASS logs ...
+  [d12_floor_d100sv70] PASS n=17 delta=0.07000 H/tau=0.529 Omega=2.140
+           MIN sup lambda_S = 0.0700 (target kappa*tau ~ 0.0175; (1-q)tau scale)
+           MIN closure_ratio (finite Delta) = 4.308794992305191 at t/(kO)=0.1
+           MIN closure_ratio (any) = 4.308794992305191
+           MIN sup-interior crossleak = 0.0700
+           best-lamS t/(kO)=1.026 |S|=8 lamS=0.0700 argsup-role=v Delta_finite=False q=1.0000
+  [d12_floor_d110] PASS n=17 delta=0.05500 H/tau=0.469 Omega=2.110
+           MIN sup lambda_S = 0.0550 (target kappa*tau ~ 0.0138; (1-q)tau scale)
+           MIN closure_ratio (finite Delta) = 4.733055903094551 at t/(kO)=0.1
+           MIN closure_ratio (any) = 4.733055903094551
+           MIN sup-interior crossleak = 0.0550
+           best-lamS t/(kO)=0.928 |S|=8 lamS=0.0550 argsup-role=v Delta_finite=False q=1.0000
+  [d12_floor_d120] PASS n=17 delta=0.06000 H/tau=0.490 Omega=2.120
+           MIN sup lambda_S = 0.0600 (target kappa*tau ~ 0.0150; (1-q)tau scale)
+           MIN closure_ratio (finite Delta) = 4.572380853195266 at t/(kO)=0.1
+           MIN closure_ratio (any) = 4.572380853195266
+           MIN sup-interior crossleak = 0.0600
+           best-lamS t/(kO)=0.928 |S|=8 lamS=0.0600 argsup-role=v Delta_finite=False q=1.0000
+  [d12_floor_kg3] PASS n=22 delta=0.06750 H/tau=0.520 Omega=2.135
+           MIN sup lambda_S = 0.0675 (target kappa*tau ~ 0.0169; (1-q)tau scale)
+           MIN closure_ratio (finite Delta) = 4.368617036868169 at t/(kO)=0.1
+           MIN closure_ratio (any) = 4.368617036868169
+           MIN sup-interior crossleak = 0.0675
+           best-lamS t/(kO)=0.977 |S|=11 lamS=0.0675 argsup-role=v Delta_finite=False q=1.0000
+  [d12_floor_ma3] PASS n=18 delta=0.06500 H/tau=0.510 Omega=2.130
+           MIN sup lambda_S = 0.0650 (target kappa*tau ~ 0.0163; (1-q)tau scale)
+           MIN closure_ratio (finite Delta) = 4.432224654122958 at t/(kO)=0.10000000000000002
+           MIN closure_ratio (any) = 4.432224654122958
+           MIN sup-interior crossleak = 0.0650
+           best-lamS t/(kO)=0.977 |S|=8 lamS=0.0650 argsup-role=v Delta_finite=False q=1.0000
+  [d12_mid_d050ma3] PASS n=18 delta=0.02500 H/tau=0.316 Omega=2.050
+           MIN sup lambda_S = 0.0250 (target kappa*tau ~ 0.0063; (1-q)tau scale)
+           MIN closure_ratio (finite Delta) = 6.640783086353597 at t/(kO)=0.1
+           MIN closure_ratio (any) = 6.640783086353597
+           MIN sup-interior crossleak = 0.0250
+           best-lamS t/(kO)=0.636 |S|=8 lamS=0.0250 argsup-role=v Delta_finite=False q=1.0000
+  [d12_mid_d070] PASS n=17 delta=0.03500 H/tau=0.374 Omega=2.070
+           MIN sup lambda_S = 0.0350 (target kappa*tau ~ 0.0088; (1-q)tau scale)
+           MIN closure_ratio (finite Delta) = 5.719390576925882 at t/(kO)=0.09999999999999999
+           MIN closure_ratio (any) = 5.719390576925882
+           MIN sup-interior crossleak = 0.0350
+           best-lamS t/(kO)=0.733 |S|=8 lamS=0.0350 argsup-role=v Delta_finite=False q=1.0000
+  [d12_mid_d090] PASS n=17 delta=0.04500 H/tau=0.424 Omega=2.090
+           MIN sup lambda_S = 0.0450 (target kappa*tau ~ 0.0112; (1-q)tau scale)
+           MIN closure_ratio (finite Delta) = 5.138309276622246 at t/(kO)=0.1
+           MIN closure_ratio (any) = 5.138309276622246
+           MIN sup-interior crossleak = 0.0450
+           best-lamS t/(kO)=0.831 |S|=8 lamS=0.0450 argsup-role=v Delta_finite=False q=1.0000
+  [d12_small_d010sv70] PASS n=17 delta=0.00700 H/tau=0.167 Omega=2.014
+           MIN sup lambda_S = 0.0070 (target kappa*tau ~ 0.0018; (1-q)tau scale)
+           MIN closure_ratio (finite Delta) = 12.119618098650752 at t/(kO)=0.1
+           MIN closure_ratio (any) = 12.119618098650752
+           MIN sup-interior crossleak = 0.0070
+           best-lamS t/(kO)=0.344 |S|=8 lamS=0.0070 argsup-role=v Delta_finite=False q=1.0000
+  [d12_small_d020] PASS n=17 delta=0.01000 H/tau=0.200 Omega=2.020
+           MIN sup lambda_S = 0.0100 (target kappa*tau ~ 0.0025; (1-q)tau scale)
+           MIN closure_ratio (finite Delta) = 10.2 at t/(kO)=0.1
+           MIN closure_ratio (any) = 10.2
+           MIN sup-interior crossleak = 0.0100
+           best-lamS t/(kO)=0.441 |S|=8 lamS=0.0100 argsup-role=v Delta_finite=False q=1.0000
+  [d12_small_d030kg3] PASS n=22 delta=0.01500 H/tau=0.245 Omega=2.030
+           MIN sup lambda_S = 0.0150 (target kappa*tau ~ 0.0037; (1-q)tau scale)
+           MIN closure_ratio (finite Delta) = 8.40991478355558 at t/(kO)=0.1
+           MIN closure_ratio (any) = 8.40991478355558
+           MIN sup-interior crossleak = 0.0150
+           best-lamS t/(kO)=0.490 |S|=11 lamS=0.0150 argsup-role=v Delta_finite=False q=1.0000
+  [d12_small_d050sv35] PASS n=17 delta=0.01750 H/tau=0.265 Omega=2.035
+           MIN sup lambda_S = 0.0175 (target kappa*tau ~ 0.0044; (1-q)tau scale)
+           MIN closure_ratio (finite Delta) = 7.823864591291004 at t/(kO)=0.1
+           MIN closure_ratio (any) = 7.823864591291004
+           MIN sup-interior crossleak = 0.0175
+           best-lamS t/(kO)=0.538 |S|=8 lamS=0.0175 argsup-role=v Delta_finite=False q=1.0000
+  [d13_d5e-02] PASS n=7 delta=0.05000 H/tau=0.447 Omega=2.100
+           MIN sup lambda_S = 0.0500 (target kappa*tau ~ 0.0125; (1-q)tau scale)
+           MIN closure_ratio (finite Delta) = 4.919349550499538 at t/(kO)=0.10000000000000002
+           MIN closure_ratio (any) = 4.919349550499538
+           MIN sup-interior crossleak = 0.0500
+           best-lamS t/(kO)=0.879 |S|=6 lamS=0.0500 argsup-role=v Delta_finite=False q=1.0000
+[d14] s5 exact instance ...
+  [s5_exact] PASS n=5 delta=0.00115 H/tau=0.029 Omega=2.001
+           MIN sup lambda_S = 0.0005 (target kappa*tau ~ 0.0003; (1-q)tau scale)
+           MIN closure_ratio (finite Delta) = None at t/(kO)=None
+           MIN closure_ratio (any) = 14732820577.6332
+           MIN sup-interior crossleak = 0.0005
+           best-lamS t/(kO)=0.100 |S|=4 lamS=0.0005 argsup-role=v Delta_finite=False q=1.0000
+[d14] corner edge instance (decide_opt 0.1435,0.5) ...
+  [corner_edge] PASS n=17 delta=0.07175 H/tau=0.536 Omega=2.143
+           MIN sup lambda_S = 0.0717 (target kappa*tau ~ 0.0179; (1-q)tau scale)
+           MIN closure_ratio (finite Delta) = 4.268990774171942 at t/(kO)=0.1
+           MIN closure_ratio (any) = 4.268990774171942
+           MIN sup-interior crossleak = 0.0717
+           best-lamS t/(kO)=1.026 |S|=8 lamS=0.0717 argsup-role=v Delta_finite=False q=1.0000
+
+[d14] done in 2.7s. passed=15
+      worst MIN_sup_lambda_S = 0.07175 (corner_edge)
+      instances with NO finite-Delta shallow block: ['s5_exact']
+      instances with sup-leak <= kappa*tau (closure holds): 0/15

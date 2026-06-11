@@ -1,0 +1,93 @@
+[d12] 14 planned off-d8 instances. presolve OFF.
+
+[d12] === instance 1/14: floor_sv35 (d=0.143 sv=0.35 ell=0.7 ma=2 kg=2) ===
+  GATE FAIL_v_in_W
+
+[d12] === instance 2/14: floor_sv70 (d=0.14 sv=0.7 ell=0.72 ma=2 kg=2) ===
+  GATE FAIL_v_in_W
+
+[d12] === instance 3/14: floor_ma3 (d=0.13 sv=0.5 ell=0.65 ma=3 kg=2) ===
+  PASS: delta=0.06500 H=0.1300 H/tau=0.510 delta/H^2=3.846
+        ident_resid=5.6e-17 massbal=1.1e-16 B-t*=0.0e+00
+        m*_observed=1.0000 shallow_frac=0.0000 sigma_v=1.0650 sigma_tilde=0.0000
+        depth profile (E/H -> mu-mass deep): {'E/H=0.0': 1.0, 'E/H=0.1': 1.0, 'E/H=0.25': 1.0, 'E/H=0.5': 1.0, 'E/H=0.75': 1.0, 'E/H=0.9': 1.0, 'E/H=1.0': 1.0}
+        class comp: {'W-vertex': 1.0}
+
+[d12] === instance 4/14: floor_kg3 (d=0.135 sv=0.5 ell=0.75 ma=2 kg=3) ===
+  PASS: delta=0.06750 H=0.1350 H/tau=0.520 delta/H^2=3.704
+        ident_resid=2.4e-16 massbal=2.2e-16 B-t*=6.9e-17
+        m*_observed=1.0000 shallow_frac=0.0000 sigma_v=1.0675 sigma_tilde=0.0000
+        depth profile (E/H -> mu-mass deep): {'E/H=0.0': 1.0, 'E/H=0.1': 1.0, 'E/H=0.25': 1.0, 'E/H=0.5': 1.0, 'E/H=0.75': 1.0, 'E/H=0.9': 1.0, 'E/H=1.0': 1.0}
+        class comp: {'W-vertex': 1.0}
+
+[d12] === instance 5/14: floor_d120 (d=0.12 sv=0.5 ell=0.65 ma=2 kg=2) ===
+  PASS: delta=0.06000 H=0.1200 H/tau=0.490 delta/H^2=4.167
+        ident_resid=5.6e-17 massbal=3.3e-16 B-t*=2.8e-17
+        m*_observed=1.0000 shallow_frac=0.0000 sigma_v=1.0600 sigma_tilde=0.0000
+        depth profile (E/H -> mu-mass deep): {'E/H=0.0': 1.0, 'E/H=0.1': 1.0, 'E/H=0.25': 1.0, 'E/H=0.5': 1.0, 'E/H=0.75': 1.0, 'E/H=0.9': 1.0, 'E/H=1.0': 1.0}
+        class comp: {'W-vertex': 1.0}
+
+[d12] === instance 6/14: floor_d110 (d=0.11 sv=0.5 ell=0.65 ma=2 kg=2) ===
+  PASS: delta=0.05500 H=0.1100 H/tau=0.469 delta/H^2=4.545
+        ident_resid=5.6e-17 massbal=1.1e-16 B-t*=6.9e-18
+        m*_observed=1.0000 shallow_frac=0.0000 sigma_v=1.0550 sigma_tilde=0.0000
+        depth profile (E/H -> mu-mass deep): {'E/H=0.0': 1.0, 'E/H=0.1': 1.0, 'E/H=0.25': 1.0, 'E/H=0.5': 1.0, 'E/H=0.75': 1.0, 'E/H=0.9': 1.0, 'E/H=1.0': 1.0}
+        class comp: {'W-vertex': 1.0}
+
+[d12] === instance 7/14: floor_d100sv70 (d=0.1 sv=0.7 ell=0.72 ma=2 kg=2) ===
+  PASS: delta=0.07000 H=0.1400 H/tau=0.529 delta/H^2=3.571
+        ident_resid=4.2e-17 massbal=1.1e-16 B-t*=4.2e-17
+        m*_observed=1.0000 shallow_frac=0.0000 sigma_v=1.0700 sigma_tilde=0.0000
+        depth profile (E/H -> mu-mass deep): {'E/H=0.0': 1.0, 'E/H=0.1': 1.0, 'E/H=0.25': 1.0, 'E/H=0.5': 1.0, 'E/H=0.75': 1.0, 'E/H=0.9': 1.0, 'E/H=1.0': 1.0}
+        class comp: {'W-vertex': 1.0}
+
+[d12] === instance 8/14: mid_d090 (d=0.09 sv=0.5 ell=0.65 ma=2 kg=2) ===
+  PASS: delta=0.04500 H=0.0900 H/tau=0.424 delta/H^2=5.556
+        ident_resid=1.4e-17 massbal=0.0e+00 B-t*=6.9e-18
+        m*_observed=1.0000 shallow_frac=0.0000 sigma_v=1.0450 sigma_tilde=0.0000
+        depth profile (E/H -> mu-mass deep): {'E/H=0.0': 1.0, 'E/H=0.1': 1.0, 'E/H=0.25': 1.0, 'E/H=0.5': 1.0, 'E/H=0.75': 1.0, 'E/H=0.9': 1.0, 'E/H=1.0': 1.0}
+        class comp: {'W-vertex': 1.0}
+
+[d12] === instance 9/14: mid_d070 (d=0.07 sv=0.5 ell=0.65 ma=2 kg=2) ===
+  PASS: delta=0.03500 H=0.0700 H/tau=0.374 delta/H^2=7.143
+        ident_resid=5.6e-17 massbal=1.1e-16 B-t*=6.9e-18
+        m*_observed=1.0000 shallow_frac=0.0000 sigma_v=1.0350 sigma_tilde=0.0000
+        depth profile (E/H -> mu-mass deep): {'E/H=0.0': 1.0, 'E/H=0.1': 1.0, 'E/H=0.25': 1.0, 'E/H=0.5': 1.0, 'E/H=0.75': 1.0, 'E/H=0.9': 1.0, 'E/H=1.0': 1.0}
+        class comp: {'W-vertex': 1.0}
+
+[d12] === instance 10/14: mid_d050ma3 (d=0.05 sv=0.5 ell=0.65 ma=3 kg=2) ===
+  PASS: delta=0.02500 H=0.0500 H/tau=0.316 delta/H^2=10.000
+        ident_resid=5.6e-17 massbal=0.0e+00 B-t*=3.5e-18
+        m*_observed=1.0000 shallow_frac=0.0000 sigma_v=1.0250 sigma_tilde=0.0000
+        depth profile (E/H -> mu-mass deep): {'E/H=0.0': 1.0, 'E/H=0.1': 1.0, 'E/H=0.25': 1.0, 'E/H=0.5': 1.0, 'E/H=0.75': 1.0, 'E/H=0.9': 1.0, 'E/H=1.0': 1.0}
+        class comp: {'W-vertex': 1.0}
+
+[d12] === instance 11/14: small_d050sv35 (d=0.05 sv=0.35 ell=0.65 ma=2 kg=2) ===
+  PASS: delta=0.01750 H=0.0350 H/tau=0.265 delta/H^2=14.286
+        ident_resid=4.2e-17 massbal=1.1e-16 B-t*=3.5e-18
+        m*_observed=1.0000 shallow_frac=0.0000 sigma_v=1.0175 sigma_tilde=0.0000
+        depth profile (E/H -> mu-mass deep): {'E/H=0.0': 1.0, 'E/H=0.1': 1.0, 'E/H=0.25': 1.0, 'E/H=0.5': 1.0, 'E/H=0.75': 1.0, 'E/H=0.9': 1.0, 'E/H=1.0': 1.0}
+        class comp: {'W-vertex': 1.0}
+
+[d12] === instance 12/14: small_d030kg3 (d=0.03 sv=0.5 ell=0.65 ma=2 kg=3) ===
+  PASS: delta=0.01500 H=0.0300 H/tau=0.245 delta/H^2=16.667
+        ident_resid=1.1e-16 massbal=1.1e-16 B-t*=5.2e-18
+        m*_observed=1.0000 shallow_frac=0.0000 sigma_v=1.0150 sigma_tilde=0.0000
+        depth profile (E/H -> mu-mass deep): {'E/H=0.0': 1.0, 'E/H=0.1': 1.0, 'E/H=0.25': 1.0, 'E/H=0.5': 1.0, 'E/H=0.75': 1.0, 'E/H=0.9': 1.0, 'E/H=1.0': 1.0}
+        class comp: {'W-vertex': 1.0}
+
+[d12] === instance 13/14: small_d020 (d=0.02 sv=0.5 ell=0.65 ma=2 kg=2) ===
+  PASS: delta=0.01000 H=0.0200 H/tau=0.200 delta/H^2=25.000
+        ident_resid=5.6e-17 massbal=2.2e-16 B-t*=0.0e+00
+        m*_observed=1.0000 shallow_frac=0.0000 sigma_v=1.0100 sigma_tilde=0.0000
+        depth profile (E/H -> mu-mass deep): {'E/H=0.0': 1.0, 'E/H=0.1': 1.0, 'E/H=0.25': 1.0, 'E/H=0.5': 1.0, 'E/H=0.75': 1.0, 'E/H=0.9': 1.0, 'E/H=1.0': 1.0}
+        class comp: {'W-vertex': 1.0}
+
+[d12] === instance 14/14: small_d010sv70 (d=0.01 sv=0.7 ell=0.72 ma=2 kg=2) ===
+  PASS: delta=0.00700 H=0.0140 H/tau=0.167 delta/H^2=35.714
+        ident_resid=2.8e-17 massbal=3.3e-16 B-t*=0.0e+00
+        m*_observed=1.0000 shallow_frac=0.0000 sigma_v=1.0070 sigma_tilde=0.0000
+        depth profile (E/H -> mu-mass deep): {'E/H=0.0': 1.0, 'E/H=0.1': 1.0, 'E/H=0.25': 1.0, 'E/H=0.5': 1.0, 'E/H=0.75': 1.0, 'E/H=0.9': 1.0, 'E/H=1.0': 1.0}
+        class comp: {'W-vertex': 1.0}
+
+[d12] done in 11.0s. passed=12 min_m*=0.9999999999999997 median_m*=1.0 all_shallow=False

@@ -1,0 +1,44 @@
+[d13] entry hunt over [0.05, 0.01, 0.003, 0.001, 0.0003]; total budget 1200s; ratio_gate=0.3; floor band H/tau in [0.35,0.54]. presolve OFF.
+
+[d13] ===== target delta = 5.0e-02 (budget 120s) =====
+  best ratio (any row)    H/tau = 0.4472  (vertex? True, gen G2_canonical)
+  best ratio (VERTEX row) H/tau = 0.4472  (gen G2_canonical, delta/H^2=4.999999999999968)
+    G1_fixed_tau: n=712 max_ratio=0.4472 max_ratio_vertex=0.4472 n_vertex_hidden=570
+    G2_canonical: n=721 max_ratio=0.4472 max_ratio_vertex=0.4472 n_vertex_hidden=555
+    G3_shell: n=720 max_ratio=0.1051 max_ratio_vertex=0.1051 n_vertex_hidden=116
+  -> VERIFIED instance: H/tau=0.447 delta/H^2=5.000 sigma~=0.0000 m*=1.0000 shallow_frac=0.0000
+
+[d13] ===== target delta = 1.0e-02 (budget 192s) =====
+  best ratio (any row)    H/tau = 0.2217  (vertex? True, gen G1_fixed_tau)
+  best ratio (VERTEX row) H/tau = 0.2217  (gen G1_fixed_tau, delta/H^2=20.35226768591532)
+    G1_fixed_tau: n=1184 max_ratio=0.2217 max_ratio_vertex=0.2217 n_vertex_hidden=1144
+    G2_canonical: n=1185 max_ratio=0.2000 max_ratio_vertex=0.2000 n_vertex_hidden=1140
+    G3_shell: n=1185 max_ratio=0.2000 max_ratio_vertex=0.2000 n_vertex_hidden=740
+  -> OUTCOME (c) at delta=1.0e-02: ratio COLLAPSES: max H/tau over all rows = 0.2217 << 0.3; nothing hides near the floor at this delta (entry gate not enterable)
+
+[d13] ===== target delta = 3.0e-03 (budget 264s) =====
+  best ratio (any row)    H/tau = 0.1095  (vertex? True, gen G2_canonical)
+  best ratio (VERTEX row) H/tau = 0.1095  (gen G2_canonical, delta/H^2=83.33333333328392)
+    G1_fixed_tau: n=1672 max_ratio=0.1095 max_ratio_vertex=0.1095 n_vertex_hidden=1654
+    G2_canonical: n=1674 max_ratio=0.1095 max_ratio_vertex=0.1095 n_vertex_hidden=1662
+    G3_shell: n=1673 max_ratio=0.1095 max_ratio_vertex=0.1095 n_vertex_hidden=1528
+  -> OUTCOME (c) at delta=3.0e-03: ratio COLLAPSES: max H/tau over all rows = 0.1095 << 0.3; nothing hides near the floor at this delta (entry gate not enterable)
+
+[d13] ===== target delta = 1.0e-03 (budget 312s) =====
+  best ratio (any row)    H/tau = 0.0772  (vertex? True, gen G1_fixed_tau)
+  best ratio (VERTEX row) H/tau = 0.0772  (gen G1_fixed_tau, delta/H^2=167.58112620768094)
+    G1_fixed_tau: n=1588 max_ratio=0.0772 max_ratio_vertex=0.0772 n_vertex_hidden=1579
+    G2_canonical: n=1587 max_ratio=0.0632 max_ratio_vertex=0.0632 n_vertex_hidden=1581
+    G3_shell: n=1587 max_ratio=0.0632 max_ratio_vertex=0.0632 n_vertex_hidden=1587
+  -> OUTCOME (c) at delta=1.0e-03: ratio COLLAPSES: max H/tau over all rows = 0.0772 << 0.3; nothing hides near the floor at this delta (entry gate not enterable)
+
+[d13] ===== target delta = 3.0e-04 (budget 312s) =====
+  best ratio (any row)    H/tau = 0.0346  (vertex? True, gen G2_canonical)
+  best ratio (VERTEX row) H/tau = 0.0346  (gen G2_canonical, delta/H^2=833.3333333291075)
+    G1_fixed_tau: n=1804 max_ratio=0.0346 max_ratio_vertex=0.0346 n_vertex_hidden=1797
+    G2_canonical: n=1805 max_ratio=0.0346 max_ratio_vertex=0.0346 n_vertex_hidden=1802
+    G3_shell: n=1804 max_ratio=0.0346 max_ratio_vertex=0.0346 n_vertex_hidden=1804
+  -> OUTCOME (c) at delta=3.0e-04: ratio COLLAPSES: max H/tau over all rows = 0.0346 << 0.3; nothing hides near the floor at this delta (entry gate not enterable)
+
+[d13] DONE in 1200.1s. VERDICT = a_DMF_STANDS_new_mechanism
+      floor-verified targets: 1 ; outcome-(c) targets: 4
