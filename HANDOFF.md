@@ -44,6 +44,15 @@ NOTE: this tracks the REORG/ARCHITECTURE + af-proof build. For the MATH status s
 >    with absent `refs/`: `python3 scripts/fetch-refs.py` (18/51 arXiv-pinned + hash-verified, now incl.
 >    `baake-sumner-2007.11433`); `AIPM_REFS_CACHE=<dir> python3 scripts/fetch-refs.py` restores the bespoke residue.
 
+> **CLASSICAL-PORTFOLIO MERGED TO MAIN (2026-06-11).** Agent A's classical campaign
+> (the sidequest toward `op-classical`/`op-exposed-hull`) is now part of main per user
+> direction. Entry point: **`agent-A/explorations/classical-portfolio/OVERVIEW.md`**
+> (the twice-reviewed bird's-eye map: conjectures in plain terms, the full strategy
+> map with statuses, the frontier). Its current state: four hostile-audited lemmas
+> (the variety programme), the local-linear-law assembly broken by audit (the open
+> piece), certified above-corner antecedent instances, and a fresh lead (H-M Theorem
+> 1.12, the signed structure theorem — worker in flight). Kernel bead: `aipm-3u6`.
+
 **Branch:** `main`. **Date:** 2026-06-09. **Approved design:** `docs/plans/2026-06-05-argument-architecture-plan.md`.
 Mental model: definitions = types · each lemma (af workspace) = a module whose *contract* is its one-line
 statement · a linker enforces the DAG.

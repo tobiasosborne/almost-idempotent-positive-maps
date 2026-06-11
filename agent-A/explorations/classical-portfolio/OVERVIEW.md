@@ -16,8 +16,8 @@ from completely positive maps to merely positive maps (see `PRD.md`). The **clas
 what do *exactly idempotent* matrices that are *almost* stochastic look like? It is the
 proving ground for the whole Layer-1 "approximate structure implies nearby exact
 structure" philosophy, and it carries two open problems of the main registry
-(`op-classical`, `op-exposed-hull`). After ~20 waves and ~100 delegated workers it has
-become the project's most developed front. This document is the map.
+(`op-classical`, `op-exposed-hull`). After ~20 waves and dozens of delegated workers (~85 archived
+verdict files) it has become the project's most developed front. This document is the map.
 
 ## 1. The objects, with no jargon
 
@@ -37,9 +37,9 @@ At δ = 0, these matrices are completely classified (a classical theorem of
 Högnäs–Mukherjea, source pinned locally in `refs/hognas-mukherjea-2011/`, Thm 1.16):
 after permuting indices, the rows organise into k "recurrent blocks" — within each
 block all rows are identical probability rows supported on that block — plus
-"transient" rows that are convex mixtures of the block rows. So at δ = 0 the geometry
-of the rows (as points in R^n) is: **k distinct extreme points, everything else inside
-their convex hull.** We call this family the **H-M normal forms**; it is the δ = 0
+"transient" rows that are convex mixtures of the block rows. So at δ = 0 the geometry of the rows (as points in R^n) is: **k distinct extreme
+points, everything else inside their convex hull** (this convex-geometry rendering is
+a derived consequence; H-M's literal statement is the block/proportional normal form). We call this family the **H-M normal forms**; it is the δ = 0
 locus that everything is measured against.
 
 ### The geometric quantities
@@ -47,12 +47,13 @@ locus that everything is measured against.
 Treat each row p_i of P as a point in R^n with the ℓ¹ (sum of absolute values)
 distance.
 
-- A row vertex is **visible** if a linear functional separates it from the rest with a
-  quantitative margin ("you can see it from outside with a flat light"). IMPORTANT:
-  the formal definition is *scale-dependent*: the functional must beat rows at
-  distance ≥ ρ = 4τ by a margin ≥ κ = τ/4, and rows closer than ρ are exempt — see
-  `kernel-conjecture.tex` for the exact (ρ,κ)-form; the strict classical notion of an
-  exposed point is only the δ = 0 limit of this. Geometrically coincident duplicate
+- A row vertex v is **visible** if an affine function h certifies it from outside:
+  h(p_v) = 0, 0 ≤ h ≤ 1 on all rows, and h ≥ κ on every row at ℓ¹-distance ≥ ρ from
+  p_v ("you can see it from outside with a flat light, with a quantitative margin").
+  IMPORTANT: this is *scale-dependent* — the formal parameters are ρ = 4τ and
+  κ = τ/4, and rows closer than ρ are exempt from the margin (see
+  `kernel-conjecture.tex` and `definitions/def-exposed.md` for the exact form); the
+  strict classical notion of an exposed point is only the δ = 0 limit of this. Geometrically coincident duplicate
   rows count as a single point ("multiplicity-correct"). **W** is the set of visible
   row points; **C_W = conv(W)** is their convex hull.
 - A row that is a vertex of the row polytope but NOT visible is **hidden** — meaning
@@ -63,9 +64,10 @@ distance.
   H = max_i dist₁(p_i, C_W). At δ = 0, H = 0 (every row is in the hull of the block
   rows, which are all visible).
 - For a hidden row v, **σ̃_v ("sigma-tilde")** is the total positive mass that row v
-  places on columns whose rows lie strictly outside C_W — "how much of v's weight
-  sits on other outsiders". It measures how socially entangled the hidden row is with
-  the rest of the outside world.
+  places on columns j whose rows p_j lie strictly outside C_W — INCLUDING j = v
+  itself when p_v is outside (the certified record instances lean on this
+  self-coefficient). It measures how much of v's weight sits on outsiders, itself
+  included.
 
 ### The conjectures, plainly
 
@@ -90,11 +92,13 @@ Two statements at different strengths — keep them apart:
   parent project needs). The downstream arrows are proved or proved-modulo-recorded-
   audits; the missing formal input is the Kernel Conjecture. See
   `report/kernel-conjecture.tex` for the precise statements and the per-link ledger.
-- **Related W-free target.** "Every such P is O(δ)-close to an H-M normal form"
-  (distance measured row-wise). This avoids mentioning visibility entirely and is the
-  form a structure-theory proof would naturally produce; it was audited as a *target*
-  (not yet proved formally equivalent) — check `kernel-conjecture.tex` before
-  treating it as interchangeable.
+- **Related W-free target.** "Every such P is within C·√δ of an H-M normal form in
+  the Baake–Sumner normal-form distance" (the audited W-free formulation,
+  `w105_wfree` / `w11_wfree_audit`). CAUTION: the naive strengthening "O(δ)-close in
+  full matrix distance" is REFUTED (registry lemma `ex-hume`) — height H obeys a
+  linear law empirically, full matrix distance does not. This W-free form is a
+  *target*, not proved equivalent to the Kernel Conjecture — check
+  `kernel-conjecture.tex` before treating it as interchangeable.
 
 ### Two scales that matter
 
@@ -115,10 +119,10 @@ Two statements at different strengths — keep them apart:
 | THIS overview (start here) | `agent-A/explorations/classical-portfolio/OVERVIEW.md` |
 | Precise statements + evidence ledger + dead-route list (~15k tokens) | `report/kernel-conjecture.tex` (in this directory; PDF alongside). NOTE: it retains the path-product "working form" (Conjecture 2 family) with its cloning caveats; the ACTIVE attack has moved to the variety programme (§4.7 here) |
 | "The dossier": the full campaign log, wave by wave (append-only, large; read the FINAL/most-recent sections first — search "WAVE 18", "w23") | `notes/wave5-sigma-wall-parallel.md` |
-| Every worker's verdict, archived verbatim | `notes/swarm-answers/w*.md` (~70 files) |
+| Every worker's verdict, archived verbatim | `notes/swarm-answers/*.md` (~85 archived verdict files) |
 | Numerics, instances, certified counterexamples | `experiments/out/` |
 | The 49-page self-contained report (day-2 state; superseded on frontier items by this doc) | `report/main.pdf` |
-| Delegation how-to (codex CLI) | `docs/codex-delegation.md` |
+| Delegation how-to (codex CLI) | `docs/codex-delegation.md` (REPO ROOT docs/, not this directory) |
 | Task state | `bd ready`; the kernel bead is `aipm-3u6` |
 
 Conventions used throughout: δ = row negative mass (NOT entrywise), τ = √δ,
@@ -151,8 +155,13 @@ record it as proved.
 >
 > **Behind it, the standing gap to the full small-δ statement:** the GLOBAL question
 > — must every exactly idempotent matrix with small δ lie near the H-M family at
-> all? (The W-free target above.) Nothing currently attacks this; it is the natural
-> next campaign after the local assembly.
+> all? (The W-free target above.)
+>
+> **A fresh lead on the global question (user discovery, 2026-06-11):** H-M
+> **Theorem 1.12** — the theorem directly after the nonnegative classification — is
+> an exact structure theorem for arbitrary REAL (signed) idempotent matrices, with a
+> converse: proportional-row classes + explicit signed sum rules, valid at every δ.
+> The campaign had never read it (§4.9); a dedicated worker is on it.
 
 ## 4. The strategy map — everything tried, and how it died or lives
 
@@ -171,15 +180,19 @@ hypothesis entirely.** → dossier "WAVE 10", `notes/swarm-answers/` t1–t10.
 ### 4.2 Ten classical strategy kinds (wave 10) — all dead or absorbed
 Induction on n, probabilistic coupling, rank-complement algebra, extremal/KKT,
 sum-of-squares on strata, discharging, Lyapunov functions, minimax games, homotopy
-continuation, Birkhoff contraction. Eight died at named estimates; the table with each
-death point is in the dossier ("WAVE 10 — the 10-strategy-kind swarm"). Two produced
-lasting tools: Birkhoff (→ 4.3) and the LP collapse insight (→ 4.1).
+continuation, Birkhoff contraction. All ten died or collapsed (five collapsed into the LP frame of 4.1); the table with
+each death point is in the dossier ("WAVE 10 — the 10-strategy-kind swarm"). Two
+left lasting tools behind: t10's Birkhoff finisher (→ 4.3) and the LP-collapse
+meta-finding itself (→ 4.1).
 
 ### 4.3 The component finisher (PROVED) and the path-product programme (DEAD END, instructively)
-**Proved:** if a group of mutually-communicating shallow rows has all its internal
-positive transition weights bounded below ("a fat component"), then exact idempotence
-+ a projective contraction argument (no spectral gap needed) forces all its rows to
-collapse together and become visible — contradicting hiddenness. Also proved and
+**Proved (under explicit hypotheses):** if a group of mutually-communicating shallow rows
+is CLOSED (positive mass stays inside), has all its internal positive transition weights
+bounded below ("a fat component"), and its collapse radius beats the exposure threshold,
+then exact idempotence + a projective contraction argument (no spectral gap needed)
+forces all its rows to collapse together and become visible — contradicting hiddenness.
+The analytic (as opposed to measured) closure of the shallow band remains a recorded
+caveat. Also proved and
 audited: such closed components are automatically aperiodic (exact idempotence forbids
 period ≥ 2 for δ < 1/4). → `w12_comp_finisher`, `w15_periodic(+_audit)`.
 **The dead programme around it:** "path-product floor" conjectures tried to feed the
@@ -195,7 +208,7 @@ gives only upper budgets, never lower bounds — height cancels (→ `w19_bounda
 
 ### 4.4 Certificates and SOS — structurally blocked
 - Chain-local scalar certificates: **impossible** — the scalar shadow of the thin-chain
-  inequality is FALSE (exact rational witnesses at every chain length), so any proof
+  inequality is FALSE (exact rational witnesses at every tested chain length L = 2..5), so any proof
   must use genuine matrix/realization structure (→ `w15_sos`).
 - SOS modulo the idempotent ideal: well-posed, but the hiddenness side-conditions
   resist polynomial encoding (the same LP collapse as 4.1, one level up); smallest
@@ -272,10 +285,29 @@ Ando 1966, Luo–Pang 1994, Flor 1969, Meyer 1989, Kato, Stewart–Sun) is a fil
 all such claims are UNVERIFIED LEADS until byte-pinned into `refs/` (repo law L1).
 → `w18_quadlit`.
 
+### 4.9 H-M Theorem 1.12 — the signed structure theorem (NEW lead, worker in flight)
+The source book contains, immediately after the nonnegative classification, a
+structure theorem for arbitrary REAL idempotent matrices (Thm 1.12, txt ~:2245):
+a partition {T, B, C₁..C_k} where each C_s is a class of mutually proportional rows
+(rank-one restriction), the B-rows are explicit linear combinations of k
+representative rows, with exact coefficient sum rules ((1.2): in-class sums equal 1;
+(1.3): cross-class sums equal 0) — and a converse. This is EXACT at every δ (pure
+linear algebra; the text warns the partition is non-unique), and the sum rules are
+precisely the signed analogues of the "zero-sum closure" steps the δ=0 autopsy (4.6)
+declared sign-rigid. The whole campaign missed it (the autopsies targeted Thms 1.11,
+1.16, 2.2). Candidate payoff: an algebraic route to the GLOBAL gap — quantify how
+near-positivity forces the C_s classes toward equal-input blocks and the B-rows
+toward convex mixtures, possibly giving the nearest H-M point constructively (and
+bypassing the broken assembly's visibility issue). → `w25_hm112` (in flight at the
+time of writing; check `notes/swarm-answers/`).
+
+
 ## 5. What a future agent should do (and not do)
 
-1. **Read order:** this file → `report/kernel-conjecture.tex` (precise statements +
-   the evidence/constraints ledger §5) → the dossier's FINAL sections → `bd ready`.
+1. **Read order:** the repo gate files first (`PRD.md` → `CLAUDE.md` → root
+   `HANDOFF.md` — repo law §0), then within the classical lane: this file →
+   `report/kernel-conjecture.tex` (precise statements + the evidence/constraints
+   ledger §5) → the dossier's FINAL sections → `bd ready`.
 2. **The frontier task is §4.7.5**: repair the local-law assembly (an arc/base
    construction whose visibility hypotheses hold — the audit's nearest-branch
    failure data in `experiments/out/w23_loj_audit/` is the concrete constraint set).

@@ -1496,3 +1496,26 @@ THE LOCAL-LAW ASSEMBLY IS THE OPEN PIECE (an arc/base-choice construction whose
 visibility hypotheses actually hold — possibly choosing the recode profile from the
 NEAREST BRANCH rather than the final profile, or a visibility statement at the nearest
 locus point itself). The GLOBAL gap (B-S normal-form distance) stands behind it.
+
+# CONSOLIDATION (2026-06-11): OVERVIEW.md + the Theorem 1.12 discovery + merge to main
+- **OVERVIEW.md written** (the bird's-eye onboarding doc, this directory): plain-language
+  conjectures (formal Kernel Conjecture vs the stronger linear-law working target kept
+  explicitly apart), all definitions self-contained (scale-dependent visibility,
+  sigma-tilde incl. self-coefficient), the full strategy map 4.1-4.9 with statuses and
+  pointers, the frontier box, the do-not-retry list. REVIEWED by two independent codex
+  workers: w24_freshread (FAILS-as-drafted: the kernel-vs-linear-law conflation, the
+  visibility definition, the O(delta) exponent on op-exposed-hull — ALL FIXED) and
+  w24_factcheck (15 findings: 4 ERROR incl. the W-free O(delta) target being REFUTED by
+  registry lemma ex-hume — which also explains w18_quadlit's mysterious "Hume" citation;
+  3 OVERCLAIM; 4 STALE; 4 NIT — ALL APPLIED). Archived: notes/swarm-answers/w24_*.md.
+- **USER DISCOVERY: H-M THEOREM 1.12** (txt ~:2245) — the theorem directly after the
+  nonnegative classification is an EXACT structure theorem for arbitrary REAL (signed)
+  idempotent matrices with a converse: proportional-row classes C_s (rank-one
+  restrictions) + B-rows as linear combinations + exact signed sum rules (1.2)/(1.3)
+  (in-class = 1, cross-class = 0) — the signed analogues of the sign-rigid zero-sum
+  closures. The campaign NEVER READ IT (autopsies targeted 1.11/1.16/2.2 only).
+  w25_hm112 launched: restate, autopsy the proof, derive what near-positivity forces,
+  constructive nearest-H-M-point test on the certified instances, bridge to the GLOBAL
+  gap. OVERVIEW §4.9 records the lead.
+- **Branch merged to main** (fast-forward; main was 0 ahead): the classical-portfolio
+  work is now part of the main project per user direction.

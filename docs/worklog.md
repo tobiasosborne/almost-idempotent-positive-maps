@@ -519,3 +519,31 @@ without proof). (3) **w14 autopsy launched** (codex): locate the real structure-
 proof (section 2.2) and audit each step under the campaign's ACTUAL perturbation (exactness
 free, only positivity perturbed): SIGN-ROBUST vs SIGN-RIGID per step + the signed-surrogate
 synthesis question. Bead aipm-e9p in progress. All pushed through 2d090de.
+
+## 2026-06-11 (cont. 2) — Agent A: waves 14-23, the variety programme, consolidation, MERGE TO MAIN
+
+User-directed orchestration day (all work codex-delegated, ~30 workers, every proof
+hostile-audited by a different worker). ARC: (1) H-M autopsy harvested+audited; delta=0
+anchor byte-pinned, kernel-conjecture.tex §5 discharged. (2) Periodicity gap closed
+(audited). (3) Chain-local SOS killed (scalar shadow false). (4) THE CLONING OBSTRUCTION:
+raw-index path-product floor false-or-vacuous; quotient form 2' formulated, bridge
+secured; two provers died at the same anti-splitting estimate. (5) sigma-gate crossed
+(first hidden sigma>tau instance ever, certified exact rational; then the joint
+antecedent realized ABOVE the corner: sigma/tau=1.55, H/tau=0.10, delta=0.233, certified
+exact) — raw floor refuted outright for delta0>=0.233; ledger re-scoped (the question
+lives below the corner). (6) USER-DIRECTED idempotence-exploitation research round (5
+lenses): the variety programme born. (7) Waves 19-23: TANGENT-CONE LEMMA proved+audited
+(dH+ <= 2*ddelta, C=2 dimension-free — the infinitesimal linear law); ambient fixed-mass
+visibility lemma (audited, repaired); mass-removed boundary recoding L1+L2 (audited,
+final-profile form); stratified distance-to-locus bound (audited; fixed-stratum version
+refuted by support-addition arcs); the LOCAL-LAW ASSEMBLY claimed then BROKEN by audit
+(visibility hypotheses fail at the chosen base 12.8-128x) — the open piece. (8)
+CONSOLIDATION: OVERVIEW.md written (the bird's-eye onboarding doc), reviewed by a
+hostile fact-checker (15 findings incl. the ex-hume W-free subtlety) + a fresh-agent
+reader (kernel-vs-linear-law conflation caught); all fixes applied. (9) USER DISCOVERY:
+H-M Theorem 1.12 = the EXACT signed structure theorem the campaign never read —
+w25_hm112 in flight on the bridge to the global gap. (10) Branch MERGED TO MAIN
+(fast-forward; user: "it IS the main project right now"). All in
+notes/wave5-sigma-wall-parallel.md + notes/swarm-answers/ (~85 verdicts) +
+experiments/out/. Beads: aipm-3u6 carries the campaign; aipm-e9p closed; acquisition
+bead open (Douglas-Ando etc.).

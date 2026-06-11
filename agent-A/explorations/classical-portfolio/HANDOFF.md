@@ -6,12 +6,18 @@ Branch: agent-a/classical-portfolio. Rewritten at session close (2026-06-11, day
 # HANDOFF — classical-portfolio sidequest (op-classical / op-exposed-hull)
 
 > ## START HERE (next agent)
+> 0. **Read FIRST: `OVERVIEW.md`** (this directory) — the bird's-eye onboarding map
+>    (2026-06-11, twice-reviewed): plain-language conjectures, all definitions, the
+>    full strategy map with statuses, the frontier, the do-not-retry list. It
+>    supersedes this file's narrative below (which is the DAY-2 state; the dossier's
+>    waves 14-23 sections carry what happened since: the variety programme, the
+>    audited lemma chain, the broken local-law assembly, the Theorem-1.12 lead).
 > 1. Branch **`agent-a/classical-portfolio`** (exploration lane; canonical layers via
->    Recipe A→B + reviewer ≠ author only — repo CLAUDE.md).
-> 2. **Read FIRST: `report/kernel-conjecture.tex`** — the fully self-contained statement
->    of the single open input (Kernel Conjecture), the chain it completes, the stronger
->    working form, and the evidence/constraints ledger. It is the campaign's distilled
->    interface; everything else is supporting record.
+>    Recipe A→B + reviewer ≠ author only — repo CLAUDE.md). NOW MERGED TO MAIN
+>    (2026-06-11, user direction) — main carries this work.
+> 2. **Then: `report/kernel-conjecture.tex`** — the precise statements (Kernel
+>    Conjecture, the chain, the working forms with their cloning caveats) and the
+>    evidence/constraints ledger.
 > 3. Then: repo gate files → this file → **`notes/wave5-sigma-wall-parallel.md`**
 >    (THE day-2 dossier: waves 5–13, read the FINAL sections first — they supersede
 >    earlier ones) → `notes/swarm-answers/` (45+ archived worker verdicts, every died-at
