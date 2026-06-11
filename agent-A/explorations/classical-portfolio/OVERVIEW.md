@@ -304,9 +304,14 @@ the right global coordinate system, with a 4-lemma candidate chain to the global
 precise obstruction (exact proportional classes can SPLIT a limiting recurrent block —
 coefficients blow up like 1/δ; the MERGED stratum point is 2δ-close), which is the
 same nearest-branch/merging phenomenon that broke the local-law assembly. Synthesis:
-1.12 coordinates + the audited recoding/merging theory + clip/normalize. The single
-named missing step is the **clustered-conditioning lemma** (merge near-proportional
-classes at a scale η).
+1.12 coordinates + the audited recoding/merging theory + clip/normalize. STATUS
+(end of 2026-06-11): the clustered-conditioning lemma (L2) is PROVED AND AUDITED in
+dimension-free form (η = √δ clustering; max-volume actual-row basis gives coefficient
+bound A = 1 — the initial rank-dependent bound was an artifact, `w26_cluster` +
+`w26_cluster_audit`). The single remaining lemma of the bridge is **L3, the
+support-concentration estimate** (bounded merged coordinates + the exact sum rules +
+near-positivity ⇒ classes near equal-input blocks, cross-class mass small) —
+`w27_concentration` in flight.
 
 
 ## 5. What a future agent should do (and not do)

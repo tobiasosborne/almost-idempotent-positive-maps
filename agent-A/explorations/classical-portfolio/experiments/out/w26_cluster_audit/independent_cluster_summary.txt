@@ -1,0 +1,11 @@
+split_block_eps_0.001: delta=0.001 eta=0.0316228 greedy_A=1 maxvol_A=1 maxvol_Lambda=1 E_improved=0.031686 claimed_A=2.006
+split_block_eps_0.0001: delta=0.0001 eta=0.01 greedy_A=1 maxvol_A=1 maxvol_Lambda=1 E_improved=0.010002 claimed_A=2.0006
+split_block_eps_1e-05: delta=1e-05 eta=0.00316228 greedy_A=1 maxvol_A=1 maxvol_Lambda=1 E_improved=0.00316234 claimed_A=2.00006
+w19_leftcone_eps_0.001: delta=0.001 eta=0.0316228 greedy_A=1 maxvol_A=1 maxvol_Lambda=1 E_improved=0.031686 claimed_A=4.01602
+w19_leftcone_eps_0.0001: delta=0.0001 eta=0.01 greedy_A=1 maxvol_A=1 maxvol_Lambda=1 E_improved=0.010002 claimed_A=4.0016
+w19_leftcone_eps_1e-05: delta=1e-05 eta=0.00316228 greedy_A=1 maxvol_A=1 maxvol_Lambda=1 E_improved=0.00316234 claimed_A=4.00016
+w16_best_rational: delta=0.2284 eta=0.477912 greedy_A=1 maxvol_A=1 maxvol_Lambda=0.959757 E_improved=0.696223 claimed_A=21.6028
+w17_main_rational: delta=0.232934 eta=0.482632 greedy_A=1 maxvol_A=1 maxvol_Lambda=0.95964 E_improved=0.707474 claimed_A=54.1967
+w17_robust_rational: delta=0.234592 eta=0.484347 greedy_A=1 maxvol_A=1 maxvol_Lambda=0.959422 E_improved=0.711596 claimed_A=54.6124
+rank_growth k=16: base_greedy=16 smeared_greedy=15.9987 maxvol=1 maxvol_Lambda=0.999999 claimed_A=32773.6
+bridge_chain points=24: pivot_clusters=[[0, 1], [24, 25]] single_linkage=[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]]

@@ -1553,3 +1553,14 @@ support-margin/concentration estimate. AUDIT LAUNCHED (w26_cluster_audit) with t
 DECISIVE EXPERIMENT specified: adversarial chains of k near-proportional classes at
 pairwise scale eta to measure whether the (1+R)^{k-1} cascade SATURATES (rank-dependence
 real) or stays O(1) (bound loose — improvable to polynomial/constant).
+
+## w26_cluster_audit (codex, hostile) — L2 UPGRADED TO DIMENSION-FREE: A = 1 (max-volume basis)
+Full report: notes/swarm-answers/w26_cluster_audit.md + experiments/out/w26_cluster_audit/.
+The greedy chart's rank-dependence (A = R(1+R)^{k-1}) was an ARTIFACT: choosing the
+representative basis as a MAXIMUM-VOLUME set of actual rows gives A = 1, Lambda <= 1,
+E <= R*eta — DIMENSION-FREE. (The classical prop-rank-gap scare dissolves at this step.)
+L2 is now proved + audited in the form the global route needs. THE SINGLE REMAINING GAP
+of the 1.12 bridge: L3 — the support-concentration estimate (bounded merged coordinates
++ exact sum rules + entries >= -delta => mass outside the eta-pivot clusters is small /
+each merged class is near an equal-input block, with dimension-free moduli). L4
+(constructive projection) is expected mechanical once L3 exists. LAUNCHING w27_concentration.
