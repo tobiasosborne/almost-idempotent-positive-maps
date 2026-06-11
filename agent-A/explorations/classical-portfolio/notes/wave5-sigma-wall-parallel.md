@@ -1637,3 +1637,19 @@ near-convexity of coefficients ON the representative's positive support, at rate
 TWO INDEPENDENT PROVERS CONVERGED on one exact inequality with matching constants — the
 campaign's named open is now THE TAX. LAUNCHING w31_tax (combined prover: both proof
 notes as input + the sum rules + in-class concentration + the exact coefficient algebra).
+
+## w31_tax (codex) — DIED-AT: the tax narrows to the SIGNED-FACE EXCESS
+Full answer + proof note: notes/swarm-answers/w31_tax.md; numerics + LP rank stress:
+experiments/out/w31_tax/. PROVED: the scalar-deficit part of the tax is <= 2*delta
+(using sum_t a_t = 1: the deficit 1 - a_s(j) equals the sum of foreign coefficients, and
+its weighted sum telescopes). THE RESIDUAL CORE (where the transverse-pair and random
+small-delta audits carry the tax):
+  SIGNED-FACE EXCESS: sum_j (P_{u_s j})_+ * (sum_{t!=s} (-a_t(j))_+ - (1 - a_s(j)))_+
+  <= C_sf * delta.
+The excess is nonzero only where foreign coefficients are NET-NEGATIVE (each negative
+a_t contributes 2|a_t| net) — the signed-face cancellation, the campaign's recurring
+deep difficulty, now chased into a SINGLE-ROW, FINITE-DIMENSIONAL coefficient statement
+under exact idempotence. Chain unchanged: excess => tax => displacement => face => L4 =>
+the global W-free O(sqrt(delta)) theorem. LAUNCHING w32_excess (extremal/LP-duality
+attack at fixed small k + the exact coefficient identities; the statement's finiteness
+is the new leverage).

@@ -1,0 +1,57 @@
+rank2_leakage_delta_0.01: n=3 rank=2 delta=0.01 eta=0.1 pivots=[0, 1] maxcoeff=1 worst_pivot=1 tax/delta=3.32106e-15 own/delta=3.32106e-15 foreign/delta=0 B_eta/delta=0
+rank2_leakage_delta_0.001: n=3 rank=2 delta=0.001 eta=0.031622777 pivots=[0, 1] maxcoeff=1 worst_pivot=0 tax/delta=0 own/delta=0 foreign/delta=0 B_eta/delta=0
+rank2_leakage_delta_0.0001: n=3 rank=2 delta=0.0001 eta=0.01 pivots=[0, 1] maxcoeff=1 worst_pivot=0 tax/delta=0 own/delta=0 foreign/delta=0 B_eta/delta=0
+rank2_leakage_delta_1e-05: n=3 rank=2 delta=1e-05 eta=0.0031622777 pivots=[0, 1] maxcoeff=1 worst_pivot=1 tax/delta=4.32887e-14 own/delta=4.32887e-14 foreign/delta=0 B_eta/delta=0
+split_block_eps_0.01: n=3 rank=2 delta=0.01 eta=0.1 pivots=[0, 2] maxcoeff=1 worst_pivot=2 tax/delta=1.18189e-16 own/delta=1.18189e-16 foreign/delta=0 B_eta/delta=0
+split_block_eps_0.001: n=3 rank=2 delta=0.001 eta=0.031622777 pivots=[0, 2] maxcoeff=1 worst_pivot=2 tax/delta=1.72466e-15 own/delta=1.72466e-15 foreign/delta=0 B_eta/delta=0
+split_block_eps_0.0001: n=3 rank=2 delta=0.0001 eta=0.01 pivots=[0, 2] maxcoeff=1 worst_pivot=2 tax/delta=1.84147e-16 own/delta=1.84147e-16 foreign/delta=0 B_eta/delta=0
+split_block_eps_1e-05: n=3 rank=2 delta=1e-05 eta=0.0031622777 pivots=[0, 2] maxcoeff=1 worst_pivot=2 tax/delta=5.46894e-16 own/delta=5.46894e-16 foreign/delta=0 B_eta/delta=0
+transverse_pair_a_0.01_m_0.99: n=5 rank=3 delta=0.0099960016 eta=0.099980006 pivots=[0, 1, 2] maxcoeff=1 worst_pivot=0 tax/delta=0.990396 own/delta=0.990396 foreign/delta=0 B_eta/delta=0
+  top j=3 bucket=own pos=0.495 mu=0.01 contrib/delta=0.495198 coeff=[1.0, 0.01, -0.01]
+  top j=4 bucket=own pos=0.495 mu=0.01 contrib/delta=0.495198 coeff=[1.0, -0.01, 0.01]
+transverse_pair_a_0.02_m_0.99: n=5 rank=3 delta=0.019968051 eta=0.14130835 pivots=[0, 1, 2] maxcoeff=1 worst_pivot=0 tax/delta=0.991584 own/delta=0.991584 foreign/delta=0 B_eta/delta=0
+  top j=4 bucket=own pos=0.495 mu=0.02 contrib/delta=0.495792 coeff=[1.0, -0.02, 0.02]
+  top j=3 bucket=own pos=0.495 mu=0.02 contrib/delta=0.495792 coeff=[1.0, 0.02, -0.02]
+transverse_pair_a_0.05_m_0.99: n=5 rank=3 delta=0.04950495 eta=0.22249708 pivots=[0, 1, 2] maxcoeff=1 worst_pivot=0 tax/delta=0.9999 own/delta=0.9999 foreign/delta=0 B_eta/delta=0
+  top j=4 bucket=own pos=0.495 mu=0.05 contrib/delta=0.49995 coeff=[1.0, -0.05, 0.05]
+  top j=3 bucket=own pos=0.495 mu=0.05 contrib/delta=0.49995 coeff=[1.0, 0.05, -0.05]
+transverse_pair_a_0.1_m_0.99: n=5 rank=3 delta=0.096153846 eta=0.31008684 pivots=[0, 1, 2] maxcoeff=1 worst_pivot=0 tax/delta=1.0296 own/delta=1.0296 foreign/delta=0 B_eta/delta=0
+  top j=3 bucket=own pos=0.495 mu=0.1 contrib/delta=0.5148 coeff=[1.0, 0.1, -0.1]
+  top j=4 bucket=own pos=0.495 mu=0.1 contrib/delta=0.5148 coeff=[1.0, -0.1, 0.1]
+transverse_pair_a_0.2_m_0.99: n=5 rank=3 delta=0.17241379 eta=0.4152274 pivots=[0, 1, 2] maxcoeff=1 worst_pivot=0 tax/delta=1.1484 own/delta=6.74934e-36 foreign/delta=0 B_eta/delta=1.1484
+  top j=3 bucket=B_eta pos=0.495 mu=0.2 contrib/delta=0.5742 coeff=[1.0, 0.2, -0.2]
+  top j=4 bucket=B_eta pos=0.495 mu=0.2 contrib/delta=0.5742 coeff=[1.0, -0.2, 0.2]
+w16_best_rational: n=7 rank=4 delta=0.22840027 eta=0.47791241 pivots=[0, 1, 2, 3] maxcoeff=1 worst_pivot=2 tax/delta=0.0159184 own/delta=0.0157808 foreign/delta=0.000137563 B_eta/delta=0
+  top j=4 bucket=own pos=0.955152 mu=0.00377358 contrib/delta=0.0157808 coeff=[-0.003774, 0.189111, 0.809306, 0.005357]
+  top j=5 bucket=foreign pos=0.00985127 mu=0.00318937 contrib/delta=0.000137563 coeff=[-0.003189, 0.825735, 0.047254, 0.1302]
+w17_main_rational: n=10 rank=5 delta=0.23293352 eta=0.48263187 pivots=[0, 1, 2, 3, 4] maxcoeff=1 worst_pivot=2 tax/delta=0.0926832 own/delta=0.0912198 foreign/delta=0.00146342 B_eta/delta=0
+  top j=5 bucket=own pos=0.890085 mu=0.023872 contrib/delta=0.0912198 coeff=[-0.015199, 0.193082, 0.825999, 0.004791, -0.008673]
+  top j=6 bucket=foreign pos=0.0207444 mu=0.0164323 contrib/delta=0.00146342 coeff=[0.006101, 0.820556, 0.0477, 0.142075, -0.016432]
+w17_robust_rational: n=10 rank=5 delta=0.23459249 eta=0.48434749 pivots=[0, 1, 2, 3, 4] maxcoeff=1 worst_pivot=2 tax/delta=0.0928222 own/delta=0.0913589 foreign/delta=0.00146335 B_eta/delta=0
+  top j=5 bucket=own pos=0.896383 mu=0.0239095 contrib/delta=0.0913589 coeff=[-0.015249, 0.193094, 0.826011, 0.004804, -0.008661]
+  top j=6 bucket=foreign pos=0.0208912 mu=0.0164323 contrib/delta=0.00146335 coeff=[0.006101, 0.820556, 0.0477, 0.142075, -0.016432]
+random_conjugated_hm_delta_0.01_trial_26: n=8 rank=3 delta=0.01 eta=0.1 pivots=[3, 4, 7] maxcoeff=1 worst_pivot=3 tax/delta=0.629527 own/delta=0.629084 foreign/delta=0.000443166 B_eta/delta=0
+  top j=0 bucket=own pos=0.358732 mu=0.0113087 contrib/delta=0.405677 coeff=[0.99721, -0.011309, 0.014098]
+  top j=6 bucket=own pos=0.337351 mu=0.00662238 contrib/delta=0.223407 coeff=[0.993993, -0.006622, 0.01263]
+  top j=2 bucket=foreign pos=0.00305404 mu=0.00145108 contrib/delta=0.000443166 coeff=[0.011887, 0.989564, -0.001451]
+random_conjugated_hm_delta_0.001_trial_25: n=8 rank=3 delta=0.001 eta=0.031622777 pivots=[1, 3, 5] maxcoeff=1 worst_pivot=1 tax/delta=0.603737 own/delta=0.603737 foreign/delta=0 B_eta/delta=0
+  top j=4 bucket=own pos=0.65594 mu=0.000920415 contrib/delta=0.603737 coeff=[0.999513, -0.00092, 0.001408]
+random_conjugated_hm_delta_0.0001_trial_16: n=8 rank=3 delta=0.0001 eta=0.01 pivots=[4, 5, 6] maxcoeff=1 worst_pivot=6 tax/delta=0.743569 own/delta=0.743569 foreign/delta=5.37463e-20 B_eta/delta=0
+  top j=3 bucket=own pos=0.400918 mu=0.000107482 contrib/delta=0.430916 coeff=[0.000139, -0.000107, 0.999969]
+  top j=0 bucket=own pos=0.273416 mu=0.000114351 contrib/delta=0.312653 coeff=[0.000139, -0.000114, 0.999975]
+random_coordinate_projection_k_3_amp_0.01_trial_27: n=9 rank=3 delta=0.0094172049 eta=0.097042284 pivots=[1, 2, 3] maxcoeff=1 worst_pivot=3 tax/delta=0.82237 own/delta=0.819933 foreign/delta=0.00243744 B_eta/delta=0
+  top j=8 bucket=own pos=0.333855 mu=0.0165756 contrib/delta=0.587632 coeff=[-0.016576, 0.018159, 0.998417]
+  top j=0 bucket=own pos=0.333294 mu=0.00656365 contrib/delta=0.232301 coeff=[-0.006564, 0.009966, 0.996598]
+  top j=5 bucket=foreign pos=0.00423032 mu=0.00542605 contrib/delta=0.00243744 coeff=[0.99546, -0.005426, 0.009966]
+random_coordinate_projection_k_4_amp_0.15_trial_10: n=12 rank=4 delta=0.19257713 eta=0.4388361 pivots=[2, 7, 8, 9] maxcoeff=1 worst_pivot=9 tax/delta=0.781326 own/delta=0.203326 foreign/delta=0.0216288 B_eta/delta=0.556372
+  top j=11 bucket=B_eta pos=0.216249 mu=0.269849 contrib/delta=0.303019 coeff=[-0.269849, 0.205129, 0.194671, 0.870049]
+  top j=10 bucket=B_eta pos=0.25756 mu=0.189431 contrib/delta=0.253353 coeff=[-0.184551, -0.00488, 0.219693, 0.969738]
+  top j=3 bucket=own pos=0.269678 mu=0.145195 contrib/delta=0.203326 coeff=[-0.145195, 0.084503, 0.067194, 0.993497]
+random_coordinate_projection_k_5_amp_0.08_trial_0: n=15 rank=5 delta=0.12520163 eta=0.35383843 pivots=[2, 5, 6, 7, 14] maxcoeff=1 worst_pivot=7 tax/delta=0.843176 own/delta=0.169105 foreign/delta=0.025958 B_eta/delta=0.648113
+  top j=12 bucket=B_eta pos=0.252072 mu=0.151014 contrib/delta=0.304041 coeff=[0.149512, -0.029417, -0.121597, 0.987526, 0.013977]
+  top j=9 bucket=B_eta pos=0.239793 mu=0.148145 contrib/delta=0.283737 coeff=[0.122963, 0.032012, -0.148145, 0.943466, 0.049704]
+  top j=3 bucket=own pos=0.255202 mu=0.0829626 contrib/delta=0.169105 coeff=[0.06923, 0.028198, -0.071758, 0.985535, -0.011205]
+random_coordinate_projection_k_6_amp_0.15_trial_10: n=18 rank=6 delta=0.23299427 eta=0.4826948 pivots=[0, 7, 8, 11, 13, 17] maxcoeff=1 worst_pivot=13 tax/delta=0.856396 own/delta=2.8731e-15 foreign/delta=0.0426225 B_eta/delta=0.813773
+  top j=6 bucket=B_eta pos=0.323922 mu=0.36009 contrib/delta=0.500618 coeff=[-0.08452, 0.21948, 0.15677, -0.019749, 0.98384, -0.255821]
+  top j=1 bucket=B_eta pos=0.322383 mu=0.205912 contrib/delta=0.28491 coeff=[-0.045007, 0.135375, 0.124181, -0.037396, 0.946356, -0.123509]
+  top j=5 bucket=B_eta pos=0.0289058 mu=0.22767 contrib/delta=0.0282452 coeff=[0.123188, -0.134016, -0.093654, 0.981919, 0.03273, 0.089833]
