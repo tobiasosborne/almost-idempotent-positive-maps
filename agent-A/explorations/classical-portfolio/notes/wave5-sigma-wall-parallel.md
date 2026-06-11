@@ -1055,3 +1055,36 @@ Q^k = Q. P(2' true exact) ~ 0.48, provable-in-frame ~ 0.22; CLUSTERED variant: ~
 the clustered quotient, the barrier inequality sigma_tilde <= C0*sqrt(delta)} — these are
 dual faces: anti-splitting concentrates shallow mass into one fat quotient component
 (finisher exposes => contradiction => barrier); splitting forever IS the thin-web geometry.
+
+## w16_barrier (codex) — DIED-AT quotient pinning; CONVERGENT with w16_quotient's anti-splitting
+Full answer: notes/swarm-answers/w16_barrier.md. On the H > B*tau branch (the H <= B*tau
+branch is the proved belt), PROVED clone-invariantly: A_v(S_t^c) <= 4*tau and
+A_v(S_t \ C_W) >= (B/3 - 4)*tau — high hidden height forces aggregate shallow off-C_W
+carrier mass at scale tau. DIED-AT (boxed): max over closed quotient components C of
+A_v(C) >= c_B*tau — equivalently a dimension-free bound N_B on the number of geometrically
+distinct shallow quotient components hit by P_v^+. No audited tool gives it: l1 geometry
+has no dimension-free packing bound; cloning removal only kills COINCIDENT rows;
+return-flow can spread over arbitrarily many classes; coarea gives averaged not sup
+closure. TWO INDEPENDENT PROVERS (w16_quotient, w16_barrier) NOW DIE AT THE SAME MISSING
+PRINCIPLE: anti-splitting / quotient pinning. Named decider target: a SHALLOW FAN — v
+spreads O(tau) positive mass over many noncoincident quotient classes while the hiddenness
+LP blocker sits on a far top-band average (if constructible: barrier route as framed dies
+and likely a 2'-counterexample geometry; if obstructed: the obstruction IS the
+anti-splitting principle). P(barrier true) ~ 0.74; P(closes without a new facial-modulus
+theorem) ~ 0.22.
+
+## w15_clone_audit (codex) — OBSTRUCTION REAL BUT CONDITIONAL; quotient repair endorsed
+Full answer: notes/swarm-answers/w15_clone_audit.md. ALL hostile checks pass: algebra
+re-derived; the splitting is an l1-isometry on rows; EXPOSERS LIFT AND DESCEND (the
+subtle check — via the fiber-summing map R with ||R||_{1->1} <= 1), so W, H, g,
+sigma_tilde, hiddenness, and the high-hidden antecedent are all invariant; clone diameter
+<= 2L independent of M; no path avoids the divided edges. LOGICAL STATUS RESOLVED: the
+raw-index floor is FALSE if any antecedent-realizing seed exists, else VACUOUSLY TRUE —
+no record instance qualifies (67k+; kernel-conjecture.tex item 1), so conj:floor as
+written carries no content beyond conj:kernel. Quotient repair endorsed (matches
+w16_quotient's 2'; for cloning, quotient weights = the ORIGINAL edge weights exactly).
+Residual flagged for af-grade work: the finisher for arbitrary coincident-row quotients
+with internal signed cancellation inside a class. Coherent with w15_sos. P(verdict
+survives) = 0.88. DOC UPDATED: kernel-conjecture.tex now carries the periodicity closure,
+the cloning status-correction paragraph, Conjecture conj:quotient-floor (multiplicity-
+correct floor), and ledger item 6 (wave-15/16 constraints); recompiled clean, 6pp.

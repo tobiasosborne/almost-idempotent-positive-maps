@@ -257,11 +257,67 @@ contraction argument requiring \emph{no spectral gap}, all its rows collapsing t
 near-equal-input cluster; near-equal-input clusters are exposed (audited near-coincidence
 machinery), contradicting hiddenness. The wave-12 survivor inequality
 $\Pi_{\mathcal C}\le E_L(\delta,\zeta)+2(1+\delta)\varepsilon/(0.85\tau-4\delta)$ makes
-the floor above the exact negation of the surviving configuration class. Two open
-sub-issues ride with this form only (not with Conjecture~\ref{conj:kernel}): periodic
-components (the finisher assumes primitivity; the recorded refutation attempts suggest
-periodicity is benign), and the analytic --- as opposed to measured --- closure of the
-band's positive kernel.
+the floor above the exact negation of the surviving configuration class. Of the two
+sub-issues that rode with this form, one is now closed: \emph{periodicity is excluded}
+--- for a closed positive band component, exact idempotence forbids period $d\ge2$
+outright ($1\le3\delta+4\delta^2$, a contradiction for $\delta<\tfrac14$; proved and
+independently audited, with approximate-closure tolerance
+$\eta<1-\sqrt{3\delta+4\delta^2}$). The analytic --- as opposed to measured --- closure
+of the band's positive kernel remains open.
+
+\paragraph{The cloning obstruction (status correction to
+Conjecture~\ref{conj:floor}).} Splitting an index $r$ into $M$ duplicates via
+$\widehat P_{ab}=\alpha_b P_{\pi(a),\pi(b)}$ (fiber weights $\alpha_b>0$ summing to $1$
+per fiber) preserves exact idempotence, row sums, $\delta$, and --- as an
+$\ell^1$-isometry on row differences under which exposing functionals lift and descend
+--- every geometric quantity in this document ($\W$, $H$, $g$, $\sigt_v$, hiddenness,
+the high-hidden antecedent), while every raw-index path product through the cloned
+fibers decays as $\Pi\le(1+\delta)/M$. Hence Conjecture~\ref{conj:floor} \emph{as
+written} (raw-index carrier graph) is refuted by cloning any antecedent-realizing
+instance; since no such instance is known (item~1 below), its precise status is:
+\emph{true iff the high-hidden antecedent is empty} --- it carries no intermediate
+content beyond Conjecture~\ref{conj:kernel} itself. The multiplicity-correct
+replacement is:
+
+\begin{conjecture}[Multiplicity-correct path-product floor]\label{conj:quotient-floor}
+Let $i\sim j$ mean $p_i=p_j$ as vectors, and for classes set
+\[
+\overline P_{[i],[j]}:=\sum_{b\in[j]}P_{ib}.
+\]
+For $S_t=\{i:g_i<t\}$, let $\overline{\mathcal G}_t$ be the directed graph on
+classes $[i]\subset S_t$ with edge $[i]\to[j]$ when
+$\overline P_{[i],[j]}>0$. For a strongly connected component
+$\overline{\mathcal C}$, define $\overline\Pi_{\overline{\mathcal C}}$
+by the same min--max path-product formula using the edge weights
+$\overline P$.
+
+There are universal $\delta_0,B,c,C'$ such that, for
+$\delta\le\delta_0$, if $v$ is a hidden top vertex with
+$\sigt_v>\tau$ and $H>B\tau$, then for some
+$t\in[\kappa\Omega/2,\kappa\Omega]$, every quotient carrier component
+$\overline{\mathcal C}$ of $S_t$ carrying positive $\overline P$-mass
+from $[v]$ satisfies
+\[
+\overline\Pi_{\overline{\mathcal C}}
+\ge c\tau-C'\overline L\,\delta .
+\]
+\end{conjecture}
+
+\noindent Facts secured for this form (wave 16, audited statements in the dossier):
+the quotient weights are clone-invariant by construction; the quotient matrix
+$\overline P$ is itself exactly idempotent and stochastic with
+$\delta(\overline P)\le\delta(P)$, the deficit $g$ descends harmonically, band closure
+descends, and the component finisher reattaches (class collapse equals index collapse,
+modulo one flagged residual: internal signed cancellation inside a duplicate class).
+Two caveats discovered with it: exact quotienting is \emph{not} conjugation-robust
+(a similarity $S=I+O(\eta)$ smears duplicates into an $\eta$-cloud; the robust target
+is the $\eta_{\mathrm{cl}}$-clustered quotient with
+$\eta_{\mathrm{cl}}\lesssim\delta$), and two independent prover routes die at the same
+missing \emph{anti-splitting principle}: high hidden height provably forces aggregate
+shallow off-$C_{\W}$ carrier mass $\ge(B/3-4)\tau$, but pinning a $c\tau$ share into
+\emph{one} closed quotient component needs a dimension-free bound on the number of
+geometrically distinct shallow classes hit by $P_v^+$ --- which no audited tool
+supplies.
 
 \section{Evidence, constraints, and failure maps}\label{sec:evidence}
 
@@ -299,6 +355,21 @@ Baake--Sumner normal form, the audited canonical W-free restatement).
 $\sigt_v>0$, and an \emph{entirely shallow} optimal witness face --- but only at height
 $H=O(\delta)$ and $\sigt_v<\tau$ (inside the proved branch). Any proof of the conjecture
 must tolerate these; any refutation must do strictly better than them.
+\item \textbf{Wave-15/16 constraints (2026-06-11).} (a) \emph{No chain-local
+certificate exists}: the scalar shadow of the thin-chain inequality is false (exact
+rational witnesses for every chain length $L=2,\dots,5$), so any proof must consume the
+hiddenness/realization constraints --- aggregate sums alone cannot close it.
+(b) \emph{Clone invariance is mandatory}: every intermediate quantity in a proof must be
+invariant under duplicate-index splitting (raw atom-level path products are not;
+masses, distances, functionals, and quotient weights are). (c) \emph{The measured
+$\sigt$ barrier}: dedicated optimization over three template families (1{,}368 newly
+verified exact instances) never achieved a hidden vertex with
+$\delta/\sigt_v^2<1.52$; the antecedent regime of both floor conjectures has still
+never been entered. (d) \emph{The anti-splitting frontier}: the proved, clone-invariant
+carrier-mass bound $A_v(S_t\setminus C_{\W})\ge(B/3-4)\tau$ stands one dimension-free
+pinning step away from the finisher; a named decider target for both directions is the
+\emph{shallow fan} (a hidden $v$ spreading $O(\tau)$ positive mass over many
+non-coincident quotient classes under a far top-band averaged blocker).
 \item \textbf{The $\delta=0$ anchor.} At $\delta=0$ both conjectures hold by the
 finite stochastic-idempotent normal form of H\"ogn\"as--Mukherjea,
 \emph{Probability Measures on Semigroups}, Thm.~1.16; local extraction
