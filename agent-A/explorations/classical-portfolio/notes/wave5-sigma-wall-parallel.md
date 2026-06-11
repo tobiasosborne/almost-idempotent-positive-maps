@@ -1594,3 +1594,18 @@ difficulty: upgrade the vector cancellation to the SCALAR (no-cancellation) sum 
 exclude a conspiracy where O(sqrt(delta)) positive mass sits at O(1) displacement in
 mutually-cancelling directions. The w27 rank-2 saturator (mass sqrt(delta) at
 displacement sqrt(delta), scalar sum = delta) is consistent. LAUNCHING w29_displacement.
+
+## w29_displacement (codex) — the displacement lemma: scope delimited; THE CAMPAIGN'S NAMED KERNEL
+Full answer + proof note: notes/swarm-answers/w29_displacement.md; numerics:
+experiments/out/w29_displacement/. GENERAL-ROW version REFUTED (clean counterexample at
+delta = 0 — P(survives audit) = 0.99): the max-volume property of the representative is
+LOAD-BEARING. MAX-VOLUME version: DIED-AT (not derivable from the audited tools yet) but
+likely TRUE (P = 0.62; 36-sample sweep: T/delta median 2.04, p90 2.88, max 3.57 — bounded).
+The Markov handoff is written out: lemma with constant C_D => the w28 face estimate with
+C_D + 1 => the w27 conditional L4 assembly => THE GLOBAL W-FREE O(sqrt(delta)) THEOREM.
+STATUS: the representative displacement lemma (max-volume form) is the single named open
+statement of the classical campaign's best route. WAVE 30 LAUNCHED: w30_telescope (route
+R1 — iterated identity / self-improvement T <= a*T + b*delta) and w30_maxvol (mine the
+max-volume property directly: Cramer-type coefficient bounds — what does max-volume
+FORBID about positive mass at large displacement; the delta=0 counterexample shows
+exactly the failure mode the property must exclude — use it as the guide).

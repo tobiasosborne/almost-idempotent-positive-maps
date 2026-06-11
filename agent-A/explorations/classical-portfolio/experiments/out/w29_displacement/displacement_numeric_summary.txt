@@ -1,0 +1,22 @@
+general_row_delta0_transient_counterexample: n=3 rank=2 delta=0 pivots=[0, 1] max_pivot_T/delta=0 max_row_T/delta=inf max_pivot_M2/delta=0 max_coeff_neg=0 idem=0 rowsum=0
+w27_rank2_leakage_delta_0.01: n=3 rank=2 delta=0.01 pivots=[0, 1] max_pivot_T/delta=2.02 max_row_T/delta=33.0876 max_pivot_M2/delta=0.40804 max_coeff_neg=3.32106e-17 idem=1.11e-16 rowsum=0
+w27_rank2_leakage_delta_0.001: n=3 rank=2 delta=0.001 pivots=[0, 1] max_pivot_T/delta=2.002 max_row_T/delta=118.859 max_pivot_M2/delta=0.126744 max_coeff_neg=0 idem=1.11e-16 rowsum=0
+w27_rank2_leakage_delta_0.0001: n=3 rank=2 delta=0.0001 pivots=[0, 1] max_pivot_T/delta=2.0002 max_row_T/delta=392.119 max_pivot_M2/delta=0.040008 max_coeff_neg=0 idem=0 rowsum=0
+w27_rank2_leakage_delta_1e-05: n=3 rank=2 delta=1e-05 pivots=[0, 1] max_pivot_T/delta=2.00002 max_row_T/delta=1256.95 max_pivot_M2/delta=0.0126494 max_coeff_neg=4.32887e-19 idem=1.11e-16 rowsum=1.11e-16
+w27_rank2_leakage_delta_1e-06: n=3 rank=2 delta=1e-06 pivots=[0, 1] max_pivot_T/delta=2 max_row_T/delta=3992.01 max_pivot_M2/delta=0.00400001 max_coeff_neg=7.05711e-21 idem=0 rowsum=0
+split_block_eps_0.01: n=3 rank=2 delta=0.01 pivots=[0, 2] max_pivot_T/delta=2.02 max_row_T/delta=3.88312 max_pivot_M2/delta=0.0800078 max_coeff_neg=1.18189e-18 idem=0 rowsum=0
+split_block_eps_0.001: n=3 rank=2 delta=0.001 pivots=[0, 2] max_pivot_T/delta=2.002 max_row_T/delta=3.98803 max_pivot_M2/delta=0.00800001 max_coeff_neg=1.72466e-18 idem=0 rowsum=1.11e-16
+split_block_eps_0.0001: n=3 rank=2 delta=0.0001 pivots=[0, 2] max_pivot_T/delta=2.0002 max_row_T/delta=3.9988 max_pivot_M2/delta=0.0008 max_coeff_neg=1.84147e-20 idem=0 rowsum=0
+split_block_eps_1e-05: n=3 rank=2 delta=1e-05 pivots=[0, 2] max_pivot_T/delta=2.00002 max_row_T/delta=3.99988 max_pivot_M2/delta=8e-05 max_coeff_neg=5.46894e-21 idem=0 rowsum=0
+w19_leftcone_eps_0.01: n=4 rank=3 delta=0.01 pivots=[0, 1, 2] max_pivot_T/delta=1.34667 max_row_T/delta=134 max_pivot_M2/delta=2.7203 max_coeff_neg=2.75958e-17 idem=1.3e-18 rowsum=2.22e-16
+w19_leftcone_eps_0.001: n=4 rank=3 delta=0.001 pivots=[0, 1, 2] max_pivot_T/delta=1.33467 max_row_T/delta=1334 max_pivot_M2/delta=2.672 max_coeff_neg=1.11022e-16 idem=4.34e-22 rowsum=1.11e-16
+w19_leftcone_eps_0.0001: n=4 rank=3 delta=0.0001 pivots=[0, 1, 2] max_pivot_T/delta=1.33347 max_row_T/delta=13334 max_pivot_M2/delta=2.6672 max_coeff_neg=2.22045e-16 idem=1.85e-21 rowsum=0
+w19_leftcone_eps_1e-05: n=4 rank=3 delta=1e-05 pivots=[0, 1, 2] max_pivot_T/delta=1.33335 max_row_T/delta=133334 max_pivot_M2/delta=2.66672 max_coeff_neg=5.87882e-17 idem=4.24e-22 rowsum=1.11e-16
+transverse_pair_a_0.02_m_0.99: n=5 rank=3 delta=0.019968051 pivots=[0, 1, 2] max_pivot_T/delta=2.08307 max_row_T/delta=4.07668 max_pivot_M2/delta=4.1725 max_coeff_neg=0.02 idem=1.11e-16 rowsum=1.11e-16
+transverse_pair_a_0.05_m_0.99: n=5 rank=3 delta=0.04950495 pivots=[0, 1, 2] max_pivot_T/delta=2.21782 max_row_T/delta=4.17822 max_pivot_M2/delta=4.47446 max_coeff_neg=0.05 idem=6.94e-18 rowsum=0
+transverse_pair_a_0.1_m_0.99: n=5 rank=3 delta=0.096153846 pivots=[0, 1, 2] max_pivot_T/delta=2.46154 max_row_T/delta=4.30769 max_pivot_M2/delta=5.06509 max_coeff_neg=0.1 idem=1.11e-16 rowsum=1.11e-16
+transverse_pair_a_0.2_m_0.99: n=5 rank=3 delta=0.17241379 pivots=[0, 1, 2] max_pivot_T/delta=2.96552 max_row_T/delta=4.41379 max_pivot_M2/delta=6.33056 max_coeff_neg=0.2 idem=1.11e-16 rowsum=1.11e-16
+w16_best_rational_above_corner: n=7 rank=4 delta=0.22840027 pivots=[0, 1, 2, 3] max_pivot_T/delta=2.42781 max_row_T/delta=3.85248 max_pivot_M2/delta=5.80615 max_coeff_neg=0.00377358 idem=2.22e-16 rowsum=1.11e-16
+w17_main_rational_above_corner: n=10 rank=5 delta=0.23293352 pivots=[0, 1, 2, 3, 4] max_pivot_T/delta=2.37327 max_row_T/delta=6.71451 max_pivot_M2/delta=5.64702 max_coeff_neg=0.023872 idem=1.11e-16 rowsum=2.22e-16
+w17_robust_rational_above_corner: n=10 rank=5 delta=0.23459249 pivots=[0, 1, 2, 3, 4] max_pivot_T/delta=2.37642 max_row_T/delta=6.67185 max_pivot_M2/delta=5.66224 max_coeff_neg=0.0239095 idem=2.22e-16 rowsum=1.11e-16
+random_small_delta_similarity_summary: samples=36 max_pivot_T_over_delta=3.56927 median_pivot_T_over_delta=2.03808 p90_pivot_T_over_delta=2.884 max_row_T_over_delta=6.42786 median_row_T_over_delta=3.05596 p90_row_T_over_delta=4.94032
