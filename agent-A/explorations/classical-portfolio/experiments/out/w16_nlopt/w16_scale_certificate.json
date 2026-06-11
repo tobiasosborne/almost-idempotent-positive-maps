@@ -1,0 +1,348 @@
+{
+  "verdict": "BARRIER_CROSSED",
+  "record": {
+    "label": "w16_verified_crossing_scale",
+    "params": {
+      "scale": 3.7655323442775135,
+      "family": "w15_Q_scale"
+    },
+    "n": 7,
+    "delta": 0.22934355220103006,
+    "row_neg": [
+      0.22934355220103006,
+      0.016288634318236402,
+      0.18340969377864444,
+      0.22934355220103006,
+      0.0008687179219915285,
+      0.003175620633527893,
+      0.003381778438003681
+    ],
+    "idem": {
+      "row_sum_resid": 2.220446049250313e-16,
+      "idem_resid": 2.220446049250313e-16,
+      "ok": 1
+    },
+    "tau": 0.47889826915643585,
+    "rho": 1.9155930766257434,
+    "kappa": 0.11972456728910896,
+    "W": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "nW": 4,
+    "vertex_info": {
+      "0": {
+        "vertex": 1,
+        "verr": 2.072428639218342,
+        "inW": 1,
+        "dist_to_CW": 0.0,
+        "exposed_margin": 0.9964889324543835
+      },
+      "1": {
+        "vertex": 1,
+        "verr": 0.35933144418048196,
+        "inW": 1,
+        "dist_to_CW": 0.0,
+        "exposed_margin": 0.8114660718970518
+      },
+      "2": {
+        "vertex": 1,
+        "verr": 0.46140642623854394,
+        "inW": 1,
+        "dist_to_CW": 0.0,
+        "exposed_margin": 0.8154346311632877
+      },
+      "3": {
+        "vertex": 1,
+        "verr": 0.5064202222155365,
+        "inW": 1,
+        "dist_to_CW": 0.0,
+        "exposed_margin": 0.8698756646682941
+      },
+      "4": {
+        "vertex": 1,
+        "verr": 0.007009381429660297,
+        "inW": 0,
+        "dist_to_CW": 0.007301962241922243,
+        "exposed_margin": 0.018070239509618613
+      },
+      "5": {
+        "vertex": 1,
+        "verr": 0.005252194240087276,
+        "inW": 0,
+        "dist_to_CW": 0.006583785574031984,
+        "exposed_margin": 0.017943032668191708
+      },
+      "6": {
+        "vertex": 1,
+        "verr": 0.00517366428949789,
+        "inW": 0,
+        "dist_to_CW": 0.007011135825493054,
+        "exposed_margin": 0.01721885319588301
+      }
+    },
+    "hidden_vertices": [
+      4,
+      5,
+      6
+    ],
+    "all_dist_to_CW": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.007301962241922243,
+      0.006583785574031984,
+      0.007011135825493054
+    ],
+    "gate": "PASS",
+    "v": 4,
+    "H": 0.007301962241922243,
+    "H_separator": 0.007301962241922144,
+    "H_over_delta": 0.03183853294258624,
+    "H_over_tau": 0.015247418318684714,
+    "sigma_tilde": 0.7534830220899305,
+    "sigma_tilde_over_tau": 1.5733676035563189,
+    "outside_CW": [
+      4,
+      5,
+      6
+    ],
+    "P_vv": 0.7531064688555027,
+    "nu_v": 0.0008687179219915285,
+    "phi": [
+      -2.0723966328587418,
+      0.0,
+      -1.1102230246251565e-16,
+      0.0,
+      0.007301962241922144,
+      0.006583785574032053,
+      0.0070111358254929534
+    ],
+    "g": [
+      2.079698595100664,
+      0.007301962241922144,
+      0.007301962241922255,
+      0.007301962241922144,
+      0.0,
+      0.0007181766678900914,
+      0.0002908264164291907
+    ],
+    "Omega": 2.079698595100664,
+    "sep_resid_Pg": 2.5153490401663703e-17,
+    "shallow_components": [
+      {
+        "t": 0.1244955071950974,
+        "t_over_kappaOmega": 0.5,
+        "component": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "size": 6,
+        "mass_from_v": 1.0008687179219915,
+        "Pi_C": 2.0923218033333456e-05,
+        "L": 2,
+        "Pi_over_tau": 4.369031876057736e-05,
+        "min_edge": 9.896633440992739e-05
+      },
+      {
+        "t": 0.1867432607926461,
+        "t_over_kappaOmega": 0.75,
+        "component": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "size": 6,
+        "mass_from_v": 1.0008687179219915,
+        "Pi_C": 2.0923218033333456e-05,
+        "L": 2,
+        "Pi_over_tau": 4.369031876057736e-05,
+        "min_edge": 9.896633440992739e-05
+      },
+      {
+        "t": 0.2489910143901948,
+        "t_over_kappaOmega": 1.0,
+        "component": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "size": 6,
+        "mass_from_v": 1.0008687179219915,
+        "Pi_C": 2.0923218033333456e-05,
+        "L": 2,
+        "Pi_over_tau": 4.369031876057736e-05,
+        "min_edge": 9.896633440992739e-05
+      }
+    ],
+    "best_component": {
+      "t": 0.1244955071950974,
+      "t_over_kappaOmega": 0.5,
+      "component": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "size": 6,
+      "mass_from_v": 1.0008687179219915,
+      "Pi_C": 2.0923218033333456e-05,
+      "L": 2,
+      "Pi_over_tau": 4.369031876057736e-05,
+      "min_edge": 9.896633440992739e-05
+    },
+    "best_Pi_over_tau": 4.369031876057736e-05,
+    "delta_over_sigma2": 0.4039611434494771
+  },
+  "hiddenness_lp_certificate": {
+    "success": 1,
+    "attempts": [
+      {
+        "method": "highs-ipm",
+        "presolve": 0,
+        "success": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+      },
+      {
+        "method": "highs",
+        "presolve": 0,
+        "success": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+      },
+      {
+        "method": "highs-ds",
+        "presolve": 0,
+        "success": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+      },
+      {
+        "method": "highs-ipm",
+        "presolve": 1,
+        "success": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+      }
+    ],
+    "target": 4,
+    "rho": 1.9155930766257434,
+    "kappa": 0.11972456728910896,
+    "tstar": 0.018070239509618613,
+    "tstar_over_kappa": 0.1509317587758149,
+    "hidden_by_margin": 1,
+    "far": [
+      0,
+      1,
+      3
+    ],
+    "distances_from_target": [
+      2.0803941764262466,
+      1.915593081210332,
+      0.4623803441733109,
+      2.0000128015960374,
+      0.0,
+      1.8178962194274204,
+      1.5406788629892423
+    ],
+    "objective_fun": -0.018070239509618613,
+    "affine_w": [
+      1.000541097783107,
+      0.018076746589388588,
+      2.7495028145299276e-05,
+      0.01806531978877524,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "affine_b": 0.0,
+    "t_variable": 0.018070239509618613,
+    "h_values": [
+      1.0,
+      0.018070239509618613,
+      -3.599551212651875e-17,
+      0.018070239509617378,
+      -2.3093506273941244e-17,
+      0.01411018309193143,
+      0.011401844279716529
+    ],
+    "eqlin_residual": [
+      0.0
+    ],
+    "eqlin_marginals": [
+      -5.128580821697897
+    ],
+    "ineqlin_active": [
+      {
+        "constraint": "h(row 0) <= 1",
+        "slack": 0.0,
+        "dual_marginal": -0.018070239509619057
+      },
+      {
+        "constraint": "h(row 2) >= 0",
+        "slack": 0.0,
+        "dual_marginal": -4.146651061207513
+      },
+      {
+        "constraint": "h(row 4) >= 0",
+        "slack": -2.2985086056692694e-17,
+        "dual_marginal": 0.0
+      },
+      {
+        "constraint": "t <= h(row 1)",
+        "slack": 0.0,
+        "dual_marginal": -0.9703183411446593
+      },
+      {
+        "constraint": "t <= h(row 3)",
+        "slack": 0.0,
+        "dual_marginal": -0.029681658855340732
+      }
+    ],
+    "lower_marginals": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "upper_marginals": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+  },
+  "matrix_payload_files": {
+    "matrix_json": "w16_scale_matrix.json",
+    "matrix_txt": "w16_scale_matrix.txt",
+    "factorization_json": "w16_scale_factorization.json"
+  }
+}

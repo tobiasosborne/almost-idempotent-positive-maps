@@ -1,0 +1,347 @@
+{
+  "verdict": "BARRIER_CROSSED",
+  "record": {
+    "label": "w16_verified_crossing_best",
+    "params": {
+      "family": "w15_scale_perturbation"
+    },
+    "n": 7,
+    "delta": 0.22840025035566297,
+    "row_neg": [
+      0.1963011722456657,
+      0.03783971804193262,
+      0.19580368969244655,
+      0.22840025035566297,
+      0.006256602977531618,
+      0.018118304375293492,
+      0.003474386668074503
+    ],
+    "idem": {
+      "row_sum_resid": 2.220446049250313e-16,
+      "idem_resid": 2.220446049250313e-16,
+      "ok": 1
+    },
+    "tau": 0.4779123877403294,
+    "rho": 1.9116495509613176,
+    "kappa": 0.11947809693508235,
+    "W": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "nW": 4,
+    "vertex_info": {
+      "0": {
+        "vertex": 1,
+        "verr": 2.0052301732907463,
+        "inW": 1,
+        "dist_to_CW": 0.0,
+        "exposed_margin": 0.9962405161977069
+      },
+      "1": {
+        "vertex": 1,
+        "verr": 0.36538462830388835,
+        "inW": 1,
+        "dist_to_CW": 0.0,
+        "exposed_margin": 0.8115996744383001
+      },
+      "2": {
+        "vertex": 1,
+        "verr": 0.4645605056214116,
+        "inW": 1,
+        "dist_to_CW": 0.0,
+        "exposed_margin": 0.815644933652174
+      },
+      "3": {
+        "vertex": 1,
+        "verr": 0.5202823869198118,
+        "inW": 1,
+        "dist_to_CW": 0.0,
+        "exposed_margin": 0.8702134917673284
+      },
+      "4": {
+        "vertex": 1,
+        "verr": 0.007392770719555151,
+        "inW": 0,
+        "dist_to_CW": 0.0075670786660321536,
+        "exposed_margin": 0.01940511010320419
+      },
+      "5": {
+        "vertex": 1,
+        "verr": 0.005024083727547394,
+        "inW": 0,
+        "dist_to_CW": 0.006395435259356688,
+        "exposed_margin": 0.01797290177370566
+      },
+      "6": {
+        "vertex": 1,
+        "verr": 0.005300581201872032,
+        "inW": 0,
+        "dist_to_CW": 0.0072059367893181694,
+        "exposed_margin": 0.01838726085818752
+      }
+    },
+    "hidden_vertices": [
+      4,
+      5,
+      6
+    ],
+    "all_dist_to_CW": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0075670786660321536,
+      0.006395435259356688,
+      0.0072059367893181694
+    ],
+    "gate": "PASS",
+    "v": 4,
+    "H": 0.0075670786660321536,
+    "H_separator": 0.007567078666031346,
+    "H_over_delta": 0.033130780961267606,
+    "H_over_tau": 0.01583361063690125,
+    "sigma_tilde": 0.7768728655109876,
+    "sigma_tilde_over_tau": 1.625554987566249,
+    "outside_CW": [
+      4,
+      5,
+      6
+    ],
+    "P_vv": 0.7665718403047566,
+    "nu_v": 0.006256602977531618,
+    "phi": [
+      -2.0052301732907463,
+      1.1102230246251565e-16,
+      1.1102230246251565e-16,
+      2.220446049250313e-16,
+      0.007567078666031346,
+      0.006395435259356819,
+      0.007205936789318468
+    ],
+    "g": [
+      2.0127972519567776,
+      0.007567078666031235,
+      0.007567078666031235,
+      0.007567078666031124,
+      0.0,
+      0.0011716434066745274,
+      0.00036114187671287823
+    ],
+    "Omega": 2.0127972519567776,
+    "sep_resid_Pg": 8.104411239329146e-17,
+    "shallow_components": [
+      {
+        "t": 0.12024259258997963,
+        "t_over_kappaOmega": 0.5,
+        "component": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "size": 6,
+        "mass_from_v": 1.0062566029775317,
+        "Pi_C": 4.319155488632299e-05,
+        "L": 3,
+        "Pi_over_tau": 9.03754662869104e-05,
+        "min_edge": 0.0036089806513057844
+      },
+      {
+        "t": 0.18036388888496943,
+        "t_over_kappaOmega": 0.7499999999999999,
+        "component": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "size": 6,
+        "mass_from_v": 1.0062566029775317,
+        "Pi_C": 4.319155488632299e-05,
+        "L": 3,
+        "Pi_over_tau": 9.03754662869104e-05,
+        "min_edge": 0.0036089806513057844
+      },
+      {
+        "t": 0.24048518517995926,
+        "t_over_kappaOmega": 1.0,
+        "component": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "size": 6,
+        "mass_from_v": 1.0062566029775317,
+        "Pi_C": 4.319155488632299e-05,
+        "L": 3,
+        "Pi_over_tau": 9.03754662869104e-05,
+        "min_edge": 0.0036089806513057844
+      }
+    ],
+    "best_component": {
+      "t": 0.12024259258997963,
+      "t_over_kappaOmega": 0.5,
+      "component": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "size": 6,
+      "mass_from_v": 1.0062566029775317,
+      "Pi_C": 4.319155488632299e-05,
+      "L": 3,
+      "Pi_over_tau": 9.03754662869104e-05,
+      "min_edge": 0.0036089806513057844
+    },
+    "best_Pi_over_tau": 9.03754662869104e-05,
+    "delta_over_sigma2": 0.37843968308661874
+  },
+  "hiddenness_lp_certificate": {
+    "success": 1,
+    "attempts": [
+      {
+        "method": "highs-ipm",
+        "presolve": 0,
+        "success": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+      },
+      {
+        "method": "highs",
+        "presolve": 0,
+        "success": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+      },
+      {
+        "method": "highs-ds",
+        "presolve": 0,
+        "success": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+      },
+      {
+        "method": "highs-ipm",
+        "presolve": 1,
+        "success": 1,
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+      }
+    ],
+    "target": 4,
+    "rho": 1.9116495509613176,
+    "kappa": 0.11947809693508235,
+    "tstar": 0.01940511010320419,
+    "tstar_over_kappa": 0.1624156276421764,
+    "hidden_by_margin": 1,
+    "far": [
+      0,
+      1,
+      3
+    ],
+    "distances_from_target": [
+      2.043574818280074,
+      1.933632057531571,
+      0.46536737214007906,
+      2.0432703923894624,
+      0.0,
+      1.8307381342763807,
+      1.5507627667542097
+    ],
+    "objective_fun": -0.01940511010320419,
+    "affine_w": [
+      1.00042998337773,
+      0.019404763390510008,
+      0.00047671916145634896,
+      0.01992989760527852,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "affine_b": 0.0,
+    "t_variable": 0.01940511010320419,
+    "h_values": [
+      0.9999999999999999,
+      0.01940511010320419,
+      0.0,
+      0.019405110103204195,
+      0.0,
+      0.01536064785209438,
+      0.012290986736504597
+    ],
+    "eqlin_residual": [
+      0.0
+    ],
+    "eqlin_marginals": [
+      -5.142237052410981
+    ],
+    "ineqlin_active": [
+      {
+        "constraint": "h(row 0) <= 1",
+        "slack": 0.0,
+        "dual_marginal": -0.019405110103204188
+      },
+      {
+        "constraint": "h(row 2) >= 0",
+        "slack": 0.0,
+        "dual_marginal": -4.161642162514185
+      },
+      {
+        "constraint": "h(row 4) >= 0",
+        "slack": -1.0842021724855044e-19,
+        "dual_marginal": 0.0
+      },
+      {
+        "constraint": "t <= h(row 1)",
+        "slack": 0.0,
+        "dual_marginal": -0.9724550638506695
+      },
+      {
+        "constraint": "t <= h(row 3)",
+        "slack": 0.0,
+        "dual_marginal": -0.02754493614933047
+      }
+    ],
+    "lower_marginals": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "upper_marginals": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+  },
+  "matrix_payload_files": {
+    "matrix_json": "w16_best_matrix.json",
+    "matrix_txt": "w16_best_matrix.txt",
+    "factorization_json": "w16_best_factorization.json"
+  }
+}

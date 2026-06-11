@@ -1088,3 +1088,23 @@ with internal signed cancellation inside a class. Coherent with w15_sos. P(verdi
 survives) = 0.88. DOC UPDATED: kernel-conjecture.tex now carries the periodicity closure,
 the cloning status-correction paragraph, Conjecture conj:quotient-floor (multiplicity-
 correct floor), and ledger item 6 (wave-15/16 constraints); recompiled clean, 6pp.
+
+## w16_nlopt (codex) — SIGMA-BARRIER CROSSED (first sigma_tilde > tau hidden vertex ever) [pending w16_cert_audit]
+Full answer + long-form: notes/swarm-answers/w16_nlopt.md; instance + frontier + scripts:
+experiments/out/w16_nlopt/. End-to-end nonlinear optimization over exactly-idempotent
+factorizations P = LB, BL = I (the w15 refuter's named DOF) at (n,k) = (7,4):
+delta = 0.2284, tau = 0.4779, hidden v = 4 (HiGHS-optimal hiddenness LP, t*/kappa = 0.162),
+sigma_tilde = 0.7769, sigma_tilde/tau = 1.626, delta/sigma_tilde^2 = 0.378 (old measured
+barrier 1.52 SHATTERED), idempotence/rowsum residuals 2.2e-16. ORCHESTRATOR READING
+(critical): H/tau = 0.0158 — NEGLIGIBLE HEIGHT, and delta = 0.228 is large. So this does
+NOT enter the floor conjectures' antecedent (sigma_tilde > tau AND H > B*tau) and does NOT
+contradict the doc's record item (no instance with sigma_tilde > tau AND H > 0.1*tau —
+still true). What it KILLS: the height-free barrier formulation "hidden => sigma_tilde <=
+C0*sqrt(delta)" (w16_barrier's target as posed — FALSE at least at large delta; worker's
+P(C0=1 barrier true) = 0.01); and it resets the measured sigma-frontier. The campaign's
+empirical question is now the TRADEOFF: can sigma_tilde > tau coexist with H > 0.1*tau?
+FOLLOW-ONS LAUNCHED: w16_cert_audit (independent verifier, claimant's code banned;
+rationalization/interval hardening; context coherence vs height-collapse + corner) and
+w17_antecedent (homotopy from the instance: maximize H/tau subject to hidden +
+sigma_tilde > tau; couplings with the corner family; fixed-H sigma-frontier sweeps; if
+realized — test the QUOTIENT floor on it; if not — fit + conjecture the boundary law).
