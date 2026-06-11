@@ -1,0 +1,237 @@
+{
+  "certificate_target": "prod_i a_i + C*L*delta - c*tau >= 0",
+  "model": "scalar necessary thin-chain model from formalization.md",
+  "note": "The exact rational witnesses falsify this scalar target, so no valid LP/SOS certificate exists for this reduced model at any degree.",
+  "results": [
+    {
+      "L": 2,
+      "constants": {
+        "C": "1",
+        "c": "1"
+      },
+      "exact_checks": {
+        "delta_equals_tau_squared": true,
+        "edge_in_box": true,
+        "floor_violated": true,
+        "gap_in_box": true,
+        "link_budget_tight": true,
+        "sigma_gt_tau": true,
+        "sigma_le_1_plus_delta": true,
+        "tau_in_box": true
+      },
+      "geometric_reading": "all link budgets a_i*d_i=delta are tight; sigma_tilde>tau is slack; the path product collapses as tau^L while every local correction is only order delta",
+      "lp_linearization": {
+        "active_link_budget_rows": [],
+        "dual_eqlin_marginals": [
+          2.0
+        ],
+        "dual_ineqlin_marginals": [
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "f0": -0.0097,
+        "linearized_min_delta": -0.00245,
+        "linearized_min_total": -0.012150000000000001,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "status": 0,
+        "success": true
+      },
+      "sos_degree_2": "blocked_by_exact_negative_witness",
+      "sos_degree_4": "blocked_by_exact_negative_witness",
+      "witness": {
+        "F": "-97/10000",
+        "N": 100,
+        "delta": "1/10000",
+        "edges": [
+          "1/100",
+          "1/100"
+        ],
+        "gaps": [
+          "1/100",
+          "1/100"
+        ],
+        "path_product": "1/10000",
+        "sigma_tilde": "1/50",
+        "tau": "1/100"
+      }
+    },
+    {
+      "L": 3,
+      "constants": {
+        "C": "1",
+        "c": "1"
+      },
+      "exact_checks": {
+        "delta_equals_tau_squared": true,
+        "edge_in_box": true,
+        "floor_violated": true,
+        "gap_in_box": true,
+        "link_budget_tight": true,
+        "sigma_gt_tau": true,
+        "sigma_le_1_plus_delta": true,
+        "tau_in_box": true
+      },
+      "geometric_reading": "all link budgets a_i*d_i=delta are tight; sigma_tilde>tau is slack; the path product collapses as tau^L while every local correction is only order delta",
+      "lp_linearization": {
+        "active_link_budget_rows": [],
+        "dual_eqlin_marginals": [
+          3.0
+        ],
+        "dual_ineqlin_marginals": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "f0": -0.009699,
+        "linearized_min_delta": -0.0023507499999999995,
+        "linearized_min_total": -0.012049749999999998,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "status": 0,
+        "success": true
+      },
+      "sos_degree_2": "blocked_by_exact_negative_witness",
+      "sos_degree_4": "blocked_by_exact_negative_witness",
+      "witness": {
+        "F": "-9699/1000000",
+        "N": 100,
+        "delta": "1/10000",
+        "edges": [
+          "1/100",
+          "1/100",
+          "1/100"
+        ],
+        "gaps": [
+          "1/100",
+          "1/100",
+          "1/100"
+        ],
+        "path_product": "1/1000000",
+        "sigma_tilde": "1/50",
+        "tau": "1/100"
+      }
+    },
+    {
+      "L": 4,
+      "constants": {
+        "C": "1",
+        "c": "1"
+      },
+      "exact_checks": {
+        "delta_equals_tau_squared": true,
+        "edge_in_box": true,
+        "floor_violated": true,
+        "gap_in_box": true,
+        "link_budget_tight": true,
+        "sigma_gt_tau": true,
+        "sigma_le_1_plus_delta": true,
+        "tau_in_box": true
+      },
+      "geometric_reading": "all link budgets a_i*d_i=delta are tight; sigma_tilde>tau is slack; the path product collapses as tau^L while every local correction is only order delta",
+      "lp_linearization": {
+        "active_link_budget_rows": [],
+        "dual_eqlin_marginals": [
+          4.0
+        ],
+        "dual_ineqlin_marginals": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "f0": -0.009599990000000001,
+        "linearized_min_delta": -0.00230001,
+        "linearized_min_total": -0.0119,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "status": 0,
+        "success": true
+      },
+      "sos_degree_2": "blocked_by_exact_negative_witness",
+      "sos_degree_4": "blocked_by_exact_negative_witness",
+      "witness": {
+        "F": "-959999/100000000",
+        "N": 100,
+        "delta": "1/10000",
+        "edges": [
+          "1/100",
+          "1/100",
+          "1/100",
+          "1/100"
+        ],
+        "gaps": [
+          "1/100",
+          "1/100",
+          "1/100",
+          "1/100"
+        ],
+        "path_product": "1/100000000",
+        "sigma_tilde": "1/50",
+        "tau": "1/100"
+      }
+    },
+    {
+      "L": 5,
+      "constants": {
+        "C": "1",
+        "c": "1"
+      },
+      "exact_checks": {
+        "delta_equals_tau_squared": true,
+        "edge_in_box": true,
+        "floor_violated": true,
+        "gap_in_box": true,
+        "link_budget_tight": true,
+        "sigma_gt_tau": true,
+        "sigma_le_1_plus_delta": true,
+        "tau_in_box": true
+      },
+      "geometric_reading": "all link budgets a_i*d_i=delta are tight; sigma_tilde>tau is slack; the path product collapses as tau^L while every local correction is only order delta",
+      "lp_linearization": {
+        "active_link_budget_rows": [],
+        "dual_eqlin_marginals": [
+          5.0
+        ],
+        "dual_ineqlin_marginals": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "f0": -0.0094999999,
+        "linearized_min_delta": -0.0022500001249999998,
+        "linearized_min_total": -0.011750000025,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "status": 0,
+        "success": true
+      },
+      "sos_degree_2": "blocked_by_exact_negative_witness",
+      "sos_degree_4": "blocked_by_exact_negative_witness",
+      "witness": {
+        "F": "-94999999/10000000000",
+        "N": 100,
+        "delta": "1/10000",
+        "edges": [
+          "1/100",
+          "1/100",
+          "1/100",
+          "1/100",
+          "1/100"
+        ],
+        "gaps": [
+          "1/100",
+          "1/100",
+          "1/100",
+          "1/100",
+          "1/100"
+        ],
+        "path_product": "1/10000000000",
+        "sigma_tilde": "1/50",
+        "tau": "1/100"
+      }
+    }
+  ]
+}

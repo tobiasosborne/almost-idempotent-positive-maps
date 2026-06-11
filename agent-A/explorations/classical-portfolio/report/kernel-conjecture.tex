@@ -299,11 +299,21 @@ Baake--Sumner normal form, the audited canonical W-free restatement).
 $\sigt_v>0$, and an \emph{entirely shallow} optimal witness face --- but only at height
 $H=O(\delta)$ and $\sigt_v<\tau$ (inside the proved branch). Any proof of the conjecture
 must tolerate these; any refutation must do strictly better than them.
-\item \textbf{The $\delta=0$ anchor.} At $\delta=0$ both conjectures hold via the
-classification of stochastic idempotents (equal-input recurrent blocks plus proportional
-transient rows). Caution: the local ground-truth source states this classification as a
-reformulation of H\"ogn\"as--Mukherjea \emph{without proof}; the anchor's own proof is
-pending byte-verified acquisition.
+\item \textbf{The $\delta=0$ anchor.} At $\delta=0$ both conjectures hold by the
+finite stochastic-idempotent normal form of H\"ogn\"as--Mukherjea,
+\emph{Probability Measures on Semigroups}, Thm.~1.16; local extraction
+\texttt{refs/hognas-mukherjea-2011/hognas-mukherjea-2011.txt:2767--2777}
+(extraction-level provenance: byte-checked against the \texttt{pdftotext}
+output, not against PDF bytes). In H--M notation a stochastic idempotent
+has a basis $\{T_c,C_1,\ldots,C_k\}$; each $C_s\times C_s$ block has one
+positive probability row, off-diagonal recurrent blocks vanish, and the
+ratio identity for $i\in T_c$ gives $P_{i,C_s}=\alpha_{is}\pi_s$. Since
+columns in $T_c$ are zero and rows sum to one, $\alpha_{is}\ge0$ and
+$\sum_s\alpha_{is}=1$. Hence the geometrically distinct row vertices are
+exactly the recurrent equal-input block rows $\pi_s$, and every transient
+row lies in their convex hull. The proof source is H--M Theorem~1.11
+(statement \texttt{:2225--2244}; proof via Theorem~1.18,
+\texttt{:3079--3210}), not merely the Baake--Sumner reformulation.
 \end{enumerate}
 
 \end{document}

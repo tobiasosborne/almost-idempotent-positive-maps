@@ -931,3 +931,45 @@ entrywise reading would void the moduli.
   nontrivial periodic carrier?).
 - w15_hmloci: byte-pin the H-M loci for the kernel-conjecture.tex §5 anchor caveat
   (extraction-level; grep -F-verified quotes).
+
+## w15_audit (codex) — the w14 autopsy SURVIVES MOD 2 CORRECTIONS [audit of the audit chain done]
+Full table: notes/swarm-answers/w15_audit.md. All sign-rigid/sign-robust row verdicts
+CONFIRMED; the exact-row-reproduction modulus, the rank-one-block repair, and the
+small-invisible-mass branch all INDEPENDENTLY RE-DERIVED (p_i - q_i = nu_i (q_i - r_i)
+identity; dist <= (2+4*delta)*nu_i; dist(p_v, C_W) <= 2(1+2*delta)*max(sigma_tilde_v, nu_v)
+<= 3*sqrt(delta) on the sigma_tilde_v <= sqrt(delta) branch). CORRECTIONS:
+(1) w14 row "exact row reproduction" cited H-M txt lines 55-65/81-82 — front matter; the
+real locus is kernel-conjecture.tex:55ff (campaign setup). (2) THE SYNTHESIS IS TOO LOOSE:
+"positive SCC with path-product mass = approximate minimal ideal" UNDERSPECIFIES the w12
+finisher's hypotheses — attachment needs (a) a CLOSED positive component (P^+_{S,S^c} = 0),
+(b) PRIMITIVE (the periodic gap — w15_periodic in flight), (c) the collapse radius beating
+the exposure threshold: 2(1+delta)*eps/theta_C + 4*delta < r_* with r_* = 0.85*tau in the
+audited consumer — NOT merely Pi_C > 0. delta-convention caveat MOOT (campaign = row
+negative mass, kernel-conjecture.tex:62). P(autopsy survives as written) = 0.70;
+P(signed-surrogate frame is the right next attack) = 0.74. ORCHESTRATOR NOTE: the
+dossier's WAVE 14 section above stands with correction (2) — read "approximate minimal
+ideal" as "closed primitive positive component with radius < r_*".
+
+## w15_hmloci (codex) — the delta=0 anchor is PINNED; kernel-conjecture.tex §5 DISCHARGED
+Full table: notes/swarm-answers/w15_hmloci.md. H-M Thm 1.16 (txt:2767-2777) covers the
+finite stochastic-idempotent case DIRECTLY (no compact-semigroup specialization needed);
+proof source = Thm 1.11 (:2225-2244) via Thm 1.18 (:3079-3210). Orchestrator grep -F
+spot-checked both key excerpts. Honest mismatch notes: H-M states ratio/proportionality —
+the convex-mixture + visible-vertex sentences are easy campaign consequences (columns in
+T_c vanish + rows sum to 1), recorded as such. kernel-conjecture.tex §5 anchor item
+REPLACED (caveat discharged at extraction-level provenance tier) + recompiled clean.
+
+## w15_sos (codex) — NO CHAIN-LOCAL CERTIFICATE EXISTS: the scalar shadow is FALSE
+Full answer + formalization: notes/swarm-answers/w15_sos.md; script + outputs:
+experiments/out/w15_sos/. Verdict: FORMALIZATION BLOCKED for L = 2..5 — the notes contain
+no complete polynomial reduction in (edge weights, delta, sigma_tilde, tau) alone; w13's
+thin-chain scale is the OBSTRUCTION, not an exact construction. STRONGER: the best
+justifiable scalar shadow has EXACT RATIONAL witnesses (tau = 1/100, delta = 1/10000,
+sigma_tilde = 1/50, a_i = d_i = 1/100) satisfying all scalar constraints while violating
+Pi_L + L*delta - tau >= 0 for EVERY L in {2,3,4,5} — hence NO LP/SOS certificate at ANY
+degree for the scalar shadow. READING: the path-product floor, if true, is NOT chain-local;
+any proof MUST consume a matrix/hiddenness row-realization constraint (consistent with the
+w13 symmetric stalemate). The scalar witnesses are NOT counterexamples to Conjecture 2 —
+realizability by an exactly-idempotent matrix with a hidden top vertex is exactly the open
+content. NEXT-WAVE TARGET: realize the scalar witness as an actual instance (refuter side)
+or prove unrealizability from hiddenness (prover side) — the kernel in its sharpest form yet.
