@@ -899,3 +899,35 @@ is proved or proved-mod-audit.
   SOS/certificate search SPECIALIZED to the chain inequality (small n, the reduced
   problem — distinct from the collapsed full-problem SOS of wave 10), and the
   PRD-sanctioned obstruction write-up (report v3 already carries the structure).
+
+# WAVE 14 — the REAL Hognas-Mukherjea autopsy (codex, landed 2026-06-11) [pending w15 audit]
+Full verdict: notes/swarm-answers/w14_autopsy.md. The delta=0 proof (H-M Thm 2.2 / 1.11 /
+1.16) does NOT perturb directly: SIGN-RIGID at zero-sum closure ("0 = sum of nonnegatives
+=> each term 0" — THE main failure), zero-pattern symmetry/block partition, and positive
+diagonal (fails already for rank-one signed P = 1*pi with pi_i < 0). SIGN-ROBUST: exact
+row reproduction — P^2 = P exact gives
+  dist(p_i, conv{p_j : P_ij > 0}) <= (2+4*delta)*nu_i <= (2+4*delta)*delta,
+and the post-collapse equal-input specialization. The rank-one-block step is quantitatively
+repairable: entry floor theta_C on a component gives row diameter <= 2(1+delta)*eps/theta_C
++ 4*delta (eps <= 7*delta + 6*delta^2) — O(sqrt(delta)) at theta_C ~ sqrt(delta).
+SYNTHESIS: the signed analogue of the kernel/minimal-ideal mechanism is: visible exposed
+vertices = recurrent classes; hidden top vertices generate a shallow positive carrier
+graph; a positive SCC with path-product mass above signed error = the "approximate minimal
+ideal", to which the proved w12 component finisher attaches. H-M therefore POINTS AT
+Conjecture 2 (the path-product floor) as the right surrogate — it identifies the missing
+step, it does not supply it. P(mechanism yields conjecture) = 0.63; P(reading survives
+audit) = 0.86. CAVEAT: read delta as ROW negative mass (matches kernel-conjecture.tex);
+entrywise reading would void the moduli.
+
+# WAVE 15 — launched 2026-06-11 (6 codex, parallel; briefs at /tmp/codex-sigma-wall/w15_*)
+- w15_audit: hostile derive-first audit of the w14 autopsy (loci + moduli + synthesis).
+- w15_prover: Conjecture 2 via the H-M signed-surrogate frame (exact idempotence free,
+  P^k = P amplification vs O(L*delta) signed loss).
+- w15_refuter: counterexample design AT the sign-rigid steps (cancellation where the
+  proof needs positivity; periodic-carrier degree of freedom; must dodge prior failure maps).
+- w15_sos: chain-specialized SOS/LP certificate search, reduced inequality, L = 2..5,
+  rational rounding (the last unwalked computational route).
+- w15_periodic: close the w12 finisher's primitivity gap (try: exact P^d = P excludes
+  nontrivial periodic carrier?).
+- w15_hmloci: byte-pin the H-M loci for the kernel-conjecture.tex §5 anchor caveat
+  (extraction-level; grep -F-verified quotes).
