@@ -1392,3 +1392,21 @@ violations (incl. the 1e-6 stress family). P(repaired verdict survives) = 0.74.
 STATE: tangent-cone lemma BANKED; T1-fixed-mass BANKED (repaired); OPEN SUB-TASKS:
 the mass-removed recoding lemma + the arc-scale estimate; w21_second (the decisive
 second-order lemma) still in flight.
+
+## w21_second (codex) — DIED-AT, NO COUNTEREXAMPLE; the frontier converges on BOUNDARY RECODING
+Full answer + long form: notes/swarm-answers/w21_second.md; decider stack:
+experiments/out/w21_second/. No dangerous-cone direction with q_delta = 0 < q_H exists in
+the sampling (no local-law counterexample seed); in the clean fixed-base second-order
+window the resolvable samples had max_local_ratio = 0 — the second-order race at a FIXED
+H-M base is EMPTY-OR-BENIGN. The raw sharp cases (H/delta = 2.00000000004) are
+FINITE-SCALE BOUNDARY RECODING EVENTS (arcs crossing tiny-positive-entry scales), not
+fixed-base limits. The failed estimate is unchanged (the quadratic normal projection
+bound). CONVERGENT FRONTIER (orchestrator): w20_t1_audit's invalid recoding step and
+w21_second's sharp-case localization point at the SAME missing object — a mass-removed
+boundary-recoding theory: when an arc kills tiny positive entries (mass theta removed
+from a block), recode to the boundary stratum with bookkeeping in TOTAL MASS REMOVED
+(not the threshold), tracking how H, delta, tau, and visibility margins transform.
+That single lemma would (a) repair T1's mu -> 0 case, (b) resolve the sharp boundary
+events in the second-order race, and plausibly (c) close the local linear law by
+induction on strata (each recoding strictly reduces the support pattern — finitely many
+steps). LAUNCHING: w21_recode.

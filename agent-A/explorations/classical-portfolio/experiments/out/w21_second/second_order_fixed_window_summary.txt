@@ -1,0 +1,47 @@
+w21_second dangerous-cone second-order decider
+seed: 21021
+random_strata: 30
+strata_total: 39
+directions_total: 352
+audit_module: /home/tobias/Projects/almost-idempotent-positive-maps/agent-A/explorations/classical-portfolio/experiments/out/w19_tangent_audit/tangent_audit.py
+ts: [0.001, 0.0003, 0.0001, 3e-05, 1e-05]
+max_tail_ratio: 2.000000000204834
+worst_stratum: random_023
+worst_source: zero-active-nullspace
+worst_mu: 1.0
+counterseed_count: 0
+suspicious_count: 0
+dot_delta_max: 1.7263743352875073e-14
+frozen_D_max: 1.5475537310046474e-14
+
+top limiting-ratio samples
+#0 stratum=random_023 source=zero-active-nullspace n=11 k=4 mu=1 dot_delta=5.99e-16 frozen_D=4.19e-16 q_delta_B=3.51937087339e-16 tail_ratio=2.0000000002 last_t=1e-05 last_delta/t2=4530.42531452 last_H/t2=9060.85062998 visible=4 vertices=5
+  meta={'null_dim': 11, 'sample': 5}
+#1 stratum=random_023 source=zero-active-nullspace n=11 k=4 mu=1 dot_delta=6.84e-16 frozen_D=5.33e-16 q_delta_B=4.18437043426e-16 tail_ratio=2.00000000008 last_t=1e-05 last_delta/t2=4.62630755848e-11 last_H/t2=0 visible=4 vertices=4
+  meta={'null_dim': 11, 'sample': 0}
+#2 stratum=random_023 source=zero-active-nullspace n=11 k=4 mu=1 dot_delta=7.72e-16 frozen_D=5.66e-16 q_delta_B=3.73904137614e-16 tail_ratio=2.00000000001 last_t=1e-05 last_delta/t2=70241.7770722 last_H/t2=140483.554145 visible=4 vertices=5
+  meta={'null_dim': 11, 'sample': 4}
+#3 stratum=random_023 source=zero-active-nullspace n=11 k=4 mu=1 dot_delta=4.46e-16 frozen_D=3.62e-16 q_delta_B=2.99075045062e-16 tail_ratio=2.00000000001 last_t=1e-05 last_delta/t2=95557.586367 last_H/t2=191115.172735 visible=4 vertices=5
+  meta={'null_dim': 11, 'sample': 3}
+#4 stratum=random_014 source=zero-active-basis n=8 k=5 mu=1 dot_delta=5.99e-16 frozen_D=7.66e-16 q_delta_B=3.16179013111e-16 tail_ratio=2.00000000001 last_t=1e-05 last_delta/t2=9237.4382946 last_H/t2=18474.8765889 visible=5 vertices=6
+  meta={'null_dim': 10, 'basis': 1}
+#5 stratum=random_024 source=zero-active-nullspace n=11 k=4 mu=1 dot_delta=3.07e-15 frozen_D=1.58e-15 q_delta_B=2.11541178258e-15 tail_ratio=2 last_t=1e-05 last_delta/t2=82971.5848351 last_H/t2=165943.169671 visible=4 vertices=5
+  meta={'null_dim': 13, 'sample': 4}
+#6 stratum=random_025 source=zero-active-nullspace n=11 k=4 mu=0.017 dot_delta=1.09e-15 frozen_D=8e-16 q_delta_B=1.53262344263e-16 tail_ratio=2 last_t=1e-05 last_delta/t2=8649.62355754 last_H/t2=17299.2471138 visible=4 vertices=5
+  meta={'null_dim': 9, 'sample': 0}
+#7 stratum=random_011 source=zero-active-basis n=12 k=3 mu=1e-06 dot_delta=1.26e-15 frozen_D=1.06e-15 q_delta_B=2.77629290921e-16 tail_ratio=2 last_t=1e-05 last_delta/t2=69715.7989883 last_H/t2=139431.107454 visible=3 vertices=4
+  meta={'null_dim': 11, 'basis': 3}
+#8 stratum=random_011 source=zero-active-basis n=12 k=3 mu=1e-06 dot_delta=5.64e-16 frozen_D=8.67e-16 q_delta_B=3.21706834e-16 tail_ratio=2 last_t=1e-05 last_delta/t2=89014.8230808 last_H/t2=178029.349395 visible=3 vertices=4
+  meta={'null_dim': 11, 'basis': 0}
+#9 stratum=random_014 source=zero-active-nullspace n=8 k=5 mu=1 dot_delta=1.49e-15 frozen_D=1.85e-15 q_delta_B=1.29978719683e-15 tail_ratio=2 last_t=1e-05 last_delta/t2=69033.821814 last_H/t2=138067.643628 visible=5 vertices=6
+  meta={'null_dim': 10, 'sample': 5}
+#10 stratum=random_024 source=zero-active-nullspace n=11 k=4 mu=1 dot_delta=1.46e-15 frozen_D=1.36e-15 q_delta_B=1.08355164407e-15 tail_ratio=2 last_t=1e-05 last_delta/t2=94746.0626364 last_H/t2=189492.125272 visible=4 vertices=5
+  meta={'null_dim': 13, 'sample': 2}
+#11 stratum=random_025 source=zero-active-nullspace n=11 k=4 mu=0.017 dot_delta=8.91e-16 frozen_D=1.13e-15 q_delta_B=5.13784698606e-16 tail_ratio=2 last_t=1e-05 last_delta/t2=39478.6412118 last_H/t2=78957.2824223 visible=4 vertices=5
+  meta={'null_dim': 9, 'sample': 3}
+#12 stratum=random_024 source=zero-active-basis n=11 k=4 mu=1 dot_delta=8.93e-16 frozen_D=2.92e-16 q_delta_B=8.0328117149e-16 tail_ratio=2 last_t=1e-05 last_delta/t2=93874.9562082 last_H/t2=187749.912416 visible=4 vertices=5
+  meta={'null_dim': 13, 'basis': 0}
+#13 stratum=random_014 source=zero-active-basis n=8 k=5 mu=1 dot_delta=9.01e-16 frozen_D=1.31e-15 q_delta_B=5.62918037705e-16 tail_ratio=2 last_t=1e-05 last_delta/t2=76604.1057805 last_H/t2=153208.21156 visible=5 vertices=6
+  meta={'null_dim': 10, 'basis': 2}
+#14 stratum=random_025 source=zero-active-nullspace n=11 k=4 mu=0.017 dot_delta=1.68e-15 frozen_D=1.51e-15 q_delta_B=5.85481490063e-16 tail_ratio=2 last_t=1e-05 last_delta/t2=29301.3637511 last_H/t2=58602.727502 visible=4 vertices=5
+  meta={'null_dim': 9, 'sample': 1}

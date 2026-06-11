@@ -1,0 +1,32 @@
+filtered local asymptotic samples: t < 0.1 * min_positive_entry(P0)
+records: 172
+with_local_samples: 52
+max_local_ratio: 0
+local ratio=0 stratum=n3_k2_endpoint_sweep_0 source=one-sided-lp-extreme t=0.001 min_entry=1 delta/t2=0 H/t2=0 q_delta_B=0 dot_delta=0 frozen_D=0 local_count=5
+local ratio=0 stratum=n3_k2_endpoint_sweep_0 source=one-sided-lp-extreme t=0.001 min_entry=1 delta/t2=0 H/t2=0 q_delta_B=0 dot_delta=0 frozen_D=0 local_count=5
+local ratio=0 stratum=n3_k2_endpoint_sweep_0.2 source=zero-active-nullspace t=0.001 min_entry=0.2 delta/t2=2.404593209e-14 H/t2=0 q_delta_B=1.29e-16 dot_delta=2.4e-17 frozen_D=5.92e-18 local_count=5
+local ratio=0 stratum=n3_k2_endpoint_sweep_0.2 source=zero-active-nullspace t=0.001 min_entry=0.2 delta/t2=1.05215651322e-13 H/t2=0 q_delta_B=1.29e-16 dot_delta=2.89e-16 frozen_D=5.47e-17 local_count=5
+local ratio=0 stratum=n3_k2_endpoint_sweep_0.5 source=zero-active-nullspace t=0.001 min_entry=0.5 delta/t2=8.63799255088e-14 H/t2=0 q_delta_B=8.64e-17 dot_delta=8.64e-17 frozen_D=0 local_count=5
+local ratio=0 stratum=n3_k2_endpoint_sweep_0.5 source=zero-active-nullspace t=0.001 min_entry=0.5 delta/t2=4.32763426799e-14 H/t2=0 q_delta_B=8.64e-17 dot_delta=1.1e-16 frozen_D=1.33e-16 local_count=5
+local ratio=0 stratum=n3_k2_endpoint_sweep_0.8 source=zero-active-nullspace t=0.001 min_entry=0.2 delta/t2=1.98438204651e-13 H/t2=0 q_delta_B=2.74e-16 dot_delta=3.53e-17 frozen_D=0 local_count=5
+local ratio=0 stratum=n3_k2_endpoint_sweep_0.8 source=zero-active-nullspace t=0.001 min_entry=0.2 delta/t2=2.4773808321e-13 H/t2=0 q_delta_B=2.74e-16 dot_delta=4.58e-16 frozen_D=8.16e-16 local_count=5
+local ratio=0 stratum=n3_k2_endpoint_sweep_1 source=one-sided-lp-extreme t=0.001 min_entry=1 delta/t2=0 H/t2=0 q_delta_B=0 dot_delta=0 frozen_D=0 local_count=5
+local ratio=0 stratum=n3_k2_endpoint_sweep_1 source=one-sided-lp-extreme t=0.001 min_entry=1 delta/t2=0 H/t2=0 q_delta_B=0 dot_delta=0 frozen_D=0 local_count=5
+local ratio=0 stratum=leftcone_shape_hm_anchor source=zero-active-nullspace t=0.001 min_entry=0.333 delta/t2=1.93014495393e-13 H/t2=0 q_delta_B=3.41e-16 dot_delta=1.94e-16 frozen_D=1.3e-16 local_count=5
+local ratio=0 stratum=leftcone_shape_hm_anchor source=zero-active-nullspace t=0.001 min_entry=0.333 delta/t2=3.70259547083e-14 H/t2=0 q_delta_B=4.43e-17 dot_delta=2.5e-16 frozen_D=4.25e-16 local_count=5
+
+finite-scale samples: t >= 0.1 * min_positive_entry(P0)
+with_transition_samples: 128
+max_transition_ratio: 2.00000000004
+transition ratio=2.00000000004 stratum=random_014 source=zero-active-nullspace t=1e-05 min_entry=3.51e-07 delta/t=0.0831239527011 H/t2=16624.7905405 visible=5 vertices=6 transition_count=5
+transition ratio=2.00000000001 stratum=random_014 source=zero-active-basis t=3e-05 min_entry=3.51e-07 delta/t=0.115793824545 H/t2=7719.588303 visible=5 vertices=6 transition_count=5
+transition ratio=2 stratum=random_011 source=zero-active-basis t=3e-05 min_entry=4.44e-07 delta/t=0.963382743603 H/t2=64225.5162403 visible=3 vertices=4 transition_count=5
+transition ratio=2 stratum=random_014 source=zero-active-nullspace t=0.0001 min_entry=3.51e-07 delta/t=0.135340533489 H/t2=2706.81066978 visible=5 vertices=6 transition_count=5
+transition ratio=2 stratum=random_011 source=zero-active-nullspace t=0.0003 min_entry=4.44e-07 delta/t=0.442017080771 H/t2=2946.78053847 visible=3 vertices=4 transition_count=5
+transition ratio=2 stratum=random_014 source=zero-active-basis t=0.0003 min_entry=3.51e-07 delta/t=0.85061422194 H/t2=5670.7614796 visible=5 vertices=6 transition_count=5
+transition ratio=2 stratum=random_014 source=zero-active-nullspace t=0.0003 min_entry=3.51e-07 delta/t=0.693635015048 H/t2=4624.23343365 visible=5 vertices=6 transition_count=5
+transition ratio=2 stratum=random_014 source=zero-active-nullspace t=0.001 min_entry=3.51e-07 delta/t=0.999648708376 H/t2=1999.29741675 visible=5 vertices=6 transition_count=5
+transition ratio=2 stratum=random_014 source=zero-active-nullspace t=0.001 min_entry=3.51e-07 delta/t=0.161546744616 H/t2=323.093489232 visible=5 vertices=6 transition_count=5
+transition ratio=1.99756995933 stratum=random_009 source=zero-active-nullspace t=0.001 min_entry=2.75e-08 delta/t=0.171368013234 H/t2=342.319595227 visible=5 vertices=6 transition_count=5
+transition ratio=1.9813447702 stratum=random_009 source=zero-active-nullspace t=0.001 min_entry=2.75e-08 delta/t=0.875028994655 H/t2=1733.73412233 visible=5 vertices=6 transition_count=5
+transition ratio=1.9237944955 stratum=random_011 source=zero-active-basis t=1e-05 min_entry=4.44e-07 delta/t=0.925408855154 H/t2=178029.646163 visible=3 vertices=4 transition_count=5
