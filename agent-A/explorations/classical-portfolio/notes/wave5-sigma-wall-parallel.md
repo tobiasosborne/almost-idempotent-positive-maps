@@ -1190,3 +1190,33 @@ stochastic complementation (0.90) for cluster aggregation; Stewart-Sun Riccati s
 Putinar/Lasserre for hiddenness-aware fixed-n SOS. One suspicious citation flagged by the
 orchestrator: an attribution to "Hume" (impossibility of raw O(delta) distance) — likely
 garbled; verify before any use. Acquisition shopping list filed as a bead.
+
+## w18_sos_ideal (codex) — smallest hidden geometry at (n,k) = (4,3); the hiddenness-lifting wall again
+Full answer: notes/swarm-answers/w18_sos_ideal.md; probe + rank-chart outputs:
+experiments/out/w18_sos_ideal/. (3,2): hidden branch EMPTY (H = 0; delta - cH = tau^2 is
+trivially SOS). Smallest hidden geometry: (4,3), exact rational rank-chart witness saved
+(hidden but low height — no threat to the linear law). Degree-2/4 SOS modulo the ideal at
+(4,3): FORMULATION OBSTRUCTION, not a no-certificate verdict — the wall is lifting W /
+far-sets / vertex status / dist(., C_W) through global KKT-binary-quotient variables.
+CONSISTENT with t5's collapse + the meta-finding: even ON the variety, hiddenness IS the
+hard structure to encode polynomially. Useful byproduct: the explicit (3,2) rank-chart
+symbolic parametrization (idempotence residual identically 0) — reusable for small-case
+symbolic work.
+
+## w18_similarity (codex) — the cohomological route is BLOCKED at a PRECISE point (first-order diagonal displacement)
+Full answer: notes/swarm-answers/w18_similarity.md; Newton traces (certified instance +
+randoms): experiments/out/w18_similarity/. The Peirce corner retraction works
+ALGEBRAICALLY (tangent = E_10 + E_01; diagonal corners quadratically determined). THE
+BLOCK: the positivity projection (rounding negative entries away) creates an order-delta
+displacement in E_11 + E_00 — a FIRST-ORDER diagonal error the retraction only repairs
+QUADRATICALLY in the off-diagonal blocks. Numerics: on the certified w16 instance the
+loop reduces negativity only by drifting ORDER-ONE along the variety — no O(delta)-close
+H-M cleanup. P(contraction lemma in one wave) = 0.18; P(route eventually proves linear
+law) = 0.32. ORCHESTRATOR NOTE — CROSS-LANE CONVERGENCE: this is the classical twin of
+op-layer1-gap's "positivity-capable output" obstruction (the main lane's cohomological
+error-reduction has the same missing ingredient: a splitting/projection compatible with
+the order structure). REPAIR DIRECTIONS for synthesis: (a) positivity projection
+constrained to the tangent corners (project the negativity onto E_10 + E_01 moves only);
+(b) co-optimize the base point + gauge (the H-M family + similarity simultaneously);
+(c) the Douglas-Ando norm-excess functional as the Lyapunov function for the loop instead
+of raw negativity.
