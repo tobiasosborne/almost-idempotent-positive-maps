@@ -1108,3 +1108,21 @@ rationalization/interval hardening; context coherence vs height-collapse + corne
 w17_antecedent (homotopy from the instance: maximize H/tau subject to hidden +
 sigma_tilde > tau; couplings with the corner family; fixed-H sigma-frontier sweeps; if
 realized — test the QUOTIENT floor on it; if not — fit + conjecture the boundary law).
+
+## w16_cert_audit (codex, independent verifier) — the crossing is CERTIFIED (EXACT RATIONAL)
+Full table: notes/swarm-answers/w16_cert_audit.md; verifier + rational instance + report:
+experiments/out/w16_cert_audit/. Fresh verifier written from the definitions (claimant's
+code banned): every claimed number reproduced to the last digit; all 7 rows geometrically
+distinct row vertices; hiddenness LP primal=dual to 3e-16, the t >= kappa LP INFEASIBLE
+(a dual certificate of hiddenness). RATIONAL HARDENING: continued-fraction rationalization
+(denominators <= 1e4) with EXACT BL = I, P^2 = P, P1 = 1; exact delta = 0.22840027,
+exact sigma_tilde = 0.77687284; margins (sigma - tau = 0.299, hidden gap 0.100, outside
+distance 0.0064) dwarf the 5.2e-7 drift. Second saved instance verifies float-only but is
+threshold-fragile (4.6e-9 margin) — use the main one. CONTEXT: coherent with
+height-collapse + corner; H/tau = 0.0158 so no contradiction with the recorded joint
+(sigma > tau AND H > 0.1*tau) emptiness. BONUS: Q-rescaling continuation crosses at
+delta <= 0.1 (sigma/tau = 1.028 at delta = 0.0914) — NOT a large-delta artifact.
+P(genuine) = 0.999. STATUS CHANGES: (1) height-free barrier formulation DEAD (recorded);
+(2) doc ledger 6(c) REWRITTEN (the sigma gate is crossable; the open question is the
+sigma-H TRADEOFF); (3) the w15_refuter "1.52 barrier" superseded. w17_antecedent (the
+tradeoff decider) is the live worker.

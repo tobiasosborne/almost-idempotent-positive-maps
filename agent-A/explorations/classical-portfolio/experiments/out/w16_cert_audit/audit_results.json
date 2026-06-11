@@ -1,0 +1,3656 @@
+{
+  "verdict": "CERTIFIED (exact rational)",
+  "best_float": {
+    "label": "w16_best_float",
+    "n": 7,
+    "row_sum_resid": 2.220446049250313e-16,
+    "idempotence_resid": 2.220446049250313e-16,
+    "row_negative_masses": [
+      0.1963011722456657,
+      0.03783971804193262,
+      0.19580368969244655,
+      0.22840025035566297,
+      0.006256602977531618,
+      0.018118304375293492,
+      0.003474386668074503
+    ],
+    "delta": 0.22840025035566297,
+    "tau": 0.4779123877403294,
+    "rho": 1.9116495509613176,
+    "kappa": 0.11947809693508235,
+    "duplicate_groups": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ]
+    ],
+    "row_vertices": {
+      "0": {
+        "is_vertex": true,
+        "dist_to_conv_other_distinct_rows": 2.0052301732907463,
+        "hull_indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "lambda": [
+          0.005660550789823887,
+          0.33563225155217075,
+          0.6587071976580054,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "1": {
+        "is_vertex": true,
+        "dist_to_conv_other_distinct_rows": 0.3653846283038882,
+        "hull_indices": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "lambda": [
+          0.003084498604005501,
+          0.0,
+          0.0,
+          0.0,
+          0.9969155013959945,
+          0.0
+        ]
+      },
+      "2": {
+        "is_vertex": true,
+        "dist_to_conv_other_distinct_rows": 0.4645605056214116,
+        "hull_indices": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "lambda": [
+          0.004483414237525825,
+          0.0,
+          0.0,
+          0.9955165857624741,
+          0.0,
+          0.0
+        ]
+      },
+      "3": {
+        "is_vertex": true,
+        "dist_to_conv_other_distinct_rows": 0.5202823869198118,
+        "hull_indices": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "lambda": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "4": {
+        "is_vertex": true,
+        "dist_to_conv_other_distinct_rows": 0.007392770719555151,
+        "hull_indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        "lambda": [
+          0.0,
+          0.16200579252817934,
+          0.8054662511287535,
+          0.0,
+          0.032527956343067266,
+          0.0
+        ]
+      },
+      "5": {
+        "is_vertex": true,
+        "dist_to_conv_other_distinct_rows": 0.005024083727547394,
+        "hull_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "lambda": [
+          0.0,
+          0.8106043529064879,
+          0.0,
+          0.0,
+          0.01821575149758904,
+          0.171179895595923
+        ]
+      },
+      "6": {
+        "is_vertex": true,
+        "dist_to_conv_other_distinct_rows": 0.005300581201872032,
+        "hull_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "lambda": [
+          0.0,
+          0.0,
+          0.0,
+          0.7434266042538091,
+          0.2257146194582889,
+          0.03085877628790193
+        ]
+      }
+    },
+    "W": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "hidden_vertices": [
+      4,
+      5,
+      6
+    ],
+    "exposedness": {
+      "0": {
+        "far": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "far_distances": {
+          "1": 2.444722816644444,
+          "2": 2.3163717571557285,
+          "3": 2.7991931069058493,
+          "4": 2.043574818280074,
+          "5": 2.4006901643943115,
+          "6": 2.345976937161302
+        },
+        "t": 0.9962405161977073,
+        "exposed": true,
+        "kappa": 0.11947809693508235,
+        "rho": 1.9116495509613176,
+        "affine_b": 0.43141654579588384,
+        "objective_check_min_far_h": 0.9962405161977073,
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ],
+        "dual_from_marginals": 0.9962405161977074,
+        "dual_kkt_inf": 2.740863092043355e-16,
+        "active_duals_from_marginals": [
+          {
+            "constraint": "upper_h_le_1",
+            "row": 4,
+            "weight": 0.9962405161977074
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 1,
+            "weight": 0.1884003255617
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 2,
+            "weight": 0.8062632068409581
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 3,
+            "weight": 0.005336467597341853
+          }
+        ]
+      },
+      "1": {
+        "far": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "far_distances": {
+          "0": 2.444722816644444,
+          "2": 2.3974694417333606,
+          "3": 2.3650966008772136,
+          "4": 1.933632057531571
+        },
+        "t": 0.8115996744383001,
+        "exposed": true,
+        "kappa": 0.11947809693508235,
+        "rho": 1.9116495509613176,
+        "affine_b": 0.8031726245730432,
+        "objective_check_min_far_h": 0.8115996744383001,
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ],
+        "dual_from_marginals": 0.8115996744383001,
+        "dual_kkt_inf": 1.8127860323957634e-16,
+        "active_duals_from_marginals": [
+          {
+            "constraint": "upper_h_le_1",
+            "row": 2,
+            "weight": 0.8062632068409582
+          },
+          {
+            "constraint": "upper_h_le_1",
+            "row": 3,
+            "weight": 0.005336467597341851
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 0,
+            "weight": 0.0037594838022927644
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 4,
+            "weight": 0.9962405161977073
+          }
+        ]
+      },
+      "2": {
+        "far": [
+          0,
+          1,
+          3,
+          5,
+          6
+        ],
+        "far_distances": {
+          "0": 2.3163717571557285,
+          "1": 2.3974694417333606,
+          "3": 2.4672703826304274,
+          "5": 2.2961055064164597,
+          "6": 2.01240852484404
+        },
+        "t": 0.815644933652174,
+        "exposed": true,
+        "kappa": 0.11947809693508235,
+        "rho": 1.9116495509613176,
+        "affine_b": 0.558492150763753,
+        "objective_check_min_far_h": 0.815644933652174,
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ],
+        "dual_from_marginals": 0.8156449336521739,
+        "dual_kkt_inf": 2.9327668765732895e-16,
+        "active_duals_from_marginals": [
+          {
+            "constraint": "upper_h_le_1",
+            "row": 1,
+            "weight": 0.06793716753374826
+          },
+          {
+            "constraint": "upper_h_le_1",
+            "row": 3,
+            "weight": 0.7477077661184257
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 0,
+            "weight": 0.0035807033839361283
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 6,
+            "weight": 0.9964192966160639
+          }
+        ]
+      },
+      "3": {
+        "far": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "far_distances": {
+          "0": 2.7991931069058493,
+          "1": 2.3650966008772136,
+          "2": 2.4672703826304274,
+          "4": 2.0432703923894624,
+          "5": 2.0421179185159137
+        },
+        "t": 0.8702134917673284,
+        "exposed": true,
+        "kappa": 0.11947809693508235,
+        "rho": 1.9116495509613176,
+        "affine_b": 0.9203717956537277,
+        "objective_check_min_far_h": 0.8702134917673284,
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ],
+        "dual_from_marginals": 0.8702134917673283,
+        "dual_kkt_inf": 1.5612511283791264e-16,
+        "active_duals_from_marginals": [
+          {
+            "constraint": "upper_h_le_1",
+            "row": 1,
+            "weight": 0.8231094018497487
+          },
+          {
+            "constraint": "upper_h_le_1",
+            "row": 2,
+            "weight": 0.04710408991757966
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 0,
+            "weight": 0.003179237345246629
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 5,
+            "weight": 0.9968207626547534
+          }
+        ]
+      },
+      "4": {
+        "far": [
+          0,
+          1,
+          3
+        ],
+        "far_distances": {
+          "0": 2.043574818280074,
+          "1": 1.933632057531571,
+          "3": 2.0432703923894624
+        },
+        "t": 0.01940511010320419,
+        "exposed": false,
+        "kappa": 0.11947809693508235,
+        "rho": 1.9116495509613176,
+        "affine_b": 0.0,
+        "objective_check_min_far_h": 0.01940511010320419,
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ],
+        "dual_from_marginals": 0.019405110103204188,
+        "dual_kkt_inf": 4.440892098500626e-16,
+        "active_duals_from_marginals": [
+          {
+            "constraint": "upper_h_le_1",
+            "row": 0,
+            "weight": 0.019405110103204188
+          },
+          {
+            "constraint": "lower_h_ge_0",
+            "row": 2,
+            "weight": 4.161642162514185
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 1,
+            "weight": 0.9724550638506695
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 3,
+            "weight": 0.02754493614933047
+          }
+        ]
+      },
+      "5": {
+        "far": [
+          0,
+          2,
+          3
+        ],
+        "far_distances": {
+          "0": 2.4006901643943115,
+          "2": 2.2961055064164597,
+          "3": 2.0421179185159137
+        },
+        "t": 0.01797290177370566,
+        "exposed": false,
+        "kappa": 0.11947809693508235,
+        "rho": 1.9116495509613176,
+        "affine_b": 0.0,
+        "objective_check_min_far_h": 0.01797290177370566,
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ],
+        "dual_from_marginals": 0.017972901773705665,
+        "dual_kkt_inf": 8.881784197001252e-16,
+        "active_duals_from_marginals": [
+          {
+            "constraint": "upper_h_le_1",
+            "row": 0,
+            "weight": 0.017972901773705665
+          },
+          {
+            "constraint": "lower_h_ge_0",
+            "row": 1,
+            "weight": 4.653211705184001
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 2,
+            "weight": 0.2662893924841019
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 3,
+            "weight": 0.7337106075158981
+          }
+        ]
+      },
+      "6": {
+        "far": [
+          0,
+          2
+        ],
+        "far_distances": {
+          "0": 2.345976937161302,
+          "2": 2.01240852484404
+        },
+        "t": 0.01838726085818752,
+        "exposed": false,
+        "kappa": 0.11947809693508235,
+        "rho": 1.9116495509613176,
+        "affine_b": 0.0,
+        "objective_check_min_far_h": 0.018387260858187524,
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ],
+        "dual_from_marginals": 0.018387260858187517,
+        "dual_kkt_inf": 8.881784197001252e-16,
+        "active_duals_from_marginals": [
+          {
+            "constraint": "upper_h_le_1",
+            "row": 0,
+            "weight": 0.018387260858187517
+          },
+          {
+            "constraint": "lower_h_ge_0",
+            "row": 3,
+            "weight": 4.083819353076028
+          },
+          {
+            "constraint": "lower_h_ge_0",
+            "row": 5,
+            "weight": 0.45589896655298534
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 2,
+            "weight": 1.0
+          }
+        ]
+      }
+    },
+    "dist_to_CW": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.007567078666031271,
+      0.006395435259356899,
+      0.007205936789318296
+    ],
+    "barycentric_to_CW": [
+      [
+        1.0,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.1890899253241264,
+        0.808039213161218,
+        0.0028708615146556538
+      ],
+      [
+        0.0,
+        0.8257165545220078,
+        0.04618386479688598,
+        0.1280995806811062
+      ],
+      [
+        0.0,
+        0.06816096297114327,
+        0.18381144105793734,
+        0.7480275959709194
+      ]
+    ],
+    "H": 0.007567078666031271,
+    "H_over_tau": 0.015833610636899403,
+    "top_vertices": [
+      4
+    ],
+    "v_checked": 4,
+    "outside_CW": [
+      4,
+      5,
+      6
+    ],
+    "sigma_tilde_v": 0.7768728655109876,
+    "sigma_tilde_over_tau": 1.625554987566249,
+    "nu_v": 0.006256602977531618,
+    "P_vv": 0.7665718403047566,
+    "hiddenness_v4_primal": {
+      "far": [
+        0,
+        1,
+        3
+      ],
+      "far_distances": {
+        "0": 2.043574818280074,
+        "1": 1.933632057531571,
+        "3": 2.0432703923894624
+      },
+      "t": 0.01940511010320419,
+      "exposed": false,
+      "kappa": 0.11947809693508235,
+      "rho": 1.9116495509613176,
+      "affine_b": 0.0,
+      "objective_check_min_far_h": 0.01940511010320419,
+      "attempts": [
+        {
+          "method": "highs-ipm",
+          "presolve": false,
+          "success": true,
+          "status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+        }
+      ],
+      "dual_from_marginals": 0.019405110103204188,
+      "dual_kkt_inf": 4.440892098500626e-16,
+      "active_duals_from_marginals": [
+        {
+          "constraint": "upper_h_le_1",
+          "row": 0,
+          "weight": 0.019405110103204188
+        },
+        {
+          "constraint": "lower_h_ge_0",
+          "row": 2,
+          "weight": 4.161642162514185
+        },
+        {
+          "constraint": "far_h_ge_t",
+          "row": 1,
+          "weight": 0.9724550638506695
+        },
+        {
+          "constraint": "far_h_ge_t",
+          "row": 3,
+          "weight": 0.02754493614933047
+        }
+      ]
+    },
+    "hiddenness_v4_dual": {
+      "success": true,
+      "dual_objective": 0.01940511010320389,
+      "stationarity_inf": 3.0097452308197603e-16,
+      "lambda_eq": [
+        5.142237052410981
+      ],
+      "active_duals": [
+        {
+          "constraint": "upper_h_le_1",
+          "row": 0,
+          "weight": 0.01940511010320389
+        },
+        {
+          "constraint": "lower_h_ge_0",
+          "row": 2,
+          "weight": 4.161642162514185
+        },
+        {
+          "constraint": "far_h_ge_t",
+          "row": 1,
+          "weight": 0.9724550638506694
+        },
+        {
+          "constraint": "far_h_ge_t",
+          "row": 3,
+          "weight": 0.027544936149330616
+        }
+      ],
+      "attempts": [
+        {
+          "method": "highs-ipm",
+          "presolve": false,
+          "success": true,
+          "status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+        }
+      ]
+    },
+    "hiddenness_v4_feasibility_with_t_ge_kappa": {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Infeasible)",
+      "attempts": [
+        {
+          "method": "highs-ipm",
+          "presolve": false,
+          "success": false,
+          "status": 2,
+          "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Infeasible)"
+        }
+      ]
+    },
+    "min_abs_l1_distance_minus_rho_over_all_pairs": 0.005725490129262489,
+    "canonical_separator": {
+      "a": [
+        -1.0,
+        0.9555439463647597,
+        1.0,
+        1.0,
+        0.9743025257858745,
+        1.0,
+        -1.0
+      ],
+      "b": -0.9836465078683133,
+      "phi": [
+        -2.0052301732907463,
+        1.1102230246251565e-16,
+        1.1102230246251565e-16,
+        2.220446049250313e-16,
+        0.007567078666031346,
+        0.006395435259356819,
+        0.007205936789318468
+      ],
+      "H_separator": 0.007567078666031346,
+      "max_phi_on_W": 2.220446049250313e-16,
+      "lip_linf_norm": 1.0,
+      "attempts": [
+        {
+          "method": "highs-ipm",
+          "presolve": false,
+          "success": true,
+          "status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+        }
+      ]
+    },
+    "deficit_g": [
+      2.0127972519567776,
+      0.0075670786660311596,
+      0.0075670786660311596,
+      0.0075670786660310485,
+      -7.546047120499111e-17,
+      0.001171643406674452,
+      0.00036114187671280277
+    ],
+    "deficit_Pg_resid": 8.201989434852841e-17,
+    "claim_comparison": {
+      "delta": {
+        "ours": 0.22840025035566297,
+        "claimed": 0.22840025035566297,
+        "diff": 0.0
+      },
+      "tau": {
+        "ours": 0.4779123877403294,
+        "claimed": 0.4779123877403294,
+        "diff": 0.0
+      },
+      "W": {
+        "ours": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "claimed": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "H": {
+        "ours": 0.007567078666031271,
+        "claimed": 0.0075670786660321536,
+        "diff": -8.829742492721948e-16
+      },
+      "H_over_tau": {
+        "ours": 0.015833610636899403,
+        "claimed": 0.01583361063690125,
+        "diff": -1.8457457784393227e-15
+      },
+      "sigma_tilde": {
+        "ours": 0.7768728655109876,
+        "claimed": 0.7768728655109876,
+        "diff": 0.0
+      },
+      "sigma_tilde_over_tau": {
+        "ours": 1.625554987566249,
+        "claimed": 1.625554987566249,
+        "diff": 0.0
+      }
+    }
+  },
+  "scale_float": {
+    "label": "w16_scale_float",
+    "n": 7,
+    "row_sum_resid": 2.220446049250313e-16,
+    "idempotence_resid": 2.220446049250313e-16,
+    "row_negative_masses": [
+      0.22934355220103006,
+      0.016288634318236402,
+      0.18340969377864444,
+      0.22934355220103006,
+      0.0008687179219915285,
+      0.003175620633527893,
+      0.003381778438003681
+    ],
+    "delta": 0.22934355220103006,
+    "tau": 0.47889826915643585,
+    "rho": 1.9155930766257434,
+    "kappa": 0.11972456728910896,
+    "duplicate_groups": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ]
+    ],
+    "row_vertices": {
+      "0": {
+        "is_vertex": true,
+        "dist_to_conv_other_distinct_rows": 2.072428639218342,
+        "hull_indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "lambda": [
+          0.09592880936332572,
+          0.9040711906366744,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "1": {
+        "is_vertex": true,
+        "dist_to_conv_other_distinct_rows": 0.3593314441804819,
+        "hull_indices": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "lambda": [
+          0.0031090000890796007,
+          0.0,
+          0.0,
+          0.0,
+          0.9968909999109205,
+          0.0
+        ]
+      },
+      "2": {
+        "is_vertex": true,
+        "dist_to_conv_other_distinct_rows": 0.4614064262385442,
+        "hull_indices": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "lambda": [
+          0.0041670755209031185,
+          0.0,
+          0.0,
+          0.9958329244790969,
+          0.0,
+          0.0
+        ]
+      },
+      "3": {
+        "is_vertex": true,
+        "dist_to_conv_other_distinct_rows": 0.5064202222155365,
+        "hull_indices": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "lambda": [
+          0.00030374130976013833,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.9996962586902398
+        ]
+      },
+      "4": {
+        "is_vertex": true,
+        "dist_to_conv_other_distinct_rows": 0.007009381429660297,
+        "hull_indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        "lambda": [
+          0.0,
+          0.1521586722790036,
+          0.8034017254630016,
+          0.0,
+          0.04443960225799485,
+          0.0
+        ]
+      },
+      "5": {
+        "is_vertex": true,
+        "dist_to_conv_other_distinct_rows": 0.005252194240087394,
+        "hull_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "lambda": [
+          0.0,
+          0.8091437432699637,
+          0.0,
+          0.0,
+          0.017055001484962935,
+          0.1738012552450732
+        ]
+      },
+      "6": {
+        "is_vertex": true,
+        "dist_to_conv_other_distinct_rows": 0.0051736642894981465,
+        "hull_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "lambda": [
+          0.0,
+          0.0,
+          0.0,
+          0.7453997365562954,
+          0.2245102098111539,
+          0.03009005363255073
+        ]
+      }
+    },
+    "W": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "hidden_vertices": [
+      4,
+      5,
+      6
+    ],
+    "exposedness": {
+      "0": {
+        "far": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "far_distances": {
+          "1": 2.489550585817879,
+          "2": 2.2983419027187106,
+          "3": 2.9173742088041204,
+          "4": 2.0803941764262466,
+          "5": 2.4642852392002603,
+          "6": 2.464697554809212
+        },
+        "t": 0.9964889324543835,
+        "exposed": true,
+        "kappa": 0.11972456728910896,
+        "rho": 1.9155930766257434,
+        "affine_b": 0.9998723946317601,
+        "objective_check_min_far_h": 0.9964889324543834,
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ],
+        "dual_from_marginals": 0.9964889324543834,
+        "dual_kkt_inf": 1.6249480060126498e-16,
+        "active_duals_from_marginals": [
+          {
+            "constraint": "upper_h_le_1",
+            "row": 4,
+            "weight": 0.9964889324543834
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 1,
+            "weight": 0.1885339281029483
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 2,
+            "weight": 0.8056988927154157
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 3,
+            "weight": 0.005767179181635967
+          }
+        ]
+      },
+      "1": {
+        "far": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "far_distances": {
+          "0": 2.489550585817879,
+          "2": 2.3730258474588393,
+          "3": 2.3471545956021154,
+          "4": 1.915593081210332
+        },
+        "t": 0.8114660718970519,
+        "exposed": true,
+        "kappa": 0.11972456728910896,
+        "rho": 1.9155930766257434,
+        "affine_b": -0.0,
+        "objective_check_min_far_h": 0.8114660718970519,
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ],
+        "dual_from_marginals": 0.811466071897052,
+        "dual_kkt_inf": 1.6653345369377348e-16,
+        "active_duals_from_marginals": [
+          {
+            "constraint": "upper_h_le_1",
+            "row": 2,
+            "weight": 0.8056988927154158
+          },
+          {
+            "constraint": "upper_h_le_1",
+            "row": 3,
+            "weight": 0.005767179181636117
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 0,
+            "weight": 0.0035110675456165264
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 4,
+            "weight": 0.9964889324543835
+          }
+        ]
+      },
+      "2": {
+        "far": [
+          0,
+          1,
+          3,
+          5,
+          6
+        ],
+        "far_distances": {
+          "0": 2.2983419027187106,
+          "1": 2.3730258474588393,
+          "3": 2.4559427998397694,
+          "5": 2.2802765636007316,
+          "6": 2.0030592071625537
+        },
+        "t": 0.8154346311632877,
+        "exposed": true,
+        "kappa": 0.11972456728910896,
+        "rho": 1.9155930766257434,
+        "affine_b": 0.899942825558254,
+        "objective_check_min_far_h": 0.8154346311632877,
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ],
+        "dual_from_marginals": 0.8154346311632876,
+        "dual_kkt_inf": 1.8431436932253575e-16,
+        "active_duals_from_marginals": [
+          {
+            "constraint": "upper_h_le_1",
+            "row": 1,
+            "weight": 0.06734850651226014
+          },
+          {
+            "constraint": "upper_h_le_1",
+            "row": 3,
+            "weight": 0.7480861246510275
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 0,
+            "weight": 0.0033716983898398343
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 6,
+            "weight": 0.9966283016101601
+          }
+        ]
+      },
+      "3": {
+        "far": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "far_distances": {
+          "0": 2.9173742088041204,
+          "1": 2.3471545956021154,
+          "2": 2.4559427998397694,
+          "4": 2.0000128015960374,
+          "5": 2.0235455587312567
+        },
+        "t": 0.8698756646682941,
+        "exposed": true,
+        "kappa": 0.11972456728910896,
+        "rho": 1.9155930766257434,
+        "affine_b": 0.4821138932186013,
+        "objective_check_min_far_h": 0.8698756646682941,
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ],
+        "dual_from_marginals": 0.869875664668294,
+        "dual_kkt_inf": 1.942890293094024e-16,
+        "active_duals_from_marginals": [
+          {
+            "constraint": "upper_h_le_1",
+            "row": 1,
+            "weight": 0.8235062091192676
+          },
+          {
+            "constraint": "upper_h_le_1",
+            "row": 2,
+            "weight": 0.04636945554902643
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 0,
+            "weight": 0.0031668338555084184
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 5,
+            "weight": 0.9968331661444916
+          }
+        ]
+      },
+      "4": {
+        "far": [
+          0,
+          1,
+          3
+        ],
+        "far_distances": {
+          "0": 2.0803941764262466,
+          "1": 1.915593081210332,
+          "3": 2.0000128015960374
+        },
+        "t": 0.018070239509618613,
+        "exposed": false,
+        "kappa": 0.11972456728910896,
+        "rho": 1.9155930766257434,
+        "affine_b": 0.0,
+        "objective_check_min_far_h": 0.018070239509617378,
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ],
+        "dual_from_marginals": 0.018070239509619057,
+        "dual_kkt_inf": 2.6645352591003757e-15,
+        "active_duals_from_marginals": [
+          {
+            "constraint": "upper_h_le_1",
+            "row": 0,
+            "weight": 0.018070239509619057
+          },
+          {
+            "constraint": "lower_h_ge_0",
+            "row": 2,
+            "weight": 4.146651061207513
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 1,
+            "weight": 0.9703183411446593
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 3,
+            "weight": 0.029681658855340732
+          }
+        ]
+      },
+      "5": {
+        "far": [
+          0,
+          2,
+          3
+        ],
+        "far_distances": {
+          "0": 2.4642852392002603,
+          "2": 2.2802765636007316,
+          "3": 2.0235455587312567
+        },
+        "t": 0.017943032668191708,
+        "exposed": false,
+        "kappa": 0.11972456728910896,
+        "rho": 1.9155930766257434,
+        "affine_b": 0.0,
+        "objective_check_min_far_h": 0.017943032668190907,
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ],
+        "dual_from_marginals": 0.01794303266818531,
+        "dual_kkt_inf": 3.730349362740526e-14,
+        "active_duals_from_marginals": [
+          {
+            "constraint": "upper_h_le_1",
+            "row": 0,
+            "weight": 0.01794303266818531
+          },
+          {
+            "constraint": "lower_h_ge_0",
+            "row": 1,
+            "weight": 4.6659217018900705
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 2,
+            "weight": 0.26272570450006916
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 3,
+            "weight": 0.7372742954999308
+          }
+        ]
+      },
+      "6": {
+        "far": [
+          0,
+          2
+        ],
+        "far_distances": {
+          "0": 2.464697554809212,
+          "2": 2.0030592071625537
+        },
+        "t": 0.01721885319588301,
+        "exposed": false,
+        "kappa": 0.11972456728910896,
+        "rho": 1.9155930766257434,
+        "affine_b": 0.0,
+        "objective_check_min_far_h": 0.01721885319588301,
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ],
+        "dual_from_marginals": 0.01721885319588301,
+        "dual_kkt_inf": 3.712308238590367e-16,
+        "active_duals_from_marginals": [
+          {
+            "constraint": "upper_h_le_1",
+            "row": 0,
+            "weight": 0.01721885319588301
+          },
+          {
+            "constraint": "lower_h_ge_0",
+            "row": 3,
+            "weight": 4.0793901252761415
+          },
+          {
+            "constraint": "lower_h_ge_0",
+            "row": 5,
+            "weight": 0.4509720626459919
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 2,
+            "weight": 1.0
+          }
+        ]
+      }
+    },
+    "dist_to_CW": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.00730196224192235,
+      0.006583785574031995,
+      0.00701113582549315
+    ],
+    "barycentric_to_CW": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.1888575741167277,
+        0.8053408158393137,
+        0.005801610043958571
+      ],
+      [
+        0.0,
+        0.8258152632570395,
+        0.043634287387516214,
+        0.13055044935544435
+      ],
+      [
+        0.0,
+        0.0672492791513554,
+        0.18212019358127862,
+        0.750630527267366
+      ]
+    ],
+    "H": 0.00730196224192235,
+    "H_over_tau": 0.015247418318684937,
+    "top_vertices": [
+      4
+    ],
+    "v_checked": 4,
+    "outside_CW": [
+      4,
+      5,
+      6
+    ],
+    "sigma_tilde_v": 0.7534830220899305,
+    "sigma_tilde_over_tau": 1.5733676035563189,
+    "nu_v": 0.0008687179219915285,
+    "P_vv": 0.7531064688555027,
+    "hiddenness_v4_primal": {
+      "far": [
+        0,
+        1,
+        3
+      ],
+      "far_distances": {
+        "0": 2.0803941764262466,
+        "1": 1.915593081210332,
+        "3": 2.0000128015960374
+      },
+      "t": 0.018070239509618613,
+      "exposed": false,
+      "kappa": 0.11972456728910896,
+      "rho": 1.9155930766257434,
+      "affine_b": 0.0,
+      "objective_check_min_far_h": 0.018070239509617378,
+      "attempts": [
+        {
+          "method": "highs-ipm",
+          "presolve": false,
+          "success": true,
+          "status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+        }
+      ],
+      "dual_from_marginals": 0.018070239509619057,
+      "dual_kkt_inf": 2.6645352591003757e-15,
+      "active_duals_from_marginals": [
+        {
+          "constraint": "upper_h_le_1",
+          "row": 0,
+          "weight": 0.018070239509619057
+        },
+        {
+          "constraint": "lower_h_ge_0",
+          "row": 2,
+          "weight": 4.146651061207513
+        },
+        {
+          "constraint": "far_h_ge_t",
+          "row": 1,
+          "weight": 0.9703183411446593
+        },
+        {
+          "constraint": "far_h_ge_t",
+          "row": 3,
+          "weight": 0.029681658855340732
+        }
+      ]
+    },
+    "hiddenness_v4_dual": {
+      "success": true,
+      "dual_objective": 0.018070239509618544,
+      "stationarity_inf": 1.7763568394002505e-15,
+      "lambda_eq": [
+        5.128580821697893
+      ],
+      "active_duals": [
+        {
+          "constraint": "upper_h_le_1",
+          "row": 0,
+          "weight": 0.018070239509618544
+        },
+        {
+          "constraint": "lower_h_ge_0",
+          "row": 2,
+          "weight": 4.146651061207513
+        },
+        {
+          "constraint": "far_h_ge_t",
+          "row": 1,
+          "weight": 0.970318341144659
+        },
+        {
+          "constraint": "far_h_ge_t",
+          "row": 3,
+          "weight": 0.02968165885534102
+        }
+      ],
+      "attempts": [
+        {
+          "method": "highs-ipm",
+          "presolve": false,
+          "success": true,
+          "status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+        }
+      ]
+    },
+    "hiddenness_v4_feasibility_with_t_ge_kappa": {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Infeasible)",
+      "attempts": [
+        {
+          "method": "highs-ipm",
+          "presolve": false,
+          "success": false,
+          "status": 2,
+          "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Infeasible)"
+        }
+      ]
+    },
+    "min_abs_l1_distance_minus_rho_over_all_pairs": 4.584588486622465e-09,
+    "canonical_separator": {
+      "a": [
+        -1.0,
+        0.9944748559328688,
+        1.0,
+        0.9920539633715224,
+        1.0,
+        -1.0,
+        -1.0
+      ],
+      "b": -0.9934150329003435,
+      "phi": [
+        -2.0723966328587418,
+        0.0,
+        -1.1102230246251565e-16,
+        0.0,
+        0.007301962241922144,
+        0.006583785574032053,
+        0.0070111358254929534
+      ],
+      "H_separator": 0.007301962241922144,
+      "max_phi_on_W": 0.0,
+      "lip_linf_norm": 1.0,
+      "attempts": [
+        {
+          "method": "highs-ipm",
+          "presolve": false,
+          "success": true,
+          "status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+        }
+      ]
+    },
+    "deficit_g": [
+      2.079698595100664,
+      0.00730196224192235,
+      0.007301962241922461,
+      0.00730196224192235,
+      2.0556473190325164e-16,
+      0.0007181766678902969,
+      0.0002908264164293963
+    ],
+    "deficit_Pg_resid": 2.6129272356900657e-17,
+    "claim_comparison": {
+      "delta": {
+        "ours": 0.22934355220103006,
+        "claimed": 0.22934355220103006,
+        "diff": 0.0
+      },
+      "tau": {
+        "ours": 0.47889826915643585,
+        "claimed": 0.47889826915643585,
+        "diff": 0.0
+      },
+      "W": {
+        "ours": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "claimed": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "H": {
+        "ours": 0.00730196224192235,
+        "claimed": 0.007301962241922243,
+        "diff": 1.0668549377257364e-16
+      },
+      "H_over_tau": {
+        "ours": 0.015247418318684937,
+        "claimed": 0.015247418318684714,
+        "diff": 2.220446049250313e-16
+      },
+      "sigma_tilde": {
+        "ours": 0.7534830220899305,
+        "claimed": 0.7534830220899305,
+        "diff": 0.0
+      },
+      "sigma_tilde_over_tau": {
+        "ours": 1.5733676035563189,
+        "claimed": 1.5733676035563189,
+        "diff": 0.0
+      }
+    }
+  },
+  "factorization_residuals_best": {
+    "B_L_minus_I_inf": 2.220446049250313e-16,
+    "L_B_minus_P_inf": 0.0
+  },
+  "factorization_residuals_scale": {
+    "B_L_minus_I_inf": 1.1102230246251565e-16,
+    "L_B_minus_P_inf": 0.0
+  },
+  "best_rational_attempts": [
+    {
+      "denominator_limit": 10000,
+      "analysis": {
+        "label": "w16_best_rational_den_10000",
+        "n": 7,
+        "row_sum_resid": 1.1102230246251565e-16,
+        "idempotence_resid": 2.220446049250313e-16,
+        "row_negative_masses": [
+          0.19630119196655077,
+          0.03783996491620886,
+          0.195803599927165,
+          0.2284002678967354,
+          0.006256584132360686,
+          0.01811850005818763,
+          0.0034743727088117284
+        ],
+        "delta": 0.2284002678967354,
+        "tau": 0.47791240609209484,
+        "rho": 1.9116496243683794,
+        "kappa": 0.11947810152302371,
+        "duplicate_groups": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ]
+        ],
+        "row_vertices": {
+          "0": {
+            "is_vertex": true,
+            "dist_to_conv_other_distinct_rows": 2.005230280688668,
+            "hull_indices": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "lambda": [
+              0.005660539153667442,
+              0.33563225889582127,
+              0.6587072019505112,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "1": {
+            "is_vertex": true,
+            "dist_to_conv_other_distinct_rows": 0.3653845316867622,
+            "hull_indices": [
+              0,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "lambda": [
+              0.0030844919037820405,
+              0.0,
+              0.0,
+              0.0,
+              0.9969155080962181,
+              0.0
+            ]
+          },
+          "2": {
+            "is_vertex": true,
+            "dist_to_conv_other_distinct_rows": 0.4645603158232978,
+            "hull_indices": [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6
+            ],
+            "lambda": [
+              0.004483312412587233,
+              0.0,
+              0.0,
+              0.9955166875874127,
+              0.0,
+              0.0
+            ]
+          },
+          "3": {
+            "is_vertex": true,
+            "dist_to_conv_other_distinct_rows": 0.5202835585977258,
+            "hull_indices": [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "lambda": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          "4": {
+            "is_vertex": true,
+            "dist_to_conv_other_distinct_rows": 0.007392601823444102,
+            "hull_indices": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            "lambda": [
+              0.0,
+              0.1620061956517888,
+              0.8054663278599027,
+              0.0,
+              0.032527476488308504,
+              0.0
+            ]
+          },
+          "5": {
+            "is_vertex": true,
+            "dist_to_conv_other_distinct_rows": 0.005024075079359744,
+            "hull_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            "lambda": [
+              0.0,
+              0.8106043144501087,
+              0.0,
+              0.0,
+              0.018215737981605504,
+              0.17117994756828578
+            ]
+          },
+          "6": {
+            "is_vertex": true,
+            "dist_to_conv_other_distinct_rows": 0.005300588220656554,
+            "hull_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "lambda": [
+              0.0,
+              0.0,
+              0.0,
+              0.7434260328489457,
+              0.22571455717996158,
+              0.03085940997109271
+            ]
+          }
+        },
+        "W": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hidden_vertices": [
+          4,
+          5,
+          6
+        ],
+        "exposedness": {
+          "0": {
+            "far": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "far_distances": {
+              "1": 2.4447233377956747,
+              "2": 2.3163720125974776,
+              "3": 2.799193075875355,
+              "4": 2.043574872885637,
+              "5": 2.400690591662397,
+              "6": 2.345976885334719
+            },
+            "t": 0.9962406015037597,
+            "exposed": true,
+            "kappa": 0.11947810152302371,
+            "rho": 1.9116496243683794,
+            "affine_b": 0.43141651505656675,
+            "objective_check_min_far_h": 0.9962406015037596,
+            "attempts": [
+              {
+                "method": "highs-ipm",
+                "presolve": false,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+              }
+            ],
+            "dual_from_marginals": 0.9962406015037594,
+            "dual_kkt_inf": 3.2959746043559335e-17,
+            "active_duals_from_marginals": [
+              {
+                "constraint": "upper_h_le_1",
+                "row": 4,
+                "weight": 0.9962406015037594
+              },
+              {
+                "constraint": "far_h_ge_t",
+                "row": 1,
+                "weight": 0.1884003443356189
+              },
+              {
+                "constraint": "far_h_ge_t",
+                "row": 2,
+                "weight": 0.8062632760592237
+              },
+              {
+                "constraint": "far_h_ge_t",
+                "row": 3,
+                "weight": 0.005336379605157459
+              }
+            ]
+          },
+          "1": {
+            "far": [
+              0,
+              2,
+              3,
+              4
+            ],
+            "far_distances": {
+              "0": 2.4447233377956747,
+              "2": 2.397469324155536,
+              "3": 2.365096166316786,
+              "4": 1.9336321105435497
+            },
+            "t": 0.8115996556643812,
+            "exposed": true,
+            "kappa": 0.11947810152302371,
+            "rho": 1.9116496243683794,
+            "affine_b": 0.8031726111772692,
+            "objective_check_min_far_h": 0.8115996556643812,
+            "attempts": [
+              {
+                "method": "highs-ipm",
+                "presolve": false,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+              }
+            ],
+            "dual_from_marginals": 0.811599655664381,
+            "dual_kkt_inf": 1.942890293094024e-16,
+            "active_duals_from_marginals": [
+              {
+                "constraint": "upper_h_le_1",
+                "row": 2,
+                "weight": 0.8062632760592235
+              },
+              {
+                "constraint": "upper_h_le_1",
+                "row": 3,
+                "weight": 0.00533637960515746
+              },
+              {
+                "constraint": "far_h_ge_t",
+                "row": 0,
+                "weight": 0.00375939849624064
+              },
+              {
+                "constraint": "far_h_ge_t",
+                "row": 4,
+                "weight": 0.9962406015037594
+              }
+            ]
+          },
+          "2": {
+            "far": [
+              0,
+              1,
+              3,
+              5,
+              6
+            ],
+            "far_distances": {
+              "0": 2.3163720125974776,
+              "1": 2.397469324155536,
+              "3": 2.4672701996279023,
+              "5": 2.296105377041818,
+              "6": 2.0124083553760688
+            },
+            "t": 0.8156449503759651,
+            "exposed": true,
+            "kappa": 0.11947810152302371,
+            "rho": 1.9116496243683794,
+            "affine_b": 0.5584921904446104,
+            "objective_check_min_far_h": 0.815644950375965,
+            "attempts": [
+              {
+                "method": "highs-ipm",
+                "presolve": false,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+              }
+            ],
+            "dual_from_marginals": 0.8156449503759651,
+            "dual_kkt_inf": 8.61940727125976e-17,
+            "active_duals_from_marginals": [
+              {
+                "constraint": "upper_h_le_1",
+                "row": 1,
+                "weight": 0.06793768029723084
+              },
+              {
+                "constraint": "upper_h_le_1",
+                "row": 3,
+                "weight": 0.7477072700787343
+              },
+              {
+                "constraint": "far_h_ge_t",
+                "row": 0,
+                "weight": 0.0035806889739474863
+              },
+              {
+                "constraint": "far_h_ge_t",
+                "row": 6,
+                "weight": 0.9964193110260525
+              }
+            ]
+          },
+          "3": {
+            "far": [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            "far_distances": {
+              "0": 2.799193075875355,
+              "1": 2.365096166316786,
+              "2": 2.4672701996279023,
+              "4": 2.0432704054477373,
+              "5": 2.0421177051821418
+            },
+            "t": 0.8702135432013098,
+            "exposed": true,
+            "kappa": 0.11947810152302371,
+            "rho": 1.9116496243683794,
+            "affine_b": 0.920371831162424,
+            "objective_check_min_far_h": 0.8702135432013098,
+            "attempts": [
+              {
+                "method": "highs-ipm",
+                "presolve": false,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+              }
+            ],
+            "dual_from_marginals": 0.8702135432013096,
+            "dual_kkt_inf": 1.942890293094024e-16,
+            "active_duals_from_marginals": [
+              {
+                "constraint": "upper_h_le_1",
+                "row": 1,
+                "weight": 0.8231094589963834
+              },
+              {
+                "constraint": "upper_h_le_1",
+                "row": 2,
+                "weight": 0.04710408420492619
+              },
+              {
+                "constraint": "far_h_ge_t",
+                "row": 0,
+                "weight": 0.003179229036958643
+              },
+              {
+                "constraint": "far_h_ge_t",
+                "row": 5,
+                "weight": 0.9968207709630413
+              }
+            ]
+          },
+          "4": {
+            "far": [
+              0,
+              1,
+              3
+            ],
+            "far_distances": {
+              "0": 2.043574872885637,
+              "1": 1.9336321105435497,
+              "3": 2.0432704054477373
+            },
+            "t": 0.019404676716789207,
+            "exposed": false,
+            "kappa": 0.11947810152302371,
+            "rho": 1.9116496243683794,
+            "affine_b": 0.0,
+            "objective_check_min_far_h": 0.01940467671678921,
+            "attempts": [
+              {
+                "method": "highs-ipm",
+                "presolve": false,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+              }
+            ],
+            "dual_from_marginals": 0.019404676716789204,
+            "dual_kkt_inf": 8.326672684688674e-17,
+            "active_duals_from_marginals": [
+              {
+                "constraint": "upper_h_le_1",
+                "row": 0,
+                "weight": 0.019404676716789204
+              },
+              {
+                "constraint": "lower_h_ge_0",
+                "row": 2,
+                "weight": 4.16164400666593
+              },
+              {
+                "constraint": "far_h_ge_t",
+                "row": 1,
+                "weight": 0.9724555081937447
+              },
+              {
+                "constraint": "far_h_ge_t",
+                "row": 3,
+                "weight": 0.02754449180625531
+              }
+            ]
+          },
+          "5": {
+            "far": [
+              0,
+              2,
+              3
+            ],
+            "far_distances": {
+              "0": 2.400690591662397,
+              "2": 2.296105377041818,
+              "3": 2.0421177051821418
+            },
+            "t": 0.017972860611543608,
+            "exposed": false,
+            "kappa": 0.11947810152302371,
+            "rho": 1.9116496243683794,
+            "affine_b": 0.0,
+            "objective_check_min_far_h": 0.017972860611543608,
+            "attempts": [
+              {
+                "method": "highs-ipm",
+                "presolve": false,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+              }
+            ],
+            "dual_from_marginals": 0.01797286061154361,
+            "dual_kkt_inf": 8.881784197001252e-16,
+            "active_duals_from_marginals": [
+              {
+                "constraint": "upper_h_le_1",
+                "row": 0,
+                "weight": 0.01797286061154361
+              },
+              {
+                "constraint": "lower_h_ge_0",
+                "row": 1,
+                "weight": 4.653213531522613
+              },
+              {
+                "constraint": "far_h_ge_t",
+                "row": 2,
+                "weight": 0.2662894462172696
+              },
+              {
+                "constraint": "far_h_ge_t",
+                "row": 3,
+                "weight": 0.7337105537827304
+              }
+            ]
+          },
+          "6": {
+            "far": [
+              0,
+              2
+            ],
+            "far_distances": {
+              "0": 2.345976885334719,
+              "2": 2.0124083553760688
+            },
+            "t": 0.01838717855440998,
+            "exposed": false,
+            "kappa": 0.11947810152302371,
+            "rho": 1.9116496243683794,
+            "affine_b": 0.0,
+            "objective_check_min_far_h": 0.01838717855440998,
+            "attempts": [
+              {
+                "method": "highs-ipm",
+                "presolve": false,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+              }
+            ],
+            "dual_from_marginals": 0.01838717855440998,
+            "dual_kkt_inf": 8.881784197001252e-16,
+            "active_duals_from_marginals": [
+              {
+                "constraint": "upper_h_le_1",
+                "row": 0,
+                "weight": 0.01838717855440998
+              },
+              {
+                "constraint": "lower_h_ge_0",
+                "row": 3,
+                "weight": 4.083817209760702
+              },
+              {
+                "constraint": "lower_h_ge_0",
+                "row": 5,
+                "weight": 0.45590249415454326
+              },
+              {
+                "constraint": "far_h_ge_t",
+                "row": 2,
+                "weight": 1.0
+              }
+            ]
+          }
+        },
+        "dist_to_CW": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.007566906719579951,
+          0.0063954188354189995,
+          0.007205908071867495
+        ],
+        "barycentric_to_CW": [
+          [
+            1.0,
+            0.0,
+            -0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.1890899285061168,
+            0.8080392421617272,
+            0.002870829332156032
+          ],
+          [
+            0.0,
+            0.8257166050530248,
+            0.046183861455081555,
+            0.1280995334918937
+          ],
+          [
+            0.0,
+            0.06816147671521887,
+            0.1838114264432564,
+            0.7480270968415247
+          ]
+        ],
+        "H": 0.007566906719579951,
+        "H_over_tau": 0.01583325024235046,
+        "top_vertices": [
+          4
+        ],
+        "v_checked": 4,
+        "outside_CW": [
+          4,
+          5,
+          6
+        ],
+        "sigma_tilde_v": 0.776872842389984,
+        "sigma_tilde_over_tau": 1.625554876766013,
+        "nu_v": 0.006256584132360686,
+        "P_vv": 0.7665718253488574,
+        "hiddenness_v4_primal": {
+          "far": [
+            0,
+            1,
+            3
+          ],
+          "far_distances": {
+            "0": 2.043574872885637,
+            "1": 1.9336321105435497,
+            "3": 2.0432704054477373
+          },
+          "t": 0.019404676716789207,
+          "exposed": false,
+          "kappa": 0.11947810152302371,
+          "rho": 1.9116496243683794,
+          "affine_b": 0.0,
+          "objective_check_min_far_h": 0.01940467671678921,
+          "attempts": [
+            {
+              "method": "highs-ipm",
+              "presolve": false,
+              "success": true,
+              "status": 0,
+              "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+            }
+          ],
+          "dual_from_marginals": 0.019404676716789204,
+          "dual_kkt_inf": 8.326672684688674e-17,
+          "active_duals_from_marginals": [
+            {
+              "constraint": "upper_h_le_1",
+              "row": 0,
+              "weight": 0.019404676716789204
+            },
+            {
+              "constraint": "lower_h_ge_0",
+              "row": 2,
+              "weight": 4.16164400666593
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 1,
+              "weight": 0.9724555081937447
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 3,
+              "weight": 0.02754449180625531
+            }
+          ]
+        },
+        "hiddenness_v4_dual": {
+          "success": true,
+          "dual_objective": 0.01940467671678919,
+          "stationarity_inf": 1.0408340855860843e-16,
+          "lambda_eq": [
+            5.142239329949141
+          ],
+          "active_duals": [
+            {
+              "constraint": "upper_h_le_1",
+              "row": 0,
+              "weight": 0.01940467671678919
+            },
+            {
+              "constraint": "lower_h_ge_0",
+              "row": 2,
+              "weight": 4.16164400666593
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 1,
+              "weight": 0.9724555081937446
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 3,
+              "weight": 0.027544491806255414
+            }
+          ],
+          "attempts": [
+            {
+              "method": "highs-ipm",
+              "presolve": false,
+              "success": true,
+              "status": 0,
+              "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+            }
+          ]
+        },
+        "hiddenness_v4_feasibility_with_t_ge_kappa": {
+          "success": false,
+          "status": 2,
+          "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Infeasible)",
+          "attempts": [
+            {
+              "method": "highs-ipm",
+              "presolve": false,
+              "success": false,
+              "status": 2,
+              "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Infeasible)"
+            }
+          ]
+        },
+        "min_abs_l1_distance_minus_rho_over_all_pairs": 0.005726522829343272,
+        "canonical_separator": {
+          "a": [
+            -1.0,
+            0.9555439868057356,
+            1.0,
+            1.0,
+            0.9743023356918966,
+            1.0,
+            -1.0
+          ],
+          "b": -0.9836464976878156,
+          "phi": [
+            -2.005230280688668,
+            0.0,
+            0.0,
+            -1.1102230246251565e-16,
+            0.0075669067195798245,
+            0.006395418835419053,
+            0.007205908071867495
+          ],
+          "H_separator": 0.0075669067195798245,
+          "max_phi_on_W": 0.0,
+          "lip_linf_norm": 1.0,
+          "attempts": [
+            {
+              "method": "highs-ipm",
+              "presolve": false,
+              "success": true,
+              "status": 0,
+              "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+            }
+          ]
+        },
+        "deficit_g": [
+          2.012797187408248,
+          0.007566906719579951,
+          0.007566906719579951,
+          0.007566906719580062,
+          1.2663481374630692e-16,
+          0.0011714878841608978,
+          0.0003609986477124561
+        ],
+        "deficit_Pg_resid": 5.941427905220564e-17
+      },
+      "exact_checks": {
+        "BL_equals_I": true,
+        "P2_equals_P": true,
+        "row_sums_equal_1": true,
+        "row_sums": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "row_negative_masses_frac": [
+          "88251856704733873/449573717921039250",
+          "141986037819929/3752277205709270",
+          "114069704375963198208276302929/582572048820322151854105929800",
+          "23123630110489/101241694344000",
+          "14975666103570619244046508416223193734296943/2393585027669102515095379573664364676545912000",
+          "159488313293002012947674504159975573538790600003/8802511950812963528469589198542145676065326400000",
+          "24390624511511192006706625609046349154834597/7020151997409926612674276381897269666739680000"
+        ],
+        "delta_frac": "23123630110489/101241694344000",
+        "delta_float": 0.2284002678967354
+      },
+      "sigma_frac": "77691628979359472983156919443/100005592601676868585769246880",
+      "sigma_float_exact_support": 0.7768728423899841,
+      "max_abs_diff_float": 5.187899065825508e-07,
+      "path": "/tmp/codex-sigma-wall/w16_cert_audit/w16_best_rational_instance.json"
+    }
+  ],
+  "best_rational": {
+    "denominator_limit": 10000,
+    "analysis": {
+      "label": "w16_best_rational_den_10000",
+      "n": 7,
+      "row_sum_resid": 1.1102230246251565e-16,
+      "idempotence_resid": 2.220446049250313e-16,
+      "row_negative_masses": [
+        0.19630119196655077,
+        0.03783996491620886,
+        0.195803599927165,
+        0.2284002678967354,
+        0.006256584132360686,
+        0.01811850005818763,
+        0.0034743727088117284
+      ],
+      "delta": 0.2284002678967354,
+      "tau": 0.47791240609209484,
+      "rho": 1.9116496243683794,
+      "kappa": 0.11947810152302371,
+      "duplicate_groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "row_vertices": {
+        "0": {
+          "is_vertex": true,
+          "dist_to_conv_other_distinct_rows": 2.005230280688668,
+          "hull_indices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "lambda": [
+            0.005660539153667442,
+            0.33563225889582127,
+            0.6587072019505112,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "1": {
+          "is_vertex": true,
+          "dist_to_conv_other_distinct_rows": 0.3653845316867622,
+          "hull_indices": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "lambda": [
+            0.0030844919037820405,
+            0.0,
+            0.0,
+            0.0,
+            0.9969155080962181,
+            0.0
+          ]
+        },
+        "2": {
+          "is_vertex": true,
+          "dist_to_conv_other_distinct_rows": 0.4645603158232978,
+          "hull_indices": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "lambda": [
+            0.004483312412587233,
+            0.0,
+            0.0,
+            0.9955166875874127,
+            0.0,
+            0.0
+          ]
+        },
+        "3": {
+          "is_vertex": true,
+          "dist_to_conv_other_distinct_rows": 0.5202835585977258,
+          "hull_indices": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6
+          ],
+          "lambda": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "4": {
+          "is_vertex": true,
+          "dist_to_conv_other_distinct_rows": 0.007392601823444102,
+          "hull_indices": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6
+          ],
+          "lambda": [
+            0.0,
+            0.1620061956517888,
+            0.8054663278599027,
+            0.0,
+            0.032527476488308504,
+            0.0
+          ]
+        },
+        "5": {
+          "is_vertex": true,
+          "dist_to_conv_other_distinct_rows": 0.005024075079359744,
+          "hull_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "lambda": [
+            0.0,
+            0.8106043144501087,
+            0.0,
+            0.0,
+            0.018215737981605504,
+            0.17117994756828578
+          ]
+        },
+        "6": {
+          "is_vertex": true,
+          "dist_to_conv_other_distinct_rows": 0.005300588220656554,
+          "hull_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "lambda": [
+            0.0,
+            0.0,
+            0.0,
+            0.7434260328489457,
+            0.22571455717996158,
+            0.03085940997109271
+          ]
+        }
+      },
+      "W": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "hidden_vertices": [
+        4,
+        5,
+        6
+      ],
+      "exposedness": {
+        "0": {
+          "far": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "far_distances": {
+            "1": 2.4447233377956747,
+            "2": 2.3163720125974776,
+            "3": 2.799193075875355,
+            "4": 2.043574872885637,
+            "5": 2.400690591662397,
+            "6": 2.345976885334719
+          },
+          "t": 0.9962406015037597,
+          "exposed": true,
+          "kappa": 0.11947810152302371,
+          "rho": 1.9116496243683794,
+          "affine_b": 0.43141651505656675,
+          "objective_check_min_far_h": 0.9962406015037596,
+          "attempts": [
+            {
+              "method": "highs-ipm",
+              "presolve": false,
+              "success": true,
+              "status": 0,
+              "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+            }
+          ],
+          "dual_from_marginals": 0.9962406015037594,
+          "dual_kkt_inf": 3.2959746043559335e-17,
+          "active_duals_from_marginals": [
+            {
+              "constraint": "upper_h_le_1",
+              "row": 4,
+              "weight": 0.9962406015037594
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 1,
+              "weight": 0.1884003443356189
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 2,
+              "weight": 0.8062632760592237
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 3,
+              "weight": 0.005336379605157459
+            }
+          ]
+        },
+        "1": {
+          "far": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "far_distances": {
+            "0": 2.4447233377956747,
+            "2": 2.397469324155536,
+            "3": 2.365096166316786,
+            "4": 1.9336321105435497
+          },
+          "t": 0.8115996556643812,
+          "exposed": true,
+          "kappa": 0.11947810152302371,
+          "rho": 1.9116496243683794,
+          "affine_b": 0.8031726111772692,
+          "objective_check_min_far_h": 0.8115996556643812,
+          "attempts": [
+            {
+              "method": "highs-ipm",
+              "presolve": false,
+              "success": true,
+              "status": 0,
+              "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+            }
+          ],
+          "dual_from_marginals": 0.811599655664381,
+          "dual_kkt_inf": 1.942890293094024e-16,
+          "active_duals_from_marginals": [
+            {
+              "constraint": "upper_h_le_1",
+              "row": 2,
+              "weight": 0.8062632760592235
+            },
+            {
+              "constraint": "upper_h_le_1",
+              "row": 3,
+              "weight": 0.00533637960515746
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 0,
+              "weight": 0.00375939849624064
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 4,
+              "weight": 0.9962406015037594
+            }
+          ]
+        },
+        "2": {
+          "far": [
+            0,
+            1,
+            3,
+            5,
+            6
+          ],
+          "far_distances": {
+            "0": 2.3163720125974776,
+            "1": 2.397469324155536,
+            "3": 2.4672701996279023,
+            "5": 2.296105377041818,
+            "6": 2.0124083553760688
+          },
+          "t": 0.8156449503759651,
+          "exposed": true,
+          "kappa": 0.11947810152302371,
+          "rho": 1.9116496243683794,
+          "affine_b": 0.5584921904446104,
+          "objective_check_min_far_h": 0.815644950375965,
+          "attempts": [
+            {
+              "method": "highs-ipm",
+              "presolve": false,
+              "success": true,
+              "status": 0,
+              "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+            }
+          ],
+          "dual_from_marginals": 0.8156449503759651,
+          "dual_kkt_inf": 8.61940727125976e-17,
+          "active_duals_from_marginals": [
+            {
+              "constraint": "upper_h_le_1",
+              "row": 1,
+              "weight": 0.06793768029723084
+            },
+            {
+              "constraint": "upper_h_le_1",
+              "row": 3,
+              "weight": 0.7477072700787343
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 0,
+              "weight": 0.0035806889739474863
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 6,
+              "weight": 0.9964193110260525
+            }
+          ]
+        },
+        "3": {
+          "far": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ],
+          "far_distances": {
+            "0": 2.799193075875355,
+            "1": 2.365096166316786,
+            "2": 2.4672701996279023,
+            "4": 2.0432704054477373,
+            "5": 2.0421177051821418
+          },
+          "t": 0.8702135432013098,
+          "exposed": true,
+          "kappa": 0.11947810152302371,
+          "rho": 1.9116496243683794,
+          "affine_b": 0.920371831162424,
+          "objective_check_min_far_h": 0.8702135432013098,
+          "attempts": [
+            {
+              "method": "highs-ipm",
+              "presolve": false,
+              "success": true,
+              "status": 0,
+              "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+            }
+          ],
+          "dual_from_marginals": 0.8702135432013096,
+          "dual_kkt_inf": 1.942890293094024e-16,
+          "active_duals_from_marginals": [
+            {
+              "constraint": "upper_h_le_1",
+              "row": 1,
+              "weight": 0.8231094589963834
+            },
+            {
+              "constraint": "upper_h_le_1",
+              "row": 2,
+              "weight": 0.04710408420492619
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 0,
+              "weight": 0.003179229036958643
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 5,
+              "weight": 0.9968207709630413
+            }
+          ]
+        },
+        "4": {
+          "far": [
+            0,
+            1,
+            3
+          ],
+          "far_distances": {
+            "0": 2.043574872885637,
+            "1": 1.9336321105435497,
+            "3": 2.0432704054477373
+          },
+          "t": 0.019404676716789207,
+          "exposed": false,
+          "kappa": 0.11947810152302371,
+          "rho": 1.9116496243683794,
+          "affine_b": 0.0,
+          "objective_check_min_far_h": 0.01940467671678921,
+          "attempts": [
+            {
+              "method": "highs-ipm",
+              "presolve": false,
+              "success": true,
+              "status": 0,
+              "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+            }
+          ],
+          "dual_from_marginals": 0.019404676716789204,
+          "dual_kkt_inf": 8.326672684688674e-17,
+          "active_duals_from_marginals": [
+            {
+              "constraint": "upper_h_le_1",
+              "row": 0,
+              "weight": 0.019404676716789204
+            },
+            {
+              "constraint": "lower_h_ge_0",
+              "row": 2,
+              "weight": 4.16164400666593
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 1,
+              "weight": 0.9724555081937447
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 3,
+              "weight": 0.02754449180625531
+            }
+          ]
+        },
+        "5": {
+          "far": [
+            0,
+            2,
+            3
+          ],
+          "far_distances": {
+            "0": 2.400690591662397,
+            "2": 2.296105377041818,
+            "3": 2.0421177051821418
+          },
+          "t": 0.017972860611543608,
+          "exposed": false,
+          "kappa": 0.11947810152302371,
+          "rho": 1.9116496243683794,
+          "affine_b": 0.0,
+          "objective_check_min_far_h": 0.017972860611543608,
+          "attempts": [
+            {
+              "method": "highs-ipm",
+              "presolve": false,
+              "success": true,
+              "status": 0,
+              "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+            }
+          ],
+          "dual_from_marginals": 0.01797286061154361,
+          "dual_kkt_inf": 8.881784197001252e-16,
+          "active_duals_from_marginals": [
+            {
+              "constraint": "upper_h_le_1",
+              "row": 0,
+              "weight": 0.01797286061154361
+            },
+            {
+              "constraint": "lower_h_ge_0",
+              "row": 1,
+              "weight": 4.653213531522613
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 2,
+              "weight": 0.2662894462172696
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 3,
+              "weight": 0.7337105537827304
+            }
+          ]
+        },
+        "6": {
+          "far": [
+            0,
+            2
+          ],
+          "far_distances": {
+            "0": 2.345976885334719,
+            "2": 2.0124083553760688
+          },
+          "t": 0.01838717855440998,
+          "exposed": false,
+          "kappa": 0.11947810152302371,
+          "rho": 1.9116496243683794,
+          "affine_b": 0.0,
+          "objective_check_min_far_h": 0.01838717855440998,
+          "attempts": [
+            {
+              "method": "highs-ipm",
+              "presolve": false,
+              "success": true,
+              "status": 0,
+              "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+            }
+          ],
+          "dual_from_marginals": 0.01838717855440998,
+          "dual_kkt_inf": 8.881784197001252e-16,
+          "active_duals_from_marginals": [
+            {
+              "constraint": "upper_h_le_1",
+              "row": 0,
+              "weight": 0.01838717855440998
+            },
+            {
+              "constraint": "lower_h_ge_0",
+              "row": 3,
+              "weight": 4.083817209760702
+            },
+            {
+              "constraint": "lower_h_ge_0",
+              "row": 5,
+              "weight": 0.45590249415454326
+            },
+            {
+              "constraint": "far_h_ge_t",
+              "row": 2,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      "dist_to_CW": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.007566906719579951,
+        0.0063954188354189995,
+        0.007205908071867495
+      ],
+      "barycentric_to_CW": [
+        [
+          1.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.1890899285061168,
+          0.8080392421617272,
+          0.002870829332156032
+        ],
+        [
+          0.0,
+          0.8257166050530248,
+          0.046183861455081555,
+          0.1280995334918937
+        ],
+        [
+          0.0,
+          0.06816147671521887,
+          0.1838114264432564,
+          0.7480270968415247
+        ]
+      ],
+      "H": 0.007566906719579951,
+      "H_over_tau": 0.01583325024235046,
+      "top_vertices": [
+        4
+      ],
+      "v_checked": 4,
+      "outside_CW": [
+        4,
+        5,
+        6
+      ],
+      "sigma_tilde_v": 0.776872842389984,
+      "sigma_tilde_over_tau": 1.625554876766013,
+      "nu_v": 0.006256584132360686,
+      "P_vv": 0.7665718253488574,
+      "hiddenness_v4_primal": {
+        "far": [
+          0,
+          1,
+          3
+        ],
+        "far_distances": {
+          "0": 2.043574872885637,
+          "1": 1.9336321105435497,
+          "3": 2.0432704054477373
+        },
+        "t": 0.019404676716789207,
+        "exposed": false,
+        "kappa": 0.11947810152302371,
+        "rho": 1.9116496243683794,
+        "affine_b": 0.0,
+        "objective_check_min_far_h": 0.01940467671678921,
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ],
+        "dual_from_marginals": 0.019404676716789204,
+        "dual_kkt_inf": 8.326672684688674e-17,
+        "active_duals_from_marginals": [
+          {
+            "constraint": "upper_h_le_1",
+            "row": 0,
+            "weight": 0.019404676716789204
+          },
+          {
+            "constraint": "lower_h_ge_0",
+            "row": 2,
+            "weight": 4.16164400666593
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 1,
+            "weight": 0.9724555081937447
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 3,
+            "weight": 0.02754449180625531
+          }
+        ]
+      },
+      "hiddenness_v4_dual": {
+        "success": true,
+        "dual_objective": 0.01940467671678919,
+        "stationarity_inf": 1.0408340855860843e-16,
+        "lambda_eq": [
+          5.142239329949141
+        ],
+        "active_duals": [
+          {
+            "constraint": "upper_h_le_1",
+            "row": 0,
+            "weight": 0.01940467671678919
+          },
+          {
+            "constraint": "lower_h_ge_0",
+            "row": 2,
+            "weight": 4.16164400666593
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 1,
+            "weight": 0.9724555081937446
+          },
+          {
+            "constraint": "far_h_ge_t",
+            "row": 3,
+            "weight": 0.027544491806255414
+          }
+        ],
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ]
+      },
+      "hiddenness_v4_feasibility_with_t_ge_kappa": {
+        "success": false,
+        "status": 2,
+        "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Infeasible)",
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": false,
+            "status": 2,
+            "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Infeasible)"
+          }
+        ]
+      },
+      "min_abs_l1_distance_minus_rho_over_all_pairs": 0.005726522829343272,
+      "canonical_separator": {
+        "a": [
+          -1.0,
+          0.9555439868057356,
+          1.0,
+          1.0,
+          0.9743023356918966,
+          1.0,
+          -1.0
+        ],
+        "b": -0.9836464976878156,
+        "phi": [
+          -2.005230280688668,
+          0.0,
+          0.0,
+          -1.1102230246251565e-16,
+          0.0075669067195798245,
+          0.006395418835419053,
+          0.007205908071867495
+        ],
+        "H_separator": 0.0075669067195798245,
+        "max_phi_on_W": 0.0,
+        "lip_linf_norm": 1.0,
+        "attempts": [
+          {
+            "method": "highs-ipm",
+            "presolve": false,
+            "success": true,
+            "status": 0,
+            "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+          }
+        ]
+      },
+      "deficit_g": [
+        2.012797187408248,
+        0.007566906719579951,
+        0.007566906719579951,
+        0.007566906719580062,
+        1.2663481374630692e-16,
+        0.0011714878841608978,
+        0.0003609986477124561
+      ],
+      "deficit_Pg_resid": 5.941427905220564e-17
+    },
+    "exact_checks": {
+      "BL_equals_I": true,
+      "P2_equals_P": true,
+      "row_sums_equal_1": true,
+      "row_sums": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "row_negative_masses_frac": [
+        "88251856704733873/449573717921039250",
+        "141986037819929/3752277205709270",
+        "114069704375963198208276302929/582572048820322151854105929800",
+        "23123630110489/101241694344000",
+        "14975666103570619244046508416223193734296943/2393585027669102515095379573664364676545912000",
+        "159488313293002012947674504159975573538790600003/8802511950812963528469589198542145676065326400000",
+        "24390624511511192006706625609046349154834597/7020151997409926612674276381897269666739680000"
+      ],
+      "delta_frac": "23123630110489/101241694344000",
+      "delta_float": 0.2284002678967354
+    },
+    "sigma_frac": "77691628979359472983156919443/100005592601676868585769246880",
+    "sigma_float_exact_support": 0.7768728423899841,
+    "max_abs_diff_float": 5.187899065825508e-07,
+    "path": "/tmp/codex-sigma-wall/w16_cert_audit/w16_best_rational_instance.json"
+  },
+  "perturbation": {
+    "max_entry_abs_float_minus_rational": 5.187899065825508e-07,
+    "max_row_l1_float_minus_rational": 1.1487602142464491e-06,
+    "delta_lipschitz_bound_for_entry_eps": 3.6315293460778553e-06,
+    "tau_first_order_bound_for_entry_eps": 3.79936710136172e-06,
+    "fixed_outside_support_sigma_bound": 1.5563697197476523e-06,
+    "height_conv_bound": 2.2975204284928982e-06,
+    "sigma_minus_tau": 0.29896043629788915,
+    "H": 0.007566906719579951,
+    "min_visible_t_minus_kappa": 0.6921215541413575,
+    "min_hidden_kappa_minus_t": 0.1000734248062345,
+    "min_outside_distance_to_CW": 0.0063954188354189995,
+    "min_abs_l1_distance_minus_rho": 0.005726522829343272
+  },
+  "context": {
+    "best_H_over_tau": 0.015833610636899403,
+    "best_below_0p1_tau": true,
+    "sigma_height_collapse_branch_applies": false,
+    "sigma_height_collapse_note": "The proved collapse lemma quoted in the report is for sigma_tilde <= tau; this instance has sigma_tilde > tau, so the lemma does not apply. Its small H is consistent with the lemma's direction.",
+    "corner_H_over_tau": 0.5358983848622456,
+    "best_H_over_tau_below_corner": true,
+    "linear_law_delta_ge_H_over_2": true,
+    "continuation_probe": [
+      {
+        "alpha": 0.25,
+        "delta": 0.05710006258891574,
+        "tau": 0.2389561938701647,
+        "W": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hidden_vertices": [
+          4,
+          5,
+          6
+        ],
+        "top_vertices": [
+          4
+        ],
+        "H": 0.007552096052251751,
+        "H_over_tau": 0.03160452102093295,
+        "sigma_tilde_v4": 0.1942182163777469,
+        "sigma_tilde_v4_over_tau": 0.8127774937831245,
+        "v4_hidden": true,
+        "v4_crosses": false,
+        "row_sum_resid": 1.1102230246251565e-16,
+        "idempotence_resid": 4.440892098500626e-16
+      },
+      {
+        "alpha": 0.35,
+        "delta": 0.07994008762448203,
+        "tau": 0.28273678152034276,
+        "W": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hidden_vertices": [
+          4,
+          5,
+          6
+        ],
+        "top_vertices": [
+          4
+        ],
+        "H": 0.007554031669975316,
+        "H_over_tau": 0.02671754141557209,
+        "sigma_tilde_v4": 0.27190550292884563,
+        "sigma_tilde_v4_over_tau": 0.9616912998257433,
+        "v4_hidden": true,
+        "v4_crosses": false,
+        "row_sum_resid": 2.220446049250313e-16,
+        "idempotence_resid": 4.440892098500626e-16
+      },
+      {
+        "alpha": 0.4,
+        "delta": 0.0913601001422652,
+        "tau": 0.30225833345379444,
+        "W": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hidden_vertices": [
+          4,
+          5,
+          6
+        ],
+        "top_vertices": [
+          4
+        ],
+        "H": 0.0075550066992932045,
+        "H_over_tau": 0.02499519736301372,
+        "sigma_tilde_v4": 0.3107491462043951,
+        "sigma_tilde_v4_over_tau": 1.0280912445112076,
+        "v4_hidden": true,
+        "v4_crosses": true,
+        "row_sum_resid": 2.220446049250313e-16,
+        "idempotence_resid": 1.1102230246251565e-16
+      },
+      {
+        "alpha": 0.43,
+        "delta": 0.09821210765293507,
+        "tau": 0.31338811026095914,
+        "W": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hidden_vertices": [
+          4,
+          5,
+          6
+        ],
+        "top_vertices": [
+          4
+        ],
+        "H": 0.0075555940217004154,
+        "H_over_tau": 0.02410938313967576,
+        "sigma_tilde_v4": 0.3340553321697246,
+        "sigma_tilde_v4_over_tau": 1.0659476898838178,
+        "v4_hidden": true,
+        "v4_crosses": true,
+        "row_sum_resid": 2.220446049250313e-16,
+        "idempotence_resid": 2.220446049250313e-16
+      },
+      {
+        "alpha": 0.45,
+        "delta": 0.10278011266004834,
+        "tau": 0.32059337588298414,
+        "W": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hidden_vertices": [
+          4,
+          5,
+          6
+        ],
+        "top_vertices": [
+          4
+        ],
+        "H": 0.007555986528989871,
+        "H_over_tau": 0.023568754370482652,
+        "sigma_tilde_v4": 0.3495927894799444,
+        "sigma_tilde_v4_over_tau": 1.0904554360085872,
+        "v4_hidden": true,
+        "v4_crosses": true,
+        "row_sum_resid": 2.220446049250313e-16,
+        "idempotence_resid": 1.1102230246251565e-16
+      },
+      {
+        "alpha": 0.5,
+        "delta": 0.11420012517783149,
+        "tau": 0.33793509018424156,
+        "W": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hidden_vertices": [
+          4,
+          5,
+          6
+        ],
+        "top_vertices": [
+          4
+        ],
+        "H": 0.007556971149156543,
+        "H_over_tau": 0.022362197264085528,
+        "sigma_tilde_v4": 0.3884364327554938,
+        "sigma_tilde_v4_over_tau": 1.1494409548997087,
+        "v4_hidden": true,
+        "v4_crosses": true,
+        "row_sum_resid": 2.220446049250313e-16,
+        "idempotence_resid": 2.220446049250313e-16
+      },
+      {
+        "alpha": 0.6,
+        "delta": 0.13704015021339777,
+        "tau": 0.37018934373290346,
+        "W": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hidden_vertices": [
+          4,
+          5,
+          6
+        ],
+        "top_vertices": [
+          4
+        ],
+        "H": 0.007558954721400037,
+        "H_over_tau": 0.020419158058893026,
+        "sigma_tilde_v4": 0.4661237193065925,
+        "sigma_tilde_v4_over_tau": 1.2591494790376976,
+        "v4_hidden": true,
+        "v4_crosses": true,
+        "row_sum_resid": 1.1102230246251565e-16,
+        "idempotence_resid": 5.551115123125783e-17
+      },
+      {
+        "alpha": 0.75,
+        "delta": 0.17130018776674721,
+        "tau": 0.413884268566404,
+        "W": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hidden_vertices": [
+          4,
+          5,
+          6
+        ],
+        "top_vertices": [
+          4
+        ],
+        "H": 0.007561965762124125,
+        "H_over_tau": 0.01827072526413474,
+        "sigma_tilde_v4": 0.5826546491332407,
+        "sigma_tilde_v4_over_tau": 1.4077719144808691,
+        "v4_hidden": true,
+        "v4_crosses": true,
+        "row_sum_resid": 1.1102230246251565e-16,
+        "idempotence_resid": 1.1102230246251565e-16
+      },
+      {
+        "alpha": 0.9,
+        "delta": 0.20556022532009668,
+        "tau": 0.4533875001806917,
+        "W": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hidden_vertices": [
+          4,
+          5,
+          6
+        ],
+        "top_vertices": [
+          4
+        ],
+        "H": 0.007565019387265814,
+        "H_over_tau": 0.016685549081637396,
+        "sigma_tilde_v4": 0.6991855789598888,
+        "sigma_tilde_v4_over_tau": 1.542136866766811,
+        "v4_hidden": true,
+        "v4_crosses": true,
+        "row_sum_resid": 2.220446049250313e-16,
+        "idempotence_resid": 1.1102230246251565e-16
+      },
+      {
+        "alpha": 1.0,
+        "delta": 0.22840025035566297,
+        "tau": 0.4779123877403294,
+        "W": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hidden_vertices": [
+          4,
+          5,
+          6
+        ],
+        "top_vertices": [
+          4
+        ],
+        "H": 0.007567078666031271,
+        "H_over_tau": 0.015833610636899403,
+        "sigma_tilde_v4": 0.7768728655109876,
+        "sigma_tilde_v4_over_tau": 1.625554987566249,
+        "v4_hidden": true,
+        "v4_crosses": true,
+        "row_sum_resid": 2.220446049250313e-16,
+        "idempotence_resid": 2.220446049250313e-16
+      }
+    ],
+    "continuation_delta_le_0p1_crosses": [
+      {
+        "alpha": 0.4,
+        "delta": 0.0913601001422652,
+        "tau": 0.30225833345379444,
+        "W": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hidden_vertices": [
+          4,
+          5,
+          6
+        ],
+        "top_vertices": [
+          4
+        ],
+        "H": 0.0075550066992932045,
+        "H_over_tau": 0.02499519736301372,
+        "sigma_tilde_v4": 0.3107491462043951,
+        "sigma_tilde_v4_over_tau": 1.0280912445112076,
+        "v4_hidden": true,
+        "v4_crosses": true,
+        "row_sum_resid": 2.220446049250313e-16,
+        "idempotence_resid": 1.1102230246251565e-16
+      },
+      {
+        "alpha": 0.43,
+        "delta": 0.09821210765293507,
+        "tau": 0.31338811026095914,
+        "W": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "hidden_vertices": [
+          4,
+          5,
+          6
+        ],
+        "top_vertices": [
+          4
+        ],
+        "H": 0.0075555940217004154,
+        "H_over_tau": 0.02410938313967576,
+        "sigma_tilde_v4": 0.3340553321697246,
+        "sigma_tilde_v4_over_tau": 1.0659476898838178,
+        "v4_hidden": true,
+        "v4_crosses": true,
+        "row_sum_resid": 2.220446049250313e-16,
+        "idempotence_resid": 2.220446049250313e-16
+      }
+    ]
+  }
+}
