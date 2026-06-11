@@ -1,0 +1,309 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black}
+
+\theoremstyle{plain}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\one}{\mathbf 1}
+\newcommand{\R}{\mathbb R}
+\newcommand{\dist}{\operatorname{dist}_1}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\negm}{\operatorname{neg}}
+\newcommand{\W}{\mathcal W}
+\newcommand{\sigt}{\widetilde{\sigma}}
+
+\title{The Kernel Conjecture:\\ a self-contained statement of the single open input\\
+to the dimension-free classical stability theorem}
+\author{Classical-portfolio campaign (exploration lane)}
+\date{11 June 2026}
+
+\begin{document}
+\maketitle
+
+\noindent\textbf{Purpose.} This document states, with every definition included and no
+reliance on any campaign artifact, the \emph{minimal conjecture} whose proof would complete
+the full chain
+\[
+\textbf{Kernel Conjecture}
+\;\Longrightarrow\; \text{linear hull bound}
+\;\Longrightarrow\; \text{HLC}
+\;\Longrightarrow\; \text{\texttt{op-exposed-hull}}
+\;\Longrightarrow\; \text{\texttt{op-classical}},
+\]
+where every implication arrow is already proved (or proved modulo recorded audits) in the
+campaign record. A reader needs only basic linear algebra and the vocabulary of stochastic
+matrices. Section~\ref{sec:chain} states precisely what the conjecture buys; Section~%
+\ref{sec:stronger} records the stronger ``working form'' used by the current proof attack;
+Section~\ref{sec:evidence} lists the evidence and the constraints any proof or refutation
+must respect.
+
+\section{Setting}
+
+\begin{definition}[Exact signed idempotent]\label{def:esi}
+Let $n\in\mathbb N$. A matrix $P\in\R^{n\times n}$ is an \emph{exact signed idempotent} if
+\[
+P\one=\one \qquad\text{and}\qquad P^2=P ,
+\]
+where $\one=(1,\dots,1)^{\mathsf T}$. Its \emph{negativity} is
+\[
+\delta(P)\;:=\;\max_{1\le i\le n}\ \sum_{j=1}^{n}\max\{-P_{ij},\,0\}
+\]
+(the largest total negative mass in any single row). A row-stochastic idempotent is exactly
+an exact signed idempotent with $\delta(P)=0$.
+\end{definition}
+
+\begin{definition}[The three scales]\label{def:scales}
+Given $\delta=\delta(P)$, set
+\[
+\tau:=\sqrt{\delta},\qquad \rho:=4\tau,\qquad \kappa:=\tau/4 .
+\]
+\end{definition}
+
+\begin{definition}[Row geometry]\label{def:rows}
+Write $p_i\in\R^n$ for the $i$-th row of $P$, regarded as a point of $\R^n$ with the
+$\ell^1$ metric $\|x-y\|_1=\sum_j|x_j-y_j|$. For a nonempty set $S\subseteq\R^n$ put
+$\dist(x,S)=\inf_{s\in\conv S}\|x-s\|_1$, where $\conv$ denotes the convex hull.
+\end{definition}
+
+Note each row satisfies $\sum_j p_{ij}=1$ and $\sum_j |p_{ij}|\le 1+2\delta$; all rows lie
+in a common affine hyperplane and pairwise $\ell^1$ distances are at most $2+4\delta$.
+
+\begin{definition}[Row vertex, multiplicity-correct]\label{def:vertex}
+A row $p_v$ is a \emph{row vertex} of $P$ if
+\[
+p_v\notin \conv\{\,p_j \;:\; p_j\neq p_v \text{ as vectors of } \R^n\,\}.
+\]
+(Geometrically coincident duplicate rows count as a single point; a point repeated many
+times is still a vertex if it lies outside the hull of the \emph{other} points.)
+\end{definition}
+
+\begin{definition}[$(\rho,\kappa)$-exposedness and the visible set $\W$]\label{def:exposed}
+Let $p_v$ be a row vertex. An \emph{admissible exposer for $v$} is an affine function
+$h:\R^n\to\R$ with
+\[
+h(p_v)=0
+\qquad\text{and}\qquad
+0\le h(p_j)\le 1 \quad\text{for every row } p_j .
+\]
+The \emph{exposedness margin} of $v$ is
+\[
+t^*(v)\;:=\;\sup_{h \text{ admissible}}\ \ \min\{\,h(p_j)\;:\;\|p_j-p_v\|_1\ge\rho\,\},
+\]
+with the convention $t^*(v)=+\infty$ when no row is $\ell^1$-distance $\ge\rho$ from $p_v$.
+The vertex $v$ is \emph{$(\rho,\kappa)$-exposed} if $t^*(v)\ge\kappa$, and
+\emph{hidden} otherwise. The \emph{visible set} is
+\[
+\W=\W(P):=\{\, v \;:\; p_v \text{ is a } (\rho,\kappa)\text{-exposed row vertex of } P \,\}.
+\]
+\end{definition}
+
+Informally: an exposed vertex can be linearly separated, with margin at least $\kappa$,
+from every row that is genuinely far ($\ge\rho$) from it; rows inside the $\rho$-ball are
+exempt. At $\delta=0$ the visible vertices are exactly the distinct rows of the recurrent
+(equal-input) blocks of a stochastic idempotent.
+
+\begin{definition}[Height]\label{def:height}
+If $\W\neq\emptyset$, the \emph{height} of a row $p_i$ is
+$\dist\!\big(p_i,\conv\{p_w:w\in\W\}\big)$, and the height of $P$ is
+\[
+H=H(P):=\max_{1\le i\le n}\ \dist\!\big(p_i,\ \conv\{p_w : w\in\W\}\big).
+\]
+Because $\dist(\cdot,\conv\W)$ is convex and every row is a convex combination of the
+geometrically distinct row vertices, the maximum is attained at a row vertex; if $H>0$,
+any maximising vertex is necessarily hidden. We call such a vertex a \emph{hidden top
+vertex}.
+\end{definition}
+
+\begin{definition}[Invisible mass $\sigt_v$]\label{def:sigt}
+Let $C_{\W}:=\conv\{p_w:w\in\W\}$ and let $p_v$ be a row vertex. The \emph{invisible
+(positive) mass} of $v$ is
+\[
+\sigt_v\;:=\;\sum_{j\,:\,\dist(p_j,\,C_\W)>0}\ \max\{P_{vj},\,0\},
+\]
+the total positive coefficient mass that row $v$ places on rows lying strictly outside
+$C_\W$ --- \emph{including} the index $j=v$ itself when $p_v\notin C_\W$ and $P_{vv}>0$.
+\end{definition}
+
+\begin{remark}[Halo robustness]
+Replacing the condition $\dist(p_j,C_\W)>0$ by $\dist(p_j,C_\W)>\varepsilon$ changes
+$\sigt_v$ only by mass sitting in the $\varepsilon$-halo of $C_\W$; for every statement
+below, halo mass can be absorbed as an $\varepsilon$-loss in the height (rows
+$\varepsilon$-close to $C_\W$ are, for any $1$-Lipschitz witness of the height, within
+$\varepsilon$ of being as deep as $C_\W$ itself). The $\varepsilon=0$ form is used
+throughout.
+\end{remark}
+
+\section{The Kernel Conjecture}\label{sec:kernel}
+
+\begin{conjecture}[Kernel Conjecture; invisible-mass height bound]\label{conj:kernel}
+There exist universal constants $\delta_0>0$ and $B<\infty$ (independent of the dimension
+$n$) such that for every $n$ and every exact signed idempotent $P\in\R^{n\times n}$ with
+$\delta=\delta(P)\le\delta_0$:
+\begin{enumerate}
+\item[\textup{(i)}] $\W(P)\neq\emptyset$; and
+\item[\textup{(ii)}] every \emph{hidden} row vertex $v$ with
+\[
+\sigt_v\;>\;\tau\;=\;\sqrt{\delta}
+\]
+satisfies
+\[
+\dist\!\big(p_v,\ \conv\{p_w:w\in\W\}\big)\;\le\; B\,\tau .
+\]
+\end{enumerate}
+\end{conjecture}
+
+\begin{remark}[Any constants suffice]
+The downstream chain consumes \emph{any} universal pair $(\delta_0,B)$. No specific value
+is required; the corner analysis (Section~\ref{sec:evidence}) shows $B$ cannot be taken
+below $2(2-\sqrt3)\approx 0.536$ unless the hypothesis class is empty, and the verified
+numerical record is consistent with the hypothesis class being empty altogether (no
+verified instance with $\sigt_v>\tau$ and height $>0.1\tau$ has ever been produced).
+\end{remark}
+
+\begin{remark}[Why the hypothesis $\sigt_v>\tau$ is there, and why this is minimal]
+The complementary regime is already a theorem: if $\sigt_v\le\tau$ then (writing
+$\nu_v\le\delta$ for $v$'s negative row mass)
+\[
+\dist(p_v,C_\W)\;\le\;2(1+2\delta)\max\{\sigt_v,\nu_v\}\;\le\;3\tau
+\qquad(\delta\le\tfrac14),
+\]
+by splitting the row identity $p_v=\sum_j P_{vj}p_j$ at $C_\W$: the visible positive mass
+has barycentre in $C_\W$, and what remains is at most $\max\{\sigt_v,\nu_v\}$ on either
+side. \emph{[s8 height cap; proved in the campaign record, with the earlier
+height-collapse form $\sigt_v\le s<1 \Rightarrow H\le \delta(2+4\delta)/(1-s)$.]}
+Thus Conjecture~\ref{conj:kernel} is exactly the missing branch, and nothing weaker
+completes the dichotomy.
+\end{remark}
+
+\section{What the conjecture completes}\label{sec:chain}
+
+\begin{theorem}[Conditional; the full chain]\label{thm:chain}
+Assume Conjecture~\ref{conj:kernel} with constants $(\delta_0,B)$, and let
+$C_1:=\max\{B,3\}$. Then for every $n$ and every exact signed idempotent $P$ with
+$\delta\le\min\{\delta_0,\tfrac14\}$:
+\begin{enumerate}
+\item[\textup{(a)}] \textbf{(Linear hull bound)} every row of $P$ lies within
+$C_1\sqrt{\delta}$ of $\conv\{p_w:w\in\W\}$, i.e.\ $H(P)\le C_1\sqrt\delta$; equivalently
+$\delta\ge H^2/C_1^{\,2}$ \textup{(the HLC inequality)}.
+\item[\textup{(b)}] \textbf{(Exposed-hull stability, \texttt{op-exposed-hull})} $P$ is
+within distance $C_2\sqrt{\delta}$ (max-row-$\ell^1$) of a matrix whose rows all lie in
+$\conv\{p_w:w\in\W\}$, with $C_2$ universal.
+\item[\textup{(c)}] \textbf{(Classical stability, \texttt{op-classical})} there are
+universal $\eta_0,C>0$ such that every row-stochastic $Q$ with
+$\|Q^2-Q\|_{\infty\to\infty}\le\eta\le\eta_0$ lies within $C\sqrt{\eta}$
+(max-row-$\ell^1$) of an exactly idempotent row-stochastic matrix.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Assembly (each ingredient proved in the campaign record)]
+(a) The height maximum is attained at a row vertex (Definition~\ref{def:height}); if
+$H>0$ that vertex is hidden; apply the $\sigt$-dichotomy: the s8 cap when
+$\sigt_v\le\tau$, the conjecture when $\sigt_v>\tau$. (b) is the two-family-verified
+assembly \emph{op-exposed-hull $\Leftarrow$ HLC} (grand assembly, $C'=\max(4A,1/\sqrt a)$
+with $a=1/C_1^{\,2}$ here). (c) is the previously proved cluster theorem
+(\texttt{thm-cluster}, summand-count-free assembly) composed with the validated
+signed/stochastic equivalence (\texttt{lem-classical-equiv}, explicit universal
+constants). Statuses: (a)-assembly and the s8 cap, proved; (b), proved mod recorded
+audit; (c), machine-validated (\texttt{af}) plus proved.
+\end{proof}
+
+\section{The stronger working form (for attackers)}\label{sec:stronger}
+
+The current proof attack does not target Conjecture~\ref{conj:kernel} directly but a
+stronger, more structured statement, recorded here because every proved tool composes
+with it. Fix $P$, a hidden top vertex $v$, and a $1$-Lipschitz (w.r.t.\ $\ell^1$) affine
+$\varphi$ with $\varphi\le 0$ on $C_\W$, $\sup_{C_\W}\varphi=0$, $\varphi(p_v)=H$
+(a \emph{canonical separator}; it exists by $\ell^1$/$\ell^\infty$ duality). The
+\emph{deficit} $g_i:=H-\varphi(p_i)$ satisfies $g\ge0$, $g_v=0$, $g=Pg$ (harmonicity:
+$\varphi$ is affine and rows reproduce, $p_i=\sum_j P_{ij}p_j$), and
+$\Omega:=\max_i g_i-\min_i g_i\le 2+4\delta$. For a threshold $t\in(0,\kappa\Omega]$,
+the \emph{shallow band} is $S_t=\{i: g_i<t\}$, the \emph{band block} is
+$P_{S_tS_t}$, and the \emph{carrier graph} is the directed graph on $S_t$ with an edge
+$i\to j$ when $P_{ij}>0$. For a strongly connected component $\mathcal C$ with directed
+diameter $L$, the \emph{path product} is
+\[
+\Pi_{\mathcal C}\;:=\;\min_{i,j\in\mathcal C}\ \max_{\text{directed paths } i\to j
+\text{ in }\mathcal C}\ \prod_{\text{edges } (k,l)} P_{kl}.
+\]
+
+\begin{conjecture}[Path-product floor; thin-chain exclusion --- implies
+Conjecture~\ref{conj:kernel}]\label{conj:floor}
+There are universal $\delta_0,B,c,C'$ such that for $\delta\le\delta_0$: if $v$ is a
+hidden top vertex with $\sigt_v>\tau$ and $H>B\tau$, then for some threshold
+$t\in[\kappa\Omega/2,\,\kappa\Omega]$, every carrier-graph component $\mathcal C$ of
+$S_t$ that carries positive mass of $v$ satisfies
+\[
+\Pi_{\mathcal C}\;\ge\; c\,\tau \;-\; C' L\,\delta .
+\]
+\end{conjecture}
+
+\noindent The implication Conjecture~\ref{conj:floor} $\Rightarrow$
+Conjecture~\ref{conj:kernel} is the proved \emph{component finisher}: a component whose
+path products beat the signed/idempotence error has, by a Birkhoff--Hilbert projective
+contraction argument requiring \emph{no spectral gap}, all its rows collapsing to a
+near-equal-input cluster; near-equal-input clusters are exposed (audited near-coincidence
+machinery), contradicting hiddenness. The wave-12 survivor inequality
+$\Pi_{\mathcal C}\le E_L(\delta,\zeta)+2(1+\delta)\varepsilon/(0.85\tau-4\delta)$ makes
+the floor above the exact negation of the surviving configuration class. Two open
+sub-issues ride with this form only (not with Conjecture~\ref{conj:kernel}): periodic
+components (the finisher assumes primitivity; the recorded refutation attempts suggest
+periodicity is benign), and the analytic --- as opposed to measured --- closure of the
+band's positive kernel.
+
+\section{Evidence, constraints, and failure maps}\label{sec:evidence}
+
+Any resolution of Conjecture~\ref{conj:kernel} must respect all of the following, each
+verified or proved in the campaign record (branch \texttt{agent-a/classical-portfolio},
+dossier \texttt{notes/wave5-sigma-wall-parallel.md}, worker verdicts
+\texttt{notes/swarm-answers/}):
+
+\begin{enumerate}
+\item \textbf{Empirical record.} $67{,}000$+ verified exact instances over six
+independent campaigns (d1--d14), all scales $\delta\in[6\times10^{-4},0.25]$: every
+instance satisfies the \emph{linear law} $\delta\gtrsim H/2$; no verified instance has
+$\sigt_v>\tau$ together with $H>0.1\tau$. Two dedicated counterexample agents with
+distinct template families (chains, trees, frame-chains, parallel bundles, periodic
+components) failed against full verification gates, with recorded per-template failure
+displays.
+\item \textbf{The corner.} The historically measured ``wall'' $H/\tau=0.536$ and
+``floor'' $\delta/H^2=3.48$ are the finite-$\delta$ corner $\tau^*=2-\sqrt3$,
+$H/\tau=2(2-\sqrt3)$, $\delta/H^2=(7+4\sqrt3)/4$ (exact closed forms, two-family
+confirmed); the corner instance itself has $\sigt_v=0$, i.e.\ lies in the
+\emph{proved} branch. Proof strategies that lose $O(\delta)$ slack against $H$ are
+legitimate for the conjecture (its constants are not corner-exact).
+\item \textbf{What is already impossible.} A proof cannot proceed by: LP support-cleanup
+of optimal exposedness witnesses (pushed-witness death certificate: any negative leakage
+breaks dual optimality); the canonical-deficit energy method (anti-lemma: its energy is
+$O(\delta\Omega^2)$); naive compactness to $\delta=0$ (the visible set $\W$ jumps in
+limits); uniform sup-leakage band closure (the sup is $v$'s own $\delta$-budget of
+negative entries --- irreducible, but \emph{benign}: the positive kernel closes exactly
+on every measured instance). Five of ten independent proof-strategy kinds collapse into
+the exposedness-LP frame at the moment hiddenness is used as a hypothesis (the normal
+cone of the hiddenness constraint \emph{is} the LP dual cone); a proof must either live
+in that frame or avoid hiddenness via a surrogate (e.g.\ distance to the
+Baake--Sumner normal form, the audited canonical W-free restatement).
+\item \textbf{What is already real.} Exact rational instances exist with a hidden vertex,
+$\sigt_v>0$, and an \emph{entirely shallow} optimal witness face --- but only at height
+$H=O(\delta)$ and $\sigt_v<\tau$ (inside the proved branch). Any proof of the conjecture
+must tolerate these; any refutation must do strictly better than them.
+\item \textbf{The $\delta=0$ anchor.} At $\delta=0$ both conjectures hold via the
+classification of stochastic idempotents (equal-input recurrent blocks plus proportional
+transient rows). Caution: the local ground-truth source states this classification as a
+reformulation of H\"ogn\"as--Mukherjea \emph{without proof}; the anchor's own proof is
+pending byte-verified acquisition.
+\end{enumerate}
+
+\end{document}

@@ -242,6 +242,18 @@
       "note": "OCR page-scans + text of a 1979 Math. Scand. paper \u2014 bespoke, not reproducible by fetch"
     },
     {
+      "path": "hognas-mukherjea-2011/hognas-mukherjea-2011.pdf",
+      "sha256": "d74844072a1b96a29acbae5586e42c641fcc17721f55b89184b95dbcf25fa649",
+      "source_id": "hognas-mukherjea",
+      "fetch": null
+    },
+    {
+      "path": "hognas-mukherjea-2011/hognas-mukherjea-2011.txt",
+      "sha256": "ac5e74eb1c346c249632a53442b8015e736753973e5262c9fb09077359f30885",
+      "source_id": "hognas-mukherjea",
+      "fetch": null
+    },
+    {
       "path": "hos/hos-book.pdf",
       "sha256": "0222fcdad57448d0a5e5db90db2307bef47cdf28f93062721500efe78da20457",
       "source_id": "hos",

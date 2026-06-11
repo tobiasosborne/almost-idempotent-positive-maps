@@ -68,3 +68,14 @@ Definitions/lemmas cite a source by `<source-id>` + locus (e.g. line number); th
 duplicates split across `agent-A/refs` and `agent-B/references`, and HOS/Idel ground truth pointed
 at absolute paths under `../af-tests`. Both are resolved: one deduplicated copy per source lives
 here, and HOS `joa-m.md` + Idel `idel-2013.md` were copied local from `af-tests/examples3`.
+
+## hognas-mukherjea
+G. Högnäs and A. Mukherjea, *Probability Measures on Semigroups: Convolution Products,
+Random Walks, and Random Matrices*, 2nd ed., Springer Probability and Its Applications,
+2011. ISBN 978-0-387-77548-7. **The δ=0 anchor's proof source**: the structure theorem for
+idempotent probability measures (§2.2, "Invariant and Idempotent Probability Measures") —
+the result Baake–Sumner (refs/baake-sumner-2007.11433) cite WITHOUT proof for the
+classification of idempotent Markov matrices. Acquired by the user (2026-06-11, personal
+download). Files: `hognas-mukherjea-2011.pdf` (user-supplied) + `hognas-mukherjea-2011.txt`
+(local `pdftotext -layout` extraction — greppable loci; extraction-level provenance,
+byte-quote against the .txt). Cache-only (copyrighted; no public fetch).
