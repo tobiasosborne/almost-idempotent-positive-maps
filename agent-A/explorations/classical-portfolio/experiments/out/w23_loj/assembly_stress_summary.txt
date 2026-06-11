@@ -1,0 +1,91 @@
+w23_loj local assembly stress summary
+{
+  "w21_second_stress": {
+    "records": 172,
+    "samples": 860,
+    "local_samples": 252,
+    "transition_samples": 608,
+    "max_all_H_over_delta": 2.0000000000392326,
+    "max_local_H_over_delta": 0.0,
+    "max_transition_H_over_delta": 2.0000000000392326,
+    "sharp_transition_count_ratio_ge_1p9": 49,
+    "top_sharp_transition": [
+      {
+        "stratum": "random_014",
+        "source": "zero-active-nullspace",
+        "t": 1e-05,
+        "min_positive_entry": 3.512916239793809e-07,
+        "t_over_min_entry": 28.466377554697836,
+        "H_over_delta": 2.0000000000392326,
+        "delta": 8.312395270111691e-07,
+        "H": 1.66247905405495e-06,
+        "visible": 5,
+        "vertices": 6
+      },
+      {
+        "stratum": "random_014",
+        "source": "zero-active-basis",
+        "t": 3e-05,
+        "min_positive_entry": 3.512916239793809e-07,
+        "t_over_min_entry": 85.3991326640935,
+        "H_over_delta": 2.000000000007937,
+        "delta": 3.4738147363379685e-06,
+        "H": 6.947629472703509e-06,
+        "visible": 5,
+        "vertices": 6
+      },
+      {
+        "stratum": "random_011",
+        "source": "zero-active-basis",
+        "t": 3e-05,
+        "min_positive_entry": 4.444945061053182e-07,
+        "t_over_min_entry": 67.4923977415636,
+        "H_over_delta": 2.000000000002728,
+        "delta": 2.890148230808344e-05,
+        "H": 5.7802964616245726e-05,
+        "visible": 3,
+        "vertices": 4
+      },
+      {
+        "stratum": "random_014",
+        "source": "zero-active-nullspace",
+        "t": 0.0001,
+        "min_positive_entry": 3.512916239793809e-07,
+        "t_over_min_entry": 284.66377554697834,
+        "H_over_delta": 2.000000000002666,
+        "delta": 1.3534053348882023e-05,
+        "H": 2.7068106697800127e-05,
+        "visible": 5,
+        "vertices": 6
+      },
+      {
+        "stratum": "random_011",
+        "source": "zero-active-nullspace",
+        "t": 0.0003,
+        "min_positive_entry": 4.444945061053182e-07,
+        "t_over_min_entry": 674.9239774156358,
+        "H_over_delta": 2.000000000001762,
+        "delta": 0.00013260512423117713,
+        "H": 0.0002652102484625879,
+        "visible": 3,
+        "vertices": 4
+      }
+    ]
+  },
+  "w20_visibility_stress": {
+    "fixed_mass_records": 1848,
+    "fixed_mass_condition_true": 949,
+    "fixed_mass_violations": 0,
+    "tiny_active_mu": 9.99999000001e-07,
+    "tiny_active_local_samples_t_le_mu": 3,
+    "tiny_active_transition_samples_t_gt_mu": 5,
+    "tiny_active_max_local_H_over_delta": 0.0,
+    "tiny_active_max_transition_H_over_delta": 1.9999979798126173,
+    "tiny_active_active_zero_derivative_cost": 0.0
+  }
+}
+
+interpretation:
+- w21 local fixed-base clean windows have max ratio reported above.
+- ratio-2 samples occur only in transition windows beyond the tiny positive-entry scale.
+- w20 fixed-mass visibility audit has zero condition violations; its tiny-active ratio-2 sample is also a transition-scale sample.

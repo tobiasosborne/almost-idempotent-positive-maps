@@ -1464,3 +1464,19 @@ P(local law true after the repair) = 0.78; P(repaired assembly survives audit) =
 LAUNCHING w23_loj (the stratified bound: prove no third-order-flat transverse direction
 exists via the chart second-order algebra; support-addition directions are now INSIDE
 the locus and harmless).
+
+## w23_loj (codex) — J1' PROVED + J2' ASSEMBLED: THE LOCAL LINEAR LAW (claimed) [AUDIT IN FLIGHT]
+Full answer + proof note: notes/swarm-answers/w23_loj.md; probes:
+experiments/out/w23_loj/. CLAIMS: J1' — the stratified bound dist_chart((C,D), M_HM)^2 <=
+L * delta against the WHOLE local delta=0 locus (support-addition arcs now give dist = 0;
+max sampled dist^2/delta = 0.196; the explicit second-order rigidity jet confirmed
+delta/t^2 -> a > 0 for promotion+forbidden-mixing directions). J2' — the LOCAL LINEAR LAW
+H <= C_loc * delta, C_loc = 2 + K_vis * L, fixed-n constants, explicit neighborhood of
+the H-M locus; assembled from the audited chain (final-profile recode -> fixed-mass
+visibility -> tangent-cone lemma + J1' kills the quadratic error). NOT THE GLOBAL LAW:
+the B-S normal-form distance gap (is every small-delta idempotent in the neighborhood?)
+STANDS. Assembly stress: fixed-base windows max H/delta = 0; ratio-2 cases remain
+boundary-transition events (handled by the recode). P(J1') = 0.74; P(J2' survives audit)
+= 0.60. AUDIT LAUNCHED (w23_loj_audit; prime targets: the promotable-zeros enumeration
+completeness, mixed 2-jets, and the assembly's integration step — a pointwise derivative
+bound at one endpoint must not be silently integrated along the arc).
