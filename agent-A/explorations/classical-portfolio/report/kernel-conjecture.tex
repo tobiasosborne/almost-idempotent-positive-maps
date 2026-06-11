@@ -396,15 +396,22 @@ $C^1$ arc,
 \]
 with the constant $2$ independent of $n$, $k$, the partition, and the block masses
 (sharp for the frozen recurrent-hull derivative) --- the infinitesimal form of the
-linear law, hiddenness-free and clone-invariant. \emph{Also proved (audit pending):}
-the two-scale visibility lemma (explicit visibility radius; $\mu\to0$ by recoding to
-the boundary stratum), addressing the recorded W-jump compactness obstruction.
+linear law, hiddenness-free and clone-invariant. \emph{Also proved and audited (with repairs):} the \emph{ambient fixed-mass visibility
+lemma} (recurrent vertices with LP support margin $\eta$ stay visible for
+$\varepsilon\le\min\{\mu/8,\tau/64,\eta\tau/64,1/64\}$ --- ambient, disarming the
+recorded W-jump compactness obstruction at fixed mass), and the \emph{mass-removed
+boundary-recoding lemma}: an exact H--M recode to a boundary stratum with
+$\|P_0-P_0'\|_{\infty,1}\le2(\sum_s q_s+\max_i r_i)$, all bounds in \emph{original}
+removed mass --- valid only in the one-shot final-profile form (stepwise iteration
+provably overcharges by $O(n)$). The fixed-base second-order race on the dangerous
+cone $\dot\delta=0$ is empirically \emph{empty} (clean-window ratio $0$); all
+sharpness comes from boundary-crossing arcs, which the recoding now handles.
 \emph{The remaining gap to the local linear law is one named estimate}: the
-second-order tangent-cone inequality on the dangerous cone
-$\dot\delta=0$ (where first-order height also vanishes --- audited), equivalently a
-quadratic normal-error bound in the exact chart. Local numerics: the worst stable
-ratio is $H/\delta=2.000000000013$ --- the local law appears to hold with exactly the
-lemma's constant.
+finite-jet normal projection bound $\|(C,D)_{\perp\mathcal M}\|^2\le L\,\delta$ in
+the exact chart after final-profile rebasing (equivalently: second-order rigidity of
+the $\delta=0$ locus). Local numerics: the worst stable ratio is
+$H/\delta=2.000000000013$ --- the local law appears to hold with exactly the lemma's
+constant.
 \item \textbf{The $\delta=0$ anchor.} At $\delta=0$ both conjectures hold by the
 finite stochastic-idempotent normal form of H\"ogn\"as--Mukherjea,
 \emph{Probability Measures on Semigroups}, Thm.~1.16; local extraction

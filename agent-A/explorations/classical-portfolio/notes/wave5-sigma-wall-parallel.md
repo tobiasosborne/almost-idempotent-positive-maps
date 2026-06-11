@@ -1426,3 +1426,22 @@ remaining estimate is the finite-jet normal projection bound after all rebasings
 P(L1+L2 survive audit) = 0.78; P(L3 assembles from present ingredients) = 0.34.
 AUDIT LAUNCHED (w21_recode_audit: exactness of P0', compounding over iterations
 (telescoping vs n-factor), oscillating-arc stopping condition, independent stress re-run).
+
+## w21_recode_audit (codex, hostile) — L1 BANKED; L2 repaired to the FINAL-PROFILE one-shot form
+Full report: notes/swarm-answers/w21_recode_audit.md + experiments/out/w21_recode_audit/.
+L1 SURVIVES in full: P0' is an EXACT H-M idempotent (re-derived: pi_s' P' = pi_s' via
+survivor support; every transient mixture follows); ||P0 - P0'||_{infty,1} <= 2(sum q_s
++ q') CONFIRMED with q' = max_i r_i (max-row norm); validity needs only K_s nonempty,
+q_s < 1, r_i < 1 (perturbative reading needs them small); the w20 stress family passes.
+L2 BROKEN as a literal stepwise iteration — THE OLD TRAP ONE LEVEL UP: relative removed
+masses measured after each renormalization can sum to O(n) while the ORIGINAL removed
+mass is O(1) (explicit sequential family overcharges 10.8x at 12 drops). REPAIRED L2
+(audited): choose the FINAL boundary profile, measure ALL removed recurrent + transient-
+face mass in the ORIGINAL profile (collapse the chain), recompute (mu_m, eta_m, Lambda_m)
+at that final stratum, apply the fixed-mass visibility lemma ONCE. No radius depending
+only on n or a threshold is justified — the radius depends on the final profile's
+surviving data (honest). THE AUDITED CHAIN IS NOW: tangent-cone lemma + ambient
+fixed-mass visibility + L1 recoding + L2 (final-profile). ONE estimate remains for the
+LOCAL LINEAR LAW: the finite-jet normal projection bound ||(C,D)_{perp M}||^2 <= L *
+delta after final-profile rebasing (+ the arc-scale tau(t) estimate where needed).
+LAUNCHING w22_jet.

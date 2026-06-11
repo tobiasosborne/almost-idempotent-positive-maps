@@ -1,0 +1,37 @@
+independent w21 recode audit numerics
+cases checked: 60
+failed removed-mass/exactness cases: 0
+worst eps/(2Q): 1.00000000001
+worst survivor shift relative to old mass: 499999.000013
+
+w20 stress family
+w20_stress_4_1e-05: q=3.96e-05 r=5e-06 eps=7.92e-05 2Q=8.92e-05 eps/(2Q)=0.887892377 old eps/(mu/8)=62.7301891 passes=True
+w20_stress_8_1e-05: q=7.92e-05 r=5e-06 eps=0.0001584 2Q=0.0001684 eps/(2Q)=0.940617577 old eps/(mu/8)=125.45541 passes=True
+w20_stress_20_1e-05: q=0.000198 r=5e-06 eps=0.000396 2Q=0.000406 eps/(2Q)=0.975369458 old eps/(mu/8)=313.601261 passes=True
+w20_stress_20_0.0001: q=0.00198 r=5e-05 eps=0.00396 2Q=0.00406 eps/(2Q)=0.975369458 old eps/(mu/8)=313.042313 passes=True
+
+edge cases
+explicit_two_block: q_total=0.19 r=0.21 eps/(2Q)=0.66325 mu_after=0.204545454545 shift_new=0.12 shift_old=0.136363636364 passes=True
+multi_block_simultaneous: q_total=0.69 r=0.3 eps/(2Q)=0.449494949 mu_after=0.184782608696 shift_new=0.31 shift_old=0.449275362319 passes=True
+near_total_block_removal: q_total=0.999998 r=0 eps/(2Q)=1 mu_after=1 shift_new=0.999998 shift_old=499999.000013 passes=True
+transient_only_faces: q_total=0 r=0.001 eps/(2Q)=1 mu_after=0.25 shift_new=0 shift_old=0 passes=True
+
+claimant mixed-rate reimplementation: cases=12 failures=0 worst eps/(2Q)=0.957530678
+random hostile cases: cases=40 failures=0 worst eps/(2Q)=1
+recurrent transport: l1 violations=0 delta violations=0 worst_l1_ratio=1
+
+sequential compounding trap
+steps=2: direct_removed=0.99 sum_step_q=1.8 chain/direct=1.81818182
+steps=4: direct_removed=0.9999 sum_step_q=3.6 chain/direct=3.60036004
+steps=8: direct_removed=0.99999999 sum_step_q=7.20000000036 chain/direct=7.20000007
+steps=12: direct_removed=0.999999999999 sum_step_q=10.8000035755 chain/direct=10.8000036
+
+oscillating C-infinity profile: alpha/t in [1,3], sampled threshold crossings=119
+
+w21_second boundary records
+records=172 local=252 max_local=0.0 transition=608 max_transition=2.0000000000392326 sharp_ge_1p9=49
+sharp ratio=2.00000000004 stratum=random_014 t=1e-05 min_entry=3.51e-07 t/min=28.4664 visible=5 vertices=6
+sharp ratio=2.00000000001 stratum=random_014 t=3e-05 min_entry=3.51e-07 t/min=85.3991 visible=5 vertices=6
+sharp ratio=2 stratum=random_011 t=3e-05 min_entry=4.44e-07 t/min=67.4924 visible=3 vertices=4
+sharp ratio=2 stratum=random_014 t=0.0001 min_entry=3.51e-07 t/min=284.664 visible=5 vertices=6
+sharp ratio=2 stratum=random_011 t=0.0003 min_entry=4.44e-07 t/min=674.924 visible=3 vertices=4
