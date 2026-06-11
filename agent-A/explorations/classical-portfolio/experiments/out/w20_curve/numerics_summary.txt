@@ -1,0 +1,22 @@
+w20_curve numerics
+audit_module: /home/tobias/Projects/almost-idempotent-positive-maps/agent-A/explorations/classical-portfolio/experiments/out/w19_tangent_audit/tangent_audit.py
+
+tiny recurrent-mass zero-budget visibility transition
+name: tiny_pi_many_transients_k3
+mu: 9.99999000001e-07
+zero_budget_value: 0
+zero_budget_dot_delta: 0
+t=0.0001 delta/t=0.99000001 H/t=1.97999602002 H/delta=1.99999595962 visible=3 vertices=4
+t=3e-05 delta/t=0.9666667 H/t=2.99666057001e-05 H/delta=3.09999358621e-05 visible=4 vertices=4
+t=1e-05 delta/t=0.9000001 H/t=9.89997910002e-06 H/delta=1.09999755556e-05 visible=4 vertices=4
+t=3e-06 delta/t=0.666667 H/t=2.66666000001e-06 H/delta=3.99998800002e-06 visible=4 vertices=4
+t=1e-06 delta/t=9.99998999893e-07 H/t=9.99998999893e-07 H/delta=1 visible=3 vertices=3
+t=3e-07 delta/t=0 H/t=0 H/delta=0 visible=3 vertices=3
+t=1e-07 delta/t=0 H/t=0 H/delta=0 visible=3 vertices=3
+t=3e-08 delta/t=0 H/t=0 H/delta=0 visible=3 vertices=3
+
+boundary/tiny exact-arc sweep
+samples: 348
+finite_samples: 348
+max_H_over_delta: 2.000000000012789
+worst: name=random_007 budget=0.0 t=3e-06 mu=1 delta=2.30693475042e-06 H=4.61386950087e-06 H/delta=2.00000000001 visible=4 vertices=5

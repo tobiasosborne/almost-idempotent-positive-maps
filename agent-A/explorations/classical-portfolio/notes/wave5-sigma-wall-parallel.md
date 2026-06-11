@@ -1355,3 +1355,20 @@ exploitation programme. WAVE 20 LAUNCHED: w20_curve — T1 the two-scale visibil
 radius; must explicitly disarm the recorded "naive compactness / W-jump" dead route),
 T3 the honest dimension-dependence list + the standing global gap (B-S normal-form
 distance — every small-delta idempotent near the locus — NOT claimed).
+
+## w20_curve (codex) — T1 PROVED (two-scale visibility); T2 dies at ONE quadratic estimate [T1 audit in flight]
+Full answer + proof note: notes/swarm-answers/w20_curve.md; numerics:
+experiments/out/w20_curve/. T1 (the audit-demanded uniformity repair) PROVED: explicit
+visibility radius for recurrent masses >= mu; mu -> 0 handled by recoding to the boundary
+H-M stratum (two-scale split). T2 (the local linear law) NOT proved — the exact failed
+estimate: ||(C,D)_{perp M}||^2 <= L_n * delta (the quadratic normal bound); the chart
+gives H <= 2*delta + O(||(C,D)||^2) and nothing kills the quadratic term. NUMERICS
+SIGNATURE: worst stable LOCAL ratio H/delta = 2.000000000013 — the local law empirically
+holds with EXACTLY the lemma's constant 2 (sharp); the tiny-mass finite-scale transition
+at mu ~ 1e-6 reproduced. ORCHESTRATOR DECOMPOSITION (for w21): on the dangerous cone
+(dot-delta = 0; audited fact: frozen first-order height D = 0 there) BOTH H and delta are
+second-order — the race restarts one order down; the T2 gap IS the second-order
+tangent-cone inequality q_H <= C_2 * q_delta (+ finite-jet iteration for doubly-degenerate
+directions). LAUNCHED: w20_t1_audit (hostile audit of T1: the recoding step under mixed-
+rate degenerations is the prime target; plus the W-jump disarmament assessment) and
+w21_second (the second-order lemma + assembly to the local law; decider-first).
