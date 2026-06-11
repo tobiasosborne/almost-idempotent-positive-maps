@@ -973,3 +973,35 @@ w13 symmetric stalemate). The scalar witnesses are NOT counterexamples to Conjec
 realizability by an exactly-idempotent matrix with a hidden top vertex is exactly the open
 content. NEXT-WAVE TARGET: realize the scalar witness as an actual instance (refuter side)
 or prove unrealizability from hiddenness (prover side) — the kernel in its sharpest form yet.
+
+## w15_prover (codex) — DIED-AT, but discovers THE CLONING OBSTRUCTION [audit in flight]
+Full answer: notes/swarm-answers/w15_prover.md. The H-M surrogate DOES generate shallow
+positive carrier mass (A_v(S_t \ C_W) >= (B/3 - 4)*tau, derived) and the exact-idempotence
+shortcut works (P_ij >= (A^k)_ij - k*delta*(1+2*delta)^{k-1}). DIED-AT (display-boxed):
+(A_C^k)_ij >= c*tau + O(k*delta), equivalently Pi_C >= c*tau - C'*L*delta. THE DISCOVERY:
+index-cloning P_hat_{ab} = alpha_b * P_{pi(a),pi(b)} preserves exact idempotence (orchestrator
+re-derived: (P_hat^2)_ab = alpha_b (P^2)_{pi(a)pi(b)}), row sums, delta, and the ENTIRE row
+geometry (l1-isometry on row differences: vertices, W, H, g, sigma_tilde, hiddenness), yet
+Pi_hat_C <= (1+delta)/M -> 0. Conjecture 2's carrier graph is RAW-INDEX (kernel-conjecture.tex
+~:230-241 — only def:vertex is multiplicity-correct), so the floor AS WRITTEN appears
+false-or-vacuous; Conjecture 1 (a distance statement) is untouched. Repairs that fail at index
+level: P^k=P controls sums not atoms; mass survives cloning but the finisher eats atoms;
+degree bounds can't be dimension-free; thresholds blind to fibers. The viable repair is the
+QUOTIENT (multiplicity-correct carrier graph) — "a different theorem" (prover's repair 5).
+P(index-level floor true) ~ 0.30 (mostly vacuity); P(H-M route closes without redefining
+the floor) ~ 0.18. FOLLOW-ONS LAUNCHED: w15_clone_audit (hostile check incl. the vacuity/
+seed-instance logic + whether exposing functionals lift to the split column space),
+w16_quotient (state Conjecture 2', prove clone-invariance + finisher lumpability, attack).
+
+## w15_periodic_audit (codex) — the periodicity patch HOLDS; constants verified
+Full answer: notes/swarm-answers/w15_periodic_audit.md. Verdict: PATCH HOLDS for CLOSED w12
+positive components (d_i >= 1) in the campaign's max-row-sum norm; N^2 >= 0 so the mixed-term
+bookkeeping is safe; exact threshold 3*delta + 4*delta^2 < 1 iff delta < 1/4; d = 2 is NOT a
+surviving case (C_{r+2} = C_r still forbids self-loops under period 2). Approximate-closure
+tolerance derived: leakage eta < 1 - sqrt(3*delta + 4*delta^2) (or the worsened-zeta variant).
+The finisher display needs delta < (0.85/4)^2 ~ 0.0452 for the denominator. NOT discharged:
+the separate analytic band-closure caveat (already recorded in kernel-conjecture.tex
+:261-264); the patch applies to closed components, not arbitrary carrier SCCs. STATUS: the
+"periodic components" open sub-issue riding with conj:floor is CLOSED for closed components
+(prover w15_periodic + independent hostile audit, P = 0.92/0.87). Doc edit deferred until the
+cloning question settles (conj:floor may be restated as 2').
