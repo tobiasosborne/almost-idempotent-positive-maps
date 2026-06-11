@@ -1519,3 +1519,22 @@ locus point itself). The GLOBAL gap (B-S normal-form distance) stands behind it.
   gap. OVERVIEW §4.9 records the lead.
 - **Branch merged to main** (fast-forward; main was 0 ahead): the classical-portfolio
   work is now part of the main project per user direction.
+
+## w25_hm112 (codex) — Thm 1.12: THE RIGHT GLOBAL COORDINATES, mod ONE merge/conditioning lemma
+Full answer + long form: notes/swarm-answers/w25_hm112.md; numerics:
+experiments/out/w25_hm112/. VERDICT: PARTIALLY — P(1.12 route reaches the global W-free
+statement) = 0.48, the HIGHEST credence yet on the global gap. Thm 1.12 (txt ~:2245;
+restated + loci quoted in the long form) gives an exact global signed parametrization:
+proportional classes C_s + B-rows as combinations + the exact sum rules. CANDIDATE
+LEMMA CHAIN: L1 stochastic 1.12 coordinates -> L2 CLUSTERED CONDITIONING (merge
+near-proportional classes at scale eta — THE missing step) -> L3 signed concentration
+from bounded coordinates -> L4 constructive H-M projection (normalize + clip). THE
+OBSTRUCTION (explicit small-delta split-block family): exact proportional classes can
+SPLIT a limiting recurrent block — B coefficients ~ 1/delta, direct nearest-point stays
+at distance 2 while the MERGED H-M point is 2*delta-close. CONVERGENCE: this is the same
+nearest-branch/merging phenomenon that broke the w23 assembly — the synthesis is
+1.12 global coordinates + the audited recoding/merging theory choosing the stratum +
+clip/normalize. Instance checks: w19 leftcone family harmless here (2*delta direct);
+w16/w17 (above-corner) warn only about singleton-representative choice (their B
+coefficients are already near-convex). P(reading survives audit) = 0.83.
+NEXT: the clustered-conditioning lemma (L2) is the single named missing step.

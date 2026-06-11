@@ -1,0 +1,510 @@
+# VERDICT: PARTIALLY
+
+H-M Theorem 1.12 is a real signed structure theorem for exactly the campaign's
+objects, and it should replace the abstract fixed-space paragraph as the default
+global coordinate system.  It gives actual row representatives, exact signed
+coordinate functions, exact sum rules, and a converse.
+
+It does not, by itself, close the global gap.  The direct candidate
+"normalize each exact `C_s` and clip `B` coefficients" is not stable under
+small signed splittings of a limiting recurrent block: exact proportional-row
+classes can split into several nearly equal independent rows, and then the
+Theorem 1.12 coefficients can be of size `1/delta`.  In that situation the
+right H-M point is obtained by merging near classes, not by normalizing the
+literal exact classes.
+
+So the route is viable as a reduction to named estimates:
+
+\[
+\text{H-M 1.12 coordinates}
+\quad+\quad
+\text{cluster/conditioning estimates}
+\quad\Longrightarrow\quad
+\text{constructive nearby H-M form.}
+\]
+
+The missing estimates are now cleanly named: choose a well-conditioned or
+clustered 1.12 basis, bound signed coefficient blow-up after merging, and prove
+that the signed sum rules concentrate each representative row on its coefficient
+cluster.
+
+Calibration:
+
+\[
+P(\text{1.12 route reaches the global W-free statement}) \approx 0.48.
+\]
+
+\[
+P(\text{this reading survives hostile audit}) \approx 0.83.
+\]
+
+## Loci table
+
+Source: `refs/hognas-mukherjea-2011/hognas-mukherjea-2011.txt`.
+
+I verified the main anchors by `grep -nF`:
+
+| Use | Lines | Byte quote |
+|---|---:|---|
+| Theorem 1.12 starts | 2246 | `Theorem 1.12. Let P be a d ... d idempotent matrix of rank k.` |
+| Real theorem is weaker/nonunique | 2245 | `Real idempotent matrices have a similar but weaker and nonunique structure.` |
+| Statement, partition and equations | 2246-2277 | partition `{T; B; C1; ... Ck}`, rank-one `Cs x D`, equations `(1.1)`-`(1.4)`, converse |
+| Converse statement | 2276-2277 | `Conversely any real matrix P with a partition ... such that (i), (ii), (iii), and (iv) hold is idempotent of rank k.` |
+| Construct classes | 2282-2285 | `Let Rm1 ; ... ; Rmk be k linearly independent rows ...` |
+| Representative proportionality | 2286-2290 | `Phj = gamma(h; ut) Put j` for `h in Ct` |
+| `B` rows are combinations | 2290-2297 | `for i in B, we have (1.1)` because remaining rows are linear combinations |
+| Sum rules from independence | 2321-2329 | `By the linear independence of the "representative rows" ... we have (1.2) and (1.3)` |
+| Converse proof note | 2337 | `Conversely, conditions (1.1)-(1.4) imply that P is idempotent.` |
+| Nonuniqueness example | 2377-2379 | `The partition of P into classes is not unique.` |
+| If `B` empty, uniqueness | 2344-2346 | `If B is empty ... the partition into classes is then unique` |
+| Nonnegative Theorem 1.11 | 2225-2244 | unique basis, zero cross blocks, positive rank-one blocks, converse via Exercise 1.43 |
+| Exercise 1.43 | 2847-2853 | nonnegative block factorization for the `Tc x Tr` block |
+| Infinite-dimensional nonnegative proof | 3079-3210 | Theorem 1.18 proof: positivity gives diagonal positivity, zero-pattern symmetry, rank-one positive blocks |
+| Stochastic specialization | 2767-2777 | stochastic idempotent basis, identical positive rows on each `Cs x Cs`, converse |
+
+## Restatement in campaign language
+
+Let `p_i` be row `i` of `P`.  Theorem 1.12 says: for any real idempotent
+`P^2=P` of rank `k`, after removing exact zero row/column indices `T`, choose
+`k` linearly independent actual rows.  Their proportional-row classes are
+`C_1,...,C_k`.  Every remaining row is a signed linear combination of the
+representatives.
+
+With representatives `u_s in C_s`,
+
+\[
+p_h=\gamma(h,u_s)p_{u_s}\quad(h\in C_s),
+\]
+
+and for `i in B`,
+
+\[
+p_i=\sum_{t=1}^k a_t(i)p_{u_t}. \tag{1.1'}
+\]
+
+The idempotence condition is equivalent to the sum rules
+
+\[
+\sum_{i\in C_s}\gamma(i,u_s)P_{u_s i}
+ +\sum_{i\in B}a_s(i)P_{u_s i}=1, \tag{1.2'}
+\]
+
+\[
+\sum_{i\in C_t}\gamma(i,u_t)P_{u_s i}
+ +\sum_{i\in B}a_t(i)P_{u_s i}=0,\qquad s\ne t, \tag{1.3'}
+\]
+
+\[
+a_t(h)=\sum_{i\in C_t}\gamma(i,u_t)P_{h i}
+ +\sum_{i\in B}a_t(i)P_{h i},\qquad h\in B. \tag{1.4'}
+\]
+
+The converse is exact: a real matrix with such a partition satisfying the
+displayed hypotheses and the extra `T` row formula in (iv) is idempotent of
+rank `k`.
+
+### Row-stochastic specialization
+
+For the campaign, `P 1 = 1`.
+
+1. `T_r` is empty.  A zero row would have row sum `0`, not `1`.  Thus
+   `T=T_c`, the exact zero-column indices.  This matches the stochastic proof
+   line 2776: `Since P is stochastic, Tr is empty`.
+
+2. If `h,u_s in C_s`, proportionality plus row sums gives
+
+\[
+1=p_h1=\gamma(h,u_s)p_{u_s}1=\gamma(h,u_s),
+\]
+
+so all rows in an exact `C_s` class are identical.  The signed `gamma` issue
+disappears for our objects.
+
+3. For `i in B`,
+
+\[
+\sum_{t=1}^k a_t(i)=1
+\]
+
+exactly, because both `p_i` and all representative rows have row sum `1`.
+
+4. Equations (1.2)-(1.4) become
+
+\[
+\sum_{i\in C_s}P_{u_s i}+\sum_{i\in B}a_s(i)P_{u_s i}=1, \tag{S2}
+\]
+
+\[
+\sum_{i\in C_t}P_{u_s i}+\sum_{i\in B}a_t(i)P_{u_s i}=0,\qquad s\ne t, \tag{S3}
+\]
+
+\[
+a_t(h)=\sum_{i\in C_t}P_{h i}+\sum_{i\in B}a_t(i)P_{h i},\qquad h\in B. \tag{S4}
+\]
+
+5. Define coefficient functions
+
+\[
+\alpha_t(i)=
+\begin{cases}
+1,& i\in C_t,\\
+0,& i\in C_s,\ s\ne t,\\
+a_t(i),& i\in B.
+\end{cases}
+\]
+
+Then (S2)-(S4) say exactly that these are right fixed coordinate functions on
+`D \ T`:
+
+\[
+P\alpha_t=\alpha_t,\qquad p_{u_s}\alpha_t=\delta_{st},
+\qquad \sum_t \alpha_t=1.
+\]
+
+For `i in T_c`, statement (iv) gives the analogous coefficients
+
+\[
+\beta_t(i)=\sum_{h\in C_t}P_{ih}+\sum_{h\in B}a_t(h)P_{ih},
+\qquad
+p_i=\sum_t\beta_t(i)p_{u_t},
+\qquad
+\sum_t\beta_t(i)=1.
+\]
+
+In the exact nonnegative stochastic theorem, `B` is absent; the transient rows
+are the zero-column set `T_c`.  In the signed theorem, `B` is different: it is
+the set of nonzero-column rows not proportional to the chosen representative
+rows.
+
+## Proof autopsy
+
+The proof of Theorem 1.12 is pure finite-dimensional linear algebra.
+
+1. Remove `T`.  Lines 2279-2281 observe that the restriction to the complement
+   of `T` is idempotent and has the same rank.  No order or positivity is used.
+
+2. Pick row representatives.  Lines 2282-2285 choose `k` linearly independent
+   rows and define `C_i` as the rows proportional to the chosen row.  The
+   leftover rows are `B`.
+
+3. Express class rows and `B` rows.  Lines 2286-2297 give
+   `p_h=gamma(h,u_t)p_{u_t}` on `C_t`, and `p_i=sum_t a_t(i)p_{u_t}` on `B`,
+   because the chosen representative rows span the row space.
+
+4. Expand `P^2=P`.  Lines 2298-2319 split the idempotency sum over the `C_t`
+   classes and over `B`, then substitute the two representations above.
+
+5. Compare coefficients.  Lines 2321-2329 use linear independence of the
+   representative rows to identify the coefficient of `p_{u_s}` as `1` and all
+   other coefficients as `0`.  This gives (1.2) and (1.3).
+
+6. Do the same for a `B` row.  Lines 2331-2334 give (1.4).  The printed variable
+   is slightly confusing, but the statement and formula are for `h in B`.
+
+7. Converse.  Line 2337 states that (1.1)-(1.4) imply idempotence.  The same
+   expansion is simply read backwards.  Rank `k` follows because the sum rules
+   provide coordinate functionals separating the `k` representative rows:
+   `p_{u_s}\alpha_t=delta_{st}`.
+
+8. Restore `T`.  Lines 2338-2340 say that rows in `T` must be linear
+   combinations of the representatives and must satisfy idempotence.  That is
+   exactly statement (iv).
+
+There is no positivity step anywhere in this proof.  Contrast this with the
+nonnegative proof in Sect. 1.7: positive diagonal uses positivity at 3104-3135,
+zero-pattern symmetry uses zero sums of nonnegative terms at 3136-3148, and
+rank-one positive blocks use strict positivity at 3157-3185.
+
+## What 1.12 adds beyond `P=sum u_s l_s^T`
+
+The w18 fixed-space form says every row lies in the left fixed space:
+
+\[
+P=\sum_s u_s\ell_s^T,\qquad p_i=\sum_s u_s(i)\ell_s^T.
+\]
+
+Theorem 1.12 refines this in four ways:
+
+1. the basis covectors are actual rows of `P`, not arbitrary fixed-space basis
+   vectors;
+2. rows proportional to these actual rows are canonically grouped once the
+   basis rows are chosen;
+3. all other rows carry explicit signed barycentric coordinates `a_t(i)` whose
+   sum is `1` in the row-stochastic case;
+4. the identities (1.2)-(1.4) are the biorthogonality and harmonicity equations
+   for these coordinates.
+
+So 1.12 is a concrete row-space chart with a converse, while w18 is the
+basis-free fixed-space identity.
+
+## Quantitative consequences
+
+Let
+
+\[
+\nu_i=\sum_j(-P_{ij})_+,\qquad \delta=\max_i\nu_i.
+\]
+
+Every row has `ell^1` norm at most `1+2 delta`, so the row diameter is at most
+`2+4 delta`.
+
+### Exact class collapse
+
+For row-stochastic `P`, each exact `C_s` has row diameter zero:
+
+\[
+p_h=p_{u_s}\quad(h\in C_s).
+\]
+
+This is an algebraic collapse, stronger than the Birkhoff-contraction collapse.
+But it is only equality inside the exact proportional class.  It does not say
+that the class is the correct limiting H-M recurrent block.
+
+### If `B` is empty
+
+If `B` is empty, the stochastic specialization gives
+
+\[
+\sum_{i\in C_s}P_{u_s i}=1,\qquad
+\sum_{i\in C_t}P_{u_s i}=0\quad(t\ne s).
+\]
+
+Since columns in `T_c` are zero, row `p_{u_s}` has no mass on `T`.
+For `t != s`, the signed sum on `C_t` is zero, so its positive mass equals its
+negative mass.  Clipping negative entries and normalizing on `C_s` gives a
+probability vector `pi_s` supported on `C_s` with
+
+\[
+\|p_{u_s}-\pi_s\|_1\le 2\nu_{u_s}\le 2\delta.
+\]
+
+Thus the B-free case is genuinely an algebraic `2 delta` recurrent-block
+modulus.
+
+### With `B` present
+
+Write
+
+\[
+E_{st}=\sum_{i\in B}a_t(i)P_{u_s i}.
+\]
+
+Then (S2)-(S3) say
+
+\[
+\sum_{i\in C_s}P_{u_s i}=1-E_{ss},\qquad
+\sum_{i\in C_t}P_{u_s i}=-E_{st}\quad(t\ne s).
+\]
+
+Therefore the cross-class `ell^1` leakage obeys only the conditional estimate
+
+\[
+\|p_{u_s}|_{C_t}\|_1\le |E_{st}|+2\nu_{u_s}(C_t),\qquad t\ne s.
+\]
+
+So the signed sum rules force small cross terms only when the `B` error terms
+`E_{st}` are small.  The theorem alone gives no such bound.
+
+For `B` rows, if
+
+\[
+\mu_i=\sum_t(-a_t(i))_+,
+\]
+
+then
+
+\[
+\operatorname{dist}_1(p_i,\operatorname{conv}\{p_{u_t}\})
+\le (2+4\delta)\mu_i.
+\]
+
+This is the same signed-barycentre estimate as the corrected w19 left-cone
+bound.  It is useful only after one proves `mu_i` is small, or after replacing
+the exact basis by a clustered/merged basis.
+
+## Cancellation obstruction
+
+The identities (S2)-(S3) are exactly the signed replacements for the
+zero-sum-closure steps in the delta-zero autopsy.  They do not become
+inequalities by themselves.
+
+For `epsilon>0`, set
+
+\[
+q_1=(1/2,\ 1/2+\epsilon,\ -\epsilon),
+\]
+
+\[
+q_2=\left({1\over 2(1+2\epsilon)},\ 1/2,\ {\epsilon\over 1+2\epsilon}\right),
+\qquad q_3=e_3,
+\]
+
+and let `P_epsilon` have rows `q_1,q_2,q_3`.  With
+
+\[
+a_1(3)=-{1\over 2\epsilon},\qquad
+a_2(3)=1+{1\over 2\epsilon},
+\]
+
+we have
+
+\[
+q_3=a_1(3)q_1+a_2(3)q_2.
+\]
+
+Theorem 1.12's converse applies with `C_1={1}`, `C_2={2}`, `B={3}`.  Thus
+`P_epsilon^2=P_epsilon`, `P_epsilon 1=1`, `rank P_epsilon=2`, and
+`delta(P_epsilon)=epsilon`.
+
+But the cross term in (S3) is order one:
+
+\[
+P_{1,2}=1/2+\epsilon,
+\]
+
+and it is canceled by a small negative entry times a huge coefficient:
+
+\[
+P_{1,2}+a_2(3)P_{1,3}
+=\left(1/2+\epsilon\right)
+\left(1+{1\over 2\epsilon}\right)(-\epsilon)=0.
+\]
+
+The direct exact-class candidate normalizes `C_1` and `C_2` to singleton
+recurrent blocks.  It stays distance `2` from `P_epsilon` even as
+`epsilon -> 0`.  The correct H-M approximation instead merges the split block:
+
+\[
+Q_\epsilon=
+\begin{pmatrix}
+1/2&1/2&0\\
+1/2&1/2&0\\
+0&0&1
+\end{pmatrix},
+\qquad
+\|P_\epsilon-Q_\epsilon\|_{\infty,1}\le 2\epsilon.
+\]
+
+This is the precise failure mode: exact 1.12 classes can be too fine near a
+lower-dimensional H-M stratum.
+
+## Candidate lemma chain
+
+Theorem 1.12 reduces the global problem to the following bounded estimates.
+
+**Lemma 1: 1.12 stochastic coordinates.**  For every row-stochastic idempotent
+`P`, there are exact coordinate functions `alpha_t` with
+
+\[
+P\alpha_t=\alpha_t,\qquad
+\alpha_t|_{C_s}=\delta_{st},\qquad
+\sum_t\alpha_t=1,\qquad
+p_i=\sum_t\alpha_t(i)p_{u_t}
+\]
+
+on `B` and analogously on `T_c`.
+
+This is Theorem 1.12 plus row sums.
+
+**Lemma 2: clustered conditioning.**  For some scale `eta`, one can merge
+representatives whose rows are `eta`-close and choose coordinates on the merged
+system so that
+
+\[
+\sum_t(-\alpha_t(i))_+\le C{\delta\over \eta}
+\]
+
+and all unmerged representative clusters are `eta`-separated.
+
+This is false for unmerged exact classes, as the split-block family shows.
+
+**Lemma 3: signed concentration from bounded coordinates.**  If the merged
+coordinates satisfy the preceding bound, then each representative row places
+all but
+
+\[
+O\left(\eta+{\delta\over\eta}\right)
+\]
+
+of its `ell^1` mass on its own merged recurrent cluster.
+
+This is where (S2)-(S3) replace the old zero-sum closures.
+
+**Lemma 4: constructive H-M projection.**  Normalize the recurrent cluster rows
+by clipping negatives and renormalizing.  Clip the merged transient coefficient
+vectors to the simplex.  The resulting stochastic H-M idempotent `Q` satisfies
+
+\[
+\|P-Q\|_{\infty,1}\le C\left(\eta+{\delta\over\eta}\right).
+\]
+
+Choosing `eta=sqrt(delta)` gives the W-free `O(sqrt(delta))` target.  A linear
+height law would still need the variety/visibility machinery after this global
+near-locus step.
+
+Possible failure points:
+
+1. exact 1.12 nonuniqueness can choose a badly conditioned basis;
+2. `B` coefficients can be unbounded in the exact unmerged chart;
+3. direct exact-class normalization can miss the nearest H-M stratum;
+4. for non-row-stochastic real idempotents, signed/large `gamma` factors are a
+   genuine issue, but for campaign matrices row sums force `gamma=1`.
+
+## Numerical checks
+
+Script used: `analyze_hm112.py` in this workdir.  It uses the certified
+factorisations where available.
+
+The direct candidate here is: exact singleton `C_s` representatives become
+singleton recurrent states, and `B` coefficients are clipped to the simplex.
+
+| Instance | delta | k | max coeff neg | max direct distance | distance/delta | comment |
+|---|---:|---:|---:|---:|---:|---|
+| w19 leftcone, eps=1e-3 | 0.001000 | 3 | 0 | 0.002000 | 2.00 | harmless: rows sit in `C1={1}, C2={2}, C3={3}, B={4}`, with convex `B` coefficient `(1/3,1/3,1/3)` |
+| w16 best rational | 0.228400 | 4 | 0.003774 | 1.937252 | 8.48 | coefficients almost convex; direct singleton recurrent choice poor because a representative row is far from its singleton |
+| w17 main rational | 0.232934 | 5 | 0.023872 | 1.872420 | 8.04 | same pattern, above the small-delta corner |
+| w17 robust rational | 0.234592 | 5 | 0.023910 | 1.885713 | 8.04 | same pattern |
+| split-block eps=1e-3 | 0.001000 | 2 | 500 | 2.000000 | 2000 | exact-class route fails; merged H-M distance is 0.002 |
+| split-block eps=1e-4 | 0.000100 | 2 | 5000 | 2.000000 | 20000 | same obstruction, worse conditioning; merged H-M distance is 0.0002 |
+
+The w19 counterexample refutes a left-fixed extreme-point proximity lemma, but it
+does not refute the 1.12 row-structure route.  Its 1.12 partition is well
+conditioned and the direct H-M candidate is `2 delta` close.
+
+The certified w16/w17 instances are not small-delta tests; they sit above the
+corner scale and mainly warn that exact singleton representatives are often the
+wrong nearest branch.  Their `B` coefficients are already close to convex, so
+the obstruction there is not coefficient negativity.  It is recurrent-block
+choice/merging.
+
+## Relation to the variety programme
+
+Theorem 1.12 complements the variety programme; it does not subsume it.
+
+It gives a global exact parametrization of the idempotent variety by actual rows
+and signed coordinates.  That is stronger than the local charts as a bookkeeping
+device and may bypass the broken visibility assembly once a nearby H-M stratum
+has been found.
+
+But the parametrization is singular at exactly the places the variety programme
+cares about: class mergers, support additions, and lower-dimensional H-M strata.
+The split-block family is the local model.  The exact 1.12 chart sees two
+singleton `C` classes with huge `B` coefficients; the nearest H-M point sees one
+merged recurrent block.
+
+Therefore the practical synthesis is:
+
+\[
+\text{Use 1.12 to get global signed coordinates,}
+\]
+
+\[
+\text{use the variety programme to choose/justify the correct merged H-M stratum,}
+\]
+
+\[
+\text{then use clipping/normalization to construct the nearby H-M point.}
+\]
+
+That is a real bridge, but it is not the one-line direct bridge suggested by
+normalizing the literal exact proportional classes.

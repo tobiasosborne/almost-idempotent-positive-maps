@@ -298,8 +298,15 @@ declared sign-rigid. The whole campaign missed it (the autopsies targeted Thms 1
 1.16, 2.2). Candidate payoff: an algebraic route to the GLOBAL gap — quantify how
 near-positivity forces the C_s classes toward equal-input blocks and the B-rows
 toward convex mixtures, possibly giving the nearest H-M point constructively (and
-bypassing the broken assembly's visibility issue). → `w25_hm112` (in flight at the
-time of writing; check `notes/swarm-answers/`).
+bypassing the broken assembly's visibility issue). VERDICT (`w25_hm112`): PARTIALLY —
+the right global coordinate system, with a 4-lemma candidate chain to the global gap
+(P ≈ 0.48, the highest credence yet); the naive nearest-point construction fails on a
+precise obstruction (exact proportional classes can SPLIT a limiting recurrent block —
+coefficients blow up like 1/δ; the MERGED stratum point is 2δ-close), which is the
+same nearest-branch/merging phenomenon that broke the local-law assembly. Synthesis:
+1.12 coordinates + the audited recoding/merging theory + clip/normalize. The single
+named missing step is the **clustered-conditioning lemma** (merge near-proportional
+classes at a scale η).
 
 
 ## 5. What a future agent should do (and not do)
