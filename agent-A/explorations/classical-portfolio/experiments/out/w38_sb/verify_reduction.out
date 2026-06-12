@@ -1,0 +1,6 @@
+transverse_pair_a1_4: delta=1/5 class=5 star=[1, 2, 3] Phi/delta=1 S+*/delta=['3/2', '3/2', '2'] SIG_fail_terms_in_class=2 checks={'BL': True, 'P2': True, 'rowsum': True}
+dense_pair_k7_a1_4: delta=6/17 class=9 star=[1, 2, 3, 4, 5, 6, 7] Phi/delta=1 S+*/delta=['5/4', '5/4', '5/4', '7/4', '7/4', '7/4', '2'] SIG_fail_terms_in_class=6 checks={'BL': True, 'P2': True, 'rowsum': True}
+staircase_m2: delta=1/2 class=15 star=[1, 2, 3, 4, 5] Phi/delta=1 S+*/delta=['3/2', '3/2', '2', '2', '0'] SIG_fail_terms_in_class=8 checks={'BL': True, 'P2': True, 'rowsum': True}
+staircase_m3: delta=1/2 class=21 star=[1, 2, 3, 4, 5, 6, 7] Phi/delta=1 S+*/delta=['4/3', '4/3', '4/3', '2', '2', '2', '0'] SIG_fail_terms_in_class=12 checks={'BL': True, 'P2': True, 'rowsum': True}
+perturbed_staircase_m5_eps1e-3: delta=1/2 class=23 star=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] Phi/delta=1 S+*/delta=['6/5', '6/5', '6/5', '6/5', '6/5', '2', '2', '2', '2', '2', '5001/1000000'] SIG_fail_terms_in_class=22 checks={'BL': True, 'P2': True, 'rowsum': True}
+  star SIG first failure: {'s': 10, 'u': 11, 'j': 0, 'beta': '999/1000000', 'lambda': '-1/999', 'mu': '1667/666', 'sigma': '4999/1998', 'E': '5003/1998', 'w_E_minus_sigma': '1/500000'}

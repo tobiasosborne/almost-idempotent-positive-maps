@@ -1,6 +1,7 @@
 # w37_opus — PARTIAL: the open reduced to ONE scalar display (SB); selection proven irreducible; a w35 step CORRECTED at theta=1/2 (opus, 2026-06-12)
 # Worker: Claude Opus (second family, independent line). Long form: experiments/out/w37_opus/proof.md (+ charge_lp.py, nocenter_lp.py, nocenter_exact.py, predecessor harness reused).
 
+# CORRECTION (2026-06-13, w38_sb): (SIG) E <= sigma REFUTED at theta=1/2 (overshoot rows a_s > 1); (SB) as stated does NOT imply the contract — see notes/swarm-answers/w38_sb.md for the exact witness and the corrected target (SB'). (R), (DEF), and the irreducibility witnesses are unaffected and CONFIRMED.
 VERDICT: PARTIAL — SF/(CHARGE) not proved; no selected-chart counterexample; the open is now
 the single display (SB), strictly cleaner than (TREE) (no shear tree, no charge weights).
 - (R) SIGN-ROBUST REFORMULATION (banked): E_s(j) = (sigma_s(j) - 2 lambda_s(j))_+ with
