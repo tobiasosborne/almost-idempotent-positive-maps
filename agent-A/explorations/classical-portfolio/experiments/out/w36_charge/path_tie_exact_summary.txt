@@ -1,0 +1,4 @@
+path_tie_k6_a1_100_mass99_100: delta=40/4001 ties=9 selected_basis=[0, 1, 2, 3, 4, 5] selected_ratio=396099/400000 audit_basis_ratio=207207/128000 worst_ratio=1036067/640000 checks=BL:True P2:True rows:True
+path_tie_k8_a1_100_mass99_100: delta=300/30007 ties=13 selected_basis=[0, 1, 2, 3, 4, 5, 6, 7] selected_ratio=990231/1000000 audit_basis_ratio=20911279/12000000 worst_ratio=20911279/12000000 checks=BL:True P2:True rows:True
+path_no_center_k6_a1_100_mass1: delta=40/4001 ties=8 selected_basis=[0, 1, 2, 3, 4, 7] selected_ratio=59999/40000 audit_basis_ratio=59999/40000 worst_ratio=260017/160000 checks=BL:True P2:True rows:True
+path_no_center_k8_a1_100_mass1: delta=300/30007 ties=12 selected_basis=[0, 1, 2, 3, 4, 5, 6, 11] selected_ratio=149999/90000 audit_basis_ratio=149999/90000 worst_ratio=210013/120000 checks=BL:True P2:True rows:True

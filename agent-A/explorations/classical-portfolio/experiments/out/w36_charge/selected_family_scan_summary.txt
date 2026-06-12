@@ -1,0 +1,19 @@
+halfcex cap=1/4:
+  m=2 a=1/6 delta=1/4 selected=1 max_tie=4/3
+  m=3 a=43/400 delta=1/4 selected=57147/57200 max_tie=129/100
+  m=4 a=191/2400 delta=1/4 selected=265681/265950 max_tie=191/150
+  m=5 a=151/2400 delta=1/4 selected=143601/144320 max_tie=151/120
+  m=6 a=21/400 delta=1/4 selected=7623/7625 max_tie=63/50
+  m=7 a=107/2400 delta=1/4 selected=439663/442080 max_tie=749/600
+  m=8 a=47/1200 delta=1/4 selected=23218/23225 max_tie=94/75
+  m=9 a=83/2400 delta=1/4 selected=742269/745600 max_tie=249/200
+  m=10 a=1/32 delta=1/4 selected=1 max_tie=5/4
+  m=11 a=17/600 delta=1/4 selected=46937/47000 max_tie=187/150
+  m=12 a=31/1200 delta=1/4 selected=4681/4705 max_tie=31/25
+path no-center a=1/100 float scan:
+  k=6 edges=4 delta=0.009997500625 selected=1.4999750000 worst=1.6251062500
+  k=8 edges=6 delta=0.009997667211 selected=1.6666555556 worst=1.7501083333
+  k=10 edges=8 delta=0.009997750506 selected=1.7499937500 worst=1.8126078125
+  k=12 edges=10 delta=0.009997800484 selected=1.7999960000 worst=1.8501070000
+  k=20 edges=18 delta=0.009997889335 selected=1.8888987654 worst=1.9167712963
+  k=40 edges=38 delta=0.00999794779 selected=1.9473734071 worst=1.9606287395

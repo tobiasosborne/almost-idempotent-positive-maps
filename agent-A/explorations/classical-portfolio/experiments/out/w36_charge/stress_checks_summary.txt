@@ -1,0 +1,4 @@
+transverse_pair_a1_4: delta=1/5 ties=3 best_basis=[1, 2, 3] best_max_ratio=1 worst_max_ratio=5/4 checks=BL:True P2:True rows:True
+dense_pair_k7_a1_4: delta=6/17 ties=3 best_basis=[1, 2, 3, 4, 5, 6, 7] best_max_ratio=1 worst_max_ratio=17/8 checks=BL:True P2:True rows:True
+staircase_m2_a1_2: delta=1/2 ties=7 best_basis=[1, 2, 3, 4, 5] best_max_ratio=1 worst_max_ratio=2 checks=BL:True P2:True rows:True
+staircase_m3_a1_2: delta=1/2 ties=9 best_basis=[1, 2, 3, 4, 5, 6, 7] best_max_ratio=1 worst_max_ratio=3 checks=BL:True P2:True rows:True
