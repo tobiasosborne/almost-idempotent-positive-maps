@@ -56,10 +56,19 @@ Branch: agent-a/classical-portfolio. Rewritten at session close (2026-06-11, day
 > threshold sweep shows adversarial-tie ratios growing with m for cap ≳ 0.45 but bounded
 > (≤ 5/3, decreasing in m) at cap = 0.3. If it died mid-run: harvest its workdir snapshot,
 > else `codex exec resume --last`, else relaunch notes/briefs/w34_halfcex.md.
-> WAVE-35 BRIEF-READY QUESTIONS: (1) does the w30 displacement reduction tolerate a CHOSEN
-> max-volume basis (exists-quantifier SF)? (2) deterministic tie-break (prefer signed-face
-> rows) + the dual-flow charging bound = the proof target at δ₀ ≤ 0.3 (C ≈ 5/3–2 expected);
-> (3) small-δ₀ scaling of the staircase family under the FOR-ALL reading.
+> WAVE-35 RESOLVED THE FORK (both verdicts archived, notes/swarm-answers/w35_*):
+> w35_quantifier = CHAIN-COMPATIBLE: the chain composes with the EXISTS-θ-quasi-max form;
+> registry-ready contract written (max_s SF_s(U) ≤ C_sf(δ₀,θ)·δ for some basis U with
+> Vol ≥ θ·Vol_max, δ₀ ≤ 0.3); constants chain explicit (C_D = 4(1+2δ₀)(C_sf+1+1/θ));
+> ONE routing caveat (w27 scalar telescope needs the exact-max sign fact — route around).
+> w35_charge = PARTIAL: selection U* = argmin_ties max_s SF_s well-defined (θ=1); the
+> min-max chart collapses EVERY known bad instance to ratio EXACTLY 1 (even staircase at
+> δ=1/2). THE single named open = **(CHARGE)**: SF_s(U*) ≤ Σ_i q_si·ν_i(P) with
+> Σ_i q_si ≤ C(δ₀) — obstruction = the tie-swap shear formula (S); the path-tie
+> saturation-at-2 family demands a recurrence/dual certificate, not single-swap arguments.
+> WAVE 36 (launched): w36_charge (prove (CHARGE) / Φ(U*) ≤ Cδ directly) ∥ w36_audit
+> (hostile audit of both w35 verdicts; flag: w35_charge's deficit bound uses the exact-max
+> sign fact — consistency with the quantifier's routing caveat must be checked).
 > ACQUISITIONS (TIB was briefly up): 7/8 papers staged in refs-staging/ + ACQUIRED.md
 > (manifest lockstep PENDING); Chakraborty–Mukherjea Contemp. Math. 516 (the P=LM source,
 > H-M ref [32]) FAILED (AMS Cloudflare) — needs a manual browser download.
