@@ -1,0 +1,7 @@
+transverse_pair_a1_4: delta=1/5 class=5 V/d_max_CLASS=1 Dpos/d_max_CLASS=3 box_max_CLASS=2 VID_ok=True
+dense_pair_k7_a1_4: delta=6/17 class=9 V/d_max_CLASS=1/3 Dpos/d_max_CLASS=5/3 box_max_CLASS=2 VID_ok=True
+staircase_m2: delta=1/2 class=15 V/d_max_CLASS=1 Dpos/d_max_CLASS=3/2 box_max_CLASS=2 VID_ok=True
+staircase_m3: delta=1/2 class=21 V/d_max_CLASS=1 Dpos/d_max_CLASS=4/3 box_max_CLASS=2 VID_ok=True
+perturbed_staircase_m5_eps1e-3: delta=1/2 class=23 V/d_max_CLASS=1663/1667 Dpos/d_max_CLASS=6/5 box_max_CLASS=10000/5001 VID_ok=True
+no_center_path_k6: delta=1/100 class=8 V/d_max_CLASS=0 Dpos/d_max_CLASS=1 box_max_CLASS=1 VID_ok=True
+no_center_path_k8: delta=1/100 class=12 V/d_max_CLASS=0 Dpos/d_max_CLASS=1 box_max_CLASS=1 VID_ok=True

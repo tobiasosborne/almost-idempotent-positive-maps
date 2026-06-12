@@ -1,0 +1,54 @@
+transverse_pair_a1_4: delta=1/5 R_ok=True P1_ok=True P2_ok=True S*/d_max(SB*const)=2
+    s=0: SF/d=0 S*/d=3/2 S+/d=3/2 V/d=0 M/d=0
+    s=1: SF/d=0 S*/d=3/2 S+/d=3/2 V/d=0 M/d=1/2
+    s=2: SF/d=1 S*/d=2 S+/d=2 V/d=0 M/d=1
+dense_pair_k7_a1_4: delta=6/17 R_ok=True P1_ok=True P2_ok=True S*/d_max(SB*const)=2
+    s=0: SF/d=0 S*/d=5/4 S+/d=5/4 V/d=0 M/d=0
+    s=1: SF/d=0 S*/d=5/4 S+/d=5/4 V/d=0 M/d=0
+    s=2: SF/d=0 S*/d=5/4 S+/d=5/4 V/d=0 M/d=0
+    s=3: SF/d=1/2 S*/d=7/4 S+/d=7/4 V/d=0 M/d=3/4
+    s=4: SF/d=1/2 S*/d=7/4 S+/d=7/4 V/d=0 M/d=3/4
+    s=5: SF/d=1/2 S*/d=7/4 S+/d=7/4 V/d=0 M/d=3/4
+    s=6: SF/d=1 S*/d=2 S+/d=2 V/d=0 M/d=1
+staircase_m2: delta=1/2 R_ok=True P1_ok=True P2_ok=True S*/d_max(SB*const)=2
+    s=0: SF/d=0 S*/d=3/2 S+/d=3/2 V/d=0 M/d=0
+    s=1: SF/d=0 S*/d=3/2 S+/d=3/2 V/d=0 M/d=0
+    s=2: SF/d=1 S*/d=2 S+/d=2 V/d=0 M/d=1
+    s=3: SF/d=1 S*/d=2 S+/d=2 V/d=0 M/d=1
+    s=4: SF/d=0 S*/d=0 S+/d=0 V/d=0 M/d=0
+staircase_m3: delta=1/2 R_ok=True P1_ok=True P2_ok=True S*/d_max(SB*const)=2
+    s=0: SF/d=0 S*/d=4/3 S+/d=4/3 V/d=0 M/d=0
+    s=1: SF/d=0 S*/d=4/3 S+/d=4/3 V/d=0 M/d=0
+    s=2: SF/d=0 S*/d=4/3 S+/d=4/3 V/d=0 M/d=0
+    s=3: SF/d=1 S*/d=2 S+/d=2 V/d=0 M/d=1
+    s=4: SF/d=1 S*/d=2 S+/d=2 V/d=0 M/d=1
+    s=5: SF/d=1 S*/d=2 S+/d=2 V/d=0 M/d=1
+    s=6: SF/d=0 S*/d=0 S+/d=0 V/d=0 M/d=0
+perturbed_staircase_m5_eps1e-3: delta=1/2 R_ok=True P1_ok=True P2_ok=True S*/d_max(SB*const)=2
+    s=0: SF/d=0 S*/d=6/5 S+/d=6/5 V/d=0 M/d=0
+    s=1: SF/d=0 S*/d=6/5 S+/d=6/5 V/d=0 M/d=0
+    s=2: SF/d=0 S*/d=6/5 S+/d=6/5 V/d=0 M/d=0
+    s=3: SF/d=0 S*/d=6/5 S+/d=6/5 V/d=0 M/d=0
+    s=4: SF/d=0 S*/d=6/5 S+/d=6/5 V/d=0 M/d=0
+    s=5: SF/d=1 S*/d=2 S+/d=2 V/d=0 M/d=1
+    s=6: SF/d=1 S*/d=2 S+/d=2 V/d=0 M/d=1
+    s=7: SF/d=1 S*/d=2 S+/d=2 V/d=0 M/d=1
+    s=8: SF/d=1 S*/d=2 S+/d=2 V/d=0 M/d=1
+    s=9: SF/d=1 S*/d=2 S+/d=2 V/d=0 M/d=1
+    s=10: SF/d=5003/1000000 S*/d=1001/200000 S+/d=5001/1000000 V/d=1/500000 M/d=5001/1000000
+no_center_path_k6: delta=1/100 R_ok=True P1_ok=True P2_ok=True S*/d_max(SB*const)=5/2
+    s=0: SF/d=0 S*/d=0 S+/d=0 V/d=0 M/d=0
+    s=1: SF/d=0 S*/d=0 S+/d=0 V/d=0 M/d=0
+    s=2: SF/d=0 S*/d=0 S+/d=0 V/d=0 M/d=0
+    s=3: SF/d=0 S*/d=0 S+/d=0 V/d=0 M/d=0
+    s=4: SF/d=0 S*/d=0 S+/d=0 V/d=0 M/d=0
+    s=5: SF/d=3/2 S*/d=5/2 S+/d=5/2 V/d=0 M/d=3/2
+no_center_path_k8: delta=1/100 R_ok=True P1_ok=True P2_ok=True S*/d_max(SB*const)=8/3
+    s=0: SF/d=0 S*/d=0 S+/d=0 V/d=0 M/d=0
+    s=1: SF/d=0 S*/d=0 S+/d=0 V/d=0 M/d=0
+    s=2: SF/d=0 S*/d=0 S+/d=0 V/d=0 M/d=0
+    s=3: SF/d=0 S*/d=0 S+/d=0 V/d=0 M/d=0
+    s=4: SF/d=0 S*/d=0 S+/d=0 V/d=0 M/d=0
+    s=5: SF/d=0 S*/d=0 S+/d=0 V/d=0 M/d=0
+    s=6: SF/d=0 S*/d=0 S+/d=0 V/d=0 M/d=0
+    s=7: SF/d=5/3 S*/d=8/3 S+/d=8/3 V/d=0 M/d=5/3

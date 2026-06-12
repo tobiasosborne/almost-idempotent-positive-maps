@@ -1,0 +1,523 @@
+[
+  {
+    "Dneg": [
+      "3/10",
+      "1/5",
+      "1/5"
+    ],
+    "Dpos_max_over_delta": "3/2",
+    "Dpos_over_delta": [
+      "3/2",
+      "1",
+      "1"
+    ],
+    "Phi_over_delta": "1",
+    "R_ok": true,
+    "Splus_over_delta": [
+      "3/2",
+      "3/2",
+      "2"
+    ],
+    "Sstar_max_over_delta": "2",
+    "Sstar_over_delta": [
+      "3/2",
+      "3/2",
+      "2"
+    ],
+    "V_max_over_delta": "0",
+    "V_over_delta": [
+      "0",
+      "0",
+      "0"
+    ],
+    "checks": {
+      "P2": true,
+      "rowsum": true
+    },
+    "class_size": 5,
+    "def_zero": true,
+    "delta": "1/5",
+    "k": 3,
+    "maxvol": "1",
+    "n": 5,
+    "n_sig_fail_in_star": 0,
+    "name": "transverse_pair_a1_4",
+    "ptbound_ok": true,
+    "sig_fail_first": null,
+    "star_basis": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "Dneg": [
+      "15/34",
+      "15/34",
+      "15/34",
+      "6/17",
+      "6/17",
+      "6/17",
+      "6/17"
+    ],
+    "Dpos_max_over_delta": "5/4",
+    "Dpos_over_delta": [
+      "5/4",
+      "5/4",
+      "5/4",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "Phi_over_delta": "1",
+    "R_ok": true,
+    "Splus_over_delta": [
+      "5/4",
+      "5/4",
+      "5/4",
+      "7/4",
+      "7/4",
+      "7/4",
+      "2"
+    ],
+    "Sstar_max_over_delta": "2",
+    "Sstar_over_delta": [
+      "5/4",
+      "5/4",
+      "5/4",
+      "7/4",
+      "7/4",
+      "7/4",
+      "2"
+    ],
+    "V_max_over_delta": "0",
+    "V_over_delta": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "checks": {
+      "P2": true,
+      "rowsum": true
+    },
+    "class_size": 9,
+    "def_zero": true,
+    "delta": "6/17",
+    "k": 7,
+    "maxvol": "1",
+    "n": 9,
+    "n_sig_fail_in_star": 0,
+    "name": "dense_pair_k7_a1_4",
+    "ptbound_ok": true,
+    "sig_fail_first": null,
+    "star_basis": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "Dneg": [
+      "3/4",
+      "3/4",
+      "1/2",
+      "1/2",
+      "0"
+    ],
+    "Dpos_max_over_delta": "3/2",
+    "Dpos_over_delta": [
+      "3/2",
+      "3/2",
+      "1",
+      "1",
+      "0"
+    ],
+    "Phi_over_delta": "1",
+    "R_ok": true,
+    "Splus_over_delta": [
+      "3/2",
+      "3/2",
+      "2",
+      "2",
+      "0"
+    ],
+    "Sstar_max_over_delta": "2",
+    "Sstar_over_delta": [
+      "3/2",
+      "3/2",
+      "2",
+      "2",
+      "0"
+    ],
+    "V_max_over_delta": "0",
+    "V_over_delta": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "checks": {
+      "P2": true,
+      "rowsum": true
+    },
+    "class_size": 15,
+    "def_zero": true,
+    "delta": "1/2",
+    "k": 5,
+    "maxvol": "1",
+    "n": 7,
+    "n_sig_fail_in_star": 0,
+    "name": "staircase_m2",
+    "ptbound_ok": true,
+    "sig_fail_first": null,
+    "star_basis": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "Dneg": [
+      "2/3",
+      "2/3",
+      "2/3",
+      "1/2",
+      "1/2",
+      "1/2",
+      "0"
+    ],
+    "Dpos_max_over_delta": "4/3",
+    "Dpos_over_delta": [
+      "4/3",
+      "4/3",
+      "4/3",
+      "1",
+      "1",
+      "1",
+      "0"
+    ],
+    "Phi_over_delta": "1",
+    "R_ok": true,
+    "Splus_over_delta": [
+      "4/3",
+      "4/3",
+      "4/3",
+      "2",
+      "2",
+      "2",
+      "0"
+    ],
+    "Sstar_max_over_delta": "2",
+    "Sstar_over_delta": [
+      "4/3",
+      "4/3",
+      "4/3",
+      "2",
+      "2",
+      "2",
+      "0"
+    ],
+    "V_max_over_delta": "0",
+    "V_over_delta": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "checks": {
+      "P2": true,
+      "rowsum": true
+    },
+    "class_size": 21,
+    "def_zero": true,
+    "delta": "1/2",
+    "k": 7,
+    "maxvol": "1",
+    "n": 9,
+    "n_sig_fail_in_star": 0,
+    "name": "staircase_m3",
+    "ptbound_ok": true,
+    "sig_fail_first": null,
+    "star_basis": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "Dneg": [
+      "3/5",
+      "3/5",
+      "3/5",
+      "3/5",
+      "3/5",
+      "1/2",
+      "1/2",
+      "1/2",
+      "1/2",
+      "1/2",
+      "0"
+    ],
+    "Dpos_max_over_delta": "6/5",
+    "Dpos_over_delta": [
+      "6/5",
+      "6/5",
+      "6/5",
+      "6/5",
+      "6/5",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1/500000"
+    ],
+    "Phi_over_delta": "1",
+    "R_ok": true,
+    "Splus_over_delta": [
+      "6/5",
+      "6/5",
+      "6/5",
+      "6/5",
+      "6/5",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "5001/1000000"
+    ],
+    "Sstar_max_over_delta": "2",
+    "Sstar_over_delta": [
+      "6/5",
+      "6/5",
+      "6/5",
+      "6/5",
+      "6/5",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "1001/200000"
+    ],
+    "V_max_over_delta": "1/500000",
+    "V_over_delta": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/500000"
+    ],
+    "checks": {
+      "P2": true,
+      "rowsum": true
+    },
+    "class_size": 23,
+    "def_zero": true,
+    "delta": "1/2",
+    "k": 11,
+    "maxvol": "1",
+    "n": 13,
+    "n_sig_fail_in_star": 1,
+    "name": "perturbed_staircase_m5_eps1e-3",
+    "ptbound_ok": true,
+    "sig_fail_first": {
+      "E": "5003/1998",
+      "j": 0,
+      "lambda": "-1/999",
+      "overshoot_2neglam": "2/999",
+      "s": 10,
+      "sigma": "4999/1998",
+      "u": 11
+    },
+    "star_basis": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  {
+    "Dneg": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/100"
+    ],
+    "Dpos_max_over_delta": "1",
+    "Dpos_over_delta": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1"
+    ],
+    "Phi_over_delta": "3/2",
+    "R_ok": true,
+    "Splus_over_delta": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "5/2"
+    ],
+    "Sstar_max_over_delta": "5/2",
+    "Sstar_over_delta": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "5/2"
+    ],
+    "V_max_over_delta": "0",
+    "V_over_delta": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "checks": {
+      "P2": true,
+      "rowsum": true
+    },
+    "class_size": 8,
+    "def_zero": true,
+    "delta": "1/100",
+    "k": 6,
+    "maxvol": "1",
+    "n": 13,
+    "n_sig_fail_in_star": 0,
+    "name": "no_center_path_k6",
+    "ptbound_ok": true,
+    "sig_fail_first": null,
+    "star_basis": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7
+    ]
+  },
+  {
+    "Dneg": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/100"
+    ],
+    "Dpos_max_over_delta": "1",
+    "Dpos_over_delta": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1"
+    ],
+    "Phi_over_delta": "5/3",
+    "R_ok": true,
+    "Splus_over_delta": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "8/3"
+    ],
+    "Sstar_max_over_delta": "8/3",
+    "Sstar_over_delta": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "8/3"
+    ],
+    "V_max_over_delta": "0",
+    "V_over_delta": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "checks": {
+      "P2": true,
+      "rowsum": true
+    },
+    "class_size": 12,
+    "def_zero": true,
+    "delta": "1/100",
+    "k": 8,
+    "maxvol": "1",
+    "n": 19,
+    "n_sig_fail_in_star": 0,
+    "name": "no_center_path_k8",
+    "ptbound_ok": true,
+    "sig_fail_first": null,
+    "star_basis": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9
+    ]
+  }
+]

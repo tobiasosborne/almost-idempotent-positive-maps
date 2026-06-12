@@ -1,0 +1,72 @@
+[
+  {
+    "name": "transverse_pair_a1_4",
+    "delta": "1/5",
+    "class_size": 5,
+    "V/d max over CLASS": "1",
+    "D+/d max over CLASS": "3",
+    "2V/d (=S*-S+ gap) max over CLASS": "2",
+    "V/d at ARGMIN": "0",
+    "D+/d at ARGMIN": "3/2"
+  },
+  {
+    "name": "dense_pair_k7_a1_4",
+    "delta": "6/17",
+    "class_size": 9,
+    "V/d max over CLASS": "1/3",
+    "D+/d max over CLASS": "5/3",
+    "2V/d (=S*-S+ gap) max over CLASS": "2/3",
+    "V/d at ARGMIN": "0",
+    "D+/d at ARGMIN": "5/4"
+  },
+  {
+    "name": "staircase_m2",
+    "delta": "1/2",
+    "class_size": 15,
+    "V/d max over CLASS": "1",
+    "D+/d max over CLASS": "3/2",
+    "2V/d (=S*-S+ gap) max over CLASS": "2",
+    "V/d at ARGMIN": "0",
+    "D+/d at ARGMIN": "3/2"
+  },
+  {
+    "name": "staircase_m3",
+    "delta": "1/2",
+    "class_size": 21,
+    "V/d max over CLASS": "1",
+    "D+/d max over CLASS": "4/3",
+    "2V/d (=S*-S+ gap) max over CLASS": "2",
+    "V/d at ARGMIN": "0",
+    "D+/d at ARGMIN": "4/3"
+  },
+  {
+    "name": "perturbed_staircase_m5_eps1e-3",
+    "delta": "1/2",
+    "class_size": 23,
+    "V/d max over CLASS": "1663/1667",
+    "D+/d max over CLASS": "6/5",
+    "2V/d (=S*-S+ gap) max over CLASS": "3326/1667",
+    "V/d at ARGMIN": "1/500000",
+    "D+/d at ARGMIN": "6/5"
+  },
+  {
+    "name": "no_center_path_k6",
+    "delta": "1/100",
+    "class_size": 8,
+    "V/d max over CLASS": "0",
+    "D+/d max over CLASS": "1",
+    "2V/d (=S*-S+ gap) max over CLASS": "0",
+    "V/d at ARGMIN": "0",
+    "D+/d at ARGMIN": "1"
+  },
+  {
+    "name": "no_center_path_k8",
+    "delta": "1/100",
+    "class_size": 12,
+    "V/d max over CLASS": "0",
+    "D+/d max over CLASS": "1",
+    "2V/d (=S*-S+ gap) max over CLASS": "0",
+    "V/d at ARGMIN": "0",
+    "D+/d at ARGMIN": "1"
+  }
+]
