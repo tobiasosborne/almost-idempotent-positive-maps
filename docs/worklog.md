@@ -624,3 +624,23 @@ byte-pinned; catalog notes/hm-book-mining.md); 7/8 wave-18 refs acquired to refs
 (manifest lockstep pending; C-M Contemp.Math.516 needs manual TIB browser download); gurobi
 broken INSIDE codex sandbox (HostID; LLM-LEARNINGS), wolframscript flaky-first-call.
 MERGED TO MAIN at user direction ("this is main work"); work continues on main.
+
+## 2026-06-13 — waves 38-43: refute-repair-prove cycle; RANK-2 THEOREM; the kernel is now (EX); consolidation
+
+The adversarial loop earned its keep: w38 (codex) REFUTED the opus (SIG) step at theta=1/2
+(overshoot rows a_s > 1; exact 1e-6 witness) => w39 (opus) repaired it exactly ((P1):
+E <= sigma + 2(-lambda)_+; corrected display (SB*); overshoot provably not-free) => w40
+(codex) cross-confirmed the repair AND proved the **RANK-2 THEOREM**: every theta-half
+Phi-argmin chart has Phi = 0, V = 0, S* <= 2 delta — the first unconditional selected-chart
+bound (max-diameter mechanism; no tie-break needed). Orchestrator spotted that the rank-2
+proof FACTORIZES; w41 (codex) verified it: S*_s <= 2 Phi_s + 6 delta for ANY theta-half
+chart (0 violations / 7573 charts) — so the WHOLE CAMPAIGN reduces to the existence
+statement (EX): exists a theta-half actual-row chart with Phi <= C0 delta. w41 also ran
+(EX) at rank 3 adversarially: HOLDS EMPIRICALLY with C0 = 1 exactly (278 exact records,
+53 structured adversarial). w42 (opus, hostile) CONFIRMED the factorization 2-family
+(constants (2,6) TIGHT, class-wide, no hidden delta-dependence; composition C_sf = 2C0+6
+clean; 0.99). CONSOLIDATION: w43 (codex) drafting kernel-conjecture v2 (the (EX)
+interface); beads filed for the rank-2 opus pass + Recipe A->B banking of the belt;
+aipm-3u6 notes updated; HANDOFF frontier block rewritten (waves 33-37 narratives compacted
+to the swarm-answers pointers). Chain if (EX) lands: C_sf = 2C0+6 => w35 constants
+(theta=1/2, A=2) => displacement => face/L4 => global O(sqrt delta) => op-classical.

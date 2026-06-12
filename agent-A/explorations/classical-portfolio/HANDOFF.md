@@ -32,66 +32,33 @@ Branch: agent-a/classical-portfolio. Rewritten at session close (2026-06-11, day
 >    relaunch from the brief pattern in the worklog 2026-06-11(cont.) entry) →
 >    `aipm-e71` (HLC) → epic `aipm-and`. Report bead `aipm-sjw` done.
 
-> ## UPDATE 2026-06-12 — the kernel has MOVED (waves 24–32 + the w33 relaunch)
-> The path-product-floor kernel below is SUPERSEDED by the Högnäs–Mukherjea 1.12
-> coordinate route (waves 25–31; commits a80c725..b8da7ca; verdicts in
-> `notes/swarm-answers/w25_hm112..w31_tax.md`). Current single open core =
-> **the signed-face excess (SF)**: with u_1..u_k the max-volume actual-row basis
-> and p_j = Σ_t a_t(j) p_{u_t} (|a_t(j)| ≤ 1, Σ_t a_t(j) = 1), for each s
->   Σ_j (P_{u_s j})₊ ( Σ_{t≠s} (−a_t(j))₊ − (1 − a_s(j)) )₊ ≤ C_sf δ.
-> Chain (all links written, conditional on SF): SF ⇒ transverse tax (C_μ = 2+C_sf;
-> deficit part ≤ 2δ PROVED, w31) ⇒ representative displacement (C_D ≤
-> 2(1+2δ₀)(4+C_sf), w30) ⇒ face estimate ⇒ L4 assembly ⇒ global W-free O(√δ)
-> theorem. General-row displacement REFUTED at δ=0 (w29) — max-volume form only.
-> CHECKPOINT 2026-06-12 (network-outage pause; waves 33–34 ran today, ALL harvested+pushed):
-> w33_cex: no counterexample; all transverse stacking BOUNDED; dual-flow obstruction lemma
-> named. w33_sf_geom: geometry-included LP kills the δ=0 wall; fixed-support certificates
-> (1+4a², 1+3a², proved tight in w34_audit); dense-pair k=7 ratio 17/8 at δ=6/17 exact.
-> w34_audit (hostile): ALL wave-33 claims CONFIRMED; orchestrator's refutation of the sec-6
-> convexity route upheld (0.98); THE STRUCTURAL FIND = max-volume TIE sensitivity (bad ratios
-> live in one tie chart; other ties give ratio 1) ⇒ SF's tie-QUANTIFIER is the statement-level
-> decision. w34_halfcex (codex, was at stage 5 when paused; workdir snapshotted to
-> experiments/out/w34_halfcex/): closed-form half-δ staircase EXACTLY verified for m=2,3,5,8 —
-> at cap=1/2 the RECOMPUTED best-tie ratio = m (linear in rank; worst tie = 1), and the
-> threshold sweep shows adversarial-tie ratios growing with m for cap ≳ 0.45 but bounded
-> (≤ 5/3, decreasing in m) at cap = 0.3. If it died mid-run: harvest its workdir snapshot,
-> else `codex exec resume --last`, else relaunch notes/briefs/w34_halfcex.md.
-> WAVE-35 RESOLVED THE FORK (both verdicts archived, notes/swarm-answers/w35_*):
-> w35_quantifier = CHAIN-COMPATIBLE: the chain composes with the EXISTS-θ-quasi-max form;
-> registry-ready contract written (max_s SF_s(U) ≤ C_sf(δ₀,θ)·δ for some basis U with
-> Vol ≥ θ·Vol_max, δ₀ ≤ 0.3); constants chain explicit (C_D = 4(1+2δ₀)(C_sf+1+1/θ));
-> ONE routing caveat (w27 scalar telescope needs the exact-max sign fact — route around).
-> w35_charge = PARTIAL: selection U* = argmin_ties max_s SF_s well-defined (θ=1); the
-> min-max chart collapses EVERY known bad instance to ratio EXACTLY 1 (even staircase at
-> δ=1/2). THE single named open = **(CHARGE)**: SF_s(U*) ≤ Σ_i q_si·ν_i(P) with
-> Σ_i q_si ≤ C(δ₀) — obstruction = the tie-swap shear formula (S); the path-tie
-> saturation-at-2 family demands a recurrence/dual certificate, not single-swap arguments.
-> WAVE 36 (harvested, notes/swarm-answers/w36_*): w36_audit CONFIRMED the w35 pair BUT
-> B6 = the PERTURBED STAIRCASE (exact: unique max-volume chart, ratio m−3ε at δ=1/2) refutes
-> exists-EXACT-max-volume SF ⇒ **θ = 1/2 is mandatory** (good charts sit at volume 1−ε,
-> ε < 1/2 forced; any fixed θ ≤ 1/2 recaptures them; θ > 1/2 dies at the endpoint; constants
-> cost A = 2). Also: (CHARGE) is "mostly tautological" — attack Φ(U*) ≤ Cδ directly.
-> w36_charge PARTIAL: the no-center path family pins the selected-chart constant at ~2
-> (exact 1.5 @ k=6, 1.667 @ k=8 → 2); THE remaining display = **(TREE)/(DECAY)** — multi-swap
-> shear decay Φ(V) ≤ αΦ(U) + Kδ (α < 1) in the θ = 1/2 class; the crux: naive shear branching
-> mass is 2/generation (divergent) — the decay must be paid by the δ-budget or by diagonal-
-> coefficient decay along shear paths.
-> WAVE 37 IN FLIGHT AT THIS CHECKPOINT: w37_tree (codex prover on (TREE), θ=1/2 class,
-> brief notes/briefs/w37_tree.md; survived one outage mid-run — if dead, harvest
-> /tmp/codex-sigma-wall/w37_tree/ artifacts else relaunch from the brief) ∥ an opus
-> second-family prover (KILLED by the outage with zero output — relaunch: independent
-> angles = P-harmonic maximum-principle-with-budget / log-volume+excess potential; prompt
-> pattern in worklog 2026-06-12 cont.). NEXT AFTER (TREE): whichever family closes it →
-> other family audits → then Recipe A→B banking of the whole SF→…→op-classical chain
-> (registry contract in w35_quantifier.md harvest header, with θ pinned to 1/2 per B6).
-> BRANCH NOTE: this work is now merged to and continues on **main** (user direction
-> 2026-06-12: "this is main work").
-> ACQUISITIONS (TIB was briefly up): 7/8 papers staged in refs-staging/ + ACQUIRED.md
-> (manifest lockstep PENDING); Chakraborty–Mukherjea Contemp. Math. 516 (the P=LM source,
-> H-M ref [32]) FAILED (AMS Cloudflare) — needs a manual browser download.
-> TOOLING: gurobi OK outside codex sandbox ONLY (HostID fails inside — LLM-LEARNINGS);
-> wolframscript flaky (first call segfaults, second works); network INTERMITTENT — follow the
-> interruption-resilience protocol in ORCHESTRATION.md (eager snapshots, local-first, push often).
+> ## FRONTIER 2026-06-13 (CURRENT — supersedes everything below; full trail in notes/swarm-answers/w25..w42)
+> **THE OPEN KERNEL IS NOW (EX)** (after 18 further waves, w25–w42, each archived):
+>   every row-stochastic idempotent P with δ(P) ≤ 1/4 has an actual-row basis U with
+>   Vol(U) ≥ (1/2)·Vol_max(P) such that max_s Φ_s(U) ≤ C₀·δ(P)
+> (Φ_s = Σ_j (β_s)₊E_s(j), the weighted signed-face excess in U's chart; all notation in
+> report/kernel-conjecture v2 — w43 doc, and the swarm-answer headers).
+> **PROVED MACHINERY (statuses honest):** (P1) pointwise E ≤ σ + 2(−λ)₊ (2-family);
+> FACTORIZATION S*_s ≤ 2Φ_s + 6δ — class-wide, constants tight (codex w41 + opus w42, both
+> 0.99) ⇒ (EX) with C₀ composes to the registry SF contract with C_sf = 2C₀+6 ⇒
+> w35_quantifier chain (θ=1/2, A=2, one routing caveat) ⇒ global W-free O(√δ) ⇒ op-classical.
+> **RANK-2 THEOREM PROVED** (w40: every Φ-argmin chart has S* ≤ 2δ; max-diameter mechanism;
+> codex-only — opus pass = bead filed). **θ = 1/2 IS MANDATORY** (w36_audit B6 perturbed
+> staircase refutes exact-tie selection). **SELECTION IRREDUCIBLE** (w37_opus: pointwise/
+> σ-only/single-swap each refuted exactly). **(EX) EVIDENCE:** rank 3 = 278 exact instances,
+> 53 adversarial, worst min-chart ratio EXACTLY 1 (C₀ = 1 empirical); blow-ups exist only at
+> δ = 1/2 (staircase, ratio = m) — δ₀ ≤ 1/4 is comfortable. **DEAD ROUTES** (do not retry):
+> coefficient-only LP; universal C ≤ 2; exists-exact-max-volume; pointwise ME; σ-only;
+> single-swap; Jensen/convexity (w33 §6); (SIG) without overshoot (w38 refutation, repaired w39).
+> **LIVE MECHANISM for (EX) at rank ≥ 3:** the two-horn multi-row swap dichotomy
+> (volume-permitted ⇒ minimality bites / near-degenerate ⇒ (NDG)) + the rank-2 template.
+> **CONSOLIDATION IN FLIGHT (w43):** kernel-conjecture v2 (the (EX) interface document) being
+> drafted; banking beads filed (rank-2 opus audit; Recipe A→B of the belt). Worklog
+> 2026-06-12/13 entries carry the day-by-day. BRANCH: work lives on **main** (user direction).
+> ACQUISITIONS: 7/8 wave-18 refs staged in refs-staging/ (manifest lockstep PENDING);
+> Chakraborty–Mukherjea Contemp. Math. 516 needs a manual TIB browser download.
+> TOOLING: gurobi OK outside the codex sandbox only; wolframscript flaky-first-call; network
+> intermittent — interruption-resilience protocol in ORCHESTRATION.md is in force.
 
 ## THE KERNEL (superseded 2026-06-12, see UPDATE above — kept for the w5–w13 record)
 **Path-product floor:** for the band component C of any hidden top vertex with σ̃ > τ,
