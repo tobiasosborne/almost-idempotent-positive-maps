@@ -1,0 +1,9 @@
+FULL-GEOM pair_k3_a0.05: k=3 n=5 max_minor=1 upper_C=1.0099998 target=0.05 delta=0.049504950495049514 ratio=1.0099999999999998 idemp=1.1102230246251565e-16 BL=1.3740383968133128e-19
+FULL-GEOM cycle_k3_a0.05: k=3 n=5 max_minor=1 upper_C=1.0099998 target=0.05 delta=0.049504950495049514 ratio=1.0099999999999998 idemp=1.1102230246251565e-16 BL=1.3740383968133128e-19
+FULL-GEOM allpairs_k3_a0.05: k=3 n=5 max_minor=1 upper_C=1.0099998 target=0.05 delta=0.049504950495049514 ratio=1.0099999999999998 idemp=1.1102230246251565e-16 BL=1.3740383968133128e-19
+FULL-GEOM pair_k3_a0.2: k=3 n=5 max_minor=1 upper_C=1.1599999 target=0.2 delta=0.17241379310344832 ratio=1.1599999999999997 idemp=1.1102230246251565e-16 BL=2.220446049250313e-16
+FULL-GEOM cycle_k3_a0.2: k=3 n=5 max_minor=1 upper_C=1.1599999 target=0.2 delta=0.17241379310344832 ratio=1.1599999999999997 idemp=1.1102230246251565e-16 BL=2.220446049250313e-16
+FULL-GEOM allpairs_k3_a0.2: k=3 n=5 max_minor=1 upper_C=1.1599999 target=0.2 delta=0.17241379310344832 ratio=1.1599999999999997 idemp=1.1102230246251565e-16 BL=2.220446049250313e-16
+FULL-GEOM pair_k3_a0.5: k=3 n=5 max_minor=1 upper_C=2 target=0.5 delta=0.25 ratio=2.0 idemp=0.0 BL=0.0
+FULL-GEOM cycle_k3_a0.5: k=3 n=5 max_minor=1 upper_C=2 target=0.5 delta=0.25 ratio=2.0 idemp=0.0 BL=0.0
+FULL-GEOM allpairs_k3_a0.5: k=3 n=5 max_minor=1 upper_C=2 target=0.5 delta=0.25 ratio=2.0 idemp=0.0 BL=0.0

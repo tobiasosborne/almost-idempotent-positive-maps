@@ -1,0 +1,4 @@
+2246:Theorem 1.12. Let P be a d  d idempotent matrix of rank k. Then there is a
+2276:    Conversely any real matrix P with a partition fT; B; C1 ; C2 ; : : : Ck g such that
+(i), (ii), (iii), and (iv) hold is idempotent of rank k.
+2337:   Conversely, conditions (1.1)–(1.4) imply that P is idempotent.

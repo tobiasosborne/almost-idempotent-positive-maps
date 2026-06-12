@@ -1,0 +1,6 @@
+Gurobi Optimizer version 13.0.1 build v13.0.1rc0 (linux64 - "Linux Mint 22.3")
+Copyright (c) 2026, Gurobi Optimization, LLC
+gurobipy (13, 0, 1)
+Set parameter Username
+Set parameter LicenseID to value 2787117
+model creation: GurobiError HostID mismatch (licensed to a690fcd, hostid is 0)

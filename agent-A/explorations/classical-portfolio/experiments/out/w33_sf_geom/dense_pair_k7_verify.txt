@@ -1,0 +1,7 @@
+idempotent True
+BL_is_I True
+row_sums_all_one True
+max_row_negative_mass 6/17 0.35294117647058826
+target 3/4 0.75
+ratio 17/8 2.125
+max_abs_minor_L 1 1.0

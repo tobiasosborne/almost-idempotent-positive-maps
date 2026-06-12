@@ -31,6 +31,26 @@ Every switch logged here + worklog.
 wolframscript UNAVAILABLE** — refs acquisition paused, symbolic work via sympy/exact rationals.
 Concurrency cap (user, 2026-06-12): ≤ 2–3 codex in parallel; opus serial; sonnet free.
 
+**Interruption-resilience protocol (user directive 2026-06-12: "brace for frequent network
+interruptions; plan future work accordingly").** Codex/opus/sonnet delegation ALL need network;
+local python/HiGHS/gurobi (outside the codex sandbox) and git commits do NOT. Therefore:
+- **Snapshot volatile state into the repo EAGERLY**: copy /tmp workdir artifacts to
+  `experiments/out/<wave>/` as soon as a worker passes a meaningful stage, not only at landing;
+  re-copy at landing. Briefs are archived to `notes/briefs/` AT LAUNCH (already standing).
+- **Commit early, push often; tolerate push failure**: commit locally after every harvest; if
+  `git push` fails (network), retry later — NEVER let unpushed work block local progress; re-push
+  at every subsequent harvest.
+- **Briefs small and bounded**: one named question per worker, expected runtime ≤ ~30 min, so an
+  interruption loses at most one bounded attempt. Workers already write progress.md + artifacts
+  eagerly (observability protocol) — an interrupted run is harvestable from its workdir.
+- **Resume path**: a died codex run → check `events.jsonl` tail + workdir artifacts; prefer
+  `codex exec resume --last` (thread intact) else relaunch from the archived brief amended with
+  the partial findings.
+- **Local-first fallback**: when the network is down, the orchestrator continues productively
+  WITHOUT delegation: run the numerics/LP experiments locally (codex-written scripts run fine
+  outside the sandbox, incl. gurobi), do derivation work directly, write docs/briefs for the next
+  wave, and queue commits. Delegation resumes when the network does.
+
 **Observability protocol (user directive 2026-06-10): verbosity + eager flush in ALL activities.**
 - Every long-running delegated process streams a live trace to a file: codex → `--json` events
   (never `--ephemeral`); python → `python3 -u` (+ per-iteration prints); shell pipelines →
