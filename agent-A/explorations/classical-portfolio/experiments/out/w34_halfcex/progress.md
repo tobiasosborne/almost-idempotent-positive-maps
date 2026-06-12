@@ -4,3 +4,5 @@ stage 2: deriving exact rational closed form and audit script
 stage 3: running exact max-volume chart recomputation at cap 1/2
 stage 4: saving closed-form exact verification outputs
 stage 5: running recomputed-chart threshold sweep
+stage 6: writing proof.md and final consistency checks
+stage 7: audit complete

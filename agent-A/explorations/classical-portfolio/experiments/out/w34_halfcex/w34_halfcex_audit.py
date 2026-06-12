@@ -464,7 +464,7 @@ def chart_recompute_suite() -> list[dict]:
 
 def threshold_suite() -> list[dict]:
     caps = [Fraction(n, 1000) for n in range(300, 501, 25)]
-    ms = [2, 3, 5, 8, 12]
+    ms = list(range(2, 13))
     records = []
     for cap in caps:
         for m in ms:

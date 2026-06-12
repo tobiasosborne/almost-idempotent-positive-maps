@@ -1,3 +1,35 @@
+final checks
+
+answer.md: absent
+
+files:
+brief.md
+chart_recompute_audit.json
+chart_recompute_audit.txt
+chart_recompute_stdout.txt
+chart_recompute_stdout_Lcoords.txt
+chart_recompute_stdout_fast.txt
+closed_form_audit.json
+closed_form_audit.txt
+closed_form_neg_masses.txt
+closed_form_stdout.txt
+err.log
+events.jsonl
+final_checks.txt
+progress.md
+proof.md
+threshold_audit.json
+threshold_audit.txt
+threshold_cap_summary.txt
+threshold_stdout.txt
+w34_halfcex_audit.py
+
+summary:
+chart_recompute_m2_a1/2_cap1/2 m=2 k=5 a=1/2 c=1/4 delta=1/2 intended=2 recomp_best=2 recomp_worst=1 ties=7 vol2=1/4 okBL=True okP2=True
+chart_recompute_m3_a1/2_cap1/2 m=3 k=7 a=1/2 c=1/6 delta=1/2 intended=3 recomp_best=3 recomp_worst=1 ties=9 vol2=1/6 okBL=True okP2=True
+chart_recompute_m5_a1/2_cap1/2 m=5 k=11 a=1/2 c=1/10 delta=1/2 intended=5 recomp_best=5 recomp_worst=1 ties=13 vol2=1/10 okBL=True okP2=True
+chart_recompute_m8_a1/2_cap1/2 m=8 k=17 a=1/2 c=1/16 delta=1/2 intended=8 recomp_best=8 recomp_worst=1 ties=19 vol2=1/16 okBL=True okP2=True
+
 cap=3/10 max_recomp_ratio=5/3 at_m=2 a=1/4 per_m=2:5/3@a=1/4/int=5/3,3:121/80@a=121/800/int=121/80,4:263/180@a=263/2400/int=263/180,5:23/16@a=69/800/int=23/16,6:57/40@a=57/800/int=57/40,7:203/144@a=29/480/int=203/144,8:127/90@a=127/2400/int=127/90,9:7/5@a=7/150/int=7/5,10:101/72@a=101/2400/int=101/72,11:1001/720@a=91/2400/int=1001/720,12:83/60@a=83/2400/int=83/60
 cap=13/40 max_recomp_ratio=279/130 at_m=2 a=279/800 per_m=2:279/130@a=279/800/int=279/130,3:111/65@a=37/200/int=111/65,4:21/13@a=21/160/int=21/13,5:41/26@a=41/400/int=41/26,6:101/65@a=101/1200/int=101/65,7:399/260@a=57/800/int=399/260,8:296/195@a=37/600/int=296/195,9:393/260@a=131/2400/int=393/260,10:59/39@a=59/1200/int=59/39,11:583/390@a=53/1200/int=583/390,12:97/65@a=97/2400/int=97/65
 cap=7/20 max_recomp_ratio=20/7 at_m=2 a=1/2 per_m=2:20/7@a=1/2/int=20/7,3:577/280@a=577/2400/int=577/280,4:389/210@a=389/2400/int=389/210,5:99/56@a=99/800/int=99/56,6:121/70@a=121/1200/int=121/70,7:17/10@a=17/200/int=17/10,8:176/105@a=11/150/int=176/105,9:93/56@a=31/480/int=93/56,10:139/84@a=139/2400/int=139/84,11:33/20@a=21/400/int=33/20,12:23/14@a=23/480/int=23/14
