@@ -1,0 +1,7 @@
+transverse_pair_a1_4: delta=1/5 ties=3 best_basis=[1, 2, 3] best_ratio=1 worst_ratio=5/4
+dense_pair_k7_a1_4: delta=6/17 ties=3 best_basis=[1, 2, 3, 4, 5, 6, 7] best_ratio=1 worst_ratio=17/8
+staircase_m2: delta=1/2 ties=7 best_basis=[1, 2, 3, 4, 5] best_ratio=1 worst_ratio=2
+staircase_m3: delta=1/2 ties=9 best_basis=[1, 2, 3, 4, 5, 6, 7] best_ratio=1 worst_ratio=3
+perturbed_staircase_m5_eps1e-3_exact: delta=1/2 ties=1 best_basis=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] best_ratio=4997/1000 worst_ratio=4997/1000
+perturbed_staircase_m5_eps1e-3_quasi: delta=1/2 ties=1 best_basis=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] best_ratio=4997/1000 worst_ratio=4997/1000
+  theta>=999/1000: count=13 best_basis=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] best_ratio=1 best_vol_ratio=999/1000
