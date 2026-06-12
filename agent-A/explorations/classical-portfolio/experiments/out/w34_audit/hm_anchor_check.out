@@ -1,0 +1,12 @@
+2246:Theorem 1.12. Let P be a d  d idempotent matrix of rank k. Then there is a
+  repr: 'Theorem 1.12. Let P be a d \x03 d idempotent matrix of rank k. Then there is a'
+2276:    Conversely any real matrix P with a partition fT; B; C1 ; C2 ; : : : Ck g such that
+  repr: '    Conversely any real matrix P with a partition fT; B; C1 ; C2 ; : : : Ck g such that'
+2277:(i), (ii), (iii), and (iv) hold is idempotent of rank k.
+  repr: '(i), (ii), (iii), and (iv) hold is idempotent of rank k.'
+2337:   Conversely, conditions (1.1)–(1.4) imply that P is idempotent.
+  repr: '   Conversely, conditions (1.1)–(1.4) imply that P is idempotent.'
+needle b'd \x03 d' offset 37885
+b'd \x03 d real matrix is called circulant and denoted by circ(x.0/;\nx.1/; : : : ; x.'
+needle b'conditions (1.1)' offset 140498
+b'conditions (1.1)\xe2\x80\x93(1.4) imply that P is idempotent.\n   Now if T is not empty, w'

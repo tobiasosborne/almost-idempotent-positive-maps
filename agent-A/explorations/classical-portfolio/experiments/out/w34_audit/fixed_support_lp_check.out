@@ -1,0 +1,4 @@
+pair a 0.2 C 1.1600000000000001 patterns 32 margin_at_C -0.0 ratio_at_C 1.1599999999999997 margin_C_minus_1e-4 1.724137931036207e-05 ratio_low 1.1599999999999997
+pair a 0.5 C 2.0 patterns 32 margin_at_C -0.0 ratio_at_C 2.0 margin_C_minus_1e-4 2.4999999999997247e-05 ratio_low 2.0
+cycle4 a 0.2 C 1.12 patterns 1024 margin_at_C 4.163336342344337e-17 ratio_at_C 1.1199999999999997 margin_C_minus_1e-4 1.7857142857111152e-05 ratio_low 1.1199999999999997
+cycle4 a 0.5 C 1.75 patterns 1024 margin_at_C 2.498001805406602e-16 ratio_at_C 1.7499999999999984 margin_C_minus_1e-4 2.8571428571683155e-05 ratio_low 1.7499999999999984

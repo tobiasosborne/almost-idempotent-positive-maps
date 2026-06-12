@@ -1,0 +1,25 @@
+A1 sample delta=25/2501 intended_ratio=247599/250000 ties=[[0, 1, 2], [1, 2, 3], [1, 2, 4]]
+A2 fixed q=5 splits:
+  symmetric: delta=0.009996001599360257 target=0.009899999999999997 ratio=0.9903959999999996
+  concentrated_one_copy: delta=0.009996001599360363 target=0.0099 ratio=0.9903959999999895
+  skewed_geometric: delta=0.009996001599360257 target=0.009900000000000003 ratio=0.9903960000000002
+  unbalanced_plus_70_minus_30: delta=0.013954418232706918 target=0.009899999999999999 ratio=0.7094527220630371
+A2 sign-enum margins:
+  q2: patterns=128 margin=1.734723475976807e-18 ratio=1.0004
+  q3: patterns=512 margin=1.734723475976807e-18 ratio=1.0004
+  q4: patterns=2048 margin=-0.0 ratio=1.0004
+A3 path ratios:
+  k=4 ratio=1.2475742500 delta=0.0099970009
+  k=5 ratio=1.4950986667 delta=0.009997334044
+  k=6 ratio=1.6188046875 delta=0.009997500625
+  k=8 ratio=1.7426065833 delta=0.009997667211
+  k=10 ratio=1.8044559844 delta=0.009997750506
+  k=12 ratio=1.8415851300 delta=0.009997800484
+  k=15 ratio=1.8758732426 delta=0.009997846618
+  k=20 ratio=1.9075915833 delta=0.009997889335
+  k=30 ratio=1.9370655140 delta=0.009997929
+  k=40 ratio=1.9510162417 delta=0.00999794779
+A3 fits={"forced_2_minus_c_over_k": {"params": {"c": 2.528844178093008}, "pred_k100": 1.97471155821907, "rmse": 0.054167843478754266}, "free_L_minus_c_over_k": {"asymptote_L": 2.0690488158465468, "c": 2.9716511590684362, "params": {"beta0": 2.0690488158465468, "beta1": -2.9716511590684362}, "pred_k100": 2.039332304255862, "rmse": 0.03911136717978075}, "log_linear": {"params": {"beta0": 1.0986513212048483, "beta1": 0.2632151435479157}, "pred_k100": 2.3108018527722853, "rmse": 0.09938802748069862}}
+A4 pair ratio=4*a**2 + 1 cycle4 ratio=3*a**2 + 1
+A5 delta=6/17 basis0_ratio=17/8 ties=[[0, 1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6, 7], [1, 2, 3, 4, 5, 6, 8]]
+A6 lhs=3/4 row0_nu=0 delta_maxE=9/34
