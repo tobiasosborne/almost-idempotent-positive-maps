@@ -599,3 +599,28 @@ m=2,3,5,8; recomputed BEST-tie ratio = m at cap=1/2 (real blow-up under FOR-ALL 
 worst tie = 1), adversarial-tie ratios bounded ~5/3 at cap=0.3. Wave-35 questions written
 into the portfolio HANDOFF. INFRA: gurobi works only OUTSIDE the codex sandbox (HostID);
 wolframscript flaky-first-call. All harvests committed+pushed through the day per protocol.
+
+## 2026-06-12 (cont. 2) — waves 35-37: the conjecture compressed to ONE display ((TREE)); theta=1/2 forced; merged to main
+
+Resumed post-outage (the w34_halfcex worker SURVIVED the outage mid-run and delivered on
+reconnect — the resilience protocol works). WAVE 35: w35_quantifier = CHAIN-COMPATIBLE
+(the exists-theta-quasi-max SF form composes end-to-end; registry contract + explicit
+constants C_D = 4(1+2delta_0)(C_sf+1+A); one routing caveat: w27's scalar telescope needs
+the exact-max sign fact — route around); w35_charge = PARTIAL (selection U* = argmin_ties
+max_s SF_s well-defined; the min-max chart collapses EVERY known bad instance to ratio
+EXACTLY 1, even the staircase at delta=1/2; named open = (CHARGE)). WAVE 36: w36_audit
+confirmed the whole w35 pair AND scored the decisive hit (B6): an exact PERTURBED staircase
+(unique max-volume chart, ratio m-3eps at delta=1/2; good charts at volume exactly 1-eps)
+refutes exists-EXACT-max-volume SF with unbounded rank => theta = 1/2 quasi-max selection is
+MANDATORY (eps < 1/2 structurally forced => fixed theta = 1/2 recaptures the good charts;
+constants cost A = 2). Also: (CHARGE) flagged mostly-tautological — attack Phi(U*) <= C delta
+directly. w36_charge = PARTIAL: the no-center path family pins the true selected-chart
+constant at ~2; the single remaining display is (TREE)/(DECAY) — multi-swap shear decay with
+alpha < 1; crux = naive shear branching mass 2/generation diverges, decay must be bought by
+the delta-budget. WAVE 37 launched (two-family on (TREE), theta=1/2 class): codex w37_tree
+(survived a second outage mid-run, continuing) + opus independent prover (killed by the
+outage at zero output; relaunched). HOUSEKEEPING: H-M book mined (Ex 1.55 = P=LM ML=I
+byte-pinned; catalog notes/hm-book-mining.md); 7/8 wave-18 refs acquired to refs-staging/
+(manifest lockstep pending; C-M Contemp.Math.516 needs manual TIB browser download); gurobi
+broken INSIDE codex sandbox (HostID; LLM-LEARNINGS), wolframscript flaky-first-call.
+MERGED TO MAIN at user direction ("this is main work"); work continues on main.

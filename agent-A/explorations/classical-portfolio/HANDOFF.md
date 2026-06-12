@@ -66,9 +66,26 @@ Branch: agent-a/classical-portfolio. Rewritten at session close (2026-06-11, day
 > δ=1/2). THE single named open = **(CHARGE)**: SF_s(U*) ≤ Σ_i q_si·ν_i(P) with
 > Σ_i q_si ≤ C(δ₀) — obstruction = the tie-swap shear formula (S); the path-tie
 > saturation-at-2 family demands a recurrence/dual certificate, not single-swap arguments.
-> WAVE 36 (launched): w36_charge (prove (CHARGE) / Φ(U*) ≤ Cδ directly) ∥ w36_audit
-> (hostile audit of both w35 verdicts; flag: w35_charge's deficit bound uses the exact-max
-> sign fact — consistency with the quantifier's routing caveat must be checked).
+> WAVE 36 (harvested, notes/swarm-answers/w36_*): w36_audit CONFIRMED the w35 pair BUT
+> B6 = the PERTURBED STAIRCASE (exact: unique max-volume chart, ratio m−3ε at δ=1/2) refutes
+> exists-EXACT-max-volume SF ⇒ **θ = 1/2 is mandatory** (good charts sit at volume 1−ε,
+> ε < 1/2 forced; any fixed θ ≤ 1/2 recaptures them; θ > 1/2 dies at the endpoint; constants
+> cost A = 2). Also: (CHARGE) is "mostly tautological" — attack Φ(U*) ≤ Cδ directly.
+> w36_charge PARTIAL: the no-center path family pins the selected-chart constant at ~2
+> (exact 1.5 @ k=6, 1.667 @ k=8 → 2); THE remaining display = **(TREE)/(DECAY)** — multi-swap
+> shear decay Φ(V) ≤ αΦ(U) + Kδ (α < 1) in the θ = 1/2 class; the crux: naive shear branching
+> mass is 2/generation (divergent) — the decay must be paid by the δ-budget or by diagonal-
+> coefficient decay along shear paths.
+> WAVE 37 IN FLIGHT AT THIS CHECKPOINT: w37_tree (codex prover on (TREE), θ=1/2 class,
+> brief notes/briefs/w37_tree.md; survived one outage mid-run — if dead, harvest
+> /tmp/codex-sigma-wall/w37_tree/ artifacts else relaunch from the brief) ∥ an opus
+> second-family prover (KILLED by the outage with zero output — relaunch: independent
+> angles = P-harmonic maximum-principle-with-budget / log-volume+excess potential; prompt
+> pattern in worklog 2026-06-12 cont.). NEXT AFTER (TREE): whichever family closes it →
+> other family audits → then Recipe A→B banking of the whole SF→…→op-classical chain
+> (registry contract in w35_quantifier.md harvest header, with θ pinned to 1/2 per B6).
+> BRANCH NOTE: this work is now merged to and continues on **main** (user direction
+> 2026-06-12: "this is main work").
 > ACQUISITIONS (TIB was briefly up): 7/8 papers staged in refs-staging/ + ACQUIRED.md
 > (manifest lockstep PENDING); Chakraborty–Mukherjea Contemp. Math. 516 (the P=LM source,
 > H-M ref [32]) FAILED (AMS Cloudflare) — needs a manual browser download.
