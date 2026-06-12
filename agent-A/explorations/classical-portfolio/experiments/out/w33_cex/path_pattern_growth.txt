@@ -1,0 +1,8 @@
+path k=4 n=8 ratio=1.24757425 best_s=3 pivot=7 delta=0.0099970009
+path k=5 n=11 ratio=1.49509867 best_s=4 pivot=10 delta=0.00999733404
+path k=6 n=14 ratio=1.61880469 best_s=5 pivot=13 delta=0.00999750062
+path k=8 n=20 ratio=1.74260658 best_s=7 pivot=19 delta=0.00999766721
+path k=10 n=26 ratio=1.80445598 best_s=9 pivot=25 delta=0.00999775051
+path k=12 n=32 ratio=1.84158513 best_s=11 pivot=31 delta=0.00999780048
+path k=15 n=41 ratio=1.87587324 best_s=14 pivot=40 delta=0.00999784662
+path k=20 n=56 ratio=1.90759158 best_s=19 pivot=55 delta=0.00999788933

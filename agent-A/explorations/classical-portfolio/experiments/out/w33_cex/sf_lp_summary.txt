@@ -1,0 +1,44 @@
+fixed B0 mass=0.99 LP searches:
+single_k3_copies1_a0.005_edges1: n=5 edges=1 delta=0.0049995 sf/delta=0.990099 maxvol_sf/delta=0.990099 max_minor_L=1
+single_k3_copies1_a0.01_edges1: n=5 edges=1 delta=0.0099960016 sf/delta=0.990396 maxvol_sf/delta=0.990396 max_minor_L=1
+single_k3_copies1_a0.02_edges1: n=5 edges=1 delta=0.019968051 sf/delta=0.991584 maxvol_sf/delta=0.991584 max_minor_L=1
+single_k3_copies1_a0.05_edges1: n=5 edges=1 delta=0.04950495 sf/delta=0.9999 maxvol_sf/delta=0.9999 max_minor_L=1
+duplicate_k3_copies2_a0.01_edges2: n=7 edges=2 delta=0.0099960016 sf/delta=0.990396 maxvol_sf/delta=0.990396 max_minor_L=1
+duplicate_k3_copies5_a0.01_edges5: n=13 edges=5 delta=0.0099960016 sf/delta=0.990396 maxvol_sf/delta=1 max_minor_L=1
+duplicate_k3_copies10_a0.01_edges10: n=23 edges=10 delta=0.0099960016 sf/delta=0.990396 maxvol_sf/delta=0.990396 max_minor_L=1
+duplicate_k3_copies25_a0.01_edges25: n=53 edges=25 delta=0.0099960016 sf/delta=0.990396 maxvol_sf/delta=1 max_minor_L=1
+path_k4_copies1_a0.01_edges2: n=8 edges=2 delta=0.0099970009 sf/delta=0.990297 maxvol_sf/delta=0.990297 max_minor_L=1
+cycle_k4_copies1_a0.01_edges3: n=10 edges=3 delta=0.0099970009 sf/delta=0.990297 maxvol_sf/delta=1.33 max_minor_L=1
+star_k4_copies1_a0.01_edges2: n=8 edges=2 delta=0.0099970009 sf/delta=0.990297 maxvol_sf/delta=0.990297 max_minor_L=1
+complete_k4_copies1_a0.01_edges3: n=10 edges=3 delta=0.0099970009 sf/delta=0.990297 maxvol_sf/delta=1.3301 max_minor_L=1
+path_k5_copies1_a0.01_edges3: n=11 edges=3 delta=0.009997334 sf/delta=0.990264 maxvol_sf/delta=0.990264 max_minor_L=1
+cycle_k5_copies1_a0.01_edges4: n=13 edges=4 delta=0.0099980004 sf/delta=0.990198 maxvol_sf/delta=0.990198 max_minor_L=1
+star_k5_copies1_a0.01_edges3: n=11 edges=3 delta=0.009997334 sf/delta=0.990264 maxvol_sf/delta=1.33002 max_minor_L=1
+complete_k5_copies1_a0.01_edges6: n=17 edges=6 delta=0.009997334 sf/delta=0.990264 maxvol_sf/delta=0.990264 max_minor_L=1
+path_k6_copies1_a0.01_edges4: n=14 edges=4 delta=0.0099975006 sf/delta=0.990247 maxvol_sf/delta=0.990247 max_minor_L=1
+cycle_k6_copies1_a0.01_edges5: n=16 edges=5 delta=0.0099980004 sf/delta=0.990198 maxvol_sf/delta=1.59402 max_minor_L=1
+star_k6_copies1_a0.01_edges4: n=14 edges=4 delta=0.0099975006 sf/delta=0.990247 maxvol_sf/delta=1.37129 max_minor_L=1
+complete_k6_copies1_a0.01_edges10: n=26 edges=10 delta=0.0099975006 sf/delta=0.990247 maxvol_sf/delta=skip max_minor_L=skip
+path_k8_copies1_a0.01_edges6: n=20 edges=6 delta=0.0099976672 sf/delta=0.990231 maxvol_sf/delta=0.990231 max_minor_L=1
+cycle_k8_copies1_a0.01_edges7: n=22 edges=7 delta=0.0099980004 sf/delta=0.990198 maxvol_sf/delta=skip max_minor_L=skip
+star_k8_copies1_a0.01_edges6: n=20 edges=6 delta=0.0099976672 sf/delta=0.990231 maxvol_sf/delta=1.41253 max_minor_L=1
+path_k10_copies1_a0.01_edges8: n=26 edges=8 delta=0.0099977505 sf/delta=0.990223 maxvol_sf/delta=skip max_minor_L=skip
+cycle_k10_copies1_a0.01_edges9: n=28 edges=9 delta=0.0099980004 sf/delta=0.990198 maxvol_sf/delta=skip max_minor_L=skip
+star_k10_copies1_a0.01_edges8: n=26 edges=8 delta=0.0099977505 sf/delta=0.990223 maxvol_sf/delta=skip max_minor_L=skip
+
+row0 nonnegative max-SF LP checks:
+single_k3_a0.01_cap_1.0001min: cap=0.0099970012 actual_delta=0.0099970012 sf/cap=1.0003 support=[3, 4]
+single_k3_a0.01_cap_2min: cap=0.019992003 actual_delta=0.01 sf/cap=0.5002 support=[3, 4]
+single_k3_a0.01_cap_5min: cap=0.049980008 actual_delta=0.01 sf/cap=0.20008 support=[3, 4]
+duplicate_k3_a0.01_cap_1.0001min: cap=0.0099970012 actual_delta=0.0099970012 sf/cap=1.0003 support=[3, 7, 8, 11, 12]
+duplicate_k3_a0.01_cap_2min: cap=0.019992003 actual_delta=0.01 sf/cap=0.5002 support=[8, 11]
+duplicate_k3_a0.01_cap_5min: cap=0.049980008 actual_delta=0.01 sf/cap=0.20008 support=[8, 11]
+cycle_k5_a0.01_cap_1.0001min: cap=0.0099990002 actual_delta=0.0099990002 sf/cap=1.0001 support=[5, 6, 8, 10, 11, 12]
+cycle_k5_a0.01_cap_2min: cap=0.019996001 actual_delta=0.01 sf/cap=0.5001 support=[11, 12]
+cycle_k5_a0.01_cap_5min: cap=0.049990002 actual_delta=0.01 sf/cap=0.20004 support=[11, 12]
+complete_k5_a0.01_cap_1.0001min: cap=0.0099983338 actual_delta=0.0099983338 sf/cap=1.00017 support=[5, 6, 7, 10, 11, 12, 13, 14, 15, 16]
+complete_k5_a0.01_cap_2min: cap=0.019994668 actual_delta=0.01 sf/cap=0.500133 support=[5, 10, 11, 15]
+complete_k5_a0.01_cap_5min: cap=0.04998667 actual_delta=0.01 sf/cap=0.200053 support=[5, 10, 11, 15]
+cycle_k8_a0.01_cap_1.0001min: cap=0.0099990002 actual_delta=0.0099990002 sf/cap=1.0001 support=[8, 9, 10, 12, 14, 15, 16, 17, 18, 19, 20]
+cycle_k8_a0.01_cap_2min: cap=0.019996001 actual_delta=0.01 sf/cap=0.5001 support=[18, 19]
+cycle_k8_a0.01_cap_5min: cap=0.049990002 actual_delta=0.01 sf/cap=0.20004 support=[18, 19]

@@ -76,3 +76,14 @@ Format: `- [date] [worker@effort] [task type] — what happened; lesson.`
   (5) Logistics: 8 concurrent codex@xhigh ran clean (no wedges; progress-protocol in every brief);
   wall-clock ~35-75 min each; answers landed asynchronously — harvest file written incrementally
   per landing (crash-safe), convergence table filled as a running artifact.
+
+## 2026-06-12 — gurobi unusable inside the codex sandbox (HostID license mismatch)
+w33_cex: `gurobi_cl`/`gurobipy` import fine but OPTIMIZE fails inside `codex exec -s
+workspace-write` with a HostID license mismatch (the sandbox's hostname/network isolation
+breaks the machine-locked license; failures saved in experiments/out/w33_cex/
+tiny_gurobi_test.out, sf_gurobi_failure.out). Gurobi works fine OUTSIDE the sandbox
+(orchestrator-verified same day). PATTERN going forward: (a) prefer SciPy HiGHS in codex
+briefs — and note that fixed-L searches are LINEAR once BL=I enforces idempotence, so HiGHS
+suffices there; (b) for genuinely nonconvex gurobi work (NonConvex=2 bilinear), have codex
+WRITE the script and the ORCHESTRATOR run it outside the sandbox. Update future briefs:
+do not promise in-sandbox gurobi.

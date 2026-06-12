@@ -1,0 +1,20 @@
+max-volume tie scan over coefficient minors:
+path_k4_copies1_a0.01_edges2: combos=70 ties=5 best_sf/delta=1.24757 basis=[1, 2, 3, 7] pivot=7
+cycle_k4_copies1_a0.01_edges3: combos=210 ties=7 best_sf/delta=1.3302 basis=[1, 2, 3, 6] pivot=6
+star_k4_copies1_a0.01_edges2: combos=70 ties=5 best_sf/delta=1.24757 basis=[1, 2, 3, 5] pivot=5
+path_k5_copies1_a0.01_edges3: combos=462 ties=7 best_sf/delta=1.4951 basis=[1, 2, 3, 4, 6] pivot=6
+cycle_k5_copies1_a0.01_edges4: combos=1287 ties=9 best_sf/delta=1.4952 basis=[1, 2, 3, 4, 5] pivot=5
+star_k5_copies1_a0.01_edges3: combos=462 ties=7 best_sf/delta=1.33005 basis=[1, 2, 3, 4, 7] pivot=7
+path_k6_copies1_a0.01_edges4: combos=3003 ties=9 best_sf/delta=1.61885 basis=[1, 2, 3, 4, 5, 12] pivot=12
+cycle_k6_copies1_a0.01_edges5: combos=8008 ties=11 best_sf/delta=1.59412 basis=[1, 2, 3, 4, 5, 11] pivot=11
+star_k6_copies1_a0.01_edges4: combos=3003 ties=9 best_sf/delta=1.37129 basis=[1, 2, 3, 4, 5, 6] pivot=6
+path_k8_copies1_a0.01_edges6: combos=125970 ties=13 best_sf/delta=1.74261 basis=[1, 2, 3, 4, 5, 6, 7, 19] pivot=19
+cycle_k8_copies1_a0.01_edges7: combos=319770 ties=15 best_sf/delta=1.70728 basis=[1, 2, 3, 4, 5, 6, 7, 15] pivot=15
+star_k8_copies1_a0.01_edges6: combos=125970 ties=13 best_sf/delta=1.41253 basis=[1, 2, 3, 4, 5, 6, 7, 17] pivot=17
+complete_k4_copies1_a0.01_edges3: combos=210 ties=7 best_sf/delta=1.3302 basis=[1, 2, 3, 6] pivot=6
+complete_k5_copies1_a0.01_edges6: combos=6188 ties=13 best_sf/delta=1.49517 basis=[1, 2, 3, 4, 14] pivot=14
+complete_k6_copies1_a0.01_edges10: combos=230230 ties=21 best_sf/delta=1.5942 basis=[1, 2, 3, 4, 5, 15] pivot=15
+duplicate_k3_copies2_a0.01_edges2: combos=35 ties=5 best_sf/delta=1 basis=[1, 2, 3] pivot=3
+duplicate_k3_copies5_a0.01_edges5: combos=286 ties=11 best_sf/delta=1 basis=[1, 2, 3] pivot=3
+duplicate_k3_copies10_a0.01_edges10: combos=1771 ties=21 best_sf/delta=1 basis=[1, 2, 3] pivot=3
+duplicate_k3_copies25_a0.01_edges25: combos=23426 ties=51 best_sf/delta=1 basis=[1, 2, 3] pivot=3

@@ -1,0 +1,8 @@
+Set parameter Username
+Set parameter LicenseID to value 2787117
+Set parameter LogFile to value "gurobi.log"
+Using license file /home/tobias/gurobi.lic
+
+Error 10009: HostID mismatch (licensed to a690fcd, hostid is 0)
+
+

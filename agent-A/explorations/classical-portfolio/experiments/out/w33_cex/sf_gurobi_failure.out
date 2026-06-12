@@ -1,0 +1,18 @@
+Set parameter Username
+Set parameter LicenseID to value 2787117
+Traceback (most recent call last):
+  File "/tmp/codex-sigma-wall/w33_cex/sf_gurobi_search.py", line 309, in <module>
+    main()
+  File "/tmp/codex-sigma-wall/w33_cex/sf_gurobi_search.py", line 300, in main
+    records, milp_records = run_suite()
+                            ^^^^^^^^^^^
+  File "/tmp/codex-sigma-wall/w33_cex/sf_gurobi_search.py", line 251, in run_suite
+    rec = solve_fixed_mass(L, 0.99, label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/codex-sigma-wall/w33_cex/sf_gurobi_search.py", line 121, in solve_fixed_mass
+    model = gp.Model(f"fixed_mass_{label}")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "src/gurobipy/_model.pyx", line 152, in gurobipy._model.Model.__init__
+  File "src/gurobipy/gurobi.pxi", line 40, in gurobipy._core.gurobi._getdefaultenv
+  File "src/gurobipy/env.pxi", line 112, in gurobipy._core.Env.__init__
+gurobipy._exception.GurobiError: HostID mismatch (licensed to a690fcd, hostid is 0)

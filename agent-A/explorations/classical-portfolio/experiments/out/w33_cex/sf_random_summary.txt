@@ -1,0 +1,5 @@
+samples=240 good=240
+best=0.901039 label=sample_202_n10_k4_target0.01 delta=0.01 pivots=[0, 4, 5, 8]
+median=0.189689
+p90=0.482976
+p99=0.705014

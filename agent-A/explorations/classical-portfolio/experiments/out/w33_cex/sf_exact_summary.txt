@@ -1,0 +1,11 @@
+transverse_pair_a_1/200_m_99/100: n=5 rank=3 delta=50/10001 pivots=[0, 1, 2] max|a|=1 max_sf/delta=990099/1000000 sf=99/20000 pivot=0 maxvol_ties=3
+transverse_pair_a_1/100_m_99/100: n=5 rank=3 delta=25/2501 pivots=[0, 1, 2] max|a|=1 max_sf/delta=247599/250000 sf=99/10000 pivot=0 maxvol_ties=3
+transverse_pair_a_1/50_m_99/100: n=5 rank=3 delta=25/1252 pivots=[0, 1, 2] max|a|=1 max_sf/delta=30987/31250 sf=99/5000 pivot=0 maxvol_ties=3
+transverse_pair_a_1/20_m_99/100: n=5 rank=3 delta=5/101 pivots=[0, 1, 2] max|a|=1 max_sf/delta=9999/10000 sf=99/2000 pivot=0 maxvol_ties=3
+duplicate_pair_q_2_a_1/100_m_99/100: n=7 rank=3 delta=25/2501 pivots=[0, 1, 2] max|a|=1 max_sf/delta=247599/250000 sf=99/10000 pivot=0 maxvol_ties=5
+duplicate_pair_q_5_a_1/100_m_99/100: n=13 rank=3 delta=25/2501 pivots=[0, 1, 2] max|a|=1 max_sf/delta=247599/250000 sf=99/10000 pivot=0 maxvol_ties=11
+duplicate_pair_q_10_a_1/100_m_99/100: n=23 rank=3 delta=25/2501 pivots=[0, 1, 2] max|a|=1 max_sf/delta=247599/250000 sf=99/10000 pivot=0 maxvol_ties=21
+duplicate_pair_q_25_a_1/100_m_99/100: n=53 rank=3 delta=25/2501 pivots=[0, 1, 2] max|a|=1 max_sf/delta=247599/250000 sf=99/10000 pivot=0 maxvol_ties=51
+split_block_eps_1/100: n=3 rank=2 delta=1/100 pivots=[0, 2] max|a|=1 max_sf/delta=0 sf=0 pivot=0 maxvol_ties=1
+split_block_eps_1/1000: n=3 rank=2 delta=1/1000 pivots=[0, 2] max|a|=1 max_sf/delta=0 sf=0 pivot=0 maxvol_ties=1
+split_block_eps_1/10000: n=3 rank=2 delta=1/10000 pivots=[0, 2] max|a|=1 max_sf/delta=0 sf=0 pivot=0 maxvol_ties=1
