@@ -1,0 +1,4 @@
+chart_recompute_m2_a1/2_cap1/2 m=2 k=5 a=1/2 c=1/4 delta=1/2 intended=2 recomp_best=2 recomp_worst=1 ties=7 vol2=1/4 okBL=True okP2=True
+chart_recompute_m3_a1/2_cap1/2 m=3 k=7 a=1/2 c=1/6 delta=1/2 intended=3 recomp_best=3 recomp_worst=1 ties=9 vol2=1/6 okBL=True okP2=True
+chart_recompute_m5_a1/2_cap1/2 m=5 k=11 a=1/2 c=1/10 delta=1/2 intended=5 recomp_best=5 recomp_worst=1 ties=13 vol2=1/10 okBL=True okP2=True
+chart_recompute_m8_a1/2_cap1/2 m=8 k=17 a=1/2 c=1/16 delta=1/2 intended=8 recomp_best=8 recomp_worst=1 ties=19 vol2=1/16 okBL=True okP2=True

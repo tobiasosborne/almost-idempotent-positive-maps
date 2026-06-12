@@ -576,3 +576,26 @@ w33_cex (codex refuter — build exact idempotents to order via the 1.12 convers
 transverse pairs to break SF, or name the per-pair-cost obstruction lemma) || sonnet H-M
 book-mining catalog (user lead: "the book has lots of good stuff" — everything beyond 1.12,
 to notes/hm-book-mining.md). Briefs archived notes/briefs/w33_*.md at launch.
+
+## 2026-06-12 (cont.) — waves 33-34: the SF endgame takes shape; tie-quantifier = the question; outage checkpoint
+
+Full day under the new interruption-resilience protocol (ORCHESTRATION.md; user warned of
+frequent network outages). WAVE 33 (2 codex + sonnet): w33_cex DIED-AT with strong bounded
+evidence (transverse stacking provably can't pump: BL=I sees only aggregate +/- mass;
+split-block 1/delta mechanism dies under max-volume recomputation; dual-flow obstruction
+lemma named); w33_sf_geom broke the w32 delta=0 wall (geometry-included structural LP over
+P=LB, BL=I), banked tight fixed-support certificates (1+4a^2, 1+3a^2) and the exact k=7
+dense-pair instance (ratio 17/8 at delta=6/17) => universal C<=2 false at moderate delta_0;
+orchestrator REFUTED the worker's sec-6 convexity route via its own instance (upheld 0.98 in
+w34_audit). H-M book mined (Ex 1.55 = the P=LM, ML=I factorization, byte-pinned — grounds
+the campaign's frame; C-M Contemp.Math.516 is its dedicated source, acquisition blocked by
+AMS Cloudflare, 7/8 other leads staged in refs-staging/). ORCHESTRATOR LOCAL PROBE
+(w34_scaling, resilience fallback): dense-pair phase structure — ratio 1 for cap<=0.3,
+ratio=m (linear in rank!) at cap=1/2. WAVE 34: w34_audit (hostile) CONFIRMED all of wave 33
++ THE STRUCTURAL FIND: max-volume TIE bases flip every bad instance to ratio 1 => SF's
+tie-quantifier (FOR-ALL vs EXISTS basis) is the statement-level decision. w34_halfcex
+(snapshotted mid-run at the outage): closed-form half-delta staircase exactly verified
+m=2,3,5,8; recomputed BEST-tie ratio = m at cap=1/2 (real blow-up under FOR-ALL reading;
+worst tie = 1), adversarial-tie ratios bounded ~5/3 at cap=0.3. Wave-35 questions written
+into the portfolio HANDOFF. INFRA: gurobi works only OUTSIDE the codex sandbox (HostID);
+wolframscript flaky-first-call. All harvests committed+pushed through the day per protocol.

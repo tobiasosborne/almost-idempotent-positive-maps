@@ -43,13 +43,29 @@ Branch: agent-a/classical-portfolio. Rewritten at session close (2026-06-11, day
 > deficit part ≤ 2δ PROVED, w31) ⇒ representative displacement (C_D ≤
 > 2(1+2δ₀)(4+C_sf), w30) ⇒ face estimate ⇒ L4 assembly ⇒ global W-free O(√δ)
 > theorem. General-row displacement REFUTED at δ=0 (w29) — max-volume form only.
-> w32 (LP/extremal) was PAUSED at stage 2 (banked finding: coefficient-only LP
-> relaxation too weak at δ=0 — geometry load-bearing from round one). 2026-06-12:
-> wave 33 launched — w33_sf_geom (geometry-first LP loop + 1.12-converse
-> parametrization, prover) + w33_cex (refuter via the 1.12 converse) + an H-M
-> book-mining pass (`notes/hm-book-mining.md` when it lands). All 46 briefs
-> archived in `notes/briefs/` (tmp is volatile). TOOLING NOW: gurobi OK;
-> TIB VPN and wolframscript UNAVAILABLE (X1 byte-pinning paused).
+> CHECKPOINT 2026-06-12 (network-outage pause; waves 33–34 ran today, ALL harvested+pushed):
+> w33_cex: no counterexample; all transverse stacking BOUNDED; dual-flow obstruction lemma
+> named. w33_sf_geom: geometry-included LP kills the δ=0 wall; fixed-support certificates
+> (1+4a², 1+3a², proved tight in w34_audit); dense-pair k=7 ratio 17/8 at δ=6/17 exact.
+> w34_audit (hostile): ALL wave-33 claims CONFIRMED; orchestrator's refutation of the sec-6
+> convexity route upheld (0.98); THE STRUCTURAL FIND = max-volume TIE sensitivity (bad ratios
+> live in one tie chart; other ties give ratio 1) ⇒ SF's tie-QUANTIFIER is the statement-level
+> decision. w34_halfcex (codex, was at stage 5 when paused; workdir snapshotted to
+> experiments/out/w34_halfcex/): closed-form half-δ staircase EXACTLY verified for m=2,3,5,8 —
+> at cap=1/2 the RECOMPUTED best-tie ratio = m (linear in rank; worst tie = 1), and the
+> threshold sweep shows adversarial-tie ratios growing with m for cap ≳ 0.45 but bounded
+> (≤ 5/3, decreasing in m) at cap = 0.3. If it died mid-run: harvest its workdir snapshot,
+> else `codex exec resume --last`, else relaunch notes/briefs/w34_halfcex.md.
+> WAVE-35 BRIEF-READY QUESTIONS: (1) does the w30 displacement reduction tolerate a CHOSEN
+> max-volume basis (exists-quantifier SF)? (2) deterministic tie-break (prefer signed-face
+> rows) + the dual-flow charging bound = the proof target at δ₀ ≤ 0.3 (C ≈ 5/3–2 expected);
+> (3) small-δ₀ scaling of the staircase family under the FOR-ALL reading.
+> ACQUISITIONS (TIB was briefly up): 7/8 papers staged in refs-staging/ + ACQUIRED.md
+> (manifest lockstep PENDING); Chakraborty–Mukherjea Contemp. Math. 516 (the P=LM source,
+> H-M ref [32]) FAILED (AMS Cloudflare) — needs a manual browser download.
+> TOOLING: gurobi OK outside codex sandbox ONLY (HostID fails inside — LLM-LEARNINGS);
+> wolframscript flaky (first call segfaults, second works); network INTERMITTENT — follow the
+> interruption-resilience protocol in ORCHESTRATION.md (eager snapshots, local-first, push often).
 
 ## THE KERNEL (superseded 2026-06-12, see UPDATE above — kept for the w5–w13 record)
 **Path-product floor:** for the band component C of any hidden top vertex with σ̃ > τ,
