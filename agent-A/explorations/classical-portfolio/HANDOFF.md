@@ -32,7 +32,26 @@ Branch: agent-a/classical-portfolio. Rewritten at session close (2026-06-11, day
 >    relaunch from the brief pattern in the worklog 2026-06-11(cont.) entry) →
 >    `aipm-e71` (HLC) → epic `aipm-and`. Report bead `aipm-sjw` done.
 
-## THE KERNEL (the single remaining open, after 13 waves / 10 strategy kinds / ~60 workers)
+> ## UPDATE 2026-06-12 — the kernel has MOVED (waves 24–32 + the w33 relaunch)
+> The path-product-floor kernel below is SUPERSEDED by the Högnäs–Mukherjea 1.12
+> coordinate route (waves 25–31; commits a80c725..b8da7ca; verdicts in
+> `notes/swarm-answers/w25_hm112..w31_tax.md`). Current single open core =
+> **the signed-face excess (SF)**: with u_1..u_k the max-volume actual-row basis
+> and p_j = Σ_t a_t(j) p_{u_t} (|a_t(j)| ≤ 1, Σ_t a_t(j) = 1), for each s
+>   Σ_j (P_{u_s j})₊ ( Σ_{t≠s} (−a_t(j))₊ − (1 − a_s(j)) )₊ ≤ C_sf δ.
+> Chain (all links written, conditional on SF): SF ⇒ transverse tax (C_μ = 2+C_sf;
+> deficit part ≤ 2δ PROVED, w31) ⇒ representative displacement (C_D ≤
+> 2(1+2δ₀)(4+C_sf), w30) ⇒ face estimate ⇒ L4 assembly ⇒ global W-free O(√δ)
+> theorem. General-row displacement REFUTED at δ=0 (w29) — max-volume form only.
+> w32 (LP/extremal) was PAUSED at stage 2 (banked finding: coefficient-only LP
+> relaxation too weak at δ=0 — geometry load-bearing from round one). 2026-06-12:
+> wave 33 launched — w33_sf_geom (geometry-first LP loop + 1.12-converse
+> parametrization, prover) + w33_cex (refuter via the 1.12 converse) + an H-M
+> book-mining pass (`notes/hm-book-mining.md` when it lands). All 46 briefs
+> archived in `notes/briefs/` (tmp is volatile). TOOLING NOW: gurobi OK;
+> TIB VPN and wolframscript UNAVAILABLE (X1 byte-pinning paused).
+
+## THE KERNEL (superseded 2026-06-12, see UPDATE above — kept for the w5–w13 record)
 **Path-product floor:** for the band component C of any hidden top vertex with σ̃ > τ,
   Π_C ≳ τ − O(Lδ)  (thin-chain exclusion).
 - TRUE ⇒ component finisher (PROVED, w12) + s8 branch (PROVED) ⇒ **LINEAR LAW δ ≥ cH**

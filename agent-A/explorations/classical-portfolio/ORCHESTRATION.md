@@ -26,9 +26,10 @@ orchestrator) write briefs, review every hand-back, log learnings, raise beads, 
 independent attacks by different model families; (c) another lane's finding opens a cheaper door.
 Every switch logged here + worklog.
 
-**Tooling on this machine.** mosek, gurobi (`gurobi_cl`), wolframscript, numpy/scipy/HiGHS,
-`codex exec` (gpt-5.5, xhigh default; see CODEX_DELEGATION.md). TIB network: paywalled papers
-accessible — refs acquisition is unblocked.
+**Tooling on this machine.** mosek, gurobi (`gurobi_cl`; gurobipy 13.0.1), numpy/scipy/HiGHS,
+`codex exec` (gpt-5.5, xhigh default; see docs/codex-delegation.md). **2026-06-12: TIB VPN and
+wolframscript UNAVAILABLE** — refs acquisition paused, symbolic work via sympy/exact rationals.
+Concurrency cap (user, 2026-06-12): ≤ 2–3 codex in parallel; opus serial; sonnet free.
 
 **Observability protocol (user directive 2026-06-10): verbosity + eager flush in ALL activities.**
 - Every long-running delegated process streams a live trace to a file: codex → `--json` events
@@ -165,3 +166,22 @@ margin-pinning (σ_v ≥ 1/2 ⇒ exposed unless H ≤ A₂τ); (3) ψ-gap lemma.
 **Next after endgame returns:** if branches close → full prose write-up + 2-family verify (done-bar)
 → Recipe A→B banking on main + report sections. If partial → residual is 1-2 named inequalities;
 consider fable closer pass, then honest obstruction write-up (PRD-legitimate outcome).
+
+---
+## STATE SNAPSHOT — 2026-06-12 (supersedes 2026-06-10 snapshot; lockstep repair after the w32 pause)
+**Where the campaign stands.** Waves 24–32 (2026-06-11, post-merge) ran the Högnäs–Mukherjea 1.12
+coordinate route to its core. Chain (each link written, audited or refuted as marked):
+1.12-autopsy (w25, PARTIALLY: right coordinates mod merge/conditioning) → clustered chart L2
+dimension-free, A=1 max-volume basis (w26, audited) → O(δ) concentration REFUTED, in-class
+concentration + cross-cluster leakage ≤ 2δ/(1−η) banked (w27) → bridge ⇒ representative
+displacement lemma (w28) → general-row version REFUTED at δ=0; max-volume form is the kernel
+(w29) → telescope: no contraction from idempotence alone; maxvol: displacement ⇐ transverse tax,
+C_D ≤ 2(1+2δ₀)(2+C_μ) (w30) → tax split: deficit ≤ 2δ PROVED; residual = **signed-face excess
+(SF)** = THE single open core (w31; P(tax true)=0.62, P(small-δ cex)=0.18) → w32 LP/extremal
+prover PAUSED at stage 2 (network maintenance); banked: coefficient-only relaxation too weak at
+δ=0 — geometry load-bearing from round one. All 44 wave-14..32 briefs archived `notes/briefs/`.
+**SF ⇒** tax (C_μ=2+C_sf) ⇒ displacement ⇒ face estimate ⇒ L4 assembly ⇒ global W-free O(√δ).
+**Wave 33 (launched 2026-06-12):** w33_sf_geom (codex prover: geometry-first gurobi LP loop +
+1.12-converse exact parametrization) ∥ w33_cex (codex refuter: realize the transverse-pair
+conspiracy via the 1.12 converse; either a stacking mechanism or the per-pair-cost obstruction
+lemma) ∥ sonnet H-M book-mining catalog (→ `notes/hm-book-mining.md`). Briefs archived.

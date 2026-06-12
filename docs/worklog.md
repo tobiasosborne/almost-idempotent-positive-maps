@@ -547,3 +547,32 @@ w25_hm112 in flight on the bridge to the global gap. (10) Branch MERGED TO MAIN
 notes/wave5-sigma-wall-parallel.md + notes/swarm-answers/ (~85 verdicts) +
 experiments/out/. Beads: aipm-3u6 carries the campaign; aipm-e9p closed; acquisition
 bead open (Douglas-Ando etc.).
+
+## 2026-06-12 — Agent A: lockstep repair (waves 24-32 were undocumented) + wave-33 relaunch
+
+Session resumed after the 2026-06-11 pause (b8da7ca; network maintenance stopped w32 at
+stage 2). LOCKSTEP REPAIR: the worklog/handoffs stopped at waves 14-23 while commits ran to
+w32 — this entry + the portfolio HANDOFF UPDATE block + the ORCHESTRATION 2026-06-12 snapshot
+close that gap. WHAT WAVES 24-32 DID (verdicts in notes/swarm-answers/): the H-M Theorem 1.12
+coordinate route was run to its core. w25: 1.12 autopsy (right global coordinates, mod a
+merge/conditioning lemma; loci byte-pinned vs refs/hognas-mukherjea-2011). w26: clustered
+chart L2 proved + upgraded dimension-free (A=1, max-volume actual-row basis; audited). w27:
+O(delta) concentration REFUTED (rank-2 family); banked in-class concentration + cross-cluster
+leakage <= 2delta/(1-eta). w28: bridge reduces to the representative displacement lemma. w29:
+general-row displacement REFUTED at delta=0; max-volume representative form is THE kernel.
+w30: telescope dead (no contraction from idempotence alone); maxvol route proves displacement
+conditionally on the transverse coefficient tax (C_D <= 2(1+2delta_0)(2+C_mu)). w31: tax
+split — scalar deficit <= 2delta PROVED; residual = THE SIGNED-FACE EXCESS (SF):
+sum_j (P_{u_s j})_+ (sum_{t!=s}(-a_t(j))_+ - (1-a_s(j)))_+ <= C_sf delta. SF => tax
+(C_mu = 2+C_sf) => displacement => face estimate => L4 assembly => global W-free O(sqrt(delta))
+theorem. w32 banked one finding before the pause: coefficient-only LP relaxation already too
+weak at delta=0 — geometry is load-bearing from round one. /tmp workspaces confirmed gone;
+all 44 briefs were archived in notes/briefs/ by the pause commit (the archive worked as
+designed). WAVE 33 LAUNCHED (user-directed; cap 2-3 codex parallel, opus serial, sonnet free;
+TIB VPN + wolframscript unavailable, gurobi confirmed): w33_sf_geom (codex prover — geometry-
+first gurobi LP loop, idempotence in from round one, + the UNDERUSED LEVER: the 1.12 CONVERSE
+as an exact parametrization of all rank-k idempotents, perturbing positivity only) ||
+w33_cex (codex refuter — build exact idempotents to order via the 1.12 converse, stack
+transverse pairs to break SF, or name the per-pair-cost obstruction lemma) || sonnet H-M
+book-mining catalog (user lead: "the book has lots of good stuff" — everything beyond 1.12,
+to notes/hm-book-mining.md). Briefs archived notes/briefs/w33_*.md at launch.
