@@ -1,0 +1,35 @@
+cap=0.050000 m= 2 k= 5 best_a=None SF=0.000000 ratio=0.000000
+cap=0.050000 m= 3 k= 7 best_a=None SF=0.000000 ratio=0.000000
+cap=0.050000 m= 5 k=11 best_a=None SF=0.000000 ratio=0.000000
+cap=0.050000 m= 8 k=17 best_a=None SF=0.000000 ratio=0.000000
+cap=0.050000 m=12 k=25 best_a=None SF=0.000000 ratio=0.000000
+cap=0.050000 m=18 k=37 best_a=None SF=0.000000 ratio=0.000000
+cap=0.050000 m=25 k=51 best_a=None SF=0.000000 ratio=0.000000
+cap=0.100000 m= 2 k= 5 best_a=None SF=0.000000 ratio=0.000000
+cap=0.100000 m= 3 k= 7 best_a=None SF=0.000000 ratio=0.000000
+cap=0.100000 m= 5 k=11 best_a=None SF=0.000000 ratio=0.000000
+cap=0.100000 m= 8 k=17 best_a=None SF=0.000000 ratio=0.000000
+cap=0.100000 m=12 k=25 best_a=None SF=0.000000 ratio=0.000000
+cap=0.100000 m=18 k=37 best_a=None SF=0.000000 ratio=0.000000
+cap=0.100000 m=25 k=51 best_a=None SF=0.000000 ratio=0.000000
+cap=0.200000 m= 2 k= 5 best_a=0.1 SF=0.200000 ratio=1.000000
+cap=0.200000 m= 3 k= 7 best_a=None SF=0.000000 ratio=0.000000
+cap=0.200000 m= 5 k=11 best_a=None SF=0.000000 ratio=0.000000
+cap=0.200000 m= 8 k=17 best_a=None SF=0.000000 ratio=0.000000
+cap=0.200000 m=12 k=25 best_a=None SF=0.000000 ratio=0.000000
+cap=0.200000 m=18 k=37 best_a=None SF=0.000000 ratio=0.000000
+cap=0.200000 m=25 k=51 best_a=None SF=0.000000 ratio=0.000000
+cap=0.352941 m= 2 k= 5 best_a=0.5 SF=1.000000 ratio=2.833333
+cap=0.352941 m= 3 k= 7 best_a=0.25 SF=0.750000 ratio=2.125000
+cap=0.352941 m= 5 k=11 best_a=0.1 SF=0.500000 ratio=1.416667
+cap=0.352941 m= 8 k=17 best_a=None SF=0.000000 ratio=0.000000
+cap=0.352941 m=12 k=25 best_a=None SF=0.000000 ratio=0.000000
+cap=0.352941 m=18 k=37 best_a=None SF=0.000000 ratio=0.000000
+cap=0.352941 m=25 k=51 best_a=None SF=0.000000 ratio=0.000000
+cap=0.500000 m= 2 k= 5 best_a=0.5 SF=1.000000 ratio=2.000000
+cap=0.500000 m= 3 k= 7 best_a=0.5 SF=1.500000 ratio=3.000000
+cap=0.500000 m= 5 k=11 best_a=0.5 SF=2.500000 ratio=5.000000
+cap=0.500000 m= 8 k=17 best_a=0.5 SF=4.000000 ratio=8.000000
+cap=0.500000 m=12 k=25 best_a=0.5 SF=6.000000 ratio=12.000000
+cap=0.500000 m=18 k=37 best_a=0.5 SF=9.000000 ratio=18.000000
+cap=0.500000 m=25 k=51 best_a=0.5 SF=12.500000 ratio=25.000000
